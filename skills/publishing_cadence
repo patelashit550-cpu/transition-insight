@@ -1,0 +1,51 @@
+# Skill: Publication Cadence — Saturday Ship Day
+
+Use when deciding when to publish, how often to ship, and what `publishedAt` means.
+
+## Ship day
+
+**Saturday** is the publication day (Lord of Saturn's Rings — Saturn's day).
+
+- One finished essay per ship window, not a batch drop.
+- Target rhythm: **every 2–3 Saturdays** (~18–24 global releases per year).
+- Skip a Saturday if the piece is not ready; do not rush to fill the slot.
+
+## What `publishedAt` means
+
+Set `publishedAt` to the **Saturday ship date** (UTC or local noon — pick one and stay
+consistent), not the day drafting started.
+
+Jack Flash (purple bento pulse) uses this date within a **14-day** window. A 2–3 week
+cadence keeps flashes distinct without overlap.
+
+## Ship checklist (Saturday only)
+
+1. Frontmatter audit against a prod sibling (`origins`, `arete`, `ashit-patel`).
+2. `stage: published` (or `canonical` when frozen).
+3. `npm run content:attest`
+4. `npm run build` → deploy `out/` → Cloudflare Pages
+5. `npm run verify:sitemap:live` (optional: `npm run scan:agent-ready`)
+6. Optional provenance: `SOLANA_SIGNING_KEY=… npm run content:sign`
+
+## Between ships
+
+| Phase | `stage` | When |
+| --- | --- | --- |
+| Studio | `draft` | Any day — write freely |
+| Refinement | `review` | Mid-week before a target Saturday — `build:preprod` smoke test |
+| Ship | `published` | Saturday only |
+
+## Series rotation (organic order)
+
+Alternate lanes so one bento does not surge:
+
+- **Governance (B2):** Peridot terms, EPU, SQN — ~one illumination or policy piece per month
+- **Identity (B1) / Chronicle (B3):** Me essays, Times, Polite Bureau on off-weeks
+
+No fixed public schedule required; series landers imply collections that mature over time.
+
+## Expectations
+
+- Draft freely; ship deliberately on Saturn's day.
+- Empty Saturdays are valid — cadence is a ceiling, not a quota.
+- Preprod (`review`) is for QA artifacts; never point prod DNS/IPNS at preprod builds.

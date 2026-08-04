@@ -1,0 +1,237 @@
+[
+  {
+    "term": "Areté",
+    "priority": 5,
+    "sources": ["governance/illumination/arete.md", "me/praxis.md"]
+  },
+  {
+    "term": "Dial Square",
+    "priority": 5,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Intelligence",
+    "priority": 4,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Capital",
+    "priority": 4,
+    "sources": ["governance/illumination/arete.md", "me/praxis.md"]
+  },
+  {
+    "term": "Identity",
+    "priority": 5,
+    "sources": ["governance/illumination/arete.md", "me/praxis.md"]
+  },
+  {
+    "term": "Governance",
+    "priority": 5,
+    "sources": ["governance/illumination/arete.md", "me/trials-of-job.md"]
+  },
+  {
+    "term": "Truth, Utility, Beauty",
+    "priority": 4,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Giants",
+    "priority": 5,
+    "sources": ["governance/illumination/arete.md", "narrative/biography/ashit-milne.md"]
+  },
+  {
+    "term": "Creation",
+    "priority": 4,
+    "sources": ["governance/illumination/arete.md", "me/trials-of-job.md"]
+  },
+  {
+    "term": "Commons",
+    "priority": 4,
+    "sources": ["me/praxis.md", "governance/illumination/arete.md"]
+  },
+  {
+    "term": "Autonomy",
+    "priority": 4,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Self-Sovereignty",
+    "priority": 5,
+    "sources": ["me/praxis.md", "me/trials-of-job.md"]
+  },
+  {
+    "term": "Praxis",
+    "priority": 5,
+    "sources": ["governance/illumination/arete.md", "me/praxis.md"]
+  },
+  {
+    "term": "Orthodoxy",
+    "priority": 3,
+    "sources": ["governance/illumination/arete.md", "me/praxis.md"]
+  },
+  {
+    "term": "Alpha",
+    "priority": 3,
+    "sources": ["me/trials-of-job.md", "governance/illumination/arete.md"]
+  },
+  {
+    "term": "Omega",
+    "priority": 3,
+    "sources": ["governance/illumination/arete.md", "me/trials-of-job.md"]
+  },
+  {
+    "term": "Hormesis",
+    "priority": 2,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Satyagraha",
+    "priority": 2,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Machina Animus",
+    "priority": 3,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "D.E.C.A.Y",
+    "priority": 3,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Stone Rose",
+    "priority": 3,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Maya",
+    "priority": 3,
+    "sources": ["governance/illumination/arete.md"]
+  },
+  {
+    "term": "Semantic Perimeter",
+    "priority": 5,
+    "sources": ["me/trials-of-job.md", "me/praxis.md"]
+  },
+  {
+    "term": "Semper Idem",
+    "priority": 4,
+    "sources": ["me/trials-of-job.md", "narrative/biography/ashit-milne.md", "narrative/biography/ashit-patel.md"]
+  },
+  {
+    "term": "Social Network",
+    "priority": 4,
+    "sources": ["me/praxis.md"]
+  },
+  {
+    "term": "Project, Product, Protocol",
+    "priority": 5,
+    "sources": ["me/praxis.md"]
+  },
+  {
+    "term": "Firmitas",
+    "priority": 3,
+    "sources": ["me/praxis.md"]
+  },
+  {
+    "term": "Ki",
+    "priority": 3,
+    "sources": ["me/praxis.md", "me/trials-of-job.md"]
+  },
+  {
+    "term": "Social Credit",
+    "priority": 3,
+    "sources": ["me/praxis.md"]
+  },
+  {
+    "term": "Moral Injury",
+    "priority": 4,
+    "sources": ["me/trials-of-job.md"]
+  },
+  {
+    "term": "Animus",
+    "priority": 4,
+    "sources": ["me/trials-of-job.md", "narrative/biography/ashit-milne.md"]
+  },
+  {
+    "term": "Anima",
+    "priority": 4,
+    "sources": ["me/trials-of-job.md", "narrative/biography/ashit-patel.md"]
+  },
+  {
+    "term": "Call to Adventure",
+    "priority": 3,
+    "sources": ["me/trials-of-job.md", "narrative/comment/Tenable.md"]
+  },
+  {
+    "term": "Anarchism",
+    "priority": 4,
+    "sources": ["governance/illumination/arete.md", "me/trials-of-job.md"]
+  },
+  {
+    "term": "Transition Insight",
+    "priority": 3,
+    "sources": ["narrative/biography/ashit-milne.md"]
+  },
+  {
+    "term": "Yoga Element",
+    "priority": 3,
+    "sources": ["narrative/biography/ashit-milne.md"]
+  },
+  {
+    "term": "Calling",
+    "priority": 4,
+    "sources": ["narrative/biography/ashit-milne.md"]
+  },
+  {
+    "term": "Tel",
+    "priority": 4,
+    "sources": ["narrative/biography/ashit-patel.md"]
+  },
+  {
+    "term": "Tev",
+    "priority": 3,
+    "sources": ["narrative/biography/ashit-patel.md"]
+  },
+  {
+    "term": "Ledger",
+    "priority": 3,
+    "sources": ["narrative/biography/ashit-patel.md", "me/praxis.md"]
+  },
+  {
+    "term": "Macaulayputra",
+    "priority": 2,
+    "sources": ["narrative/biography/ashit-patel.md"]
+  },
+  {
+    "term": "The Young Idea",
+    "priority": 3,
+    "sources": ["narrative/biography/ashit-patel.md", "me/origins.md"]
+  },
+  {
+    "term": "Peridot",
+    "priority": 2,
+    "sources": ["narrative/biography/ashit-patel.md"]
+  },
+  {
+    "term": "Tenable",
+    "priority": 4,
+    "sources": ["narrative/comment/Tenable.md"]
+  },
+  {
+    "term": "Political Economy",
+    "priority": 3,
+    "sources": ["me/origins.md", "me/praxis.md"]
+  },
+  {
+    "term": "Keiretsu",
+    "priority": 2,
+    "sources": ["me/origins.md"]
+  },
+  {
+    "term": "Noblesse Oblige",
+    "priority": 2,
+    "sources": ["me/trials-of-job.md"]
+  }
+]

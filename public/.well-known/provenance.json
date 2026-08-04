@@ -1,0 +1,57 @@
+{
+  "version": "1",
+  "generated": "2026-08-04T03:40:36.763Z",
+  "canonical": "https://ashitmilne.xyz",
+  "aliases": [
+    {
+      "type": "ipfs",
+      "cid": "bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm",
+      "url": "https://amber-total-muskox-866.mypinata.cloud/ipfs/bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm/"
+    },
+    {
+      "type": "sns",
+      "name": "transition-insight.sol"
+    },
+    {
+      "type": "sol.site",
+      "url": "https://transition-insight.sol.sites"
+    },
+    {
+      "type": "ens",
+      "name": "ashitpatel.eth"
+    }
+  ],
+  "ipfs": {
+    "cid": "bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm",
+    "gateway": "https://amber-total-muskox-866.mypinata.cloud",
+    "directory": "https://amber-total-muskox-866.mypinata.cloud/ipfs/bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm/",
+    "ipns": null,
+    "ipnsUrl": null
+  },
+  "identity": {
+    "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "solana": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "validator": "Lumos Maxima",
+    "validatorVoteAccount": "5daP6pZoPSak6UEKuRg2HHjvTPpqqwB113oNamGNKuuZ"
+  },
+  "documents": {
+    "attestation": "https://ashitmilne.xyz/attestation.json",
+    "auth": "https://ashitmilne.xyz/auth.md",
+    "security": "https://ashitmilne.xyz/.well-known/security.txt",
+    "apiCatalog": "https://ashitmilne.xyz/.well-known/api-catalog",
+    "agentSkills": "https://ashitmilne.xyz/.well-known/agent-skills/index.json"
+  },
+  "pool": {
+    "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
+    "tier": "global",
+    "manifest": "https://ashitmilne.xyz/attestation.json",
+    "manifestDigest": "sha256:c1b9caf587a8021fd1e5d895450029a1cfa15a9efcbdcd5ad2d899630deb80eb",
+    "signature": null,
+    "entryCount": 11
+  },
+  "solSite": {
+    "domain": "https://transition-insight.sol.sites",
+    "status": "point-at-ipfs-gateway",
+    "note": "In SNS → Sol.site, CNAME to your Pinata dedicated gateway (or DNSLink host). Canonical static export: provenance ipfs.directory."
+  }
+}

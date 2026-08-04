@@ -1,0 +1,127 @@
+// src/components/SplitHubLayout.tsx
+
+interface EssayItem {
+  slug: string;
+  title: string;
+  date: string;
+  tags?: string[];
+  isCore?: boolean;
+}
+
+interface SplitHubLayoutProps {
+  title: string;
+  summaryHtml: string;
+  artUrl?: string;
+  essays: EssayItem[];
+  basePath: string; // e.g., '/regnum-dei/peridot'
+}
+
+export default function SplitHubLayout({
+  title,
+  summaryHtml,
+  artUrl,
+  essays,
+  basePath,
+}: SplitHubLayoutProps) {
+  // Separate core components from the continuous lifetime stream
+  const coreEssays = essays.filter((e) => e.isCore);
+  const streamEssays = essays.filter((e) => !e.isCore);
+
+  return (
+    <div className="flex h-screen w-full bg-stone-950 text-stone-100 overflow-hidden">
+      
+      {/* LEFT PANE: Fixed Philosophical Anchor (40% Width) */}
+      <aside className="w-2/5 h-full border-r border-stone-800 p-8 flex flex-col overflow-y-auto bg-stone-900/30 select-none">
+        {artUrl && (
+          <div className="mb-6 overflow-hidden rounded-lg border border-stone-800 bg-stone-950 shadow-inner">
+            <img 
+              src={artUrl} 
+              alt={`${title} theme art`} 
+              className="w-full object-cover max-h-56 opacity-85 transition-opacity hover:opacity-100 duration-300" 
+            />
+          </div>
+        )}
+        <h1 className="text-3xl font-extrabold tracking-tight mb-4 text-emerald-500 capitalize">
+          {title.replace('-', ' ')}
+        </h1>
+        <div 
+          className="prose prose-invert max-w-none text-stone-300 text-sm leading-relaxed space-y-4"
+          dangerouslySetInnerHTML={{ __html: summaryHtml }}
+        />
+      </aside>
+
+      {/* RIGHT PANE: Infinite Chronological Ledger (60% Width) */}
+      <main className="w-3/5 h-full overflow-y-auto p-12 bg-stone-950 scrollbar-thin scrollbar-thumb-stone-800">
+        <div className="max-w-2xl mx-auto space-y-10">
+          
+          {/* Core Ontology Pieces (Always Pinned to Top) */}
+          {coreEssays.length > 0 && (
+            <section>
+              <h2 className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-4 border-b border-stone-800 pb-1">
+                Foundational Components
+              </h2>
+              <div className="space-y-2">
+                {coreEssays.map((essay) => (
+                  <a 
+                    key={essay.slug} 
+                    href={`${basePath}/${essay.slug}`} 
+                    className="group flex items-center justify-between p-4 rounded-lg border border-emerald-950 bg-emerald-950/10 hover:bg-emerald-950/20 transition-all duration-200"
+                  >
+                    <div>
+                      <span className="text-xs font-bold text-emerald-500 mr-2 uppercase tracking-wider">Core</span>
+                      <h3 className="inline font-medium text-stone-200 group-hover:text-emerald-400 transition">
+                        {essay.title}
+                      </h3>
+                    </div>
+                    <span className="text-xs text-stone-500 font-mono">
+                      {new Date(essay.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* The Lifetime Stream */}
+          <section>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-4 border-b border-stone-800 pb-1">
+              Chronological Stream
+            </h2>
+            {streamEssays.length === 0 ? (
+              <p className="text-sm text-stone-600 italic">The stream is quiet. Editorial reviews in progress.</p>
+            ) : (
+              <div className="relative border-l border-stone-800 ml-2 pl-6 space-y-6">
+                {streamEssays.map((essay) => (
+                  <div key={essay.slug} className="relative group">
+                    {/* Timeline Node */}
+                    <div className="absolute -left-[31px] top-1.5 w-2 h-2 rounded-full bg-stone-700 group-hover:bg-emerald-500 transition-colors duration-200" />
+                    
+                    <a href={`${basePath}/${essay.slug}`} className="block">
+                      <span className="block text-xs text-stone-500 font-mono mb-0.5">
+                        {new Date(essay.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                      </span>
+                      <h3 className="text-base font-medium text-stone-300 group-hover:text-stone-100 transition">
+                        {essay.title}
+                      </h3>
+                      {essay.tags && (
+                        <div className="flex gap-1.5 mt-1">
+                          {essay.tags.map(t => (
+                            <span key={t} className="text-[10px] px-1.5 py-0.5 rounded bg-stone-900 border border-stone-800 text-stone-400">
+                              #{t}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
+          </section>
+
+        </div>
+      </main>
+
+    </div>
+  );
+}

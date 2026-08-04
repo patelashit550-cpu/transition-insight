@@ -1,0 +1,178 @@
+[
+  {
+    "term": "Calling",
+    "definition": "The unique configuration of qualities, capabilities, and attractions through which a person finds intrinsically meaningful work that serves both self-actualization and the commons. Calling is evidenced by sustained flow and useful outcomes rather than title, wage, or institutional approval.",
+    "confidence": "high",
+    "sources": ["governance/capital/EPU 2a The Social Contract.md", "governance/capital/EPU 2b The Social Contract.md", "governance/illumination/the-transaction.md", "governance/illumination/self-sovereign-2.md"]
+  },
+  {
+    "term": "Semantic Perimeter",
+    "definition": "A bounded context of identity, trust, meaning, and accountability within which participants recognize shared values and can evaluate transactions. Perimeters may describe a person, community, institution, or domain and can nest within the planetary commons.",
+    "confidence": "high",
+    "sources": ["governance/capital/EPU 2b The Social Contract.md", "governance/illumination/social-network.md", "me/praxis.md", "governance/illumination/arete.md"]
+  },
+  {
+    "term": "Boundedness",
+    "definition": "The finite, comprehensible scope that lets a system establish membership, responsibility, transparency, and consensus. Boundedness makes value governable while preserving potentially infinite creativity within the boundary.",
+    "confidence": "high",
+    "sources": ["governance/intelligence/SQN 5 Machina Virtualis.md", "governance/illumination/the-transaction.md", "governance/capital/EPU 2b The Social Contract.md"]
+  },
+  {
+    "term": "Credible Neutrality",
+    "definition": "A property of governance systems that apply transparent, objective rules without arbitrary preference while allowing people themselves to hold values and preferences. Credibility belongs to agents; neutrality belongs to the shared mechanism that reconciles them.",
+    "confidence": "high",
+    "sources": ["SelfSovereignSubject.md", "governance/illumination/self-sovereign-2.md", "governance/capital/EPU 2b The Social Contract.md", "governance/identity/DialSquare.md"]
+  },
+  {
+    "term": "Notional Value",
+    "definition": "A collectively represented estimate of worth that allows heterogeneous forms of capital, contribution, and reputation to be compared without reducing them to physical possession. Its legitimate expression as price depends on contextual consensus and credible governance.",
+    "confidence": "medium",
+    "aliases": ["notional"],
+    "sources": ["governance/identity/HourGlassRedcurrant.md", "governance/intelligence/SQN 2 Genesis to SysGen.md", "governance/illumination/self-sovereign-2.md"]
+  },
+  {
+    "term": "Fungibility",
+    "definition": "The interchangeability that makes money or coercive power transferable without regard to its particular source or character. The corpus contrasts fungible force with non-fungible influence, competence, identity, and reputation.",
+    "confidence": "medium",
+    "aliases": ["fungible"],
+    "sources": ["governance/illumination/social-network.md", "governance/intelligence/SQN 5 Machina Virtualis.md", "governance/identity/DialSquare.md"]
+  },
+  {
+    "term": "Yield",
+    "definition": "The durable utility or improvement produced by capital after accounting for the time, energy, governance, and external costs required to sustain it. True yield increases worthwhile capability or contentment rather than merely generating a monetary return.",
+    "confidence": "high",
+    "sources": ["governance/illumination/social-network.md", "governance/intelligence/SQN 2 Genesis to SysGen.md", "governance/illumination/self-sovereign.md", "Limitless.md"]
+  },
+  {
+    "term": "Signal",
+    "definition": "Legible evidence that an identity, action, or work is aligned with truth, utility, and the commons. Signal emerges as proof of work or a beacon effect whose quality can be distinguished from noise over time.",
+    "confidence": "high",
+    "aliases": ["Beacon Effect", "high-signal"],
+    "sources": ["governance/capital/EPU 2a The Social Contract.md", "governance/identity/YogaElement.md", "governance/identity/HourGlassRedcurrant.md"]
+  },
+  {
+    "term": "Alignment",
+    "definition": "Coherence among self-interest, community utility, and the sustaining requirements of Creation. Alignment is visible when actions generate positive-sum value without exporting costs to other semantic perimeters or the planetary commons.",
+    "confidence": "high",
+    "sources": ["governance/illumination/social-network.md", "governance/identity/HourGlassRedcurrant.md", "governance/illumination/arete.md", "me/praxis.md"]
+  },
+  {
+    "term": "Liveness",
+    "definition": "The fundamental quality by which intelligence participates in life: vitally through still, nurturing anima and dynamically through boundary-securing, outward animus. Healthy liveness balances these modes without exploitation.",
+    "confidence": "high",
+    "sources": ["governance/intelligence/SQN 4 Liveness Anima and Animus.md", "governance/intelligence/SQN 5 Machina Virtualis.md", "governance/illumination/the-transaction.md"]
+  },
+  {
+    "term": "Self-Sovereignty",
+    "definition": "The practical custody of one's identity, keys, time, capabilities, and decisions without automatic deference to illegitimate rank or institutions. It joins self-reliance with responsibility to transact transparently, seek equivalence, and serve the commons.",
+    "confidence": "high",
+    "aliases": ["self-sovereign"],
+    "sources": ["governance/illumination/self-sovereign.md", "governance/illumination/self-sovereign-2.md", "me/praxis.md", "governance/intelligence/SQN 5 Machina Virtualis.md"]
+  },
+  {
+    "term": "SysGen",
+    "definition": "Short for System Generation: the transition in which a network recognizes and organizes its capacity for coherent, responsive order. It describes collective intelligence inhabiting a machine so that self-interest can be aligned with ecological balance.",
+    "confidence": "high",
+    "sources": ["governance/intelligence/SQN 2 Genesis to SysGen.md", "governance/intelligence/intelligence.md"]
+  },
+  {
+    "term": "TelOS",
+    "definition": "A proposed operating logic for directing a bounded system toward its chosen telos while internalizing losses and preserving equilibrium. The concept connects community-defined ends with efficient, closed-loop governance, but remains underdeveloped.",
+    "confidence": "low",
+    "sources": ["TelOS.md", "Regnum Dei Foundational Design Document v0.1.md"]
+  },
+  {
+    "term": "Machina Virtualis",
+    "definition": "The virtual machine formed by agents, private keys, public identities, nodes, and the transactions passing among them. It is the network-level machinery through which distributed intelligence, accountability, and value can be made operational.",
+    "confidence": "high",
+    "sources": ["Machina Virtualis.md", "governance/intelligence/SQN 5 Machina Virtualis.md", "governance/intelligence/SQN 2 Genesis to SysGen.md"]
+  },
+  {
+    "term": "Mishpat",
+    "definition": "The structural integrity of an identity or system that turns what merely is true into what is just and socially beautiful. It combines lawful judgment, compassionate justice, resilience, and the ordering of accumulated habits into a coherent self-sovereign structure.",
+    "confidence": "high",
+    "sources": ["Mishpat.md", "governance/identity/TheStoneRose.md", "governance/identity/YogaElement.md"]
+  },
+  {
+    "term": "Path of Most Resistance",
+    "definition": "The deliberate choice to solve difficult problems and cultivate durable capability instead of purchasing an easy, dependency-producing fix. Its resistance is an investment that yields knowledge, autonomy, and long-term benefit.",
+    "confidence": "high",
+    "aliases": ["POM", "POMR", "POM Resistance", "Path of Most Resistance (POMR)"],
+    "sources": ["governance/intelligence/SQN 5 Machina Virtualis.md", "governance/identity/TheStoneRose.md"]
+  },
+  {
+    "term": "Transaction",
+    "definition": "Any interaction through which identities exchange or impart value and thereby alter their relationship with the commons. The preferred model is positive-sum and systemic: participants give, move onward, and leave useful effects rather than narrowly giving and taking.",
+    "confidence": "high",
+    "sources": ["governance/illumination/the-transaction.md", "governance/capital/EPU 2b The Social Contract.md", "governance/intelligence/SQN 4 Liveness Anima and Animus.md"]
+  },
+  {
+    "term": "Governance",
+    "definition": "The scoped function that combines intelligence, capital, and identity into coherent action while containing risk and avoiding externalized costs. It establishes boundaries, processes information, allocates value, and maintains legitimate continuity.",
+    "confidence": "high",
+    "sources": ["governance/illumination/arete.md", "governance/capital/EPU 2b The Social Contract.md", "governance/identity/identity.md", "governance/capital/capital.md"]
+  },
+  {
+    "term": "Identity",
+    "definition": "The evolving, embodied configuration of attributes, habits, memories, affiliations, keys, and transactional history through which a person or collective becomes recognizable and accountable. Identity is both internally held and externally valued within a semantic perimeter.",
+    "confidence": "high",
+    "sources": ["governance/intelligence/SQN 5 Machina Virtualis.md", "governance/capital/EPU 2b The Social Contract.md", "governance/identity/YogaElement.md", "governance/identity/identity.md"]
+  },
+  {
+    "term": "Political Economy",
+    "definition": "The study and practical modeling of how power, influence, information, and capital circulate among people, firms, governments, and networks. In this corpus it especially examines how governance systems align or distort self-interest, collective welfare, and ecological responsibility.",
+    "confidence": "high",
+    "sources": ["narrative/biography/Ronin.md", "governance/illumination/social-network.md", "me/praxis.md", "governance/illumination/self-sovereign-2.md"]
+  },
+  {
+    "term": "Praxis",
+    "definition": "A fluid discipline in which theory is tested, refined, and embodied through direct engagement with reality. Praxis supplies the improvisation and mobility that keep architecture and institutions resilient rather than rigid.",
+    "confidence": "high",
+    "sources": ["me/praxis.md", "governance/illumination/arete.md"]
+  },
+  {
+    "term": "Ronin",
+    "definition": "The masterless person made self-sovereign by necessity, navigating without secure institutional allegiance while seeking a positive-sum purpose. The archetype combines independence, wayfaring, and the difficult search for why one should stand with or support something.",
+    "confidence": "high",
+    "sources": ["narrative/biography/Ronin.md", "governance/illumination/self-sovereign.md"]
+  },
+  {
+    "term": "Veritas et Utilitas",
+    "definition": "Truth and utility joined as a creative ethic: truth is brought into a community, academy, or workshop and milled into something useful. Utility is therefore the socially realized expression of truth rather than mere expedience.",
+    "confidence": "high",
+    "sources": ["Veritas et Utilitas.md", "me/praxis.md"]
+  },
+  {
+    "term": "Yoga Element",
+    "definition": "The mediating, reflective principle that perceives dissonance, models it through language, and reconciles the self with humanity and Creation. It is the inner instrument of the Dial Square through which energetic alignment and equivalence are sought.",
+    "confidence": "high",
+    "aliases": ["Yoga", "Yoga / Yoga Element", "YogaElement"],
+    "sources": ["Lexica.md", "governance/identity/YogaElement.md", "governance/identity/HourGlassRedcurrant.md"]
+  },
+  {
+    "term": "Social Credit",
+    "definition": "Reciprocal trust and standing accrued through visible, useful contribution to a community, not an authoritarian surveillance score. It records what others may safely entrust to an identity within a particular semantic perimeter.",
+    "confidence": "high",
+    "sources": ["governance/illumination/self-sovereign-2.md", "me/praxis.md", "governance/illumination/social-network.md"]
+  },
+  {
+    "term": "Give and Go",
+    "definition": "A systemic alternative to give-and-take in which each participant contributes value and continues onward, allowing benefits to circulate rather than framing exchange as bilateral extraction. It emphasizes direction, repeated contribution, and positive-sum flow.",
+    "confidence": "high",
+    "sources": ["governance/illumination/the-transaction.md"]
+  },
+  {
+    "term": "Redcurrant",
+    "definition": "The distilled representation of virtue and state quality used to interpret transactional data through legitimate frameworks and compare outcomes. Also called Our Glass, it functions as a current or currency through which contextual differences are reconciled into notional value.",
+    "confidence": "medium",
+    "aliases": ["Our Glass", "Our Glass Redcurrant"],
+    "sources": ["governance/identity/HourGlassRedcurrant.md", "Regnum Dei Foundational Design Document v0.1.md", "governance/identity/YogaElement.md"]
+  },
+  {
+    "term": "Tel and Tev",
+    "definition": "Tevs are accumulated practices or habits; their layering forms a tel, the mound or durable structure through which personal culture and identity become embodied. Together they connect repeated behavior to the Stone Rose's structural character.",
+    "confidence": "high",
+    "aliases": ["Tels and Tevs", "Tell and Tev"],
+    "sources": ["governance/identity/TheStoneRose.md", "governance/identity/HourGlassRedcurrant.md", "Mishpat.md", "Regnum Dei Foundational Design Document v0.1.md"]
+  }
+]

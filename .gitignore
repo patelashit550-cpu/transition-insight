@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# env (secrets — never commit)
+.env
+.env.local
+.env.*.local
+*.key
+
+# os / editor
+.DS_Store
+Thumbs.db
+.cursor/
+.vscode/
+.snapshots/
+.sovereign/
+.tools/
+.obsidian/
+
+# debug
+npm-debug.log*
+
+# local backup config (drive letter varies per machine)
+scripts/nightly-backup.config.json
+
+# generated semantic workspace (regenerate with npm run lexica:graph)
+semantic-graph/
+
+# local imports (X export archives — do not commit)
+GenX.zip
+data/imports/

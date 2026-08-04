@@ -1,0 +1,2258 @@
+{
+  "generatedAt": "2026-08-04T03:40:36.413Z",
+  "networkNode": {
+    "id": "node:transition-insight",
+    "label": "Transition Insight",
+    "kind": "semper-idem",
+    "discovery": {
+      "skill": "/.well-known/agent-skills/transition-insight/SKILL.md",
+      "graph": "/.well-known/corpus-graph.json",
+      "attestation": "/attestation.json",
+      "sitemap": "/sitemap.xml",
+      "apiCatalog": "/.well-known/api-catalog"
+    }
+  },
+  "interior": {
+    "summary": {
+      "essays": 10,
+      "nodes": 98,
+      "edges": 205,
+      "byKind": {
+        "member-of-series": 6,
+        "member-of-folder": 10,
+        "tagged": 51,
+        "lexica": 33,
+        "mention": 105
+      },
+      "orphanEssays": 1,
+      "series": 3,
+      "folders": 4,
+      "tags": 21,
+      "terms": 60
+    },
+    "nodes": [
+      {
+        "id": "essay:governance/illumination/arete.md",
+        "type": "essay",
+        "label": "Areté",
+        "stage": "published",
+        "slug": "arete",
+        "series": "peridot",
+        "folder": "governance/illumination",
+        "ontologyPath": "governance/illumination/arete.md",
+        "vaultPath": "ontology/governance/illumination/arete",
+        "tags": [
+          "ethics",
+          "governance",
+          "identity",
+          "money",
+          "capital",
+          "theology"
+        ]
+      },
+      {
+        "id": "essay:governance/illumination/social-network.md",
+        "type": "essay",
+        "label": "The Social Network",
+        "stage": "published",
+        "slug": "social-network",
+        "series": "peridot",
+        "folder": "governance/illumination",
+        "ontologyPath": "governance/illumination/social-network.md",
+        "vaultPath": "ontology/governance/illumination/social-network",
+        "tags": [
+          "governance",
+          "identity",
+          "networks",
+          "capital",
+          "ecology",
+          "anarchism"
+        ]
+      },
+      {
+        "id": "essay:me/connexion.md",
+        "type": "essay",
+        "label": "Connexion",
+        "stage": "published",
+        "slug": "connexion",
+        "series": null,
+        "folder": "me",
+        "ontologyPath": "me/connexion.md",
+        "vaultPath": "ontology/me/connexion",
+        "tags": []
+      },
+      {
+        "id": "essay:me/origins.md",
+        "type": "essay",
+        "label": "Act I: अर्थ — Origins",
+        "stage": "published",
+        "slug": "origins",
+        "series": null,
+        "folder": "me",
+        "ontologyPath": "me/origins.md",
+        "vaultPath": "ontology/me/origins",
+        "tags": [
+          "political-economy",
+          "governance",
+          "capital",
+          "economy",
+          "technology"
+        ]
+      },
+      {
+        "id": "essay:me/praxis.md",
+        "type": "essay",
+        "label": "Act III: πρᾶξις — Praxis",
+        "stage": "published",
+        "slug": "praxis",
+        "series": null,
+        "folder": "me",
+        "ontologyPath": "me/praxis.md",
+        "vaultPath": "ontology/me/praxis",
+        "tags": [
+          "governance",
+          "identity",
+          "money",
+          "political-economy",
+          "economy",
+          "technology"
+        ]
+      },
+      {
+        "id": "essay:me/trials-of-job.md",
+        "type": "essay",
+        "label": "Act II: 気 - Trials of Job",
+        "stage": "published",
+        "slug": "trials-of-job",
+        "series": null,
+        "folder": "me",
+        "ontologyPath": "me/trials-of-job.md",
+        "vaultPath": "ontology/me/trials-of-job",
+        "tags": [
+          "governance",
+          "identity",
+          "technology",
+          "commons",
+          "political-economy",
+          "money"
+        ]
+      },
+      {
+        "id": "essay:narrative/biography/ashit-milne.md",
+        "type": "essay",
+        "label": "One Step Beyond",
+        "stage": "published",
+        "slug": "ashit-milne",
+        "series": "The Times",
+        "folder": "narrative/biography",
+        "ontologyPath": "narrative/biography/ashit-milne.md",
+        "vaultPath": "ontology/narrative/biography/ashit-milne",
+        "tags": [
+          "Identity",
+          "Community",
+          "Spirituality",
+          "Personal-Growth",
+          "Toronto",
+          "Meditation"
+        ]
+      },
+      {
+        "id": "essay:narrative/biography/ashit-patel.md",
+        "type": "essay",
+        "label": "Macauley's Favorite Bastard",
+        "stage": "published",
+        "slug": "ashit-patel",
+        "series": "The Times",
+        "folder": "narrative/biography",
+        "ontologyPath": "narrative/biography/ashit-patel.md",
+        "vaultPath": "ontology/narrative/biography/ashit-patel",
+        "tags": [
+          "cultural-critique",
+          "civilization",
+          "governance",
+          "money",
+          "identity",
+          "political-economy"
+        ]
+      },
+      {
+        "id": "essay:narrative/comment/tenable.md",
+        "type": "essay",
+        "label": "The Tenable",
+        "stage": "published",
+        "slug": "tenable",
+        "series": "Polite Bureau",
+        "folder": "narrative/comment",
+        "ontologyPath": "narrative/comment/Tenable.md",
+        "vaultPath": "ontology/narrative/comment/Tenable",
+        "tags": [
+          "cultural-critique",
+          "political-economy",
+          "monetary-policy",
+          "governance",
+          "theology"
+        ]
+      },
+      {
+        "id": "essay:narrative/comment/transition.md",
+        "type": "essay",
+        "label": "The Transition",
+        "stage": "published",
+        "slug": "transition",
+        "series": "Polite Bureau",
+        "folder": "narrative/comment",
+        "ontologyPath": "narrative/comment/Transition.md",
+        "vaultPath": "ontology/narrative/comment/Transition",
+        "tags": [
+          "cultural-critique",
+          "political-economy",
+          "monetary-policy",
+          "governance",
+          "theology"
+        ]
+      },
+      {
+        "id": "series:peridot",
+        "type": "series",
+        "label": "peridot"
+      },
+      {
+        "id": "series:the-times",
+        "type": "series",
+        "label": "The Times"
+      },
+      {
+        "id": "series:polite-bureau",
+        "type": "series",
+        "label": "Polite Bureau"
+      },
+      {
+        "id": "folder:governance-illumination",
+        "type": "folder",
+        "label": "governance/illumination"
+      },
+      {
+        "id": "folder:me",
+        "type": "folder",
+        "label": "me"
+      },
+      {
+        "id": "folder:narrative-biography",
+        "type": "folder",
+        "label": "narrative/biography"
+      },
+      {
+        "id": "folder:narrative-comment",
+        "type": "folder",
+        "label": "narrative/comment"
+      },
+      {
+        "id": "tag:ethics",
+        "type": "tag",
+        "label": "ethics"
+      },
+      {
+        "id": "tag:governance",
+        "type": "tag",
+        "label": "governance"
+      },
+      {
+        "id": "tag:identity",
+        "type": "tag",
+        "label": "identity"
+      },
+      {
+        "id": "tag:money",
+        "type": "tag",
+        "label": "money"
+      },
+      {
+        "id": "tag:capital",
+        "type": "tag",
+        "label": "capital"
+      },
+      {
+        "id": "tag:theology",
+        "type": "tag",
+        "label": "theology"
+      },
+      {
+        "id": "tag:networks",
+        "type": "tag",
+        "label": "networks"
+      },
+      {
+        "id": "tag:ecology",
+        "type": "tag",
+        "label": "ecology"
+      },
+      {
+        "id": "tag:anarchism",
+        "type": "tag",
+        "label": "anarchism"
+      },
+      {
+        "id": "tag:political-economy",
+        "type": "tag",
+        "label": "political-economy"
+      },
+      {
+        "id": "tag:economy",
+        "type": "tag",
+        "label": "economy"
+      },
+      {
+        "id": "tag:technology",
+        "type": "tag",
+        "label": "technology"
+      },
+      {
+        "id": "tag:commons",
+        "type": "tag",
+        "label": "commons"
+      },
+      {
+        "id": "tag:community",
+        "type": "tag",
+        "label": "Community"
+      },
+      {
+        "id": "tag:spirituality",
+        "type": "tag",
+        "label": "Spirituality"
+      },
+      {
+        "id": "tag:personal-growth",
+        "type": "tag",
+        "label": "Personal-Growth"
+      },
+      {
+        "id": "tag:toronto",
+        "type": "tag",
+        "label": "Toronto"
+      },
+      {
+        "id": "tag:meditation",
+        "type": "tag",
+        "label": "Meditation"
+      },
+      {
+        "id": "tag:cultural-critique",
+        "type": "tag",
+        "label": "cultural-critique"
+      },
+      {
+        "id": "tag:civilization",
+        "type": "tag",
+        "label": "civilization"
+      },
+      {
+        "id": "tag:monetary-policy",
+        "type": "tag",
+        "label": "monetary-policy"
+      },
+      {
+        "id": "term:migration",
+        "type": "term",
+        "label": "migration",
+        "defined": false
+      },
+      {
+        "id": "term:identity",
+        "type": "term",
+        "label": "Identity",
+        "defined": true
+      },
+      {
+        "id": "term:political economy",
+        "type": "term",
+        "label": "Political Economy",
+        "defined": true
+      },
+      {
+        "id": "term:governance",
+        "type": "term",
+        "label": "Governance",
+        "defined": true
+      },
+      {
+        "id": "term:keiretsu",
+        "type": "term",
+        "label": "Keiretsu",
+        "defined": true
+      },
+      {
+        "id": "term:ash patel",
+        "type": "term",
+        "label": "ash patel",
+        "defined": false
+      },
+      {
+        "id": "term:ashit patel",
+        "type": "term",
+        "label": "ashit patel",
+        "defined": false
+      },
+      {
+        "id": "term:education",
+        "type": "term",
+        "label": "education",
+        "defined": false
+      },
+      {
+        "id": "term:international",
+        "type": "term",
+        "label": "international",
+        "defined": false
+      },
+      {
+        "id": "term:praxis",
+        "type": "term",
+        "label": "Praxis",
+        "defined": true
+      },
+      {
+        "id": "term:architecture",
+        "type": "term",
+        "label": "architecture",
+        "defined": false
+      },
+      {
+        "id": "term:moral injury",
+        "type": "term",
+        "label": "Moral Injury",
+        "defined": true
+      },
+      {
+        "id": "term:transaction",
+        "type": "term",
+        "label": "transaction",
+        "defined": false
+      },
+      {
+        "id": "term:yoga element",
+        "type": "term",
+        "label": "Yoga Element",
+        "defined": false
+      },
+      {
+        "id": "term:dharana",
+        "type": "term",
+        "label": "dharana",
+        "defined": false
+      },
+      {
+        "id": "term:dhyana",
+        "type": "term",
+        "label": "dhyana",
+        "defined": false
+      },
+      {
+        "id": "term:samadhi",
+        "type": "term",
+        "label": "samadhi",
+        "defined": false
+      },
+      {
+        "id": "term:mudra",
+        "type": "term",
+        "label": "mudra",
+        "defined": false
+      },
+      {
+        "id": "term:omphalos",
+        "type": "term",
+        "label": "Omphalos",
+        "defined": false
+      },
+      {
+        "id": "term:dollar regime",
+        "type": "term",
+        "label": "Dollar Regime",
+        "defined": false
+      },
+      {
+        "id": "term:treasury of the commons",
+        "type": "term",
+        "label": "Treasury of the Commons",
+        "defined": false
+      },
+      {
+        "id": "term:protocol",
+        "type": "term",
+        "label": "Protocol",
+        "defined": false
+      },
+      {
+        "id": "term:yield",
+        "type": "term",
+        "label": "Yield",
+        "defined": true
+      },
+      {
+        "id": "term:tenable",
+        "type": "term",
+        "label": "Tenable",
+        "defined": true
+      },
+      {
+        "id": "term:alpha",
+        "type": "term",
+        "label": "Alpha",
+        "defined": true
+      },
+      {
+        "id": "term:anarchism",
+        "type": "term",
+        "label": "Anarchism",
+        "defined": true
+      },
+      {
+        "id": "term:anima",
+        "type": "term",
+        "label": "Anima",
+        "defined": true
+      },
+      {
+        "id": "term:animus",
+        "type": "term",
+        "label": "Animus",
+        "defined": true
+      },
+      {
+        "id": "term:animus machinae",
+        "type": "term",
+        "label": "Animus Machinae",
+        "defined": true
+      },
+      {
+        "id": "term:areté",
+        "type": "term",
+        "label": "Areté",
+        "defined": true
+      },
+      {
+        "id": "term:autonomy",
+        "type": "term",
+        "label": "Autonomy",
+        "defined": true
+      },
+      {
+        "id": "term:beta",
+        "type": "term",
+        "label": "Beta",
+        "defined": true
+      },
+      {
+        "id": "term:call to adventure",
+        "type": "term",
+        "label": "Call to Adventure",
+        "defined": true
+      },
+      {
+        "id": "term:calling",
+        "type": "term",
+        "label": "Calling",
+        "defined": true
+      },
+      {
+        "id": "term:capital",
+        "type": "term",
+        "label": "Capital",
+        "defined": true
+      },
+      {
+        "id": "term:commons, treasury of the",
+        "type": "term",
+        "label": "Commons, Treasury of the",
+        "defined": true
+      },
+      {
+        "id": "term:creation",
+        "type": "term",
+        "label": "Creation",
+        "defined": true
+      },
+      {
+        "id": "term:dial square",
+        "type": "term",
+        "label": "Dial Square",
+        "defined": true
+      },
+      {
+        "id": "term:firmitas",
+        "type": "term",
+        "label": "Firmitas",
+        "defined": true
+      },
+      {
+        "id": "term:giants",
+        "type": "term",
+        "label": "Giants",
+        "defined": true
+      },
+      {
+        "id": "term:hormesis",
+        "type": "term",
+        "label": "Hormesis",
+        "defined": true
+      },
+      {
+        "id": "term:intelligence",
+        "type": "term",
+        "label": "Intelligence",
+        "defined": true
+      },
+      {
+        "id": "term:janus",
+        "type": "term",
+        "label": "Janus",
+        "defined": true
+      },
+      {
+        "id": "term:ledger",
+        "type": "term",
+        "label": "Ledger",
+        "defined": true
+      },
+      {
+        "id": "term:maya",
+        "type": "term",
+        "label": "Maya",
+        "defined": true
+      },
+      {
+        "id": "term:namaste",
+        "type": "term",
+        "label": "Namaste",
+        "defined": true
+      },
+      {
+        "id": "term:noblesse oblige",
+        "type": "term",
+        "label": "Noblesse Oblige",
+        "defined": true
+      },
+      {
+        "id": "term:omega",
+        "type": "term",
+        "label": "Omega",
+        "defined": true
+      },
+      {
+        "id": "term:orthodoxy",
+        "type": "term",
+        "label": "Orthodoxy",
+        "defined": true
+      },
+      {
+        "id": "term:peridot",
+        "type": "term",
+        "label": "Peridot",
+        "defined": true
+      },
+      {
+        "id": "term:perimeter",
+        "type": "term",
+        "label": "Perimeter",
+        "defined": true
+      },
+      {
+        "id": "term:project, product, protocol",
+        "type": "term",
+        "label": "Project, Product, Protocol",
+        "defined": true
+      },
+      {
+        "id": "term:satyagraha",
+        "type": "term",
+        "label": "Satyagraha",
+        "defined": true
+      },
+      {
+        "id": "term:self-sovereign",
+        "type": "term",
+        "label": "Self-sovereign",
+        "defined": true
+      },
+      {
+        "id": "term:semantic perimeter",
+        "type": "term",
+        "label": "Semantic Perimeter",
+        "defined": true
+      },
+      {
+        "id": "term:semper idem",
+        "type": "term",
+        "label": "Semper Idem",
+        "defined": true
+      },
+      {
+        "id": "term:social credit",
+        "type": "term",
+        "label": "Social Credit",
+        "defined": true
+      },
+      {
+        "id": "term:social network",
+        "type": "term",
+        "label": "Social Network",
+        "defined": true
+      },
+      {
+        "id": "term:soft power",
+        "type": "term",
+        "label": "Soft Power",
+        "defined": true
+      },
+      {
+        "id": "term:stephen / steven",
+        "type": "term",
+        "label": "Stephen / Steven",
+        "defined": true
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge:essay-governance-illumination-arete-md-series-peridot-member-of-series",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "series:peridot",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-folder-governance-illumination-member-of-folder",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "folder:governance-illumination",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-tag-ethics-tagged",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "tag:ethics",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-tag-governance-tagged",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-tag-identity-tagged",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-tag-money-tagged",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "tag:money",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-tag-capital-tagged",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-tag-theology-tagged",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-series-peridot-member-of-series",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "series:peridot",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-folder-governance-illumination-member-of-folder",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "folder:governance-illumination",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-governance-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-identity-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-networks-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:networks",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-capital-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-ecology-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:ecology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-tag-anarchism-tagged",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "tag:anarchism",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-connexion-md-folder-me-member-of-folder",
+        "from": "essay:me/connexion.md",
+        "to": "folder:me",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-folder-me-member-of-folder",
+        "from": "essay:me/origins.md",
+        "to": "folder:me",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-tag-political-economy-tagged",
+        "from": "essay:me/origins.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-tag-governance-tagged",
+        "from": "essay:me/origins.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-tag-capital-tagged",
+        "from": "essay:me/origins.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-tag-economy-tagged",
+        "from": "essay:me/origins.md",
+        "to": "tag:economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-tag-technology-tagged",
+        "from": "essay:me/origins.md",
+        "to": "tag:technology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-migration-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:migration",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-identity-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:identity",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-political-economy-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:political economy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-governance-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:governance",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-keiretsu-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:keiretsu",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-ash-patel-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:ash patel",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-ashit-patel-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:ashit patel",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-education-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:education",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-international-lexica",
+        "from": "essay:me/origins.md",
+        "to": "term:international",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-praxis-md-folder-me-member-of-folder",
+        "from": "essay:me/praxis.md",
+        "to": "folder:me",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-tag-governance-tagged",
+        "from": "essay:me/praxis.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-tag-identity-tagged",
+        "from": "essay:me/praxis.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-tag-money-tagged",
+        "from": "essay:me/praxis.md",
+        "to": "tag:money",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-tag-political-economy-tagged",
+        "from": "essay:me/praxis.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-tag-economy-tagged",
+        "from": "essay:me/praxis.md",
+        "to": "tag:economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-tag-technology-tagged",
+        "from": "essay:me/praxis.md",
+        "to": "tag:technology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-praxis-lexica",
+        "from": "essay:me/praxis.md",
+        "to": "term:praxis",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-architecture-lexica",
+        "from": "essay:me/praxis.md",
+        "to": "term:architecture",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-governance-lexica",
+        "from": "essay:me/praxis.md",
+        "to": "term:governance",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-political-economy-lexica",
+        "from": "essay:me/praxis.md",
+        "to": "term:political economy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-folder-me-member-of-folder",
+        "from": "essay:me/trials-of-job.md",
+        "to": "folder:me",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-tag-governance-tagged",
+        "from": "essay:me/trials-of-job.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-tag-identity-tagged",
+        "from": "essay:me/trials-of-job.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-tag-technology-tagged",
+        "from": "essay:me/trials-of-job.md",
+        "to": "tag:technology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-tag-commons-tagged",
+        "from": "essay:me/trials-of-job.md",
+        "to": "tag:commons",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-tag-political-economy-tagged",
+        "from": "essay:me/trials-of-job.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-tag-money-tagged",
+        "from": "essay:me/trials-of-job.md",
+        "to": "tag:money",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-moral-injury-lexica",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:moral injury",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-governance-lexica",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:governance",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-ashit-patel-lexica",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:ashit patel",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-series-the-times-member-of-series",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "series:the-times",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-folder-narrative-biography-member-of-folder",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "folder:narrative-biography",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-tag-identity-tagged",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-tag-community-tagged",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "tag:community",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-tag-spirituality-tagged",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "tag:spirituality",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-tag-personal-growth-tagged",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "tag:personal-growth",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-tag-toronto-tagged",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "tag:toronto",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-tag-meditation-tagged",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "tag:meditation",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-series-the-times-member-of-series",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "series:the-times",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-folder-narrative-biography-member-of-folder",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "folder:narrative-biography",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-tag-cultural-critique-tagged",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "tag:cultural-critique",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-tag-civilization-tagged",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "tag:civilization",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-tag-governance-tagged",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-tag-money-tagged",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "tag:money",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-tag-identity-tagged",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-tag-political-economy-tagged",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-ash-patel-lexica",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:ash patel",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-series-polite-bureau-member-of-series",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "series:polite-bureau",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-folder-narrative-comment-member-of-folder",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "folder:narrative-comment",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-tag-cultural-critique-tagged",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "tag:cultural-critique",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-tag-political-economy-tagged",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-tag-monetary-policy-tagged",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "tag:monetary-policy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-tag-governance-tagged",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-tag-theology-tagged",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-governance-lexica",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:governance",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-transaction-lexica",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:transaction",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-series-polite-bureau-member-of-series",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "series:polite-bureau",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-folder-narrative-comment-member-of-folder",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "folder:narrative-comment",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-tag-cultural-critique-tagged",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "tag:cultural-critique",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-tag-political-economy-tagged",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-tag-monetary-policy-tagged",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "tag:monetary-policy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-tag-governance-tagged",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-tag-theology-tagged",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-yoga-element-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:yoga element",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-dharana-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:dharana",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-dhyana-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:dhyana",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-samadhi-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:samadhi",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-mudra-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:mudra",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-omphalos-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:omphalos",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-dollar-regime-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:dollar regime",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-treasury-of-the-commons-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:treasury of the commons",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-protocol-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:protocol",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-identity-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:identity",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-yield-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:yield",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-tenable-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:tenable",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-governance-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:governance",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-transaction-lexica",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:transaction",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-alpha-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:alpha",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-alpha-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:alpha",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-anarchism-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:anarchism",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-anarchism-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:anarchism",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-anarchism-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:anarchism",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-anima-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-anima-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-anima-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-anima-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-animus-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-animus-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-animus-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-animus-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-arete-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:areté",
+        "kind": "mention",
+        "weight": 5,
+        "count": 11
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-autonomy-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 5,
+        "count": 10
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-autonomy-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-autonomy-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-beta-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:beta",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-call-to-adventure-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:call to adventure",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-calling-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:calling",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-calling-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:calling",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-calling-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:calling",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-capital-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-capital-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 5,
+        "count": 12
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-capital-mention",
+        "from": "essay:me/origins.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-capital-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-capital-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-capital-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-capital-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-capital-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-creation-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-creation-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-creation-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-creation-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-creation-mention",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-creation-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-dial-square-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:dial square",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-firmitas-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:firmitas",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-giants-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:giants",
+        "kind": "mention",
+        "weight": 5,
+        "count": 10
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-giants-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:giants",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-giants-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:giants",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-giants-mention",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:giants",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-governance-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-governance-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-governance-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-governance-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-hormesis-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:hormesis",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-identity-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 5,
+        "count": 8
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-identity-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-identity-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 5,
+        "count": 6
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-identity-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 5,
+        "count": 6
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-identity-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-intelligence-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-intelligence-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-intelligence-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-intelligence-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-ledger-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:ledger",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-ledger-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:ledger",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-ledger-mention",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:ledger",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-maya-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:maya",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-namaste-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:namaste",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-noblesse-oblige-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:noblesse oblige",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-omega-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:omega",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-omega-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:omega",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-orthodoxy-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:orthodoxy",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-peridot-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:peridot",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-perimeter-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-perimeter-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-perimeter-mention",
+        "from": "essay:me/origins.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-perimeter-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-perimeter-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-perimeter-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-perimeter-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-political-economy-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-political-economy-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-political-economy-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-political-economy-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-political-economy-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-praxis-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:praxis",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-satyagraha-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:satyagraha",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-self-sovereign-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-self-sovereign-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-self-sovereign-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-self-sovereign-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-semantic-perimeter-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-semantic-perimeter-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-semantic-perimeter-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-semantic-perimeter-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-semantic-perimeter-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-semper-idem-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-semper-idem-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-semper-idem-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-semper-idem-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-social-credit-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:social credit",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-social-network-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-social-network-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 5,
+        "count": 9
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-social-network-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 5,
+        "count": 8
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-social-network-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-social-network-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-soft-power-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:soft power",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-tenable-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:tenable",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-tenable-mention",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:tenable",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-yield-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:yield",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-yield-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:yield",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      }
+    ]
+  }
+}

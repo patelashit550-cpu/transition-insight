@@ -1,0 +1,132 @@
+{
+  "version": "1",
+  "generated": "2026-08-04T03:40:36.588Z",
+  "tier": "global",
+  "manifestDigest": "sha256:c1b9caf587a8021fd1e5d895450029a1cfa15a9efcbdcd5ad2d899630deb80eb",
+  "identity": {
+    "canonical": "https://ashitmilne.xyz",
+    "sns": "transition-insight.sol",
+    "solSite": "https://transition-insight.sol.sites",
+    "ens": "ashitpatel.eth",
+    "solana": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
+  },
+  "summary": {
+    "totalOntologyFiles": 72,
+    "attestedFiles": 11,
+    "signedFiles": 0
+  },
+  "attested": [
+    {
+      "path": "ontology/governance/Canonical.md",
+      "stage": "published",
+      "title": "Canonical",
+      "author": null,
+      "publishedAt": "2026-07-25T00:00:00.000Z",
+      "slug": "canonical",
+      "series": "Regnum Dei",
+      "sha256": "sha256:181ddb4de24c65928b038592edff1c13351ce48d9482d243829c03f8f22852e8"
+    },
+    {
+      "path": "ontology/governance/illumination/arete.md",
+      "stage": "published",
+      "title": "Areté",
+      "author": null,
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "slug": "arete",
+      "series": "peridot",
+      "sha256": "sha256:e1db2955741a8aedc818804cc0e9e3a127551eb2c87415095fe8b6eeaba40c5d"
+    },
+    {
+      "path": "ontology/governance/illumination/social-network.md",
+      "stage": "published",
+      "title": "The Social Network",
+      "author": null,
+      "publishedAt": "2026-07-25T00:00:00.000Z",
+      "slug": "social-network",
+      "series": "peridot",
+      "sha256": "sha256:61dbf7fd1814e834181f762063c5786023451a566dd45294adbe873908a0f56d"
+    },
+    {
+      "path": "ontology/me/connexion.md",
+      "stage": "published",
+      "title": "Connexion",
+      "author": null,
+      "publishedAt": "2026-04-30T00:00:00.000Z",
+      "slug": "connexion",
+      "series": null,
+      "sha256": "sha256:7343a4ade06391b24c11883853565a133ea5f6a6c5b9490cbe6fb23178bd9146"
+    },
+    {
+      "path": "ontology/me/origins.md",
+      "stage": "published",
+      "title": "Act I: अर्थ — Origins",
+      "author": null,
+      "publishedAt": "2026-04-27T00:00:00.000Z",
+      "slug": "origins",
+      "series": null,
+      "sha256": "sha256:12c044ac75ad849e04839d0dad602c3a66fa8e472a10d7151f764829a2f2f021"
+    },
+    {
+      "path": "ontology/me/praxis.md",
+      "stage": "published",
+      "title": "Act III: πρᾶξις — Praxis",
+      "author": null,
+      "publishedAt": "2026-07-11T00:00:00.000Z",
+      "slug": "praxis",
+      "series": null,
+      "sha256": "sha256:77ade6955ba9e4ad3c7ccbb1bb68102132b09a89a20b09cb856799ebbd245956"
+    },
+    {
+      "path": "ontology/me/trials-of-job.md",
+      "stage": "published",
+      "title": "Act II: 気 - Trials of Job",
+      "author": null,
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "slug": "trials-of-job",
+      "series": null,
+      "sha256": "sha256:3fe2b5cfd4a47133a2bfa2e7aa24579da4d67f120994a793592b24725edc6d81"
+    },
+    {
+      "path": "ontology/narrative/biography/ashit-milne.md",
+      "stage": "published",
+      "title": "One Step Beyond",
+      "author": null,
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "slug": "ashit-milne",
+      "series": "The Times",
+      "sha256": "sha256:a94442aab0b75e5090f74edf03ad612fe9b7e6a8502061c3b803debe695e5775"
+    },
+    {
+      "path": "ontology/narrative/biography/ashit-patel.md",
+      "stage": "published",
+      "title": "Macauley's Favorite Bastard",
+      "author": null,
+      "publishedAt": "2026-06-27T00:00:00.000Z",
+      "slug": "ashit-patel",
+      "series": "The Times",
+      "sha256": "sha256:6e424cd43a5c51698c16396e648d0cd5fe74919bbcb45974563d493245a5e7f6"
+    },
+    {
+      "path": "ontology/narrative/comment/Tenable.md",
+      "stage": "published",
+      "title": "The Tenable",
+      "author": null,
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "slug": "tenable",
+      "series": "Polite Bureau",
+      "sha256": "sha256:eaa41ccbcd8aae043616569ac942cd5cbc9123e8da00a2a9597e4dff8bfe0afd"
+    },
+    {
+      "path": "ontology/narrative/comment/Transition.md",
+      "stage": "published",
+      "title": "The Transition",
+      "author": null,
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "slug": "transition",
+      "series": "Polite Bureau",
+      "sha256": "sha256:a829dd2076089b10903913a26cf7486fa5d1659ac6c096336459cb98b5290270"
+    }
+  ],
+  "signature": null
+}

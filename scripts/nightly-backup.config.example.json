@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nightly backup config — copy to nightly-backup.config.json and edit paths.",
+  "backupRoot": "E:\\Backups\\transition-insight",
+  "workspaceRoot": "C:\\Workspace\\transition-insight",
+  "keepDays": 14,
+  "includeEnvFiles": true,
+  "includeOut": true,
+  "includeNodeModules": false,
+  "driveReadyTimeoutSec": 180
+}

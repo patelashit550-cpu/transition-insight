@@ -1,0 +1,238 @@
+{
+  "schema": "transition-insight/ontology-manifest/v0",
+  "generatedAt": "2026-06-28T11:27:32.563Z",
+  "contentTier": "global",
+  "sovereign": {
+    "did": null,
+    "siteUrl": "https://transition-insight.com",
+    "ipfsPeer": null
+  },
+  "stats": {
+    "artifacts": 11,
+    "globalExport": 3,
+    "wordsPublished": 5705
+  },
+  "artifacts": [
+    {
+      "dataPoint": "0xAF1",
+      "bento": "B1",
+      "layer": "identity",
+      "name": "Origins",
+      "desc": "Act I · अर्थ — Being",
+      "href": "/me/origins",
+      "ontologyPath": "me/origins.md",
+      "slug": "origins",
+      "stage": "published",
+      "title": "Act I: अर्थ — Origins",
+      "subtitle": "Being—meaning and margin as semantic perimeter of identity",
+      "sha256": "e9580c9bddd9fb9b8d5ae90e134b1c9e0d62707ce872d7e801d290478806917b",
+      "words": 2198,
+      "priority": 3,
+      "transit": {
+        "globalExport": true,
+        "humanAudit": true
+      }
+    },
+    {
+      "dataPoint": "0xAF2",
+      "bento": "B1",
+      "layer": "identity",
+      "name": "Trials of Job",
+      "desc": "Act II · 気 — Key",
+      "href": "/me/trials-of-job",
+      "ontologyPath": "me/trials-of-job.md",
+      "slug": "trials-of-job",
+      "stage": "published",
+      "title": "Act II: 気 — Trials of Job",
+      "subtitle": "Vocation and vibe as the key in network intercourse",
+      "sha256": "d9784bc914792812e4dddfb02db09f2947c5d72216a7ec67e92ba51b836b9566",
+      "words": 3507,
+      "priority": 3,
+      "transit": {
+        "globalExport": true,
+        "humanAudit": true
+      }
+    },
+    {
+      "dataPoint": "0xAF3",
+      "bento": "B1",
+      "layer": "identity",
+      "name": "In Praxis",
+      "desc": "योग — Come Together",
+      "href": "/me/praxis",
+      "ontologyPath": "me/praxis.md",
+      "slug": "praxis",
+      "stage": "draft",
+      "title": "Act III: योग — Praxis",
+      "subtitle": null,
+      "sha256": "a0d3af25c5bf3c53682e1a2164d7dfff257f520437b5724bfb6f931e0d79c63b",
+      "words": 4247,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xAF4",
+      "bento": "B1",
+      "layer": "identity",
+      "name": "Connexion",
+      "desc": "Phone Jack",
+      "href": "/me/connexion",
+      "ontologyPath": "me/connexion.md",
+      "slug": "connexion",
+      "stage": "published",
+      "title": "Connexion",
+      "subtitle": null,
+      "sha256": "77b211ee24890da0aeec1883b54fdc4651e23fde2f1dd88c6b1d30cc444fa103",
+      "words": 0,
+      "priority": 3,
+      "transit": {
+        "globalExport": true,
+        "humanAudit": true
+      }
+    },
+    {
+      "dataPoint": "0xBF5",
+      "bento": "B2",
+      "layer": "governance",
+      "name": "Carta",
+      "desc": "Canon",
+      "href": "/governance/carta",
+      "ontologyPath": "carta.mdx",
+      "slug": "carta",
+      "stage": "draft",
+      "title": "Carta",
+      "subtitle": "A Tract In Deed and In Habit",
+      "sha256": "03e9c6310ee0e3247d197e7617ee152d1897c76a8d406464cdea8ab7e79f0d71",
+      "words": 57,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xBF1",
+      "bento": "B2",
+      "layer": "governance",
+      "name": "Semper Idem",
+      "desc": "Identity",
+      "href": "/governance/identity",
+      "ontologyPath": "governance/identity/identity.md",
+      "slug": "identity",
+      "stage": "draft",
+      "title": "Semper Idem",
+      "subtitle": null,
+      "sha256": "cf06a398012025e59352ebcbbe87e7481851875393b8d027e70d0c7e57c844b1",
+      "words": 14,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xBF3",
+      "bento": "B2",
+      "layer": "governance",
+      "name": "E Pluribus Unum",
+      "desc": "Capital",
+      "href": "/governance/capital",
+      "ontologyPath": "governance/capital/capital.md",
+      "slug": "capital",
+      "stage": "draft",
+      "title": "E Pluribus Unum",
+      "subtitle": null,
+      "sha256": "97713c834511760717c194ac71da0e4dd61db188f9617d28e06abfff4bede1e9",
+      "words": 13,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xBF2",
+      "bento": "B2",
+      "layer": "governance",
+      "name": "Sine Qua Non",
+      "desc": "Intelligence",
+      "href": "/governance/intelligence",
+      "ontologyPath": "governance/intelligence/intelligence.md",
+      "slug": "intelligence",
+      "stage": "draft",
+      "title": "Sine Qua Non",
+      "subtitle": null,
+      "sha256": "af14f78ab8ef1beaae3dfcb862433e2066697989289395655094dd72f1260374",
+      "words": 11,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xBF4",
+      "bento": "B2",
+      "layer": "governance",
+      "name": "Peridot",
+      "desc": "Terms & Conditions",
+      "href": "/governance/peridot",
+      "ontologyPath": "governance/illumination/peridot.md",
+      "slug": "peridot",
+      "stage": "draft",
+      "title": "Peridot",
+      "subtitle": null,
+      "sha256": "4d32695d37ab628054bae418d649f67fc432e815fcaaf7cbad25a04d265ec669",
+      "words": 82,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xCF1",
+      "bento": "B3",
+      "layer": "chronicle",
+      "name": "The Times",
+      "desc": "By Jack London",
+      "href": "/chronicle/jack-london",
+      "ontologyPath": null,
+      "slug": null,
+      "stage": "draft",
+      "title": null,
+      "subtitle": null,
+      "sha256": null,
+      "words": 0,
+      "priority": 0,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    },
+    {
+      "dataPoint": "0xCF3",
+      "bento": "B3",
+      "layer": "chronicle",
+      "name": "Polite Bureau",
+      "desc": "Commentary",
+      "href": "/chronicle/polite_bureau",
+      "ontologyPath": "narrative/comment/polite-bureau.md",
+      "slug": "polite-bureau",
+      "stage": "draft",
+      "title": "Polite Bureau",
+      "subtitle": null,
+      "sha256": "a2c27ae74a951bb78e04f158b731e03258abf31d7b9d38bac65efb1988f8e09d",
+      "words": 14,
+      "priority": 1,
+      "transit": {
+        "globalExport": false,
+        "humanAudit": false
+      }
+    }
+  ],
+  "manifestSha256": "27294a8bee1403c3fcc6f613dd76f0712c4201c90bb3eb16b491c5c049f48c2b"
+}

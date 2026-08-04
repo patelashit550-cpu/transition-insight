@@ -1,0 +1,56 @@
+# Skill: Content Provenance and Sol.site Binding
+
+Use when wiring milling, noding, or transaction-pool agents to Transition Insight.
+
+## Endpoints
+
+- `/.well-known/provenance.json` — canonical URL, SNS, Sol.site alias, pool metadata
+- `/attestation.json` — SHA-256 manifest of published ontology files (global tier)
+- `/auth.md` — human-readable provenance notes for agents
+
+## Identity chain
+
+1. **Canonical:** `https://transition-insight.com`
+2. **SNS:** `transition-insight.sol` (wallet-owned on Solana)
+3. **Sol.site:** `https://transition-insight.sol.sites` (SNS → DNS gateway)
+4. **DID:** `did:pkh:solana:<wallet>` from provenance / page meta (`author-did`)
+
+Agents should treat the signed `manifestDigest` in attestation as the corpus
+root hash for any slice-of-pool work. Per-file `sha256` entries identify individual essays.
+
+## Sovereign publish (IPFS / IPNS via Pinata)
+
+No GitHub, no Cloudflare origin. Build global tier, pin `out/`, publish IPNS:
+
+```
+cp .env.sovereign.example .env.local   # add PINATA_JWT, gateway, IPNS name
+npm run deploy:sovereign
+```
+
+After first pin, set `NEXT_PUBLIC_IPFS_CID`, `NEXT_PUBLIC_IPFS_GATEWAY`, and
+`NEXT_PUBLIC_IPNS_NAME` in `.env.local`, rebuild, and redeploy so
+`provenance.json` and attestation reference the live CID.
+
+Wire `transition-insight.com` via Pinata dedicated-gateway custom domain
+(CNAME) or DNSLink (`_dnslink` TXT → `/ipns/<name>`). Sol.site can CNAME to
+the same hostname once it resolves.
+
+Until a CID is baked in, `provenance.json` reports `solSite.status: pending-dns`.
+
+## Sign attestation (maintainer)
+
+```
+npm run content:attest
+SOLANA_SIGNING_KEY=<base58-secret> npm run content:sign
+npm run content:verify
+```
+
+Never commit `SOLANA_SIGNING_KEY`. Use the wallet that owns `transition-insight.sol`.
+
+## Future milling / noding
+
+When building transaction-pool or content-milling features:
+
+- Verify attestation signature before indexing a corpus snapshot
+- Bind on-chain program IDs to `manifestDigest` for decisive provenance
+- Prefer `the-transaction.md` (Peridot / governance) as design context for rails

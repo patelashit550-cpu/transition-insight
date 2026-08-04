@@ -1,0 +1,3 @@
+Contact: mailto:ash@transition-insight.com
+Preferred-Languages: en
+Canonical: https://transition-insight.com/.well-known/security.txt

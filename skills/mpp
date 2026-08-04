@@ -1,0 +1,24 @@
+# Implement MPP Payment Discovery
+
+Publish an OpenAPI document with MPP payment discovery metadata so AI agents
+can discover your payable endpoints via the
+[Machine Payment Protocol](https://mpp.dev)
+([spec](https://paymentauth.org/draft-payment-discovery-00.txt)).
+
+## Requirements
+
+- Serve `/openapi.json` at the site root with HTTP 200
+- Include `x-payment-info` extensions on payable operations
+- Each `x-payment-info` must declare `intent` (charge or session), `method` (tempo, stripe, lightning, card), and `amount`
+- Optionally include `currency`, `description`, and top-level `x-service-info` with categories
+
+## Validate
+
+```
+POST https://isitagentready.com/api/scan
+Content-Type: application/json
+
+{"url": "https://YOUR-SITE.com"}
+```
+
+Check that `checks.commerce.mpp.status` is `"pass"`.

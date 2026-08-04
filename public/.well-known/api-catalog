@@ -1,0 +1,31 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://ashitmilne.xyz/",
+      "service-desc": [
+        {
+          "href": "https://ashitmilne.xyz/sitemap.xml",
+          "type": "application/xml"
+        },
+        {
+          "href": "https://ashitmilne.xyz/openapi.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://ashitmilne.xyz/.well-known/agent-skills/index.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://ashitmilne.xyz/.well-known/agent-skills/transition-insight/SKILL.md",
+          "type": "text/markdown"
+        },
+        {
+          "href": "https://ashitmilne.xyz/auth.md",
+          "type": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

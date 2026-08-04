@@ -1,0 +1,53 @@
+<svg width="680" height="680" viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Hero of A Thousand Faces: The Three Body Small World After All Versioning Problem</title>
+  <desc>Three tangent circles forming a heroic head with two ears, filled with thousands of tiny faces, framed in emerald green</desc>
+
+  <defs>
+    <pattern id="fp" x="0" y="0" width="16" height="18" patternUnits="userSpaceOnUse" patternTransform="scale(1.6)">
+      <rect width="16" height="18" fill="#1a1508"/>
+      <ellipse cx="8" cy="9" rx="5.5" ry="6.8" fill="none" stroke="#e0b030" stroke-width="0.55" opacity="0.9"/>
+      <circle cx="5.5" cy="7" r="1.4" fill="#f0c040"/>
+      <circle cx="10.5" cy="7" r="1.4" fill="#f0c040"/>
+      <line x1="8" y1="9.5" x2="8" y2="11.5" stroke="#e0b030" stroke-width="0.7" opacity="0.9"/>
+      <path d="M5 13.5 Q8 16.5 11 13.5" fill="none" stroke="#f0c040" stroke-width="1.0"/>
+    </pattern>
+    <pattern id="fp2" x="8" y="9" width="16" height="18" patternUnits="userSpaceOnUse" patternTransform="scale(1.6)">
+      <rect width="16" height="18" fill="#161006"/>
+      <ellipse cx="8" cy="9" rx="5.5" ry="6.8" fill="none" stroke="#c89018" stroke-width="0.5" opacity="0.8"/>
+      <circle cx="5.5" cy="7" r="1.25" fill="#daa028"/>
+      <circle cx="10.5" cy="7" r="1.25" fill="#daa028"/>
+      <path d="M5.5 13 Q8 15.5 10.5 13" fill="none" stroke="#daa028" stroke-width="0.9"/>
+    </pattern>
+    <clipPath id="hc">
+      <circle cx="218" cy="268" r="57"/>
+      <circle cx="462" cy="268" r="57"/>
+      <circle cx="340" cy="390" r="115"/>
+    </clipPath>
+    <clipPath id="frame-clip">
+      <rect x="8" y="8" width="664" height="664" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Full-bleed background — CSS handles border-radius and the emerald mat -->
+  <rect x="0" y="0" width="680" height="680" fill="#080604"/>
+
+  <!-- Face pattern fill -->
+  <rect width="680" height="680" fill="url(#fp)" clip-path="url(#hc)"/>
+  <rect width="680" height="680" fill="url(#fp2)" opacity="0.65" clip-path="url(#hc)"/>
+
+  <!-- Circle outlines -->
+  <circle cx="218" cy="268" r="57" fill="none" stroke="#d4a030" stroke-width="0.7" opacity="0.55"/>
+  <circle cx="462" cy="268" r="57" fill="none" stroke="#d4a030" stroke-width="0.7" opacity="0.55"/>
+  <circle cx="340" cy="390" r="115" fill="none" stroke="#d4a030" stroke-width="0.7" opacity="0.55"/>
+
+  <!-- Tangent point glimmers -->
+  <circle cx="258" cy="308" r="2.5" fill="#f0c040" opacity="0.9"/>
+  <circle cx="422" cy="308" r="2.5" fill="#f0c040" opacity="0.9"/>
+
+  <!-- Title -->
+  <text x="340" y="548" text-anchor="middle" fill="#d4a030" font-family="Georgia, serif" font-size="11" letter-spacing="5" opacity="0.7">HERO OF A THOUSAND FACES</text>
+  <line x1="175" y1="556" x2="505" y2="556" stroke="#d4a030" stroke-width="0.4" opacity="0.3"/>
+  <text x="340" y="572" text-anchor="middle" fill="#d4a030" font-family="Georgia, serif" font-size="7.5" letter-spacing="2.5" opacity="0.45">THE THREE BODY · SMALL WORLD AFTER ALL · VERSIONING PROBLEM</text>
+
+  <!-- No internal border — CSS mat is the single source of truth for the emerald ring -->
+</svg>

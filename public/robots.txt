@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://ashitmilne.xyz
+Sitemap: https://ashitmilne.xyz/sitemap.xml

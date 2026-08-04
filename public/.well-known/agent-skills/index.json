@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "transition-insight",
+      "type": "skill-md",
+      "description": "Navigate and read Transition Insight essays, chronicles, and governance nodes.",
+      "url": "https://ashitmilne.xyz/.well-known/agent-skills/transition-insight/SKILL.md",
+      "digest": "sha256:9bfab56da2af25562e3154c33dbf50388ca835bdbbdfd5913cf791c7faa2f298"
+    }
+  ]
+}
