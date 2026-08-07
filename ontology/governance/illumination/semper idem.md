@@ -23,7 +23,50 @@ tags:
 ---
 ## Personhood
 
-Identity is *the* fundamental factor in determining how one is to be kept safe and secure. The most important ideas are the persistent, simple ones geared to our *own* survival. Contentment cannot be sustained if we do not have access to the *ways* in which we might make our individual lives better without imposing on others. This is why agency and autonomy are important. First and foremost it has to be expressed by *oneself*.  The idea that nothing can changed without others is easily learned by adults unless they are regularly experiencing some kind of effortful effort manifest a small change. 
+Identity is *the* fundamental factor in determining how one is to be kept safe and secure. The most important ideas are the persistent, simple ones geared to our *own* survival. Contentment cannot be sustained where access to the *ways* in which we might make our  lives better is impeded.
+
+This is why agency and autonomy are important. First it has to be expressed by *oneself*.  Nothing substantive in the world will change without us first making some meaningful effort to effect positive change in *ourselves*. It is an anarchist *tenet* that *order* is a natural phenomenon which may only be manifested in humanity without permanent hierarchical leadership.
+
+To the present day the US Constitution provides the oldest extant basic law against which we measure the *practical* limits of freedom over the course of time in a large domain - the US Dollar Regime. Written by Thomas Jefferson this is the first manifesto of the philosophical anarchist who understood the *delta* between what was felt as truth and beauty and how it was allowed to be publically expressed in *his* world.
+
+Through the nineteenth century Americans would roil violently in conflicts concerning their political economy and how one was to define the terms foreign and domestic; and as well public and private. In the meantime philosophical anarchists Whitman, Thoreau, Emerson and as well too William James *diverged* from this insanity to root themselves in spiritual traditions and as well to explore their relationship in symbology to ecology and courtship; both of these once the purview of private spaces and conversations have now become impossible to govern on and offline without the interference of interlopers. It is individuals not the *vox populi* which has led (or front-run) progress quietly; simply by living their lives peacefully in a distributed and autonomous fashion.
+
+Whereas in 1917 the Anarchist Emma Goldman might be exiled from Chicago to Toronto for protesting against military conscription. By 1960 the openly bisexual Paul Goodman living in a time of radical beatnik dissent amidst general prosperity could postulate the follow:
+
+>Let me formulate the artistic disposition as follows: it is reacting with one's ideal to the flaw in oneself and in the world, and somehow making that reaction formation solid enough in the medium so that it indeed becomes an improved bit of real world for others.
+
+Those who react to the defacement of what are *universally* acknowledged sanctums (sacredly held notions) are responding with a measure of pragmatism to an aesthetic concern - a lack of consistency with which the *law* is enforced and safety is provisioned to ordinary people.
+
+That same decade Noam Chomsky might peacefully demonstrate against the war in Vietnam without fear of losing his life. *Academia* was a sanctum where *peaceful* protest and discussion was permitted as long as it was not generally disruptive to their spaces or domains.
+
+However by 2008 the anthropologist David Graeber, raising his sites to explore the political economy of the firm and its relationship with the state would lose his job at Yale for protesting against financial bailouts. Whatever the reasons for his removal continuing his work at Yale was deemed untenable by its internal stakeholders.
+
+As an accomplished academic whose ideas were generally acknowledged to be peacefully articulated he was permitted to leave his country. Exiled in England he would continue his work at the London School of Economics.
+
+Graeber died at 59 from necrotic pancreatitis shortly after finishing his last book The Dawn of Everything. The book explored the anarchism of indigenous Americans whose governance was founded on discussion-oriented dialogue of tribal *elders* entrusted and delegated by their tribes to discuss important matters.
+
+As a person who shares the principles of these thinkers and who will not defer to *any*  sovereign the right to dictate what constitutes basic freedoms - even my own countries - Canada and the United Kingdom.
+
+I myself was employed in what people generally refer to as the *private* sector until around 2022 at which point I found my own condition to be untenable. Graeber spoke at some length about the mental health risks of working in *bullshit* jobs - work performed without much joy and primarily to earn a wage with which to pay expenses.
+
+critical ones my focus or frame of reference extend to those things which were beyond their scope and domains: 
+
+
+
+
+
+
+
+Good government is preceded through the institution of order. Order is merely the imposition of established rules. Order in this context is synonymous with *law*. By and large in the *liberal* west we may generally live *openly* even amidst radical communities as long as the law is obeyed concerning basic notions of crime.
+
+The anarchist 
+
+
+
+By permanent we mean that at any given time anyone may assert themselves in some way.
+
+
+in the without others is easily learned by adults unless they are regularly experiencing some kind of effortful effort manifest a small change. 
 
 
 Especially when civility becomes a precursor to dialogue.
