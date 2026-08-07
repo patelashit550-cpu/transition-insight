@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T03:40:36.413Z",
+  "generatedAt": "2026-08-07T07:33:02.602Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,15 +14,15 @@
   },
   "interior": {
     "summary": {
-      "essays": 10,
-      "nodes": 98,
-      "edges": 205,
+      "essays": 11,
+      "nodes": 99,
+      "edges": 218,
       "byKind": {
-        "member-of-series": 6,
-        "member-of-folder": 10,
-        "tagged": 51,
+        "member-of-series": 7,
+        "member-of-folder": 11,
+        "tagged": 57,
         "lexica": 33,
-        "mention": 105
+        "mention": 110
       },
       "orphanEssays": 1,
       "series": 3,
@@ -41,6 +41,25 @@
         "folder": "governance/illumination",
         "ontologyPath": "governance/illumination/arete.md",
         "vaultPath": "ontology/governance/illumination/arete",
+        "tags": [
+          "ethics",
+          "governance",
+          "identity",
+          "money",
+          "capital",
+          "theology"
+        ]
+      },
+      {
+        "id": "essay:governance/illumination/semper idem.md",
+        "type": "essay",
+        "label": "Semper Idem",
+        "stage": "published",
+        "slug": "semper-idem",
+        "series": "peridot",
+        "folder": "governance/illumination",
+        "ontologyPath": "governance/illumination/semper idem.md",
+        "vaultPath": "ontology/governance/illumination/semper idem",
         "tags": [
           "ethics",
           "governance",
@@ -765,6 +784,62 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-tag-theology-tagged",
         "from": "essay:governance/illumination/arete.md",
+        "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-series-peridot-member-of-series",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "series:peridot",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-folder-governance-illumination-member-of-folder",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "folder:governance-illumination",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-ethics-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:ethics",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-governance-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-identity-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-money-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:money",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-capital-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-theology-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
         "to": "tag:theology",
         "kind": "tagged",
         "weight": 1
@@ -1534,6 +1609,14 @@
         "count": 10
       },
       {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-autonomy-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-social-network-md-term-autonomy-mention",
         "from": "essay:governance/illumination/social-network.md",
         "to": "term:autonomy",
@@ -1596,6 +1679,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 5
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-capital-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-capital-mention",
@@ -1758,6 +1849,14 @@
         "count": 4
       },
       {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-governance-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-social-network-md-term-governance-mention",
         "from": "essay:governance/illumination/social-network.md",
         "to": "term:governance",
@@ -1796,6 +1895,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-identity-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",
@@ -2129,6 +2236,14 @@
         "id": "edge:essay-narrative-comment-transition-md-term-semantic-perimeter-mention",
         "from": "essay:narrative/comment/transition.md",
         "to": "term:semantic perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-semper-idem-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:semper idem",
         "kind": "mention",
         "weight": 2,
         "count": 2

@@ -63,6 +63,14 @@ function fallbackTitleFromSlug(slug: string): string {
     .join(" ");
 }
 
+/**
+ * Collect a flattened list of publishing workflow rows by scanning the ontology.
+ *
+ * Each row contains slug, resolved title, normalized stage, UI lane label, and
+ * flags indicating whether the file will be included in preprod/global builds.
+ *
+ * @returns array of WorkflowRow suitable for admin UIs and exports
+ */
 export function listPublishingWorkflowRows(): WorkflowRow[] {
   const files: string[] = [];
   collectFiles("", files);
@@ -94,6 +102,12 @@ export function listPublishingWorkflowRows(): WorkflowRow[] {
   return rows;
 }
 
+/**
+ * Tally workflow rows into a simple counts object.
+ *
+ * @param rows - array of WorkflowRow objects (usually from listPublishingWorkflowRows)
+ * @returns counts keyed by workflow lane
+ */
 export function getWorkflowCounts(rows: WorkflowRow[]) {
   const counts = {
     writing: 0,
@@ -112,6 +126,14 @@ export function getWorkflowCounts(rows: WorkflowRow[]) {
   return counts;
 }
 
+/**
+ * Get workflow context useful for admin dashboards.
+ *
+ * Returns the current content build tier, the collected workflow rows, and
+ * aggregated counts.
+ *
+ * @returns object with { tier, rows, counts }
+ */
 export function getWorkflowContext() {
   const tier = getContentBuildTier();
   const rows = listPublishingWorkflowRows();
@@ -119,6 +141,12 @@ export function getWorkflowContext() {
   return { tier, rows, counts };
 }
 
+/**
+ * Human-readable label for a ContentTier.
+ *
+ * @param tier - content build tier
+ * @returns uppercase label used in UI headers
+ */
 export function tierLabel(tier: ContentTier): string {
   if (tier === "local") return "LOCAL";
   if (tier === "preprod") return "PREPROD";

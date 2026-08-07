@@ -81,6 +81,17 @@ function sortEssayStubs<T extends EssayStub & { _filename: string }>(stubs: T[])
 }
 
 /** Hub index target: most recent `publishedAt`, else highest `order`, else first sorted stub. */
+/**
+ * Choose the most appropriate essay slug for a hub index.
+ *
+ * Preference order:
+ *  1. Most recent `publishedAt` (dateMs) if available
+ *  2. Highest frontmatter `order`
+ *  3. First stub sorted by filename
+ *
+ * @param essays - array of EssayStub objects
+ * @returns slug of the chosen essay or null when the list is empty
+ */
 export function pickLatestEssaySlug(essays: EssayStub[]): string | null {
   if (essays.length === 0) return null;
 
@@ -134,6 +145,15 @@ export interface EssayData {
 }
 
 /** URL-safe slug from filename (strips extension, lowercases, kebab-cases). */
+/**
+ * Convert a filename or candidate string into a URL-safe slug.
+ *
+ * Removes md/mdx extensions, unicode diacritics, lowercases and collapses
+ * non-alphanumerics to hyphens.
+ *
+ * @param filename - file basename or slug-like string
+ * @returns normalized slug suitable for URLs
+ */
 export function toSlug(filename: string): string {
   return filename
     .replace(/\.(mdx|md)$/i, "")
@@ -159,6 +179,14 @@ function readFile(fullPath: string): EssayData {
   return { frontmatter: data as EssayData["frontmatter"], content };
 }
 
+/**
+ * Read and normalize the `stage` frontmatter value for a file.
+ *
+ * Returns a normalized stage string; on error or when missing, returns "draft".
+ *
+ * @param fullPath - absolute filesystem path to the markdown file
+ * @returns normalized stage name (e.g., 'draft', 'review', 'published')
+ */
 export function readStageFromFile(fullPath: string): string {
   try {
     const raw = fs.readFileSync(fullPath, "utf8");
@@ -219,6 +247,15 @@ function fileBelongsToTopic(filename: string, topicPath: string | string[]): boo
  * Single-file essay lookup. Evaluates exact target files matching the leaf slug name
  * across the recursive folder index tree.
  */
+/**
+ * Load a single essay by slug (searching frontmatter `slug` or filename).
+ *
+ * Accepts a slug string or slug path array. When NODE_ENV is development,
+ * `_sourcePath` is attached to help surface file-source drift.
+ *
+ * @param slugPath - slug string or array of path segments
+ * @returns EssayData when found, otherwise null
+ */
 export function getProfileData(slugPath: string | string[]): EssayData | null {
   const targetSlug = Array.isArray(slugPath) ? slugPath[slugPath.length - 1] : slugPath;
   const cleanTarget = toSlug(targetSlug);
@@ -250,6 +287,13 @@ export function getProfileData(slugPath: string | string[]): EssayData | null {
 }
 
 /** Does the given relative path resolve to a topic directory containing valid files? */
+/**
+ * Determine whether a normalized topic path corresponds to a real folder
+ * containing at least one markdown file in the ontology.
+ *
+ * @param topicPath - folder path as string or array (e.g. ['governance','identity'])
+ * @returns true when at least one file is found under the target dir
+ */
 export function isTopicFolder(topicPath: string | string[]): boolean {
   const targetDir = Array.isArray(topicPath) ? topicPath.join("/") : topicPath;
   const normalizedTarget = targetDir.replace(/\\/g, "/").replace(/^\/+|\/+$/g, "").toLowerCase();
@@ -262,6 +306,12 @@ export function isTopicFolder(topicPath: string | string[]): boolean {
 
 /**
  * List essays inside a physical folder directory, sorted by frontmatter `order` (ascending).
+ */
+/**
+ * List essays in a topic folder, sorted by `order` frontmatter ascending.
+ *
+ * @param topicPath - folder path as string or array
+ * @returns array of EssayStub objects (slug, title, order, optional date fields)
  */
 export function listEssays(topicPath: string | string[]): EssayStub[] {
   type Enriched = EssayStub & { _filename: string };
@@ -292,6 +342,16 @@ export function listEssays(topicPath: string | string[]): EssayStub[] {
 
 /**
  * Like `listEssays`, but filters content based on the target build tier flags.
+ */
+/**
+ * Like `listEssays` but filters files according to the current build tier.
+ *
+ * When `tier === 'local'` this is equivalent to listEssays. Otherwise it will
+ * exclude essays whose `stage` frontmatter is not included in the target tier.
+ *
+ * @param topicPath - folder path as string or array
+ * @param tier - build tier that controls stage inclusion (defaults to publishing content tier)
+ * @returns array of EssayStub objects eligible for the target build
  */
 export function listEssaysForBuild(
   topicPath: string | string[],
@@ -333,6 +393,16 @@ export function listEssaysForBuild(
 }
 
 /** Read one essay inside a topic by its true directory positioning and URL slug name. */
+/**
+ * Read a single essay by slug within a topic folder.
+ *
+ * Ensures the returned essay belongs to the requested topic path. When running
+ * in development, `_sourcePath` is attached for debugging file-source drift.
+ *
+ * @param topicPath - folder path as string or array
+ * @param essaySlug - slug of the essay to find
+ * @returns EssayData when found, otherwise null
+ */
 export function getEssayInTopic(
   topicPath: string | string[],
   essaySlug: string
@@ -363,6 +433,15 @@ export function getEssayInTopic(
  * Essays in a topic folder, optionally filtered by `series` frontmatter.
  * Excludes `type: series-summary` landers from the nav list.
  */
+/**
+ * List essays in a physical topic folder, optionally filtered by series.
+ *
+ * Excludes `type: series-summary` lander files. Returns stubs sorted by `order`.
+ *
+ * @param topicPath - folder path as string or array
+ * @param options - optional filters (e.g., { series: 'peridot' })
+ * @returns array of EssayStub
+ */
 export function listEssaysInTopicFolder(
   topicPath: string | string[],
   options: { series?: string } = {}
@@ -381,6 +460,17 @@ export function listEssaysInTopicFolder(
   return sortEssayStubs(stubs).map(({ _filename, ...rest }) => rest);
 }
 
+/**
+ * List essays in a topic folder for a target build tier.
+ *
+ * Honors `tier` filtering and optional `series` filter. Falls back to the
+ * non-filtering `listEssaysInTopicFolder` when the tier is `local` and no
+ * series filter was provided.
+ *
+ * @param topicPath - folder path as string or array
+ * @param options - { series?: string, tier?: ContentTier }
+ * @returns array of EssayStub eligible for the build
+ */
 export function listEssaysInTopicFolderForBuild(
   topicPath: string | string[],
   options: { series?: string; tier?: ContentTier } = {}
@@ -408,6 +498,14 @@ export function listEssaysInTopicFolderForBuild(
 }
 
 /** Essays anywhere in the corpus matching a `series` frontmatter value. */
+/**
+ * Find all essays across the corpus belonging to a named series.
+ *
+ * Excludes series-summary landers.
+ *
+ * @param seriesName - series frontmatter value to match (case-insensitive)
+ * @returns array of EssayStub
+ */
 export function listEssaysBySeries(seriesName: string): EssayStub[] {
   const target = seriesName.trim().toLowerCase();
   const stubs = listFlatOntologyFilenames()
@@ -421,6 +519,15 @@ export function listEssaysBySeries(seriesName: string): EssayStub[] {
   return sortEssayStubs(stubs).map(({ _filename, ...rest }) => rest);
 }
 
+/**
+ * Find essays in a named series respecting build-tier filtering.
+ *
+ * When `tier === 'local'` this simply delegates to `listEssaysBySeries`.
+ *
+ * @param seriesName - series frontmatter value to match
+ * @param tier - target content tier (defaults to publishing content tier)
+ * @returns array of EssayStub eligible for the build
+ */
 export function listEssaysBySeriesForBuild(
   seriesName: string,
   tier: ContentTier = getPublishingContentTier()
@@ -442,6 +549,12 @@ export function listEssaysBySeriesForBuild(
 }
 
 /** Back-compat shim for legacy API calls. */
+/**
+ * Back-compat shim returning simple { slug, title } pairs for a category.
+ *
+ * @param category - topic folder path
+ * @returns array of lightweight objects with { slug, title }
+ */
 export function getAllEssaysInCategory(category: string) {
   return listEssays(category).map(({ slug, title }) => ({ slug, title }));
 }
@@ -449,6 +562,13 @@ export function getAllEssaysInCategory(category: string) {
 /**
  * Resolves a relative ontology path (e.g., 'identity/connexion' or 'me/origins') 
  * to its absolute file path on disk based on physical folders.
+ */
+/**
+ * Resolve a relative ontology path (e.g., 'identity/connexion' or 'me/origins')
+ * to an absolute on-disk path for the first matching file.
+ *
+ * @param relFromOntology - relative ontology path (slashes allowed)
+ * @returns absolute filesystem path when found, otherwise null
  */
 export function resolveOntologyFilePath(relFromOntology: string): string | null {
   const rel = relFromOntology.replace(/\\/g, "/").replace(/^\/+|\/+$/g, "").toLowerCase();
@@ -473,6 +593,14 @@ export function resolveOntologyFilePath(relFromOntology: string): string | null 
 }
 
 /** Builds static params loops cleanly walking physical path trees. */
+/**
+ * Produce static slug params by walking the ontology tree.
+ *
+ * Returns an array of `{ slug: string[] }` objects suitable for static
+ * pre-rendering. Excludes files not included for the current publishing tier.
+ *
+ * @returns array of slug param objects for SSG
+ */
 export function listStaticOntologySlugParams(): { slug: string[] }[] {
   const seen = new Set<string>();
   const out: { slug: string[] }[] = [];

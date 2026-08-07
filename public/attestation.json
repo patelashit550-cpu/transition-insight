@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-08-04T03:40:36.588Z",
+  "generated": "2026-08-07T07:33:03.747Z",
   "tier": "global",
-  "manifestDigest": "sha256:c1b9caf587a8021fd1e5d895450029a1cfa15a9efcbdcd5ad2d899630deb80eb",
+  "manifestDigest": "sha256:cbd08fc8ad3d6ebd13d37e12e2c7fcbb71c2be7437891db15f4ab3d79b21982b",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 72,
-    "attestedFiles": 11,
+    "totalOntologyFiles": 73,
+    "attestedFiles": 12,
     "signedFiles": 0
   },
   "attested": [
@@ -36,6 +36,16 @@
       "slug": "arete",
       "series": "peridot",
       "sha256": "sha256:e1db2955741a8aedc818804cc0e9e3a127551eb2c87415095fe8b6eeaba40c5d"
+    },
+    {
+      "path": "ontology/governance/illumination/semper idem.md",
+      "stage": "published",
+      "title": "Semper Idem",
+      "author": null,
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "slug": "semper-idem",
+      "series": "peridot",
+      "sha256": "sha256:dac37c0e3611f1ab14d2064629844167aff987c8f8cb907b0afcd352b02d43f5"
     },
     {
       "path": "ontology/governance/illumination/social-network.md",

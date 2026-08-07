@@ -113,6 +113,15 @@ function hubKeyFromSlug(parts: string[]): ContentHubKey | null {
   return key in CONTENT_HUBS ? key : null;
 }
 
+/**
+ * Resolve a route slug array into a typed ContentRoute.
+ *
+ * Recognizes configured CONTENT_HUBS (hub-style routes) and falls back to a
+ * legacy topic+slug route shape. Returns `null` for clearly invalid slugs.
+ *
+ * @param slug - array of path segments (e.g. ['governance','peridot','my-essay'])
+ * @returns a ContentRoute describing how the site should render the path, or null
+ */
 export function resolveContentRoute(slug: string[]): ContentRoute | null {
   const parts = slug.filter(Boolean);
   if (parts.length < 2) return null;
@@ -135,6 +144,16 @@ export function resolveContentRoute(slug: string[]): ContentRoute | null {
   };
 }
 
+/**
+ * Build static params (slug arrays) for each hub and its essays.
+ *
+ * Used by static site generation to pre-render hub indexes and essay pages
+ * for all configured CONTENT_HUBS.
+ *
+ * @param listFolderEssays - callback returning essays for a folder-style hub
+ * @param listSeriesEssays - callback returning essays for a series-style hub
+ * @returns array of `{ slug: string[] }` param objects suitable for Next.js static paths
+ */
 export function listContentHubStaticParams(
   listFolderEssays: (topicPath: string[], seriesSlug?: string) => EssayStub[],
   listSeriesEssays: (seriesName: string) => EssayStub[]
@@ -161,6 +180,18 @@ export function listContentHubStaticParams(
 /**
  * Static params for bento links outside {@link CONTENT_HUBS} — e.g. `/me/origins`, `/governance/carta`.
  * Hub landers + hub essays are handled by {@link listContentHubStaticParams}.
+ */
+/**
+ * Build static params for legacy bento links (non-hub routes).
+ *
+ * Scans the `me` essays and configured BentoRegistry items, resolving
+ * each href to an essay and filtering by stage inclusion. Deduplicates
+ * results and returns arrays suitable for SSG params.
+ *
+ * @param listMeEssays - callback that lists essays under `/me`
+ * @param resolveEssay - function resolving slug parts to an essay object
+ * @param isStageIncluded - predicate to decide whether a frontmatter stage should be included
+ * @returns array of `{ slug: string[] }` param objects
  */
 export function listBentoLegacyStaticParams(
   listMeEssays: () => EssayStub[],
