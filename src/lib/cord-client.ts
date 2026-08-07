@@ -1,43 +1,10 @@
 /** Browser-safe Cord helpers (no fs / server-only). */
-
-export const CORD_MAX_BODY = 500;
-
-/** Public owner address — same as provenance / Connexion strip. */
-export const CORD_OWNER_FALLBACK = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
-
-/**
- * Return the configured Cord owner address or a safe fallback.
- *
- * Reads NEXT_PUBLIC_SOLANA_WALLET_ADDRESS (browser-exposed env var) and
- * falls back to a constant owner address when unset.
- *
- * @returns Solana-style owner address string
- */
-export function cordOwnerAddress(): string {
-  return (process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS || "").trim() || CORD_OWNER_FALLBACK;
-}
-
-/**
- * Build a deterministic message string to sign for Cord submissions.
- *
- * Format is a simple newline-separated bundle including address and timestamp
- * so signatures are reproducible across environments.
- *
- * @param address - wallet/address string to attribute the message to
- * @param timestamp - epoch milliseconds used to bind the message to a time
- * @param body - content body to include in the signed payload
- * @returns canonical multi-line message string to sign
- */
-export function buildCordSignMessage(address: string, timestamp: number, body: string): string {
-  return [
-    "Transition Insight Chord",
-    "",
-    `Address: ${address}`,
-    `Timestamp: ${timestamp}`,
-    "Content:",
-    body.trim(),
-  ].join("\n");
-}
+import {
+  CORD_MAX_BODY,
+  CORD_OWNER_FALLBACK,
+  cordOwnerAddress,
+  buildCordSignMessage,
+} from "@/lib/cord-shared";
 
 /** Phantom extension — Cord compose is owner-only and uses Phantom explicitly. */
 export const PHANTOM_INSTALL_URL = "https://phantom.app/";
@@ -84,3 +51,5 @@ export function isPhantomProviderAvailable(): boolean {
 export function openPhantomInstall(): void {
   window.open(PHANTOM_INSTALL_URL, "_blank", "noopener,noreferrer");
 }
+
+export { CORD_MAX_BODY, CORD_OWNER_FALLBACK, cordOwnerAddress, buildCordSignMessage };

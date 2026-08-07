@@ -6,6 +6,9 @@ import path from "path";
 import bs58 from "bs58";
 import nacl from "tweetnacl";
 
+import { CORD_MAX_BODY, cordOwnerAddress, buildCordSignMessage } from "@/lib/cord-shared";
+export { cordOwnerAddress } from "@/lib/cord-shared";
+
 export type CordPost = {
   id: string;
   body: string;
@@ -18,34 +21,14 @@ export type CordFeed = {
   posts: CordPost[];
 };
 
-export const CORD_MAX_BODY = 500;
 export const CORD_SIGN_WINDOW_MS = 5 * 60 * 1000;
 
 const FEED_PATH = path.join(process.cwd(), "public", "cord", "feed.json");
-
-export function cordOwnerAddress(): string {
-  const fromEnv = (process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS || "").trim();
-  if (fromEnv) return fromEnv;
-  // Public allowlist fallback (same address as provenance) so local.devtools works
-  // when only `.env.production` defines NEXT_PUBLIC_SOLANA_WALLET_ADDRESS.
-  return "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
-}
 
 export function isCordPrototypeEnabled(): boolean {
   // Local next.devtools only — static global export stays web1 / no write surface.
   if (process.env.NODE_ENV === "development") return true;
   return process.env.NEXT_PUBLIC_CONTENT_TIER?.trim().toLowerCase() === "local";
-}
-
-export function buildCordSignMessage(address: string, timestamp: number, body: string): string {
-  return [
-    "Transition Insight Chord",
-    "",
-    `Address: ${address}`,
-    `Timestamp: ${timestamp}`,
-    "Content:",
-    body.trim(),
-  ].join("\n");
 }
 
 export function readCordFeed(): CordFeed {
