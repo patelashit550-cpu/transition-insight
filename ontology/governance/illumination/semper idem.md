@@ -23,7 +23,10 @@ tags:
 ---
 ## Personhood
 
-Identity is *the* fundamental factor in determining how one is to be kept safe and secure. The most important ideas are the persistent, simple ones geared to our *own* survival. Contentment cannot be sustained if we do not have access to the *ways* in which we might make our individual lives better without imposing on others. This is why agency and autonomy are important. First and foremost it has to be expressed by *oneself*.  The idea that nothing can changed without others is easily learned by adults. Especially when civility becomes a precursor to dialogue.
+Identity is *the* fundamental factor in determining how one is to be kept safe and secure. The most important ideas are the persistent, simple ones geared to our *own* survival. Contentment cannot be sustained if we do not have access to the *ways* in which we might make our individual lives better without imposing on others. This is why agency and autonomy are important. First and foremost it has to be expressed by *oneself*.  The idea that nothing can changed without others is easily learned by adults unless they are regularly experiencing some kind of effortful effort manifest a small change. 
+
+
+Especially when civility becomes a precursor to dialogue.
 
 
 
