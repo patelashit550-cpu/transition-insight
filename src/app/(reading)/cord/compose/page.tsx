@@ -22,4 +22,7 @@ export default function CordComposePage() {
           .
         </p>
       </header>
-     
+      <CordComposeForm />
+    </div>
+  );
+}

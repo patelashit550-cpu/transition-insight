@@ -9,18 +9,18 @@ theme: emerald
 size: md
 showInNav: true
 lexica:
-  - '[[Anima]]'
-  - '[[Animus]]'
-  - '[[Anarchy]]'
-  - '[[Commons]]'
-  - '[[Creation]]'
-  - '[[Leviathan]]'
-  - '[[Machina Virtualis]]'
-  - '[[Money]]'
-  - '[[Semper Idem]]'
-  - '[[Trinity Bellwoods Park]]'
-  - '[[Veritas et Utilitas]]'
-date: '2025-09-26T00:00:00.000Z'
+  - "[[Anima]]"
+  - "[[Animus]]"
+  - "[[Anarchy]]"
+  - "[[Commons]]"
+  - "[[Creation]]"
+  - "[[Leviathan]]"
+  - "[[Machina Virtualis]]"
+  - "[[Money]]"
+  - "[[semper idem]]"
+  - "[[Trinity Bellwoods Park]]"
+  - "[[Veritas et Utilitas]]"
+date: 2025-09-26T00:00:00.000Z
 series: E Pluribus Unum
 part: 1
 tags:

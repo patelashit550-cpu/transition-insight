@@ -9,32 +9,32 @@ theme: emerald
 size: md
 showInNav: true
 lexica:
-  - '[[Act III]]'
-  - '[[Anarchy]]'
-  - '[[Anima]]'
-  - '[[Animus]]'
-  - '[[Anthropocene]]'
-  - '[[Clock Time]]'
-  - '[[Commons]]'
-  - '[[Compromise]]'
-  - '[[Connection]]'
-  - '[[Consciousness]]'
-  - '[[Creation]]'
-  - '[[Credit]]'
-  - '[[Deus ex Machina]]'
-  - '[[Discussion Mudra]]'
-  - '[[Empathy]]'
-  - '[[God]]'
-  - '[[Intelligence]]'
-  - '[[Legitimate]]'
-  - '[[Lingam]]'
-  - '[[Machina]]'
-  - '[[Memory]]'
-  - '[[Money]]'
-  - '[[Regnum Dei]]'
-  - '[[Semper Idem]]'
-  - '[[Via Negativa]]'
-date: '2025-09-13T00:00:00.000Z'
+  - "[[Act III]]"
+  - "[[Anarchy]]"
+  - "[[Anima]]"
+  - "[[Animus]]"
+  - "[[Anthropocene]]"
+  - "[[Clock Time]]"
+  - "[[Commons]]"
+  - "[[Compromise]]"
+  - "[[Connection]]"
+  - "[[Consciousness]]"
+  - "[[Creation]]"
+  - "[[Credit]]"
+  - "[[Deus ex Machina]]"
+  - "[[Discussion Mudra]]"
+  - "[[Empathy]]"
+  - "[[God]]"
+  - "[[Intelligence]]"
+  - "[[Legitimate]]"
+  - "[[Lingam]]"
+  - "[[Machina]]"
+  - "[[Memory]]"
+  - "[[Money]]"
+  - "[[Regnum Dei]]"
+  - "[[semper idem]]"
+  - "[[Via Negativa]]"
+date: 2025-09-13T00:00:00.000Z
 tags:
   - anima
   - intelligence

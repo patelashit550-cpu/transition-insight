@@ -9,26 +9,26 @@ theme: emerald
 size: md
 showInNav: true
 lexica:
-  - '[[Anima]]'
-  - '[[Animus]]'
-  - '[[Anthropocene]]'
-  - '[[Commons]]'
-  - '[[Consensus]]'
-  - '[[Creation]]'
-  - '[[Dial Square]]'
-  - '[[Emergence]]'
-  - '[[Empathy]]'
-  - '[[God]]'
-  - '[[Identity Stack]]'
-  - '[[Intelligence]]'
-  - '[[Jack]]'
-  - '[[Legitimate]]'
-  - '[[Machina]]'
-  - '[[Money]]'
-  - '[[Regnum Dei]]'
-  - '[[Semper Idem]]'
-  - '[[Stone Rose]]'
-date: '2025-09-13T00:00:00.000Z'
+  - "[[Anima]]"
+  - "[[Animus]]"
+  - "[[Anthropocene]]"
+  - "[[Commons]]"
+  - "[[Consensus]]"
+  - "[[Creation]]"
+  - "[[Dial Square]]"
+  - "[[Emergence]]"
+  - "[[Empathy]]"
+  - "[[God]]"
+  - "[[Identity Stack]]"
+  - "[[Intelligence]]"
+  - "[[Jack]]"
+  - "[[Legitimate]]"
+  - "[[Machina]]"
+  - "[[Money]]"
+  - "[[Regnum Dei]]"
+  - "[[semper idem]]"
+  - "[[Stone Rose]]"
+date: 2025-09-13T00:00:00.000Z
 tags:
   - machina
   - anima

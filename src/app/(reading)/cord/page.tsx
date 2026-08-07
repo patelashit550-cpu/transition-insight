@@ -57,4 +57,8 @@ export default function CordFeedPage() {
               <p className="p3-cord__body">{post.body}</p>
             </li>
           ))
-   
+        )}
+      </ol>
+    </div>
+  );
+}
