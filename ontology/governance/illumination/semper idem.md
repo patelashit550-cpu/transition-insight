@@ -23,7 +23,43 @@ tags:
 ---
 ## Personhood
 
-Identity is *the* fundamental factor in determining how one is to be kept safe and secure. The most important ideas are the persistent, simple ones geared to our *own* survival. Contentment cannot be sustained where access to the *ways* in which we might make our  lives better is impeded.
+Identity is fundamental to determining how one is to be kept safe and secure. It is who we are and through its expression we come to know our standing as our transactions express a stream of consciousness; a signal which expresses, to the degree with which truth is 
+
+
+by the esteem which we are held
+
+and composed of ideas learned through the course of a lifetime; then expressed in terms that wax and wane with the zeitgeist of the *real* world as it turns through the trends and fads that resonate with it.
+
+The most important ideas then stand us apart from the spinning compass that whirs through every unquieted fad. The important ideas are the *oldest* ones universally dreamed of in a thousand ways in communities that become societies and then great empires since the beginning of time. The persistent pattern is repeated relentlessly and it tells us of pitfalls of making the entire world in our image. For who would want such a world? This is the lesson of Midas, the self-made man who turns himself to gold at long last like everything else.
+
+All of us start at *different* places beyond our control. All we can do is make what we will of the ourselves with the mentorship and guidance of our forefathers in the lessons taught  by fathers but perhaps not entirely fully practiced. That we might yet achieve that thing we have had set us up for us.
+
+
+- those men who get close enough to guide us in a tempestuous world of bravado. 
+
+- those who cannot delineate the demands of the office they hold and who they take home to the world of their loved ones. 
+
+Nor is it something demanded of only our most powerful - those who have been chosen by us as we exercise our rights and obligations but by each of us. Those who aim high *must* fail so it is important to define what ambitions we pursue and whether they are self-serving or designed to achieve progress. In that, all we can do is live our own lives as best we can as an example. If I look back on my *own* life my greatest influences have been teachers - my grandfathers and those who taught me in schools and universities across three continents - most of all my own father - upon whose shoulders I have been carried. It is his humility along with the simple idea that one does not beg - neither for respect nor forgiveness. For if we have lived well and taken nothing. Everything we could ever have wanted was granted to us at birth.
+
+
+
+
+
+There are those two who set for me the qualities of radical brand - a Style Council if you will - who define the pose in the world of posers who crave the pulpit and as well the loudest of microphones.
+
+
+
+
+constitutes  and define the fundamental philosophies that might serve
+
+We are born extremely high-maintenance and costly. It is an extraordinary thing to believe you have the capacity to raise a child because they are an enormous burden - one few believe they can afford.
+
+and then held longer than any other mammal
+
+is composed of ideas; sound ones which are perennially recognized as valid
+
+
+and simple ones geared to our *own* survival. Contentment cannot be sustained where access to the *ways* in which we might make our  lives better is impeded.
 
 This is why agency and autonomy are important. First it has to be expressed by *oneself*.  Nothing substantive in the world will change without us first making some meaningful effort to effect positive change in *ourselves*. It is an anarchist *tenet* that *order* is a natural phenomenon which may only be manifested in humanity without permanent hierarchical leadership.
 
@@ -47,7 +83,7 @@ Graeber died at 59 from necrotic pancreatitis shortly after finishing his last b
 
 As a person who shares the principles of these thinkers and who will not defer to *any*  sovereign the right to dictate what constitutes basic freedoms - even my own countries - Canada and the United Kingdom.
 
-I myself was employed in what people generally refer to as the *private* sector until around 2022 at which point I found my own condition to be untenable. Graeber spoke at some length about the mental health risks of working in *bullshit* jobs - work performed without much joy and primarily to earn a wage with which to pay expenses.
+I myself was employed in what people generally refer to as the *private* sector until around 2022 at which point I found my own condition to be untenable. Graeber spoke at some length about the mental health risks of working in *bullshit* jobs - work performed without much joy and primarily to earn a wage with which to pay expenses some time after you've learned everything there is from the opportunity.
 
 critical ones my focus or frame of reference extend to those things which were beyond their scope and domains: 
 
