@@ -24,14 +24,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
+          # Match local ship path; avoid flaky npm cache on first Pages cutover.
           node-version: "22"
-          cache: npm
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
+        run: |
+          npm ci --no-audit --no-fund || {
+            echo "npm ci failed; falling back to npm install"
+            rm -rf node_modules
+            npm install --no-audit --no-fund
+          }
 
       - name: Build static export (global tier)
         # Serving at custom domain root (ashitmilne.xyz) → no basePath.
