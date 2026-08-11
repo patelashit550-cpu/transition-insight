@@ -12,7 +12,7 @@ Use when wiring milling, noding, or transaction-pool agents to Transition Insigh
 
 1. **Canonical:** `https://transition-insight.com`
 2. **SNS:** `transition-insight.sol` (wallet-owned on Solana)
-3. **Sol.site:** `https://transition-insight.sol.sites` (SNS → DNS gateway)
+3. **Sol.site:** `https://transition-insight.sol.site` (SNS → DNS gateway)
 4. **DID:** `did:pkh:solana:<wallet>` from provenance / page meta (`author-did`)
 
 Agents should treat the signed `manifestDigest` in attestation as the corpus
@@ -31,11 +31,10 @@ After first pin, set `NEXT_PUBLIC_IPFS_CID`, `NEXT_PUBLIC_IPFS_GATEWAY`, and
 `NEXT_PUBLIC_IPNS_NAME` in `.env.local`, rebuild, and redeploy so
 `provenance.json` and attestation reference the live CID.
 
-Wire `transition-insight.com` via Pinata dedicated-gateway custom domain
-(CNAME) or DNSLink (`_dnslink` TXT → `/ipns/<name>`). Sol.site can CNAME to
-the same hostname once it resolves.
-
-Until a CID is baked in, `provenance.json` reports `solSite.status: pending-dns`.
+Primary Sol.site target is the canonical Porkbun web host (`NEXT_PUBLIC_SITE_URL`,
+e.g. `ashitmilne.xyz`): on sns.id → Configure Sol.site → CNAME/URL to that host.
+Optional IPFS/IPNS via Kubo or Pinata is a separate publish path; do not require
+it for Sol.site.
 
 ## Sign attestation (maintainer)
 

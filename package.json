@@ -41,6 +41,12 @@
     "backup:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/nightly-backup.ps1"
   },
   "dependencies": {
+    "@bonfida/spl-name-service": "^4.0.1",
+    "@phantom/cli": "^1.2.7",
+    "@phantom/mcp-server": "^1.2.7",
+    "@phantom/phantom-openclaw-plugin": "^1.2.7",
+    "@phantom/react-sdk": "^2.0.2",
+    "@solana/web3.js": "^1.98.4",
     "audit": "^0.0.6",
     "bs58": "^6.0.0",
     "class-variance-authority": "^0.7.1",
@@ -57,7 +63,6 @@
     "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
-    "@solana/web3.js": "^0.0.3",
     "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",

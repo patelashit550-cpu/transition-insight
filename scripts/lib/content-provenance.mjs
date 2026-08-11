@@ -110,7 +110,7 @@ export function getSovereignEnv() {
   const sns = process.env.NEXT_PUBLIC_SNS_DOMAIN?.trim() || null;
   const solSite =
     process.env.NEXT_PUBLIC_SOL_SITE_URL?.trim() ||
-    (sns ? `https://${sns.replace(/\.sol$/i, "")}.sol.sites` : null);
+    (sns ? `https://${sns.replace(/\.sol$/i, "")}.sol.site` : null);
   const solana = process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS?.trim() || null;
   const canonical = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz";
 

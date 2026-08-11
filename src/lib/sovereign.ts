@@ -29,7 +29,7 @@ function deriveSolSiteUrl(sns: string | null): string | null {
   if (explicit) return explicit
   if (!sns) return null
   const base = sns.replace(/\.sol$/i, '')
-  return base ? `https://${base}.sol.sites` : null
+  return base ? `https://${base}.sol.site` : null
 }
 
 export function getSovereignIdentity(): SovereignIdentity {

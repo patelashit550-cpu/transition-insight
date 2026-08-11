@@ -54,7 +54,7 @@ npm run content:verify
 ```
 
 Canonical web: `https://transition-insight.com`  
-Sol.site alias: `https://transition-insight.sol.sites` (configure via SNS)
+Sol.site alias: `https://transition-insight.sol.site` (configure via SNS)
 
 ## Conventions
 

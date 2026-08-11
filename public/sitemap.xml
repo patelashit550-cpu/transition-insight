@@ -76,6 +76,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ashitmilne.xyz/governance/peridot/semper-idem/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ashitmilne.xyz/governance/peridot/social-network/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

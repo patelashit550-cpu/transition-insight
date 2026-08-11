@@ -4,7 +4,7 @@
 
 AI agents, crawlers, indexers, and human collaborators discovering content on
 [transition-insight.com](https://transition-insight.com) and
-[transition-insight.sol.sites](https://transition-insight.sol.sites).
+[transition-insight.sol.site](https://transition-insight.sol.site).
 
 ## Registration
 
@@ -33,7 +33,7 @@ Sovereign identity and corpus attestation for milling / noding agents:
 - **Provenance:** https://transition-insight.com/.well-known/provenance.json
 - **Attestation manifest:** https://transition-insight.com/attestation.json
 - **Solana DID:** `did:pkh:solana:` + wallet in provenance document
-- **SNS:** `transition-insight.sol` → `https://transition-insight.sol.sites`
+- **SNS:** `transition-insight.sol` → `https://transition-insight.sol.site`
 
 Verify `attestation.json` signature with `npm run content:verify` when a
 signed manifest is published. Unsigned manifests list published ontology

@@ -10,6 +10,13 @@ out/
 .env.local
 .env.*.local
 *.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+**/credentials.json
+**/service-account*.json
 
 # os / editor
 .DS_Store

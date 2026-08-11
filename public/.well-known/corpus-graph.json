@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T07:33:02.602Z",
+  "generatedAt": "2026-08-11T13:49:49.671Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 11,
       "nodes": 99,
-      "edges": 218,
+      "edges": 229,
       "byKind": {
         "member-of-series": 7,
         "member-of-folder": 11,
         "tagged": 57,
         "lexica": 33,
-        "mention": 110
+        "mention": 121
       },
       "orphanEssays": 1,
       "series": 3,
@@ -1497,6 +1497,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-alpha-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:alpha",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-alpha-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:alpha",
@@ -1507,6 +1515,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-anarchism-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:anarchism",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-anarchism-mention",
+        "from": "essay:governance/illumination/semper idem.md",
         "to": "term:anarchism",
         "kind": "mention",
         "weight": 1,
@@ -1524,6 +1540,14 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-anarchism-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:anarchism",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-anima-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:anima",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1567,6 +1591,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-animus-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-animus-mention",
@@ -1613,8 +1645,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:autonomy",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-autonomy-mention",
@@ -1644,6 +1676,14 @@
         "id": "edge:essay-me-trials-of-job-md-term-call-to-adventure-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:call to adventure",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-calling-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:calling",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1685,8 +1725,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 5,
+        "count": 7
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-capital-mention",
@@ -1751,6 +1791,14 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-creation-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-creation-mention",
@@ -1853,8 +1901,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:governance",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 5,
+        "count": 7
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-governance-mention",
@@ -1902,7 +1950,7 @@
         "to": "term:identity",
         "kind": "mention",
         "weight": 5,
-        "count": 5
+        "count": 11
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",
@@ -2065,6 +2113,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-perimeter-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-governance-illumination-social-network-md-term-perimeter-mention",
         "from": "essay:governance/illumination/social-network.md",
         "to": "term:perimeter",
@@ -2111,6 +2167,14 @@
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-political-economy-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-political-economy-mention",
@@ -2196,6 +2260,14 @@
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-self-sovereign-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-semantic-perimeter-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:semantic perimeter",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -2297,6 +2369,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-social-network-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-governance-illumination-social-network-md-term-social-network-mention",
         "from": "essay:governance/illumination/social-network.md",
         "to": "term:social network",
@@ -2359,6 +2439,14 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-yield-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:yield",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-yield-mention",

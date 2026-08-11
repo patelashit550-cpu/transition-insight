@@ -70,11 +70,10 @@ const provenance = {
   },
   solSite: {
     domain: identity.solSite,
-    status: ipfsDirectoryUrl ? "point-at-ipfs-gateway" : "pending-dns",
-    note: ipfsDirectoryUrl
-      ? "In SNS → Sol.site, CNAME to your Pinata dedicated gateway (or DNSLink host). " +
-        "Canonical static export: provenance ipfs.directory."
-      : "Pin with npm run deploy:sovereign, then set NEXT_PUBLIC_IPFS_CID for the next build.",
+    status: "point-at-canonical-web",
+    note:
+      "In SNS → Sol.site, CNAME or URL to the canonical web host (NEXT_PUBLIC_SITE_URL / Porkbun). " +
+      "Optional later: also set SNS IPFS/URL records if you want Brave / sol-domain.org resolution.",
   },
 };
 
