@@ -1,0 +1,17 @@
+{
+  "name": "transition-insight",
+  "install": "./scripts/cloud-agent-install.sh",
+  "terminals": [
+    {
+      "name": "Next.js dev",
+      "command": "npm run dev",
+      "description": "Local Next.js app (http://localhost:3000). Starts only after install verifies next is present."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ]
+}

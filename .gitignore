@@ -21,7 +21,8 @@ id_ed25519
 # os / editor
 .DS_Store
 Thumbs.db
-.cursor/
+.cursor/*
+!.cursor/environment.json
 .vscode/
 .snapshots/
 .sovereign/
