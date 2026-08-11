@@ -29,6 +29,12 @@ Thumbs.db
 .tools/
 .obsidian/
 
+# Obsidian / editor scratch accidentally saved at repo root
+*.canvas
+*.base
+/Untitled*
+/Untitled.*
+
 # debug
 npm-debug.log*
 
