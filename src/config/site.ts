@@ -54,8 +54,6 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     subtitle: "Identity",
     status: "NODE_ACTIVE // 001",
     requiresAuth: false,
-    titleVisualSrc: withBasePath("/visuals/bento-rose-emerald.png"),
-    titleVisualAlt: "Rose — Veritas",
     series: [
       { name: "Origins", desc: "अर्थ — On Earth", dataPoint: "0xAF1", href: "/me/origins" },
       { name: "Trials of Job", desc: "気 — The Key Flows", dataPoint: "0xAF2", href: "/me/trials-of-job" },
@@ -70,8 +68,6 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     subtitle: "Anarchy As Governance",
     status: "NODE_STABLE // 002",
     requiresAuth: false,
-    titleVisualSrc: withBasePath("/visuals/bento-gem-emerald.png"),
-    titleVisualAlt: "Gem — Utilitas",
     series: [
       { name: "Carta", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
       { name: "Canonical", desc: "Glossary", dataPoint: "0xBF0", href: "/governance/canonical" },
@@ -89,8 +85,6 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     subtitle: "Jackanory: The Tangent",
     status: "SIGNAL_LIVE // 003",
     requiresAuth: false,
-    titleVisualSrc: withBasePath("/visuals/bento-lion-emerald.png"),
-    titleVisualAlt: "Lion — The Times",
     series: [
       { name: "The Times", desc: "By Jack London", dataPoint: "0xCF1", href: "/chronicle/jack-london" },
       { name: "Polite Bureau", desc: "Commentary", dataPoint: "0xCF3", href: "/chronicle/polite_bureau" },
