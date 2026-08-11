@@ -5,8 +5,6 @@ import path from "path";
 
 import { isCordPrototypeEnabled, type CordFeed } from "@/lib/cord";
 
-export const dynamic = "force-dynamic";
-
 function loadFeed(): CordFeed {
   try {
     const raw = readFileSync(path.join(process.cwd(), "public", "cord", "feed.json"), "utf8");

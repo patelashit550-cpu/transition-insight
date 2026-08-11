@@ -4,8 +4,6 @@ import { notFound } from "next/navigation";
 import { CordComposeForm } from "@/components/cord/CordComposeForm";
 import { isCordPrototypeEnabled } from "@/lib/cord";
 
-export const dynamic = "force-dynamic";
-
 export default function CordComposePage() {
   if (!isCordPrototypeEnabled()) return notFound();
 
