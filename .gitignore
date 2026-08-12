@@ -21,12 +21,19 @@ id_ed25519
 # os / editor
 .DS_Store
 Thumbs.db
-.cursor/
+.cursor/*
+!.cursor/environment.json
 .vscode/
 .snapshots/
 .sovereign/
 .tools/
 .obsidian/
+
+# Obsidian / editor scratch accidentally saved at repo root
+*.canvas
+*.base
+/Untitled*
+/Untitled.*
 
 # debug
 npm-debug.log*
