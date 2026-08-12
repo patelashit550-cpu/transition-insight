@@ -38,7 +38,8 @@
     "canon:generate": "node scripts/generate-canon.mjs",
     "canon:generate:ollama": "node scripts/generate-canon.mjs --ollama",
     "canon:check": "node scripts/check-canon-stale.mjs",
-    "backup:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/nightly-backup.ps1"
+    "backup:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/nightly-backup.ps1",
+    "audit:windows-dev": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/audit-windows-dev-env.ps1"
   },
   "dependencies": {
     "@bonfida/spl-name-service": "^4.0.1",
