@@ -74,6 +74,6 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 
 ## Reporting a vulnerability
 
-Email **ash@transition-insight.com**. Please include the URL, the gap, and whether it is already public.
+Email **patelashit550@gmail.com**. Please include the URL, the gap, and whether it is already public.
 
 We will acknowledge as soon as practical. This site is static: typical issues are domain hijack, leaked signing keys, supply-chain in `package-lock.json`, or SNS records pointing at the wrong host — not RCE on a web server.
