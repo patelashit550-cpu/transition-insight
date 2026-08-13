@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   build:
+    # workflow_dispatch can target any ref; never build/export from a non-main branch.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -56,6 +58,7 @@ jobs:
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

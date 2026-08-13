@@ -244,7 +244,7 @@ function auditGitHub() {
       record(
         "warn",
         "github",
-        `github-pages environment allows ${names.join(", ") || "(none)"} — after switching to Actions keep main only`,
+        `github-pages environment allows ${names.join(", ") || "(none)"} — keep main only. GitHub → Settings → Environments → github-pages → remove other branches: https://github.com/${EXPECTED_REPO}/settings/environments`,
       );
     }
   }
