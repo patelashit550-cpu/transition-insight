@@ -43,10 +43,11 @@ That pushes `main`. GitHub Actions builds **global** tier (published/canonical o
 
 ## Do these now (live gaps)
 
-The repo can diagnose. These close the perimeter and cannot be done from git:
+The repo can diagnose. Remaining item that cannot be done from git:
 
-1. **GitHub → Settings → Environments → `github-pages`:** deployment branches = `main` only. Remove the leftover `gh-pages` branch rule: [Environments](https://github.com/patelashit550-cpu/transition-insight/settings/environments). Pages already builds from GitHub Actions; recent deploys are from `main`.
-2. **SNS (`transition-insight.sol`):** set the URL (or IPFS) record to `https://ashitmilne.xyz/`. Until then `transition-insight.sol.site` is a public Bonfida profile — a different origin. Skip until you have SOL for the record update.
+1. **SNS (`transition-insight.sol`):** set the URL (or IPFS) record to `https://ashitmilne.xyz/`. Until then `transition-insight.sol.site` is a public Bonfida profile — a different origin. Skip until you have SOL for the record update.
+
+Done: Pages builds from GitHub Actions; the `github-pages` environment deploys from `main` only.
 
 ## Limit access (do these in GitHub / DNS / SNS)
 
@@ -56,7 +57,7 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 2. **Repo → Settings → Collaborators:** only `patelashit550-cpu`. No outside write.
 3. **Repo → Settings → Branches:** protect `main` — block force-push, require the Pages workflow to pass. Keep yourself as the only bypass if you still use `npm run ship -- --push`.
 4. **Repo → Settings → Pages:** already **GitHub Actions**. Do not switch back to the legacy `gh-pages` branch publisher.
-5. **Repo → Settings → Environments → `github-pages`:** deployment branches = `main` only (remove `gh-pages`). Optional: required reviewer (you) so a stolen PAT cannot ship instantly. Direct link: [Environments](https://github.com/patelashit550-cpu/transition-insight/settings/environments).
+5. **Repo → Settings → Environments → `github-pages`:** done — deployment branches = `main` only. Optional later: required reviewer (you) so a stolen PAT cannot ship instantly.
 6. **Repo → Settings → Actions:** disable fork PRs from writing Pages; no extra `GITHUB_TOKEN` write scopes.
 7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY` or `PINATA_JWT` in GitHub Actions. Sign and pin on the laptop (`.env.local`, gitignored).
 8. **Porkbun / DNS:** `ashitmilne.xyz` A/AAAA (or CNAME) stay on GitHub Pages; HTTPS is already enforced. Lock the registrar account with 2FA.
