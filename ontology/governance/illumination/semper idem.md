@@ -1,7 +1,7 @@
 ---
 title: Semper Idem
 label: Semantic Perimeter of Identity Embodied
-stage: published
+stage: draft
 type: essay
 slug: semper-idem
 order: 1
