@@ -30,7 +30,7 @@ enabled (Dashboard → AI Crawl Control → Markdown for Agents).
 - Corpus attestation manifest: `/attestation.json`
 - Corpus graph (single network node + interior mesh): `/.well-known/corpus-graph.json`
 - Auth / collaboration: `/auth.md`
-- Contact: `ash@transition-insight.com` via `/.well-known/security.txt`
+- Contact: `patelashit550@gmail.com` via `/.well-known/security.txt`
 
 ## Corpus as one network node
 

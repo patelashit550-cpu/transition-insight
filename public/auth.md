@@ -14,7 +14,7 @@ intentionally unrestricted.
 
 ## Contact
 
-- **Email:** [ash@transition-insight.com](mailto:ash@transition-insight.com)
+- **Email:** [patelashit550@gmail.com](mailto:patelashit550@gmail.com)
 - **security.txt:** https://ashitmilne.xyz/.well-known/security.txt
 
 ## Credentials
