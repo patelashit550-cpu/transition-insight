@@ -215,7 +215,7 @@ function Get-WslInfo {
       status  = $null
       version = $null
       distros = @()
-      notes   = @("wsl.exe not found — install with: wsl --install")
+      notes   = @("wsl.exe not found - install with: wsl --install")
     }
   }
 
@@ -304,7 +304,8 @@ Write-Item "CPU" $(if ($hw.cpu) { $hw.cpu } else { "unknown" })
 Write-Item "Memory (GB)" $(if ($null -ne $hw.memoryTotalGb) { "$($hw.memoryTotalGb)" } else { "unknown" })
 foreach ($d in $hw.drives) {
   $status = if ($d.freePct -lt 15) { "warn" } else { "ok" }
-  Write-Item ("Disk {0}" -f $d.deviceId) ("{0} GB free / {1} GB ({2}%)" -f $d.freeGb, $d.sizeGb, $d.freePct) $status
+  $diskLabel = '{0} GB free / {1} GB ({2} pct)' -f $d.freeGb, $d.sizeGb, $d.freePct
+  Write-Item ("Disk {0}" -f $d.deviceId) $diskLabel $status
 }
 
 Write-Section "Package managers"
