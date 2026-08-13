@@ -59,6 +59,7 @@ if (!skipCanon) {
 
 run("content:attest", "npm", ["run", "content:attest"]);
 run("build:global", "npm", ["run", "build:global"]);
+run("audit:perimeter:export", "node", ["scripts/audit-perimeter.mjs", "--export"]);
 
 if (ipfs || ipfsLocal) {
   run("ipfs-relative-export", "node", ["scripts/ipfs-relative-export.mjs"]);

@@ -31,12 +31,8 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: |
-          npm ci --no-audit --no-fund || {
-            echo "npm ci failed; falling back to npm install"
-            rm -rf node_modules
-            npm install --no-audit --no-fund
-          }
+        # Lockfile only — never fall back to npm install (supply-chain).
+        run: npm ci --no-audit --no-fund
 
       - name: Build static export (global tier)
         # Serving at custom domain root (ashitmilne.xyz) → no basePath.
@@ -46,6 +42,12 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://ashitmilne.xyz
         run: npm run build:global
+
+      - name: Audit export perimeter
+        env:
+          NEXT_PUBLIC_SITE_URL: https://ashitmilne.xyz
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/audit-perimeter.mjs --export --github
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

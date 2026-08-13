@@ -24,7 +24,7 @@
 
     # Or pick a distro
     wsl --list --online
-    wsl --install -d Ubuntu-24.04
+    wsl --install -d Ubuntu-22.04
 
     # Status / list
     wsl --status
@@ -33,11 +33,11 @@
     # Update WSL kernel / set default
     wsl --update
     wsl --set-default-version 2
-    wsl --set-default Ubuntu-24.04
+    wsl --set-default Ubuntu-22.04
 
     # Enter / shutdown
     wsl
-    wsl -d Ubuntu-24.04
+    wsl -d Ubuntu-22.04
     wsl --shutdown
 
     # Inside WSL (after first launch):
@@ -265,7 +265,7 @@ function Get-WslInfo {
   }
 
   if ($distros.Count -eq 0) {
-    $notes += "No distros listed. Install one: wsl --install -d Ubuntu-24.04"
+    $notes += "No distros listed. Install one: wsl --install -d Ubuntu-22.04"
   }
 
   return [ordered]@{
@@ -411,7 +411,7 @@ if (-not $tools.git.present) {
 if (-not $wsl.present) {
   $repoHints.suggestedNext += "Install WSL: wsl --install"
 } elseif ($wsl.distros.Count -eq 0) {
-  $repoHints.suggestedNext += "Install a distro: wsl --install -d Ubuntu-24.04"
+  $repoHints.suggestedNext += "Install a distro: wsl --install -d Ubuntu-22.04"
 }
 
 Write-Item "Repo root" $repoRoot
@@ -445,7 +445,7 @@ if (-not $JsonOnly) {
   Write-Host "WSL cheat sheet:" -ForegroundColor Cyan
   Write-Host "  wsl --install                     # first-time install (reboot may be required)"
   Write-Host "  wsl --list --online               # available distros"
-  Write-Host "  wsl --install -d Ubuntu-24.04     # install specific distro"
+  Write-Host "  wsl --install -d Ubuntu-22.04     # install specific distro"
   Write-Host "  wsl -l -v                         # list installed distros"
   Write-Host "  wsl --status                      # default distro / WSL version"
   Write-Host "  wsl --update                      # update WSL"
