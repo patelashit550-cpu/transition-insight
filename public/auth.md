@@ -3,8 +3,8 @@
 ## Audience
 
 AI agents, crawlers, indexers, and human collaborators discovering content on
-[transition-insight.com](https://transition-insight.com) and
-[transition-insight.sol.site](https://transition-insight.sol.site).
+[ashitmilne.xyz](https://ashitmilne.xyz) (canonical) and the Solana name
+`transition-insight.sol`.
 
 ## Registration
 
@@ -15,7 +15,7 @@ intentionally unrestricted.
 ## Contact
 
 - **Email:** [ash@transition-insight.com](mailto:ash@transition-insight.com)
-- **security.txt:** https://transition-insight.com/.well-known/security.txt
+- **security.txt:** https://ashitmilne.xyz/.well-known/security.txt
 
 ## Credentials
 
@@ -30,10 +30,10 @@ collaboration. Doors stay open on the network.
 
 Sovereign identity and corpus attestation for milling / noding agents:
 
-- **Provenance:** https://transition-insight.com/.well-known/provenance.json
-- **Attestation manifest:** https://transition-insight.com/attestation.json
+- **Provenance:** https://ashitmilne.xyz/.well-known/provenance.json
+- **Attestation manifest:** https://ashitmilne.xyz/attestation.json
 - **Solana DID:** `did:pkh:solana:` + wallet in provenance document
-- **SNS:** `transition-insight.sol` → `https://transition-insight.sol.site`
+- **SNS:** `transition-insight.sol` — URL/IPFS record must point at `https://ashitmilne.xyz/`
 
 Verify `attestation.json` signature with `npm run content:verify` when a
 signed manifest is published. Unsigned manifests list published ontology
@@ -41,6 +41,6 @@ files and SHA-256 digests only.
 
 ## Discovery
 
-- Sitemap: https://transition-insight.com/sitemap.xml
-- Agent skills: https://transition-insight.com/.well-known/agent-skills/index.json
-- API catalog: https://transition-insight.com/.well-known/api-catalog
+- Sitemap: https://ashitmilne.xyz/sitemap.xml
+- Agent skills: https://ashitmilne.xyz/.well-known/agent-skills/index.json
+- API catalog: https://ashitmilne.xyz/.well-known/api-catalog

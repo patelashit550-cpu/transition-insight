@@ -57,6 +57,15 @@ if (!Array.isArray(apiCatalog.linkset) || apiCatalog.linkset.length === 0) {
 
 const authMd = fs.readFileSync(authMdPath, "utf8");
 if (!/auth\.md/i.test(authMd)) fail("auth.md must mention auth.md in heading");
+if (!authMd.includes(ORIGIN)) fail(`auth.md must cite canonical origin ${ORIGIN}`);
+
+const securityPath = path.join(OUT, ".well-known", "security.txt");
+if (!fs.existsSync(securityPath)) fail("out/.well-known/security.txt missing");
+const securityTxt = fs.readFileSync(securityPath, "utf8");
+const securityCanonical = `Canonical: ${ORIGIN}/.well-known/security.txt`;
+if (!securityTxt.includes(securityCanonical)) {
+  fail(`security.txt must include ${securityCanonical}`);
+}
 
 console.log(`verify-sitemap: OK — ${locs.length} URL(s), robots, api-catalog, auth.md, agent-skills`);
 
