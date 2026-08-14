@@ -1,6 +1,15 @@
 /** Default HTTP RPC that answers browser CORS. Official mainnet-beta often 403s from localhost. */
 export const DEFAULT_SOLANA_RPC_URL = "https://solana-rpc.publicnode.com";
 
+/**
+ * Keyless CORS gateways for epoch/slot only. Same operator (Allnodes / PublicNode),
+ * different hostnames — used as failover, not as a private node.
+ */
+export const PUBLIC_SOLANA_RPC_FALLBACKS: readonly string[] = [
+  "https://solana-rpc.publicnode.com",
+  "https://solana.publicnode.com",
+];
+
 /** Browser-only override; not shipped in the static build. */
 export const SOLANA_RPC_STORAGE_KEY = "ti.solanaRpcUrl";
 
@@ -78,6 +87,54 @@ export function configuredSolanaRpcUrl(): string {
   }
   const parsed = parseSolanaRpcUrl(fromEnv);
   return parsed.ok ? parsed.url : DEFAULT_SOLANA_RPC_URL;
+}
+
+/**
+ * True when `url` is a shared public CORS gateway (PublicNode / Allnodes).
+ * Those hosts must not receive `getBalance(owner)` from this site.
+ */
+export function isSharedPublicSolanaRpc(url: string): boolean {
+  if (typeof url !== "string") {
+    throw new Error("url must be a string");
+  }
+  const parsed = parseSolanaRpcUrl(url);
+  if (!parsed.ok) {
+    return false;
+  }
+  const host = new URL(parsed.url).hostname.toLowerCase();
+  return host === "publicnode.com" || host.endsWith(".publicnode.com");
+}
+
+/**
+ * Owner address to send with a probe. Shared public gateways get `undefined`
+ * so visitor IPs are not tied to the Connexion wallet on Allnodes.
+ */
+export function probeOwnerAddress(url: string, ownerAddress?: string): string | undefined {
+  if (typeof url !== "string") {
+    throw new Error("url must be a string");
+  }
+  if (ownerAddress !== undefined && typeof ownerAddress !== "string") {
+    throw new Error("ownerAddress must be a string when provided");
+  }
+  const owner = ownerAddress?.trim();
+  if (!owner) {
+    return undefined;
+  }
+  return isSharedPublicSolanaRpc(url) ? undefined : owner;
+}
+
+function uniqueRpcUrls(urls: readonly string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const raw of urls) {
+    const parsed = parseSolanaRpcUrl(raw);
+    if (!parsed.ok || seen.has(parsed.url)) {
+      continue;
+    }
+    seen.add(parsed.url);
+    out.push(parsed.url);
+  }
+  return out;
 }
 
 /**
@@ -170,4 +227,33 @@ export async function probeSolanaRpc(url: string, ownerAddress?: string): Promis
     lamports,
     sol: lamports === null ? null : formatLamportsAsSol(lamports),
   };
+}
+
+/**
+ * Site probe: custom / keyed RPCs get epoch + optional balance; shared public
+ * gateways get epoch/slot only, with PublicNode hostname failover.
+ */
+export async function probeSolanaRpcForSite(url: string, ownerAddress?: string): Promise<SolanaRpcProbe> {
+  if (typeof url !== "string") {
+    throw new Error("url must be a string");
+  }
+  const parsed = parseSolanaRpcUrl(url);
+  if (!parsed.ok) {
+    throw new Error(parsed.error);
+  }
+
+  if (!isSharedPublicSolanaRpc(parsed.url)) {
+    return probeSolanaRpc(parsed.url, probeOwnerAddress(parsed.url, ownerAddress));
+  }
+
+  const candidates = uniqueRpcUrls([parsed.url, ...PUBLIC_SOLANA_RPC_FALLBACKS]);
+  let lastError: Error | null = null;
+  for (const candidate of candidates) {
+    try {
+      return await probeSolanaRpc(candidate, undefined);
+    } catch (err) {
+      lastError = err instanceof Error ? err : new Error("Public Solana RPC gateway failed");
+    }
+  }
+  throw lastError ?? new Error("All public Solana RPC gateways failed");
 }
