@@ -74,7 +74,12 @@ export function keypairFromSolanaCliFile(filePath: string): Keypair {
 /**
  * Load the local development wallet. Throws if neither env source is set.
  */
-export function loadLocalSolanaWallet(env: SolanaWalletEnv = process.env): Keypair {
+export function loadLocalSolanaWallet(
+  env: SolanaWalletEnv = {
+    SOLANA_SIGNING_KEY: process.env.SOLANA_SIGNING_KEY,
+    SOLANA_KEYPAIR_PATH: process.env.SOLANA_KEYPAIR_PATH,
+  },
+): Keypair {
   const fromEnv = env.SOLANA_SIGNING_KEY;
   if (typeof fromEnv === "string" && fromEnv.trim()) {
     return keypairFromSecretKeyBase58(fromEnv);
