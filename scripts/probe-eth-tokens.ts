@@ -25,13 +25,6 @@ const ownerRaw = (process.env.NEXT_PUBLIC_ETH_WALLET_ADDRESS || "").trim();
 const owner = parseEthAddress(ownerRaw);
 const apiKey = etherscanApiKeyFromEnv();
 
-console.error("Fetching Uniswap default list …");
-const list = await fetchUniswapDefaultList();
-if (!list.ok) {
-  console.error(`eth:node-tokens failed: ${list.error}`);
-  process.exit(1);
-}
-
 if (!owner.ok) {
   console.error("Set NEXT_PUBLIC_ETH_WALLET_ADDRESS to a 0x address.");
   process.exit(1);
@@ -41,6 +34,13 @@ if (!apiKey) {
   console.error(
     "Set ETHERSCAN_API_KEY in .env.local (etherscan.io → API dashboard). Never NEXT_PUBLIC_*.",
   );
+  process.exit(1);
+}
+
+console.error("Fetching Uniswap default list …");
+const list = await fetchUniswapDefaultList();
+if (!list.ok) {
+  console.error(`eth:node-tokens failed: ${list.error}`);
   process.exit(1);
 }
 
