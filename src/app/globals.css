@@ -3028,7 +3028,14 @@
 .p3-solana-rpc__tag {
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.p3-solana-rpc__tag--custom {
   color: rgba(52, 211, 153, 0.85);
+}
+
+.p3-solana-rpc__tag--public {
+  color: rgba(161, 161, 170, 0.9);
 }
 
 .p3-solana-rpc__status,
