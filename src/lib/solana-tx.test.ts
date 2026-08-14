@@ -33,6 +33,11 @@ test("createSolanaConnection reuses RPC URL validation", () => {
   assert.equal(connection.rpcEndpoint, DEFAULT_SOLANA_RPC_URL);
 });
 
+test("createSolanaConnection fails fast when nothing listens on localhost RPC", async () => {
+  const connection = createSolanaConnection("http://127.0.0.1:8899", 400);
+  await assert.rejects(() => connection.getEpochInfo(), /abort|timeout|fetch|ECONNREFUSED|Failed to fetch/i);
+});
+
 test("associatedTokenAddress is stable for USDC and the owner", () => {
   const owner = parseSolanaPublicKey(OWNER);
   const mint = parseSolanaPublicKey(SPL_MINTS.usdc);

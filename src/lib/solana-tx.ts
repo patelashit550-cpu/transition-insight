@@ -45,18 +45,31 @@ export function parseSolanaPublicKey(address: string): PublicKey {
   }
 }
 
+/** Abort hung RPC (nothing listening on localhost:8899, slow gateway). */
+export const SOLANA_RPC_FETCH_TIMEOUT_MS = 8_000;
+
 /**
  * Build a web3.js v1 Connection after the same RPC URL checks as Cord.
  *
  * Official `api.mainnet-beta.solana.com` often 403s from browsers; default
  * to the PublicNode URL already configured in env.
  */
-export function createSolanaConnection(rpcUrl: string): Connection {
+export function createSolanaConnection(
+  rpcUrl: string,
+  timeoutMs: number = SOLANA_RPC_FETCH_TIMEOUT_MS,
+): Connection {
   const parsed = parseSolanaRpcUrl(rpcUrl);
   if (!parsed.ok) {
     throw new Error(parsed.error);
   }
-  return new Connection(parsed.url, "confirmed");
+  if (!Number.isFinite(timeoutMs) || timeoutMs <= 0) {
+    throw new Error("RPC timeout must be a positive number of milliseconds");
+  }
+  return new Connection(parsed.url, {
+    commitment: "confirmed",
+    disableRetryOnRateLimit: true,
+    fetch: (input, init) => fetch(input, { ...init, signal: AbortSignal.timeout(timeoutMs) }),
+  });
 }
 
 /**
