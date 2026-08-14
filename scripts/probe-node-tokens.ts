@@ -9,7 +9,7 @@
  */
 import { loadEnvFiles } from "./lib/load-env.mjs";
 import { configuredSolanaRpcUrl } from "../src/lib/solana-rpc.ts";
-import { listRecentMintsForAddress, listSignaturesForAddress } from "../src/lib/solana-mints.ts";
+import { listRecentMintsForAddress } from "../src/lib/solana-mints.ts";
 import {
   buildJupiterMintQuery,
   jupiterApiKeyFromEnv,
@@ -20,7 +20,6 @@ import {
 loadEnvFiles();
 
 const OWNER = (process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS || "").trim();
-const VOTE = (process.env.NEXT_PUBLIC_VALIDATOR_VOTE_ACCOUNT || "").trim();
 const rpcUrl = configuredSolanaRpcUrl();
 const queryArg = (process.argv[2] || "").trim();
 const apiKey = jupiterApiKeyFromEnv();
@@ -28,8 +27,6 @@ const apiKey = jupiterApiKeyFromEnv();
 const mintProbe = OWNER
   ? await listRecentMintsForAddress(rpcUrl, OWNER, 15)
   : { url: rpcUrl, address: "", signatures: [], mints: [], skipped: 0 };
-
-const voteProbe = VOTE ? await listSignaturesForAddress(rpcUrl, VOTE, 3) : null;
 
 const searchQuery = queryArg || buildJupiterMintQuery(mintProbe.mints);
 
@@ -39,13 +36,6 @@ const out: Record<string, unknown> = {
   signatures: mintProbe.signatures.length,
   skippedTransactions: mintProbe.skipped,
   mints: mintProbe.mints,
-  validator: voteProbe
-    ? {
-        voteAccount: voteProbe.address,
-        recentVotes: voteProbe.signatures.length,
-        lastSignature: voteProbe.signatures[0] ?? null,
-      }
-    : null,
   jupiterQuery: searchQuery || null,
 };
 
