@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import bs58 from "bs58";
 
+import { SolanaRpcPanel } from "@/components/features/SolanaRpcPanel";
 import {
   buildCordSignMessage,
   CORD_MAX_BODY,
@@ -106,6 +107,7 @@ export function CordComposeForm() {
       <p className="p3-cord-compose__hint">
         Owner wallet <code className="p3-cord-compose__code">{owner || "(set NEXT_PUBLIC_SOLANA_WALLET_ADDRESS)"}</code>
       </p>
+      <SolanaRpcPanel ownerAddress={owner || undefined} variant="cord" />
 
       <div className="p3-cord-compose__row">
         <button type="button" className="p3-cord-btn" onClick={connect} disabled={busy}>

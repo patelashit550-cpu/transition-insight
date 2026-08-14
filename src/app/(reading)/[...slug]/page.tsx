@@ -321,6 +321,8 @@ type ConnexionLinks = {
   voiceUrl?: string;
   messageUrl?: string;
   email?: string;
+  solanaAddress?: string;
+  validatorName?: string;
 };
 
 /** Default: blockquotes clear inset floats. Exception: `blockquoteInset: flow` in frontmatter. */
@@ -403,6 +405,8 @@ function NarrativeEssayBody({
               voiceUrl={connexionLinks.voiceUrl}
               messageUrl={connexionLinks.messageUrl}
               email={connexionLinks.email}
+              solanaAddress={connexionLinks.solanaAddress}
+              validatorName={connexionLinks.validatorName}
             />
           ) : (
             <ReactMarkdown components={components}>{content}</ReactMarkdown>
@@ -564,7 +568,8 @@ function renderContentHub(route: ContentHubRoute) {
 
 function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?: string }) {
   const { frontmatter, content } = data;
-  const { did } = getSovereignIdentity();
+  const identity = getSovereignIdentity();
+  const { did } = identity;
   const image = typeof frontmatter.image === "string" ? frontmatter.image : undefined;
   const imageRole =
     typeof frontmatter.imageRole === "string" ? frontmatter.imageRole : "inset";
@@ -583,6 +588,8 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
         messageUrl:
           typeof frontmatter.contact_message_url === "string" ? frontmatter.contact_message_url : undefined,
         email: typeof frontmatter.contact_email === "string" ? frontmatter.contact_email : undefined,
+        solanaAddress: identity.addresses.solana ?? undefined,
+        validatorName: identity.staking.validator ?? undefined,
       }
     : undefined;
 
