@@ -2,15 +2,12 @@
 
 import type { JSX } from "react"
 
-import { SolanaRpcPanel } from "@/components/features/SolanaRpcPanel"
-
 type Props = {
   voiceUrl?: string
   messageUrl?: string
   chatUrl?: string
   email?: string
   solanaAddress?: string
-  validatorName?: string
 }
 
 const ALLOWED_PROTOCOLS = ["https:", "http:", "mailto:", "tel:", "tg:", "sip:"]
@@ -98,7 +95,6 @@ export function ConnexionContactPanel({
   chatUrl,
   email,
   solanaAddress,
-  validatorName,
 }: Props) {
   const mailto = email ? safeHref(`mailto:${email}`) : undefined
   const channels: Channel[] = [
@@ -181,10 +177,6 @@ export function ConnexionContactPanel({
               </li>
             ))}
           </ul>
-          {validatorName && (
-            <p className="p3-connexion-keys-strip__validator">staked · {validatorName}</p>
-          )}
-          <SolanaRpcPanel ownerAddress={solanaAddress} variant="connexion" />
         </div>
       )}
 

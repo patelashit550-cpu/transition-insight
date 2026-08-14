@@ -6,7 +6,7 @@ import { useSolanaRpc } from "@/lib/use-solana-rpc";
 
 type Props = {
   ownerAddress?: string;
-  variant?: "connexion" | "cord";
+  variant?: "cord";
 };
 
 function hostLabel(url: string): string {
@@ -17,7 +17,7 @@ function hostLabel(url: string): string {
   }
 }
 
-export function SolanaRpcPanel({ ownerAddress, variant = "connexion" }: Props) {
+export function SolanaRpcPanel({ ownerAddress, variant = "cord" }: Props) {
   const rpc = useSolanaRpc(ownerAddress);
   const [draft, setDraft] = useState("");
 
@@ -90,8 +90,8 @@ export function SolanaRpcPanel({ ownerAddress, variant = "connexion" }: Props) {
       </form>
 
       <p className="p3-solana-rpc__hint">
-        PublicNode is a shared CORS gateway — epoch and slot only, not Lumos Maxima. Paste a Helius, QuickNode, or
-        validator RPC to read balance; stored in this browser, not in the published site.
+        PublicNode is a shared CORS gateway — epoch and slot only. Paste a Helius, QuickNode, or validator RPC to read
+        balance; stored in this browser, not in the published site.
       </p>
     </details>
   );

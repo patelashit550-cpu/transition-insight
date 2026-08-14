@@ -74,7 +74,7 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 
 ## Solana RPC
 
-The published site uses **PublicNode** (`solana-rpc.publicnode.com`) as a shared CORS gateway for epoch/slot only. It is not Lumos Maxima and must not receive `getBalance` of the Connexion wallet. Paste a Helius / QuickNode / validator URL in the Connexion RPC field (browser `localStorage` only). Never put API keys in `NEXT_PUBLIC_SOLANA_RPC_URL`.
+The published site uses **PublicNode** (`solana-rpc.publicnode.com`) as a shared CORS gateway for epoch/slot only. It must not receive `getBalance` of the owner wallet. Paste a Helius / QuickNode / validator URL in the Cord RPC field (browser `localStorage` only). Never put API keys in `NEXT_PUBLIC_SOLANA_RPC_URL`. Connexion is contact only — no validator name, no RPC panel.
 
 ## Reporting a vulnerability
 

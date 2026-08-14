@@ -2980,14 +2980,6 @@
   min-width: 0;
 }
 
-.p3-connexion-keys-strip__validator {
-  margin-top: 0.55rem;
-  font-size: clamp(0.52rem, 1.1vw, 0.62rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(63, 63, 70, 0.8);
-}
-
 .p3-solana-rpc {
   margin-top: 0.75rem;
 }
