@@ -26,7 +26,10 @@ if (existsSync(destPath)) {
 console.log(
   [
     "Cursor will not list .env.local in the file tree.",
-    "Open that path in Explorer or Notepad and paste:",
+    "Windows Explorer hides names that start with a dot unless View → Show → Hidden items is on.",
+    "Open that path in Notepad:",
+    `  notepad "${dest}"`,
+    "Paste:",
     "  JUPITER_API_KEY=     https://developers.jup.ag/portal",
     "  ETHERSCAN_API_KEY=   https://etherscan.io/apidashboard",
     "Then: npm run eth:node-tokens -- USDC",
