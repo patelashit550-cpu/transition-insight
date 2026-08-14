@@ -44,7 +44,8 @@
     "backup:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/nightly-backup.ps1",
     "audit:windows-dev": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/audit-windows-dev-env.ps1",
     "solana:rpc": "node scripts/probe-solana-rpc.mjs",
-    "test:solana-rpc": "node --experimental-strip-types --test src/lib/solana-rpc.test.ts"
+    "test:solana-rpc": "node --experimental-strip-types --test src/lib/solana-rpc.test.ts",
+    "test:oft": "node --experimental-strip-types --test src/lib/oft.test.ts"
   },
   "dependencies": {
     "@solana/web3.js": "^1.98.4",
