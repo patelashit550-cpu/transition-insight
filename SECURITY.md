@@ -59,7 +59,7 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 4. **Repo → Settings → Pages:** already **GitHub Actions**. Do not switch back to the legacy `gh-pages` branch publisher.
 5. **Repo → Settings → Environments → `github-pages`:** done — deployment branches = `main` only. Optional later: required reviewer (you) so a stolen PAT cannot ship instantly.
 6. **Repo → Settings → Actions:** disable fork PRs from writing Pages; no extra `GITHUB_TOKEN` write scopes.
-7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY`, `PINATA_JWT`, OFT program keypairs, or LayerZero deployer keys in GitHub Actions. Sign and pin on the laptop (`.env.local`, gitignored).
+7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY`, `PINATA_JWT`, `COLOSSEUM_COPILOT_PAT`, OFT program keypairs, or LayerZero deployer keys in GitHub Actions. Sign and pin on the laptop (`.env.local`, gitignored).
 8. **Porkbun / DNS:** `ashitmilne.xyz` A/AAAA (or CNAME) stay on GitHub Pages; HTTPS is already enforced. Lock the registrar account with 2FA.
 9. **SNS (`transition-insight.sol`):** set the URL (or IPFS) record to `https://ashitmilne.xyz/`. Until you do, `.sol.site` is a public Bonfida profile — a different origin, not this app.
 10. **WSL:** one distro (`Ubuntu-22.04`), default version 2. Do not store signing keys in a shared Windows folder with loose ACLs; keep `.env.local` in the repo clone.
@@ -81,3 +81,7 @@ We will acknowledge as soon as practical. This site is static: typical issues ar
 ## LayerZero OFT (not this repo)
 
 The [OFT Standard](https://docs.layerzero.network/v2/developers/evm/oft/quickstart) is a contract workspace. Do **not** add `@layerzerolabs/*` to this `package.json`. Scaffold `create-lz-oapp` in a sibling directory on the laptop. OFT program keypairs, `SOLANA_PRIVATE_KEY`, and LayerZero deployer secrets stay local — never GitHub Actions. See `skills/layerzero-oft.md`.
+
+## Colosseum Copilot (not the static site)
+
+The Copilot API base (`COLOSSEUM_COPILOT_API_BASE=https://copilot.colosseum.com/api/v1`) is public. The Personal Access Token (`COLOSSEUM_COPILOT_PAT`) is not — keep it in `.env.local` and probe with `npm run copilot:status`. See `skills/colosseum-copilot.md`.
