@@ -2988,6 +2988,106 @@
   color: rgba(63, 63, 70, 0.8);
 }
 
+.p3-solana-rpc {
+  margin-top: 0.75rem;
+}
+
+.p3-solana-rpc__summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+  font-size: clamp(0.58rem, 1.3vw, 0.68rem);
+  letter-spacing: 0.04em;
+  color: rgba(113, 113, 122, 0.9);
+}
+
+.p3-solana-rpc__summary::-webkit-details-marker {
+  display: none;
+}
+
+.p3-solana-rpc__kicker {
+  font-size: clamp(0.55rem, 1.2vw, 0.62rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(82, 82, 91, 0.85);
+  flex: 0 0 2.5rem;
+}
+
+.p3-solana-rpc__host {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+.p3-solana-rpc__tag {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(52, 211, 153, 0.85);
+}
+
+.p3-solana-rpc__status,
+.p3-solana-rpc__hint {
+  margin: 0.45rem 0 0;
+  font-size: clamp(0.55rem, 1.2vw, 0.65rem);
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  color: rgba(113, 113, 122, 0.85);
+}
+
+.p3-solana-rpc__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+}
+
+.p3-solana-rpc__label {
+  font-size: clamp(0.52rem, 1.1vw, 0.62rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(52, 211, 153, 0.8);
+}
+
+.p3-solana-rpc__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  background: #050505;
+  color: #e4e4e7;
+  font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+  font-size: 0.72rem;
+}
+
+.p3-solana-rpc__input:focus {
+  outline: none;
+  border-color: rgba(52, 211, 153, 0.8);
+}
+
+.p3-solana-rpc__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.p3-solana-rpc--cord {
+  margin: 0.25rem 0 0.35rem;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.p3-solana-rpc--cord .p3-solana-rpc__summary,
+.p3-solana-rpc--cord .p3-solana-rpc__status,
+.p3-solana-rpc--cord .p3-solana-rpc__hint {
+  font-size: 0.75rem;
+}
+
 /* ── Chord (Telamon shortform prototype) ──────────────────────────────────── */
 .p3-cord {
   box-sizing: border-box;

@@ -2,6 +2,8 @@
 
 import type { JSX } from "react"
 
+import { SolanaRpcPanel } from "@/components/features/SolanaRpcPanel"
+
 type Props = {
   voiceUrl?: string
   messageUrl?: string
@@ -182,6 +184,7 @@ export function ConnexionContactPanel({
           {validatorName && (
             <p className="p3-connexion-keys-strip__validator">staked · {validatorName}</p>
           )}
+          <SolanaRpcPanel ownerAddress={solanaAddress} variant="connexion" />
         </div>
       )}
 
