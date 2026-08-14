@@ -6,6 +6,7 @@
  *   npm run eth:node-tokens -- USDC
  *
  * Does not touch Connexion. Key stays in .env.local (gitignored).
+ * Create that file with `npm run env:local`, then paste ETHERSCAN_API_KEY.
  */
 import { loadEnvFiles } from "./lib/load-env.mjs";
 import {

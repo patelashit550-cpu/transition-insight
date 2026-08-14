@@ -6,6 +6,7 @@
  *   npm run solana:node-tokens -- JUP
  *
  * Does not touch Connexion. Key stays in .env.local (gitignored).
+ * Create that file with `npm run env:local`, then paste JUPITER_API_KEY.
  */
 import { loadEnvFiles } from "./lib/load-env.mjs";
 import { configuredSolanaRpcUrl } from "../src/lib/solana-rpc.ts";

@@ -46,6 +46,7 @@
     "solana:rpc": "node scripts/probe-solana-rpc.mjs",
     "solana:node-tokens": "node --experimental-strip-types scripts/probe-node-tokens.ts",
     "eth:node-tokens": "node --experimental-strip-types scripts/probe-eth-tokens.ts",
+    "env:local": "node scripts/ensure-env-local.mjs",
     "test:solana-rpc": "node --experimental-strip-types --test src/lib/solana-rpc.test.ts",
     "test:jupiter-tokens": "node --experimental-strip-types --test src/lib/jupiter-tokens.test.ts src/lib/solana-mints.test.ts",
     "test:evm-tokens": "node --experimental-strip-types --test src/lib/evm-tokens.test.ts",
