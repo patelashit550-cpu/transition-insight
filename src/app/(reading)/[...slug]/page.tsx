@@ -321,7 +321,6 @@ type ConnexionLinks = {
   voiceUrl?: string;
   messageUrl?: string;
   email?: string;
-  solanaAddress?: string;
 };
 
 /** Default: blockquotes clear inset floats. Exception: `blockquoteInset: flow` in frontmatter. */
@@ -404,7 +403,6 @@ function NarrativeEssayBody({
               voiceUrl={connexionLinks.voiceUrl}
               messageUrl={connexionLinks.messageUrl}
               email={connexionLinks.email}
-              solanaAddress={connexionLinks.solanaAddress}
             />
           ) : (
             <ReactMarkdown components={components}>{content}</ReactMarkdown>
@@ -586,7 +584,6 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
         messageUrl:
           typeof frontmatter.contact_message_url === "string" ? frontmatter.contact_message_url : undefined,
         email: typeof frontmatter.contact_email === "string" ? frontmatter.contact_email : undefined,
-        solanaAddress: identity.addresses.solana ?? undefined,
       }
     : undefined;
 

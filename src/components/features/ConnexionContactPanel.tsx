@@ -7,7 +7,6 @@ type Props = {
   messageUrl?: string
   chatUrl?: string
   email?: string
-  solanaAddress?: string
 }
 
 const ALLOWED_PROTOCOLS = ["https:", "http:", "mailto:", "tel:", "tg:", "sip:"]
@@ -32,11 +31,6 @@ function opensInNewTab(href: string): boolean {
   }
 }
 
-function abbrevAddr(addr: string, head = 6, tail = 4): string {
-  if (addr.length <= head + tail + 3) return addr
-  return `${addr.slice(0, head)}…${addr.slice(-tail)}`
-}
-
 type ChannelIcon = ({ className }: { className?: string }) => JSX.Element
 
 type Channel = {
@@ -55,7 +49,6 @@ const iconSvgProps = {
   "aria-hidden": true as const,
 }
 
-// Tile 1 — phone handset
 function IconCall({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...iconSvgProps}>
@@ -67,7 +60,6 @@ function IconCall({ className }: { className?: string }) {
   )
 }
 
-// Tile 2 — paper plane: send/outbound glyph, distinct from phone handset at any size
 function IconChat({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...iconSvgProps}>
@@ -77,7 +69,6 @@ function IconChat({ className }: { className?: string }) {
   )
 }
 
-// Tile 3 — envelope: rectangle base + M-shaped fold line across the top
 function IconLetter({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" {...iconSvgProps}>
@@ -87,14 +78,11 @@ function IconLetter({ className }: { className?: string }) {
   )
 }
 
-type WalletEntry = { chain: string; address: string; explorerHref: string }
-
 export function ConnexionContactPanel({
   voiceUrl,
   messageUrl,
   chatUrl,
   email,
-  solanaAddress,
 }: Props) {
   const mailto = email ? safeHref(`mailto:${email}`) : undefined
   const channels: Channel[] = [
@@ -120,14 +108,6 @@ export function ConnexionContactPanel({
       icon: IconLetter,
     },
   ].filter((c) => Boolean(c.href))
-
-  const wallets: WalletEntry[] = [
-    solanaAddress && {
-      chain: "SOL",
-      address: solanaAddress,
-      explorerHref: `https://solscan.io/account/${solanaAddress}`,
-    },
-  ].filter(Boolean) as WalletEntry[]
 
   return (
     <section className="p3-connexion-panel p3-connexion-panel--fit border border-emerald-500/35 bg-neutral-950">
@@ -158,28 +138,6 @@ export function ConnexionContactPanel({
           })}
         </ul>
       </nav>
-
-      {wallets.length > 0 && (
-        <div className="p3-connexion-keys-strip">
-          <ul className="p3-connexion-keys-strip__list">
-            {wallets.map(({ chain, address, explorerHref }) => (
-              <li key={chain}>
-                <a
-                  href={explorerHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p3-connexion-keys-strip__row"
-                  aria-label={`${chain} public address: ${address}`}
-                >
-                  <span className="p3-connexion-keys-strip__chain">{chain}</span>
-                  <span className="p3-connexion-keys-strip__addr">{abbrevAddr(address)}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
     </section>
   )
 }
