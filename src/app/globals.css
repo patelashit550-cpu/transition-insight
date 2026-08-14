@@ -2932,62 +2932,6 @@
   user-select: none;
 }
 
-.p3-narrative-body .p3-connexion-panel--fit .p3-connexion-keys-strip {
-  border-top: 1px solid rgba(63, 63, 70, 0.5);
-  padding: clamp(0.6rem, 1.8vw, 1rem) clamp(0.75rem, 4vw, 2.75rem);
-}
-
-.p3-connexion-keys-strip__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.p3-connexion-keys-strip__row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
-  font-size: clamp(0.6rem, 1.4vw, 0.7rem);
-  letter-spacing: 0.04em;
-  color: rgba(113, 113, 122, 0.85);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  min-width: 0;
-}
-
-.p3-connexion-keys-strip__row:hover {
-  color: rgba(52, 211, 153, 0.9);
-}
-
-.p3-connexion-keys-strip__chain {
-  font-size: clamp(0.55rem, 1.2vw, 0.62rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(82, 82, 91, 0.8);
-  flex: 0 0 2.5rem;
-}
-
-.p3-connexion-keys-strip__addr {
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  overflow: hidden;
-  text-transform: none;
-  text-overflow: ellipsis;
-  min-width: 0;
-}
-
-.p3-connexion-keys-strip__validator {
-  margin-top: 0.55rem;
-  font-size: clamp(0.52rem, 1.1vw, 0.62rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(63, 63, 70, 0.8);
-}
-
 .p3-solana-rpc {
   margin-top: 0.75rem;
 }

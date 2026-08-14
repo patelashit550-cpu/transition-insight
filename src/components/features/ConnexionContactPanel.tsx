@@ -2,15 +2,11 @@
 
 import type { JSX } from "react"
 
-import { SolanaRpcPanel } from "@/components/features/SolanaRpcPanel"
-
 type Props = {
   voiceUrl?: string
   messageUrl?: string
   chatUrl?: string
   email?: string
-  solanaAddress?: string
-  validatorName?: string
 }
 
 const ALLOWED_PROTOCOLS = ["https:", "http:", "mailto:", "tel:", "tg:", "sip:"]
@@ -33,11 +29,6 @@ function opensInNewTab(href: string): boolean {
   } catch {
     return false
   }
-}
-
-function abbrevAddr(addr: string, head = 6, tail = 4): string {
-  if (addr.length <= head + tail + 3) return addr
-  return `${addr.slice(0, head)}…${addr.slice(-tail)}`
 }
 
 type ChannelIcon = ({ className }: { className?: string }) => JSX.Element
@@ -90,15 +81,11 @@ function IconLetter({ className }: { className?: string }) {
   )
 }
 
-type WalletEntry = { chain: string; address: string; explorerHref: string }
-
 export function ConnexionContactPanel({
   voiceUrl,
   messageUrl,
   chatUrl,
   email,
-  solanaAddress,
-  validatorName,
 }: Props) {
   const mailto = email ? safeHref(`mailto:${email}`) : undefined
   const channels: Channel[] = [
@@ -124,14 +111,6 @@ export function ConnexionContactPanel({
       icon: IconLetter,
     },
   ].filter((c) => Boolean(c.href))
-
-  const wallets: WalletEntry[] = [
-    solanaAddress && {
-      chain: "SOL",
-      address: solanaAddress,
-      explorerHref: `https://solscan.io/account/${solanaAddress}`,
-    },
-  ].filter(Boolean) as WalletEntry[]
 
   return (
     <section className="p3-connexion-panel p3-connexion-panel--fit border border-emerald-500/35 bg-neutral-950">
@@ -162,32 +141,6 @@ export function ConnexionContactPanel({
           })}
         </ul>
       </nav>
-
-      {wallets.length > 0 && (
-        <div className="p3-connexion-keys-strip">
-          <ul className="p3-connexion-keys-strip__list">
-            {wallets.map(({ chain, address, explorerHref }) => (
-              <li key={chain}>
-                <a
-                  href={explorerHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p3-connexion-keys-strip__row"
-                  aria-label={`${chain} public address: ${address}`}
-                >
-                  <span className="p3-connexion-keys-strip__chain">{chain}</span>
-                  <span className="p3-connexion-keys-strip__addr">{abbrevAddr(address)}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-          {validatorName && (
-            <p className="p3-connexion-keys-strip__validator">staked · {validatorName}</p>
-          )}
-          <SolanaRpcPanel ownerAddress={solanaAddress} variant="connexion" />
-        </div>
-      )}
-
     </section>
   )
 }
