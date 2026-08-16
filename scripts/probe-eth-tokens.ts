@@ -1,72 +1,78 @@
+#!/usr/bin/env node
 /**
- * Node-function probe (EVM): Etherscan tokentx → Uniswap token list allow/review.
+ * Node-function probe: Etherscan tokentx → Uniswap default list → allow / review.
  *
  * Usage:
  *   ETHERSCAN_API_KEY=... npm run eth:node-tokens
- *   npm run eth:node-tokens -- USDC
  *
  * Does not touch Connexion. Key stays in .env.local (gitignored).
- * Create that file with `npm run env:local`, then paste ETHERSCAN_API_KEY.
  */
 import { loadEnvFiles } from "./lib/load-env.mjs";
+
 import {
-  classifyEvmToken,
+  ethNodeRouteDecision,
   etherscanApiKeyFromEnv,
   fetchEtherscanTokenTxs,
-  fetchUniswapTokenList,
-  findUniswapTokensBySymbol,
-} from "../src/lib/evm-tokens.ts";
+  fetchUniswapDefaultList,
+  lookupUniswapToken,
+  parseEthAddress,
+  uniqueTokenContracts,
+} from "../src/lib/eth-tokens.ts";
 
 loadEnvFiles();
 
-const OWNER = (process.env.NEXT_PUBLIC_ETH_WALLET_ADDRESS || "").trim();
-const queryArg = (process.argv[2] || "").trim();
+const ownerRaw = (process.env.NEXT_PUBLIC_ETH_WALLET_ADDRESS || "").trim();
+const owner = parseEthAddress(ownerRaw);
 const apiKey = etherscanApiKeyFromEnv();
 
-const list = await fetchUniswapTokenList();
-if (!list.ok) {
-  console.log(JSON.stringify({ uniswap: { ok: false, error: list.error, status: list.status ?? null } }, null, 2));
+if (!owner.ok) {
+  console.error("Set NEXT_PUBLIC_ETH_WALLET_ADDRESS to a 0x address.");
   process.exit(1);
-}
-
-const out: Record<string, unknown> = {
-  chain: "ethereum",
-  chainId: 1,
-  address: OWNER || null,
-  uniswapTokens: list.index.size,
-};
-
-if (queryArg) {
-  out.query = queryArg;
-  out.tokens = findUniswapTokensBySymbol(list.index, queryArg);
 }
 
 if (!apiKey) {
-  out.etherscan = {
-    ok: false,
-    error: "Set ETHERSCAN_API_KEY in .env.local (https://etherscan.io/apidashboard)",
-  };
-  console.log(JSON.stringify(out, null, 2));
-  process.exit(queryArg ? 0 : 2);
-}
-
-if (!OWNER) {
-  out.etherscan = { ok: false, error: "NEXT_PUBLIC_ETH_WALLET_ADDRESS is not set" };
-  console.log(JSON.stringify(out, null, 2));
+  console.error(
+    "Set ETHERSCAN_API_KEY in .env.local (etherscan.io → API dashboard). Never NEXT_PUBLIC_*.",
+  );
   process.exit(1);
 }
 
-const txs = await fetchEtherscanTokenTxs(OWNER, apiKey);
+console.error("Fetching Uniswap default list …");
+const list = await fetchUniswapDefaultList();
+if (!list.ok) {
+  console.error(`eth:node-tokens failed: ${list.error}`);
+  process.exit(1);
+}
+
+console.error(`Fetching Etherscan tokentx for ${owner.address} …`);
+const txs = await fetchEtherscanTokenTxs(owner.address, apiKey);
 if (!txs.ok) {
-  out.etherscan = { ok: false, error: txs.error, status: txs.status ?? null };
-  console.log(JSON.stringify(out, null, 2));
+  console.error(`eth:node-tokens failed: ${txs.error}`);
   process.exit(1);
 }
 
-out.etherscan = {
-  ok: true,
-  transfers: txs.transfers.length,
-  tokens: txs.transfers.map((row) => classifyEvmToken(row, list.index)),
-};
+const contracts = uniqueTokenContracts(txs.txs);
+const routes = contracts.map((contractAddress) => {
+  const listed = lookupUniswapToken(contractAddress, list.tokens);
+  return {
+    contractAddress,
+    symbol: listed?.symbol ?? txs.txs.find((tx) => tx.contractAddress.toLowerCase() === contractAddress.toLowerCase())?.tokenSymbol ?? null,
+    name: listed?.name ?? null,
+    decision: ethNodeRouteDecision(contractAddress, list.tokens),
+  };
+});
 
-console.log(JSON.stringify(out, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      chainId: 1,
+      address: owner.address,
+      etherscan: "tokentx",
+      uniswapList: "https://tokens.uniswap.org",
+      transfers: txs.txs.length,
+      contracts: routes,
+    },
+    null,
+    2,
+  ),
+);

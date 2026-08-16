@@ -100,7 +100,7 @@ const out = {
   blockHeight: epoch.blockHeight,
 };
 
-if (OWNER) {
+if (OWNER && !String(url).includes("publicnode.com")) {
   const balance = await jsonRpc(url, "getBalance", [OWNER]);
   out.address = OWNER;
   out.lamports = typeof balance === "number" ? balance : balance.value;
