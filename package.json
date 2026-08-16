@@ -49,7 +49,8 @@
     "test:solana-rpc": "node --experimental-strip-types --test src/lib/solana-rpc.test.ts",
     "test:solana-tx": "node --experimental-strip-types --test src/lib/solana-tx.test.ts src/lib/solana-wallet.test.ts",
     "test:eth-tokens": "node --experimental-strip-types --test src/lib/eth-tokens.test.ts",
-    "test:oft": "node --experimental-strip-types --test src/lib/oft.test.ts"
+    "test:oft": "node --experimental-strip-types --test src/lib/oft.test.ts",
+    "test:markdown": "npx tsx --test src/lib/markdown-profile.test.ts"
   },
   "dependencies": {
     "@solana/spl-token": "^0.4.15",
