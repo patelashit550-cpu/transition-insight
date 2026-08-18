@@ -44,10 +44,13 @@
     "backup:nightly": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/nightly-backup.ps1",
     "audit:windows-dev": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/audit-windows-dev-env.ps1",
     "solana:rpc": "node scripts/probe-solana-rpc.mjs",
+    "solana:node-tokens": "node --experimental-strip-types scripts/probe-node-tokens.ts",
     "solana:tx": "node --experimental-strip-types scripts/probe-solana-tx.ts",
     "eth:node-tokens": "node --experimental-strip-types scripts/probe-eth-tokens.ts",
+    "env:local": "node scripts/ensure-env-local.mjs",
     "test:solana-rpc": "node --experimental-strip-types --test src/lib/solana-rpc.test.ts",
     "test:solana-tx": "node --experimental-strip-types --test src/lib/solana-tx.test.ts src/lib/solana-wallet.test.ts",
+    "test:jupiter-tokens": "node --experimental-strip-types --test src/lib/jupiter-tokens.test.ts src/lib/solana-mints.test.ts",
     "test:eth-tokens": "node --experimental-strip-types --test src/lib/eth-tokens.test.ts",
     "test:oft": "node --experimental-strip-types --test src/lib/oft.test.ts"
   },

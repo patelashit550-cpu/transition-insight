@@ -150,7 +150,7 @@ export function formatLamportsAsSol(lamports: number): string {
   return sol.toFixed(6).replace(/0+$/, "").replace(/\.$/, "");
 }
 
-async function solanaJsonRpc<T>(url: string, method: string, params: unknown[]): Promise<T> {
+export async function solanaJsonRpc<T>(url: string, method: string, params: unknown[]): Promise<T> {
   const parsed = parseSolanaRpcUrl(url);
   if (!parsed.ok) {
     throw new Error(parsed.error);
