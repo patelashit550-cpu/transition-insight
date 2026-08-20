@@ -1,0 +1,26 @@
+name: Setup Node
+description: Install Node 22 and the lockfile dependencies. Callers checkout first.
+
+# Composite action = reusable STEPS (not a workflow).
+# Workflows call this with: uses: ./.github/actions/setup-node
+# Do not put on: push / jobs: here — that belongs in .github/workflows/.
+
+inputs:
+  node-version:
+    description: Node.js version (must match local ship / Pages)
+    required: false
+    default: "22"
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        # No npm cache — Pages cutover was flaky with the cache on first run.
+
+    - name: Install dependencies
+      shell: bash
+      # Lockfile only — never fall back to npm install (supply-chain).
+      run: npm ci --no-audit --no-fund

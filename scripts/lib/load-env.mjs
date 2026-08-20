@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 /** Load env files in order; later files override earlier keys. */
 export function loadEnvFiles(root = process.cwd()) {
-  for (const name of [".env.production", ".env", ".env.local", ".env.production.local"]) {
+  for (const name of [".env.production", ".env.development", ".env", ".env.local", ".env.production.local"]) {
     const filePath = join(root, name);
     if (!existsSync(filePath)) continue;
     const text = readFileSync(filePath, "utf8");
