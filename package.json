@@ -13,6 +13,7 @@
     "build:preprod": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-content-tier.mjs preprod node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs",
     "start": "next start",
     "lint": "eslint .",
+    "test": "node --experimental-strip-types --test src/lib/*.test.ts",
     "content:sign": "node scripts/sign-content.mjs",
     "content:verify": "node scripts/sign-content.mjs --verify",
     "sync:assets": "node scripts/sync-published-assets.mjs",

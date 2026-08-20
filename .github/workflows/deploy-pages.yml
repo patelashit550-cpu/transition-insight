@@ -1,5 +1,8 @@
 name: Deploy to GitHub Pages
 
+# Caller workflow. Shared Node install is the setup-node composite action.
+# Never build/export from a non-main ref (workflow_dispatch can target any branch).
+
 on:
   push:
     branches: [main]
@@ -24,17 +27,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          # Match local ship path; avoid flaky npm cache on first Pages cutover.
-          node-version: "22"
+        uses: ./.github/actions/setup-node
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-
-      - name: Install dependencies
-        # Lockfile only — never fall back to npm install (supply-chain).
-        run: npm ci --no-audit --no-fund
 
       - name: Build static export (global tier)
         # Serving at custom domain root (ashitmilne.xyz) → no basePath.

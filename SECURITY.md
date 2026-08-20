@@ -33,6 +33,12 @@ npm run verify:sitemap:live
 npm run content:verify
 ```
 
+GitHub Actions (see `.github/README.md`):
+
+- Composite action `.github/actions/setup-node` — Node 22 + `npm ci` (shared steps)
+- `ci.yml` — unit tests on PRs and `main` (`npm test`). Lint is still local (`npm run lint`) until the existing React hook findings are cleared.
+- `deploy-pages.yml` — global-tier export + Pages, `main` only
+
 Ship path (local → GitHub → Pages):
 
 ```powershell
