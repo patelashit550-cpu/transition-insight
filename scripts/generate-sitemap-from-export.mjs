@@ -23,11 +23,27 @@ const EXCLUDE_DIRS = new Set([
   ".well-known",
 ]);
 
+/**
+ * Next `notFound()` under `output: "export"` still writes an index.html shell.
+ * Static hosts often serve that as HTTP 200; do not put those URLs in the sitemap.
+ */
+function isSoftNotFoundExport(indexHtmlPath) {
+  try {
+    const html = fs.readFileSync(indexHtmlPath, "utf8");
+    return (
+      html.includes('id="__next_error__"') ||
+      html.includes("NEXT_HTTP_ERROR_FALLBACK;404")
+    );
+  } catch {
+    return true;
+  }
+}
+
 function discoverPublicPaths(dir, segments = []) {
   const paths = [];
   const indexHtml = path.join(dir, "index.html");
 
-  if (fs.existsSync(indexHtml)) {
+  if (fs.existsSync(indexHtml) && !isSoftNotFoundExport(indexHtml)) {
     if (segments.length === 0) {
       paths.push("/");
     } else if (!EXCLUDE_DIRS.has(segments[0])) {
