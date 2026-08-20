@@ -24,6 +24,7 @@ import {
   type ContentHubConfig,
   type ContentHubRoute,
 } from "@/lib/content-routes";
+import { serializeJsonLd } from "@/lib/json-ld";
 import { getSovereignIdentity } from "@/lib/sovereign";
 import { withBasePath } from "@/lib/base-path";
 import { SiteIdentity } from "@/config/site";
@@ -216,7 +217,8 @@ function contentJsonLd(
   ld.publisher = { "@type": "Organization", name: SiteIdentity.name, url: SiteIdentity.url };
   const img = toAbsUrl(typeof frontmatter.image === "string" ? frontmatter.image : undefined);
   if (img) ld.image = img;
-  return JSON.stringify(ld);
+  // Escape `<` so frontmatter cannot terminate the ld+json script element.
+  return serializeJsonLd(ld);
 }
 
 /** inset | figure | plate → centred editorial plate above essay body (after page title) */

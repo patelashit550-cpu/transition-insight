@@ -54,7 +54,8 @@
     "test:jupiter-tokens": "node --experimental-strip-types --test src/lib/jupiter-tokens.test.ts src/lib/solana-mints.test.ts",
     "test:eth-tokens": "node --experimental-strip-types --test src/lib/eth-tokens.test.ts",
     "test:oft": "node --experimental-strip-types --test src/lib/oft.test.ts",
-    "test:markdown": "npx tsx --test src/lib/markdown-profile.test.ts"
+    "test:markdown": "node --experimental-strip-types --test src/lib/markdown-profile.test.ts",
+    "test:json-ld": "node --experimental-strip-types --test src/lib/json-ld.test.ts"
   },
   "dependencies": {
     "@solana/spl-token": "^0.4.15",
