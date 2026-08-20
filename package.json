@@ -61,6 +61,7 @@
     "test:resolve-reading-essay": "npx tsx --test src/lib/resolve-reading-essay.test.ts"
   },
   "dependencies": {
+    "@modelcontextprotocol/client": "^2.0.0",
     "@solana/spl-token": "^0.4.15",
     "@solana/web3.js": "^1.98.4",
     "bs58": "^6.0.0",
