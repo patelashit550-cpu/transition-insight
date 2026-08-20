@@ -162,12 +162,17 @@ export function listContentHubStaticParams(
 
   for (const config of Object.values(CONTENT_HUBS)) {
     const base = [...config.publicBase];
-    out.push({ slug: base });
 
     const essays =
       config.mode === "folder"
         ? listFolderEssays([...config.ontologyTopicPath], config.seriesSlug)
         : listSeriesEssays(config.seriesName);
+
+    // Skip empty hubs: emitting the index alone yields notFound() soft-404 HTML that
+    // static hosts (e.g. GitHub Pages) serve as HTTP 200 and sitemap discovery indexes.
+    if (essays.length === 0) continue;
+
+    out.push({ slug: base });
 
     for (const essay of essays) {
       out.push({ slug: [...base, essay.slug] });
