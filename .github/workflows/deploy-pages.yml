@@ -30,7 +30,7 @@ jobs:
         uses: ./.github/actions/setup-node
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Build static export (global tier)
         # Serving at custom domain root (ashitmilne.xyz) → no basePath.
