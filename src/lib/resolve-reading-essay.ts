@@ -47,7 +47,10 @@ function hubIndexSlug(config: ContentHubConfig, essays: EssayStub[]): string | n
   if (config.hubLanding === "first" || config.sequentialNav) {
     return essays[0]?.slug ?? null;
   }
-  return landerEssay ? config.landerSlug : latestSlug;
+  // Only land on the lander when it is eligible for this build tier. A draft
+  // lander must not shadow published essays and soft-404 the hub index.
+  if (landerEssay && stageAllowed(landerEssay)) return config.landerSlug;
+  return latestSlug;
 }
 
 function loadHubEssay(config: ContentHubConfig, essaySlug: string): EssayData | null {
