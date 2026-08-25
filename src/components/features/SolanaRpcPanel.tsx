@@ -6,7 +6,7 @@ import { useSolanaRpc } from "@/lib/use-solana-rpc";
 
 type Props = {
   ownerAddress?: string;
-  variant?: "connexion" | "cord";
+  variant?: "cord";
 };
 
 function hostLabel(url: string): string {
@@ -17,7 +17,7 @@ function hostLabel(url: string): string {
   }
 }
 
-export function SolanaRpcPanel({ ownerAddress, variant = "connexion" }: Props) {
+export function SolanaRpcPanel({ ownerAddress, variant = "cord" }: Props) {
   const rpc = useSolanaRpc(ownerAddress);
   const [draft, setDraft] = useState("");
 
@@ -44,7 +44,10 @@ export function SolanaRpcPanel({ ownerAddress, variant = "connexion" }: Props) {
       <summary className="p3-solana-rpc__summary">
         <span className="p3-solana-rpc__kicker">RPC</span>
         <span className="p3-solana-rpc__host">{hostLabel(rpc.activeUrl)}</span>
-        {rpc.usingCustom ? <span className="p3-solana-rpc__tag">custom</span> : null}
+        {rpc.usingCustom ? <span className="p3-solana-rpc__tag p3-solana-rpc__tag--custom">custom</span> : null}
+        {rpc.usingPublicGateway && !rpc.usingCustom ? (
+          <span className="p3-solana-rpc__tag p3-solana-rpc__tag--public">public</span>
+        ) : null}
       </summary>
 
       <p className="p3-solana-rpc__status" role="status">
@@ -87,8 +90,8 @@ export function SolanaRpcPanel({ ownerAddress, variant = "connexion" }: Props) {
       </form>
 
       <p className="p3-solana-rpc__hint">
-        Default is PublicNode (browser CORS). Paste Helius, QuickNode, or a validator RPC to override — stored in this
-        browser only, not in the published site.
+        PublicNode is a shared CORS gateway — epoch and slot only. Paste a Helius, QuickNode, or validator RPC to read
+        balance; stored in this browser, not in the published site.
       </p>
     </details>
   );

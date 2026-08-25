@@ -1,6 +1,6 @@
-﻿# Secrets / local credentials — never index into Cursor context
+# Secrets / local credentials — never index into Cursor context
+# .env.local is gitignored (not GitHub) but visible in Cursor so keys can be edited.
 .env
-.env.local
 .env.*.local
 .env.production.local
 .env.development.local

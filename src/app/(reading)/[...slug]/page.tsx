@@ -8,12 +8,9 @@ import { isStageIncludedInBuild, normalizeStage } from "@/lib/content-tier";
 import { sortEssayStubsChronological } from "@/lib/essay-date";
 import {
   getProfileData,
-  getEssayInTopic,
-  isTopicFolder,
   listEssaysForBuild,
   listEssaysBySeriesForBuild,
   listEssaysInTopicFolderForBuild,
-  pickLatestEssaySlug,
   type EssayData,
   type EssayStub,
 } from "@/lib/markdown";
@@ -21,9 +18,10 @@ import {
   resolveContentRoute,
   listContentHubStaticParams,
   listBentoLegacyStaticParams,
-  type ContentHubConfig,
   type ContentHubRoute,
 } from "@/lib/content-routes";
+import { serializeJsonLd } from "@/lib/json-ld";
+import { resolveContentHubEssay, resolveReadingEssay } from "@/lib/resolve-reading-essay";
 import { getSovereignIdentity } from "@/lib/sovereign";
 import { withBasePath } from "@/lib/base-path";
 import { SiteIdentity } from "@/config/site";
@@ -58,11 +56,6 @@ export async function generateStaticParams() {
 }
 
 export const dynamicParams = false;
-
-function resolveTopicMapping(rawPath: string[]): { path: string[]; active: string } {
-  const target = rawPath[rawPath.length - 1];
-  return { path: rawPath.slice(0, rawPath.length - 1), active: target };
-}
 
 const AUTHOR_NAME_DEFAULT = "Ashit Milne";
 
@@ -138,12 +131,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const slug = rawSlug.filter(Boolean);
   if (slug.length < 2) return {};
 
-  const { active: targetSlug } = resolveTopicMapping(slug);
-  const essay = getProfileData([targetSlug]);
+  const resolved = resolveReadingEssay(slug);
+  if (!resolved) return {};
 
-  if (!essay) return {};
-
-  const { frontmatter, content } = essay;
+  const { frontmatter, content } = resolved.essay;
   const { did } = getSovereignIdentity();
   const other: Record<string, string> = {};
   if (did) other["author-did"] = did;
@@ -216,7 +207,8 @@ function contentJsonLd(
   ld.publisher = { "@type": "Organization", name: SiteIdentity.name, url: SiteIdentity.url };
   const img = toAbsUrl(typeof frontmatter.image === "string" ? frontmatter.image : undefined);
   if (img) ld.image = img;
-  return JSON.stringify(ld);
+  // Escape `<` so frontmatter cannot terminate the ld+json script element.
+  return serializeJsonLd(ld);
 }
 
 /** inset | figure | plate → centred editorial plate above essay body (after page title) */
@@ -452,112 +444,53 @@ export default async function OntologyArchive({ params }: PageProps) {
   }
 
   const { topicPath, activeSlug, isMeRoute } = route;
-
-  const single = getProfileData([activeSlug]);
-
-  if (single) {
-    const st = normalizeStage((single.frontmatter as Record<string, unknown>).stage);
-    if (!isStageIncludedInBuild(st)) return notFound();
-
-    const essays = listEssaysForBuild(topicPath);
-
-    if (isMeRoute) {
-      return <SingleArticle data={single} canonicalUrl={canonicalUrl} />;
-    }
-
-    if (essays.length > 0) {
-      return (
-        <TopicLayout
-          topicPath={slug.slice(0, slug.length - 1)}
-          essays={essays}
-          activeSlug={activeSlug}
-          activeEssay={single}
-        />
-      );
-    }
-
-    return <SingleArticle data={single} canonicalUrl={canonicalUrl} />;
-  }
-
-  if (!isTopicFolder(topicPath)) return notFound();
+  const resolved = resolveReadingEssay(slug);
+  if (!resolved) return notFound();
 
   const essays = listEssaysForBuild(topicPath);
-  if (essays.length === 0) return notFound();
 
-  return (
-    <TopicLayout
-      topicPath={slug.slice(0, slug.length - 1)}
-      essays={essays}
-      activeSlug={activeSlug}
-      activeEssay={essays[0] as unknown as EssayData}
-    />
-  );
+  if (isMeRoute) {
+    return <SingleArticle data={resolved.essay} canonicalUrl={canonicalUrl} />;
+  }
+
+  if (essays.length > 0) {
+    return (
+      <TopicLayout
+        topicPath={slug.slice(0, slug.length - 1)}
+        essays={essays}
+        activeSlug={activeSlug}
+        activeEssay={resolved.essay}
+      />
+    );
+  }
+
+  return <SingleArticle data={resolved.essay} canonicalUrl={canonicalUrl} />;
 }
 
-function listHubEssays(config: ContentHubConfig): EssayStub[] {
+function renderContentHub(route: ContentHubRoute) {
+  const resolved = resolveContentHubEssay(route);
+  if (!resolved) return notFound();
+
+  const { config } = route;
   const essays =
     config.mode === "folder"
       ? listEssaysInTopicFolderForBuild([...config.ontologyTopicPath], {
           series: config.seriesSlug,
         })
       : listEssaysBySeriesForBuild(config.seriesName);
-
-  return config.navChronological ? sortEssayStubsChronological(essays) : essays;
-}
-
-function renderContentHub(route: ContentHubRoute) {
-  const { config, essaySlug: routeEssaySlug } = route;
-  const publicTopicPath = [...config.publicBase];
-
-  const essays = listHubEssays(config);
-  const latestSlug = pickLatestEssaySlug(essays);
-  const topicPath = config.mode === "folder" ? [...config.ontologyTopicPath] : [];
-
-  const landerEssay =
-    config.mode === "folder" ? getEssayInTopic(topicPath, config.landerSlug) : null;
-  // Prefer latest when opted in; else lander overview; else sequential first; else latest.
-  const hubIndexSlug =
-    config.hubLanding === "latest"
-      ? latestSlug
-      : config.hubLanding === "first" || config.sequentialNav
-        ? essays[0]?.slug ?? null
-        : landerEssay
-          ? config.landerSlug
-          : latestSlug;
-
-  const essaySlug =
-    routeEssaySlug === null || routeEssaySlug === config.landerSlug
-      ? hubIndexSlug
-      : routeEssaySlug;
-
-  if (!essaySlug) return notFound();
-
-  let activeEssay: EssayData | null = null;
-  if (config.mode === "folder") {
-    activeEssay = getEssayInTopic(topicPath, essaySlug);
-  }
-  if (!activeEssay) {
-    activeEssay = getProfileData([essaySlug]);
-  }
-
-  if (!activeEssay) return notFound();
-
-  const st = normalizeStage((activeEssay.frontmatter as Record<string, unknown>).stage);
-  if (!isStageIncludedInBuild(st)) return notFound();
-
-  if (routeEssaySlug && essays.length > 0 && !essays.some((e) => e.slug === routeEssaySlug)) {
-    if (routeEssaySlug !== config.landerSlug) return notFound();
-  }
+  const navEssays = config.navChronological
+    ? sortEssayStubsChronological(essays)
+    : essays;
 
   return (
     <TopicLayout
-      topicPath={publicTopicPath}
+      topicPath={[...config.publicBase]}
       navKicker={config.navKicker}
       showNavIndex={config.sequentialNav === true}
       showNavDate={config.showNavDate === true}
-      essays={essays}
-      activeSlug={essaySlug}
-      activeEssay={activeEssay}
+      essays={navEssays}
+      activeSlug={resolved.essaySlug}
+      activeEssay={resolved.essay}
     />
   );
 }

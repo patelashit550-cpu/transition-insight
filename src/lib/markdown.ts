@@ -244,6 +244,39 @@ function fileBelongsToTopic(filename: string, topicPath: string | string[]): boo
 }
 
 /**
+ * Rank ontology files that share a leaf slug. Prefer essays included in the
+ * current publishing tier (so a root draft cannot shadow a published essay),
+ * then higher stages, then a stable path order.
+ */
+function stagePreferenceRank(stage: string): number {
+  const s = normalizeStage(stage);
+  if (s === "canonical") return 4;
+  if (s === "published") return 3;
+  if (s === "review") return 2;
+  return 1;
+}
+
+function pickPreferredOntologyFilename(
+  filenames: string[],
+  tier: ContentTier = getPublishingContentTier()
+): string | null {
+  if (filenames.length === 0) return null;
+  if (filenames.length === 1) return filenames[0]!;
+
+  const ranked = [...filenames].sort((a, b) => {
+    const stageA = readStageFromFile(path.join(ONTOLOGY_ROOT, a));
+    const stageB = readStageFromFile(path.join(ONTOLOGY_ROOT, b));
+    const inclA = isStageIncludedInBuild(stageA, tier) ? 1 : 0;
+    const inclB = isStageIncludedInBuild(stageB, tier) ? 1 : 0;
+    if (inclA !== inclB) return inclB - inclA;
+    const pref = stagePreferenceRank(stageB) - stagePreferenceRank(stageA);
+    if (pref !== 0) return pref;
+    return a.localeCompare(b);
+  });
+  return ranked[0]!;
+}
+
+/**
  * Single-file essay lookup. Evaluates exact target files matching the leaf slug name
  * across the recursive folder index tree.
  */
@@ -253,6 +286,10 @@ function fileBelongsToTopic(filename: string, topicPath: string | string[]): boo
  * Accepts a slug string or slug path array. When NODE_ENV is development,
  * `_sourcePath` is attached to help surface file-source drift.
  *
+ * When multiple files share the same leaf slug (e.g. a root draft and a
+ * published essay both set `slug: social-network`), prefer the file included
+ * in the current publishing tier so drafts cannot win metadata or legacy routes.
+ *
  * @param slugPath - slug string or array of path segments
  * @returns EssayData when found, otherwise null
  */
@@ -260,11 +297,13 @@ export function getProfileData(slugPath: string | string[]): EssayData | null {
   const targetSlug = Array.isArray(slugPath) ? slugPath[slugPath.length - 1] : slugPath;
   const cleanTarget = toSlug(targetSlug);
 
-  const matchedFile = listFlatOntologyFilenames().find((filename) => {
+  const matches = listFlatOntologyFilenames().filter((filename) => {
     if (toSlug(path.basename(filename)) === cleanTarget) return true;
     const data = readFrontmatterForFilename(filename);
     return typeof data.slug === "string" && toSlug(data.slug) === cleanTarget;
   });
+
+  const matchedFile = pickPreferredOntologyFilename(matches);
 
   if (!matchedFile) {
     if (process.env.NODE_ENV === "development") {

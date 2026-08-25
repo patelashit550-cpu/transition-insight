@@ -33,6 +33,12 @@ npm run verify:sitemap:live
 npm run content:verify
 ```
 
+GitHub Actions (see `.github/README.md`):
+
+- Composite action `.github/actions/setup-node` — Node 22 + `npm ci` (shared steps)
+- `ci.yml` — unit tests on PRs and `main` (`npm test`). Lint is still local (`npm run lint`) until the existing React hook findings are cleared.
+- `deploy-pages.yml` — global-tier export + Pages, `main` only
+
 Ship path (local → GitHub → Pages):
 
 ```powershell
@@ -59,7 +65,7 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 4. **Repo → Settings → Pages:** already **GitHub Actions**. Do not switch back to the legacy `gh-pages` branch publisher.
 5. **Repo → Settings → Environments → `github-pages`:** done — deployment branches = `main` only. Optional later: required reviewer (you) so a stolen PAT cannot ship instantly.
 6. **Repo → Settings → Actions:** disable fork PRs from writing Pages; no extra `GITHUB_TOKEN` write scopes.
-7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY`, `PINATA_JWT`, `COLOSSEUM_COPILOT_PAT`, OFT program keypairs, or LayerZero deployer keys in GitHub Actions. Sign and pin on the laptop (`.env.local`, gitignored).
+7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY`, `SOLANA_KEYPAIR_PATH`, `PINATA_JWT`, `JUPITER_API_KEY`, `ETHERSCAN_API_KEY`, `COLOSSEUM_COPILOT_PAT`, OFT program keypairs, or LayerZero deployer keys in GitHub Actions. Sign, pin, assemble Solana transactions, and call Jupiter / Etherscan / Colosseum Copilot on the laptop (`.env.local`, gitignored). `@solana/web3.js` v1, `@solana/spl-token`, Jupiter Tokens, and Etherscan `tokentx` are CLI-only — they must not ship a private key or API key into the static Pages build. Never `NEXT_PUBLIC_*` for those keys.
 8. **Porkbun / DNS:** `ashitmilne.xyz` A/AAAA (or CNAME) stay on GitHub Pages; HTTPS is already enforced. Lock the registrar account with 2FA.
 9. **SNS (`transition-insight.sol`):** set the URL (or IPFS) record to `https://ashitmilne.xyz/`. Until you do, `.sol.site` is a public Bonfida profile — a different origin, not this app.
 10. **WSL:** one distro (`Ubuntu-22.04`), default version 2. Do not store signing keys in a shared Windows folder with loose ACLs; keep `.env.local` in the repo clone.
@@ -71,6 +77,10 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 | local | `npm run dev` | Drafts + Cord compose (laptop only) |
 | preprod | `npm run build:preprod` | `review` + published — never point DNS/SNS at this |
 | global | `npm run build:global` / CI | `published` + `canonical` only |
+
+## Solana RPC
+
+The published site uses **PublicNode** (`solana-rpc.publicnode.com`) as a shared CORS gateway for epoch/slot only. It must not receive `getBalance` of the owner wallet. Paste a Helius / QuickNode / validator URL in the Cord RPC field (browser `localStorage` only). Never put API keys in `NEXT_PUBLIC_SOLANA_RPC_URL`. Connexion is Call / Telegram / Email only.
 
 ## Reporting a vulnerability
 

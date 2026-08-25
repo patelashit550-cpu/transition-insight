@@ -4,8 +4,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import {
   configuredSolanaRpcUrl,
+  isSharedPublicSolanaRpc,
   parseSolanaRpcUrl,
-  probeSolanaRpc,
+  probeSolanaRpcForSite,
   SOLANA_RPC_STORAGE_KEY,
   type SolanaRpcProbe,
 } from "@/lib/solana-rpc";
@@ -51,6 +52,8 @@ export function useSolanaRpc(ownerAddress?: string) {
 
   const activeUrl = customUrl ?? configured;
   const usingCustom = customUrl !== null;
+  const displayUrl = probe?.url ?? activeUrl;
+  const usingPublicGateway = isSharedPublicSolanaRpc(displayUrl);
 
   useEffect(() => {
     const stored = readStoredRpcUrl();
@@ -66,7 +69,7 @@ export function useSolanaRpc(ownerAddress?: string) {
     setStatus("probing");
     setError(null);
     try {
-      const next = await probeSolanaRpc(url, ownerAddress);
+      const next = await probeSolanaRpcForSite(url, ownerAddress);
       if (seq !== probeSeq.current) {
         return { ok: true as const, probe: next };
       }
@@ -117,8 +120,9 @@ export function useSolanaRpc(ownerAddress?: string) {
 
   return {
     configuredUrl: configured,
-    activeUrl,
+    activeUrl: displayUrl,
     usingCustom,
+    usingPublicGateway,
     hydrated,
     status,
     probe,

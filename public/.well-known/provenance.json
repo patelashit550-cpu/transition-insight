@@ -31,8 +31,8 @@
   "identity": {
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
     "solana": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "validator": "Lumos Maxima",
-    "validatorVoteAccount": "5daP6pZoPSak6UEKuRg2HHjvTPpqqwB113oNamGNKuuZ"
+    "validator": null,
+    "validatorVoteAccount": null
   },
   "documents": {
     "attestation": "https://ashitmilne.xyz/attestation.json",

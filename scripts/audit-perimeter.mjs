@@ -149,7 +149,7 @@ function auditLocal() {
   }
 
   const skipNames = new Set(["package-lock.json", "audit-perimeter.mjs"]);
-  const assignment = /(?:SOLANA_SIGNING_KEY|PINATA_JWT|COLOSSEUM_COPILOT_PAT)\s*=\s*(\S+)/g;
+  const assignment = /(?:SOLANA_SIGNING_KEY|PINATA_JWT|ETHERSCAN_API_KEY|JUPITER_API_KEY|COLOSSEUM_COPILOT_PAT)\s*=\s*(\S+)/g;
   const privateKey = /BEGIN (OPENSSH |RSA |EC )?PRIVATE KEY/;
   for (const file of walkFiles(ROOT)) {
     const name = file.split(/[/\\]/).pop() || "";
@@ -203,7 +203,7 @@ function auditLocal() {
   }
 
   if (existsSync(join(ROOT, ".env.local"))) {
-    record("ok", "secrets", ".env.local present locally (gitignored) — keep PINATA_JWT / SOLANA_SIGNING_KEY / COLOSSEUM_COPILOT_PAT only there");
+    record("ok", "secrets", ".env.local present locally (gitignored) — keep PINATA_JWT / SOLANA_SIGNING_KEY / ETHERSCAN_API_KEY / JUPITER_API_KEY / COLOSSEUM_COPILOT_PAT only there");
   } else {
     record("warn", "secrets", ".env.local missing — fine until you pin IPFS or sign attestation.json");
   }

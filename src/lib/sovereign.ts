@@ -44,7 +44,7 @@ export function getSovereignIdentity(): SovereignIdentity {
       btc: process.env.NEXT_PUBLIC_BTC_WALLET_ADDRESS || null,
     },
     staking: {
-      validator: process.env.NEXT_PUBLIC_VALIDATOR_NAME || 'Lumos Maxima',
+      validator: process.env.NEXT_PUBLIC_VALIDATOR_NAME || null,
       validatorVoteAccount: process.env.NEXT_PUBLIC_VALIDATOR_VOTE_ACCOUNT || null,
     },
     ipfs: {
