@@ -19,5 +19,10 @@ if [[ ! -f node_modules/next/package.json ]]; then
   exit 1
 fi
 
+# Disable Next.js telemetry so the dev terminal boots non-interactively and
+# without the first-run telemetry notice. Persisted to the user config, so it
+# survives into snapshots and later boots. Non-fatal if it cannot be written.
+node ./node_modules/next/dist/bin/next telemetry disable >/dev/null 2>&1 || true
+
 node -e "const p = require('next/package.json'); console.log('cloud-agent-install: next', p.version)"
 echo "cloud-agent-install: ok"
