@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import { test } from "node:test";
 
 import { resolveContentRoute } from "./content-routes.ts";
@@ -44,6 +46,51 @@ test("legacy /governance/carta prefers the governance topic file", () => {
     assert.match(String(resolved.essay.frontmatter.title), /Introduction Regnum Dei/i);
     assert.notEqual(resolved.essay.frontmatter.title, "Carta");
   } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
+  }
+});
+
+test("same-folder draft slug collision does not soft-404 published hub leaf or index", () => {
+  const previous = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
+  const draftPath = path.join(
+    process.cwd(),
+    "ontology",
+    "governance",
+    "illumination",
+    "AAA-draft-collision.md",
+  );
+  const created = !fs.existsSync(draftPath);
+  try {
+    if (created) {
+      fs.writeFileSync(
+        draftPath,
+        [
+          "---",
+          'title: "Draft Collision"',
+          "stage: draft",
+          "slug: social-network",
+          "type: essay",
+          "series: peridot",
+          "---",
+          "",
+          "Draft that collides with published social-network.",
+          "",
+        ].join("\n"),
+        "utf8",
+      );
+    }
+    const leaf = resolveReadingEssay(["governance", "peridot", "social-network"]);
+    assert.ok(leaf, "published leaf must resolve despite an earlier draft collision");
+    assert.equal(leaf.essay.frontmatter.title, "The Social Network");
+    assert.equal(leaf.essay.frontmatter.stage, "published");
+
+    const index = resolveReadingEssay(["governance", "peridot"]);
+    assert.ok(index, "hub index must resolve despite an earlier draft collision");
+    assert.equal(index.essay.frontmatter.stage, "published");
+  } finally {
+    if (created && fs.existsSync(draftPath)) fs.unlinkSync(draftPath);
     if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
   }

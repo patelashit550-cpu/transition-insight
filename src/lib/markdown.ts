@@ -438,6 +438,11 @@ export function listEssaysForBuild(
  * Ensures the returned essay belongs to the requested topic path. When running
  * in development, `_sourcePath` is attached for debugging file-source drift.
  *
+ * When multiple files in the topic share the same slug (e.g. a draft and a
+ * published essay), prefer the file included in the current publishing tier —
+ * same rule as {@link getProfileData}. A filesystem-first draft must not win
+ * and soft-404 published hub leaves via later `stageAllowed` checks.
+ *
  * @param topicPath - folder path as string or array
  * @param essaySlug - slug of the essay to find
  * @returns EssayData when found, otherwise null
@@ -448,12 +453,13 @@ export function getEssayInTopic(
 ): EssayData | null {
   const cleanSlug = toSlug(essaySlug);
 
-  const match = listFlatOntologyFilenames().find((filename) => {
+  const matches = listFlatOntologyFilenames().filter((filename) => {
     const data = readFrontmatterForFilename(filename);
     if (essaySlugFromFile(filename, data) !== cleanSlug) return false;
     return fileBelongsToTopic(filename, topicPath);
   });
-  
+
+  const match = pickPreferredOntologyFilename(matches);
   if (!match) return null;
 
   try {
