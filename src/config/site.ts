@@ -1,5 +1,6 @@
 // src/config/site.ts
 import { withBasePath } from "@/lib/base-path";
+import { CANONICAL_SITE_URL } from "@/lib/public-identity";
 
 /**
  * SiteIdentity: High-level metadata for the Planet-III project.
@@ -8,7 +9,7 @@ import { withBasePath } from "@/lib/base-path";
 export const SiteIdentity = {
   name: 'Transition Insight',
   description: 'HUMAN-CENTRIC GOVERNANCE FOR A NEW EARTH',
-  url: 'https://ashitmilne.xyz',
+  url: CANONICAL_SITE_URL,
   icon: withBasePath("/visuals/icon.png"),
 };
 

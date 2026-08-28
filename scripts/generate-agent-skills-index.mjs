@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const origin = (
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz"
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://transition-insight.sol.site"
 ).replace(/\/$/, "");
 const skillRel = ".well-known/agent-skills/transition-insight/SKILL.md";
 const skillPath = join(root, "public", skillRel);

@@ -70,10 +70,9 @@ const provenance = {
   },
   solSite: {
     domain: identity.solSite,
-    status: "point-at-canonical-web",
+    status: "ipfs-canonical",
     note:
-      "In SNS → Sol.site, CNAME or URL to the canonical web host (NEXT_PUBLIC_SITE_URL / Porkbun). " +
-      "Optional later: also set SNS IPFS/URL records if you want Brave / sol-domain.org resolution.",
+      "Public origin is IPFS, reached at transition-insight.sol.site. Set on-chain IPFS (CID only) plus sol.site CNAME + TXT _dnslink=/ipfs/<CID>. Do not set the URL record to ashitmilne.xyz (Pages 404; Bonfida prefers URL over IPFS).",
   },
 };
 

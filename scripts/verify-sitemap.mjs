@@ -8,7 +8,7 @@ import path from "node:path";
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, "out");
 const ORIGIN = (
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz"
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://transition-insight.sol.site"
 ).replace(/\/$/, "");
 
 function fail(message) {

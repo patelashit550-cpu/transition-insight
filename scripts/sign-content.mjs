@@ -8,9 +8,26 @@ import {
   attestationSignPayload,
   getSovereignEnv,
 } from "./lib/content-provenance.mjs";
+import { loadEnvFiles } from "./lib/load-env.mjs";
 
+loadEnvFiles();
+
+const CORPUS = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
 const attestationPath = join(process.cwd(), "public", "attestation.json");
 const verifyMode = process.argv.includes("--verify");
+
+function expectedCorpusPubkey() {
+  return getSovereignEnv().solana || CORPUS;
+}
+
+function assertCorpusSigner(publicKey) {
+  const expected = expectedCorpusPubkey();
+  if (publicKey !== expected) {
+    throw new Error(
+      `Signing key ${publicKey} is not the corpus wallet ${expected}. Use SOLANA_SIGNING_KEY for that address.`,
+    );
+  }
+}
 
 function loadKeypair() {
   const secret = process.env.SOLANA_SIGNING_KEY?.trim();
@@ -38,11 +55,11 @@ function verifySignature(attestation) {
     process.exit(1);
   }
 
-  const expected = getSovereignEnv().solana;
-  if (expected && signature.publicKey !== expected) {
-    console.warn(
-      `Warning: signer ${signature.publicKey} differs from NEXT_PUBLIC_SOLANA_WALLET_ADDRESS (${expected})`,
-    );
+  try {
+    assertCorpusSigner(signature.publicKey);
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : error);
+    process.exit(1);
   }
 
   console.log(`attestation signature valid (${signature.publicKey})`);
@@ -51,6 +68,9 @@ function verifySignature(attestation) {
 function signAttestation() {
   const attestation = JSON.parse(readFileSync(attestationPath, "utf8"));
   const keypair = loadKeypair();
+  const publicKey = keypair.publicKey.toBase58();
+  assertCorpusSigner(publicKey);
+
   const payload = attestationSignPayload(
     attestation.manifestDigest,
     attestation.generated,
@@ -61,7 +81,7 @@ function signAttestation() {
   attestation.signature = {
     algorithm: "ed25519",
     scheme: "transition-insight:attestation:v1",
-    publicKey: keypair.publicKey.toBase58(),
+    publicKey,
     value,
     signedAt: new Date().toISOString(),
   };

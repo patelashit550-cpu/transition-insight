@@ -25,7 +25,7 @@ That is worth installing. It is **not** worth installing *here*.
 
 ### Why not this repository
 
-This repo is the public static reader (`ashitmilne.xyz`). Connexion probes Solana JSON-RPC; Cord talks to Phantom. There is no Hardhat, no Foundry, no Anchor, no Solidity. Official OFT install paths are:
+This repo is the public static reader (`transition-insight.sol.site`). Connexion probes Solana JSON-RPC; Cord talks to Phantom. There is no Hardhat, no Foundry, no Anchor, no Solidity. Official OFT install paths are:
 
 - **New EVM project:** `npx create-lz-oapp@latest --example oft`
 - **Existing EVM project:** `npm install @layerzerolabs/oft-evm`

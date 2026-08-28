@@ -4,7 +4,7 @@
   "tier": "global",
   "manifestDigest": "sha256:3e1379273955baf4216219c8854ec4b4ebd86d1f0b2672667917fa9f0f9cbbe9",
   "identity": {
-    "canonical": "https://ashitmilne.xyz",
+    "canonical": "https://transition-insight.sol.site",
     "sns": "transition-insight.sol",
     "solSite": "https://transition-insight.sol.site",
     "ens": "ashitpatel.eth",

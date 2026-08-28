@@ -1,10 +1,14 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { walkFiles } from "./lib/walk-files.mjs";
 
 const outDir = join(process.cwd(), "out");
+if (!existsSync(outDir)) {
+  console.error("ipfs-relative-export: out/ missing — run npm run build:global first");
+  process.exit(1);
+}
 const files = walkFiles(outDir).filter(({ relativePath }) =>
   /\.(html|js|css|json|txt|xml|webmanifest)$/.test(relativePath),
 );

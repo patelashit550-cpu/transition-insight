@@ -33,17 +33,15 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build static export (global tier)
-        # Serving at custom domain root (ashitmilne.xyz) → no basePath.
-        # Absolute /_next/ asset paths are correct for a root-domain deploy.
-        # Set the canonical origin explicitly so both Next.js and the standalone
-        # discovery scripts (sitemap, provenance, agent-skills) agree on the domain.
+        # Canonical origin is IPFS / sol.site. Pages is an optional Web2 mirror.
+        # ipfs-relative-export is part of build:global so the artifact is pin-ready.
         env:
-          NEXT_PUBLIC_SITE_URL: https://ashitmilne.xyz
+          NEXT_PUBLIC_SITE_URL: https://transition-insight.sol.site
         run: npm run build:global
 
       - name: Audit export perimeter
         env:
-          NEXT_PUBLIC_SITE_URL: https://ashitmilne.xyz
+          NEXT_PUBLIC_SITE_URL: https://transition-insight.sol.site
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/audit-perimeter.mjs --export --github
 

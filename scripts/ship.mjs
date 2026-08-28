@@ -10,7 +10,8 @@
  *   npm run ship -- --push --ipfs
  *   npm run ship -- --skip-canon    (bypass Canonical freshness gate)
  *
- * GitHub Actions on push to main builds and deploys Pages → ashitmilne.xyz.
+ * GitHub Actions on push to main may still deploy an optional Pages mirror.
+ * The public origin is IPFS at transition-insight.sol.site (`--ipfs`).
  *
  * Before build: canon:check — fails if published essays changed since last
  * `npm run canon:generate` (so you don't ship without refreshing Canonical).

@@ -1,6 +1,6 @@
 # GitHub Actions
 
-This repo is a **Node / Next.js** static site (`ashitmilne.xyz`). Do not add GitHub starter templates (Python/Conda, Docker, etc.).
+This repo is a **Node / Next.js** static site. The public origin is IPFS at `https://transition-insight.sol.site`. GitHub Pages (`ashitmilne.xyz`) is an optional mirror.
 
 There are **two layers**. Mixing them is what makes “composite workflows” confusing:
 

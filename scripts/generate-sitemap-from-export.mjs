@@ -11,7 +11,7 @@ const OUT = path.join(ROOT, "out");
 const PUBLIC = path.join(ROOT, "public");
 
 const ORIGIN = (
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz"
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://transition-insight.sol.site"
 ).replace(/\/$/, "");
 
 /** Top-level export dirs omitted from the public sitemap. */

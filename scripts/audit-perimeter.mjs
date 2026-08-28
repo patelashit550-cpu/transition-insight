@@ -15,11 +15,24 @@ import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
-const CANONICAL = (
-  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://ashitmilne.xyz"
-).replace(/\/$/, "");
+const CANONICAL_DEFAULT = "https://transition-insight.sol.site";
+const CANONICAL = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || CANONICAL_DEFAULT).replace(/\/$/, "");
 const SNS = "transition-insight.sol";
-const SOL_SITE = "https://transition-insight.sol.site";
+const SOL_SITE = CANONICAL_DEFAULT;
+const PAGES_MIRROR = "https://ashitmilne.xyz";
+const CORPUS_SOLANA = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
+const CORPUS_ETH = "0x07C51282DFf9193584e9936316f88D0709D55490";
+const CORPUS_ENS = "ashitpatel.eth";
+const CORPUS_BTC = "3P2eUwTBnmoDGq22QYFB2cX6TsVV38rJwh";
+const PUBLIC_IDENTITY = {
+  NEXT_PUBLIC_SITE_URL: CANONICAL_DEFAULT,
+  NEXT_PUBLIC_SNS_DOMAIN: SNS,
+  NEXT_PUBLIC_SOL_SITE_URL: SOL_SITE,
+  NEXT_PUBLIC_SOLANA_WALLET_ADDRESS: CORPUS_SOLANA,
+  NEXT_PUBLIC_ETH_WALLET_ADDRESS: CORPUS_ETH,
+  NEXT_PUBLIC_ENS_DOMAIN: CORPUS_ENS,
+  NEXT_PUBLIC_BTC_WALLET_ADDRESS: CORPUS_BTC,
+};
 const OLD_WEB = "https://transition-insight.com";
 const EXPECTED_REPO = "patelashit550-cpu/transition-insight";
 const FETCH_MS = 12_000;
@@ -149,7 +162,7 @@ function auditLocal() {
   }
 
   const skipNames = new Set(["package-lock.json", "audit-perimeter.mjs"]);
-  const assignment = /(?:SOLANA_SIGNING_KEY|PINATA_JWT|ETHERSCAN_API_KEY|JUPITER_API_KEY|COLOSSEUM_COPILOT_PAT)\s*=\s*(\S+)/g;
+  const assignment = /(?:SOLANA_SIGNING_KEY|PINATA_JWT|ETHERSCAN_API_KEY|JUPITER_API_KEY|COLOSSEUM_COPILOT_PAT|VYBE_API_KEY)\s*=\s*(\S+)/g;
   const privateKey = /BEGIN (OPENSSH |RSA |EC )?PRIVATE KEY/;
   for (const file of walkFiles(ROOT)) {
     const name = file.split(/[/\\]/).pop() || "";
@@ -203,10 +216,12 @@ function auditLocal() {
   }
 
   if (existsSync(join(ROOT, ".env.local"))) {
-    record("ok", "secrets", ".env.local present locally (gitignored) — keep PINATA_JWT / SOLANA_SIGNING_KEY / ETHERSCAN_API_KEY / JUPITER_API_KEY / COLOSSEUM_COPILOT_PAT only there");
+    record("ok", "secrets", ".env.local present locally (gitignored) — keep PINATA_JWT / SOLANA_SIGNING_KEY / ETHERSCAN_API_KEY / JUPITER_API_KEY / COLOSSEUM_COPILOT_PAT / VYBE_API_KEY only there");
   } else {
     record("warn", "secrets", ".env.local missing — fine until you pin IPFS or sign attestation.json");
   }
+
+  auditCommittedIdentity();
 }
 
 function auditGitHub() {
@@ -227,9 +242,13 @@ function auditGitHub() {
     );
   }
   if (site.cname === "ashitmilne.xyz" && site.https_enforced) {
-    record("ok", "github", "custom domain ashitmilne.xyz with HTTPS enforced");
+    record("ok", "github", "Pages mirror custom domain ashitmilne.xyz with HTTPS enforced");
   } else {
-    record("fail", "github", `Pages domain=${site.cname || "(none)"} https_enforced=${site.https_enforced}`);
+    record(
+      "warn",
+      "github",
+      `Pages domain=${site.cname || "(none)"} https_enforced=${site.https_enforced} — optional mirror only; canonical is ${CANONICAL_DEFAULT}`,
+    );
   }
 
   const policies = ghJson([
@@ -270,7 +289,7 @@ function auditExport() {
   }
 
   const security = readIfExists("out/.well-known/security.txt") || "";
-  const expectedCanonical = `Canonical: ${CANONICAL}/.well-known/security.txt`;
+  const expectedCanonical = `Canonical: ${CANONICAL_DEFAULT}/.well-known/security.txt`;
   if (security.includes(expectedCanonical)) {
     record("ok", "export", "security.txt Canonical matches production origin");
   } else {
@@ -283,10 +302,10 @@ function auditExport() {
   }
 
   const auth = readIfExists("out/auth.md") || "";
-  if (auth.includes(CANONICAL)) {
+  if (auth.includes(CANONICAL_DEFAULT)) {
     record("ok", "export", "auth.md uses canonical origin");
   } else {
-    record("fail", "export", `auth.md must cite ${CANONICAL}`);
+    record("fail", "export", `auth.md must cite ${CANONICAL_DEFAULT}`);
   }
   if (auth.includes(`${OLD_WEB}/.well-known/`)) {
     record("fail", "export", "auth.md still points discovery URLs at transition-insight.com");
@@ -295,7 +314,7 @@ function auditExport() {
   const provenanceRaw = readIfExists("out/.well-known/provenance.json");
   if (provenanceRaw) {
     const provenance = JSON.parse(provenanceRaw);
-    if (provenance.canonical === CANONICAL) {
+    if (provenance.canonical === CANONICAL_DEFAULT) {
       record("ok", "export", "provenance.json canonical origin");
     } else {
       record("fail", "export", `provenance.json canonical is ${provenance.canonical}`);
@@ -320,59 +339,60 @@ function auditExport() {
 }
 
 async function auditLive() {
-  const apex = await fetchMeta(`${CANONICAL}/`);
-  if (apex.status === 200 && header(apex, "strict-transport-security")) {
-    record("ok", "live", `${CANONICAL} HTTPS 200 with HSTS`);
-  } else if (apex.status === 200) {
-    record("warn", "live", `${CANONICAL} is up but missing Strict-Transport-Security`);
-  } else {
-    record("fail", "live", `${CANONICAL} returned ${apex.status || apex.error || "error"}`);
-  }
-
-  const cors = header(apex, "access-control-allow-origin");
-  if (cors === "*") {
-    record("warn", "live", "GitHub Pages sends Access-Control-Allow-Origin: * (read-only static; expected)");
-  }
-
-  const csp = header(apex, "content-security-policy");
-  const nosniff = header(apex, "x-content-type-options");
-  const frame = header(apex, "x-frame-options") || header(apex, "content-security-policy");
-  if (!csp) {
+  const sol = await fetchMeta(SOL_SITE);
+  const solTitle = (sol.body.match(/<title[^>]*>([^<]*)<\/title>/i) || [])[1] || "";
+  if (sol.status === 200 && /web3 profile/i.test(solTitle)) {
     record(
-      "warn",
-      "live",
-      "no Content-Security-Policy — GitHub Pages ignores public/_headers; put Cloudflare in front to enforce it",
+      "fail",
+      "sns",
+      `${SOL_SITE} is still the Bonfida profile, not the IPFS site. Pin with npm run ship -- --ipfs, set on-chain IPFS (CID only), and Configure Sol.site CNAME + TXT _dnslink=/ipfs/<CID>. Do not set URL to ${PAGES_MIRROR} (Pages 404; URL wins over IPFS).`,
     );
+  } else if (sol.status === 200) {
+    record("ok", "sns", `${SOL_SITE} is reachable (title: ${solTitle || "unknown"})`);
+  } else {
+    record("fail", "sns", `${SOL_SITE} returned ${sol.status || sol.error}`);
+  }
+
+  const cors = header(sol, "access-control-allow-origin");
+  if (cors === "*") {
+    record("warn", "live", `${SOL_SITE} sends Access-Control-Allow-Origin: * (read-only static; expected)`);
+  }
+
+  const csp = header(sol, "content-security-policy");
+  const nosniff = header(sol, "x-content-type-options");
+  const frame = header(sol, "x-frame-options") || header(sol, "content-security-policy");
+  if (!csp) {
+    record("warn", "live", `no Content-Security-Policy on ${SOL_SITE}`);
   }
   if (!nosniff) {
-    record("warn", "live", "no X-Content-Type-Options (same: Pages ignores _headers)");
+    record("warn", "live", `no X-Content-Type-Options on ${SOL_SITE}`);
   }
   if (!frame) {
     record("warn", "live", "no X-Frame-Options / frame-ancestors (clickjacking)");
   }
 
-  const http = await fetchMeta(CANONICAL.replace("https://", "http://"), "HEAD");
+  const http = await fetchMeta(SOL_SITE.replace("https://", "http://"), "HEAD");
   if (http.status >= 300 && http.status < 400 && (http.location || "").startsWith("https://")) {
-    record("ok", "live", "HTTP redirects to HTTPS");
+    record("ok", "live", "HTTP redirects to HTTPS on sol.site");
   } else {
-    record("warn", "live", `HTTP response ${http.status} location=${http.location || "(none)"}`);
+    record("warn", "live", `sol.site HTTP response ${http.status} location=${http.location || "(none)"}`);
   }
 
-  const security = await fetchMeta(`${CANONICAL}/.well-known/security.txt`);
-  if (security.body.includes(`Canonical: ${CANONICAL}/.well-known/security.txt`)) {
-    record("ok", "live", "live security.txt Canonical matches");
+  const security = await fetchMeta(`${SOL_SITE}/.well-known/security.txt`);
+  if (security.body.includes(`Canonical: ${CANONICAL_DEFAULT}/.well-known/security.txt`)) {
+    record("ok", "live", "live security.txt Canonical matches sol.site");
   } else if (security.status === 200) {
-    record("fail", "live", "live security.txt Canonical still points elsewhere (stale Pages deploy)");
+    record("fail", "live", "live security.txt Canonical still points elsewhere");
   } else {
-    record("fail", "live", `live security.txt returned ${security.status}`);
+    record("fail", "live", `live security.txt returned ${security.status} — IPFS/SNS not serving the site yet`);
   }
 
-  const provenance = await fetchMeta(`${CANONICAL}/.well-known/provenance.json`);
+  const provenance = await fetchMeta(`${SOL_SITE}/.well-known/provenance.json`);
   if (provenance.status === 200) {
     try {
       const data = JSON.parse(provenance.body);
-      if (data.canonical === CANONICAL) {
-        record("ok", "live", "live provenance canonical matches");
+      if (data.canonical === CANONICAL_DEFAULT) {
+        record("ok", "live", "live provenance canonical matches sol.site");
       } else {
         record("fail", "live", `live provenance canonical is ${data.canonical}`);
       }
@@ -386,19 +406,18 @@ async function auditLive() {
     record("fail", "live", `live provenance.json returned ${provenance.status}`);
   }
 
-  const sol = await fetchMeta(SOL_SITE);
-  const solTitle = (sol.body.match(/<title[^>]*>([^<]*)<\/title>/i) || [])[1] || "";
-  if (sol.status === 200 && /web3 profile/i.test(solTitle)) {
-    record(
-      "fail",
-      "sns",
-      `${SNS} → ${SOL_SITE} is a Bonfida profile page, not ashitmilne.xyz. In SNS records set URL/IPFS to ${CANONICAL}/`,
-    );
-  } else if (sol.status === 200) {
-    record("ok", "sns", `${SOL_SITE} is reachable (title: ${solTitle || "unknown"})`);
+  const pages = await fetchMeta(`${PAGES_MIRROR}/`);
+  if (pages.status === 200) {
+    record("ok", "mirror", `${PAGES_MIRROR} still serves (optional GitHub Pages mirror)`);
   } else {
-    record("warn", "sns", `${SOL_SITE} returned ${sol.status || sol.error}`);
+    record(
+      "warn",
+      "mirror",
+      `${PAGES_MIRROR} returned ${pages.status || pages.error} — Pages is not canonical; restore only if you want a Web2 mirror`,
+    );
   }
+
+  recordIdentityFindings(ingestIdentityProbe(["--sns-only"]));
 
   const old = await fetchMeta(OLD_WEB);
   if (old.status === 403 || header(old, "cf-mitigated")) {
@@ -409,6 +428,75 @@ async function auditLive() {
     );
   } else if (old.status === 200) {
     record("warn", "alias", `${OLD_WEB} still serves content — confirm you control it or drop the name`);
+  }
+}
+
+function readEnvAssignment(text, key) {
+  for (const line of text.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+    const eq = trimmed.indexOf("=");
+    if (eq === -1) continue;
+    if (trimmed.slice(0, eq).trim() !== key) continue;
+    return trimmed.slice(eq + 1).trim();
+  }
+  return null;
+}
+
+function auditCommittedIdentity() {
+  for (const name of [".env.production", ".env.development"]) {
+    const text = readIfExists(name);
+    if (!text) {
+      record("fail", "identity", `${name} is missing`);
+      continue;
+    }
+    let drifted = false;
+    for (const [key, expected] of Object.entries(PUBLIC_IDENTITY)) {
+      const actual = readEnvAssignment(text, key);
+      if (actual !== expected) {
+        drifted = true;
+        record("fail", "identity", `${name} ${key}=${actual ?? "(missing)"} (expected ${expected})`);
+      }
+    }
+    if (!drifted) {
+      record("ok", "identity", `${name} public keys match canonical identity`);
+    }
+  }
+}
+
+function ingestIdentityProbe(flagArgs) {
+  try {
+    const raw = execFileSync(
+      process.execPath,
+      ["--experimental-strip-types", "scripts/probe-identity.ts", "--json", "--no-balances", ...flagArgs],
+      {
+        cwd: ROOT,
+        encoding: "utf8",
+        timeout: 45_000,
+        stdio: ["ignore", "pipe", "pipe"],
+      },
+    );
+    return JSON.parse(raw);
+  } catch (error) {
+    const err = /** @type {Error & { stdout?: string; stderr?: string }} */ (error);
+    const stdout = err.stdout?.toString() || "";
+    try {
+      return JSON.parse(stdout);
+    } catch {
+      record("warn", "identity", `identity probe failed (${err.stderr?.trim() || err.message})`);
+      return null;
+    }
+  }
+}
+
+function recordIdentityFindings(report) {
+  if (!report?.findings) return;
+  for (const item of report.findings) {
+    if (item.code === "env-file" || item.code === "process-env" || item.code === "signing-key-absent") {
+      continue;
+    }
+    const level = item.level === "ok" || item.level === "warn" || item.level === "fail" ? item.level : "warn";
+    record(level, "identity", item.message);
   }
 }
 
