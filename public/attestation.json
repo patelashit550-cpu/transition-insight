@@ -1,10 +1,10 @@
 {
   "version": "1",
-  "generated": "2026-08-11T16:26:08.457Z",
+  "generated": "2026-08-28T23:24:02.029Z",
   "tier": "global",
-  "manifestDigest": "sha256:3e1379273955baf4216219c8854ec4b4ebd86d1f0b2672667917fa9f0f9cbbe9",
+  "manifestDigest": "sha256:94e11e4ce9e8fe20084911b05a152cc34358e4834caba48caf56ad08776bc550",
   "identity": {
-    "canonical": "https://transition-insight.sol.site",
+    "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
     "solSite": "https://transition-insight.sol.site",
     "ens": "ashitpatel.eth",
@@ -12,8 +12,8 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 73,
-    "attestedFiles": 12,
+    "totalOntologyFiles": 74,
+    "attestedFiles": 11,
     "signedFiles": 0
   },
   "attested": [
@@ -38,16 +38,6 @@
       "sha256": "sha256:e1db2955741a8aedc818804cc0e9e3a127551eb2c87415095fe8b6eeaba40c5d"
     },
     {
-      "path": "ontology/governance/illumination/semper idem.md",
-      "stage": "published",
-      "title": "Semper Idem",
-      "author": null,
-      "publishedAt": "2026-07-01T00:00:00.000Z",
-      "slug": "semper-idem",
-      "series": "peridot",
-      "sha256": "sha256:d23042a7bf9051db0f81a60ca38f8bccac64075fe64e61b89e3276f968e7a539"
-    },
-    {
       "path": "ontology/governance/illumination/social-network.md",
       "stage": "published",
       "title": "The Social Network",
@@ -65,7 +55,7 @@
       "publishedAt": "2026-04-30T00:00:00.000Z",
       "slug": "connexion",
       "series": null,
-      "sha256": "sha256:7343a4ade06391b24c11883853565a133ea5f6a6c5b9490cbe6fb23178bd9146"
+      "sha256": "sha256:5a6d07a3edea8365bd1a85cf742e52bc0b3b77ea796ddb1d189151dee12399ab"
     },
     {
       "path": "ontology/me/origins.md",
@@ -115,7 +105,7 @@
       "publishedAt": "2026-06-27T00:00:00.000Z",
       "slug": "ashit-patel",
       "series": "The Times",
-      "sha256": "sha256:6e424cd43a5c51698c16396e648d0cd5fe74919bbcb45974563d493245a5e7f6"
+      "sha256": "sha256:54be89359f5471427aff1a4dade0a5f61c3d02d6dd6d56ad8e9ff5762eb8b286"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",

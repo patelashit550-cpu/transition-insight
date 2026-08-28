@@ -10,6 +10,7 @@ import {
   PAGES_MIRROR_URL,
   PUBLIC_IDENTITY_ENV,
   SNS_DOMAIN,
+  SOL_SITE_URL,
   assertPubkeyIsCorpusWallet,
   evaluateSnsContainment,
   expectedSnsRecords,
@@ -32,11 +33,12 @@ test("committed env files match the canonical public identity", () => {
   }
 });
 
-test("canonical origin is sol.site, not the Pages mirror", () => {
-  assert.equal(CANONICAL_SITE_URL, "https://transition-insight.sol.site");
-  assert.equal(PUBLIC_IDENTITY_ENV.NEXT_PUBLIC_SITE_URL, CANONICAL_SITE_URL);
-  assert.equal(PUBLIC_IDENTITY_ENV.NEXT_PUBLIC_SOL_SITE_URL, CANONICAL_SITE_URL);
-  assert.notEqual(CANONICAL_SITE_URL, PAGES_MIRROR_URL);
+test("live origin is GitHub Pages until SNS IPFS is set", () => {
+  assert.equal(CANONICAL_SITE_URL, PAGES_MIRROR_URL);
+  assert.equal(PUBLIC_IDENTITY_ENV.NEXT_PUBLIC_SITE_URL, PAGES_MIRROR_URL);
+  assert.equal(PUBLIC_IDENTITY_ENV.NEXT_PUBLIC_SOL_SITE_URL, SOL_SITE_URL);
+  assert.equal(SOL_SITE_URL, "https://transition-insight.sol.site");
+  assert.notEqual(CANONICAL_SITE_URL, SOL_SITE_URL);
 });
 
 test("publicIdentityDriftFromEnvFile reports missing and mismatched keys", () => {
@@ -84,7 +86,7 @@ test("evaluateSnsContainment fails the live split: other owner, empty records", 
   );
 });
 
-test("evaluateSnsContainment rejects a URL record aimed at the Pages 404", () => {
+test("evaluateSnsContainment rejects a URL record aimed at GitHub Pages", () => {
   const findings = evaluateSnsContainment({
     key: CORPUS_SOLANA_ADDRESS,
     records: {

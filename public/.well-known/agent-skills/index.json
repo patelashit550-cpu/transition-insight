@@ -5,8 +5,8 @@
       "name": "transition-insight",
       "type": "skill-md",
       "description": "Navigate and read Transition Insight essays, chronicles, and governance nodes.",
-      "url": "https://transition-insight.sol.site/.well-known/agent-skills/transition-insight/SKILL.md",
-      "digest": "sha256:6bff31089aec508a018e378ef7777febb42cfb62cca58a7c5e1879546806ebb3"
+      "url": "https://ashitmilne.xyz/.well-known/agent-skills/transition-insight/SKILL.md",
+      "digest": "sha256:d2b173e80d4549f5e5bb8096ed99fa189070d54ce9a79e84db4bdffa1c5226ea"
     }
   ]
 }

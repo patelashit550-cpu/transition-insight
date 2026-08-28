@@ -2,17 +2,17 @@
 
 Transition Insight is a **public static reading site**. There is no user database, no production write API, and no server you SSH into.
 
-The public origin is **IPFS**, reached at `https://transition-insight.sol.site`. GitHub Pages (`ashitmilne.xyz`) is an optional Web2 mirror. The perimeter is: your laptop, GitHub (source), IPFS pins, and the Solana name `transition-insight.sol`.
+The public origin is **GitHub Pages** at `https://ashitmilne.xyz` until SNS IPFS and sol.site DNSLink are set. `https://transition-insight.sol.site` stays the SNS destination. The perimeter is: your laptop, GitHub (source + Pages), IPFS pins (when you pin), and the Solana name `transition-insight.sol`.
 
 ## Canonical production
 
 | Surface | Role | Access |
 |---|---|---|
-| `https://transition-insight.sol.site` | Canonical web (IPFS via Bonfida sol.site) | Public read — after on-chain IPFS + sol.site DNSLink |
+| `https://ashitmilne.xyz` | Live web (GitHub Pages) | Public read — restore by merging `deploy-pages.yml` to `main` |
+| `https://transition-insight.sol.site` | SNS / IPFS destination | Public read after on-chain IPFS + sol.site DNSLink |
 | `transition-insight.sol` | SNS name | IPFS + SOL records; not a vault |
 | IPFS CID (`NEXT_PUBLIC_IPFS_CID`) | Content-addressed snapshot | Public read on a gateway that serves HTML |
-| `https://ashitmilne.xyz` | Optional GitHub Pages mirror | Public read if Pages is connected; currently 404 |
-| GitHub `patelashit550-cpu/transition-insight` | Source + optional Pages deploy | You only |
+| GitHub `patelashit550-cpu/transition-insight` | Source + Pages deploy | You only |
 | WSL / Windows / `next dev` | Local studio (drafts, Cord compose) | Your machine only |
 
 `transition-insight.com` is **not** canonical. Do not list it as the live origin.
@@ -35,7 +35,7 @@ From the repo, in PowerShell or WSL:
 # Device + WSL
 npm run audit:windows-dev
 
-# Git, secrets, identity, live sol.site, optional Pages mirror
+# Git, secrets, identity, live Pages, SNS destination
 npm run audit:identity
 npm run audit:perimeter
 npm run audit:github
@@ -54,7 +54,7 @@ GitHub Actions (see `.github/README.md`):
 
 - Composite action `.github/actions/setup-node` — Node 22 + `npm ci` (shared steps)
 - `ci.yml` — unit tests on PRs and `main` (`npm test`). Lint is still local (`npm run lint`) until the existing React hook findings are cleared.
-- `deploy-pages.yml` — global-tier export + optional Pages mirror, `main` only. This does **not** publish the canonical origin.
+- `deploy-pages.yml` — global-tier export → GitHub Pages (`ashitmilne.xyz`), `main` only. Switches Pages source to GitHub Actions so the artifact is actually served.
 
 Ship path (local → IPFS → sol.site):
 
@@ -66,7 +66,7 @@ Then on sns.id, with the **SNS registrant** key:
 
 1. Set on-chain **IPFS** to the CID (CID only — no `/ipfs/` prefix).
 2. Set on-chain **SOL** to the corpus wallet.
-3. **Do not** set the URL record to `https://ashitmilne.xyz/` — Bonfida prefers URL over IPFS, and that host is a Pages 404.
+3. **Do not** set the URL record to `https://ashitmilne.xyz/` — Bonfida prefers URL over IPFS. Pages can stay the live Web2 origin without being the SNS URL.
 4. Configure Sol.site: **CNAME** → `cloudflare-ipfs.com`, **TXT** `_dnslink` → `dnslink=/ipfs/<CID>`.
 
 `gateway.pinata.cloud` refuses HTML. Use a dedicated Pinata gateway or Cloudflare DNSLink.
@@ -80,7 +80,7 @@ The repo can diagnose. These cannot be done from git:
 1. **Pin** the global export (`PINATA_JWT` in `.env.local`) and record the CID as `NEXT_PUBLIC_IPFS_CID`.
 2. **SNS (`transition-insight.sol`):** registrant is currently **not** the advertised corpus wallet. Unify those keys, then set IPFS + SOL as above. Until then `transition-insight.sol.site` is a public Bonfida profile.
 3. **Sweep** SOL/SPL from related wallets into the corpus treasury. SNS is a name, not a vault.
-4. Optional: reconnect GitHub Pages for `ashitmilne.xyz` if you want a Web2 mirror.
+4. Reconnect GitHub Pages: Settings → Pages → Source **GitHub Actions**. `deploy-pages.yml` also attempts this on the next `main` run.
 
 ## Limit access (do these in GitHub / DNS / SNS)
 
@@ -89,7 +89,7 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 1. **GitHub account:** passkey or hardware 2FA. No SMS-only. Session: sign out unused devices.
 2. **Repo → Settings → Collaborators:** only `patelashit550-cpu`. No outside write.
 3. **Repo → Settings → Branches:** protect `main` — block force-push. Keep yourself as the only bypass if you still use `npm run ship -- --push`.
-4. **Repo → Settings → Pages:** optional mirror. Canonical is sol.site / IPFS.
+4. **Repo → Settings → Pages:** Source = GitHub Actions. Custom domain `ashitmilne.xyz`. This is the live origin until sol.site serves IPFS.
 5. **Repo → Settings → Environments → `github-pages`:** deployment branches = `main` only if Pages stays enabled.
 6. **Repo → Settings → Actions:** disable fork PRs from writing Pages; no extra `GITHUB_TOKEN` write scopes.
 7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY`, `SOLANA_KEYPAIR_PATH`, `PINATA_JWT`, `JUPITER_API_KEY`, `ETHERSCAN_API_KEY`, `COLOSSEUM_COPILOT_PAT`, `VYBE_API_KEY`, OFT program keypairs, or LayerZero deployer keys in GitHub Actions. Sign, pin, assemble Solana transactions, and call Jupiter / Etherscan / Colosseum Copilot / Vybe on the laptop (`.env.local`, gitignored). `@solana/web3.js` v1, `@solana/spl-token`, Jupiter Tokens, and Etherscan `tokentx` are CLI-only — they must not ship a private key or API key into the static build. Never `NEXT_PUBLIC_*` for those keys.

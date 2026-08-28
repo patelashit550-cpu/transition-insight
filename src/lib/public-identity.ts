@@ -6,21 +6,22 @@
  * laptop and is the signing identity for the whole application (attestation,
  * SNS record updates, SPL transfers into the corpus treasury).
  *
- * Local (`next dev`) and global (IPFS / optional Pages mirror) share this
- * public set. Content tier only changes which essays ship — not which keys.
+ * Local (`next dev`) and global (Pages / later IPFS) share this public set.
+ * Content tier only changes which essays ship — not which keys.
  *
- * Public origin is IPFS, reached at `transition-insight.sol.site`. GitHub Pages
- * (`ashitmilne.xyz`) is an optional mirror and is not canonical.
+ * Live origin is GitHub Pages (`ashitmilne.xyz`) until SNS IPFS + sol.site
+ * DNSLink are set. `transition-insight.sol.site` stays the SNS destination.
  */
 
-/** Bonfida / IPFS gateway — the live public origin. */
-export const CANONICAL_SITE_URL = "https://transition-insight.sol.site";
+/** Live public origin (GitHub Pages) until sol.site serves the CID. */
+export const PAGES_MIRROR_URL = "https://ashitmilne.xyz";
 
 export const SNS_DOMAIN = "transition-insight.sol";
-export const SOL_SITE_URL = CANONICAL_SITE_URL;
 
-/** Optional GitHub Pages hostname. Down does not take the corpus offline. */
-export const PAGES_MIRROR_URL = "https://ashitmilne.xyz";
+/** Bonfida / IPFS gateway — not live until on-chain IPFS + DNSLink. */
+export const SOL_SITE_URL = "https://transition-insight.sol.site";
+
+export const CANONICAL_SITE_URL = PAGES_MIRROR_URL;
 
 /** Corpus Solana treasury / DID / Cord owner — must match SNS SOL record. */
 export const CORPUS_SOLANA_ADDRESS = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
@@ -199,9 +200,9 @@ export function evaluateSnsContainment(
       findings.push({
         level: "fail",
         code: "sns-url-pages-mirror",
-        message: `SNS URL record is ${url}. Bonfida prefers URL over IPFS, and ${PAGES_MIRROR_URL} is a 404 Pages mirror — this blocks ${CANONICAL_SITE_URL}. Clear the URL record and set IPFS.`,
+        message: `SNS URL record is ${url}. Bonfida prefers URL over IPFS — keep URL empty even while Pages serves ${PAGES_MIRROR_URL}. Set IPFS (CID only) instead.`,
       });
-    } else if (bare === CANONICAL_SITE_URL) {
+    } else if (bare === SOL_SITE_URL) {
       findings.push({
         level: "warn",
         code: "sns-url-circular",
@@ -215,7 +216,7 @@ export function evaluateSnsContainment(
     findings.push({
       level: "fail",
       code: "sns-ipfs-missing",
-      message: `SNS IPFS record is empty — ${CANONICAL_SITE_URL} stays a Bonfida profile. Pin the global export and set IPFS to the CID (CID only).`,
+      message: `SNS IPFS record is empty — ${SOL_SITE_URL} stays a Bonfida profile. Pin the global export and set IPFS to the CID (CID only). Live origin until then is ${CANONICAL_SITE_URL}.`,
     });
   } else if (expectedCid && ipfs !== expectedCid) {
     findings.push({
@@ -319,8 +320,8 @@ export function snsIpfsPublishPlan(ipfsCid: string | null): readonly string[] {
   const cidDisplay = cid || "<CID from npm run ship -- --ipfs>";
   return [
     `Pin the global export on the laptop: npm run ship -- --ipfs (PINATA_JWT in .env.local). Public gateway.pinata.cloud refuses HTML — use a dedicated Pinata gateway or Cloudflare DNSLink.`,
-    `On-chain records at sns.id (sign with the SNS registrant key, never GitHub Actions): IPFS=${cidDisplay} (CID only) SOL=${CORPUS_SOLANA_ADDRESS}. Do not set URL to ${PAGES_MIRROR_URL} — URL wins over IPFS and that host is a Pages 404.`,
-    `Configure Sol.site on sns.id: CNAME → ${SOL_SITE_IPFS_CNAME_TARGET} and TXT _dnslink → dnslink=/ipfs/${cidDisplay}. After DNS propagates, ${CANONICAL_SITE_URL} should serve the CID instead of the Bonfida profile.`,
+    `On-chain records at sns.id (sign with the SNS registrant key, never GitHub Actions): IPFS=${cidDisplay} (CID only) SOL=${CORPUS_SOLANA_ADDRESS}. Do not set URL to ${PAGES_MIRROR_URL} — URL wins over IPFS.`,
+    `Configure Sol.site on sns.id: CNAME → ${SOL_SITE_IPFS_CNAME_TARGET} and TXT _dnslink → dnslink=/ipfs/${cidDisplay}. After DNS propagates, ${SOL_SITE_URL} should serve the CID instead of the Bonfida profile.`,
     `Bake NEXT_PUBLIC_IPFS_CID=${cidDisplay} into .env.local, rebuild once so provenance.json cites the live CID, then pin again if the CID changed.`,
   ];
 }

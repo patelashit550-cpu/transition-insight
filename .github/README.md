@@ -1,6 +1,6 @@
 # GitHub Actions
 
-This repo is a **Node / Next.js** static site. The public origin is IPFS at `https://transition-insight.sol.site`. GitHub Pages (`ashitmilne.xyz`) is an optional mirror.
+This repo is a **Node / Next.js** static site. The live origin is GitHub Pages at `https://ashitmilne.xyz`. `https://transition-insight.sol.site` is the SNS / IPFS destination once on-chain records are set.
 
 There are **two layers**. Mixing them is what makes “composite workflows” confusing:
 
@@ -15,7 +15,7 @@ There are **two layers**. Mixing them is what makes “composite workflows” co
     setup-node/action.yml   ← composite action (Node 22 + npm ci)
   workflows/
     ci.yml                  ← PRs + main: unit tests (`npm test`)
-    deploy-pages.yml        ← main only: global export → GitHub Pages
+    deploy-pages.yml        ← main only: global export → GitHub Pages (ashitmilne.xyz)
 ```
 
 Call the composite from a workflow **after** checkout:

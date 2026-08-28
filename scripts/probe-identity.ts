@@ -259,7 +259,7 @@ if (jsonMode) {
     }
   }
   console.log("");
-  console.log("IPFS → transition-insight.sol.site:");
+  console.log("IPFS → transition-insight.sol.site (SNS destination; live origin is ashitmilne.xyz):");
   for (const step of ipfsPlan) {
     console.log(`  • ${step}`);
   }

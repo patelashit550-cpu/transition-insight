@@ -15,10 +15,10 @@ import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
-const CANONICAL_DEFAULT = "https://transition-insight.sol.site";
+const CANONICAL_DEFAULT = "https://ashitmilne.xyz";
 const CANONICAL = (process.env.NEXT_PUBLIC_SITE_URL?.trim() || CANONICAL_DEFAULT).replace(/\/$/, "");
 const SNS = "transition-insight.sol";
-const SOL_SITE = CANONICAL_DEFAULT;
+const SOL_SITE = "https://transition-insight.sol.site";
 const PAGES_MIRROR = "https://ashitmilne.xyz";
 const CORPUS_SOLANA = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
 const CORPUS_ETH = "0x07C51282DFf9193584e9936316f88D0709D55490";
@@ -236,18 +236,18 @@ function auditGitHub() {
   } else {
     const branch = site.source?.branch || "unknown";
     record(
-      "fail",
+      "warn",
       "github",
-      `Pages is still the legacy ${branch} publisher (build_type=${site.build_type}). GitHub → Settings → Pages → Build and deployment → Source: GitHub Actions. Until then ashitmilne.xyz ignores the Actions workflow.`,
+      `Pages is still the legacy ${branch} publisher (build_type=${site.build_type}). deploy-pages.yml switches this to GitHub Actions on the next main deploy. Until then ashitmilne.xyz 404s. Manual: GitHub → Settings → Pages → Source: GitHub Actions.`,
     );
   }
   if (site.cname === "ashitmilne.xyz" && site.https_enforced) {
-    record("ok", "github", "Pages mirror custom domain ashitmilne.xyz with HTTPS enforced");
+    record("ok", "github", "Pages custom domain ashitmilne.xyz with HTTPS enforced");
   } else {
     record(
       "warn",
       "github",
-      `Pages domain=${site.cname || "(none)"} https_enforced=${site.https_enforced} — optional mirror only; canonical is ${CANONICAL_DEFAULT}`,
+      `Pages domain=${site.cname || "(none)"} https_enforced=${site.https_enforced} — live origin is ${CANONICAL_DEFAULT}`,
     );
   }
 
@@ -343,14 +343,14 @@ async function auditLive() {
   const solTitle = (sol.body.match(/<title[^>]*>([^<]*)<\/title>/i) || [])[1] || "";
   if (sol.status === 200 && /web3 profile/i.test(solTitle)) {
     record(
-      "fail",
+      "warn",
       "sns",
-      `${SOL_SITE} is still the Bonfida profile, not the IPFS site. Pin with npm run ship -- --ipfs, set on-chain IPFS (CID only), and Configure Sol.site CNAME + TXT _dnslink=/ipfs/<CID>. Do not set URL to ${PAGES_MIRROR} (Pages 404; URL wins over IPFS).`,
+      `${SOL_SITE} is still the Bonfida profile, not the IPFS site. Live origin is ${PAGES_MIRROR}. Pin with npm run ship -- --ipfs, set on-chain IPFS (CID only), and Configure Sol.site CNAME + TXT _dnslink=/ipfs/<CID>. Do not set URL to ${PAGES_MIRROR} (URL wins over IPFS).`,
     );
   } else if (sol.status === 200) {
     record("ok", "sns", `${SOL_SITE} is reachable (title: ${solTitle || "unknown"})`);
   } else {
-    record("fail", "sns", `${SOL_SITE} returned ${sol.status || sol.error}`);
+    record("warn", "sns", `${SOL_SITE} returned ${sol.status || sol.error}`);
   }
 
   const cors = header(sol, "access-control-allow-origin");
@@ -378,21 +378,21 @@ async function auditLive() {
     record("warn", "live", `sol.site HTTP response ${http.status} location=${http.location || "(none)"}`);
   }
 
-  const security = await fetchMeta(`${SOL_SITE}/.well-known/security.txt`);
+  const security = await fetchMeta(`${PAGES_MIRROR}/.well-known/security.txt`);
   if (security.body.includes(`Canonical: ${CANONICAL_DEFAULT}/.well-known/security.txt`)) {
-    record("ok", "live", "live security.txt Canonical matches sol.site");
+    record("ok", "live", "live security.txt Canonical matches GitHub Pages");
   } else if (security.status === 200) {
     record("fail", "live", "live security.txt Canonical still points elsewhere");
   } else {
-    record("fail", "live", `live security.txt returned ${security.status} — IPFS/SNS not serving the site yet`);
+    record("fail", "live", `live security.txt returned ${security.status} — GitHub Pages is not serving the site yet`);
   }
 
-  const provenance = await fetchMeta(`${SOL_SITE}/.well-known/provenance.json`);
+  const provenance = await fetchMeta(`${PAGES_MIRROR}/.well-known/provenance.json`);
   if (provenance.status === 200) {
     try {
       const data = JSON.parse(provenance.body);
       if (data.canonical === CANONICAL_DEFAULT) {
-        record("ok", "live", "live provenance canonical matches sol.site");
+        record("ok", "live", "live provenance canonical matches GitHub Pages");
       } else {
         record("fail", "live", `live provenance canonical is ${data.canonical}`);
       }
@@ -408,12 +408,12 @@ async function auditLive() {
 
   const pages = await fetchMeta(`${PAGES_MIRROR}/`);
   if (pages.status === 200) {
-    record("ok", "mirror", `${PAGES_MIRROR} still serves (optional GitHub Pages mirror)`);
+    record("ok", "live", `${PAGES_MIRROR} is the live GitHub Pages origin`);
   } else {
     record(
-      "warn",
-      "mirror",
-      `${PAGES_MIRROR} returned ${pages.status || pages.error} — Pages is not canonical; restore only if you want a Web2 mirror`,
+      "fail",
+      "live",
+      `${PAGES_MIRROR} returned ${pages.status || pages.error} — GitHub Pages is down. Merge this workflow to main and confirm Settings → Pages → Source: GitHub Actions.`,
     );
   }
 

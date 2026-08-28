@@ -1,4 +1,4 @@
 Contact: mailto:patelashit550@gmail.com
 Expires: 2027-08-13T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://transition-insight.sol.site/.well-known/security.txt
+Canonical: https://ashitmilne.xyz/.well-known/security.txt

@@ -40,10 +40,10 @@ try {
   console.log(`Record: ${recordPath.replace(/\\/g, "/")}`);
   const siteHost =
     process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/^https?:\/\//, "").replace(/\/$/, "") ||
-    "transition-insight.sol.site";
+    "ashitmilne.xyz";
 
   console.log("");
-  console.log("Public origin is IPFS at transition-insight.sol.site (not GitHub Pages).");
+  console.log("Live origin is GitHub Pages (ashitmilne.xyz). Pin this CID for sol.site later.");
   console.log("gateway.pinata.cloud refuses HTML — use a dedicated Pinata gateway or Cloudflare DNSLink.");
   console.log("");
   console.log("Bake into .env.local, then rebuild once:");
