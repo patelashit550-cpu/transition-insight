@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://transition-insight.sol.site"
+      "url": "https://ashitmilne.xyz"
     }
   ],
   "paths": {
@@ -169,17 +169,6 @@
       "get": {
         "operationId": "get_governance_peridot_arete",
         "summary": "Read public page at /governance/peridot/arete",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/peridot/semper-idem": {
-      "get": {
-        "operationId": "get_governance_peridot_semper_idem",
-        "summary": "Read public page at /governance/peridot/semper-idem",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
