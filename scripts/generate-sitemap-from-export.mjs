@@ -21,6 +21,8 @@ const EXCLUDE_DIRS = new Set([
   "404",
   "_next",
   ".well-known",
+  // Chord feed/compose is local-dev only — never advertise on the public node.
+  "cord",
 ]);
 
 function discoverPublicPaths(dir, segments = []) {

@@ -88,28 +88,6 @@
         }
       }
     },
-    "/cord": {
-      "get": {
-        "operationId": "get_cord",
-        "summary": "Read public page at /cord",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/cord/compose": {
-      "get": {
-        "operationId": "get_cord_compose",
-        "summary": "Read public page at /cord/compose",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/governance/canonical": {
       "get": {
         "operationId": "get_governance_canonical",
@@ -169,17 +147,6 @@
       "get": {
         "operationId": "get_governance_peridot_arete",
         "summary": "Read public page at /governance/peridot/arete",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/peridot/semper-idem": {
-      "get": {
-        "operationId": "get_governance_peridot_semper_idem",
-        "summary": "Read public page at /governance/peridot/semper-idem",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"

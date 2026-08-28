@@ -45,15 +45,29 @@ Ship path (local → GitHub → Pages):
 npm run ship -- --push -m "Publish …"
 ```
 
-That pushes `main`. GitHub Actions builds **global** tier (published/canonical only) and deploys Pages. Cord `/api` is stashed during that build and must not appear in `out/`.
+That pushes `main`. GitHub Actions builds **global** tier (published/canonical only) and deploys Pages. During that build, Chord (`src/app/api`, `src/app/(reading)/cord`, `public/cord`) is stashed and must not appear in `out/` or the public sitemap.
 
-## Do these now (live gaps)
+## Nodality checklist (do in order)
 
-The repo can diagnose. Remaining item that cannot be done from git:
+These close the live gaps. Items 1–3 are **Settings clicks** (not git). Run `npm run audit:perimeter` after each to watch FAILs turn into OKs.
 
-1. **SNS (`transition-insight.sol`):** set the URL (or IPFS) record to `https://ashitmilne.xyz/`. Until then `transition-insight.sol.site` is a public Bonfida profile — a different origin. Skip until you have SOL for the record update.
+1. **GitHub → Settings → Pages → Build and deployment → Source: GitHub Actions.**  
+   Live audit currently reports `build_type=legacy` (`gh-pages` branch). Until you switch, `ashitmilne.xyz` ignores the Actions workflow, and **Deploy to GitHub Pages fails on purpose** at the perimeter check.
+2. **GitHub → Settings → Environments → `github-pages` → deployment branches = `main` only.**  
+   Remove `gh-pages` from the allow list.
+3. **SNS (`transition-insight.sol`):** set the URL (or IPFS) record to `https://ashitmilne.xyz/`.  
+   Until then `transition-insight.sol.site` is a Bonfida profile — a different origin. Needs SOL for the record update.
+4. **Sign the corpus on the laptop:** put `SOLANA_SIGNING_KEY` in `.env.local`, then `npm run content:attest` → `npm run content:sign` → ship. Live attestation is currently unsigned.
+5. **Optional:** protect `main` (no force-push; require the Pages workflow). Optional Cloudflare for CSP / frame-ancestors (GitHub Pages ignores `public/_headers`).
 
-Done: Pages builds from GitHub Actions; the `github-pages` environment deploys from `main` only.
+Re-check:
+
+```powershell
+npm run audit:perimeter
+npm run audit:github
+npm run verify:sitemap:live
+npm run content:verify
+```
 
 ## Limit access (do these in GitHub / DNS / SNS)
 
@@ -62,8 +76,8 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 1. **GitHub account:** passkey or hardware 2FA. No SMS-only. Session: sign out unused devices.
 2. **Repo → Settings → Collaborators:** only `patelashit550-cpu`. No outside write.
 3. **Repo → Settings → Branches:** protect `main` — block force-push, require the Pages workflow to pass. Keep yourself as the only bypass if you still use `npm run ship -- --push`.
-4. **Repo → Settings → Pages:** already **GitHub Actions**. Do not switch back to the legacy `gh-pages` branch publisher.
-5. **Repo → Settings → Environments → `github-pages`:** done — deployment branches = `main` only. Optional later: required reviewer (you) so a stolen PAT cannot ship instantly.
+4. **Repo → Settings → Pages:** Source must be **GitHub Actions** (not the legacy `gh-pages` branch publisher). See checklist step 1.
+5. **Repo → Settings → Environments → `github-pages`:** deployment branches = `main` only. Optional later: required reviewer (you) so a stolen PAT cannot ship instantly.
 6. **Repo → Settings → Actions:** disable fork PRs from writing Pages; no extra `GITHUB_TOKEN` write scopes.
 7. **Secrets:** do **not** put `SOLANA_SIGNING_KEY`, `SOLANA_KEYPAIR_PATH`, `PINATA_JWT`, `JUPITER_API_KEY`, `ETHERSCAN_API_KEY`, `COLOSSEUM_COPILOT_PAT`, `VYBE_API_KEY`, OFT program keypairs, or LayerZero deployer keys in GitHub Actions. Sign, pin, assemble Solana transactions, and call Jupiter / Etherscan / Colosseum Copilot / Vybe on the laptop (`.env.local`, gitignored). `@solana/web3.js` v1, `@solana/spl-token`, Jupiter Tokens, and Etherscan `tokentx` are CLI-only — they must not ship a private key or API key into the static Pages build. Never `NEXT_PUBLIC_*` for those keys.
 8. **Porkbun / DNS:** `ashitmilne.xyz` A/AAAA (or CNAME) stay on GitHub Pages; HTTPS is already enforced. Lock the registrar account with 2FA.
@@ -76,7 +90,7 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 |---|---|---|
 | local | `npm run dev` | Drafts + Cord compose (laptop only) |
 | preprod | `npm run build:preprod` | `review` + published — never point DNS/SNS at this |
-| global | `npm run build:global` / CI | `published` + `canonical` only |
+| global | `npm run build:global` / CI | `published` + `canonical` only — no `/cord`, no `/api` |
 
 ## Solana RPC
 

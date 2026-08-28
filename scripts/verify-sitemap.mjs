@@ -43,6 +43,14 @@ for (const loc of locs) {
   if (!loc.startsWith(`${ORIGIN}/`) && loc !== `${ORIGIN}/`) {
     fail(`non-canonical loc (expected ${ORIGIN}): ${loc}`);
   }
+  try {
+    const pathname = new URL(loc).pathname.replace(/\/+$/, "") || "/";
+    if (pathname === "/cord" || pathname.startsWith("/cord/")) {
+      fail(`sitemap must not advertise Chord prototype path: ${loc}`);
+    }
+  } catch {
+    fail(`invalid sitemap loc URL: ${loc}`);
+  }
 }
 
 const sitemapRef = `${ORIGIN}/sitemap.xml`;

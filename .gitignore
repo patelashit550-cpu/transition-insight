@@ -5,6 +5,11 @@ node_modules/
 .next/
 out/
 
+# export-time stashes (with-stashed-app-api.mjs)
+src/app/_api.dev/
+src/app/(reading)/_cord.dev/
+public/_cord.dev/
+
 # env (secrets — never commit)
 .env
 .env.local

@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 /**
- * Static export cannot include App Router route handlers.
- * Chord write API is local-dev only — stash src/app/api during production builds,
- * restore afterward (even on failure).
+ * Static export must not ship local-only Chord surfaces:
+ *   - src/app/api          (write API)
+ *   - src/app/(reading)/cord (feed + compose pages)
+ *   - public/cord          (feed.json mirror)
+ *
+ * Stash those paths for the duration of the command, restore afterward
+ * (even on failure).
  *
  * Usage: node scripts/with-stashed-app-api.mjs <command> [args...]
  */
@@ -12,8 +16,25 @@ import { spawnSync } from "node:child_process";
 import { setTimeout as delay } from "node:timers/promises";
 
 const root = process.cwd();
-const apiDir = join(root, "src", "app", "api");
-const stashDir = join(root, "src", "app", "_api.dev");
+
+/** @type {{ readonly live: string; readonly stash: string; readonly label: string }[]} */
+const STASH_TARGETS = [
+  {
+    live: join(root, "src", "app", "api"),
+    stash: join(root, "src", "app", "_api.dev"),
+    label: "src/app/api",
+  },
+  {
+    live: join(root, "src", "app", "(reading)", "cord"),
+    stash: join(root, "src", "app", "(reading)", "_cord.dev"),
+    label: "src/app/(reading)/cord",
+  },
+  {
+    live: join(root, "public", "cord"),
+    stash: join(root, "public", "_cord.dev"),
+    label: "public/cord",
+  },
+];
 
 const cmd = process.argv[2];
 const args = process.argv.slice(3);
@@ -48,47 +69,48 @@ async function moveDir(from, to, label) {
 }
 
 async function main() {
-  const hadApi = existsSync(apiDir);
-  const stashOccupied = existsSync(stashDir);
-
-  if (hadApi && stashOccupied) {
-    console.error(
-      "with-stashed-app-api: both src/app/api and src/app/_api.dev exist — resolve manually, then retry.",
-    );
-    process.exit(1);
+  for (const target of STASH_TARGETS) {
+    if (existsSync(target.live) && existsSync(target.stash)) {
+      console.error(
+        `with-stashed-app-api: both ${target.label} and stash exist — resolve manually, then retry.`,
+      );
+      process.exit(1);
+    }
   }
 
-  let stashed = false;
-  if (hadApi) {
-    await moveDir(apiDir, stashDir, "stash");
-    stashed = true;
-    console.log("with-stashed-app-api: stashed src/app/api → src/app/_api.dev (static export)");
-  } else if (stashOccupied) {
-    console.log("with-stashed-app-api: using existing stash at src/app/_api.dev");
-    stashed = true;
-  }
-
-  let status = 1;
+  /** @type {{ live: string; stash: string; label: string }[]} */
+  const stashed = [];
   try {
+    for (const target of STASH_TARGETS) {
+      if (existsSync(target.live)) {
+        await moveDir(target.live, target.stash, `stash ${target.label}`);
+        stashed.push(target);
+        console.log(`with-stashed-app-api: stashed ${target.label} (static export)`);
+      } else if (existsSync(target.stash)) {
+        stashed.push(target);
+        console.log(`with-stashed-app-api: using existing stash for ${target.label}`);
+      }
+    }
+
     const result = spawnSync(cmd, args, {
       stdio: "inherit",
       env: process.env,
       shell: true,
       cwd: root,
     });
-    status = result.status ?? 1;
+    process.exitCode = result.status ?? 1;
   } finally {
-    if (stashed && existsSync(stashDir) && !existsSync(apiDir)) {
-      await moveDir(stashDir, apiDir, "restore");
-      console.log("with-stashed-app-api: restored src/app/api");
-    } else if (stashed && existsSync(stashDir) && existsSync(apiDir)) {
-      console.warn(
-        "with-stashed-app-api: both dirs present after build — remove src/app/_api.dev if duplicate",
-      );
+    for (const target of [...stashed].reverse()) {
+      if (existsSync(target.stash) && !existsSync(target.live)) {
+        await moveDir(target.stash, target.live, `restore ${target.label}`);
+        console.log(`with-stashed-app-api: restored ${target.label}`);
+      } else if (existsSync(target.stash) && existsSync(target.live)) {
+        console.warn(
+          `with-stashed-app-api: both live and stash present for ${target.label} — remove the stash dir if duplicate`,
+        );
+      }
     }
   }
-
-  process.exit(status);
 }
 
 main().catch((error) => {

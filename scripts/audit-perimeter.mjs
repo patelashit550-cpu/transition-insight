@@ -317,6 +317,12 @@ function auditExport() {
   } else {
     record("ok", "export", "no /api in static export");
   }
+
+  if (existsSync(join(out, "cord"))) {
+    record("fail", "export", "out/cord present — Chord feed/compose must not ship in the static export");
+  } else {
+    record("ok", "export", "no /cord in static export");
+  }
 }
 
 async function auditLive() {
