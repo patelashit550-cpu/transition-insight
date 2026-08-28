@@ -10,6 +10,7 @@ import {
   probeSolanaRpc,
   probeSolanaRpcForSite,
 } from "./solana-rpc.ts";
+import { CORPUS_SOLANA_ADDRESS } from "./public-identity.ts";
 
 test("parseSolanaRpcUrl accepts https and localhost http", () => {
   assert.equal(parseSolanaRpcUrl("https://solana-rpc.publicnode.com").ok, true);
@@ -41,14 +42,14 @@ test("isSharedPublicSolanaRpc matches PublicNode hosts only", () => {
 });
 
 test("probeOwnerAddress strips the wallet on shared public gateways", () => {
-  const owner = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
+  const owner = CORPUS_SOLANA_ADDRESS;
   assert.equal(probeOwnerAddress("https://solana-rpc.publicnode.com", owner), undefined);
   assert.equal(probeOwnerAddress("https://mainnet.helius-rpc.com/?api-key=demo", owner), owner);
   assert.equal(probeOwnerAddress("https://mainnet.helius-rpc.com/?api-key=demo", "  "), undefined);
 });
 
 test("probeSolanaRpcForSite does not fetch balance from PublicNode", async () => {
-  const owner = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
+  const owner = CORPUS_SOLANA_ADDRESS;
   const probe = await probeSolanaRpcForSite(DEFAULT_SOLANA_RPC_URL, owner);
   assert.equal(typeof probe.epoch, "number");
   assert.equal(typeof probe.absoluteSlot, "number");

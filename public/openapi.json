@@ -176,17 +176,6 @@
         }
       }
     },
-    "/governance/peridot/semper-idem": {
-      "get": {
-        "operationId": "get_governance_peridot_semper_idem",
-        "summary": "Read public page at /governance/peridot/semper-idem",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/governance/peridot/social-network": {
       "get": {
         "operationId": "get_governance_peridot_social_network",

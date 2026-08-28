@@ -16,8 +16,9 @@ import {
   mintDecimals,
   parseSolanaPublicKey,
 } from "./solana-tx.ts";
+import { CORPUS_SOLANA_ADDRESS } from "./public-identity.ts";
 
-const OWNER = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
+const OWNER = CORPUS_SOLANA_ADDRESS;
 
 test("parseSolanaPublicKey accepts a known owner and rejects junk", () => {
   const key = parseSolanaPublicKey(` ${OWNER} `);

@@ -11,10 +11,11 @@ import {
   mcpToolJson,
   withMcpClient,
 } from "./mcp-http.ts";
+import { SNS_DOMAIN } from "./public-identity.ts";
 
 const MAX_CHECK_DOMAINS = 25;
 
-export const SNS_SITE_DOMAIN = "transition-insight.sol";
+export const SNS_SITE_DOMAIN = SNS_DOMAIN;
 
 export type SnsPaymentToken = "SOL" | "USDC" | "USDT" | "SNS";
 

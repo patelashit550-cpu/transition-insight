@@ -5,7 +5,8 @@ description: Read and navigate Transition Insight — human-centric governance e
 
 # Transition Insight
 
-Static reading site at `https://ashitmilne.xyz`. HTML is the default.
+Static reading site at `https://ashitmilne.xyz` (GitHub Pages). HTML is the default.
+SNS / IPFS destination: `https://transition-insight.sol.site` once on-chain IPFS is set.
 
 ## Markdown for agents
 
@@ -53,8 +54,8 @@ SOLANA_SIGNING_KEY=<base58-secret> npm run content:sign
 npm run content:verify
 ```
 
-Canonical web: `https://ashitmilne.xyz`  
-SNS: `transition-insight.sol` (point URL/IPFS at the canonical web host)
+Canonical web: `https://ashitmilne.xyz` (GitHub Pages; IPFS / sol.site pending)  
+SNS: `transition-insight.sol` (on-chain IPFS CID + SOL record; sol.site CNAME + `_dnslink`)
 
 ## Conventions
 

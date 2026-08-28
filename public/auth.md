@@ -3,8 +3,9 @@
 ## Audience
 
 AI agents, crawlers, indexers, and human collaborators discovering content on
-[ashitmilne.xyz](https://ashitmilne.xyz) (canonical) and the Solana name
-`transition-insight.sol`.
+[ashitmilne.xyz](https://ashitmilne.xyz) (live GitHub Pages origin) and the
+Solana name `transition-insight.sol`. `transition-insight.sol.site` is the
+SNS / IPFS destination once on-chain IPFS and sol.site DNSLink are set.
 
 ## Registration
 
@@ -33,7 +34,7 @@ Sovereign identity and corpus attestation for milling / noding agents:
 - **Provenance:** https://ashitmilne.xyz/.well-known/provenance.json
 - **Attestation manifest:** https://ashitmilne.xyz/attestation.json
 - **Solana DID:** `did:pkh:solana:` + wallet in provenance document
-- **SNS:** `transition-insight.sol` — URL/IPFS record must point at `https://ashitmilne.xyz/`
+- **SNS:** `transition-insight.sol` — IPFS record must be the live CID; SOL record must be the corpus wallet. Do not set URL to the Pages origin (URL wins over IPFS).
 
 Verify `attestation.json` signature with `npm run content:verify` when a
 signed manifest is published. Unsigned manifests list published ontology

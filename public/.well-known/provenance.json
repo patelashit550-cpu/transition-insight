@@ -1,13 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-08-11T16:26:08.860Z",
+  "generated": "2026-08-28T23:24:02.096Z",
   "canonical": "https://ashitmilne.xyz",
   "aliases": [
-    {
-      "type": "ipfs",
-      "cid": "bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm",
-      "url": "https://amber-total-muskox-866.mypinata.cloud/ipfs/bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm/"
-    },
     {
       "type": "sns",
       "name": "transition-insight.sol"
@@ -22,9 +17,9 @@
     }
   ],
   "ipfs": {
-    "cid": "bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm",
-    "gateway": "https://amber-total-muskox-866.mypinata.cloud",
-    "directory": "https://amber-total-muskox-866.mypinata.cloud/ipfs/bafybeifp2cmssf764oyxp2dfurv34dkspvuuu2bansszz2ubjpzr6prxkm/",
+    "cid": null,
+    "gateway": "https://gateway.pinata.cloud",
+    "directory": null,
     "ipns": null,
     "ipnsUrl": null
   },
@@ -45,13 +40,13 @@
     "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
     "tier": "global",
     "manifest": "https://ashitmilne.xyz/attestation.json",
-    "manifestDigest": "sha256:3e1379273955baf4216219c8854ec4b4ebd86d1f0b2672667917fa9f0f9cbbe9",
+    "manifestDigest": "sha256:94e11e4ce9e8fe20084911b05a152cc34358e4834caba48caf56ad08776bc550",
     "signature": null,
-    "entryCount": 12
+    "entryCount": 11
   },
   "solSite": {
     "domain": "https://transition-insight.sol.site",
-    "status": "point-at-canonical-web",
-    "note": "In SNS → Sol.site, CNAME or URL to the canonical web host (NEXT_PUBLIC_SITE_URL / Porkbun). Optional later: also set SNS IPFS/URL records if you want Brave / sol-domain.org resolution."
+    "status": "pages-live-ipfs-pending",
+    "note": "Live origin is GitHub Pages (ashitmilne.xyz) until SNS IPFS is set. For sol.site: set on-chain IPFS (CID only) plus sol.site CNAME + TXT _dnslink=/ipfs/<CID>. Do not set the URL record to ashitmilne.xyz (Bonfida prefers URL over IPFS)."
   }
 }

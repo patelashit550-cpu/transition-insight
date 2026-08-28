@@ -43,25 +43,28 @@ try {
     "ashitmilne.xyz";
 
   console.log("");
-  console.log("Bake into .env.local, then rebuild:");
+  console.log("Live origin is GitHub Pages (ashitmilne.xyz). Pin this CID for sol.site later.");
+  console.log("gateway.pinata.cloud refuses HTML — use a dedicated Pinata gateway or Cloudflare DNSLink.");
+  console.log("");
+  console.log("Bake into .env.local, then rebuild once:");
   console.log(`  NEXT_PUBLIC_IPFS_CID=${upload.cid}`);
   console.log(`  NEXT_PUBLIC_IPFS_GATEWAY=${upload.gateway}`);
   if (ipns) {
     console.log(`  NEXT_PUBLIC_IPNS_NAME=${ipns.name}`);
   }
   console.log("");
-  console.log("Domain (no Cloudflare origin — IPFS only):");
-  console.log("  A) Pinata gateway custom domain (recommended):");
-  console.log(`     Pinata → Gateways → Add Custom Domain → ${siteHost}`);
-  console.log(`     Registrar: CNAME ${siteHost} → your *.mypinata.cloud host`);
-  console.log("  B) DNSLink to IPNS (domain stays decoupled from any host IP):");
-  console.log(`     TXT  _dnslink.${siteHost}  "dnslink=/ipns/${ipns?.name ?? "<IPNS-KEY>"}"`);
-  console.log(`     Resolve: https://dweb.link/ipns/${ipns?.name ?? "<IPNS-KEY>"}/`);
-  console.log("  C) DNSLink to CID (manual update each deploy):");
-  console.log(`     TXT  _dnslink.${siteHost}  "dnslink=/ipfs/${upload.cid}"`);
+  console.log("sns.id (registrant key, laptop only):");
+  console.log(`  On-chain IPFS record = ${upload.cid}  (CID only; do not set URL to ashitmilne.xyz)`);
+  console.log("  On-chain SOL record  = NEXT_PUBLIC_SOLANA_WALLET_ADDRESS");
+  console.log("  Configure Sol.site: CNAME → cloudflare-ipfs.com");
+  console.log(`                     TXT _dnslink → dnslink=/ipfs/${upload.cid}`);
+  console.log("");
+  console.log("Optional Pinata dedicated gateway custom domain:");
+  console.log(`  Add ${siteHost} then CNAME that host to your *.mypinata.cloud gateway.`);
   console.log("");
   console.log("Verify:");
   console.log(`  ${upload.directoryUrl}`);
+  console.log("  https://transition-insight.sol.site/");
   if (ipns) {
     console.log(`  ${ipns.ipnsUrl}`);
   }

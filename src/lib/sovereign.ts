@@ -1,5 +1,15 @@
 import "server-only"
 
+import {
+  CANONICAL_SITE_URL,
+  CORPUS_BTC_ADDRESS,
+  CORPUS_ENS_DOMAIN,
+  CORPUS_ETH_ADDRESS,
+  CORPUS_SOLANA_ADDRESS,
+  SNS_DOMAIN,
+  SOL_SITE_URL,
+} from "./public-identity"
+
 export interface SovereignIdentity {
   readonly did: string | null
   readonly addresses: {
@@ -33,15 +43,15 @@ function deriveSolSiteUrl(sns: string | null): string | null {
 }
 
 export function getSovereignIdentity(): SovereignIdentity {
-  const solana = process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS || null
-  const sns = process.env.NEXT_PUBLIC_SNS_DOMAIN || null
+  const solana = process.env.NEXT_PUBLIC_SOLANA_WALLET_ADDRESS?.trim() || CORPUS_SOLANA_ADDRESS
+  const sns = process.env.NEXT_PUBLIC_SNS_DOMAIN?.trim() || SNS_DOMAIN
 
   return {
     did: solana ? `did:pkh:solana:${solana}` : null,
     addresses: {
       solana,
-      eth: process.env.NEXT_PUBLIC_ETH_WALLET_ADDRESS || null,
-      btc: process.env.NEXT_PUBLIC_BTC_WALLET_ADDRESS || null,
+      eth: process.env.NEXT_PUBLIC_ETH_WALLET_ADDRESS?.trim() || CORPUS_ETH_ADDRESS,
+      btc: process.env.NEXT_PUBLIC_BTC_WALLET_ADDRESS?.trim() || CORPUS_BTC_ADDRESS,
     },
     staking: {
       validator: process.env.NEXT_PUBLIC_VALIDATOR_NAME || null,
@@ -55,10 +65,10 @@ export function getSovereignIdentity(): SovereignIdentity {
         : null,
     },
     domains: {
-      web: process.env.NEXT_PUBLIC_SITE_URL || 'https://ashitmilne.xyz',
+      web: process.env.NEXT_PUBLIC_SITE_URL?.trim() || CANONICAL_SITE_URL,
       sns,
-      solSite: deriveSolSiteUrl(sns),
-      ens: process.env.NEXT_PUBLIC_ENS_DOMAIN || null,
+      solSite: deriveSolSiteUrl(sns) || SOL_SITE_URL,
+      ens: process.env.NEXT_PUBLIC_ENS_DOMAIN?.trim() || CORPUS_ENS_DOMAIN,
     },
   }
 }

@@ -27,7 +27,7 @@ reviewFor: Transition
 > 3. Edit definitions here until they read right.
 > 4. Tell the agent to **merge into Canonical** — entries fold alphabetically into published `Canonical.md`, this file is removed or emptied, and a prod ship can follow.
 >
-> Prod (`global` / ashitmilne.xyz) never ships this page while `stage: review`. Live glossary stays `Canonical.md` until you approve.
+> Prod (`global` / transition-insight.sol.site) never ships this page while `stage: review`. Live glossary stays `Canonical.md` until you approve.
 
 ## Breathwork
 

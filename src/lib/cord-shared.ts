@@ -1,6 +1,8 @@
+import { CORPUS_SOLANA_ADDRESS } from "./public-identity";
+
 export const CORD_MAX_BODY = 500;
 
-export const CORD_OWNER_FALLBACK = "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT";
+export const CORD_OWNER_FALLBACK = CORPUS_SOLANA_ADDRESS;
 
 /**
  * Return the configured Cord owner address or a safe fallback.

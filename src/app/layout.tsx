@@ -7,6 +7,7 @@ import { NavVisibilityProvider } from "@/components/layout/NavVisibilityContext"
 import { AdTrackingCleanup } from "@/components/layout/AdTrackingCleanup";
 import { getNavVisibilityPayload } from "@/lib/nav-visibility";
 import { getSovereignIdentity } from "@/lib/sovereign"; // Corrected from @/config/site
+import { CANONICAL_SITE_URL } from "@/lib/public-identity";
 import { SiteIdentity } from "@/config/site";
 import { withBasePath } from "@/lib/base-path";
 
@@ -15,7 +16,7 @@ function metadataBaseUrl(): URL {
   try {
     return new URL(raw.endsWith("/") ? raw : `${raw}/`);
   } catch {
-    return new URL("https://ashitmilne.xyz/");
+    return new URL(`${CANONICAL_SITE_URL}/`);
   }
 }
 

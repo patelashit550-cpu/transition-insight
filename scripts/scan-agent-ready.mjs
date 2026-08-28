@@ -1,4 +1,4 @@
-const url = process.argv[2] || "https://ashitmilne.xyz";
+const url = process.argv[2] || "https://transition-insight.sol.site";
 const res = await fetch("https://isitagentready.com/api/scan", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
