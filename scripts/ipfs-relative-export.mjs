@@ -30,28 +30,53 @@ function relRoot(relativePath) {
   return dirDepth === 0 ? "./" : `${"../".repeat(dirDepth)}`;
 }
 
+/**
+ * Keep React Flight payloads byte-for-byte intact. Their inline script records
+ * contain Turbopack chunk identifiers, not browser URLs; rewriting those
+ * identifiers prevents the client runtime from matching registered chunks and
+ * leaves hydration suspended.
+ *
+ * @param {string} html
+ * @param {(text: string) => string} rewrite
+ */
+function rewriteHtmlOutsideScriptBodies(html, rewrite) {
+  return html.replace(
+    /<script\b[^>]*>[\s\S]*?<\/script\s*>/gi,
+    (script) => {
+      const openingTagEnd = script.indexOf(">") + 1;
+      return `${rewrite(script.slice(0, openingTagEnd))}${script.slice(openingTagEnd)}`;
+    },
+  );
+}
+
 let patched = 0;
 
 for (const file of files) {
   const prefix = relRoot(file.relativePath);
   let text = readFileSync(file.absolutePath, "utf8");
-  let changed = false;
+  const rewrite = (source) => {
+    let rewritten = source;
 
-  for (const root of rootPrefixes) {
-    const tail = root.slice(1); // drop leading /
-    const to = `"${prefix}${tail}`;
-    const toSingle = `'${prefix}${tail}`;
+    for (const root of rootPrefixes) {
+      const tail = root.slice(1); // drop leading /
+      const to = `"${prefix}${tail}`;
+      const toSingle = `'${prefix}${tail}`;
 
-    for (const from of [`"${root}`, `'${root}`]) {
-      if (text.includes(from)) {
-        text = text.split(from).join(from.startsWith('"') ? to : toSingle);
-        changed = true;
+      for (const from of [`"${root}`, `'${root}`]) {
+        if (rewritten.includes(from)) {
+          rewritten = rewritten.split(from).join(from.startsWith('"') ? to : toSingle);
+        }
       }
     }
-  }
 
-  if (changed) {
-    writeFileSync(file.absolutePath, text, "utf8");
+    return rewritten;
+  };
+  const rewritten = file.relativePath.toLowerCase().endsWith(".html")
+    ? rewriteHtmlOutsideScriptBodies(text, rewrite)
+    : rewrite(text);
+
+  if (rewritten !== text) {
+    writeFileSync(file.absolutePath, rewritten, "utf8");
     patched++;
   }
 }

@@ -14,7 +14,9 @@ test("rewrites page assets without modifying generated Next runtime files", asyn
   const pagePath = join(fixtureRoot, "out", "reading", "index.html");
   const runtimePath = join(fixtureRoot, "out", "_next", "static", "chunks", "runtime.js");
   const pageSource =
-    '<script src="/_next/static/chunks/runtime.js"></script><img src="/visuals/wheel.svg">';
+    '<script src="/_next/static/chunks/runtime.js"></script>' +
+    '<script>self.__next_f.push([1,"I[\\"/_next/static/chunks/client.js\\"]"])</script>' +
+    '<img src="/visuals/wheel.svg">';
   const runtimeSource = 'const assetPath="/_next/";';
 
   try {
@@ -31,7 +33,9 @@ test("rewrites page assets without modifying generated Next runtime files", asyn
     assert.equal(result.status, 0, result.stderr);
     assert.equal(
       await readFile(pagePath, "utf8"),
-      '<script src="../_next/static/chunks/runtime.js"></script><img src="../visuals/wheel.svg">',
+      '<script src="../_next/static/chunks/runtime.js"></script>' +
+        '<script>self.__next_f.push([1,"I[\\"/_next/static/chunks/client.js\\"]"])</script>' +
+        '<img src="../visuals/wheel.svg">',
     );
     assert.equal(await readFile(runtimePath, "utf8"), runtimeSource);
   } finally {
