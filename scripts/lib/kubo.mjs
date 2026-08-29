@@ -46,6 +46,12 @@ export function normalizeApiAddress(value) {
   const raw = value.trim();
   if (!raw) throw new Error("IPFS_API cannot be empty");
   if (raw.startsWith("/")) return raw;
+  if (!raw.includes("://")) {
+    throw new Error(
+      "IPFS_API must be a Kubo multiaddr (for example /ip4/127.0.0.1/tcp/5001) " +
+        "or an http(s) URL",
+    );
+  }
 
   let url;
   try {
