@@ -2,20 +2,21 @@
 import { spawnSync } from "node:child_process";
 
 const uploadOnly = process.argv.includes("--upload-only");
+const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 
 if (!uploadOnly) {
   console.log("sovereign: build:global …");
-  const build = spawnSync("npm run build:global", {
+  const build = spawnSync(npmCommand, ["run", "build:global"], {
     stdio: "inherit",
-    shell: true,
+    shell: false,
     cwd: process.cwd(),
   });
   if (build.status !== 0) {
     process.exit(build.status ?? 1);
   }
-  const patch = spawnSync("node scripts/ipfs-relative-export.mjs", {
+  const patch = spawnSync(process.execPath, ["scripts/ipfs-relative-export.mjs"], {
     stdio: "inherit",
-    shell: true,
+    shell: false,
     cwd: process.cwd(),
   });
   if (patch.status !== 0) {
@@ -23,9 +24,9 @@ if (!uploadOnly) {
   }
 }
 
-const upload = spawnSync("node scripts/pinata-upload-dir.mjs", {
+const upload = spawnSync(process.execPath, ["scripts/pinata-upload-dir.mjs"], {
   stdio: "inherit",
-  shell: true,
+  shell: false,
   cwd: process.cwd(),
 });
 process.exit(upload.status ?? 1);

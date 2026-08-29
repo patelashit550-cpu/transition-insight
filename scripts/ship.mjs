@@ -52,6 +52,19 @@ function run(label, command, cmdArgs = [], opts = {}) {
   return result;
 }
 
+if (push) {
+  const branchResult = run("git branch", "git", ["branch", "--show-current"], {
+    inherit: false,
+  });
+  const branch = branchResult.stdout?.trim();
+  if (branch !== "main") {
+    console.error(
+      `ship: refusing --push from ${branch || "detached HEAD"}; open a pull request or switch to main`,
+    );
+    process.exit(1);
+  }
+}
+
 if (!skipCanon) {
   run("canon:check", "npm", ["run", "canon:check"]);
 } else {
