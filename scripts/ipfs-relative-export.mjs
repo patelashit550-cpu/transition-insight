@@ -40,13 +40,21 @@ function relRoot(relativePath) {
  * @param {(text: string) => string} rewrite
  */
 function rewriteHtmlOutsideScriptBodies(html, rewrite) {
-  return html.replace(
-    /<script\b[^>]*>[\s\S]*?<\/script\s*>/gi,
-    (script) => {
-      const openingTagEnd = script.indexOf(">") + 1;
-      return `${rewrite(script.slice(0, openingTagEnd))}${script.slice(openingTagEnd)}`;
-    },
-  );
+  const scriptPattern = /<script\b[^>]*>[\s\S]*?<\/script\s*>/gi;
+  let result = "";
+  let previousEnd = 0;
+
+  for (const match of html.matchAll(scriptPattern)) {
+    const matchStart = match.index;
+    const script = match[0];
+    const openingTagEnd = script.indexOf(">") + 1;
+    result += rewrite(html.slice(previousEnd, matchStart));
+    result += rewrite(script.slice(0, openingTagEnd));
+    result += script.slice(openingTagEnd);
+    previousEnd = matchStart + script.length;
+  }
+
+  return result + rewrite(html.slice(previousEnd));
 }
 
 let patched = 0;
