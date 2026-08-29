@@ -9,9 +9,13 @@ if (!existsSync(outDir)) {
   console.error("ipfs-relative-export: out/ missing — run npm run build:global first");
   process.exit(1);
 }
-const files = walkFiles(outDir).filter(({ relativePath }) =>
-  /\.(html|js|css|json|txt|xml|webmanifest)$/.test(relativePath),
-);
+const files = walkFiles(outDir).filter(({ relativePath }) => {
+  const normalizedPath = relativePath.replace(/\\/g, "/");
+  return (
+    /\.(html|js|css|json|txt|xml|webmanifest)$/.test(normalizedPath) &&
+    !normalizedPath.startsWith("_next/")
+  );
+});
 
 const rootPrefixes = ["/_next/", "/visuals/", "/assets/", "/.well-known/", "/manifest.webmanifest"];
 
