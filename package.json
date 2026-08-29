@@ -8,12 +8,14 @@
     "dev:local": "node scripts/with-content-tier.mjs local node ./node_modules/next/dist/bin/next dev",
     "dev:global": "node scripts/with-content-tier.mjs global node ./node_modules/next/dist/bin/next dev",
     "dev:preprod": "node scripts/with-content-tier.mjs preprod node ./node_modules/next/dist/bin/next dev",
-    "build": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs && node scripts/ipfs-relative-export.mjs",
-    "build:global": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-content-tier.mjs global node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs && node scripts/ipfs-relative-export.mjs",
-    "build:preprod": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-content-tier.mjs preprod node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs && node scripts/ipfs-relative-export.mjs",
+    "build": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs",
+    "build:global": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-content-tier.mjs global node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs",
+    "build:preprod": "node scripts/sync-published-assets.mjs && node scripts/generate-corpus-graph.mjs && node scripts/generate-agent-skills-index.mjs && node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs && node scripts/with-content-tier.mjs preprod node scripts/with-stashed-app-api.mjs node ./node_modules/next/dist/bin/next build && node scripts/generate-sitemap-from-export.mjs && node scripts/verify-sitemap.mjs",
+    "build:ipfs": "npm run build:global && npm run export:ipfs",
+    "export:ipfs": "node scripts/ipfs-relative-export.mjs",
     "start": "next start",
     "lint": "eslint .",
-    "test": "node --experimental-strip-types --test src/lib/public-identity.test.ts src/lib/solana-rpc.test.ts src/lib/solana-tx.test.ts src/lib/solana-wallet.test.ts src/lib/solana-mints.test.ts src/lib/jupiter-tokens.test.ts src/lib/eth-tokens.test.ts src/lib/oft.test.ts src/lib/json-ld.test.ts src/lib/colosseum-copilot.test.ts src/lib/mcp-http.test.ts src/lib/sns-mcp.test.ts src/lib/vybe-mcp.test.ts && npx tsx --test src/lib/markdown-profile.test.ts src/lib/resolve-reading-essay.test.ts",
+    "test": "node --test scripts/ipfs-relative-export.test.mjs && node --experimental-strip-types --test src/lib/public-identity.test.ts src/lib/solana-rpc.test.ts src/lib/solana-tx.test.ts src/lib/solana-wallet.test.ts src/lib/solana-mints.test.ts src/lib/jupiter-tokens.test.ts src/lib/eth-tokens.test.ts src/lib/oft.test.ts src/lib/json-ld.test.ts src/lib/colosseum-copilot.test.ts src/lib/mcp-http.test.ts src/lib/sns-mcp.test.ts src/lib/vybe-mcp.test.ts && npx tsx --test src/lib/markdown-profile.test.ts src/lib/resolve-reading-essay.test.ts",
     "content:sign": "node scripts/sign-content.mjs",
     "content:verify": "node scripts/sign-content.mjs --verify",
     "sync:assets": "node scripts/sync-published-assets.mjs",
@@ -63,7 +65,8 @@
     "test:identity": "node --experimental-strip-types --test src/lib/public-identity.test.ts",
     "test:markdown": "npx tsx --test src/lib/markdown-profile.test.ts",
     "test:json-ld": "node --experimental-strip-types --test src/lib/json-ld.test.ts",
-    "test:resolve-reading-essay": "npx tsx --test src/lib/resolve-reading-essay.test.ts"
+    "test:resolve-reading-essay": "npx tsx --test src/lib/resolve-reading-essay.test.ts",
+    "test:ipfs-export": "node --test scripts/ipfs-relative-export.test.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/client": "^2.0.0",
