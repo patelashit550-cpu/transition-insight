@@ -29,6 +29,8 @@ An interested reader can:
 
 ## Scope
 
+Execution is tracked in [`PROJECT_TASKS.md`](./PROJECT_TASKS.md). That register assigns every deliverable to **Ashit**, **Agent**, or **Shared**, records dependencies, and defines the evidence required to close each task.
+
 ### Included
 
 - corpus preservation and provenance;
