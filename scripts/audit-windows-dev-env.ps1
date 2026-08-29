@@ -86,7 +86,7 @@ function Get-CommandInfo([string]$Name) {
       "^(node|npm|npx|pnpm|yarn|bun)$" {
         $version = (& $Name --version 2>$null | Select-Object -First 1)
       }
-      "^(git|gh|rg|fd|fzf|jq|docker|kubectl|helm|terraform|aws|az|gcloud|cargo|rustc|go|php|ruby|deno)$" {
+      "^(git|gh|ipfs|rg|fd|fzf|jq|docker|kubectl|helm|terraform|aws|az|gcloud|cargo|rustc|go|php|ruby|deno)$" {
         $version = (& $Name --version 2>$null | Select-Object -First 1)
       }
       "^python(\d+(\.\d+)?)?$" {
@@ -315,7 +315,7 @@ foreach ($name in @("winget", "choco", "scoop")) {
 }
 
 Write-Section "Core CLI"
-foreach ($name in @("git", "gh", "curl", "ssh", "tar", "rg", "jq")) {
+foreach ($name in @("git", "gh", "ipfs", "curl", "ssh", "tar", "rg", "jq")) {
   $tools[$name] = Test-Tool $name
 }
 
@@ -399,6 +399,9 @@ $repoHints = [ordered]@{
   root            = $repoRoot
   packageJson     = (Test-Path $pkgPath)
   nodeModules     = (Test-Path $nodeModules)
+  gitRemote       = $null
+  githubAuth      = $null
+  ipfsDaemon      = $null
   suggestedNext   = @()
 }
 if (-not $tools.node.present) {
@@ -408,6 +411,28 @@ if (-not $tools.node.present) {
 }
 if (-not $tools.git.present) {
   $repoHints.suggestedNext += "Install Git (winget install Git.Git)"
+} else {
+  try {
+    $repoHints.gitRemote = (& git -C $repoRoot remote get-url origin 2>$null | Select-Object -First 1)
+  } catch { }
+}
+if (-not $tools.gh.present) {
+  $repoHints.suggestedNext += "Install GitHub CLI (winget install GitHub.cli)"
+} else {
+  & gh auth status *> $null
+  $repoHints.githubAuth = ($LASTEXITCODE -eq 0)
+  if (-not $repoHints.githubAuth) {
+    $repoHints.suggestedNext += "Authenticate GitHub CLI: gh auth login"
+  }
+}
+if (-not $tools.ipfs.present) {
+  $repoHints.suggestedNext += "Install Kubo or IPFS Desktop: https://docs.ipfs.tech/install/"
+} else {
+  & ipfs id --format="<id>" *> $null
+  $repoHints.ipfsDaemon = ($LASTEXITCODE -eq 0)
+  if (-not $repoHints.ipfsDaemon) {
+    $repoHints.suggestedNext += "Start Kubo or IPFS Desktop, then verify: ipfs id"
+  }
 }
 if (-not $wsl.present) {
   $repoHints.suggestedNext += "Install WSL: wsl --install"
@@ -418,6 +443,9 @@ if (-not $wsl.present) {
 Write-Item "Repo root" $repoRoot
 Write-Item "package.json" $(if ($repoHints.packageJson) { "yes" } else { "no" }) $(if ($repoHints.packageJson) { "ok" } else { "warn" })
 Write-Item "node_modules" $(if ($repoHints.nodeModules) { "yes" } else { "no" }) $(if ($repoHints.nodeModules) { "ok" } else { "warn" })
+Write-Item "Git origin" $(if ($repoHints.gitRemote) { $repoHints.gitRemote } else { "not configured" }) $(if ($repoHints.gitRemote -match "github\.com") { "ok" } else { "warn" })
+Write-Item "GitHub CLI auth" $(if ($repoHints.githubAuth) { "authenticated" } else { "not authenticated" }) $(if ($repoHints.githubAuth) { "ok" } else { "warn" })
+Write-Item "IPFS daemon" $(if ($repoHints.ipfsDaemon) { "reachable" } else { "not reachable" }) $(if ($repoHints.ipfsDaemon) { "ok" } else { "warn" })
 foreach ($hint in $repoHints.suggestedNext) {
   Write-Item "Next" $hint "warn"
 }

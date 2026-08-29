@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { createRequire } from "node:module";
 import { spawnSync } from "node:child_process";
+import { isIP } from "node:net";
 
 import { loadEnvFiles } from "./load-env.mjs";
 
@@ -37,6 +38,45 @@ function resolveIpfsBin() {
 const IPFS_BIN = resolveIpfsBin();
 
 /**
+ * Convert an HTTP RPC URL to the multiaddr accepted by Kubo's `--api` option.
+ * Multiaddrs are returned unchanged.
+ * @param {string} value
+ */
+export function normalizeApiAddress(value) {
+  const raw = value.trim();
+  if (!raw) throw new Error("IPFS_API cannot be empty");
+  if (raw.startsWith("/")) return raw;
+  if (!raw.includes("://")) {
+    throw new Error(
+      "IPFS_API must be a Kubo multiaddr (for example /ip4/127.0.0.1/tcp/5001) " +
+        "or an http(s) URL",
+    );
+  }
+
+  let url;
+  try {
+    url = new URL(raw);
+  } catch {
+    throw new Error(
+      "IPFS_API must be a Kubo multiaddr (for example /ip4/127.0.0.1/tcp/5001) " +
+        "or an http(s) URL",
+    );
+  }
+  if (url.protocol !== "http:" && url.protocol !== "https:") {
+    throw new Error("IPFS_API URL must use http or https");
+  }
+  if (url.username || url.password || (url.pathname && url.pathname !== "/") || url.search || url.hash) {
+    throw new Error("IPFS_API URL must contain only a host and optional port");
+  }
+
+  const host = url.hostname.replace(/^\[|\]$/g, "");
+  const hostType = isIP(host) === 4 ? "ip4" : isIP(host) === 6 ? "ip6" : "dns";
+  const port = url.port || (url.protocol === "https:" ? "443" : "80");
+  const transport = url.protocol === "https:" ? "/https" : "";
+  return `/${hostType}/${host}/tcp/${port}${transport}`;
+}
+
+/**
  * Resolve Kubo API multiaddr / HTTP base.
  * Default: local daemon RPC (http://127.0.0.1:5001).
  */
@@ -54,8 +94,8 @@ export function gatewayBase() {
 
 function ipfsArgs(extra) {
   const api = process.env.IPFS_API?.trim();
-  // CLI accepts HTTP URL via --api when set (otherwise uses ~/.ipfs/api).
-  return api ? ["--api", api, ...extra] : extra;
+  // Kubo's CLI requires a multiaddr; accept an HTTP URL for user convenience.
+  return api ? ["--api", normalizeApiAddress(api), ...extra] : extra;
 }
 
 /**
@@ -72,7 +112,7 @@ export function runIpfs(args, opts = {}) {
   });
   if (result.error) {
     throw new Error(
-      `ipfs CLI not found (${result.error.message}). Install: npm install -g --allow-scripts=kubo kubo`,
+      `ipfs CLI not found (${result.error.message}). Install Kubo or IPFS Desktop from https://docs.ipfs.tech/install/`,
     );
   }
   if (result.status !== 0) {
@@ -124,7 +164,7 @@ export function addDirectory(dir) {
     gateway,
     directoryUrl: `${gateway}/ipfs/${cid}/`,
     dwebUrl: `https://dweb.link/ipfs/${cid}/`,
-    localUrl: `http://127.0.0.1:8080/ipfs/${cid}/`,
+    localUrl: `${gateway}/ipfs/${cid}/`,
   };
 }
 
