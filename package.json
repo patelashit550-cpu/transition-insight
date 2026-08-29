@@ -15,7 +15,7 @@
     "export:ipfs": "node scripts/ipfs-relative-export.mjs",
     "start": "next start",
     "lint": "eslint .",
-    "test": "node --test scripts/ipfs-relative-export.test.mjs && node --experimental-strip-types --test src/lib/public-identity.test.ts src/lib/solana-rpc.test.ts src/lib/solana-tx.test.ts src/lib/solana-wallet.test.ts src/lib/solana-mints.test.ts src/lib/jupiter-tokens.test.ts src/lib/eth-tokens.test.ts src/lib/oft.test.ts src/lib/json-ld.test.ts src/lib/colosseum-copilot.test.ts src/lib/mcp-http.test.ts src/lib/sns-mcp.test.ts src/lib/vybe-mcp.test.ts && npx tsx --test src/lib/markdown-profile.test.ts src/lib/resolve-reading-essay.test.ts",
+    "test": "node --test scripts/ipfs-relative-export.test.mjs && node --experimental-strip-types --test src/lib/public-identity.test.ts src/lib/solana-rpc.test.ts src/lib/solana-tx.test.ts src/lib/solana-wallet.test.ts src/lib/solana-mints.test.ts src/lib/jupiter-tokens.test.ts src/lib/eth-tokens.test.ts src/lib/oft.test.ts src/lib/json-ld.test.ts src/lib/colosseum-copilot.test.ts src/lib/mcp-http.test.ts src/lib/sns-mcp.test.ts src/lib/vybe-mcp.test.ts && npx tsx --test src/components/features/CompassWatermark.test.tsx src/lib/markdown-profile.test.ts src/lib/resolve-reading-essay.test.ts",
     "content:sign": "node scripts/sign-content.mjs",
     "content:verify": "node scripts/sign-content.mjs --verify",
     "sync:assets": "node scripts/sync-published-assets.mjs",
@@ -65,6 +65,7 @@
     "test:identity": "node --experimental-strip-types --test src/lib/public-identity.test.ts",
     "test:markdown": "npx tsx --test src/lib/markdown-profile.test.ts",
     "test:json-ld": "node --experimental-strip-types --test src/lib/json-ld.test.ts",
+    "test:compass-watermark": "npx tsx --test src/components/features/CompassWatermark.test.tsx",
     "test:resolve-reading-essay": "npx tsx --test src/lib/resolve-reading-essay.test.ts",
     "test:ipfs-export": "node --test scripts/ipfs-relative-export.test.mjs"
   },

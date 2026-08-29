@@ -1,10 +1,17 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, type CSSProperties } from "react";
 
 import { withBasePath } from "@/lib/base-path";
 
+type CompassWatermarkStyle = CSSProperties & {
+  "--p3-compass-watermark-image": string;
+};
+
 export function CompassWatermark() {
   const ref = useRef<HTMLDivElement>(null);
+  const style: CompassWatermarkStyle = {
+    "--p3-compass-watermark-image": `url("${withBasePath("/visuals/sundial_letters_outer.svg")}")`,
+  };
 
   useEffect(() => {
     const el = ref.current;
@@ -23,8 +30,6 @@ export function CompassWatermark() {
   }, []);
 
   return (
-    <div ref={ref} className="p3-compass-watermark" aria-hidden="true">
-      <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
-    </div>
+    <div ref={ref} className="p3-compass-watermark" style={style} aria-hidden="true" />
   );
 }
