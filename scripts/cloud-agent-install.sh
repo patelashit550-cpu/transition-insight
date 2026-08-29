@@ -12,7 +12,11 @@ if [[ ! -f package-lock.json ]]; then
   exit 1
 fi
 
-npm ci
+if ! npm ci --no-audit --no-fund; then
+  echo "error: npm ci failed. Verify that https://registry.npmjs.org is reachable" >&2
+  echo "       and allowed by the development environment's network policy." >&2
+  exit 1
+fi
 
 if [[ ! -f node_modules/next/package.json ]]; then
   echo "error: next package missing after npm ci" >&2
