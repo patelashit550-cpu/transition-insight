@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-01T01:03:35.802Z",
+  "generated": "2026-09-01T13:15:23.483Z",
   "tier": "global",
-  "manifestDigest": "sha256:1b6a3e9a46e60f352f54098c8157e768b641a3bc8c37d172ad0f31f32636705c",
+  "manifestDigest": "sha256:86e5f93373fc634e37810f01c2d0903620d7d6f724eefb7eec8d5b54552edbd8",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:e5527f370f9089ff2c17a382f31ef23942bfb3b56515878a5a4d5b09c9737c6b"
+      "sha256": "sha256:4c1d9897d48d161e49641da18938cfe8cbf05ef36e03fbcc66b72b0b96550a59"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -42,10 +42,10 @@
       "stage": "published",
       "title": "Semper Idem",
       "author": null,
-      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "publishedAt": "2026-09-01T00:00:00.000Z",
       "slug": "semper-idem",
       "series": "peridot",
-      "sha256": "sha256:15cab7b6f103af0f6d53ddc0eaca716a6e43326331bd3af3233efc1c87bebfcb"
+      "sha256": "sha256:f67e95dcf9ca7be88b4d11ba5098b4f39dedcb0e430bf197e27029e82680cf77"
     },
     {
       "path": "ontology/governance/illumination/social-network.md",
