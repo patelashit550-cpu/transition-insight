@@ -22,7 +22,7 @@ export const ONTOLOGY_TOPIC_KEYS: Record<string, readonly string[]> = {
  * Used by nav gate reads (`readNavGateFrontmatter`) and route discovery.
  */
 export const BENTO_ROUTE_ONTOLOGY: Record<string, string> = {
-  "governance/carta": "carta",
+  "governance/carta": "governance/Carta",
   "governance/canonical": "governance/Canonical",
   "governance/canonical-review": "governance/Canonical-Review",
   "governance/identity": "governance/identity/identity",
