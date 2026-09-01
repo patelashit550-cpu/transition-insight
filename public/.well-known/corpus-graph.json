@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T13:15:23.166Z",
+  "generatedAt": "2026-09-01T23:31:58.153Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,23 +14,51 @@
   },
   "interior": {
     "summary": {
-      "essays": 11,
-      "nodes": 106,
-      "edges": 231,
+      "essays": 12,
+      "nodes": 124,
+      "edges": 267,
       "byKind": {
-        "member-of-series": 7,
-        "member-of-folder": 11,
-        "tagged": 63,
+        "member-of-series": 8,
+        "member-of-folder": 12,
+        "tagged": 78,
         "lexica": 33,
-        "mention": 117
+        "mention": 136
       },
       "orphanEssays": 1,
-      "series": 3,
-      "folders": 4,
-      "tags": 28,
-      "terms": 60
+      "series": 4,
+      "folders": 5,
+      "tags": 40,
+      "terms": 63
     },
     "nodes": [
+      {
+        "id": "essay:governance/carta.md",
+        "type": "essay",
+        "label": "Carta",
+        "stage": "published",
+        "slug": "carta",
+        "series": "regnum-dei",
+        "folder": "governance",
+        "ontologyPath": "governance/Carta.md",
+        "vaultPath": "ontology/governance/Carta",
+        "tags": [
+          "governance",
+          "introduction",
+          "ontology",
+          "regnum-dei",
+          "soundness",
+          "intelligence",
+          "identity",
+          "capital",
+          "navigation",
+          "inuit",
+          "canada",
+          "decentralization",
+          "web3",
+          "truth",
+          "divine-governance"
+        ]
+      },
       {
         "id": "essay:governance/illumination/arete.md",
         "type": "essay",
@@ -237,6 +265,11 @@
         ]
       },
       {
+        "id": "series:regnum-dei",
+        "type": "series",
+        "label": "regnum-dei"
+      },
+      {
         "id": "series:peridot",
         "type": "series",
         "label": "peridot"
@@ -250,6 +283,11 @@
         "id": "series:polite-bureau",
         "type": "series",
         "label": "Polite Bureau"
+      },
+      {
+        "id": "folder:governance",
+        "type": "folder",
+        "label": "governance"
       },
       {
         "id": "folder:governance-illumination",
@@ -272,14 +310,34 @@
         "label": "narrative/comment"
       },
       {
-        "id": "tag:ethics",
-        "type": "tag",
-        "label": "ethics"
-      },
-      {
         "id": "tag:governance",
         "type": "tag",
         "label": "governance"
+      },
+      {
+        "id": "tag:introduction",
+        "type": "tag",
+        "label": "introduction"
+      },
+      {
+        "id": "tag:ontology",
+        "type": "tag",
+        "label": "ontology"
+      },
+      {
+        "id": "tag:regnum-dei",
+        "type": "tag",
+        "label": "regnum-dei"
+      },
+      {
+        "id": "tag:soundness",
+        "type": "tag",
+        "label": "soundness"
+      },
+      {
+        "id": "tag:intelligence",
+        "type": "tag",
+        "label": "intelligence"
       },
       {
         "id": "tag:identity",
@@ -287,14 +345,54 @@
         "label": "identity"
       },
       {
-        "id": "tag:money",
-        "type": "tag",
-        "label": "money"
-      },
-      {
         "id": "tag:capital",
         "type": "tag",
         "label": "capital"
+      },
+      {
+        "id": "tag:navigation",
+        "type": "tag",
+        "label": "navigation"
+      },
+      {
+        "id": "tag:inuit",
+        "type": "tag",
+        "label": "inuit"
+      },
+      {
+        "id": "tag:canada",
+        "type": "tag",
+        "label": "canada"
+      },
+      {
+        "id": "tag:decentralization",
+        "type": "tag",
+        "label": "decentralization"
+      },
+      {
+        "id": "tag:web3",
+        "type": "tag",
+        "label": "web3"
+      },
+      {
+        "id": "tag:truth",
+        "type": "tag",
+        "label": "truth"
+      },
+      {
+        "id": "tag:divine-governance",
+        "type": "tag",
+        "label": "divine-governance"
+      },
+      {
+        "id": "tag:ethics",
+        "type": "tag",
+        "label": "ethics"
+      },
+      {
+        "id": "tag:money",
+        "type": "tag",
+        "label": "money"
       },
       {
         "id": "tag:theology",
@@ -622,6 +720,12 @@
         "defined": true
       },
       {
+        "id": "term:carta",
+        "type": "term",
+        "label": "Carta",
+        "defined": true
+      },
+      {
         "id": "term:commons, treasury of the",
         "type": "term",
         "label": "Commons, Treasury of the",
@@ -724,6 +828,12 @@
         "defined": true
       },
       {
+        "id": "term:regnum dei",
+        "type": "term",
+        "label": "Regnum Dei",
+        "defined": true
+      },
+      {
         "id": "term:satyagraha",
         "type": "term",
         "label": "Satyagraha",
@@ -766,6 +876,12 @@
         "defined": true
       },
       {
+        "id": "term:soundness",
+        "type": "term",
+        "label": "Soundness",
+        "defined": true
+      },
+      {
         "id": "term:stephen / steven",
         "type": "term",
         "label": "Stephen / Steven",
@@ -773,6 +889,125 @@
       }
     ],
     "edges": [
+      {
+        "id": "edge:essay-governance-carta-md-series-regnum-dei-member-of-series",
+        "from": "essay:governance/carta.md",
+        "to": "series:regnum-dei",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-folder-governance-member-of-folder",
+        "from": "essay:governance/carta.md",
+        "to": "folder:governance",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-governance-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-introduction-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:introduction",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-ontology-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:ontology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-regnum-dei-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:regnum-dei",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-soundness-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:soundness",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-intelligence-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:intelligence",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-identity-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-capital-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-navigation-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:navigation",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-inuit-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:inuit",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-canada-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:canada",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-decentralization-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:decentralization",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-web3-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:web3",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-truth-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:truth",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-tag-divine-governance-tagged",
+        "from": "essay:governance/carta.md",
+        "to": "tag:divine-governance",
+        "kind": "tagged",
+        "weight": 1
+      },
       {
         "id": "edge:essay-governance-illumination-arete-md-series-peridot-member-of-series",
         "from": "essay:governance/illumination/arete.md",
@@ -1572,6 +1807,14 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-governance-carta-md-term-alpha-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:alpha",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-alpha-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:alpha",
@@ -1612,6 +1855,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-carta-md-term-anima-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-social-network-md-term-anima-mention",
         "from": "essay:governance/illumination/social-network.md",
         "to": "term:anima",
@@ -1639,6 +1890,14 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-anima-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:anima",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-animus-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:animus",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1764,6 +2023,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-carta-md-term-capital-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-capital-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:capital",
@@ -1836,6 +2103,30 @@
         "count": 2
       },
       {
+        "id": "edge:essay-governance-carta-md-term-carta-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-carta-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-creation-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-creation-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:creation",
@@ -1884,9 +2175,25 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-carta-md-term-dial-square-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:dial square",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-dial-square-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:dial square",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-firmitas-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:firmitas",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1930,6 +2237,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-governance-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 5,
+        "count": 8
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-governance-mention",
@@ -1978,6 +2293,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-identity-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 5,
+        "count": 6
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-identity-mention",
@@ -2034,6 +2357,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-intelligence-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-intelligence-mention",
@@ -2154,6 +2485,14 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-peridot-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:peridot",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-peridot-mention",
@@ -2284,6 +2623,22 @@
         "count": 5
       },
       {
+        "id": "edge:essay-governance-carta-md-term-regnum-dei-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:regnum dei",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-regnum-dei-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:regnum dei",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-satyagraha-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:satyagraha",
@@ -2372,6 +2727,14 @@
         "count": 2
       },
       {
+        "id": "edge:essay-governance-carta-md-term-semper-idem-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-semper-idem-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:semper idem",
@@ -2418,6 +2781,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-social-network-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-social-network-mention",
@@ -2476,6 +2847,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-carta-md-term-soundness-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:soundness",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-me-praxis-md-term-tenable-mention",
         "from": "essay:me/praxis.md",
         "to": "term:tenable",
@@ -2490,6 +2869,14 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-yield-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:yield",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-yield-mention",

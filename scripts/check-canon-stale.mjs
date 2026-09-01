@@ -55,8 +55,7 @@ const published = listPublishedPaths();
 
 if (!existsSync(META_PATH)) {
   console.error("canon:check FAIL — missing scripts/data/canon-generated.json");
-  console.error("Run: npm run canon:generate");
-  console.error("Then merge semantic-graph/Canonical Candidates.md into ontology/governance/Canonical.md");
+  console.error("Fix: npm run canon:generate");
   process.exit(1);
 }
 
@@ -70,26 +69,13 @@ const removed = stamped.filter((p) => !publishedSet.has(p));
 
 if (!added.length && !removed.length) {
   console.log(
-    `canon:check ok — Canonical refresh covers ${published.length} published essays (meta ${meta.generatedAt || "unknown"})`
+    `canon:check ok — ${published.length} published essays (stamped ${meta.generatedAt || "unknown"})`
   );
   process.exit(0);
 }
 
-console.error("canon:check FAIL — published set drifted from last Canonical refresh.");
-if (added.length) {
-  console.error("\nNew published essays (not in last refresh):");
-  for (const p of added) console.error(`  + ${p}`);
-}
-if (removed.length) {
-  console.error("\nNo longer published (still in last refresh):");
-  for (const p of removed) console.error(`  - ${p}`);
-}
-console.error(`
-Next:
-  1. npm run canon:generate
-  2. Merge new terms from semantic-graph/Canonical Candidates.md into ontology/governance/Canonical.md
-  3. npm run ship -- …
-
-Bypass (not recommended): npm run ship -- --skip-canon
-`);
+console.error("canon:check FAIL — published essays changed since last stamp.");
+if (added.length) console.error(`  new: ${added.join(", ")}`);
+if (removed.length) console.error(`  removed: ${removed.join(", ")}`);
+console.error("Fix: npm run canon:generate   (ship runs this automatically)");
 process.exit(1);

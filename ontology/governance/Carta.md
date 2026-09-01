@@ -1,51 +1,83 @@
 ---
-stage: draft
-node_id: 2905
-jurisdiction: Ashit Milne
-title: 'Introduction Regnum Dei '
-label: 'Introduction Regnum Dei '
+title: Carta
+label: An Introduction
+stage: published
 type: essay
+slug: carta
+series: regnum-dei
 theme: emerald
 size: md
 showInNav: false
+image: /assets/inukshuk.png
+imageAlt: Inukshuk — a balanced cairn of grey stones in human form on a rocky ridge, misty pale-blue sky beyond
+imageRole: inset
+imagePlate: wide
+jurisdiction: Ashit Milne
 tags:
   - governance
-  - decentralization
-  - money
-  - technology
-  - theology
+  - introduction
+  - ontology
+  - regnum-dei
+  - soundness
+  - intelligence
+  - identity
   - capital
+  - navigation
+  - inuit
+  - canada
+  - decentralization
+  - web3
+  - truth
+  - divine-governance
 ---
-**Artwork**: *Like A Roiling Stone* - This is an abstract expression of wholeness as *digital* non-dualism - a decimal point is followed by a zero (nothing subtracted) *or* alternatively the seer perceiving the universal as indistinct from self (nothing added). Important here is the distinction between hole and whole - the former is the void null abyss of nihilism (an absence of all things) while the latter is a full accounting of *all* things brought into equilibrium where time is Universal and settled. Therefore it has a return on investment (*Roi*) manifested through the settling of its element (Londinium) through contemplation. Through being, the self is transformed, and so to *perhaps* the whole in good time. One's sovereignty has been assumed (taken - never shaken - and quite often -  stirred).
+## Soundness
 
-**The Whole Truth** 
+Since the beginning of civilisation, wherein we first eked out comfort from the roughness of a hostile wilderness, we turned universally to the question of what it means for a thing or a person to be true, useful, and possessed of a deep structural integrity. We see this integrity as possessing orderliness—a cleanliness and neatness free of excessive paraphernalia, detritus, and clutter (i.e., good) which is pleasant for us to apprehend. This is as true for our general environment or global commons as it is for a _semper idem_ (whether some identity or sum identity).
 
-*Some say that we are players Some say that we are pawns But we've been making money Since the day that we were born... ...And we're praying it's not too late 'Cause we know we're falling from grace Millennium* 
+Invariably, we see goodness to be aligned with the natural world because it is the one place in which we are all able to divine a sense of awesome beauty. It is a beauty that is deemed to be self-evident and transparently what it is—an often terrifyingly harsh and demanding place—one in which we nonetheless seek truths concerning the reality of our nature.
 
-~ Robbie Williams ([Millennium](https://www.youtube.com/watch?v=xcWOviMI6Lk))
+There is a cyclicality and circularity to this question because it has been a long time since most of us emerged from the real wilderness. It now seems, in fact, that we are somehow immersed in a new, rather more complicated modern form of wildness. Call it chaos—one in which the organic and feral are in the midst of self-discovery within the bosom of a permissive secularism; an exploration of culture as defined by the person in the midst of some variety of experience. Even as the pathologically inclined do whatever they want and help themselves to whatever they like, while the indifferent turn away askance because it does not concern them nor their own children.
 
-In our world today, material risks—to our climate, socio-political economy, and ultimately, our security—*multiply* exponentially. Paradoxically, managing these requires us to adopt the principle of infinite *divisibility* as we aim to husband the planet's finite resources without debasement. This perspective offers a *bounded* metric for gauging the relative value of things, including creative work so that we may prioritize our opportunities and risks effectively. Moreover, it denominates our global economy with a notional unit that may be used to autonomously manages the supply and demand of capital (essentially data) with credible neutrality.
+Meanwhile, we all bear the costs financially and in our sense of what it is to be wholesome and well. Notions of honour, reputation, and trust be damned—for none of us who have lived a long life can honestly be happy with what those things amount to today, given the damage we have collectively visited upon creation, both before and after the debacle that was the Great Financial Crisis with its standards of what constitutes trustworthy laid bare.
 
-I have created a series of essay that aim to explain in plain and meaningful terms emergent technologies and their relevance to problems humanity faces in the modern world. Together they tie threads that I've explored as a intellectual and professional:
+Look upon any person for just a moment without judgment, concerning the matter of what they need. A person must feel wholesome, healthy, and in good order. They must feel that they are _sufficient_ in the present moment as merely an embodied, conscious thing which seeks to sustain itself with an essential vitality. This vitality is signalled by their presence as a unified identity possessed of physiological and psychological well-being. Moreover, they must feel that they are upon a vector which approaches, rather than diverges away from, alignment. However distinct or weird their personality appears against some contemporaneous standard embraced by the majority, they must yet feel embraced by society rather than alienated. For whatever they are and whatever they may appear to be, they are nevertheless an aspect or microcosm of creation itself.
 
-1. [**Sine Qua No**](https://transition-insight.com/?blogcategory=Sine+Qua+Non+(Intelligence))**n** (Intelligence) explores emergent information technologies at an abstract level drawing from ethics, philosophy and the social sciences that lend themselves over time to becoming intelligence imbued on a network (Turing-completeness).
+This is a desirable quality. One we may call soundness—whether it is possessed in any given moment by speed or stillness. Whatever the volume of externalised noise emitted, it is at least optimally configured within the bounds of what is feasible and fair in currently prevailing circumstances. Another way to conceptualise soundness is that it is possessed of a kind of solidity—one which is not excessively dense, but instead possessed of a natural and organically appropriate sense of embodiment. If it should degrade, then it does so almost as though through a natural weathering process—an oxidation which protects and secures what is held within, rather than through some extrinsic growth which invades and consumes the body and the body politic—its capacity to achieve self-sovereignty through self-governance.
 
-2*.* [**E Pluribus Unum**](https://transition-insight.com/?blogcategory=E+Pluribus+Unum+(Capital)) (Capital) weaves insights from the social sciences and from my own experiences in software engineering delivery and governance (project/program management) to explain capital, and in particular its notional aspect, money.
+## Ontology
 
-3. [**Regnum Dei**](https://transition-insight.com/?blogcategory=Regnum+Dei+(Good+Governance))  (Divine Governance) integrates multidisciplinary insights to explain capital — especially its notional form: money. Here, *Divine* refers to the alignment of objective fact (truth) and rational design (beauty); to divine is to *define* a bounded ideal to serve as an aim or objective. Money's primary quality for divining opportunities is that it can be used to express the price/value/cost of creativity (including Creation's) in fungible terms as yield (definitive comparative value).
+As we seek to understand and model reality, we have at our disposal language as the primary utility. What I am endeavouring to do on this web application is to develop a platform which functions as an online utility at a fundamental level—as an ontology.
 
-- **Dial Square**: Introduces a framework or myth model that explores the concept of relative value in a network. It has three components: Square (embodiment), Dial (derivation of value through currency/resonance), and the Yoga Element (assessment of equivalence that lends value a fungible, i.e. widely accepted metric).
-- **Sophia Prima**: Asks what basic truths do we all *know* and accept to be true as foundation for consensus (as a starting point for ideal vectors and defining incentive-driven behaviour for an identity and in a commonwealth). These are models to drive automaticity (anarchy) and bridge the space between existential dichotomy: theosophical (variety of experience) and philosophical (scientific inquiry) - duality of science and religion in common vernacular
--  **Policia** (Prospective and TBD): Defines and models governance apparatus—legislative or representative as well policy priorities and approaches. This is a speculative space shaped by the potential of information technologies that, while mature in other domains (e.g., secure data transmission), remain largely unadopted in monetary and fiscal regimes. This lag persists due to the entrenchment of obsolete institutional modes. Adoption may allow in fact obviate the need for discussion as policy 'falls out' naturally as a result of tighter monetary governance and transparent yield expression.
+An ontology is a philosophical study of being, existence, and reality, as well as a computer-science framework used to categorise and connect data. We create ontologies so that we may understand a shared landscape of reality, whether material or on the social network as interpreted through the lens of what can only be a personal psychology. You may have heard the phrase _life isn't fair, it's just fair game_—a coldly calculating realism that separates the world into two sets: players and the played.
 
-These draw on millennia of human creativity to examine the central phenomena of the late 20th century and this new millennium: the rise of the virtual machine— the planet's central nervous system and core utility— the internet. The internet’s evolution now culminates in the emergence of proof-of-stake public blockchain protocols, which promise to finally make it a safe, secure space for our social, economic, and political lives.
+It suggests that opportunity functions as a scarce commodity, naturally clustering within walled networks. The members of these nodes rarely defend their privilege through merit; instead, they reduce their good fortune to a cold semantic reality—a simple binary of insider and outsider. They accept their inclusion as self-evident and self-justifying: _that's unlucky for them, and lucky for me._
 
-![Rai Stone: Weal Money](//img1.wsimg.com/isteam/ip/674c7aa6-fcc2-4283-a438-de467701f51c/Yap_Stone_Money.jpg/:/rs=w:1280)Edit Image
+Good fortune, more than anything else, is a matter of opinion for the philosophical. But for the many, it is a notionally bounded space of reciprocated privilege and courtesy: the US dollar regime, a fraternal community, or a too-big-to-fail corporate domain.
 
-Rai Stone: Weal Money
+It doesn't have to be that way. In fact, I argue that it cannot be that way. Not if we are to function as a single planet with a semblance of common purpose. Not if we are to forge some manner of concord which serves to sustain us indefinitely, ending the unfolding calamity of flood and pestilence afflicting our natural world order.
 
-These protocols enable the reconciliation of public and private keys and thus the alignment of public and private interests. They give us the capacity to assess risk and opportunity holistically, down to the fundamental unit of analysis: the abstracted identity of a single human. As modern technological successors to ancient systems of governance, these protocols allow us to properly assess value and assert price—including the price of time itself, measured as the opportunity cost of deferring consumption to secure that public network. The adoption and scaling of emergent technologies, such as proof of stake transaction protocols that instantiate relative productivity (as yield), is a vital foundation for managing the complexities of modern risk; one we must begin earnestly.
+One is free to audit this ontology. What this amounts to in practical terms is simply validating it—assessing its legitimacy and credibility by visiting it and consuming its content personally, if one finds that to be a worthwhile endeavour.
 
-I'll continue to explore these themes, especially the expression of organizational policy through incentives used in tandem with approaches to governance that enable autonomy while aligning private and public interests to generate net-positive outcomes. These involve a reductive process of simplifying legal and accounting frameworks to dovetail with the emergence of secure fiat and smart contract enabled distributed applications. 
+It is the truth as I personally see it. Moreover, it develops with language rather than compiled code—functioning as an algorithm for seeking alpha (success in achieving prosperity) optimally, however one may define it, as long as the aggregate outcome does not prejudice universally appreciated outcomes. This is a tall order by design, and only time will tell whether it succeeds in its aims.
 
-*Also framed as Nature/Nurture, Romantic/Rational, Faith/Science, Church/State or my favourite lens God/Caesar (Creation/Commons - which I particularly love because it offers up 'creativity' as the connective tissue and current). The idea is to parse and pair and reconcile this schism in a relatively non-contentious way as a sound footing for non-coercive governance.
+As it evolves over the coming years, it will function as a distributed and decentralised (Web3) application whose content is secured by a signature on public protocols (Bitcoin, Ethereum, and Solana) and whose provenance or source cannot be contested.
+
+It may then function as just one arbiter of what works online and what does not: what is true, what has utility, and what is therefore worth transmitting from point A to point B to generate real value for both the participants to a transaction and the social network as a whole.
+
+## Regnum Dei
+
+The ontology is called _Regnum Dei_. Typically translated as the _Reign of God_, I frame it as _Divine Governance_—where "divine" retains its root sense: _to search for or seek the truth_.
+
+Truth (**_veritas_**) serves as the basis or foundation for a process through which we generate solutions or utilities (**_utilitas_**) to solve real-world problems and manifest structural integrity (**_firmitas_**). The ethical grounding for this process draws from _Sanatana Dharma_ (popularly known in the West as Yoga or Hinduism)—the recognition of an eternal, foundational order. In material terms, this has been an *industrial* process of progress marred by occasional error. That error is something we hold ourselves *collectively* responsible for by socialising the costs. Regardless, we are all accountable for applying ourselves towards generating solutions; each in our own way.
+
+The core components of _Regnum Dei_ detail the conditions required to create systemic and autonomous peace, order, and good governance across our social network. These are bona fide notions of:
+
+- **Intelligence** ([Sine Qua Non](/governance/intelligence/)): The animating principle—_anima_ and _animus_—without which no model of reality can exist.
+
+- **Identity** ([Semper Idem](/governance/identity/), [Dial Square](/governance/identity/dialsquare/)): A bounded notion of embodiment broadly recognised as authentic and genuine (i.e., real regardless of whether it is materially embodied or digitally ephemeral).
+
+- **Capital** ([E Pluribus Unum](/governance/capital/)): Inputs whose value is appraised by their relative utility in creative endeavour now, or by being left in our common storehouse—the Global Commons.
+
+Illumination essays under [Peridot](/governance/peridot/) explore terms and conditions—the lived interface between these pillars and daily practice.
+
+The objective of any iterative process—whether an algorithm optimising a loss function or a civilisation refining its values—is to incrementally reduce error to yield increasingly productive outcomes. But true error reduction cannot be measured by human metrics alone; it must extend to all life, sentient and non-sentient alike.

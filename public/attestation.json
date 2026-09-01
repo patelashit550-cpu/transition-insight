@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-01T13:15:23.483Z",
+  "generated": "2026-09-01T23:31:58.342Z",
   "tier": "global",
-  "manifestDigest": "sha256:86e5f93373fc634e37810f01c2d0903620d7d6f724eefb7eec8d5b54552edbd8",
+  "manifestDigest": "sha256:f3ee08d9c7bc35cd1df0cbd8f8af809ea28ff34971476802a9daf60ecd648714",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,7 +13,7 @@
   },
   "summary": {
     "totalOntologyFiles": 74,
-    "attestedFiles": 12,
+    "attestedFiles": 13,
     "signedFiles": 0
   },
   "attested": [
@@ -25,7 +25,17 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:4c1d9897d48d161e49641da18938cfe8cbf05ef36e03fbcc66b72b0b96550a59"
+      "sha256": "sha256:260194b259270849ab584ea6334ece1e1da984f70a1b2e3e69adb4ed2f065f1f"
+    },
+    {
+      "path": "ontology/governance/Carta.md",
+      "stage": "published",
+      "title": "Carta",
+      "author": null,
+      "publishedAt": null,
+      "slug": "carta",
+      "series": "regnum-dei",
+      "sha256": "sha256:e6dc1117e7837f20b0522366a66d0a9fa9096cec2d7a1bc127adf1a09881265b"
     },
     {
       "path": "ontology/governance/illumination/arete.md",

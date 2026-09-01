@@ -18,6 +18,9 @@
  */
 import { spawnSync } from "node:child_process";
 
+/** Never committed by `ship --push` (local drafts, review-tier glossary, etc.). */
+const SHIP_EXCLUDE = ["ontology/governance/Canonical-Review.md"];
+
 const args = process.argv.slice(2);
 const push = args.includes("--push");
 const ipfsLocal = args.includes("--ipfs-local");
@@ -30,8 +33,9 @@ const message =
     : `ship ${new Date().toISOString().slice(0, 10)}`;
 
 function run(label, command, cmdArgs = [], opts = {}) {
-  const useShell = process.platform === "win32";
-  // Windows shell mode strips arg quoting; re-quote args with spaces so e.g. -m "a b" survives.
+  // npm needs shell on Windows (npm.cmd); git/node are safe with shell:false (avoids DEP0190 + arg mangling).
+  const useShell =
+    opts.shell ?? (process.platform === "win32" && (command === "npm" || command.endsWith(".cmd")));
   const safeArgs = useShell
     ? cmdArgs.map((a) => (/\s/.test(a) ? `"${a.replace(/"/g, '\\"')}"` : a))
     : cmdArgs;
@@ -65,8 +69,27 @@ if (push) {
   }
 }
 
+function canonCheckOk() {
+  const result = spawnSync("npm", ["run", "canon:check"], {
+    stdio: "pipe",
+    shell: process.platform === "win32",
+    cwd: process.cwd(),
+    encoding: "utf8",
+  });
+  if (result.stdout?.trim()) console.log(result.stdout.trim());
+  if (result.status !== 0 && result.stderr?.trim()) console.error(result.stderr.trim());
+  return result.status === 0;
+}
+
 if (!skipCanon) {
-  run("canon:check", "npm", ["run", "canon:check"]);
+  if (!canonCheckOk()) {
+    console.log("ship: refreshing canon stamp (new published essay)…");
+    run("canon:generate", "npm", ["run", "canon:generate"]);
+    if (!canonCheckOk()) {
+      console.error("ship: failed at canon:check");
+      process.exit(1);
+    }
+  }
 } else {
   console.warn("ship: skipping canon:check (--skip-canon)");
 }
@@ -107,7 +130,14 @@ if (push) {
     "scripts/data/canon-generated.json",
   ];
   run("git add", "git", ["add", "-A", "--", ...paths], { inherit: false });
+  for (const rel of SHIP_EXCLUDE) {
+    run("git unstage excluded", "git", ["restore", "--staged", "--", rel], { inherit: false });
+  }
   const status = run("git status", "git", ["status", "--porcelain"], { inherit: false });
+  const excluded = SHIP_EXCLUDE.filter((rel) => status.stdout?.includes(rel));
+  if (excluded.length) {
+    console.log(`ship: excluded from commit — ${excluded.join(", ")}`);
+  }
   if (!status.stdout?.trim()) {
     console.log("ship: nothing to commit");
     process.exit(0);

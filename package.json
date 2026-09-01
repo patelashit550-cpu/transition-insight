@@ -27,6 +27,7 @@
     "process:bento-emblems": "python scripts/process-bento-emblems.py",
     "content:attest": "node scripts/generate-attestation.mjs && node scripts/generate-provenance.mjs",
     "ship": "node scripts/ship.mjs",
+    "setup:ship": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-ship.ps1",
     "pinata:upload": "node scripts/pinata-upload-dir.mjs",
     "kubo:upload": "node scripts/kubo-upload-dir.mjs",
     "deploy:local": "node scripts/deploy-local.mjs",

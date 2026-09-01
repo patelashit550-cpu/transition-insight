@@ -3,8 +3,6 @@ import { useRef, useEffect } from "react";
 
 import { withBasePath } from "@/lib/base-path";
 
-const preHydrationReveal = `(()=>{const watermark=document.currentScript?.previousElementSibling;if(!(watermark instanceof HTMLElement))return;addEventListener("mousemove",event=>{const rect=watermark.getBoundingClientRect(),centerX=rect.left+rect.width/2,centerY=rect.top+rect.height/2;watermark.classList.toggle("is-revealed",Math.hypot(event.clientX-centerX,event.clientY-centerY)<rect.width*.55)})})()`;
-
 export function CompassWatermark() {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -25,11 +23,8 @@ export function CompassWatermark() {
   }, []);
 
   return (
-    <>
-      <div ref={ref} className="p3-compass-watermark" aria-hidden="true">
-        <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
-      </div>
-      <script dangerouslySetInnerHTML={{ __html: preHydrationReveal }} />
-    </>
+    <div ref={ref} className="p3-compass-watermark" aria-hidden="true">
+      <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
+    </div>
   );
 }

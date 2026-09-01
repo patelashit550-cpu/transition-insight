@@ -132,6 +132,17 @@
         }
       }
     },
+    "/governance/carta": {
+      "get": {
+        "operationId": "get_governance_carta",
+        "summary": "Read public page at /governance/carta",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/governance/identity": {
       "get": {
         "operationId": "get_governance_identity",

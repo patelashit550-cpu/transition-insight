@@ -69,6 +69,10 @@ In ordinary and vocational speech: a strong inner summons to a kind of work or l
 
 In economics: assets that produce further value — physical, financial, human, social. Not only cash. The ability and wherewithal to care for and sustain things through generative action (Utility) — the *Janus* custody, husbandry, and stewardship that make yield possible without hollowing the commons.
 
+## Carta
+
+Latin: charter or letter — a formal written instrument that sets out rights, scope, or purpose. Here: the founding charter of _Regnum Dei_; read it first for soundness, ontology, and the three governance pillars before diving into series essays.
+
 ## Commons, Treasury of the
 
 Shared resources not owned as private inventory — from pastures and fisheries to knowledge, climate, and public trust (Elinor Ostrom and after). The *Treasury of the Commons* is the monist destination of our works: the shared account into which virtue, care, and yield flow when private and public interests align.
@@ -165,6 +169,10 @@ In philosophy (Aristotle onward): informed practice — doing that embodies theo
 
 Corpus arc of change on the social network: managed project → owned product → use-case-specific public protocols (Bitcoin, Ethereum, Solana as exemplars) — decentralizing agency and how value is registered.
 
+## Regnum Dei
+
+Latin: the reign or kingdom of God. Here: _Divine Governance_ — the name of this ontology; truth (_veritas_) as foundation, utility (_utilitas_) as generative process, and structural integrity (_firmitas_) as what good building yields. The three pillars are Intelligence (Sine Qua Non), Identity (Semper Idem / Dial Square), and Capital (E Pluribus Unum); Peridot essays illuminate terms and conditions at the lived edge.
+
 ## Satyagraha
 
 Gandhi's term: truth-force — nonviolent resistance grounded in truth and refusal to harm. Here: asymmetric explanatory challenge that accepts a regime's discomfort because that friction nourishes the soul; it deeply embarrasses authorities that claim moral authority because it shows that authority to be little more than propaganda as self-affirmation — an oversold placebo (homeopathy). This leads to the loss of credibility and authority.
@@ -192,6 +200,10 @@ In the social and applied information sciences: the web of relationships among a
 ## Soft Power
 
 Attraction and persuasion rather than coercion or payment. Virtue as influence — Areté, namaste, culture's quiet force — against Giants' hard power of capital and office.
+
+## Soundness
+
+Wholesomeness, structural integrity, and fitness to purpose in a person or system — possessed of order without clutter, alignment without coercion, and embodiment without invasive growth. In _Carta_: the quality we need to feel sufficient in the present moment and on a vector toward the good, whether moving fast or still.
 
 ## Stephen / Steven
 
