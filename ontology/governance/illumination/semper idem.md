@@ -1,378 +1,95 @@
 ---
 title: Semper Idem
 label: Semantic Perimeter of Identity Embodied
-stage: draft
+stage: published
 type: essay
 slug: semper-idem
 order: 1
 series: peridot
-image: /assets/virtue.jpg
-imageAlt: Virtue — areté
+image: /assets/semper-idem.png
+imageAlt: Semper idem — luminous infinity of interwoven transaction strands pulsing through a semantic loop
 imageRole: inset
+imagePlate: wide
 showInNav: true
-publishedAt: 2026-07-01
+publishedAt: 2026-08-31
 theme: emerald
 jurisdiction: Ashit Milne
 tags:
-  - ethics
   - governance
   - identity
-  - money
+  - personhood
+  - autonomy
   - capital
-  - theology
+  - money
+  - networks
+  - privacy
+  - metadata
+  - subsidiarity
+  - blockchain
+  - global-commons
 ---
-## Personhood
-
-Beyond basic safety and security stands identity. Once primary needs are met we turn to self-determination by establishing ourselves as individuals distinct from but belonging to a community. The first of these is our family - specifically our mother
-
-In the multicultural west our relationship to other groups will be intermediated by our parents and their own ideas of what community or group entails. Immigrants arrive to seek work and to create lives when that isn't possible at home but that shouldn't stop them from feeling secure and develop relationships as they settle. Naturally however, they will feel bonds to the people they left behind and that is where they would rather be.
-
-As we grow and enter into state funded education systems we will encounter a broad ethnic milieu and the state will seek to foster a sense of solidarity as we share spaces and resources, not the least of which is our teachers' time. 
-
-Then as we grow further and start to develop attraction we will begin to feel the tension and pull between meeting the expectations of parents on one and those of the broader community which *probably* would prefer us to blend - although this preference isn't made explicit as it tethers us to one place more than others so that home is not just a place we work and pay taxes but are a part of an evolving cultural reality. 
-
-Generallygiven that we are in any case global in perspectives we take the path of least resistance and make a suitable match - one with a general alignment of perspectives just work at this relatively early age;
-
-
-e may belong to many distinct communities in spite of that 
-
-Much as the word friend or partner have changed so to has community which broadened to include an economic union of nation states (the European Economic Community). Meanwhile many escalate community by referring to strangers they meet as brother or sister even as self-moderating forums comprised of strangers develop genuine foci of interest online in places like Reddit. At any rate we address or introduce ourselves by a deliberately chosen name rather than a random collection of symbols (generally a string of alphanumeric characters).
-
-In modernity we also add a second layer which defines our role and responsibility; father for example or 'associate vice chairperson'. Alternatively there are simple identifiers, for example a social insurance number (SIN) assigned by the government or a client, customer, or employee number assigned by corporations. These overlap as the lines between any kind of rational perimeter blurs to become a matter of semantics. Alternatively they are precisely defined in law or a contract between parties exchanging value.
-
-In the past the wealthy retained paid staff delegated to carry out various tasks. The most powerful also retained, through patronage, the counsel of senior advisors. At any rate distinctions could be made on who was and wasn't part of a group and the price of disloyalty was death or exile. The price of incompetence was termination of employment and possibly starvation.
-
-Today we live today in societies where talent and ambition is fluid and in which mobility is only limited to the capital available at one's disposal. However the question of what one is willing to do for money and what another will not do for any amount of money is personal. This is dictated by the qualities of the individuals interacting with one another. At its foundation systemic integral strength is stressed tested by ideas of what constitutes money and whether it is natural and appealing to the sentient. Compromise then becomes irrelevant because we are now dealing with fundamental realities and the prospect that they will change for the better where we live. 
-
-Location is the most fundamental marker in geolocation because only legally defined borders limit our options. Meanwhile all of us are expendable and disposed of readily when employment is a merely career choice rather than dictated by a complex set of preferences that may be termed Calling. Optionality in this instance is limited. It is a philosophical matter mapping the meaning of three critical terms: private, property and person. After this semantics dictate how secure one is while *policy* dictates for how long. Policy itself is then a social contract between what is dictated by all and what is then observed by one. There is a natural flow in the way in which governance has evolved and is now limited only by the arbitrary device (a manufactured item) and how it is used. The orthodox line is to be drawn by how much one holds in a single hand as to how much to carry beyond a perimeter (otherwise one old man is another's baggage).
-
-
-## Forest For Trees
-
-Our transactions were once strictly bounded in geographical terms. We interacted directly with nature extracting what was needed over the course of a growing season. Security was for the large part provisioned by an absentee landlord in exchange for real things (including husbands if sons were unavailable to physically defend the land from a land invasion. 
-
-North America however was settled by people from elsewhere. First settlers arrived and
-If learning had utility children were released for the summer because their parents needed help with harvest. Meanwhile our garments were made close to home - in cities by the poorest of workers - first slaves often immigrants) because this is the only kind of work available.
-
-
-
-With all technology the question is whether the person asking the question themself needs a thing. That includes automobiles - especially for those living in the urban core and if so how long will it last before it makes sense to sell it? The same is true for digital devices. How many do we need to own and why are we acquiring them. Why do you have separate devices for your job versus the rest of your life? Are you enjoying the time you spend time on your device and are you and your employer getting sufficient value from it? 
- 
-Should we really need separate ones for work and home use just because firms require online security?
-
-
-
-who may or may not abide by the terms of your contract to the letter - he may be tardy or ignore various terms altogether. It is written on paper and you have no recourse but to pursue various options that involve other people and their contracts. All contracts ultimately come down to one that is still written at its most insignificant divisible amount - paper money in the United States of America. All other form of money are in some way deliberately coded as a signal. The mark is the original. So too the (aluminium) yen. The pound is named sterling and its relationship with the USD was historically known as cable. The term is named for the solitary line which traversed the Atlantic to provide information from Europe to the Americas; *the* most important detail of that. 
-
-
-
-(USD/GBP) - the volatility measured in the exchange rate between the United States dollar and the British Pound. Today this 
-
-The question then is how one spends their time in places beyond where they sleep and call home and as well, how well they can lay siege from a distance or apply sanctions (monopolize permits and allowances). For those of us sitting comfortably in the liberal west - everything is permitted us *except* how others spend their money and time. 
-
-In the wilderness - a forest for example - the unaccustomed city dweller is prone to panic. It is eerily quiet and still. It's precisely that aloneness that is difficult for the infantile and for the fidgety who feels they *need* to do something. This is pervasive excitation - a desire for a variance from a normality which doesn't compute. When things in our world do not make sense we look to cope through a vacation or through entertainment or distractions which have the merit of informing us (such as global affairs) which may then be processed to better model reality and our own life.
-
-In rural areas concerns are different from those of the city but a train commute has always made that reasonably as long as you can work or sit quietly to think. However what really matters was whether the trip into a city is ever worth anyone's time - unless you live there you're tourist and are visiting to participate as a member of a community in the milieu of its teeming culture and socio-economic diversity.
-
-It is peaceful. While the city is and has always been full of heat, noise and congestion. The spaces in between are just what happen to line the highways that nobody wants near them.
-
-What hasn't changed is why they go into cities; it is generally to immerse and express themselves in corporate and human culture. If communities gather in some space it is to work to some genuine purpose that requires face-to-face with people they know or trust collaboration, otherwise it is a collaborative space for expressing identity and sharing information for those who are focused on effortful activity that gives their life meaning. 
-
-We generally do not send people out on errands in the wilderness and in the modern world warfare is delivered at scale and indiscriminately but locally - there not here. Conflicts may be interminable and constant but they are skirmishes when the cost is counted in dollars and then we need to be very precise about the terms we use concerning capital and how it is applied - invested (there is no real difference between an investment and savings - otherwise you need to structure portfolios and returns become focused on things that are immaterial to others (a present value in kind - quality of the inputs - air, water and land).
-
-
-
-
-
-
-
-
-
-and whatever conundrum is issued concerning sounds heard elsewhere the question is whether trees can peacefully coexist with each other and the other flora and fauna without becoming an artifice. What I mean by this is that soon enough after fake plastic trees you will get fake fur trees or fake fir forests (they are actually future Christmas Trees). 
-
-
-
-So which yield natural Christmas trees - but at least it's some point in the future. These are decisions made by good people who know how to draw well enough and leave philosophical questions concerning property to people.
-
-
-
-
-
-
-
-
-
-
-
-
-
-by Crown. 
-
-area using an assigned fixed telephone line within reasonably premises - ones we were permissioned to  today we interact through a multitude of  devices and applications and expect to do so safely and with ease. Whereas tourists were always soft targets for local petty criminals the proliferation of digital media on a global social network in a world where wealth and income inequality persists makes us vulnerable in unfamiliar surroundings. Even at home in our ethnically diverse and tangled sets we partition into silos; some of these through the persistence of genuine discrimination are exacerbated on social media. Those who seek to traverse and blend often feel coerced into pulling away from friendships leaving those effected feeling alienated and casting around bewildered in search of an explanation. 
-
-For these reasons we have 
-
-
-
-We assume clear designations based on our acquired attributes and as assessed collectively through a consensus developed through delegation to Federal and Provincial legislative and regulatory bodies. In this way we find our place and sense of belonging in a group; if we feel unfairly or arbitrarily treated we may always leave quietly.
-
-The first step towards modeling a framework to augment our physical reality is to establish the peace required to establish order so that we maybe productive which then frees up time to provide us with the ease and comfort and incrementally better governance so that we enjoy today. This is a mechanism for stemming disorder and we begin to establish it giving things and people names to distinguish them. 
-
-The quality of a thing relative to how they meet a need is what gives a thing merit or value. The calculus of *both* quality and quantity establishes it as relative priority and urgently if it is scarce. The ability to transparently and openly access credible data with which to establish a true picture of economic reality is a pre-requisite to utilizing labour and capital in a domain and then negotiating terms for settling them abroad.
-
-
 ## Identity
 
-I've coined the term semantic perimeter of embodied identity (*semper idem*) to explore the idea of identity as a *human* one in the modern global economy; something more than a name or a brand because it requires that esoteric and austere practices which have little purchase traditionally in the west such as *yoga* which emphasize peace except among the wealthy elite who may well be seeking answers to meaning. Meanwhile realpolitik and the ethnocentric priorities of western democracies lead to manipulation, censorship, deception within faith based communities towards those who venture beyond strict boundaries which were deemed to be transgressed (transparent and open discussion with others).
+Beyond safety and security stands the desire for identity. Once our primitive needs of food and shelter are met amidst the familiar environs of our closest kin, we turn our attention toward self-determination—with the aim of establishing ourselves as persons possessed of a distinct place and standing alongside others within community. The reason for this is to settle with finality the fear and anxiety associated with material subsistence and loneliness—the ability to trust one another makes life significantly easier in emotional and psychological terms for everyone: it is why we come together and live in community rather than dispersed and alone.
 
+The barest definition of community in traditional societies blurred into notions of tribe and clan, where a sense of belonging based on bloodlines afforded one a degree of forbearance and forgiveness. All I mean by this is that it wasn't necessary to immediately possess some practical and utilitarian ability in order to be granted standing in one's community.
 
+However, in the post-colonial mid-twentieth century—amidst technological advancements in transportation and communication—Western society in particular became significantly more complex and atomistic. It became commonplace for us to move frequently and to take up new residences alongside complete strangers.
 
+Hence, social scientists asserted the idea of the nuclear family as the elementary institution of modern society. How this family was constituted in a specific instance varied substantially; however, it was defined by a communal occupation of a bounded dwelling: a house or apartment whose perimeter and entrances were physically apparent to anyone—literal doors with handles and locks, presenting a clear portal to an enclosed private space.
 
+Now, in the yoga traditions of India, one spoke of the householder in very specific terms. In a world before centralized governments monopolized the use of force in the maintenance of peace and order, adults reaching a certain stage of life assumed the responsibility of governing a home within which to raise a family. The spiritual alternative was to renounce property, possession, and money entirely to become _sannyasin_—ascetics who wandered the countryside entrusting their survival to fortune and whatever might be placed into their begging bowl.
 
+Having established a home and family, however, the householder was expected to look outward, balancing domestic duties with participation in the management of the world beyond their threshold. These were the demands of governance through collective deliberation—practical, honest discussion with peers. This obligation scaled upward toward the largest expression of community interests recognized today: one combining the cultural personality of a tribe (the nation) with the geographic parameters required to define administrative authority. This is the Sovereign—the jurisdiction we call the nation-state.
 
+Beyond voice and opinion, householders were expected to contribute the capital required to execute the collective will. The burden of funding public utilities—roads, bridges, irrigation—was shared. The money a householder earned flowed from a vocation addressing collective needs while aligning with their own innate abilities—at least as far as was possible in a reality rarely within one's full command. Autonomy was subjugated to a considerable extent to the community, but in return, the commonwealth offered meaning and purpose: one possessed genuine utility, esteemed by peers as valuable and necessary.
 
-as well as activism be allowed to coexist alongside a free market economy in which governance remains profligate or compromised - subject to market forces (currency  markets) and broader capital markets which trade licenses via patent and copyright through enterprise transfer pricing.
+In the modern world, this aligns neatly with the political concept of subsidiarity: the principle that issues should be addressed by the lowest, most local, or least centralized competent authority possible. Opposing this is the democratic deficit—wherein responsible government fails because representation is too far removed from the mundane concerns of ordinary citizens. Today, people have lost not only the ability but also the desire to influence decision-making with their voice or their money, paralyzed by two compounding crises: a lack of perceived meaning in their daily labour, and the realization that economic survival requires complicity in an extractive economy driving ecological collapse. This disconnect deepens as the state metastasizes into unaffordable layers of administrivia, while culture degrades into crass nationalism and franchise entrepreneurship on one hand and the marginalized narrowness of identity politics on the other—each vocalized and cheaply amplified across the platforms of social media.
 
+## Money
 
+In modern society, money is the technology individuals use to transmit information to the broader world concerning what they value and prioritize—and, by extension, what they reject. In a very real sense, it is the mechanism through which we select the reality we inhabit, manifesting our preferences through daily expenditure. Yet the frictionless ease with which we spend is both a blessing and a trap: it exposes us to subtle behavioural manipulation that sustains our political economy in a fractured world—serving, at the very least, as a tolerable alternative to thermonuclear war.
 
+The one dimension we have been unable to govern until now is the nature of the currency itself. Ours is a fiat currency whose value rests solely on our collective decision to accept it. Consequently, personal agency and true autonomy depend on our capacity to abstain from its use—or at least to deploy it mindfully, sustaining our well-being to the greatest degree possible without externalizing harm onto others. Whatever the nature of our money, whenever we transact at the register, we are answering a fundamental question: whether our choices support a world fit for our children after we are gone.
 
-. It is the Latin term (male/neuter) for a thing that is the always same and never changing *except* for how it adapts to the world - this is manifested in real time but recorded in numerous ledgers spread out of a political economy. This makes a true audit of one's identity impossible unless one's reputation is sound from a *legal* perspective. The rest is about a person's values.
+Paper cash presents a profound dilemma for this collective ledger: its transactions are impossible for society to read or govern. It carries no metadata—no record detailing who held it, where it traveled, or what purpose it served. While this persistence offers an essential sanctuary for personal privacy, it simultaneously externalizes systemic risk onto the public using that same currency, whether in physical form or through device-bound digital networks.
 
+These costs fall most heavily on society's marginalized and impoverished. Yet they are also absorbed personally by the rest of us—manifesting as anxiety, depression, and an escape into addictions of every kind, so long as they remain distinct from what passes for "respectable" in modern civilization. This is the psychological toll of living in a system where relative income and wealth no longer reflect a defensible measure of what is fair and rational; an outcome grounded in integrity, strength, and intelligence—what we might call, in an objective sense, beautiful.
 
+## Semper Idem
 
+I employ the Latin phrase _Semper Idem_—traditionally meaning "always the same"—within _Regnum Dei_, my philosophical model and ontology for governance, as an acronym for **Semantic Perimeter of Identity Embodied**: a term I use to describe abstracted identity in the digital age, manifested one transaction at a time, often bounded by bricks and mortar, yet functionally ephemeral.
 
+Abstracted identity is a conceptual framework in which entities—whether persons, institutions, or automated processes like agents—are defined not by a physical, material presence, but by a structured set of attributes, relationships, and metadata which trace them back to an originator who can be held responsible and accountable for outcomes in the material world.
 
-. The nature of this constancy is soul-bound and possesses animated sentience - it has liveness embodied and constituted as anima and animus in complex and combinatory fashion. This is created through our interactions with the world making us the sum of their parts. In one sense our life itself is one whole transaction which begins and ends with a final reconciliation - one nil.
+Ultimately, this identity is embodied directly by an individual within their own physical person, or collectively by that person alongside others holding a stake in shared private or public institutions—the governance of which is then either deferred or formally delegated through contracts, formal processes, and due diligence.
 
-At some point having explored the range of possibilities or interactions that life entails we retrospect and examine the vector of our life. We wonder whether it's on a path which we might look back upon as satisfactory at the end. In some sense we do this constantly. Each moment demands a response wherein we take a measure of time to consider our options before making a choice. The optimal choice is one which does no harm but which *stresses* meaningful objectives. This is as true in the material world with exercise which is expressed  
+In mechanistic terms, the kernel for _Semper Idem_ might be a unique physical characteristic—such as the iris patterns used by the Worldcoin protocol on the Ethereum network, fingerprints, or recognizable facial structures. Alternatively, it can manifest as a semantic signature of work online: something imbued with a specific personality because it is focused upon a core subject matter, a guiding philosophy, and an idiomatically distinct linguistic character. For example, the body of work published on this site can serve as the foundational dataset for a persistent AI agent—one authorized to act as an authentic, deterministic proxy representing my worldview and intent in digital spaces. Indeed, that is my intention: to create just one (hopefully among many) open-source philosophical models which aim to inform and assist in the governing of our information networks by aligning transparent truth to the utilitarian objective of enabling sustainable organic productivity in place of the extractive system currently prevalent in our political economy.
 
-We are objects in a matrix - a mesh or web -  and in a constant relationship with one another pushing and pulling to effect a change. The nature of that change is contextual (subjective) but it *always* contains information and it is *always* worthwhile in itself. 
+This economic alignment, however, is not merely digital; it dictates how our abstracted identity exercises power in the physical world. We might insist that our money is our own to use as we see fit. However, it is in fact a utility which we all, in some sense, own together, and our choices as to how it is used entail consequences for everyone because our money, like all who use it, is ultimately tethered to our planet and its materiality. How I use money ripples out into the world to impact others.
 
-For example a pushup can be a metric (used to quantitatively measure effort) but the work itself is deemed a good and done maximally (with good form) to extract all positive value. One *could* go to a gym or use a machine but the toil then extracts a cost in time and money. This is called optionality. There are always alternative uses for time - whatever else you wish to do instead.
+Indeed, this even extends into the physical reality of how we each choose to use our bodies and expend the energy which we possess and which we paid a price for. The decision to walk or carry a load by our own effort rather than sit as the sole occupant of a vehicle racing to a job creates an incremental gain or loss of value—both for ourselves and for the commonwealth. So the matter at hand is ultimately alignment of the one to the many because from the many comes one—_E Pluribus Unum_. Equally, the question is how honestly and universally aligned is the virtue that we signal through our personal behaviour as it impacts others in our communities and on our ecology.
 
-However the more transparently we reveal our personal preferences and show they both correlate with globally recognized priorities and as well broadly recognized long-term value-oriented alpha-seeking methodologies the more incumbent it is upon us to govern those things ourselves; neither sovereigns in general, nor the hegemon have at any level 
+## Virtue
 
-. This is because people place, and crucially, their sovereigns operating in a conflict-ridden multi-polar political economy place their self-interests ahead of global ones.
+The choices we make within the comfort of Western prosperity carry little immediate weight for the vast majority of humanity, for whom our baseline abundance remains a distant dream. In a world where daily existence requires constant struggle, moralizing virtue and theoretical goodwill are luxuries that those eking out a bare survival can ill afford.
 
-others the more likely it is that we will have to govern it ourselves as they will neglect it. Certainly in the modern world of large regimes the periphery is at any rate  neglected to some degree as a matter of policy in order to maintain control by throttling access to capital sometimes with considerable precision. This is true in all large countries. Canada because of its diminutive population in comparison to its neighbour is particularly vulnerable because there is very little the government can for a particular individual who feels the brunt of surveillance and control simply because they are key markers on the social network around which Reed's Law and the formation of communities might autonomously actuate. These become visible and so too the notable junctions or neutral zones, intersections, where susceptible individuals may be compromise and lucrative kompromat secured. 
+Just as the entrance to a householder’s home presents a portal for those seeking to understand what lies within, so too does the smartphone—an apparently unabstracted physical object—provide an unobstructed window into its user's life. Through its telemetry and networked applications, the device reveals not only who its owner is, but how they behave and what they value. It presents both profound opportunity and risk: both to liberal democratic societies at home as well as to the developing world beyond.
 
+Ultimately, modern digital transactions are processed within what functions as a singular global ecosystem. The critical question is how our infrastructure—a financial social network we define broadly as the US dollar regime—navigates deep geopolitical fault lines as it routes capital, data, and influence across contentious states like Iran, North Korea, and Pakistan, while simultaneously mediating trade with major strategic adversaries like China and Russia. Furthermore, it must absorb rising, non-aligned powers like India, whose complex commitment to post-colonial self-determination resists easy integration into traditional Western definitions of political economy.
 
+Emergent public blockchain protocols represent an opportunity because they yoke our personality and identity to the Global Commons transparently and honestly, standing in stark contrast to the opacity of our current dispersed and fragmented notions of digital identity scattered across various institutions, both private and public. These fragmented systems currently struggle to orchestrate their queries while assessing our identity as we traverse the internet and the real world in swarms—gathering and dispersing to experience culture whether in concert with strangers, at home amongst friends, or alone quietly in our offices and private spaces.
 
-as advertising  in response to and the tendency private decentralization of large advertisement based firms such as Google, Facebook etc.
+## Neutral Zone
 
-do especially ours if our neighbour wishes to monitor high-value targets through its large technology firms such as Google and Microsoft as routes to access and control the social network. The United States has never been a strong advocate of human rights, particularly for those who challenge corporatism (its centralized model of imperial capitalism) and this is something one has to live with and accept.
+In ice hockey, Canada's national winter sport, the rink is divided into three distinct zones. Within the central "neutral zone," a subtle, contentious struggle develops over puck possession to dictate the balance of power and the ultimate outcome of the game. In the digital age, Canada—and specifically Ontario, its most populous province—has become this geopolitical neutral zone: an arena where underground power politics emerge out of community special interests.
 
-in favour of the core - which is now very tightly cordoned into the United States instead of broadly through its sphere of influence. It wanes as a result and it is losing brand value. 
+For the last quarter-century, dominant American technology platforms have dictated how personal information is harvested and milled into monetizable value through attention-based tracking mechanics. This is not a mere commercial exchange of utility for personal data; it is a systematic, deep-rooted probing that breaches the individual's digital back door—a comprehensive erosion of identity and one's most private sense of self.
 
-If we desire autonomy then we must have control over our time for the obvious reason that we value it far more than others do. In fact time along with our natural resources are essentially the only thing beyond that which any true value. As well it is difficult to belong to any community that does not evidently establish them as a prime objective. Since these things are local and since the product from them is distributed it stands to reason that a monetary governance which allows for a precise reading of *local* factors is essential to allow quality variables to be assessed. To secure ordinary people and the most vulnerable among them however decentralized identifiers are essential. Until we have them we are dependent instead on a complex global system of exchange rates which at its core has the US dollar regime. That country's own priority of prosperity and full employment for its nationals ahead of others puts it in direct conflict with others - its allies as well as other countries allowed to received and use the US dollar. 
+Driven by intense domestic political competition and a defensive animus toward global rivals, US institutions use Ontario as a low-risk proving ground to harvest value and quietly breach the _Semper Idem_. Technology platforms—spanning social networks, streaming services, ride-hailing applications, and dating services—deploy Ontario as an operational sandbox. They are not merely testing software features; they are measuring precisely how far they can reach into the sovereign identity of the individual without alarming the householder or provoking civic resistance.
 
-The great opportunity of our time is to draw away from the hegemon to govern ourselves anywhere in the world without its aid and assistance, flailing and haphazard such as it is, and to take custody locally of the Global Commons everywhere they have so profoundly neglected while attending to electorally established priorities - largely tied to full employment. decentralized monetary governance will allow the creation of nodes similar to those that in the last century saw the concentration of talent and capability geographically unless the hegemon move quickly with leadership in *scaling* stablecoins.
+In database architecture, a "junction table" resolves a complex, many-to-many relationship between distinct entities by centralizing them in a single, structured record. Ontario—and the Toronto-Waterloo tech corridor in particular—operates as a geopolitical junction table, resolving the relationship between global capital and fractured global consumer demographics. Training machine learning models requires vast behavioural diversity; Toronto, with over half its population born outside Canada, provides a globally representative sample of cultural, linguistic, and socio-economic behaviours. It allows American firms to query global demographics without ever leaving a stable, English-first, North American legal jurisdiction.
 
+This setup also bridges conflicting regulatory borders. Where the United States maintains fragmented data privacy laws and the European Union enforces strict GDPR compliance, Canada’s framework (_PIPEDA_) occupies the middle ground. Global firms utilize Ontario to stress-test data architectures: if an extraction model successfully navigates _PIPEDA_, it functions as an adaptable bridge for both aggressive American commercial markets and strict European oversight alike. Because Ontario shares high disposable income and smartphone adoption at a fraction of the US market scale, it offers a contained "blast radius." If a data-gathering feature triggers a public relations backlash, technical friction, or a sensitive data leak, the fallout is absorbed locally through the social sanctioning of a relatively high-value, low-visibility individual before it can threaten the firm's core American user base or valuation.
 
-
-
-
-what gives a thing merit. gives it merit. and it gives an instance of it relative merit  . It also in the sense of complex societies based on philosophical rules founded on democracy makes them non-fungible. The distinction then becomes one of whether we are equal or we are *equivalents*.
-
-In ordinary terms of course we are each unique - there is no identical replica of us occupying the same space. However in the context of a complex modern political economy where equal rights confer both rights and obligations to one another some closed-loop mechanism is required to hold these in balance otherwise. 
-
-In a way we all bear both the *cost* and the *standard* of living together as a draw on our global commons or the ecology. In a free society the standard, or what we do with our lives to create a modicum of comfort, is down to each of us to decide based on where we find ourselves. The cost regardless will always be borne by all *globally* - In a world of digital immediacy there are no borders. Data and capital move now move at light speed from any one person to another and so they transcend all traditional notions of border or boundary.
-
-
-
-
-
-# Common Or Garden
-
-In the identification of *flora* the term *common or garden* is used by enthusiasts to denote unexceptional but popular varieties - the ones most frequently planted. Plants have in a combinatory sense an infinite variety of attributes which allow their visual identification and which related to their utility in nature - an alignment wherein self-interested robustness developed over a long period serves the species' own interests and those of its ecology of time and symbiotic utility in nature. Flowers though were also the first thing *we* prized for their sheer beauty alone. 
-
-Like plants humans too have a genetic complexity which *as a whole* contribute to everything's long term viability (and value). The question then turns to what 'long term' means to a person and whether their transactions with the world are sufficiently free of animus as they relate to the world; that at a minimum they do no harm one's community (framed as the Sovereign) or to the Global Commons. What constitutes harm? Advancing an economic self-interest surplus to subsistence by actively interfering in the lives of individuals is one that is counterproductive to credibility particularly when they also damage the Global Commons.
-
-However it's through our own innate qualities and interests developed in our *own* time through which we become self-aware to fully self-actualize
-
-
-
-
-and develop the self-esteem required to live in a complex society with the agency and autonomy we are granted by our attributes.
-
-
-
-
-## Better Safe Now
-
-Identity is fundamental to determining how one is to be kept safe and secure. It is who we are and through its expression we come to know our standing as our transactions express a stream of consciousness; a signal which expresses, to the degree with which truth is 
-
-
-by the esteem which we are held
-
-and composed of ideas learned through the course of a lifetime; then expressed in terms that wax and wane with the zeitgeist of the *real* world as it turns through the trends and fads that resonate with it.
-
-The most important ideas then stand us apart from the spinning compass that whirs through every unquieted fad. The important ideas are the *oldest* ones universally dreamed of in a thousand ways in communities that become societies and then great empires since the beginning of time. The persistent pattern is repeated relentlessly and it tells us of pitfalls of making the entire world in our image. For who would want such a world? This is the lesson of Midas, the self-made man who turns himself to gold at long last like everything else.
-
-All of us start at *different* places beyond our control. All we can do is make what we will of the ourselves with the mentorship and guidance of our forefathers in the lessons taught  by fathers but perhaps not entirely fully practiced. That we might yet achieve that thing we have had set us up for us.
-
-
-- those men who get close enough to guide us in a tempestuous world of bravado. 
-
-- those who cannot delineate the demands of the office they hold and who they take home to the world of their loved ones. 
-
-Nor is it something demanded of only our most powerful - those who have been chosen by us as we exercise our rights and obligations but by each of us. Those who aim high *must* fail so it is important to define what ambitions we pursue and whether they are self-serving or designed to achieve progress. In that, all we can do is live our own lives as best we can as an example. If I look back on my *own* life my greatest influences have been teachers - my grandfathers and those who taught me in schools and universities across three continents - most of all my own father - upon whose shoulders I have been carried. It is his humility along with the simple idea that one does not beg - neither for respect nor forgiveness. For if we have lived well and taken nothing. Everything we could ever have wanted was granted to us at birth.
-
-
-
-
-
-There are those two who set for me the qualities of radical brand - a Style Council if you will - who define the pose in the world of posers who crave the pulpit and as well the loudest of microphones.
-
-
-
-
-constitutes  and define the fundamental philosophies that might serve
-
-We are born extremely high-maintenance and costly. It is an extraordinary thing to believe you have the capacity to raise a child because they are an enormous burden - one few believe they can afford.
-
-and then held longer than any other mammal
-
-is composed of ideas; sound ones which are perennially recognized as valid
-
-
-and simple ones geared to our *own* survival. Contentment cannot be sustained where access to the *ways* in which we might make our  lives better is impeded.
-
-This is why agency and autonomy are important. First it has to be expressed by *oneself*.  Nothing substantive in the world will change without us first making some meaningful effort to effect positive change in *ourselves*. It is an anarchist *tenet* that *order* is a natural phenomenon which may only be manifested in humanity without permanent hierarchical leadership.
-
-To the present day the US Constitution provides the oldest extant basic law against which we measure the *practical* limits of freedom over the course of time in a large domain - the US Dollar Regime. Written by Thomas Jefferson this is the first manifesto of the philosophical anarchist who understood the *delta* between what was felt as truth and beauty and how it was allowed to be publically expressed in *his* world.
-
-Through the nineteenth century Americans would roil violently in conflicts concerning their political economy and how one was to define the terms foreign and domestic; and as well public and private. In the meantime philosophical anarchists Whitman, Thoreau, Emerson and as well too William James *diverged* from this insanity to root themselves in spiritual traditions and as well to explore their relationship in symbology to ecology and courtship; both of these once the purview of private spaces and conversations have now become impossible to govern on and offline without the interference of interlopers. It is individuals not the *vox populi* which has led (or front-run) progress quietly; simply by living their lives peacefully in a distributed and autonomous fashion.
-
-Whereas in 1917 the Anarchist Emma Goldman might be exiled from Chicago to Toronto for protesting against military conscription. By 1960 the openly bisexual Paul Goodman living in a time of radical beatnik dissent amidst general prosperity could postulate the follow:
-
->Let me formulate the artistic disposition as follows: it is reacting with one's ideal to the flaw in oneself and in the world, and somehow making that reaction formation solid enough in the medium so that it indeed becomes an improved bit of real world for others.
-
-Those who react to the defacement of what are *universally* acknowledged sanctums (sacredly held notions) are responding with a measure of pragmatism to an aesthetic concern - a lack of consistency with which the *law* is enforced and safety is provisioned to ordinary people.
-
-That same decade Noam Chomsky might peacefully demonstrate against the war in Vietnam without fear of losing his life. *Academia* was a sanctum where *peaceful* protest and discussion was permitted as long as it was not generally disruptive to their spaces or domains.
-
-However by 2008 the anthropologist David Graeber, raising his sites to explore the political economy of the firm and its relationship with the state would lose his job at Yale for protesting against financial bailouts. Whatever the reasons for his removal continuing his work at Yale was deemed untenable by its internal stakeholders.
-
-As an accomplished academic whose ideas were generally acknowledged to be peacefully articulated he was permitted to leave his country. Exiled in England he would continue his work at the London School of Economics.
-
-Graeber died at 59 from necrotic pancreatitis shortly after finishing his last book The Dawn of Everything. The book explored the anarchism of indigenous Americans whose governance was founded on discussion-oriented dialogue of tribal *elders* entrusted and delegated by their tribes to discuss important matters.
-
-As a person who shares the principles of these thinkers and who will not defer to *any*  sovereign the right to dictate what constitutes basic freedoms - even my own countries - Canada and the United Kingdom.
-
-I myself was employed in what people generally refer to as the *private* sector until around 2022 at which point I found my own condition to be untenable. Graeber spoke at some length about the mental health risks of working in *bullshit* jobs - work performed without much joy and primarily to earn a wage with which to pay expenses some time after you've learned everything there is from the opportunity.
-
-critical ones my focus or frame of reference extend to those things which were beyond their scope and domains: 
-
-
-
-
-
-
-
-Good government is preceded through the institution of order. Order is merely the imposition of established rules. Order in this context is synonymous with *law*. By and large in the *liberal* west we may generally live *openly* even amidst radical communities as long as the law is obeyed concerning basic notions of crime.
-
-The anarchist 
-
-
-
-By permanent we mean that at any given time anyone may assert themselves in some way.
-
-
-in the without others is easily learned by adults unless they are regularly experiencing some kind of effortful effort manifest a small change. 
-
-
-Especially when civility becomes a precursor to dialogue.
-
-
-
-
-
-just how vital air, food and water
-
-Whatever articles we may possess beyond our person require substantial draw on resources - the most *valuable* being our attention. I filter the concept of value through an *anarchic* lens. All that means is that we all value different things differently and that we are not just different 
-
-and this comes from 
-
-From my perspive this means we need to focus on what we tend to *miss* governance and then broadecten individual agency and autonomy so that we might each more effectively enable agency to address
-
-
-
-
-Identity is an aspect of sensient nature and *fundamentally* vulnerable. This is how I think and while I may not consider it particularly interesting other people it has important implications for my ontology which is geared to preservation of what we have and its securitization first and foremost.
-
-
-
-This is a philosophical conversation so I'll limit my definition of money to what you use to buy food and shelter plus anything else that may be required to procure them. 
-
-
-
-
-
-
-
-
-
-This in turn is telegraphed through institutions. Whatever we do today relies on capital accumulated.
-
-Ideas create the characteristics of *identity* which are embodied at the current moment in interacting with the environment in time 
-
-
-
-
-This creates an imprint which is elaborated or pixelated over time.
-
-and which are then instantiated over many generations. 
-
-
- 
- The best ideas last the longest and a.  We don't think of these ideas as organic so we introduce the idea that they 
- ll
-
-
-
- . These are our heuristics - the simple ideas
- 
- 
- 
- These Ideas precede identity but in combinatory ways ideas are turned into functions or utilities. These are rules written in some code which is then ultimately a binary (yes or no) decision.
-
-
-
-
-
-
-
-
- 
-  
-  
-  The most important ones are persistent simple ones geared to our survival.  In civil society our children more than we ourselves signal something. What that is depends on how the world *feels* about you and whether it is appropriate.
-
- 
- Those meaningfully signal something 
- 
- 
- 
- Beyond that there is identity.
-
-
-
-
- In a primitive context we prefer to gauge others from a safe distance; the evidence is that we are startled when we come across others, even those we are endeavoring to meet if they appear suddenly without any indication of their arrival; for example the sound of footfall or some other aspect of approach.
-
-In the context of urban modernity where we have large populations moving in close proximity (swarms) we rely on *basic* factors to make our way. At the street level our attire and our behavior signals belonging and any divergence indicates alienation or separateness. Homelessness is an indicator of economic divergence. Similarly attire *may* signal non-compliance with broadly shared social norms. This is seen as radical - one's attire doesn't necessarily imply
-
-
-
-
-Our willingness to accept them and continue to live in society suggests our acceptance of them; self-interest and the Incuriosity keeps us moving on to our destination. The curious may give such things a passing thought - while the indifferent accept their aesthetic incongruence - which is in fact the definition of pluralism. Anyone who needs assistance will call out. 
-
-
-
-
-
-
-
-
-it's a more difficult question to entertain in the abstract and then in practical terms apply that abstraction online. The Latin word for which is since *ab*. Those are also the first two letters of the Greek alphabet. 
+This dynamic forces us to draw boundaries defined not by physical coordinates, but by notional social contracts. The most fundamental is one's attire: the line between public presentation and being stripped bare before the state. What does that attire represent—individual comfort, environmental adaptation, or deference to societal norms? Just as clothing forms the innermost boundary between the individual and the collective, transaction metadata and digital protocols now form the outer perimeter of identity. The rest is semantics, heresy, and hearsay—a private word intercepted and distributed indiscriminately across the network, turning a whisper to a scream in the margin between bean-counting and being counted as one possessed of dignity and identity.

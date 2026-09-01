@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T16:26:07.893Z",
+  "generatedAt": "2026-09-01T01:03:35.629Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -15,19 +15,19 @@
   "interior": {
     "summary": {
       "essays": 11,
-      "nodes": 99,
-      "edges": 229,
+      "nodes": 106,
+      "edges": 231,
       "byKind": {
         "member-of-series": 7,
         "member-of-folder": 11,
-        "tagged": 57,
+        "tagged": 63,
         "lexica": 33,
-        "mention": 121
+        "mention": 117
       },
       "orphanEssays": 1,
       "series": 3,
       "folders": 4,
-      "tags": 21,
+      "tags": 28,
       "terms": 60
     },
     "nodes": [
@@ -61,12 +61,18 @@
         "ontologyPath": "governance/illumination/semper idem.md",
         "vaultPath": "ontology/governance/illumination/semper idem",
         "tags": [
-          "ethics",
           "governance",
           "identity",
-          "money",
+          "personhood",
+          "autonomy",
           "capital",
-          "theology"
+          "money",
+          "networks",
+          "privacy",
+          "metadata",
+          "subsidiarity",
+          "blockchain",
+          "global-commons"
         ]
       },
       {
@@ -296,9 +302,44 @@
         "label": "theology"
       },
       {
+        "id": "tag:personhood",
+        "type": "tag",
+        "label": "personhood"
+      },
+      {
+        "id": "tag:autonomy",
+        "type": "tag",
+        "label": "autonomy"
+      },
+      {
         "id": "tag:networks",
         "type": "tag",
         "label": "networks"
+      },
+      {
+        "id": "tag:privacy",
+        "type": "tag",
+        "label": "privacy"
+      },
+      {
+        "id": "tag:metadata",
+        "type": "tag",
+        "label": "metadata"
+      },
+      {
+        "id": "tag:subsidiarity",
+        "type": "tag",
+        "label": "subsidiarity"
+      },
+      {
+        "id": "tag:blockchain",
+        "type": "tag",
+        "label": "blockchain"
+      },
+      {
+        "id": "tag:global-commons",
+        "type": "tag",
+        "label": "global-commons"
       },
       {
         "id": "tag:ecology",
@@ -803,13 +844,6 @@
         "weight": 1
       },
       {
-        "id": "edge:essay-governance-illumination-semper-idem-md-tag-ethics-tagged",
-        "from": "essay:governance/illumination/semper idem.md",
-        "to": "tag:ethics",
-        "kind": "tagged",
-        "weight": 1
-      },
-      {
         "id": "edge:essay-governance-illumination-semper-idem-md-tag-governance-tagged",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "tag:governance",
@@ -824,9 +858,16 @@
         "weight": 1
       },
       {
-        "id": "edge:essay-governance-illumination-semper-idem-md-tag-money-tagged",
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-personhood-tagged",
         "from": "essay:governance/illumination/semper idem.md",
-        "to": "tag:money",
+        "to": "tag:personhood",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-autonomy-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:autonomy",
         "kind": "tagged",
         "weight": 1
       },
@@ -838,9 +879,51 @@
         "weight": 1
       },
       {
-        "id": "edge:essay-governance-illumination-semper-idem-md-tag-theology-tagged",
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-money-tagged",
         "from": "essay:governance/illumination/semper idem.md",
-        "to": "tag:theology",
+        "to": "tag:money",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-networks-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:networks",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-privacy-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:privacy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-metadata-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:metadata",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-subsidiarity-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:subsidiarity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-blockchain-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:blockchain",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-tag-global-commons-tagged",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "tag:global-commons",
         "kind": "tagged",
         "weight": 1
       },
@@ -1497,14 +1580,6 @@
         "count": 3
       },
       {
-        "id": "edge:essay-governance-illumination-semper-idem-md-term-alpha-mention",
-        "from": "essay:governance/illumination/semper idem.md",
-        "to": "term:alpha",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
         "id": "edge:essay-me-trials-of-job-md-term-alpha-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:alpha",
@@ -1515,14 +1590,6 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-anarchism-mention",
         "from": "essay:governance/illumination/arete.md",
-        "to": "term:anarchism",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-governance-illumination-semper-idem-md-term-anarchism-mention",
-        "from": "essay:governance/illumination/semper idem.md",
         "to": "term:anarchism",
         "kind": "mention",
         "weight": 1,
@@ -1540,14 +1607,6 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-anarchism-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:anarchism",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-governance-illumination-semper-idem-md-term-anima-mention",
-        "from": "essay:governance/illumination/semper idem.md",
-        "to": "term:anima",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1597,8 +1656,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:animus",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-animus-mention",
@@ -1645,8 +1704,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:autonomy",
         "kind": "mention",
-        "weight": 4,
-        "count": 4
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-autonomy-mention",
@@ -1676,14 +1735,6 @@
         "id": "edge:essay-me-trials-of-job-md-term-call-to-adventure-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:call to adventure",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
-        "id": "edge:essay-governance-illumination-semper-idem-md-term-calling-mention",
-        "from": "essay:governance/illumination/semper idem.md",
-        "to": "term:calling",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -1725,8 +1776,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 5,
-        "count": 7
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-capital-mention",
@@ -1791,14 +1842,6 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
-      },
-      {
-        "id": "edge:essay-governance-illumination-semper-idem-md-term-creation-mention",
-        "from": "essay:governance/illumination/semper idem.md",
-        "to": "term:creation",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-creation-mention",
@@ -1901,8 +1944,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:governance",
         "kind": "mention",
-        "weight": 5,
-        "count": 7
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-governance-mention",
@@ -1950,7 +1993,7 @@
         "to": "term:identity",
         "kind": "mention",
         "weight": 5,
-        "count": 11
+        "count": 15
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",
@@ -2001,6 +2044,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-intelligence-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-praxis-md-term-intelligence-mention",
         "from": "essay:me/praxis.md",
         "to": "term:intelligence",
@@ -2020,6 +2071,14 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-intelligence-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-ledger-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:ledger",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -2173,8 +2232,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:political economy",
         "kind": "mention",
-        "weight": 5,
-        "count": 5
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-political-economy-mention",
@@ -2317,8 +2376,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:semper idem",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 5,
+        "count": 5
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-semper-idem-mention",
@@ -2373,8 +2432,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:social network",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-social-network-mention",
@@ -2439,14 +2498,6 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
-      },
-      {
-        "id": "edge:essay-governance-illumination-semper-idem-md-term-yield-mention",
-        "from": "essay:governance/illumination/semper idem.md",
-        "to": "term:yield",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-yield-mention",
