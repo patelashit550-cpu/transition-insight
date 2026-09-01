@@ -75,7 +75,7 @@
     "gray-matter": "^4.0.3",
     "next": "^16.2.6",
     "postcss": "^8.5.11",
-    "radix-ui": "^1.4.3",
+    "radix-ui": "^1.6.7",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
