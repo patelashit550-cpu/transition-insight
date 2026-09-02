@@ -100,6 +100,7 @@ run("content:attest", "npm", ["run", "content:attest"]);
 run("build:global", "npm", ["run", "build:global"]);
 
 loadEnvFiles();
+let signedOk = false;
 if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.trim()) {
   const sign = spawnSync("npm", ["run", "content:sign"], {
     stdio: "inherit",
@@ -108,9 +109,18 @@ if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.t
   });
   if (sign.status === 0) {
     run("provenance", "node", ["scripts/generate-provenance.mjs"]);
+    signedOk = true;
   } else {
     console.warn("ship: content:sign failed — pushing unsigned attestation.json");
   }
+}
+
+const syncArgs = ["scripts/sync-export-attestation.mjs"];
+if (push || signedOk) {
+  syncArgs.push("--strict", "--verify");
+}
+if (syncArgs.length > 1) {
+  run("sync-export-attestation", "node", syncArgs);
 }
 
 run("audit:perimeter:export", "node", ["scripts/audit-perimeter.mjs", "--export"]);
@@ -141,6 +151,9 @@ if (push) {
     "package.json",
     "package-lock.json",
     "scripts/ship.mjs",
+    "scripts/sync-export-attestation.mjs",
+    "scripts/lib/content-provenance.mjs",
+    ".github/workflows/deploy-pages.yml",
     "scripts/generate-corpus-graph.mjs",
     "scripts/generate-canon.mjs",
     "scripts/check-canon-stale.mjs",

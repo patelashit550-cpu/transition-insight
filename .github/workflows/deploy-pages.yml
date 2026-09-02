@@ -49,6 +49,12 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://ashitmilne.xyz
         run: npm run build:global
 
+      - name: Pin signed attestation to export
+        # build:global regenerates an unsigned manifest; deploy the committed signed copy instead.
+        run: |
+          git checkout HEAD -- public/attestation.json public/.well-known/provenance.json
+          node scripts/sync-export-attestation.mjs --strict --verify
+
       - name: Audit export perimeter
         env:
           NEXT_PUBLIC_SITE_URL: https://ashitmilne.xyz

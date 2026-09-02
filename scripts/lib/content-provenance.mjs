@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { createReadStream, existsSync, lstatSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, lstatSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import matter from "gray-matter";
 
@@ -68,19 +68,37 @@ export function listOntologyFiles() {
   return files.sort((a, b) => a.localeCompare(b));
 }
 
+/** LF-normalized bytes so Windows (CRLF) and Linux (LF) produce the same manifest digest. */
+export function normalizeOntologyFileBytes(body) {
+  return Buffer.from(body.toString("utf8").replace(/\r\n/g, "\n"), "utf8");
+}
+
+export function sha256OntologyFileBytes(body) {
+  return `sha256:${createHash("sha256").update(normalizeOntologyFileBytes(body)).digest("hex")}`;
+}
+
 export function sha256File(fullPath) {
-  return new Promise((resolve, reject) => {
-    const hash = createHash("sha256");
-    createReadStream(fullPath)
-      .on("data", (chunk) => hash.update(chunk))
-      .on("end", () => resolve(`sha256:${hash.digest("hex")}`))
-      .on("error", reject);
-  });
+  return Promise.resolve(sha256OntologyFileBytes(readFileSync(fullPath)));
 }
 
 export async function sha256FileSync(fullPath) {
-  const body = readFileSync(fullPath);
-  return `sha256:${createHash("sha256").update(body).digest("hex")}`;
+  return sha256OntologyFileBytes(readFileSync(fullPath));
+}
+
+/** Current manifest digest for attested ontology files at the given tier. */
+export async function computeAttestedManifest(tier = getContentBuildTier()) {
+  const entries = [];
+  for (const relativePath of listOntologyFiles()) {
+    const meta = readOntologyEntry(relativePath);
+    const sha256 = await sha256FileSync(join(ONTOLOGY_ROOT, relativePath));
+    entries.push({ ...meta, sha256 });
+  }
+  const attested = entries.filter((entry) => isStageIncludedInBuild(entry.stage, tier));
+  return {
+    tier,
+    attested,
+    manifestDigest: manifestDigestFromEntries(attested),
+  };
 }
 
 export function readOntologyEntry(relativePath) {
