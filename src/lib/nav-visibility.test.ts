@@ -9,7 +9,7 @@ test("B2 (Regnum Dei) lists published Carta first in global tier", () => {
   try {
     const visible = getNavVisibilityPayload();
     assert.ok(visible.B2.length > 0, "B2 should expose at least one row");
-    assert.equal(visible.B2[0]!.name, "Carta");
+    assert.equal(visible.B2[0]!.name, "Regnum Dei");
     assert.equal(visible.B2[0]!.href, "/governance/carta");
   } finally {
     if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;

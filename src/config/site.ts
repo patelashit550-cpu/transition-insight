@@ -70,7 +70,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     status: "NODE_STABLE // 002",
     requiresAuth: false,
     series: [
-      { name: "Carta", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
+      { name: "Regnum Dei", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
       { name: "Canonical", desc: "Glossary", dataPoint: "0xBF0", href: "/governance/canonical" },
       { name: "Canonical Review", desc: "Glossary draft", dataPoint: "0xBF9", href: "/governance/canonical-review" },
       { name: "Semper Idem", desc: "Identity", dataPoint: "0xBF1", href: "/governance/identity" },
