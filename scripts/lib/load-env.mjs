@@ -1,8 +1,15 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-/** Load env files in order; later files override earlier keys. */
+/**
+ * Load env files in order; later files override earlier file keys.
+ * Never clobber a variable already present on `process.env` (shell / parent
+ * process wins) so `SOLANA_KEYPAIR_PATH` set for `ship` / `content:sign` is
+ * not replaced by an empty or stale `.env.local` entry.
+ */
 export function loadEnvFiles(root = process.cwd()) {
+  /** @type {Record<string, string>} */
+  const fromFiles = {};
   for (const name of [".env.production", ".env.development", ".env", ".env.local", ".env.production.local"]) {
     const filePath = join(root, name);
     if (!existsSync(filePath)) continue;
@@ -20,7 +27,11 @@ export function loadEnvFiles(root = process.cwd()) {
       ) {
         value = value.slice(1, -1);
       }
-      process.env[key] = value;
+      fromFiles[key] = value;
     }
+  }
+  for (const [key, value] of Object.entries(fromFiles)) {
+    if (Object.prototype.hasOwnProperty.call(process.env, key)) continue;
+    process.env[key] = value;
   }
 }

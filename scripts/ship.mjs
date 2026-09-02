@@ -101,6 +101,7 @@ run("build:global", "npm", ["run", "build:global"]);
 
 loadEnvFiles();
 let signedOk = false;
+const wantsSignedExport = push || ipfs || ipfsLocal;
 if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.trim()) {
   const sign = spawnSync("npm", ["run", "content:sign"], {
     stdio: "inherit",
@@ -110,17 +111,25 @@ if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.t
   if (sign.status === 0) {
     run("provenance", "node", ["scripts/generate-provenance.mjs"]);
     signedOk = true;
+  } else if (wantsSignedExport) {
+    console.error(
+      "ship: content:sign failed — refusing to push/pin an unsigned attestation (set SOLANA_SIGNING_KEY or a valid SOLANA_KEYPAIR_PATH)",
+    );
+    process.exit(sign.status ?? 1);
   } else {
-    console.warn("ship: content:sign failed — pushing unsigned attestation.json");
+    console.warn("ship: content:sign failed — out/ keeps the build attestation until you sign");
   }
 }
 
-const syncArgs = ["scripts/sync-export-attestation.mjs"];
-if (push || signedOk) {
-  syncArgs.push("--strict", "--verify");
-}
-if (syncArgs.length > 1) {
-  run("sync-export-attestation", "node", syncArgs);
+// Pin the signed manifest into out/. build:global regenerates an unsigned copy;
+// without this step --ipfs would upload that unsigned file. Always verify when
+// shipping to a destination (push / Pinata / Kubo) or after a successful sign.
+if (wantsSignedExport || signedOk) {
+  run("sync-export-attestation", "node", [
+    "scripts/sync-export-attestation.mjs",
+    "--strict",
+    "--verify",
+  ]);
 }
 
 run("audit:perimeter:export", "node", ["scripts/audit-perimeter.mjs", "--export"]);
