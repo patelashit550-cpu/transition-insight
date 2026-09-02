@@ -197,6 +197,17 @@ export function readStageFromFile(fullPath: string): string {
   }
 }
 
+/** Topic left-nav inclusion — default true; set `showInTopicNav: false` to omit (e.g. Canonical in top nav only). */
+function readShowInTopicNavFromFile(fullPath: string): boolean {
+  try {
+    const raw = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(raw);
+    return (data as Record<string, unknown>).showInTopicNav !== false;
+  } catch {
+    return true;
+  }
+}
+
 /**
  * Recursively grabs all markdown files within the ONTOLOGY_ROOT directory,
  * preserving forward-slashes for system matching.
@@ -357,6 +368,7 @@ export function listEssays(topicPath: string | string[]): EssayStub[] {
 
   const stubs: Enriched[] = listFlatOntologyFilenames()
     .filter((filename) => fileBelongsToTopic(filename, topicPath))
+    .filter((filename) => readShowInTopicNavFromFile(path.join(ONTOLOGY_ROOT, filename)))
     .map((filename) => {
       const full = path.join(ONTOLOGY_ROOT, filename);
       let order = Number.POSITIVE_INFINITY;
@@ -407,8 +419,11 @@ export function listEssaysForBuild(
       let order = Number.POSITIVE_INFINITY;
       let title = path.basename(filename).replace(/\.(mdx|md)$/i, "");
       const stage = readStageFromFile(full);
-      
+
       if (!isStageIncludedInBuild(stage, tier)) {
+        return null;
+      }
+      if (!readShowInTopicNavFromFile(full)) {
         return null;
       }
       try {

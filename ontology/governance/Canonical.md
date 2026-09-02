@@ -6,6 +6,7 @@ type: reference
 series: Regnum Dei
 theme: emerald
 showInNav: true
+showInTopicNav: false
 slug: canonical
 publishedAt: 2026-07-25
 jurisdiction: Ashit Milne

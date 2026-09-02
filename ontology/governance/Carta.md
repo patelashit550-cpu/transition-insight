@@ -11,7 +11,7 @@ showInNav: false
 image: /assets/inukshuk.png
 imageAlt: Inukshuk — a balanced cairn of grey stones in human form on a rocky ridge, misty pale-blue sky beyond
 imageRole: inset
-imagePlate: narrow
+imagePlate: wide
 jurisdiction: Ashit Milne
 tags:
   - governance
