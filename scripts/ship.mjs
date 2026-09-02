@@ -18,6 +18,8 @@
  */
 import { spawnSync } from "node:child_process";
 
+import { loadEnvFiles } from "./lib/load-env.mjs";
+
 /** Never committed by `ship --push` (local drafts, review-tier glossary, etc.). */
 const SHIP_EXCLUDE = ["ontology/governance/Canonical-Review.md"];
 
@@ -96,6 +98,21 @@ if (!skipCanon) {
 
 run("content:attest", "npm", ["run", "content:attest"]);
 run("build:global", "npm", ["run", "build:global"]);
+
+loadEnvFiles();
+if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.trim()) {
+  const sign = spawnSync("npm", ["run", "content:sign"], {
+    stdio: "inherit",
+    shell: process.platform === "win32",
+    cwd: process.cwd(),
+  });
+  if (sign.status === 0) {
+    run("provenance", "node", ["scripts/generate-provenance.mjs"]);
+  } else {
+    console.warn("ship: content:sign failed — pushing unsigned attestation.json");
+  }
+}
+
 run("audit:perimeter:export", "node", ["scripts/audit-perimeter.mjs", "--export"]);
 
 if (ipfs || ipfsLocal) {

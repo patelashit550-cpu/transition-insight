@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generated": "2026-09-02T03:36:27.107Z",
+  "generated": "2026-09-02T03:42:04.702Z",
   "tier": "global",
   "manifestDigest": "sha256:77246db2497bb80b31d9812fe278b39da9fe026c71b419f376bc8554ae29e421",
   "identity": {
@@ -14,7 +14,7 @@
   "summary": {
     "totalOntologyFiles": 74,
     "attestedFiles": 13,
-    "signedFiles": 0
+    "signedFiles": 13
   },
   "attested": [
     {
@@ -148,5 +148,11 @@
       "sha256": "sha256:053da37af3429ed69e92a15afe6fd71205bd03f9645ed2b5cb37652051d45a19"
     }
   ],
-  "signature": null
+  "signature": {
+    "algorithm": "ed25519",
+    "scheme": "transition-insight:attestation:v1",
+    "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "value": "3JfqjSd2Aech6vGoNf8HEPBrKs11NUjhtzfL1LkpW3ENHGnXdKuToP97ddnBuiSJ3MaknEwWnNW5QJhcJd3VPPE7",
+    "signedAt": "2026-09-02T03:42:28.613Z"
+  }
 }
