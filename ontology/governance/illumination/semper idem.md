@@ -90,7 +90,7 @@ There are very specific and particular circumstances which are currently in play
 
 ## Neutral Zone
 
-In ice hockey, Canada's national winter sport, the rink is divided into three distinct zones. Within the central "neutral zone," a subtle, contentious struggle develops over puck possession to dictate the balance of power and the ultimate outcome of the game. In the digital age, Canada—and specifically Ontario, its most populous province—has become this geopolitical neutral zone: an arena where underground power politics emerge from community special interests.
+In (ice) hockey, Canada's national winter sport, the rink is divided into three distinct zones. The novice might focus on the goal-mouth action at opposite ends of the rink but it's within the central "neutral zone," that the subtle and contentious struggle develops over puck possession to dictate the balance of power and the ultimate outcome of the game. In the digital age, Canada—and specifically Ontario, its most populous province—has become this geopolitical neutral zone: an arena where underground power politics emerge from community special interests.
 
 For the last quarter-century, dominant American technology platforms have dictated how personal information is harvested and milled into monetizable value through attention-based tracking mechanics. This is not a mere commercial exchange of utility for personal data; it is a systematic, deep-rooted probing that breaches the individual's digital back door—a comprehensive erosion of identity and one's most private sense of self.
 
