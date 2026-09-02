@@ -58,25 +58,26 @@ It doesn't have to be that way. In fact, I argue that it cannot be that way. Not
 
 One is free to audit this ontology. What this amounts to in practical terms is simply validating it—assessing its legitimacy and credibility by visiting it and consuming its content personally, if one finds that to be a worthwhile endeavour.
 
-It is the truth as I personally see it. Moreover, it develops with language rather than compiled code—functioning as an algorithm for seeking alpha (success in achieving prosperity) optimally, however one may define it, as long as the aggregate outcome does not prejudice universally appreciated outcomes. This is a tall order by design, and only time will tell whether it succeeds in its aims.
+This ontology is the truth as I personally see it and developed with plain-spoken non-technical albeit sometimes dense language rather than compiled code. All of functioning as an algorithm for seeking alpha (success on a determined path optimally) however one may define it, as long as the aggregate outcome for one does not prejudice universal outcomes. This is a tall order by design, and only time will tell whether it succeeds in its aims.
 
-As it evolves over the coming years, it will function as a distributed and decentralised (Web3) application whose content is secured by a signature on public protocols (Bitcoin, Ethereum, and Solana) and whose provenance or source cannot be contested.
+It will function as a distributed and decentralised (Web3) application whose content is secured by a signature on public protocols (Bitcoin, Ethereum, and Solana) and whose provenance or source cannot be contested.
 
-It may then function as just one arbiter of what works online and what does not: what is true, what has utility, and what is therefore worth transmitting from point A to point B to generate real value for both the participants to a transaction and the social network as a whole.
+It may then be just *one* arbiter of what works online and what does not: what is true, has utility, and is therefore worth transmitting from point A to point B to generate real value for both the participants to a transaction and the social network as a whole.
 
 ## Regnum Dei
 
-The ontology is called _Regnum Dei_. Typically translated as the _Reign of God_, I frame it as _Divine Governance_—where "divine" retains its root sense: _to search for or seek the truth_.
+The ontology is called _Regnum Dei_. Typically see as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for or seek the truth*_.
 
-Truth (**_veritas_**) serves as the basis or foundation for a process through which we generate solutions or utilities (**_utilitas_**) to solve real-world problems and manifest structural integrity (**_firmitas_**). The ethical grounding for this process draws from _Sanatana Dharma_ (popularly known in the West as Yoga or Hinduism)—the recognition of an eternal, foundational order. In material terms, this has been an *industrial* process of progress marred by occasional error. That error is something we hold ourselves *collectively* responsible for by socialising the costs. Regardless, we are all accountable for applying ourselves towards generating solutions; each in our own way.
+Truth (**_veritas_**) serves as the basis or foundation for a process through which we generate solutions or utilities (**_utilitas_**) to solve problems and manifest structural integrity (**_firmitas_**) in the real world. The ethical grounding for this process draws from _Sanatana Dharma_ (popularly known in the West as Yoga or Hinduism).
 
-The core components of _Regnum Dei_ detail the conditions required to create systemic and autonomous peace, order, and good governance across our social network. These are bona fide notions of:
+In material terms, this has been an *industrial* process expressed through the millennia. One of progress marred by error. That error is something we must hold ourselves *collectively* responsible for. This we do by *socializing* the costs not the least of which by externalizing them into the atmosphere as heat and noise. This however cannot go on indefinitely; we are all accountable for generating real permanent solutions—each in our own way.
 
-- **Intelligence** (Sine Qua Non): The animating principle—_anima_ and _animus_—without which no model of reality can exist.
+The core components of _Regnum Dei_ detail the conditions required to create systemic and autonomous peace, order, and good governance across our social network. These are bona fide expressions of the following notions:
 
-- **Identity** (Semper Idem): A bounded notion of embodiment broadly recognised as authentic and genuine (i.e., real regardless of whether it is materially embodied or digitally ephemeral).
+- **Intelligence** (Sine Qua Non): The animating principle—_anima_ and _animus_—without which no model of reality can exist nor indeed can any reality itself exist.
 
-- **Capital** (E Pluribus Unum): Inputs whose value is appraised by their relative utility in creative endeavour now, or by being left in our common storehouse—the Global Commons.
+- **Identity** (Semper Idem): A bounded notion of embodiment broadly recognised as authentic and genuine (i.e. real regardless of whether it is materially embodied or ephemeral).
 
+- **Capital** (E Pluribus Unum): Inputs valued for their utility in creative endeavours or by their beauty in the Global Commons.
 
-The objective of any iterative process—whether an algorithm optimising a loss function or a civilisation refining its values—is to incrementally reduce error to yield increasingly productive outcomes. But true error reduction cannot be measured by human metrics alone; it must extend to all life, sentient and non-sentient alike.
+The objective of any iterative process is to incrementally reduce error in order to yield an increasingly more productive outcome. But true error reduction cannot be measured by human metrics alone; Consensus must extend to all life, sentient and non-sentient alike through the application of reason and an honest reckoning—are we contented to continue on our current path without a course correction?

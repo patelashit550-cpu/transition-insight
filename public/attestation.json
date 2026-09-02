@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-02T00:12:54.090Z",
+  "generated": "2026-09-02T01:49:00.754Z",
   "tier": "global",
-  "manifestDigest": "sha256:8ed5fb47f72d3038bf0b1a6c6fbbe7ba606f54bb6d8b5909369a0a9087deccdc",
+  "manifestDigest": "sha256:b9897a2fb1b05f1cd20da1779f57324d33a10de06cb880b13edee0ab92a0ec68",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -35,7 +35,7 @@
       "publishedAt": null,
       "slug": "carta",
       "series": "regnum-dei",
-      "sha256": "sha256:52cfdeb452065d55a16422af3f91a5404c287d963d08bfb049d16b97c09306d3"
+      "sha256": "sha256:5d16b4c81cccb65ea5b0acdfe603308144995cf3e54acdda7bbb73dc59c4911b"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
