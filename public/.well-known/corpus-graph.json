@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T23:51:15.979Z",
+  "generatedAt": "2026-09-02T00:03:35.060Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 12,
       "nodes": 124,
-      "edges": 267,
+      "edges": 265,
       "byKind": {
         "member-of-series": 8,
         "member-of-folder": 12,
         "tagged": 78,
         "lexica": 33,
-        "mention": 136
+        "mention": 134
       },
       "orphanEssays": 1,
       "series": 4,
@@ -2027,8 +2027,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-capital-mention",
@@ -2175,14 +2175,6 @@
         "count": 1
       },
       {
-        "id": "edge:essay-governance-carta-md-term-dial-square-mention",
-        "from": "essay:governance/carta.md",
-        "to": "term:dial square",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
-      },
-      {
         "id": "edge:essay-governance-illumination-arete-md-term-dial-square-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:dial square",
@@ -2243,8 +2235,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:governance",
         "kind": "mention",
-        "weight": 5,
-        "count": 8
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-governance-mention",
@@ -2299,8 +2291,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:identity",
         "kind": "mention",
-        "weight": 5,
-        "count": 6
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-identity-mention",
@@ -2363,8 +2355,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:intelligence",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-intelligence-mention",
@@ -2485,14 +2477,6 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
-      },
-      {
-        "id": "edge:essay-governance-carta-md-term-peridot-mention",
-        "from": "essay:governance/carta.md",
-        "to": "term:peridot",
-        "kind": "mention",
-        "weight": 2,
-        "count": 2
       },
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-peridot-mention",

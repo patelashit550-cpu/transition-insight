@@ -11,7 +11,7 @@ showInNav: false
 image: /assets/inukshuk.png
 imageAlt: Inukshuk — a balanced cairn of grey stones in human form on a rocky ridge, misty pale-blue sky beyond
 imageRole: inset
-imagePlate: wide
+imagePlate: narrow
 jurisdiction: Ashit Milne
 tags:
   - governance
@@ -72,12 +72,11 @@ Truth (**_veritas_**) serves as the basis or foundation for a process through wh
 
 The core components of _Regnum Dei_ detail the conditions required to create systemic and autonomous peace, order, and good governance across our social network. These are bona fide notions of:
 
-- **Intelligence** ([Sine Qua Non](/governance/intelligence/)): The animating principle—_anima_ and _animus_—without which no model of reality can exist.
+- **Intelligence** (Sine Qua Non): The animating principle—_anima_ and _animus_—without which no model of reality can exist.
 
-- **Identity** ([Semper Idem](/governance/identity/), [Dial Square](/governance/identity/dialsquare/)): A bounded notion of embodiment broadly recognised as authentic and genuine (i.e., real regardless of whether it is materially embodied or digitally ephemeral).
+- **Identity** (Semper Idem): A bounded notion of embodiment broadly recognised as authentic and genuine (i.e., real regardless of whether it is materially embodied or digitally ephemeral).
 
-- **Capital** ([E Pluribus Unum](/governance/capital/)): Inputs whose value is appraised by their relative utility in creative endeavour now, or by being left in our common storehouse—the Global Commons.
+- **Capital** (E Pluribus Unum): Inputs whose value is appraised by their relative utility in creative endeavour now, or by being left in our common storehouse—the Global Commons.
 
-Illumination essays under [Peridot](/governance/peridot/) explore terms and conditions—the lived interface between these pillars and daily practice.
 
 The objective of any iterative process—whether an algorithm optimising a loss function or a civilisation refining its values—is to incrementally reduce error to yield increasingly productive outcomes. But true error reduction cannot be measured by human metrics alone; it must extend to all life, sentient and non-sentient alike.

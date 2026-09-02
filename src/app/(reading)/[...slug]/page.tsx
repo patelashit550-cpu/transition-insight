@@ -233,12 +233,15 @@ function EditorialPlateFigure({
   imageClip?: string;
   imagePlate?: string;
 }) {
-  const isWidePlate = imagePlate?.trim().toLowerCase() === "wide";
+  const plateVariant = imagePlate?.trim().toLowerCase();
+  const isWidePlate = plateVariant === "wide";
+  const isNarrowPlate = plateVariant === "narrow";
   return (
     <figure
       className={[
         "p3-narrative-figure p3-narrative-figure--plate",
         isWidePlate ? "p3-narrative-figure--plate-wide" : "",
+        isNarrowPlate ? "p3-narrative-figure--plate-narrow" : "",
         imageClip === "circle" ? "p3-narrative-figure--plate-circle" : "",
       ]
         .filter(Boolean)
