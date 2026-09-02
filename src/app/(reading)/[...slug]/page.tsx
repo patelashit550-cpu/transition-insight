@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import ReactMarkdown, { type Components } from "react-markdown";
+
+import remarkBlockquoteBreaks from "@/lib/remark-blockquote-breaks";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -400,7 +402,9 @@ function NarrativeEssayBody({
               email={connexionLinks.email}
             />
           ) : (
-            <ReactMarkdown components={components}>{content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkBlockquoteBreaks]} components={components}>
+              {content}
+            </ReactMarkdown>
           )}
         </section>
       )}

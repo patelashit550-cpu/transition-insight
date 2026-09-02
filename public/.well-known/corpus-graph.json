@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T02:01:30.634Z",
+  "generatedAt": "2026-09-02T03:13:34.651Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 12,
       "nodes": 124,
-      "edges": 265,
+      "edges": 266,
       "byKind": {
         "member-of-series": 8,
         "member-of-folder": 12,
         "tagged": 78,
         "lexica": 33,
-        "mention": 134
+        "mention": 135
       },
       "orphanEssays": 1,
       "series": 4,
@@ -2477,6 +2477,14 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-peridot-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:peridot",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-peridot-mention",

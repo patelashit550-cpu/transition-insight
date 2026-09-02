@@ -42,7 +42,7 @@ In 2000 we moved into our home in Acton, Northwest of Toronto. Equipped with a w
 > Of a shyness that is criminally vulgar
 > I am the son and heir
 > Of nothing in particular
-
+> 
 > ~ The Smiths (How Soon is Now)
 
 

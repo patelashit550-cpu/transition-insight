@@ -66,13 +66,13 @@ It may then be just *one* arbiter of what works online and what does not: what i
 
 ## Regnum Dei
 
-The ontology is called _Regnum Dei_. Typically see as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for or seek the truth*_.
+The core component of the ontology is _Regnum Dei_. Typically see as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for or seek the truth*_.
 
 Truth (**_veritas_**) serves as the basis or foundation for a process through which we generate solutions or utilities (**_utilitas_**) to solve problems and manifest structural integrity (**_firmitas_**) in the real world. The ethical grounding for this process draws from _Sanatana Dharma_ (popularly known in the West as Yoga or Hinduism).
 
 In material terms, this has been an *industrial* process expressed through the millennia. One of progress marred by error. That error is something we must hold ourselves *collectively* responsible for. This we do by *socializing* the costs not the least of which by externalizing them into the atmosphere as heat and noise. This however cannot go on indefinitely; we are all accountable for generating real permanent solutions—each in our own way.
 
-The core components of _Regnum Dei_ detail the conditions required to create systemic and autonomous peace, order, and good governance across our social network. These are bona fide expressions of the following notions:
+_Regnum Dei_ is comprised of the three elements required to create systemic autonomous peace, order, and good governance across our social network. These are bona fide expressions of the following concepts:
 
 - **Intelligence** (Sine Qua Non): The animating principle—_anima_ and _animus_—without which no model of reality can exist nor indeed can any reality itself exist.
 
@@ -81,3 +81,11 @@ The core components of _Regnum Dei_ detail the conditions required to create sys
 - **Capital** (E Pluribus Unum): Inputs valued for their utility in creative endeavours or by their beauty in the Global Commons.
 
 The objective of any iterative process is to incrementally reduce error in order to yield an increasingly more productive outcome. But true error reduction cannot be measured by human metrics alone; Consensus must extend to all life, sentient and non-sentient alike through the application of reason and an honest reckoning—are we contented to continue on our current path without a course correction?
+
+## Peridot
+
+Peridot is the vibrant green birthstone for August. It is the gem-quality variety of the mineral olivine; seemingly possessed of a innate luminescence here in this ontology it is the title of a series illuminating key terms which have either emerged or have undergone a transformation in the way we use them such that a reminiscence of original linguistic intention and interpretation is worthwhile. Again these terms are explored through my own personal experience and lens.
+
+## Canonical
+
+Canonical provides a comprehensive glossary of terms, framing foundational social science concepts within the specific parameters of this ontology. Additionally, it introduces original theoretical shorthand concepts designed to navigate and integrate contested ideas. These terms allow for the inclusion of perspectives that face significant friction or institutional marginalization within contemporary popular Western discourse, particularly by those aligned with hegemonic state and corporatist interests.

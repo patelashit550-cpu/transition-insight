@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-02T02:01:30.852Z",
+  "generated": "2026-09-02T03:13:34.826Z",
   "tier": "global",
-  "manifestDigest": "sha256:b9897a2fb1b05f1cd20da1779f57324d33a10de06cb880b13edee0ab92a0ec68",
+  "manifestDigest": "sha256:77246db2497bb80b31d9812fe278b39da9fe026c71b419f376bc8554ae29e421",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -35,7 +35,7 @@
       "publishedAt": null,
       "slug": "carta",
       "series": "regnum-dei",
-      "sha256": "sha256:5d16b4c81cccb65ea5b0acdfe603308144995cf3e54acdda7bbb73dc59c4911b"
+      "sha256": "sha256:2343b1f3309e059276e4c9cfa3f80263eaff838ecff528770d90f97eb79f55c8"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -115,7 +115,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "ashit-milne",
       "series": "The Times",
-      "sha256": "sha256:28ecd89136ac3d9a8c7852ca99a9887b3d7ce6092436ad8c8ba90f2e40ab7e68"
+      "sha256": "sha256:a592f6a69b3c5d0430381a82c140e2746fe8a8cd4b17304ae62fd1d86746b34b"
     },
     {
       "path": "ontology/narrative/biography/ashit-patel.md",
