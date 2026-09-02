@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T15:42:35.001Z",
+  "generatedAt": "2026-09-02T23:39:54.776Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 12,
       "nodes": 124,
-      "edges": 266,
+      "edges": 268,
       "byKind": {
         "member-of-series": 8,
         "member-of-folder": 12,
         "tagged": 78,
         "lexica": 33,
-        "mention": 135
+        "mention": 137
       },
       "orphanEssays": 1,
       "series": 4,
@@ -1983,6 +1983,14 @@
         "count": 2
       },
       {
+        "id": "edge:essay-governance-carta-md-term-beta-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:beta",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-beta-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:beta",
@@ -2455,6 +2463,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-carta-md-term-omega-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:omega",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-omega-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:omega",
@@ -2779,8 +2795,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:social network",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-social-network-mention",

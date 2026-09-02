@@ -8,6 +8,7 @@ series: regnum-dei
 theme: emerald
 size: md
 showInNav: false
+showInTopicNav: false
 image: /assets/inukshuk.png
 imageAlt: Inukshuk — a balanced cairn of grey stones in human form on a rocky ridge, misty pale-blue sky beyond
 imageRole: inset
@@ -58,15 +59,11 @@ It doesn't have to be that way. In fact, I argue that it cannot be that way. Not
 
 One is free to audit this ontology. What this amounts to in practical terms is simply validating it—assessing its legitimacy and credibility by visiting it and consuming its content personally, if one finds that to be a worthwhile endeavour.
 
-This ontology is the truth as I personally see it and developed with plain-spoken non-technical albeit sometimes dense language rather than compiled code. All of functioning as an algorithm for seeking alpha (success on a determined path optimally) however one may define it, as long as the aggregate outcome for one does not prejudice universal outcomes. This is a tall order by design, and only time will tell whether it succeeds in its aims.
-
-It will function as a distributed and decentralised (Web3) application whose content is secured by a signature on public protocols (Bitcoin, Ethereum, and Solana) and whose provenance or source cannot be contested.
-
-It may then be just *one* arbiter of what works online and what does not: what is true, has utility, and is therefore worth transmitting from point A to point B to generate real value for both the participants to a transaction and the social network as a whole.
+This ontology represents the truth as I personally see it—developed in clear, deliberate, human language rather than compiled code. It seeks to function as an algorithm for aligning **Alpha** (individual success along a chosen path) with **Omega** (a holistically optimal outcome). That pursuit must inevitably pass through "left-handed" departure points (**Beta**), as unconventional paths now offer the only real frontier for discovering genuine opportunity outside mainstream dogma.
 
 ## Regnum Dei
 
-The core component of the ontology is _Regnum Dei_. Typically see as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for or seek the truth*_.
+The core component of the ontology is _Regnum Dei_. Typically seen as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for truth*_.
 
 Truth (**_veritas_**) serves as the basis or foundation for a process through which we generate solutions or utilities (**_utilitas_**) to solve problems and manifest structural integrity (**_firmitas_**) in the real world. The ethical grounding for this process draws from _Sanatana Dharma_ (popularly known in the West as Yoga or Hinduism).
 
@@ -84,7 +81,7 @@ The objective of any iterative process is to incrementally reduce error in order
 
 ## Peridot
 
-Peridot is the vibrant green birthstone for August. It is the gem-quality variety of the mineral olivine; seemingly possessed of a innate luminescence here in this ontology it is the title of a series illuminating key terms which have either emerged or have undergone a transformation in the way we use them such that a reminiscence of original linguistic intention and interpretation is worthwhile. Again these terms are explored through my own personal experience and lens.
+Peridot is the vibrant green birthstone for August. It is the gem-quality variety of the mineral olivine; seemingly possessed of an innate luminescence here in this ontology it is the title of a series illuminating key terms which have either emerged or have undergone a transformation in the way we use them such that a reminiscence of original linguistic intention and interpretation is worthwhile. Again these terms are explored through my own personal experience and lens.
 
 ## Canonical
 
