@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-03T00:43:04.663Z",
+  "generated": "2026-09-03T01:42:04.113Z",
   "tier": "global",
-  "manifestDigest": "sha256:bf41c108ec3839a57a28a75f75bedeca30b34403237f2c0f04982bf02bec2790",
+  "manifestDigest": "sha256:d58effae940c47f89bacea9a2f6a293a2d8c9f287cd8ea4736ab7860a2589a74",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -55,7 +55,7 @@
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "slug": "semper-idem",
       "series": "peridot",
-      "sha256": "sha256:edb31ed1af19f33b0eeed73b170dd88158d4dcc01e5a10b000aae7d807f3685c"
+      "sha256": "sha256:224f0d8c746570b0de63ac6ca30b9937a02c8e97047aaacefe4fe1a011405e4e"
     },
     {
       "path": "ontology/governance/illumination/social-network.md",
@@ -152,7 +152,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "BkpdhnEXs6cjZuMQaqLx6MLtorRF3yYjqYMQgq6rW1msgZ8TrLDsNwjRrSRYg687yQrjXqgbSrAJ9PsoABHa8sG",
-    "signedAt": "2026-09-03T00:43:44.682Z"
+    "value": "5YedvznMSGaEdZhYEkcRuqrVDnqApp5xTTAccxgQfsJPc2xTEi6HfWNM8umdfm5fHVXCj3dRxaRd3HjuX2GHzdR6",
+    "signedAt": "2026-09-03T01:42:33.906Z"
   }
 }
