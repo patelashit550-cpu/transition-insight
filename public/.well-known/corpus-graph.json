@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T23:41:42.825Z",
+  "generatedAt": "2026-09-03T00:15:05.102Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 12,
       "nodes": 124,
-      "edges": 268,
+      "edges": 270,
       "byKind": {
         "member-of-series": 8,
         "member-of-folder": 12,
         "tagged": 78,
         "lexica": 33,
-        "mention": 137
+        "mention": 139
       },
       "orphanEssays": 1,
       "series": 4,
@@ -2511,6 +2511,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-carta-md-term-perimeter-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-perimeter-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:perimeter",
@@ -2682,6 +2690,14 @@
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-self-sovereign-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-semantic-perimeter-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:semantic perimeter",
         "kind": "mention",
         "weight": 1,
         "count": 1

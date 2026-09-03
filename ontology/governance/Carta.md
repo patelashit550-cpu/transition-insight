@@ -77,7 +77,8 @@ _Regnum Dei_ is comprised of the three elements required to create systemic auto
 
 - **Capital** (E Pluribus Unum): Inputs valued for their utility in creative endeavours or by their beauty in the Global Commons.
 
-The objective of any iterative process is to incrementally reduce error in order to yield an increasingly more productive outcome. But true error reduction cannot be measured by human metrics alone; Consensus must extend to all life, sentient and non-sentient alike through the application of reason and an honest reckoning—are we contented to continue on our current path without a course correction?
+The objective of any iterative process is to incrementally reduce error in order to yield an increasingly more productive outcome. But true error reduction cannot be measured by human metrics alone; Consensus must extend to all life, sentient and non-sentient alike through the application of reason through which an honest reckoning (price determination) is arrived. This is done by accepting a *singular* semantic perimeter defined as a closed loop consisting of the planet's energy and matter so that it may be comprehensively governed through transparently integrated market mechanisms.
+
 
 ## Peridot
 
