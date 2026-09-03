@@ -165,3 +165,21 @@ What is it about us that has such integrity that we needed to evolve? What is ou
 > ~ Shakespeare
 
 One which, instead of collapsing under the weight of its own egoistic density, possesses the lightness of the ethereal and reaches upward — literally and metaphorically — toward the stars. A new start, wherein we direct the flow of our capital with intelligence illuminated by vision. One which yields without ending. Limitless, even as it rises from this finite planet.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#AshitPatel",
+  "schema:name": "Macauley's Favorite Bastard — The Making of Ashit Patel",
+  "schema:description": "Origins of identity as a tel — stratified mound of civilisational sediment, from colonial East Africa through England and India to Canada; the etymology of Patel as ledger-keeper and the formation of a semantic perimeter through migration, habit, and patrimony.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#SemperIdem" },
+    { "@id": "https://ashitmilne.xyz/ontology#Veritas" }
+  ]
+}
+</script>

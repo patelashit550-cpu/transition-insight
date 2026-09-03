@@ -73,3 +73,21 @@ At home I had sought to get involved on campus with Western's Liberal Club and A
 I first discovered the internet at Carleton in 1993 and used it, steadily, to keep in touch with a globally dispersed network. I still recall the first time I saw the World Wide Web—in the form of AOL's homepage—on a computer in a graduate office associated with Lorraine Eden. My thesis advisor and joint seminar leader was a renowned expert on transfer pricing: the mechanism through which the multinational enterprise plays sovereigns against one another in a global prisoner's dilemma to maximize income after tax. The dilemma was an aspect of game theory, first introduced to me by my other seminar leader, Max Cameron. Our conversations around the seminar table were robust; in a room of Liberals, Tories, Socialists, and one Marxist, I quickly marked myself out as a generally disagreeable *spoiler of ballots*.
 
 By my third stint in Japan, Hitotsubashi had a bustling internet room, and I spent a good deal of time there using Netscape's then-innovative browser to keep up with the news. Coming home in 1997, I decided to pursue a career in the private sector, with finance, management consulting, and public relations as the directions I would explore. I took the Canadian Securities Course and, seeing a confluence in those three streams, went on to an expensive post-graduate diploma in team-based application design, full-stack development, and team-based delivery at the now-defunct ITI (Information Technology Institute). I joined IBM Global Services as a consultant in 1999. In some sense, that is when my education really began.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Origins",
+  "schema:name": "Act I: अर्थ — Origins",
+  "schema:description": "Autobiographical foundation tracing migration across three continents — London, Baroda, Ontario, Japan — and the formation of an internationalist lens on political economy, keiretsu stakeholder capitalism, and the early internet.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Alpha" },
+    { "@id": "https://ashitmilne.xyz/ontology#Veritas" }
+  ]
+}
+</script>

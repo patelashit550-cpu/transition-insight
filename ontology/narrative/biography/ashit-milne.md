@@ -114,3 +114,21 @@ Never mind the giants and their digital marketing agencies and the centralized p
 
 I've never had much cause for worry and I've not got a lot to say. You'll never find me in a hurry, because I live my life day by day. People say that I'm crazy, but I'm not that way inclined, I know what I know and I'll happily show that madness is all in the mind.
 
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#AshitMilne",
+  "schema:name": "One Step Beyond — The Making of Ashit Milne",
+  "schema:description": "The coming-together of identity through synchronicity, yoga practice, and the adoption of a name embodying vitality and convergence — Milne as the seed of mission, forged through contemplative practice at Downward Dog and the synthesis of animus and anima into the Yoga Element.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#SemperIdem" },
+    { "@id": "https://ashitmilne.xyz/ontology#Omega" }
+  ]
+}
+</script>
+

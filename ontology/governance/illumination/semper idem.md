@@ -86,7 +86,7 @@ Ultimately, modern digital transactions are processed within what functions as a
 
 Emergent public blockchain protocols represent an opportunity because they yoke our personality and identity to the Global Commons transparently and honestly, standing in stark contrast to the opacity of our current dispersed and fragmented notions of digital identity scattered across various institutions, both private and public. These fragmented systems currently struggle to orchestrate their queries while assessing our identity as we traverse the internet and the real world in swarms—gathering and dispersing to experience culture whether in concert with strangers, at home amongst friends, or alone quietly in our offices and private spaces.
 
-There are very specific and particular circumstances which are currently in play in our world for all our people in the West and most importantly for our children as we aim to navigate a political reality with objectivity in what is increasingly a neutral zone subtly militarized to enable the extraction of capital from one's identity
+There are very specific and particular circumstances which are currently in play in our world for all our people in the West and most importantly for our children as we aim to navigate a political reality with objectivity in what is increasingly a neutral zone subtly militarized to enable the extraction of capital from one's identity.
 
 ## Neutral Zone
 
@@ -101,3 +101,21 @@ In database architecture, a "junction table" resolves a complex, many-to-many re
 This setup also bridges conflicting regulatory borders. Where the United States maintains fragmented data privacy laws and the European Union enforces strict GDPR compliance, Canada’s PIPEDA framework occupies the middle ground. Global firms utilize Ontario to stress-test data architectures: if an extraction model successfully navigates PIPEDA, it functions as an adaptable bridge for both aggressive American commercial markets and strict European oversight alike. Because Ontario shares high disposable income and smartphone adoption at a fraction of the US market scale, it offers a contained "blast radius." If a data-gathering feature triggers a public relations backlash, technical friction, or a sensitive data leak, the fallout is absorbed locally through the social sanctioning of a relatively high-value, low-visibility individual before it can threaten the firm's core American user base or valuation.
 
 This dynamic forces us to draw boundaries defined not by physical coordinates, but by notional social contracts. The most fundamental of these is one's attire—the distinction between public presentation and being stripped bare before institutional power to be commodified across the network. What does attire represent—individual comfort, environmental adaptation, or deference to societal norms? Just as clothing forms the innermost boundary between the individual and the collective, transaction metadata and digital protocols now form the outer perimeter of identity. The rest is semantics, heresy, and hearsay—a private word or image intercepted and distributed indiscriminately across the network, turning a whisper to a scream in the margin between bean-counting and being counted as one possessed of dignity and identity.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#SemperIdem",
+  "schema:name": "Semper Idem",
+  "schema:description": "Semantic Perimeter of Identity Embodied — abstracted identity in the digital age manifested one transaction at a time, bounded by bricks and mortar yet functionally ephemeral; the mound of attested interactions that constitutes who you are across contexts.",
+  "carta:category": "Peridot",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Veritas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Firmitas" }
+  ]
+}
+</script>

@@ -121,3 +121,21 @@ True self-sovereignty requires our creative capital to flow directly into protoc
 It showed that money is information; a protocol-bound agreement, signed by their own keys, can custody incoming value, allocate shares by prior consent, and release funds when agreed conditions are met—without an intermediary owning the ledger on which their collaboration is recorded.
 
 By reclaiming custody of our signatures, these protocols also allow us to renegotiate how we are configured as individual identities within the collective to pursue our desire for self-actualization while serving others. Through this infrastructural shift, we move away from extractive paradigms and finally begin to architect our common wealth sustainably across the broader social network.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Praxis",
+  "schema:name": "Act III: πρᾶξις — Praxis",
+  "schema:description": "Fluid practice that loosens orthodoxy to explore the edge — the arc from rigid Project through continuous Product to decentralized Protocol (Bitcoin, Ethereum, Solana), reclaiming self-sovereignty through cryptographic custody of identity and capital.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Beta" },
+    { "@id": "https://ashitmilne.xyz/ontology#Utilitas" }
+  ]
+}
+</script>

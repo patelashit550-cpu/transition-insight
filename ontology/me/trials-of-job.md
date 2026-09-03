@@ -120,3 +120,21 @@ Prepare, prepare!
 ~ Blake
 
 What makes me an anarchist is that I choose to belong to the planet, that spacious and mobile orb rather than the petrified constraints of a pyramid; and through it loyal to creation alone—however *you* may prefer to define it.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#TrialsOfJob",
+  "schema:name": "Act II: 気 — Trials of Job",
+  "schema:description": "A quarter-century reckoning with moral injury at the nexus of information technology and political economy — the psychological cost of participating in extractive digital systems, the anarchist imperative for self-sovereignty, and the derivation of order from personal cryptographic keys.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Beta" },
+    { "@id": "https://ashitmilne.xyz/ontology#Firmitas" }
+  ]
+}
+</script>

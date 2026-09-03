@@ -77,3 +77,21 @@ What I say *feels* right, and it aligns to reality wherever you may be. For thos
 This is a time when we do the unscalable. We do ourselves—in our own bespoke manner. We answer the call to *our* Adventure.
 
 Dignity is all, and I will keep my *own* company quietly when it suits me and the company of others only when my inner God demands I seek out an angle to push myself forward and set another bar. Moreover, this is how I start the conversation: Hello.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Tenable",
+  "schema:name": "The Tenable",
+  "schema:description": "Money and interaction fit for good-faith increments — the imperative to make currency and conduct tenable at civilisational scale, governed by personal authority and divine providence rather than the caprice of giants.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Veritas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Utilitas" }
+  ]
+}
+</script>

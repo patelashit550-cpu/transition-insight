@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-03T01:42:04.113Z",
+  "generated": "2026-09-03T15:54:25.883Z",
   "tier": "global",
-  "manifestDigest": "sha256:d58effae940c47f89bacea9a2f6a293a2d8c9f287cd8ea4736ab7860a2589a74",
+  "manifestDigest": "sha256:bda1f29f7c846915780b0544a21c2050dcec07cce96e712b4c9924e48c86547e",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:4fedbbe0a5399057e695fb2128de5549844c60147d789be570cc0b445188e5f6"
+      "sha256": "sha256:e25fb656f84668e7c625a49df08fff7b791023833f9ffa44b5d7e8d7dd377308"
     },
     {
       "path": "ontology/governance/Carta.md",
@@ -35,7 +35,7 @@
       "publishedAt": null,
       "slug": "carta",
       "series": "regnum-dei",
-      "sha256": "sha256:9d6d1c9eaa365d1d26db73e8523d1b3d8590303605434370b9bf575ee1ea01a1"
+      "sha256": "sha256:ced62bb3ef03cfa0fb0a0c3660c6541eda07dd15dc2128d00392c9a858479963"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -45,7 +45,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "arete",
       "series": "peridot",
-      "sha256": "sha256:e1db2955741a8aedc818804cc0e9e3a127551eb2c87415095fe8b6eeaba40c5d"
+      "sha256": "sha256:e8b68e496f4a77cc057a80663ec812fa3ff0622c3bbe6ef3231d7de30e25be8c"
     },
     {
       "path": "ontology/governance/illumination/semper idem.md",
@@ -55,7 +55,7 @@
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "slug": "semper-idem",
       "series": "peridot",
-      "sha256": "sha256:224f0d8c746570b0de63ac6ca30b9937a02c8e97047aaacefe4fe1a011405e4e"
+      "sha256": "sha256:043a6f5ab2a7befdb9aef2de814a43e5fd87883ec5a66ad5b4ff77d7e549b471"
     },
     {
       "path": "ontology/governance/illumination/social-network.md",
@@ -65,7 +65,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "social-network",
       "series": "peridot",
-      "sha256": "sha256:61dbf7fd1814e834181f762063c5786023451a566dd45294adbe873908a0f56d"
+      "sha256": "sha256:2b7553a1591cb0ad92a1e1a5ce0517e1a8a5c44ff7553cc2faad6a19a1092590"
     },
     {
       "path": "ontology/me/connexion.md",
@@ -75,7 +75,7 @@
       "publishedAt": "2026-04-30T00:00:00.000Z",
       "slug": "connexion",
       "series": null,
-      "sha256": "sha256:5a6d07a3edea8365bd1a85cf742e52bc0b3b77ea796ddb1d189151dee12399ab"
+      "sha256": "sha256:bac36b9d7e7d124b7271a62fd9ebc3957b54f60dcebc0969713f00c0536f7041"
     },
     {
       "path": "ontology/me/origins.md",
@@ -85,7 +85,7 @@
       "publishedAt": "2026-04-27T00:00:00.000Z",
       "slug": "origins",
       "series": null,
-      "sha256": "sha256:12c044ac75ad849e04839d0dad602c3a66fa8e472a10d7151f764829a2f2f021"
+      "sha256": "sha256:96be83cd2ce10ceb481e79cafa408b28685a47a01943775ed0fe40bb93166b2a"
     },
     {
       "path": "ontology/me/praxis.md",
@@ -95,7 +95,7 @@
       "publishedAt": "2026-07-11T00:00:00.000Z",
       "slug": "praxis",
       "series": null,
-      "sha256": "sha256:77ade6955ba9e4ad3c7ccbb1bb68102132b09a89a20b09cb856799ebbd245956"
+      "sha256": "sha256:1142861936492d0d234e4c2c9a3224bc9470e99eaa757a91576df3fdc3699974"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -105,7 +105,7 @@
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:3fe2b5cfd4a47133a2bfa2e7aa24579da4d67f120994a793592b24725edc6d81"
+      "sha256": "sha256:eed053ab981024d6635e108fa68470a02ee43f76125291b0d21dcc7e9c8ea351"
     },
     {
       "path": "ontology/narrative/biography/ashit-milne.md",
@@ -115,7 +115,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "ashit-milne",
       "series": "The Times",
-      "sha256": "sha256:a592f6a69b3c5d0430381a82c140e2746fe8a8cd4b17304ae62fd1d86746b34b"
+      "sha256": "sha256:e2cb42d1ecdb59cf53ceb2f6c6fbc58f1ce578db643374c3ce53828d8c4d7e62"
     },
     {
       "path": "ontology/narrative/biography/ashit-patel.md",
@@ -125,7 +125,7 @@
       "publishedAt": "2026-06-27T00:00:00.000Z",
       "slug": "ashit-patel",
       "series": "The Times",
-      "sha256": "sha256:54be89359f5471427aff1a4dade0a5f61c3d02d6dd6d56ad8e9ff5762eb8b286"
+      "sha256": "sha256:1ef56026827fb73394796c02e88084515a27c0bcd9ee9b477f0e1ef18d240f06"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",
@@ -135,7 +135,7 @@
       "publishedAt": "2026-07-06T00:00:00.000Z",
       "slug": "tenable",
       "series": "Polite Bureau",
-      "sha256": "sha256:eaa41ccbcd8aae043616569ac942cd5cbc9123e8da00a2a9597e4dff8bfe0afd"
+      "sha256": "sha256:abeebe42a57ca58d7820a4ad1de4c9fb0c1d353b7d61df2c5036871ba4e66863"
     },
     {
       "path": "ontology/narrative/comment/Transition.md",
@@ -145,14 +145,14 @@
       "publishedAt": "2026-07-27T00:00:00.000Z",
       "slug": "transition",
       "series": "Polite Bureau",
-      "sha256": "sha256:a829dd2076089b10903913a26cf7486fa5d1659ac6c096336459cb98b5290270"
+      "sha256": "sha256:c983e5bd50bd7fc714db24a6d59b288a1696803265f1186458eee37d1581d561"
     }
   ],
   "signature": {
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "5YedvznMSGaEdZhYEkcRuqrVDnqApp5xTTAccxgQfsJPc2xTEi6HfWNM8umdfm5fHVXCj3dRxaRd3HjuX2GHzdR6",
-    "signedAt": "2026-09-03T01:42:33.906Z"
+    "value": "2MFsC9DHALWRGYovGpR6Jn7vBTyD3nLrSppGC7UPKsRrJM839JNEDQR8eepcgQULy1uhUahMmCXwS77bje7j7VVu",
+    "signedAt": "2026-09-03T15:55:18.466Z"
   }
 }

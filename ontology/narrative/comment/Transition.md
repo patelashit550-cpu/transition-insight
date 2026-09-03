@@ -115,3 +115,21 @@ The West African myth of Edshu is instructive in our argumentative times. As the
 To teach two lifelong friends the danger of blind certainty, Edshu walked between their fields wearing a hat that was red on one side, white on the other, green at the front, and black at the back. When the men turned their harmony into a violent brawl over the stranger's true appearance, Edshu returned to reveal the hat in full—proving that both farmers were entirely right from where they stood, yet completely wrong in mistaking a single point of view for absolute truth. The two saw what had come before them well enough to live together—black. Their children may scoff at their arguments and fashions, calling their times green. Lens and perspective are important. The more we have, the better our modeling of reality as it walks the path into the horizon that is time. We seem unable to place ourselves in historical context; how do we not see for example the parallels between Alsace and Crimea?
 
 We may handle the butterfly effect of the ensuing crisis and its chaos, but those in governance at sovereign and corporate institutions need to get to grips with how protocols secure our global asset infrastructure as *one* thing—that orb which astronauts saw that forever changed how *they* model reality. The Transition is in sight: less noise, more custody, time priced as though we care about what we do.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Transition",
+  "schema:name": "The Transition",
+  "schema:description": "Breathwork as metaphor for civilisational evolution — from dharana through dhyana to samadhi; the passage from extractive hierarchy toward protocol-secured custody of identity and capital, where trust flows like breath between self and commons.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Omega" },
+    { "@id": "https://ashitmilne.xyz/ontology#Firmitas" }
+  ]
+}
+</script>

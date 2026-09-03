@@ -87,3 +87,22 @@ Peridot is the vibrant green birthstone for August. It is the gem-quality variet
 ## Canonical
 
 Canonical provides a comprehensive glossary of terms, framing foundational social science concepts within the specific parameters of this ontology. Additionally, it introduces original theoretical shorthand concepts designed to navigate and integrate contested ideas. These terms allow for the inclusion of perspectives that face significant friction or institutional marginalization within contemporary popular Western discourse, particularly by those aligned with hegemonic state and corporatist interests.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Carta",
+  "schema:name": "Carta",
+  "schema:description": "Introductory essay establishing the ontology's foundational concepts: Soundness as structural integrity, the triadic model of Intelligence–Identity–Capital under Regnum Dei (Divine Governance), and the pursuit of alignment between Alpha and Omega.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Veritas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Utilitas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Firmitas" }
+  ]
+}
+</script>

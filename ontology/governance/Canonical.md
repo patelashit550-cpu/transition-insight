@@ -225,3 +225,21 @@ Gujarati તેવ: habit. Homophone and cousin to *tel*: personality as a mound
 ## Yield
 
 In finance and farming: return produced by an asset or season after costs. Here: durable utility after time, energy, and governance — worthwhile capability or contentment, not merely monetary return; civilization's yield curve as a moral instrument before a market one.
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Canonical",
+  "schema:name": "Canonical",
+  "schema:description": "Comprehensive glossary framing foundational social-science concepts within the Carta ontology — original theoretical shorthand for navigating contested ideas across Intelligence, Identity, Capital, and Governance.",
+  "carta:category": "Canonical",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Veritas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Utilitas" }
+  ]
+}
+</script>

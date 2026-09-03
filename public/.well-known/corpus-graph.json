@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T01:42:03.880Z",
+  "generatedAt": "2026-09-03T15:54:25.585Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,15 +16,15 @@
     "summary": {
       "essays": 12,
       "nodes": 124,
-      "edges": 270,
+      "edges": 294,
       "byKind": {
         "member-of-series": 8,
         "member-of-folder": 12,
         "tagged": 78,
         "lexica": 33,
-        "mention": 139
+        "mention": 163
       },
-      "orphanEssays": 1,
+      "orphanEssays": 0,
       "series": 4,
       "folders": 5,
       "tags": 40,
@@ -1811,16 +1811,24 @@
         "from": "essay:governance/carta.md",
         "to": "term:alpha",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-alpha-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:alpha",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-alpha-mention",
+        "from": "essay:me/origins.md",
+        "to": "term:alpha",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-alpha-mention",
@@ -1883,8 +1891,8 @@
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:anima",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-anima-mention",
@@ -1939,8 +1947,8 @@
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:animus",
         "kind": "mention",
-        "weight": 4,
-        "count": 4
+        "weight": 5,
+        "count": 5
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-arete-mention",
@@ -1948,7 +1956,7 @@
         "to": "term:areté",
         "kind": "mention",
         "weight": 5,
-        "count": 11
+        "count": 13
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-autonomy-mention",
@@ -1999,6 +2007,22 @@
         "count": 2
       },
       {
+        "id": "edge:essay-me-praxis-md-term-beta-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:beta",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-beta-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:beta",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-call-to-adventure-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:call to adventure",
@@ -2035,8 +2059,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-capital-mention",
@@ -2075,8 +2099,8 @@
         "from": "essay:me/praxis.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-capital-mention",
@@ -2107,24 +2131,104 @@
         "from": "essay:narrative/comment/transition.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-carta-md-term-carta-mention",
         "from": "essay:governance/carta.md",
         "to": "term:carta",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 5,
+        "count": 6
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-carta-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-carta-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-carta-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-connexion-md-term-carta-mention",
+        "from": "essay:me/connexion.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-carta-mention",
+        "from": "essay:me/origins.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-me-praxis-md-term-carta-mention",
         "from": "essay:me/praxis.md",
         "to": "term:carta",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-carta-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-carta-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-carta-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-comment-tenable-md-term-carta-mention",
+        "from": "essay:narrative/comment/tenable.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-carta-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-carta-md-term-creation-mention",
@@ -2195,12 +2299,44 @@
         "from": "essay:governance/carta.md",
         "to": "term:firmitas",
         "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-firmitas-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:firmitas",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-firmitas-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:firmitas",
+        "kind": "mention",
         "weight": 1,
         "count": 1
       },
       {
         "id": "edge:essay-me-praxis-md-term-firmitas-mention",
         "from": "essay:me/praxis.md",
+        "to": "term:firmitas",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-firmitas-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:firmitas",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-firmitas-mention",
+        "from": "essay:narrative/comment/transition.md",
         "to": "term:firmitas",
         "kind": "mention",
         "weight": 1,
@@ -2235,16 +2371,16 @@
         "from": "essay:narrative/comment/tenable.md",
         "to": "term:giants",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-carta-md-term-governance-mention",
         "from": "essay:governance/carta.md",
         "to": "term:governance",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-governance-mention",
@@ -2291,16 +2427,16 @@
         "from": "essay:governance/illumination/arete.md",
         "to": "term:hormesis",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-carta-md-term-identity-mention",
         "from": "essay:governance/carta.md",
         "to": "term:identity",
         "kind": "mention",
-        "weight": 4,
-        "count": 4
+        "weight": 5,
+        "count": 5
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-identity-mention",
@@ -2316,7 +2452,7 @@
         "to": "term:identity",
         "kind": "mention",
         "weight": 5,
-        "count": 16
+        "count": 18
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",
@@ -2324,15 +2460,15 @@
         "to": "term:identity",
         "kind": "mention",
         "weight": 5,
-        "count": 8
+        "count": 9
       },
       {
         "id": "edge:essay-me-praxis-md-term-identity-mention",
         "from": "essay:me/praxis.md",
         "to": "term:identity",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-identity-mention",
@@ -2348,23 +2484,23 @@
         "to": "term:identity",
         "kind": "mention",
         "weight": 5,
-        "count": 6
+        "count": 7
       },
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-identity-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:identity",
         "kind": "mention",
-        "weight": 4,
-        "count": 4
+        "weight": 5,
+        "count": 5
       },
       {
         "id": "edge:essay-governance-carta-md-term-intelligence-mention",
         "from": "essay:governance/carta.md",
         "to": "term:intelligence",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-intelligence-mention",
@@ -2427,8 +2563,8 @@
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:ledger",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-narrative-comment-tenable-md-term-ledger-mention",
@@ -2467,20 +2603,44 @@
         "from": "essay:governance/carta.md",
         "to": "term:omega",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-omega-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:omega",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-omega-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:omega",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-omega-mention",
         "from": "essay:me/trials-of-job.md",
+        "to": "term:omega",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-omega-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:omega",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-omega-mention",
+        "from": "essay:narrative/comment/transition.md",
         "to": "term:omega",
         "kind": "mention",
         "weight": 1,
@@ -2495,12 +2655,44 @@
         "count": 3
       },
       {
+        "id": "edge:essay-me-praxis-md-term-orthodoxy-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:orthodoxy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-carta-md-term-peridot-mention",
         "from": "essay:governance/carta.md",
         "to": "term:peridot",
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-peridot-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:peridot",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-peridot-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:peridot",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-peridot-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:peridot",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-peridot-mention",
@@ -2531,8 +2723,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:perimeter",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-perimeter-mention",
@@ -2571,8 +2763,8 @@
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:perimeter",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-narrative-comment-transition-md-term-perimeter-mention",
@@ -2603,8 +2795,8 @@
         "from": "essay:me/trials-of-job.md",
         "to": "term:political economy",
         "kind": "mention",
-        "weight": 2,
-        "count": 2
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-political-economy-mention",
@@ -2636,15 +2828,15 @@
         "to": "term:praxis",
         "kind": "mention",
         "weight": 5,
-        "count": 5
+        "count": 6
       },
       {
         "id": "edge:essay-governance-carta-md-term-regnum-dei-mention",
         "from": "essay:governance/carta.md",
         "to": "term:regnum dei",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-regnum-dei-mention",
@@ -2675,8 +2867,8 @@
         "from": "essay:governance/illumination/social-network.md",
         "to": "term:self-sovereign",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-self-sovereign-mention",
@@ -2707,8 +2899,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:semantic perimeter",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-semantic-perimeter-mention",
@@ -2739,8 +2931,8 @@
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:semantic perimeter",
         "kind": "mention",
-        "weight": 1,
-        "count": 1
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-comment-transition-md-term-semantic-perimeter-mention",
@@ -2764,7 +2956,7 @@
         "to": "term:semper idem",
         "kind": "mention",
         "weight": 5,
-        "count": 5
+        "count": 6
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-semper-idem-mention",
@@ -2836,7 +3028,7 @@
         "to": "term:social network",
         "kind": "mention",
         "weight": 5,
-        "count": 9
+        "count": 10
       },
       {
         "id": "edge:essay-me-praxis-md-term-social-network-mention",
@@ -2875,8 +3067,8 @@
         "from": "essay:governance/carta.md",
         "to": "term:soundness",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-me-praxis-md-term-tenable-mention",
@@ -2891,8 +3083,8 @@
         "from": "essay:narrative/comment/tenable.md",
         "to": "term:tenable",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 5,
+        "count": 6
       },
       {
         "id": "edge:essay-governance-carta-md-term-yield-mention",

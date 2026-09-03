@@ -19,3 +19,20 @@ contact_email: 'patelashit550@gmail.com'
 
 ## Connect
 
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Connexion",
+  "schema:name": "Connexion",
+  "schema:description": "Transparent gateway for direct contact — voice, message, and email — embodying the ontology's principle of openness and unmediated interface between identities.",
+  "carta:category": "Core",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Utilitas" }
+  ]
+}
+</script>
+

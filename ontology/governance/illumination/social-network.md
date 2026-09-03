@@ -169,3 +169,21 @@ However the evolution to that distant vision or model is only just beginning and
 > The effect of the successful adventure of the hero is the unlocking and release again of the flow of life into the body of the world. The miracle of this flow may be represented in physical terms as a circulation of food substance, dynamically as a streaming of energy, or spirituality as a manifestation of grace. Such varieties of image alternate easily, representing three degrees of condensation of the one life force... Grace, food substance, energy: these pour into the living world and wherever they fail, life decomposes into death.
 >
 > ~ Joseph Campbell
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#SocialNetwork",
+  "schema:name": "The Social Network",
+  "schema:description": "The web of relationships among actors forming to provide safety, evolving from security-seeking to self-actualization — nodes, topology, Reed's Law, the Matthew Effect, and the path from centralized extraction toward self-sovereign identity and distributive protocol.",
+  "carta:category": "Peridot",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Utilitas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Omega" }
+  ]
+}
+</script>

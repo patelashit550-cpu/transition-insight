@@ -117,3 +117,21 @@ There are four core arguments passed into a self-sovereign character. Each addit
 4. **Governance:** The perimeter of scope (a function) which combines and squares the above elements without externalizing a cost either to the commons or to other semantic perimeters but on the contrary may be an amendment to them.
 
 To govern *oneself* first and then radiate outwards with positive agency without cost to yourself in *ethereal* terms (emotional, intellectual and spiritual) to break the spell of the illusion (maya), absorb the friction of the transition, and stand as a functional pillar holding up the world by simply refusing to be compromised by it. 
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "https://ashitmilne.xyz/ontology#Arete",
+  "schema:name": "Areté",
+  "schema:description": "Virtue as the practice of turning the competitive impulse upon oneself to cultivate meaningful growth — the quality that enables contentment by deriving comfort from discomfort (hormesis), informed by Greek areté and the S-curve from Alpha through Praxis toward Omega.",
+  "carta:category": "Peridot",
+  "carta:alignsWith": [
+    { "@id": "https://ashitmilne.xyz/ontology#Firmitas" },
+    { "@id": "https://ashitmilne.xyz/ontology#Omega" }
+  ]
+}
+</script>
