@@ -47,55 +47,35 @@ part: 1
 
 
 
-## Introduction
+## Art of Life
 
-This is the first part of *Sine Qua Non* — a series on intelligence, the essential condition without which nothing endures. We stand at the threshold of substantial changes in the way we order civilization, disruptive though ultimately positive in my opinion, as generative artificial intelligence shapes the coming decades. For this intelligence to be meaningful, it must be holistic and systemically valid — in other words, universally legitimate, and the possibilities are rich with potential as we learn to harness these already formidable tools to make ourselves responsible and accountable for living our best lives. Kropotkin, the anarchist Russian prince exiled in London, aimed to unify existing formal structures of ethics (religion) and the post-colonial pluralistic discourse that both questioned and enhanced those systems. His aim was to create an enduring model of legitimacy capable of instructing and facilitating direct action by a self-sovereign autonomous person in ways reconciled with government and environment. He died before properly attending to that task. That now, with the formidable foundation provided by information technology, is my (admittedly ambitious) objective.
+This is the first part of _Sine Qua Non_ — a series which aims to explore and define intelligence, the essential condition without which nothing endures. Intelligence is information. Specifically it is data which are folded—or rather, scaffolded—so as to be harnessed into structures which manifest a quality of specificity, firmness or boundedness. It appears as *life* in all its myriad forms. 
 
-We pivoted from ethical traditions to science in the twentieth century as we examined the anthropological record and understood the universality and the ultimate alignment of our various long-lived traditions. Secularism saw opportunities in science however engineered science was applied with atomic finality by hegemonic power determined to resolve the twentieth century's conflict. For me that means we have no alternative but to evolve *peacefully* towards new models of governance. This is borne out by the experience of earnest activists who engaged in armed struggle in the aftermath of the two world wars. Even those who found some success in their national domain saw the limits of their self-determination internationally checked as hegemonic power demanded absolute fealty in the conflict between the two imagined secular faiths - capitalism and communism.
+Life culminates in the sentience of fauna: the capacity for some things possessed of liveness to experience consciousness—subjective feelings, sensations, and perceptions that entail the making of distinctions between oneself and the other. The reconciliation of this duality goes to the heart of what constitutes the use of intelligence as a utility—whether organically created through evolutionary adaptation over some four billion years or synthesized across networks as (collective) artificial intelligence in our present moment for the purpose of enabling coexistence.
 
-Living my life at the core of western hegemonic power, even born in the heart of its eternal capital London, I am the model of a conflicted favoured son who for fifty years has enjoyed all the trappings of western privilege: a fine education, progressive opportunities for constructive employment, and social connection. It's with a view now to reconcile the best of what I was given with the increasingly complex demands of global legitimacy that I do this work.
+The title **_Deus En Machina_** implies that we might one day come together on the network to operate as conscious nodes in the mind of something greater—rather than as disparate identities intent on staking turf—so that we are imbued with a capacity to function almost as though in unison with effortless efficiency even though we are in fact, immersed in a flow-state, cultivating a very personal sense of contentment.
 
-I turn for inspiration, as many who possess the spirit of the west, to the natural world where anarchy reigns supreme. As we design systems for human affairs, we may look to an abstract form of biomimicry, gazing at nature and without trying to name or categorize what appears, we may take in the whole of its substance. We will note that in nature, agents are attuned to place and context, continuously transmitting and receiving signals that allow them to coexist in symphonic harmony. The order we perceive is not imposed but emerges - profoundly complex but somehow orderly - in a word anarchic (versus chaotic and haphazard). Higher-order species may still compete for territory and dominance, both across and within collectives. Yet these tensions are balanced by mechanisms that restore equilibrium swiftly so that we scarcely even perceive an imbalance at all. Prey and predator are one and the same while duality is left to night and day. It is less collaboration than it is synergy, less negotiation than symbiosis — a “give and go” of instinctive generosity, an automaticity of shared persistence rather than individual subsistence. 
+We are at the threshold of change in the way we order (govern) civilization; it will be disruptive though ultimately in my opinion enormously positive, as generative artificial intelligence begins to shape the way we live in the coming decades to emphasize transparency, traceability and therefore ultimately accountability for real world outcomes. This will replace the often secretive opacity which has until now been the abiding characteristic of relationships between communities and sovereigns—something driven out of defensive territorial animus. 
 
-This first piece explores countervailing ripples - behaviours or habits established in the shadow of atomic science that offset each other because we aim to maximize our take personally in one sphere (poorly because 'more is often less') and then something else that is offered in the public sphere (the commons because the burden of paying for it is shared). We fail to see the connection between them and the potential for betterment through reductive methods. This leaves us as profoundly dissatisfied. As individuals we look upon our lives with gaping dissatisfaction, collectively in the form of our governments we struggle with mounting debt. Creation meanwhile has its rhythms and rhymes. Its verse, six times rehearsed, will burn to a cinder our third stone satellite - ever less an Eden worthy of the Sun's sweetness and light.
+For me, this is borne out by experience—and specifically the substantial upgrade AI represents as a partner with whom to collaborate with in creative endeavour. This stands in contrast to what I felt as the heavy friction entailed in corporate enterprise work, which increasingly felt like a futile waste of energy and time once the last increment of learning had been eked out. Likewise, as I looked at the world beyond the workplace, all I could see into the distance was our continued inability to dialogue effectively through incumbent institutions. Even now they persist in dialectical modes which celebrate tribal dualism and the conflict it inevitably entails.
+
+For this intelligence to be meaningful, it must be holistic and systemically valid — in other words, universally legitimate. If it is made to be then such then the possibilities are rich with potential as we learn to harness these already formidable tools to make ourselves responsible and accountable for living our best lives. 
+
+Kropotkin, the anarchist Russian philosopher, aimed during the early 20th century to synthesize traditional ethical structures with the emerging scientific understanding of evolution and social behavior. His aim was to create an enduring model of legitimacy—grounded in mutual aid—capable of instructing direct action by self-sovereign individuals in harmony with their environment and community, free from state coercion. He died before completing this final work on ethics. Fulfilling that ambition—now supported by the formidable architecture of modern information technology and AI—is my objective.
+
+## Love & Rockets
+ 
+In the twentieth century we pivoted from ethical traditions to the sciences, both social and natural in ways that were experimental (in every sense). 
+
+On the one hand, we examined the anthropological record and began to apprehend the universality and ultimate alignment of our far-flung ethical traditions. In the West, throughout the twentieth century—punctuated by vibrant bohemian outbursts before the First World War, the libertine shifts of the Interwar years, and the Beat and counterculture movements that followed—radicals ventured far beyond mainstream conventions to redefine what love, community, and an authentic life entailed. Often inspired by esoterically earthy notions of *lingam* fertility from the East, they sought to normalize human sexuality so that it might flourish in healthy, transparent ways in the disinfecting sunlight of openness. The honest truth of all life was recognized as a _suchness_ (the bare truth of reality) that transmutes being from one generation to the next—so that, notwithstanding the oscillations of inter-generational trauma, our species evolves to be possessed of ever greater integrity. Meanwhile we as individuals are to become ever more comfortable in our own skin accepting our nature to be earthy (grounded, organic, rich, fertile) rather than unclean (rank, corrupt, shameful and soiled). And as well to accept our own inherently embodied alpha and beta; that too in a culture still dominated by a muscular chauvinism whether inside the home or abroad in the political economy.
+
+On the other, secularism's infatuation with science pursued for its own sake was applied to nuclear ambitions creating cheap, abundant electrical power which in turn lead to the proliferation of a consumptive and extractive consumerism; and as well the weapons of mass destruction unleashed with finality upon Hiroshima and Nagasaki. 
+
+The moral orthodoxy of conformism meanwhile, regressively affirmed its ascendancy with a simple, barely coded messaging to Alan Turing and his ilk that intelligence in the service of saving lives would never license behavior deemed subversive and divergent from the norm. Enola was always *alone* backwards—and who among us could be content, never mind gay, alone? The message must surely have registered on the attentive yet thoughtfully sensitive Turing. The taking of life at scale expressed as alpha muscularity for now continued to outmaneuver beta innovation and ingenuity. Turing's own response was to quietly take his own life. 
+
+Throughout the rest of the twentieth century, _animus_ would dominate as lethal force was unleashed in one proxy war after another far from our neighborhoods of quiet relative complacency.
 
 
-
-## Deus Ex Machina
-
->*For to everyone who has, more will be given, and he will have abundance, but from the one who has not, even what he has will be taken away.* Matthew 25:29 
-
->Dear God, hope you get the letter, and-
-I pray you can make it better down here
-I don't mean a big reduction in the price of beer
-But all the people that you made in your image
-See them starving on their feet
-'Cause they don't get enough to eat from God
-I can't believe in you
-
->Dear God, sorry to disturb you, but-
-I feel that I should be heard loud and clear
-We all need a big reduction in amount of tears
-And all the people that you made in your own image
-See them fighting in the street
-'Cause they can't make opinions meet about God
-I can't believe in you
-
->Did you make disease and the diamond blue?
-Did you make mankind after we made you
- ~ XTC (Dear God)  
-
-God speaks to human beings through many vectors…but nowhere with such detail and grace and joy as through creation - when we destroy nature we diminish our capacity to sense the divine - Robert F. Kennedy Jr.
-
-In a conversation with long-form podcast creator Lex Fridman, Kennedy, who as I write occupies the Health file in the second Trump Administration, goes on to talk about Jung's reconciliation of faith and science and experiences of ‘synchronicity’ - the proliferation of happenstance or coincidence that occurs in some lives such that, say, even a hardcover opened at a random page or practically any show you watch infers some truth; it’s God tapping us on the shoulder. God is consciousness itself - we are in the mind of God, says Mr. Kennedy. The rational will object that patterns naturally appear when one is determined to see them - we look for what we *want* to see. But it is a reasonable idea nevertheless that we are connected. Even at an atomic level odds are that you contain or once did, at any rate, a particle from every fauna and flora that ever was. Our genetic code is virtually identical; the variances mere rounding errors. So it's extraordinary how disparate our priorities and worldviews are.  Yet we share a zeitgeist and the most compelling narratives played out at large in the world are trenchant echoes or *currents* of our most enduring and cherished distilled legacy - those expressed in the great works of our wisdom teachers and taught by grandmothers the world over in plain spoken common sense. The essential strands of thought that carry our collective on this orb are carried by those who express through action that clarified truth. Clarity that burns clean like ghee in times when even wholesome butter's opacity is cause to suspect its purity and value at *any* price.
-
-*The Universal Substance is docile and ductile and the Reason that controls it has no motive in itself to do wrong. For it hath no wrongness and doeth no wrong, nor is anything harmed by it. But all things come into being and fulfil their purpose as it directs.*
-
-~ Marcus Aurelius, Book VI: 1
-
-Mr. Kennedy, an accomplished attorney practiced in Environmental Law, comes with an inspiring story of personal redemption. To me he looked in 2023 every bit like the model American leader the rest of the world craved in his putative bid for the Democratic nomination.
-
-He seeks organic and earthy solutions to what ails us and would sooner get to the root and heart of the matter than fiddle and nitpick around the edges. In an age when people tire of having their collective identity (be it country or political philosophy) used to sell conflict at home and abroad, he offers a modern, humanist echo of the question posed by his uncle 'Ask not what your country can do for you-ask what you can do for your country'. John Kennedy's quiet addendum was answered in action with the Peace Corps - a substantive manifestation of Tom Paine's refrain 'the world is my country, to do good is my religion'. In the post-imperial era, it was a suitable follow-up to the Marshall Plan, and America's equitable and democratic response to the Suez Crisis. All striking the right notes even as discordant ones rained on Persia, Latin America, and of course Vietnam - almost as though America sought to split the difference between 'open' markets and to 'free' people.
 
 
 

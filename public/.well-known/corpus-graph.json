@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T00:15:05.102Z",
+  "generatedAt": "2026-09-03T00:43:04.466Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -2051,8 +2051,8 @@
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:capital",
         "kind": "mention",
-        "weight": 3,
-        "count": 3
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-capital-mention",
@@ -2316,7 +2316,7 @@
         "to": "term:identity",
         "kind": "mention",
         "weight": 5,
-        "count": 15
+        "count": 16
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-identity-mention",

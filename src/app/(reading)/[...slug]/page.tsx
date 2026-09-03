@@ -455,12 +455,18 @@ export default async function OntologyArchive({ params }: PageProps) {
   if (!resolved) return notFound();
 
   const essays = listEssaysForBuild(topicPath);
+  const activeFm = resolved.essay.frontmatter as Record<string, unknown>;
+  const isGlossaryAlone =
+    (activeSlug === "canonical" || activeSlug === "canon" || activeSlug === "canonical-review") &&
+    activeFm.type === "reference";
 
   if (isMeRoute) {
     return <SingleArticle data={resolved.essay} canonicalUrl={canonicalUrl} />;
   }
 
-  if (essays.length > 0) {
+  // Glossary pages need TopicLayout for the term index even when no sibling
+  // essays remain in the folder nav (e.g. Carta is showInTopicNav: false).
+  if (essays.length > 0 || isGlossaryAlone) {
     return (
       <TopicLayout
         topicPath={slug.slice(0, slug.length - 1)}
@@ -602,7 +608,9 @@ function TopicLayout({
 
   const leadFeatureClass = leadImageFeatureModifier((frontmatter as Record<string, unknown>).image_feature);
   const isGlossary =
-    (activeSlug === "canonical" || activeSlug === "canon") &&
+    (activeSlug === "canonical" ||
+      activeSlug === "canon" ||
+      activeSlug === "canonical-review") &&
     frontmatter.type === "reference";
   const terms = isGlossary ? glossaryTerms(content) : [];
   const baseComponents = buildConnexionComponents(visual, leadFeatureClass);

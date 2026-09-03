@@ -2589,6 +2589,9 @@
 
 .p3-topic-nav--glossary + .p3-topic-separator + .p3-topic-article h2[id] {
   scroll-margin-top: 8rem;
+  /* Term heads stay as authored (Autonomy, not AUTONOMY) */
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 /* Sequential hub nav — numbered, rectilinear, read-in-order */
