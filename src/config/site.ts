@@ -66,7 +66,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     title: "Regnum Dei",
     label: "Utilitas",
     nodeKicker: "शिवम",
-    subtitle: "Anarchy As Governance",
+    subtitle: "Anarchism: An Ontology",
     status: "NODE_STABLE // 002",
     requiresAuth: false,
     series: [
