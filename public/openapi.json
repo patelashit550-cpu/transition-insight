@@ -253,6 +253,17 @@
         }
       }
     },
+    "/ontology": {
+      "get": {
+        "operationId": "get_ontology",
+        "summary": "Read public page at /ontology",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/workflow": {
       "get": {
         "operationId": "get_workflow",
