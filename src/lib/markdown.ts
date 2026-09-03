@@ -10,6 +10,7 @@ import {
 } from "@/lib/content-tier";
 import { ONTOLOGY_ROOT } from "@/lib/content-paths";
 import { essayNavDate } from "@/lib/essay-date";
+import { splitEmbeddedJsonLd } from "@/lib/json-ld";
 
 const EXTS = [".mdx", ".md"] as const;
 
@@ -137,6 +138,8 @@ export interface EssayData {
     order?: number;
   };
   content: string;
+  /** Machine-layer JSON-LD lifted from `<script type="application/ld+json">` in the source file. */
+  cartaJsonLd?: unknown[];
   /**
    * Development only: absolute path of the MD/MDX file the server read.
    * Surfaces `process.cwd()` drift (e.g. dev started from a different clone than Cursor).
@@ -176,7 +179,12 @@ function essaySlugFromFile(filename: string, data?: Record<string, unknown>): st
 function readFile(fullPath: string): EssayData {
   const raw = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(raw);
-  return { frontmatter: data as EssayData["frontmatter"], content };
+  const { prose, graphs } = splitEmbeddedJsonLd(content);
+  return {
+    frontmatter: data as EssayData["frontmatter"],
+    content: prose,
+    ...(graphs.length ? { cartaJsonLd: graphs } : {}),
+  };
 }
 
 /**

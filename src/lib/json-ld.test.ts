@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
-import { serializeJsonLd } from "./json-ld.ts";
+import { serializeJsonLd, splitEmbeddedJsonLd } from "./json-ld.ts";
 
 describe("serializeJsonLd", () => {
   it("escapes literal </script> so HTML parsers cannot close the script tag", () => {
@@ -27,5 +27,24 @@ describe("serializeJsonLd", () => {
     const payload = { headline: "The Social Network", description: "a < b" };
     const serialized = serializeJsonLd(payload);
     assert.deepEqual(JSON.parse(serialized), payload);
+  });
+});
+
+describe("splitEmbeddedJsonLd", () => {
+  it("strips the machine layer and returns parsed graphs", () => {
+    const md = `## Soundness\n\nProse stays.\n\n<script type="application/ld+json">\n{"@type":"schema:DefinedTerm","schema:name":"Carta"}\n</script>\n`;
+    const { prose, graphs } = splitEmbeddedJsonLd(md);
+    assert.equal(prose.includes("<script"), false);
+    assert.match(prose, /Prose stays/);
+    assert.equal(graphs.length, 1);
+    assert.deepEqual(graphs[0], { "@type": "schema:DefinedTerm", "schema:name": "Carta" });
+  });
+
+  it("still strips invalid JSON so it never renders as text", () => {
+    const { prose, graphs } = splitEmbeddedJsonLd(
+      `Hello\n<script type="application/ld+json">{not json}</script>`
+    );
+    assert.equal(prose, "Hello");
+    assert.equal(graphs.length, 0);
   });
 });

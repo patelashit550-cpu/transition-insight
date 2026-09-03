@@ -509,7 +509,7 @@ function renderContentHub(route: ContentHubRoute) {
 }
 
 function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?: string }) {
-  const { frontmatter, content } = data;
+  const { frontmatter, content, cartaJsonLd } = data;
   const identity = getSovereignIdentity();
   const { did } = identity;
   const image = typeof frontmatter.image === "string" ? frontmatter.image : undefined;
@@ -539,6 +539,13 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
   return (
     <div className={`p3-narrative-canvas${connexionFit ? " p3-narrative-canvas--connexion-fit" : ""}`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
+      {cartaJsonLd?.map((graph, i) => (
+        <script
+          key={`carta-ld-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(graph) }}
+        />
+      ))}
 
       <article className={`p3-narrative-article${connexionFit ? " p3-narrative-article--connexion-fit" : ""}`}>
         <header className="p3-narrative-article__header">
@@ -582,7 +589,7 @@ function TopicLayout({
   activeEssay: EssayData;
 }) {
   const basePath = `/${topicPath.join("/")}`;
-  const { frontmatter, content } = activeEssay;
+  const { frontmatter, content, cartaJsonLd } = activeEssay;
   const { did } = getSovereignIdentity();
   const canonicalUrl = toAbsUrl(`${basePath}/${activeSlug}/`);
   const fallbackTitle = essays.find((e) => e.slug === activeSlug)?.title ?? "";
@@ -632,6 +639,13 @@ function TopicLayout({
   return (
     <div className="p3-topic-canvas">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
+      {cartaJsonLd?.map((graph, i) => (
+        <script
+          key={`carta-ld-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(graph) }}
+        />
+      ))}
       <nav
         className={`p3-topic-nav${showNavIndex ? " p3-topic-nav--sequential" : ""}${showNavDate ? " p3-topic-nav--temporal" : ""}${isGlossary ? " p3-topic-nav--glossary" : ""}`}
         aria-label={isGlossary ? "Glossary terms" : "Essays in this topic"}
