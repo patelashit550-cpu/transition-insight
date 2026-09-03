@@ -1,0 +1,148 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "carta": "https://ashitmilne.xyz/ontology#"
+  },
+  "@graph": [
+    {
+      "@type": "schema:DefinedTermSet",
+      "@id": "https://ashitmilne.xyz/ontology#",
+      "schema:name": "Carta Ontology",
+      "schema:description": "A philosophical ontology for governance, identity, and capital — the machine-readable layer of Transition Insight (ashitmilne.xyz).",
+      "schema:url": "https://ashitmilne.xyz/ontology"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Veritas",
+      "schema:name": "Veritas",
+      "schema:description": "Truth as the foundation for generative process — the basis from which utility and structural integrity are derived.",
+      "carta:category": "Axiom"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Utilitas",
+      "schema:name": "Utilitas",
+      "schema:description": "Utility — the generative process through which truth is transmuted into solutions and structural integrity in the real world.",
+      "carta:category": "Axiom"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Firmitas",
+      "schema:name": "Firmitas",
+      "schema:description": "Firmness — structural soundness and form aligned with nature; what good building yields when praxis and beta strengthen the trunk.",
+      "carta:category": "Axiom"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Alpha",
+      "schema:name": "Alpha",
+      "schema:description": "Individual success along a chosen path — determined personal trajectory; the first element of the Triad.",
+      "carta:category": "Axiom"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Beta",
+      "schema:name": "Beta",
+      "schema:description": "Left-handed or unconventional departure point — the frontier for discovering genuine opportunity outside mainstream dogma.",
+      "carta:category": "Axiom"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Omega",
+      "schema:name": "Omega",
+      "schema:description": "Wholesome, internalized, integrative functionality — the holistically optimal outcome; the far shore beyond praxis on the S-curve of Areté.",
+      "carta:category": "Axiom"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Carta",
+      "schema:name": "Carta",
+      "schema:description": "Introductory essay establishing the ontology's foundational concepts: Soundness as structural integrity, the triadic model of Intelligence–Identity–Capital under Regnum Dei (Divine Governance), and the pursuit of alignment between Alpha and Omega.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Canonical",
+      "schema:name": "Canonical",
+      "schema:description": "Comprehensive glossary framing foundational social-science concepts within the Carta ontology — original theoretical shorthand for navigating contested ideas across Intelligence, Identity, Capital, and Governance.",
+      "carta:category": "Canonical"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Arete",
+      "schema:name": "Areté",
+      "schema:description": "Virtue as the practice of turning the competitive impulse upon oneself to cultivate meaningful growth — the quality that enables contentment by deriving comfort from discomfort (hormesis).",
+      "carta:category": "Peridot"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#SemperIdem",
+      "schema:name": "Semper Idem",
+      "schema:description": "Semantic Perimeter of Identity Embodied — abstracted identity in the digital age manifested one transaction at a time, bounded by bricks and mortar yet functionally ephemeral.",
+      "carta:category": "Peridot"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#SocialNetwork",
+      "schema:name": "The Social Network",
+      "schema:description": "The web of relationships among actors forming to provide safety, evolving from security-seeking to self-actualization — nodes, topology, Reed's Law, the Matthew Effect, and the path toward self-sovereign identity.",
+      "carta:category": "Peridot"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Origins",
+      "schema:name": "Act I: अर्थ — Origins",
+      "schema:description": "Autobiographical foundation tracing migration across three continents and the formation of an internationalist lens on political economy, keiretsu stakeholder capitalism, and the early internet.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#TrialsOfJob",
+      "schema:name": "Act II: 気 — Trials of Job",
+      "schema:description": "A quarter-century reckoning with moral injury at the nexus of information technology and political economy — the anarchist imperative for self-sovereignty and the derivation of order from personal cryptographic keys.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Praxis",
+      "schema:name": "Act III: πρᾶξις — Praxis",
+      "schema:description": "Fluid practice that loosens orthodoxy to explore the edge — the arc from rigid Project through continuous Product to decentralized Protocol, reclaiming self-sovereignty through cryptographic custody.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Connexion",
+      "schema:name": "Connexion",
+      "schema:description": "Transparent gateway for direct contact — embodying the ontology's principle of openness and unmediated interface between identities.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#AshitMilne",
+      "schema:name": "One Step Beyond — The Making of Ashit Milne",
+      "schema:description": "The coming-together of identity through synchronicity, yoga practice, and the adoption of a name embodying vitality and convergence — Milne as the seed of mission.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#AshitPatel",
+      "schema:name": "Macauley's Favorite Bastard — The Making of Ashit Patel",
+      "schema:description": "Origins of identity as a tel — stratified mound of civilisational sediment, from colonial East Africa through England and India to Canada; the etymology of Patel as ledger-keeper.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Transition",
+      "schema:name": "The Transition",
+      "schema:description": "Breathwork as metaphor for civilisational evolution — from dharana through dhyana to samadhi; the passage from extractive hierarchy toward protocol-secured custody of identity and capital.",
+      "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Tenable",
+      "schema:name": "The Tenable",
+      "schema:description": "Money and interaction fit for good-faith increments — the imperative to make currency and conduct tenable at civilisational scale, governed by personal authority rather than the caprice of giants.",
+      "carta:category": "Core"
+    }
+  ]
+}

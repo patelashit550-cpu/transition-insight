@@ -139,6 +139,8 @@ if (ipfs || ipfsLocal) {
 if (push) {
   const paths = [
     "ontology",
+    "public/ontology",
+    "public/ontology.jsonld",
     "public/attestation.json",
     "public/.well-known",
     "public/sitemap.xml",
