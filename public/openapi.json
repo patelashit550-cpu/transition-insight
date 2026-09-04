@@ -165,6 +165,17 @@
         }
       }
     },
+    "/governance/intelligence/deus-en-machina": {
+      "get": {
+        "operationId": "get_governance_intelligence_deus_en_machina",
+        "summary": "Read public page at /governance/intelligence/deus-en-machina",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/governance/peridot": {
       "get": {
         "operationId": "get_governance_peridot",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T13:36:40.990Z",
+  "generatedAt": "2026-09-04T13:41:47.521Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,21 +14,21 @@
   },
   "interior": {
     "summary": {
-      "essays": 12,
-      "nodes": 124,
-      "edges": 294,
+      "essays": 13,
+      "nodes": 147,
+      "edges": 332,
       "byKind": {
-        "member-of-series": 8,
-        "member-of-folder": 12,
-        "tagged": 78,
-        "lexica": 33,
-        "mention": 163
+        "member-of-series": 9,
+        "member-of-folder": 13,
+        "tagged": 84,
+        "lexica": 52,
+        "mention": 174
       },
       "orphanEssays": 0,
-      "series": 4,
-      "folders": 5,
-      "tags": 40,
-      "terms": 63
+      "series": 5,
+      "folders": 6,
+      "tags": 43,
+      "terms": 80
     },
     "nodes": [
       {
@@ -120,6 +120,25 @@
           "capital",
           "ecology",
           "anarchism"
+        ]
+      },
+      {
+        "id": "essay:governance/intelligence/deus-en-machina.md",
+        "type": "essay",
+        "label": "Deus En Machina",
+        "stage": "published",
+        "slug": "deus-en-machina",
+        "series": "sine-qua-non",
+        "folder": "governance/intelligence",
+        "ontologyPath": "governance/intelligence/deus-en-machina.md",
+        "vaultPath": "ontology/governance/intelligence/deus-en-machina",
+        "tags": [
+          "philosophy",
+          "anarchism",
+          "technology",
+          "intelligence",
+          "yoga",
+          "sacred-feminine"
         ]
       },
       {
@@ -275,6 +294,11 @@
         "label": "peridot"
       },
       {
+        "id": "series:sine-qua-non",
+        "type": "series",
+        "label": "sine-qua-non"
+      },
+      {
         "id": "series:the-times",
         "type": "series",
         "label": "The Times"
@@ -293,6 +317,11 @@
         "id": "folder:governance-illumination",
         "type": "folder",
         "label": "governance/illumination"
+      },
+      {
+        "id": "folder:governance-intelligence",
+        "type": "folder",
+        "label": "governance/intelligence"
       },
       {
         "id": "folder:me",
@@ -450,6 +479,26 @@
         "label": "anarchism"
       },
       {
+        "id": "tag:philosophy",
+        "type": "tag",
+        "label": "philosophy"
+      },
+      {
+        "id": "tag:technology",
+        "type": "tag",
+        "label": "technology"
+      },
+      {
+        "id": "tag:yoga",
+        "type": "tag",
+        "label": "yoga"
+      },
+      {
+        "id": "tag:sacred-feminine",
+        "type": "tag",
+        "label": "sacred-feminine"
+      },
+      {
         "id": "tag:political-economy",
         "type": "tag",
         "label": "political-economy"
@@ -458,11 +507,6 @@
         "id": "tag:economy",
         "type": "tag",
         "label": "economy"
-      },
-      {
-        "id": "tag:technology",
-        "type": "tag",
-        "label": "technology"
       },
       {
         "id": "tag:commons",
@@ -508,6 +552,120 @@
         "id": "tag:monetary-policy",
         "type": "tag",
         "label": "monetary-policy"
+      },
+      {
+        "id": "term:anarchy",
+        "type": "term",
+        "label": "Anarchy",
+        "defined": false
+      },
+      {
+        "id": "term:commons",
+        "type": "term",
+        "label": "Commons",
+        "defined": false
+      },
+      {
+        "id": "term:connection",
+        "type": "term",
+        "label": "Connection",
+        "defined": false
+      },
+      {
+        "id": "term:consciousness",
+        "type": "term",
+        "label": "Consciousness",
+        "defined": false
+      },
+      {
+        "id": "term:consensus",
+        "type": "term",
+        "label": "Consensus",
+        "defined": false
+      },
+      {
+        "id": "term:creation",
+        "type": "term",
+        "label": "Creation",
+        "defined": true
+      },
+      {
+        "id": "term:debt",
+        "type": "term",
+        "label": "Debt",
+        "defined": false
+      },
+      {
+        "id": "term:deus ex machina",
+        "type": "term",
+        "label": "Deus ex Machina",
+        "defined": false
+      },
+      {
+        "id": "term:emergence",
+        "type": "term",
+        "label": "Emergence",
+        "defined": false
+      },
+      {
+        "id": "term:god",
+        "type": "term",
+        "label": "God",
+        "defined": false
+      },
+      {
+        "id": "term:intelligence",
+        "type": "term",
+        "label": "Intelligence",
+        "defined": true
+      },
+      {
+        "id": "term:legitimate",
+        "type": "term",
+        "label": "Legitimate",
+        "defined": false
+      },
+      {
+        "id": "term:machina",
+        "type": "term",
+        "label": "Machina",
+        "defined": false
+      },
+      {
+        "id": "term:money",
+        "type": "term",
+        "label": "Money",
+        "defined": false
+      },
+      {
+        "id": "term:ripple",
+        "type": "term",
+        "label": "Ripple",
+        "defined": false
+      },
+      {
+        "id": "term:stone rose",
+        "type": "term",
+        "label": "Stone Rose",
+        "defined": false
+      },
+      {
+        "id": "term:synchronicity",
+        "type": "term",
+        "label": "Synchronicity",
+        "defined": false
+      },
+      {
+        "id": "term:via negativa",
+        "type": "term",
+        "label": "Via Negativa",
+        "defined": false
+      },
+      {
+        "id": "term:zeitgeist",
+        "type": "term",
+        "label": "Zeitgeist",
+        "defined": false
       },
       {
         "id": "term:migration",
@@ -732,12 +890,6 @@
         "defined": true
       },
       {
-        "id": "term:creation",
-        "type": "term",
-        "label": "Creation",
-        "defined": true
-      },
-      {
         "id": "term:dial square",
         "type": "term",
         "label": "Dial Square",
@@ -759,12 +911,6 @@
         "id": "term:hormesis",
         "type": "term",
         "label": "Hormesis",
-        "defined": true
-      },
-      {
-        "id": "term:intelligence",
-        "type": "term",
-        "label": "Intelligence",
         "defined": true
       },
       {
@@ -1217,6 +1363,195 @@
         "to": "tag:anarchism",
         "kind": "tagged",
         "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-series-sine-qua-non-member-of-series",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "series:sine-qua-non",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-folder-governance-intelligence-member-of-folder",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "folder:governance-intelligence",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-tag-philosophy-tagged",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "tag:philosophy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-tag-anarchism-tagged",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "tag:anarchism",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-tag-technology-tagged",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "tag:technology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-tag-intelligence-tagged",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "tag:intelligence",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-tag-yoga-tagged",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "tag:yoga",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-tag-sacred-feminine-tagged",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "tag:sacred-feminine",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-anarchy-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:anarchy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-commons-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:commons",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-connection-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:connection",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-consciousness-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:consciousness",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-consensus-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:consensus",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-creation-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:creation",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-debt-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:debt",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-deus-ex-machina-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:deus ex machina",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-emergence-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:emergence",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-god-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:god",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-intelligence-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:intelligence",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-legitimate-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:legitimate",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-machina-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:machina",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-money-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:money",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-ripple-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:ripple",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-stone-rose-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:stone rose",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-synchronicity-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:synchronicity",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-via-negativa-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:via negativa",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-zeitgeist-lexica",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:zeitgeist",
+        "kind": "lexica",
+        "weight": 2
       },
       {
         "id": "edge:essay-me-connexion-md-folder-me-member-of-folder",
@@ -1823,6 +2158,14 @@
         "count": 4
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-alpha-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:alpha",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
         "id": "edge:essay-me-origins-md-term-alpha-mention",
         "from": "essay:me/origins.md",
         "to": "term:alpha",
@@ -1879,6 +2222,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-anima-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-anima-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:anima",
@@ -1933,6 +2284,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-animus-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-animus-mention",
@@ -2005,6 +2364,14 @@
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-beta-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:beta",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-me-praxis-md-term-beta-mention",
@@ -2085,6 +2452,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 12
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-capital-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-me-origins-md-term-capital-mention",
@@ -2463,6 +2838,14 @@
         "count": 9
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-identity-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
         "id": "edge:essay-me-praxis-md-term-identity-mention",
         "from": "essay:me/praxis.md",
         "to": "term:identity",
@@ -2655,6 +3038,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-orthodoxy-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:orthodoxy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-praxis-md-term-orthodoxy-mention",
         "from": "essay:me/praxis.md",
         "to": "term:orthodoxy",
@@ -2791,6 +3182,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-political-economy-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-political-economy-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:political economy",
@@ -2869,6 +3268,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-self-sovereign-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:self-sovereign",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-me-trials-of-job-md-term-self-sovereign-mention",
@@ -2967,6 +3374,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-semper-idem-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-semper-idem-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:semper idem",
@@ -3029,6 +3444,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 10
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-social-network-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-me-praxis-md-term-social-network-mention",

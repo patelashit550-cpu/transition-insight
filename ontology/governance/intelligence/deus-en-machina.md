@@ -1,5 +1,5 @@
 ---
-stage: draft
+stage: published
 node_id: 2958
 jurisdiction: Ashit Milne
 title: Deus En Machina
