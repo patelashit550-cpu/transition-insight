@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generated": "2026-09-04T13:34:32.169Z",
+  "generated": "2026-09-04T13:36:52.960Z",
   "canonical": "https://ashitmilne.xyz",
   "aliases": [
     {
@@ -45,8 +45,8 @@
       "algorithm": "ed25519",
       "scheme": "transition-insight:attestation:v1",
       "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-      "value": "2gv2btB8s6RLGkWhvDVx4xXzkZMdRCk9PBMrFMLj5h8pzwhn4z4WSzMXrKTZb2DiABhsTCsuEZ6oa7KWzFPAMh5M",
-      "signedAt": "2026-09-04T13:34:31.985Z"
+      "value": "2R5T7gDEKjYRC3HmLVfBaG1ASUfP8rjL2hUK6tPxwctyQdTBcQ8YK7bJ8M6kBTNiPfsjbFrvvj8vpM58R2VnJHCC",
+      "signedAt": "2026-09-04T13:36:52.821Z"
     },
     "entryCount": 13
   },
