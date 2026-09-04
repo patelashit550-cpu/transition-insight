@@ -673,7 +673,8 @@ function TopicLayout({
                 ))
               : essays.map((e, index) => {
                   const isActive = e.slug === activeSlug;
-                  const indexLabel = String(index);
+                  const partNumber = index + 1;
+                  const indexLabel = String(partNumber);
                   const dateLabel = showNavDate ? e.dateLabel : undefined;
                   return (
                     <li key={e.slug}>
@@ -683,7 +684,7 @@ function TopicLayout({
                         aria-current={isActive ? "page" : undefined}
                         aria-label={
                           showNavIndex
-                            ? `Part ${index}: ${e.title}`
+                            ? `Part ${partNumber}: ${e.title}`
                             : dateLabel
                               ? `${e.title}, ${dateLabel}`
                               : e.title
