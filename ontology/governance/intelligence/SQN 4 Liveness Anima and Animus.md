@@ -46,6 +46,8 @@ tags:
   - awakening
 series: sine-qua-non
 part: 4
+order: 4
+slug: liveness-anima-and-animus
 ---
 
 ![](/home/ashit/Documents/Planet-III/02_Assets/crawford-anima.jpg)

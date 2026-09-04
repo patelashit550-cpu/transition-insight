@@ -38,6 +38,8 @@ tags:
   - awakening
 series: sine-qua-non
 part: 5
+order: 5
+slug: machina-virtualis
 ---
 
 ![](/home/ashit/Documents/Planet-III/02_Assets/PrehistoricLedger.jpeg)

@@ -73,10 +73,11 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
   },
   "governance/intelligence": {
     publicBase: ["governance", "intelligence"],
-    navKicker: "INTELLIGENCE",
-    landerSlug: "intelligence",
+    navKicker: "Intelligence",
+    landerSlug: "deus-en-machina",
     mode: "folder",
     ontologyTopicPath: ["governance", "intelligence"],
+    seriesSlug: "sine-qua-non",
     sequentialNav: true,
   },
   "governance/peridot": {

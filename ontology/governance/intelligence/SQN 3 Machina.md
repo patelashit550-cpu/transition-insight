@@ -40,6 +40,8 @@ tags:
   - hourglass-of-redcurrant
 series: sine-qua-non
 part: 3
+order: 3
+slug: machina
 ---
 
 ![](/home/ashit/Documents/Planet-III/02_Assets/Machina.jfif)

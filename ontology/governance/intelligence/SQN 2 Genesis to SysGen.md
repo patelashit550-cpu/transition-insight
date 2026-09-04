@@ -45,6 +45,8 @@ tags:
   - ai
 series: sine-qua-non
 part: 2
+order: 2
+slug: genesis-to-sysgen
 ---
 
 ![](/home/ashit/Documents/Planet-III/02_Assets/AlgonquinSunrise.jpg)

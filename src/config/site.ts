@@ -52,7 +52,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     title: "Ashit Milne",
     label: "Veritas",
     nodeKicker: "सत्यम",
-    subtitle: "Identity",
+    subtitle: "Mine Identity",
     status: "NODE_ACTIVE // 001",
     requiresAuth: false,
     series: [
