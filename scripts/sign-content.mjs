@@ -2,13 +2,13 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import bs58 from "bs58";
 import nacl from "tweetnacl";
-import { Keypair } from "@solana/web3.js";
 
 import {
   attestationSignPayload,
   getSovereignEnv,
 } from "./lib/content-provenance.mjs";
 import { loadEnvFiles } from "./lib/load-env.mjs";
+import { loadLocalSolanaWallet } from "../src/lib/solana-wallet.ts";
 
 loadEnvFiles();
 
@@ -24,18 +24,16 @@ function assertCorpusSigner(publicKey) {
   const expected = expectedCorpusPubkey();
   if (publicKey !== expected) {
     throw new Error(
-      `Signing key ${publicKey} is not the corpus wallet ${expected}. Use SOLANA_SIGNING_KEY for that address.`,
+      `Signing key ${publicKey} is not the corpus wallet ${expected}. Use SOLANA_SIGNING_KEY or SOLANA_KEYPAIR_PATH for that address.`,
     );
   }
 }
 
+/**
+ * Same laptop key sources as `solana-wallet` / `ship` — base58 secret or Solana CLI JSON.
+ */
 function loadKeypair() {
-  const secret = process.env.SOLANA_SIGNING_KEY?.trim();
-  if (!secret) {
-    throw new Error("Set SOLANA_SIGNING_KEY (base58 secret key) to sign attestation.json");
-  }
-  const bytes = bs58.decode(secret);
-  return Keypair.fromSecretKey(bytes);
+  return loadLocalSolanaWallet();
 }
 
 function verifySignature(attestation) {
