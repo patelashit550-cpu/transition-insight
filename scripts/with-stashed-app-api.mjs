@@ -63,6 +63,12 @@ async function main() {
     await moveDir(apiDir, stashDir, "stash");
     stashed = true;
     console.log("with-stashed-app-api: stashed src/app/api → src/app/_api.dev (static export)");
+    // Dev-server type stubs reference API routes; drop them so production build typecheck does not fail.
+    const devCache = join(root, ".next", "dev");
+    if (existsSync(devCache)) {
+      rmSync(devCache, { recursive: true, force: true });
+      console.log("with-stashed-app-api: cleared .next/dev (stale API route types)");
+    }
   } else if (stashOccupied) {
     console.log("with-stashed-app-api: using existing stash at src/app/_api.dev");
     stashed = true;
@@ -73,7 +79,7 @@ async function main() {
     const result = spawnSync(cmd, args, {
       stdio: "inherit",
       env: process.env,
-      shell: true,
+      shell: false,
       cwd: root,
     });
     status = result.status ?? 1;

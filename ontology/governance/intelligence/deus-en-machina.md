@@ -107,4 +107,6 @@ Where intelligence constructs a scaffold to enable the emergence of _Anima_ and 
 
 To reclaim our agency, we must reject this systematic tear-down, choosing instead to realign our physical bodies and collective networks with the rich, grounded integrity of the living structure—even as we forgive, accept, and play out our accumulated baggage of weirdness, to both heal and bring ourselves to heel before natural order.
 
-Machado has it that there is no path except that walking *creates* one—but in the wild the trails are worn by beasts; bears, wolves, foxes, moose, and deer carve a sensibly efficient path through the terrain. No credentialed architect is required to inspect and certify this space. All of creation's structures are stable and its voice is always sound—signal that is never gratuitous noise and heat. Our task is to delineate such elegant pathways in our social networks and in the way we live our lives in the real world.
+Machado has it that there is no path except that walking *creates* one—but in the wild the trails are worn by beasts; bears, wolves, foxes, moose, and deer carve a sensibly efficient path through the terrain. No credentialed architect is required to inspect and certify this space and its paths. All of creation's structures are stable and its voice is always just sound—a signal that is never a gratuitous noise and heat. 
+
+Our own task today is to delineate such elegant pathways in our social networks and in the way we live our lives in the real world.

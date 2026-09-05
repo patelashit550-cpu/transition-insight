@@ -1,41 +1,21 @@
-# Secrets / local credentials — never index into Cursor context
-# .env.local is gitignored (not GitHub) but visible in Cursor so keys can be edited.
-.env
-.env.*.local
-.env.production.local
-.env.development.local
-*.key
-*.pem
-*.p12
-*.pfx
-id_rsa
-id_ed25519
-**/credentials.json
-**/service-account*.json
-
-# Local sovereign / tooling state
-.sovereign/
-.tools/
-.snapshots/
-scripts/nightly-backup.config.json
-
-# Dependencies & build artifacts (noise + supply-chain surface)
+# Dependency directories
 node_modules/
-.next/
-out/
-semantic-graph/
-data/imports/
-GenX.zip
+.pnpm-store/
+package-lock.json
+pnpm-lock.yaml
 
-# OS / editor
+# Build outputs & caches
+dist/
+build/
+.next/
+.cache/
+
+# Logs and environment files (security & noise reduction)
+*.log
+.env
+.env.*
+!.env.example
+
+# OS specific files
 .DS_Store
 Thumbs.db
-.vscode/
-.obsidian/
-
-# Large / non-source dumps
-*.zip
-*.tar
-*.tar.gz
-*.log
-npm-debug.log*

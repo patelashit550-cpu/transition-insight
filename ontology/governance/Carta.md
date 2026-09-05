@@ -73,7 +73,7 @@ _Regnum Dei_ is comprised of the three elements required to create systemic auto
 
 - **Intelligence** (Sine Qua Non): The animating principle—_anima_ and _animus_—without which no model of reality can exist nor indeed can any reality itself exist.
 
-- **Identity** (Semper Idem): A bounded notion of embodiment broadly recognised as authentic and genuine (i.e. real regardless of whether it is materially embodied or ephemeral).
+- **Living Identity** (Dial Square): If Semper Idem is the holy grail vessel then the work of a life lived fully as an authentic and genuine persona is what is held within it as entirely unique.
 
 - **Capital** (E Pluribus Unum): Inputs valued for their utility in creative endeavours or by their beauty in the Global Commons.
 

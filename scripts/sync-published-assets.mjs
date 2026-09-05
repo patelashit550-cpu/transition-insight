@@ -59,6 +59,16 @@ function resolveInAssets(basename) {
 }
 
 function importFromLegacy(basename) {
+  // Prefer canonical assets/; recover from public/assets if a prior ship
+  // committed the export path without the repo-root source.
+  const publicAssets = path.join(PUBLIC_ASSETS, basename);
+  if (fs.existsSync(publicAssets)) {
+    const dest = path.join(ASSETS, basename);
+    fs.copyFileSync(publicAssets, dest);
+    console.log(`imported ${basename} → assets/ (from public/assets)`);
+    return dest;
+  }
+
   const legacyVisuals = path.join(ROOT, "public", "visuals", basename);
   if (fs.existsSync(legacyVisuals)) {
     const dest = path.join(ASSETS, basename);

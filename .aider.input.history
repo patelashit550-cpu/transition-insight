@@ -1,0 +1,46 @@
+
+# 2026-09-03 10:06:47.917507
++Y
+
+# 2026-09-03 10:07:58.853308
++> /exit
+
+# 2026-09-03 10:10:30.149084
++export OLLAMA_API_BASE=http://host.docker.internal:11434
+
+# 2026-09-03 10:11:15.998942
++N
+
+# 2026-09-03 10:17:58.750437
++export OLLAMA_API_BASE=http://$(ip route | grep default | awk '{print $3}'):11434
+
+# 2026-09-03 10:20:01.169527
++curl http://$(ip route show | grep default | awk '{print $3}'):11434/api/tags
+
+# 2026-09-03 10:21:03.989124
++> /exit
+
+# 2026-09-03 10:22:55.267306
++/add .cursor/rules/ontology-schema.mdc
+
+# 2026-09-03 10:24:15.637394
++Scan all .md files in this repository. For any file missing a JSON-LD script block at the end, extract the core axioms and append the <script type="application/ld+json"> block matching our ontology-schema.mdc rules.
+
+# 2026-09-03 10:31:43.962906
++grep -L "application/ld+json" *.md pages/*.md 2>/dev/null
+
+# 2026-09-03 10:34:25.376357
++curl http://localhost:11434/api/generate -d '{
++  "model": "qwen2.5-coder:7b",
++  "prompt": "Write a 1-line Python function that returns true."
++}'
+
+# 2026-09-03 10:34:27.910891
++Y
+
+# 2026-09-03 10:35:40.753216
++PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64 /home/patel/.local/share/uv/tools/aider-chat/bin/python -m playwright install --with-deps chromium
+
+# 2026-09-03 10:36:54.580173
++HOST_IP=$(ip route | grep default | awk '{print $3}')
++aider --model ollama_chat/qwen2.5-coder:7b --openai-api-base http://$HOST_IP:11434/v1

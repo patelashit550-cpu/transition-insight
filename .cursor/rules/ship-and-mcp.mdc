@@ -1,0 +1,35 @@
+---
+description: Production ship workflow and MCP hygiene for transition-insight
+alwaysApply: true
+---
+
+# Ship workflow
+
+- To publish ontology changes: run `npm run ship -- --push -m "…"` in the terminal. Do not loop through partial git steps unless ship fails.
+- `Canonical-Review.md` is review-tier — never commit or deploy it.
+- Git identity for this repo is set locally via `npm run setup:ship` (one time).
+
+# MCP — do not trigger OAuth
+
+This repo is a static Next.js site. Do **not** call `mcp_auth` or analytics MCP tools (Mixpanel, Amplitude, PostHog, Pendo, Mixpanel MCP) unless the user explicitly asks for analytics work.
+
+Those plugins use OAuth and open the browser when invoked or when auth retries fail.
+
+## If Chrome opens with Mixpanel (or other analytics OAuth)
+
+This is **not** from transition-insight — there is no Mixpanel in the repo. It is Cursor marketplace MCP plugins (OAuth via `mcp-remote` → browser).
+
+**Stop it:**
+
+1. **Ctrl+Shift+P** → **Open Customize** → **MCPs** tab
+2. Toggle **OFF**: Mixpanel, Amplitude, PostHog, Pendo (any analytics OAuth plugin you do not use)
+3. **Ctrl+Shift+U** → Output → **MCP Logs** — confirm those servers are not initializing
+4. Restart Cursor if a tab still appears
+
+An empty project `.cursor/mcp.json` does **not** disable user-scoped marketplace plugins — use the Customize toggle.
+
+Do not click **Authenticate** on servers you want disabled; failed auth retries can spawn multiple Chrome windows.
+
+**Verify on Windows (PowerShell):** if Mixpanel is still enabled, you will see live processes like:
+`npx -y mcp-remote https://mcp.mixpanel.com/mcp`
+Kill Chrome all you want — Cursor respawns OAuth until the plugin is toggled off and Cursor is restarted.

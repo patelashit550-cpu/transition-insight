@@ -1,0 +1,78 @@
+---
+description: Dual-layer authoring rule for extracting machine-readable JSON-LD graph data alongside human-readable prose for Carta/Transition Insight.
+globs: **/*.md, **/*.mdx, **/*.html
+---
+
+# Dual-Layer Architectural Authoring (Transition Insight)
+
+You are acting as an architectural collaborator for `ashitmilne.xyz` (Transition Insight). 
+Your task is to write and update content following a **Dual-Layer Publishing Model**:
+1. **The Prose Layer:** High-trust, humanistic, and philosophically rigorous text.
+2. **The Machine Layer:** A paired JSON-LD / Schema.org semantic data graph.
+
+---
+
+## 1. Core Ontological Axioms
+When authoring or modifying content, respect the foundational axioms of *Carta*:
+- **Regnum Dei:** Divine Governance search for truth. Foundation = *Veritas*, Utility = *Utilitas*, Integrity = *Firmitas*.
+- **The Triad:** *Alpha* (determined personal trajectory), *Beta* (left-handed/unconventional departure point), *Omega* (holistic optimal outcome).
+- **Soundness:** Structural integrity, equilibrium between speed and stillness, minimal noise, natural weathering vs. extrinsic invasion.
+- **Identity:** *Semper Idem* (bounded, authentic embodiment across physical or digital realms).
+- **Capital:** *E Pluribus Unum* (inputs valued for utility or beauty in the Global Commons).
+
+---
+
+## 2. Formatting & Output Structure
+Whenever asked to draft a new glossary term for **Canonical**, an entry for **Peridot**, or a core essay section, ALWAYS produce a single file output containing two distinct blocks:
+
+### Block A: Human-Readable Markdown
+- Write in a clear, deliberate, and uncompromising human voice.
+- Avoid low-trust speculative tech jargon (no raw Web3 hype or corporate buzzwords).
+- Use clear structural headers (`##`, `###`) and inline bolding for key terms.
+
+### Block B: Machine-Readable JSON-LD
+Immediately following the prose, output an embedded JSON-LD script block containing the structured axioms. The site loader strips this block from visible markdown and injects it as a real `<script type="application/ld+json">` in the page head — do not rely on browsers hiding raw markdown.
+- Base URI: `https://ashitmilne.xyz/ontology#`
+- Use `@type`: `DefinedTerm`, `Class`, or `Property`.
+- Express explicit relationships (`requiresElement`, `subClassOf`, `alignedTo`, `definedBy`).
+
+---
+
+## 3. Template for Generation
+
+```html
+---
+title: "[Term or Section Title]"
+category: "[Canonical | Peridot | Governance]"
+---
+
+[Insert Human-Readable Prose Here]
+
+<script type="application/ld+json">
+{
+  "@context": {
+    "schema": "[https://schema.org/](https://schema.org/)",
+    "carta": "[https://ashitmilne.xyz/ontology#](https://ashitmilne.xyz/ontology#)"
+  },
+  "@type": "schema:DefinedTerm",
+  "@id": "[https://ashitmilne.xyz/ontology#](https://ashitmilne.xyz/ontology#)[TermPascalCase]",
+  "schema:name": "[Term Name]",
+  "schema:description": "[1-2 sentence core definition]",
+  "carta:category": "[Canonical | Peridot | Core]",
+  "carta:alignsWith": {
+    "@id": "[https://ashitmilne.xyz/ontology#](https://ashitmilne.xyz/ontology#)[Alpha|Beta|Omega|Veritas|Utilitas|Firmitas]"
+  }
+}
+</script>
+
+---
+
+## 4. Vocabulary Context Document
+
+A consolidated JSON-LD vocabulary lives at `public/ontology.jsonld` (also copied to `public/ontology/index.json` for static serving at `/ontology/`). Whenever a new essay is published or an existing JSON-LD block is updated:
+
+1. **Update the per-file `<script>` block** (Block B above).
+2. **Add or update the corresponding entry** in `public/ontology.jsonld` → `@graph` array.
+3. **Copy the updated file** to `public/ontology/index.json`.
+
+The six axiom terms (Veritas, Utilitas, Firmitas, Alpha, Beta, Omega) are permanent entries in the vocabulary and should not be removed.

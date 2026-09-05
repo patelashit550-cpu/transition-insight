@@ -32,10 +32,30 @@ function assertCorpusSigner(publicKey) {
 function loadKeypair() {
   const secret = process.env.SOLANA_SIGNING_KEY?.trim();
   if (!secret) {
-    throw new Error("Set SOLANA_SIGNING_KEY (base58 secret key) to sign attestation.json");
+    const hint = process.env.SOLANA_KEYPAIR_PATH?.trim()
+      ? "SOLANA_KEYPAIR_PATH is set but content:sign reads SOLANA_SIGNING_KEY only — copy the base58 secret into .env.local or use npm run audit:identity to confirm loading."
+      : "Add SOLANA_SIGNING_KEY=<base58-secret> to .env.local (save the file), then retry. Line must not start with # and should look like SOLANA_SIGNING_KEY=... not export SOLANA_SIGNING_KEY=...";
+    throw new Error(`Set SOLANA_SIGNING_KEY (base58 secret key) to sign attestation.json. ${hint}`);
   }
-  const bytes = bs58.decode(secret);
-  return Keypair.fromSecretKey(bytes);
+  let bytes;
+  try {
+    bytes = bs58.decode(secret);
+  } catch {
+    throw new Error(
+      "SOLANA_SIGNING_KEY is not valid base58. Export the private key from your wallet (not the 24-word seed phrase).",
+    );
+  }
+  try {
+    return bytes.length === 64
+      ? Keypair.fromSecretKey(bytes)
+      : bytes.length === 32
+        ? Keypair.fromSeed(bytes)
+        : (() => {
+            throw new Error("Solana secret key must be 32 or 64 bytes after base58 decode");
+          })();
+  } catch (error) {
+    throw error instanceof Error ? error : new Error(String(error));
+  }
 }
 
 function verifySignature(attestation) {

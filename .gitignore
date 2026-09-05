@@ -23,7 +23,10 @@ id_ed25519
 Thumbs.db
 .cursor/*
 !.cursor/environment.json
-.vscode/
+!.cursor/mcp.json
+!.cursor/rules/
+.vscode/*
+!.vscode/tasks.json
 .snapshots/
 .sovereign/
 .tools/

@@ -1,0 +1,10 @@
+---
+description: Universal project context, strict command usage, and cost limits for Cursor Agent.
+alwaysApply: true
+---
+- **Environment:** Windows running Windows Server / Node.js.
+- **Package Manager / Scripts:** Use `npm run` commands as defined in `package.json`. Never guess scripts.
+- **Cost Minimization:** 
+  - Do NOT index or read build outputs, logs, or `node_modules`.
+  - When fixing bugs, scope your file search narrowly using `@file` instead of letting the agent scan the whole workspace.
+  - Plan before coding: Outline your logic briefly before modifying files.
