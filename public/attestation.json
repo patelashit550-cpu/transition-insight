@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-04T13:48:25.488Z",
+  "generated": "2026-09-05T18:16:22.595Z",
   "tier": "global",
-  "manifestDigest": "sha256:2925fb01e1cbf40531a4caacb9e552508671d76abb08c854692ae419c3302bf7",
+  "manifestDigest": "sha256:87038be139af64c88055a0d8e30ad5b2941dfced4ae67c4bfe4137d5c003eef1",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -35,7 +35,7 @@
       "publishedAt": null,
       "slug": "carta",
       "series": "regnum-dei",
-      "sha256": "sha256:ced62bb3ef03cfa0fb0a0c3660c6541eda07dd15dc2128d00392c9a858479963"
+      "sha256": "sha256:a603f327837b98b5518f5d117ef0c3963ed9aba3a6fa2ab70066aa46d0877ee9"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -75,7 +75,7 @@
       "publishedAt": null,
       "slug": "deus-en-machina",
       "series": "sine-qua-non",
-      "sha256": "sha256:1c052247170f5ef8418625ef04ef158525464c5f6ad84c04e1bb0fac4b860194"
+      "sha256": "sha256:b5b74e6a5e437f59f6c6c8c5bd88a12b4e40385570a088110764b91d12a541b3"
     },
     {
       "path": "ontology/me/connexion.md",
@@ -162,7 +162,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "3FoQi4ZFA6PvRCX9FmhxDGyi7sdedLBSVUqXSBRSGSSMgWEG1X7Wsdfg7Rjd742sQiB2bFYE1GTohuZBc9ECn2eh",
-    "signedAt": "2026-09-04T13:48:43.482Z"
+    "value": "2XkDy4fJ8iqiNVZecVa4GssJN9Jrm4m6ngijhpXgRFnQLVAyE1zTsbBJhq213LdGcqTTNVqeiEN1wWVEKUEEnUVf",
+    "signedAt": "2026-09-05T18:16:59.253Z"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T13:48:25.318Z",
+  "generatedAt": "2026-09-05T18:16:22.304Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -16,13 +16,13 @@
     "summary": {
       "essays": 13,
       "nodes": 147,
-      "edges": 332,
+      "edges": 333,
       "byKind": {
         "member-of-series": 9,
         "member-of-folder": 13,
         "tagged": 84,
         "lexica": 52,
-        "mention": 174
+        "mention": 175
       },
       "orphanEssays": 0,
       "series": 5,
@@ -2657,6 +2657,14 @@
         "id": "edge:essay-narrative-comment-transition-md-term-creation-mention",
         "from": "essay:narrative/comment/transition.md",
         "to": "term:creation",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-dial-square-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:dial square",
         "kind": "mention",
         "weight": 1,
         "count": 1
