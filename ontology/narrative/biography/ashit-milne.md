@@ -2,14 +2,14 @@
 stage: published
 node_id: 2927
 jurisdiction: Ashit Milne
-title: "One Step Beyond"
-subtitle: "The Making of Ashit Milne"
+title: One Step Beyond
+subtitle: The Making of Ashit Milne
 slug: ashit-milne
 type: essay
 theme: emerald
 size: md
 image: /assets/making_am.jpg
-imageAlt: Making of Ashit Milne — Acton well, Downward Dog, Cecily Milne
+imageAlt: Making of Ashit Milne
 imageRole: inset
 showInNav: true
 publishedAt: 2026-07-01T00:00:00.000Z

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-04T13:38:28.161Z",
-  "essayCount": 13,
+  "generatedAt": "2026-09-07T18:36:38.535Z",
+  "essayCount": 14,
   "essays": [
     "governance/Carta.md",
     "governance/illumination/arete.md",
@@ -13,6 +13,7 @@
     "me/trials-of-job.md",
     "narrative/biography/ashit-milne.md",
     "narrative/biography/ashit-patel.md",
+    "narrative/biography/ronin.md",
     "narrative/comment/Tenable.md",
     "narrative/comment/Transition.md"
   ],
@@ -47,10 +48,11 @@
     {
       "term": "Anarchy",
       "method": "extractive-synthesis",
-      "score": 13,
+      "score": 21,
       "sources": [
         "governance/intelligence/deus-en-machina.md",
-        "me/origins.md"
+        "me/origins.md",
+        "narrative/biography/ronin.md"
       ],
       "snippetCount": 2
     },
@@ -80,15 +82,6 @@
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md"
-      ],
-      "snippetCount": 4
-    },
-    {
-      "term": "Areté",
-      "method": "extractive-synthesis",
-      "score": 12,
-      "sources": [
-        "governance/illumination/arete.md"
       ],
       "snippetCount": 4
     },
@@ -169,7 +162,7 @@
     {
       "term": "Commons",
       "method": "extractive-synthesis",
-      "score": 52,
+      "score": 61,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -179,14 +172,35 @@
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
     },
     {
+      "term": "Consciousness",
+      "method": "extractive-synthesis",
+      "score": 16,
+      "sources": [
+        "governance/intelligence/deus-en-machina.md",
+        "narrative/biography/ronin.md"
+      ],
+      "snippetCount": 4
+    },
+    {
+      "term": "Consensus",
+      "method": "extractive-synthesis",
+      "score": 16,
+      "sources": [
+        "governance/intelligence/deus-en-machina.md",
+        "narrative/biography/ronin.md"
+      ],
+      "snippetCount": 2
+    },
+    {
       "term": "Creation",
       "method": "extractive",
-      "score": 47,
+      "score": 59,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -194,6 +208,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Tenable.md",
         "narrative/comment/Transition.md"
       ],
@@ -216,7 +231,7 @@
     {
       "term": "Flow",
       "method": "extractive",
-      "score": 49,
+      "score": 53,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -226,6 +241,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
@@ -264,7 +280,7 @@
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 94,
+      "score": 98,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -276,6 +292,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
@@ -283,7 +300,7 @@
     {
       "term": "Intelligence",
       "method": "extractive",
-      "score": 43,
+      "score": 51,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -291,7 +308,8 @@
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md"
       ],
       "snippetCount": 4
     },
@@ -317,23 +335,35 @@
       "snippetCount": 4
     },
     {
+      "term": "Legitimate",
+      "method": "extractive-synthesis",
+      "score": 16,
+      "sources": [
+        "governance/intelligence/deus-en-machina.md",
+        "narrative/biography/ronin.md"
+      ],
+      "snippetCount": 4
+    },
+    {
       "term": "Machina",
       "method": "extractive-synthesis",
-      "score": 17,
+      "score": 25,
       "sources": [
         "governance/illumination/arete.md",
-        "governance/intelligence/deus-en-machina.md"
+        "governance/intelligence/deus-en-machina.md",
+        "narrative/biography/ronin.md"
       ],
       "snippetCount": 2
     },
     {
-      "term": "Moral Injury",
-      "method": "extractive-synthesis",
-      "score": 13,
+      "term": "Money",
+      "method": "extractive",
+      "score": 16,
       "sources": [
-        "me/trials-of-job.md"
+        "governance/intelligence/deus-en-machina.md",
+        "narrative/biography/ronin.md"
       ],
-      "snippetCount": 2
+      "snippetCount": 4
     },
     {
       "term": "Omega",
@@ -376,7 +406,7 @@
     {
       "term": "Perimeter",
       "method": "extractive-synthesis",
-      "score": 43,
+      "score": 47,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -386,6 +416,7 @@
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
@@ -393,7 +424,7 @@
     {
       "term": "Political Economy",
       "method": "extractive-synthesis",
-      "score": 67,
+      "score": 71,
       "sources": [
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
@@ -403,6 +434,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
@@ -420,12 +452,13 @@
     {
       "term": "Product",
       "method": "extractive-synthesis",
-      "score": 24,
+      "score": 29,
       "sources": [
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
         "me/trials-of-job.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
@@ -433,13 +466,14 @@
     {
       "term": "Project",
       "method": "extractive-synthesis",
-      "score": 29,
+      "score": 33,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Tenable.md"
       ],
       "snippetCount": 4
@@ -514,15 +548,6 @@
       "snippetCount": 4
     },
     {
-      "term": "Social Credit",
-      "method": "extractive-synthesis",
-      "score": 10,
-      "sources": [
-        "me/praxis.md"
-      ],
-      "snippetCount": 1
-    },
-    {
       "term": "Social Network",
       "method": "extractive",
       "score": 44,
@@ -555,16 +580,6 @@
       "snippetCount": 4
     },
     {
-      "term": "Stone Rose",
-      "method": "extractive-synthesis",
-      "score": 12,
-      "sources": [
-        "governance/illumination/arete.md",
-        "governance/intelligence/deus-en-machina.md"
-      ],
-      "snippetCount": 1
-    },
-    {
       "term": "Tenable",
       "method": "extractive-synthesis",
       "score": 20,
@@ -588,7 +603,7 @@
     {
       "term": "Truth",
       "method": "extractive-synthesis",
-      "score": 49,
+      "score": 53,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -598,6 +613,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4
@@ -605,7 +621,7 @@
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 58,
+      "score": 62,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -616,6 +632,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
+        "narrative/biography/ronin.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4

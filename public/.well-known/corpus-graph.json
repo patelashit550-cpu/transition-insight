@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T18:16:22.304Z",
+  "generatedAt": "2026-09-07T18:41:21.469Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,21 +14,21 @@
   },
   "interior": {
     "summary": {
-      "essays": 13,
-      "nodes": 147,
-      "edges": 333,
+      "essays": 14,
+      "nodes": 155,
+      "edges": 359,
       "byKind": {
-        "member-of-series": 9,
-        "member-of-folder": 13,
-        "tagged": 84,
-        "lexica": 52,
-        "mention": 175
+        "member-of-series": 10,
+        "member-of-folder": 14,
+        "tagged": 89,
+        "lexica": 66,
+        "mention": 180
       },
       "orphanEssays": 0,
       "series": 5,
       "folders": 6,
-      "tags": 43,
-      "terms": 80
+      "tags": 45,
+      "terms": 85
     },
     "nodes": [
       {
@@ -245,6 +245,24 @@
           "money",
           "identity",
           "political-economy"
+        ]
+      },
+      {
+        "id": "essay:narrative/biography/ronin.md",
+        "type": "essay",
+        "label": "Ronin",
+        "stage": "published",
+        "slug": "ronin",
+        "series": "The Times",
+        "folder": "narrative/biography",
+        "ontologyPath": "narrative/biography/ronin.md",
+        "vaultPath": "ontology/narrative/biography/ronin",
+        "tags": [
+          "Political-Economy",
+          "Self-Sovereignty",
+          "Art",
+          "Identity",
+          "Personal-Growth"
         ]
       },
       {
@@ -549,6 +567,16 @@
         "label": "civilization"
       },
       {
+        "id": "tag:self-sovereignty",
+        "type": "tag",
+        "label": "Self-Sovereignty"
+      },
+      {
+        "id": "tag:art",
+        "type": "tag",
+        "label": "Art"
+      },
+      {
         "id": "tag:monetary-policy",
         "type": "tag",
         "label": "monetary-policy"
@@ -738,6 +766,36 @@
         "type": "term",
         "label": "Moral Injury",
         "defined": true
+      },
+      {
+        "id": "term:discussion mudra",
+        "type": "term",
+        "label": "discussion mudra",
+        "defined": false
+      },
+      {
+        "id": "term:international political economy",
+        "type": "term",
+        "label": "international political economy",
+        "defined": false
+      },
+      {
+        "id": "term:memory",
+        "type": "term",
+        "label": "memory",
+        "defined": false
+      },
+      {
+        "id": "term:ronin",
+        "type": "term",
+        "label": "ronin",
+        "defined": false
+      },
+      {
+        "id": "term:yoga",
+        "type": "term",
+        "label": "yoga",
+        "defined": false
       },
       {
         "id": "term:transaction",
@@ -1932,6 +1990,153 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-narrative-biography-ronin-md-series-the-times-member-of-series",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "series:the-times",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-folder-narrative-biography-member-of-folder",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "folder:narrative-biography",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-tag-political-economy-tagged",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-tag-self-sovereignty-tagged",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "tag:self-sovereignty",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-tag-art-tagged",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "tag:art",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-tag-identity-tagged",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-tag-personal-growth-tagged",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "tag:personal-growth",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-anarchy-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:anarchy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-commons-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:commons",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-consensus-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:consensus",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-consciousness-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:consciousness",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-creation-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:creation",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-discussion-mudra-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:discussion mudra",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-intelligence-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:intelligence",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-international-political-economy-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:international political economy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-legitimate-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:legitimate",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-machina-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:machina",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-memory-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:memory",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-money-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:money",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-ronin-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:ronin",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-yoga-lexica",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:yoga",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
         "id": "edge:essay-narrative-comment-tenable-md-series-polite-bureau-member-of-series",
         "from": "essay:narrative/comment/tenable.md",
         "to": "series:polite-bureau",
@@ -2814,6 +3019,14 @@
         "count": 2
       },
       {
+        "id": "edge:essay-narrative-biography-ronin-md-term-hormesis-mention",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:hormesis",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-carta-md-term-identity-mention",
         "from": "essay:governance/carta.md",
         "to": "term:identity",
@@ -2886,6 +3099,14 @@
         "count": 5
       },
       {
+        "id": "edge:essay-narrative-biography-ronin-md-term-identity-mention",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-carta-md-term-intelligence-mention",
         "from": "essay:governance/carta.md",
         "to": "term:intelligence",
@@ -2929,6 +3150,14 @@
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-intelligence-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
         "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-janus-mention",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:janus",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -3166,6 +3395,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-narrative-biography-ronin-md-term-perimeter-mention",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-narrative-comment-transition-md-term-perimeter-mention",
         "from": "essay:narrative/comment/transition.md",
         "to": "term:perimeter",
@@ -3216,6 +3453,14 @@
       {
         "id": "edge:essay-narrative-biography-ashit-patel-md-term-political-economy-mention",
         "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-political-economy-mention",
+        "from": "essay:narrative/biography/ronin.md",
         "to": "term:political economy",
         "kind": "mention",
         "weight": 1,

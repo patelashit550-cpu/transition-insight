@@ -55,6 +55,17 @@
         }
       }
     },
+    "/chronicle/jack-london/ronin": {
+      "get": {
+        "operationId": "get_chronicle_jack_london_ronin",
+        "summary": "Read public page at /chronicle/jack-london/ronin",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/chronicle/polite_bureau": {
       "get": {
         "operationId": "get_chronicle_polite_bureau",

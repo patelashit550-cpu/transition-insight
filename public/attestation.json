@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-05T18:16:22.595Z",
+  "generated": "2026-09-07T18:41:21.691Z",
   "tier": "global",
-  "manifestDigest": "sha256:87038be139af64c88055a0d8e30ad5b2941dfced4ae67c4bfe4137d5c003eef1",
+  "manifestDigest": "sha256:98676e64c8ef98588876643d4bdf6cff4c5e3263c04fa10837d612ca105d7ac4",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,9 +12,9 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 74,
-    "attestedFiles": 14,
-    "signedFiles": 14
+    "totalOntologyFiles": 73,
+    "attestedFiles": 15,
+    "signedFiles": 15
   },
   "attested": [
     {
@@ -35,7 +35,7 @@
       "publishedAt": null,
       "slug": "carta",
       "series": "regnum-dei",
-      "sha256": "sha256:a603f327837b98b5518f5d117ef0c3963ed9aba3a6fa2ab70066aa46d0877ee9"
+      "sha256": "sha256:cb065f259bc3d9525bcc9077527bab2263c3afe893088e8e79597f5fd5d20de1"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -125,7 +125,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "ashit-milne",
       "series": "The Times",
-      "sha256": "sha256:e2cb42d1ecdb59cf53ceb2f6c6fbc58f1ce578db643374c3ce53828d8c4d7e62"
+      "sha256": "sha256:0e3972a0f161908bf84743c0b6073db88b6b44f07ae83ec5db26337abb885964"
     },
     {
       "path": "ontology/narrative/biography/ashit-patel.md",
@@ -136,6 +136,16 @@
       "slug": "ashit-patel",
       "series": "The Times",
       "sha256": "sha256:1ef56026827fb73394796c02e88084515a27c0bcd9ee9b477f0e1ef18d240f06"
+    },
+    {
+      "path": "ontology/narrative/biography/ronin.md",
+      "stage": "published",
+      "title": "Ronin",
+      "author": null,
+      "publishedAt": "2025-12-18T00:00:00.000Z",
+      "slug": "ronin",
+      "series": "The Times",
+      "sha256": "sha256:bc3b6a6e4a9c479f333ae8e244fad06ce49ecad3dfddc149874626fdfe567999"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",
@@ -162,7 +172,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "2XkDy4fJ8iqiNVZecVa4GssJN9Jrm4m6ngijhpXgRFnQLVAyE1zTsbBJhq213LdGcqTTNVqeiEN1wWVEKUEEnUVf",
-    "signedAt": "2026-09-05T18:16:59.253Z"
+    "value": "5xgZ6Dv6WzJZkzJHoXcEQ9oPLReDcyUNwragJxzUt1kFds37aqeLdDe9QmwNkVaXPC3wDYpRYsUP9PQU2f4QtRQg",
+    "signedAt": "2026-09-07T18:41:49.726Z"
   }
 }
