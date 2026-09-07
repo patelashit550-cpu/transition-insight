@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generated": "2026-09-07T19:06:01.639Z",
+  "generated": "2026-09-07T19:18:37.303Z",
   "tier": "global",
   "manifestDigest": "sha256:98676e64c8ef98588876643d4bdf6cff4c5e3263c04fa10837d612ca105d7ac4",
   "identity": {
@@ -172,7 +172,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "4gqYQQHSgcMb37kueyQYjxK6bJ51NLF1w5KG7FQDRHShqdV2aPQHYUQMg2uJyws1QydPJ5gqfHksSozz8m9btUtL",
-    "signedAt": "2026-09-07T19:06:30.881Z"
+    "value": "4aTWtWyCFZEBwmTx2E5c3pRrsehmg4hEuZJniJEjZBatGBAdTvoQAnXiXfjBWkvRfeYub8SugMz88XojsazfdLsj",
+    "signedAt": "2026-09-07T19:19:11.084Z"
   }
 }
