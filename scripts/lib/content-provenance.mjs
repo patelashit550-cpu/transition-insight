@@ -65,7 +65,8 @@ export function listOntologyFiles() {
   }
 
   walk(ONTOLOGY_ROOT);
-  return files.sort((a, b) => a.localeCompare(b));
+  // Code-point order — localeCompare() alone differs Windows vs Linux and breaks CI pin.
+  return files.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
 }
 
 /** LF-normalized bytes so Windows (CRLF) and Linux (LF) produce the same manifest digest. */
@@ -120,7 +121,7 @@ export function readOntologyEntry(relativePath) {
 export function manifestDigestFromEntries(entries) {
   const lines = entries
     .map((entry) => `${entry.path}\t${entry.sha256}`)
-    .sort((a, b) => a.localeCompare(b));
+    .sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
   return `sha256:${createHash("sha256").update(lines.join("\n"), "utf8").digest("hex")}`;
 }
 
