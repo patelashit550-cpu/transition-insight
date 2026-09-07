@@ -15,9 +15,11 @@ runs:
   using: composite
   steps:
     - name: Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: ${{ inputs.node-version }}
+        # Keep explicit off — setup-node@v5 enables package-manager cache by default.
+        package-manager-cache: false
         # No npm cache — Pages cutover was flaky with the cache on first run.
 
     - name: Install dependencies

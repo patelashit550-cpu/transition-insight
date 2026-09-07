@@ -21,7 +21,7 @@ There are **two layers**. Mixing them is what makes “composite workflows” co
 Call the composite from a workflow **after** checkout:
 
 ```yaml
-- uses: actions/checkout@v4
+- uses: actions/checkout@v5
 - uses: ./.github/actions/setup-node
 ```
 
