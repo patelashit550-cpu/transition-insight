@@ -16,9 +16,8 @@
  * Before build: canon:check — fails if published essays changed since last
  * `npm run canon:generate` (so you don't ship without refreshing Canonical).
  */
-import { spawnSync } from "node:child_process";
-
 import { loadEnvFiles } from "./lib/load-env.mjs";
+import { runSync } from "./lib/run-cmd.mjs";
 
 /** Never committed by `ship --push` (local drafts, review-tier glossary, etc.). */
 const SHIP_EXCLUDE = ["ontology/governance/Canonical-Review.md"];
@@ -35,16 +34,8 @@ const message =
     : `ship ${new Date().toISOString().slice(0, 10)}`;
 
 function run(label, command, cmdArgs = [], opts = {}) {
-  // npm needs shell on Windows (npm.cmd); git/node are safe with shell:false (avoids DEP0190 + arg mangling).
-  const useShell =
-    opts.shell ?? (process.platform === "win32" && (command === "npm" || command.endsWith(".cmd")));
-  const safeArgs = useShell
-    ? cmdArgs.map((a) => (/\s/.test(a) ? `"${a.replace(/"/g, '\\"')}"` : a))
-    : cmdArgs;
-  const result = spawnSync(command, safeArgs, {
+  const result = runSync(command, cmdArgs, {
     stdio: opts.inherit === false ? "pipe" : "inherit",
-    shell: useShell,
-    cwd: process.cwd(),
     encoding: "utf8",
   });
   if (result.status !== 0) {
@@ -72,10 +63,8 @@ if (push) {
 }
 
 function canonCheckOk() {
-  const result = spawnSync("npm", ["run", "canon:check"], {
+  const result = runSync("npm", ["run", "canon:check"], {
     stdio: "pipe",
-    shell: process.platform === "win32",
-    cwd: process.cwd(),
     encoding: "utf8",
   });
   if (result.stdout?.trim()) console.log(result.stdout.trim());
@@ -102,11 +91,7 @@ run("build:global", "npm", ["run", "build:global"]);
 loadEnvFiles();
 let signedOk = false;
 if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.trim()) {
-  const sign = spawnSync("npm", ["run", "content:sign"], {
-    stdio: "inherit",
-    shell: process.platform === "win32",
-    cwd: process.cwd(),
-  });
+  const sign = runSync("npm", ["run", "content:sign"], { stdio: "inherit" });
   if (sign.status === 0) {
     run("provenance", "node", ["scripts/generate-provenance.mjs"]);
     signedOk = true;
@@ -155,6 +140,7 @@ if (push) {
     "scripts/ship.mjs",
     "scripts/sync-export-attestation.mjs",
     "scripts/lib/content-provenance.mjs",
+    "scripts/lib/run-cmd.mjs",
     ".github/workflows/deploy-pages.yml",
     "scripts/generate-corpus-graph.mjs",
     "scripts/generate-canon.mjs",

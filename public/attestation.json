@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-07T20:43:56.671Z",
+  "generated": "2026-09-07T21:44:49.918Z",
   "tier": "global",
-  "manifestDigest": "sha256:705985ce925194b801b096683707e9a42bf769e2e3531cb831aaf77eab2246ac",
+  "manifestDigest": "sha256:0093105d22b605243ff70a8a961b1db38fc8f9948d9ac33e91eb8f739440d589",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -85,7 +85,7 @@
       "publishedAt": "2026-04-30T00:00:00.000Z",
       "slug": "connexion",
       "series": null,
-      "sha256": "sha256:bac36b9d7e7d124b7271a62fd9ebc3957b54f60dcebc0969713f00c0536f7041"
+      "sha256": "sha256:d77652b1d464a4942c5b9c0316d64b01a63de807ead46182bf3ff48de04b61bf"
     },
     {
       "path": "ontology/me/origins.md",
@@ -172,7 +172,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "2avByhiUEoW63rHngZL35sQAzET2wdNRAZEUczp4M7faWbT9ih9p8D36YQzGaKQk2XGyzS6KYcSzCayucNPgmoDC",
-    "signedAt": "2026-09-07T20:44:36.694Z"
+    "value": "3wXpk1yVRJKdBS2y65tyLet4dQgjrohqhToqwYgEai5o6t2BTAZzM71ZHu8yBoiKHc8BV9KexqeepbbtSiGsUaJB",
+    "signedAt": "2026-09-07T21:45:24.659Z"
   }
 }

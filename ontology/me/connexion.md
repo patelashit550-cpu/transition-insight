@@ -14,7 +14,7 @@ jurisdiction: "Ashit Milne"
 visual: connexion-contact
 contact_voice_url: 'tel:+14168038347'
 contact_message_url: 'tg://resolve?domain=transition-insight'
-contact_email: 'patelashit550@gmail.com'
+contact_email: 'ash.milne@proton.me'
 ---
 
 ## Connect
