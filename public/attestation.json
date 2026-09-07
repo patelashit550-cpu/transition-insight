@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-07T19:43:40.361Z",
+  "generated": "2026-09-07T20:03:14.645Z",
   "tier": "global",
-  "manifestDigest": "sha256:98676e64c8ef98588876643d4bdf6cff4c5e3263c04fa10837d612ca105d7ac4",
+  "manifestDigest": "sha256:705985ce925194b801b096683707e9a42bf769e2e3531cb831aaf77eab2246ac",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -145,7 +145,7 @@
       "publishedAt": "2025-12-18T00:00:00.000Z",
       "slug": "ronin",
       "series": "The Times",
-      "sha256": "sha256:bc3b6a6e4a9c479f333ae8e244fad06ce49ecad3dfddc149874626fdfe567999"
+      "sha256": "sha256:e775cca0e86cf80d26ba140e9b09bfd657f69a5b154619e319543c19aeb5a296"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",
@@ -172,7 +172,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "acCAoxq2b9dt6Qqw8sJaAG74JjeM9neXoGoogQVfaU1qCokPuU1aust35bfRqqPDmvsAtRdChSRPcb8S9T8aRBB",
-    "signedAt": "2026-09-07T19:44:13.564Z"
+    "value": "4tfdKyuPjRT7ey5o1xiXq7YERcXzNY3oD65aRaMX3SyxBSbyaV7uJKxQvSczqs2Yvq3B2L1PUB71hX6N2sgLYf6k",
+    "signedAt": "2026-09-07T20:04:07.190Z"
   }
 }
