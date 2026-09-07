@@ -25,7 +25,9 @@ series: Peridot
 
 ## Introduction
 
-This piece explores how the possession of (self-sovereign) order and structure is consistent and *necessary* to affect anarchy, which is not, as “consensus liberal democrats” would have you believe, antithetical to constructive behaviour. Anarchy is too often conflated with chaos. Chaos implies *apparent* randomness—a result of the inability to correlate cause and effect amidst increasing unmanageable complexity in the modern human condition. Whereas anarchy implies creative and improvisational awareness to discern *self-evident* order and priority through the application of enlightened vision to the flow of information swirling around us. When systems become too complex to drive, we breathe, and allow circumstances to manage us while we in turn, respond to their signals rather than instinctively reacting in a state of apprehending *flow*. This requires the development of presence (awareness). 
+This piece explores how the possession of order and structure is consistent and *necessary* to affect anarchy. Anarchy is often associated with chaos and even nihilism. The popular stereotype involves violent protesters hurling Molotov cocktails.
+
+Chaos implies *apparent* randomness—a result of the inability to correlate cause and effect amidst increasing unmanageable complexity in the modern human condition. Whereas anarchy implies creative and improvisational awareness to discern *self-evident* order and priority through the application of enlightened vision to the flow of information swirling around us. When systems become too complex to drive, we breathe, and allow circumstances to manage us while we in turn, respond to their signals rather than instinctively reacting in a state of apprehending *flow*. This requires the development of presence (awareness). 
 
 STOIC (Stop, Think, Observe, Introspect or Intuit, Create) is a heuristic for this process of developing awareness. Coincidentally, so too is the philosophy of embracing “fate” in this way called stoicism.
 
