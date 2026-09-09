@@ -9,11 +9,27 @@ if (!existsSync(outDir)) {
   console.error("ipfs-relative-export: out/ missing — run npm run build:global first");
   process.exit(1);
 }
+/**
+ * Agent discovery docs under `.well-known/` publish root-absolute paths
+ * (`"/.well-known/…"`, `"/attestation.json"`) as a protocol contract for
+ * origin-based clients. Relativizing those strings (e.g. to `"../.well-known/…"`)
+ * corrupts the live Pages/sol.site discovery surface even though HTML asset
+ * refs to the same prefixes still need rewriting for path gateways.
+ */
+function isWellKnownDiscoveryDoc(relativePath) {
+  const normalizedPath = relativePath.replace(/\\/g, "/");
+  return (
+    normalizedPath === ".well-known" ||
+    normalizedPath.startsWith(".well-known/")
+  );
+}
+
 const files = walkFiles(outDir).filter(({ relativePath }) => {
   const normalizedPath = relativePath.replace(/\\/g, "/");
   return (
     /\.(html|js|css|json|txt|xml|webmanifest)$/.test(normalizedPath) &&
-    !normalizedPath.startsWith("_next/")
+    !normalizedPath.startsWith("_next/") &&
+    !isWellKnownDiscoveryDoc(normalizedPath)
   );
 });
 
