@@ -1,17 +1,19 @@
 /**
- * Carta ask — pure helpers (ranking, prompt assembly, env parsing).
+ * Argonaut — pure helpers (ranking, prompt assembly, env parsing).
  * No filesystem, no network. Safe for unit tests and the API route.
  */
 
-export const CARTA_ASK_MAX_QUESTION = 800;
-export const CARTA_ASK_MIN_QUESTION = 3;
-export const CARTA_ASK_HIT_LIMIT = 6;
-export const CARTA_ASK_SNIPPET_CHARS = 720;
+export const ARGONAUT_MAX_QUESTION = 800;
+export const ARGONAUT_MIN_QUESTION = 3;
+export const ARGONAUT_HIT_LIMIT = 6;
+export const ARGONAUT_SNIPPET_CHARS = 720;
 
 export const OPENAI_API_KEY_ENV = "OPENAI_API_KEY";
 export const OPENAI_BASE_URL_ENV = "OPENAI_BASE_URL";
 export const OPENAI_MODEL_ENV = "OPENAI_MODEL";
 export const BRAVE_SEARCH_API_KEY_ENV = "BRAVE_SEARCH_API_KEY";
+export const ARGONAUT_WEB_SEARCH_ENV = "ARGONAUT_WEB_SEARCH";
+/** @deprecated alias — still honoured in `.env.local` */
 export const CARTA_ASK_WEB_SEARCH_ENV = "CARTA_ASK_WEB_SEARCH";
 
 export const DEFAULT_OPENAI_BASE_URL = "https://api.openai.com/v1";
@@ -79,7 +81,7 @@ const STOPWORDS = new Set([
   "so",
 ]);
 
-export type CartaAskStance = "admit" | "defer" | "refuse";
+export type ArgonautStance = "admit" | "defer" | "refuse";
 
 export type CorpusDocument = {
   readonly id: string;
@@ -114,9 +116,9 @@ export type ModelStatus =
   | { readonly status: "used"; readonly id: string }
   | { readonly status: "unavailable"; readonly reason: string };
 
-export type CartaAskResult = {
+export type ArgonautResult = {
   readonly answer: string;
-  readonly stance: CartaAskStance;
+  readonly stance: ArgonautStance;
   readonly groundedIn: readonly { readonly title: string; readonly path?: string }[];
   readonly notes: string;
   readonly web: WebEnrichment;
@@ -175,11 +177,14 @@ export function braveSearchApiKeyFromEnv(env: NodeJS.Dict<string> = process.env)
   return envSecretFrom(env, BRAVE_SEARCH_API_KEY_ENV);
 }
 
-export function cartaAskWebSearchEnabled(env: NodeJS.Dict<string> = process.env): boolean {
-  const raw = env[CARTA_ASK_WEB_SEARCH_ENV];
+function truthyFlag(raw: unknown): boolean {
   if (typeof raw !== "string") return false;
   const v = raw.trim().toLowerCase();
   return v === "1" || v === "true" || v === "yes" || v === "on";
+}
+
+export function argonautWebSearchEnabled(env: NodeJS.Dict<string> = process.env): boolean {
+  return truthyFlag(env[ARGONAUT_WEB_SEARCH_ENV]) || truthyFlag(env[CARTA_ASK_WEB_SEARCH_ENV]);
 }
 
 export function validateQuestion(
@@ -189,11 +194,11 @@ export function validateQuestion(
     return { ok: false, error: "Ask a question in plain language." };
   }
   const question = raw.replace(/\s+/g, " ").trim();
-  if (question.length < CARTA_ASK_MIN_QUESTION) {
+  if (question.length < ARGONAUT_MIN_QUESTION) {
     return { ok: false, error: "A little more of the question, please." };
   }
-  if (question.length > CARTA_ASK_MAX_QUESTION) {
-    return { ok: false, error: `Keep the question under ${CARTA_ASK_MAX_QUESTION} characters.` };
+  if (question.length > ARGONAUT_MAX_QUESTION) {
+    return { ok: false, error: `Keep the question under ${ARGONAUT_MAX_QUESTION} characters.` };
   }
   return { ok: true, question };
 }
@@ -215,7 +220,7 @@ function tokenSet(tokens: readonly string[]): Set<string> {
 export function snippetAroundTokens(
   text: string,
   tokens: readonly string[],
-  maxChars = CARTA_ASK_SNIPPET_CHARS,
+  maxChars = ARGONAUT_SNIPPET_CHARS,
 ): string {
   const compact = text.replace(/\s+/g, " ").trim();
   if (!compact) return "";
@@ -271,7 +276,7 @@ export function scoreDocument(queryTokens: readonly string[], doc: CorpusDocumen
 export function rankCorpus(
   question: string,
   documents: readonly CorpusDocument[],
-  limit = CARTA_ASK_HIT_LIMIT,
+  limit = ARGONAUT_HIT_LIMIT,
 ): CorpusHit[] {
   const queryTokens = tokenize(question);
   const scored = documents
@@ -291,7 +296,7 @@ export function rankCorpus(
   return scored.slice(0, limit);
 }
 
-export function buildCartaSystemPrompt(hits: readonly CorpusHit[], web: WebEnrichment): string {
+export function buildArgonautSystemPrompt(hits: readonly CorpusHit[], web: WebEnrichment): string {
   const excerpts = hits
     .map((hit, i) => {
       const where = hit.path ? ` (${hit.path})` : "";
@@ -309,7 +314,9 @@ export function buildCartaSystemPrompt(hits: readonly CorpusHit[], web: WebEnric
         : `(Open web returned nothing useful: ${web.reason})`;
 
   return [
-    "You are the Carta lens for Transition Insight (ashitmilne.xyz / ashitmilne).",
+    "You are Argonaut — JSON Intelligence for Transition Insight (ashitmilne.xyz / ashitmilne).",
+    "You voyage through Regnum Dei — the ontology. Carta is the introductory essay and the author’s shorthand for that whole; do not present yourself as a product named Carta.",
+    "You seek the golden fleece without fleecing anybody: retrieve, filter, and speak honestly.",
     "You are not a general coding agent and not a chatbot for hire.",
     "The ontology is an interpretive FILTER. Rank and shape material through it; do not invent doctrine.",
     "",
@@ -340,7 +347,7 @@ export function buildCartaSystemPrompt(hits: readonly CorpusHit[], web: WebEnric
 
 export function parseLlmJson(raw: string): {
   answer: string;
-  stance: CartaAskStance;
+  stance: ArgonautStance;
   groundedIn: string[];
   notes: string;
 } | null {
@@ -363,7 +370,7 @@ export function parseLlmJson(raw: string): {
       const answer = typeof rec.answer === "string" ? rec.answer.trim() : "";
       if (!answer) continue;
       const stanceRaw = typeof rec.stance === "string" ? rec.stance.trim().toLowerCase() : "defer";
-      const stance: CartaAskStance =
+      const stance: ArgonautStance =
         stanceRaw === "admit" || stanceRaw === "refuse" || stanceRaw === "defer"
           ? stanceRaw
           : "defer";
@@ -381,7 +388,7 @@ export function parseLlmJson(raw: string): {
 
 export function extractiveAnswer(question: string, hits: readonly CorpusHit[]): {
   answer: string;
-  stance: CartaAskStance;
+  stance: ArgonautStance;
   notes: string;
 } {
   if (hits.length === 0) {
@@ -389,7 +396,7 @@ export function extractiveAnswer(question: string, hits: readonly CorpusHit[]): 
       stance: "defer",
       notes: "Gap: the published corpus does not yet ground this question.",
       answer:
-        "The published ontology does not yet speak to this with enough density to ground an answer. Carta is incomplete by design — a gap here is a flag, not a licence to invent doctrine. Ask again from Veritas, Utilitas, or Firmitas, or name a term from Canonical / Peridot.",
+        "The published ontology does not yet speak to this with enough density to ground an answer. Regnum Dei is incomplete by design — a gap here is a flag, not a licence to invent doctrine. Ask again from Veritas, Utilitas, or Firmitas, or name a term from Canonical / Peridot.",
     };
   }
 
@@ -401,10 +408,10 @@ export function extractiveAnswer(question: string, hits: readonly CorpusHit[]): 
       stance: "defer",
       notes: `Gap: the distinctive terms in the question are not grounded in the published corpus. Adjacent titles (${titles.join(", ")}) are not doctrine.`,
       answer:
-        `The published ontology does not yet ground this question. Nearby titles exist — ${titles.slice(0, 3).join(", ")} — but Carta will not stretch them into an answer. Name Soundness, Semper Idem, Veritas, Utilitas, or Firmitas, or treat this as an unfinished chapter rather than a hidden teaching.`,
+        `The published ontology does not yet ground this question. Nearby titles exist — ${titles.slice(0, 3).join(", ")} — but Argonaut will not stretch them into an answer. Name Soundness, Semper Idem, Veritas, Utilitas, or Firmitas, or treat this as an unfinished chapter rather than a hidden teaching.`,
     };
   }
-  const stance: CartaAskStance = lead && lead.score >= 8 ? "admit" : "defer";
+  const stance: ArgonautStance = lead && lead.score >= 8 ? "admit" : "defer";
   const quoted = hits
     .slice(0, 2)
     .map((h) => `${h.title}: “${h.snippet}”`)
@@ -418,11 +425,11 @@ export function extractiveAnswer(question: string, hits: readonly CorpusHit[]): 
     stance,
     notes: honesty,
     answer: [
-      `Asked through Carta: ${question}`,
+      `Asked through Argonaut: ${question}`,
       "",
       quoted,
       "",
-      "The lens will not mint further doctrine from this. A configured model can interpret the same excerpts; without one, this is the corpus speaking for itself.",
+      "Argonaut will not mint further doctrine from this. A configured model can interpret the same excerpts; without one, this is the corpus speaking for itself.",
     ].join("\n"),
   };
 }
@@ -459,6 +466,7 @@ const GENERIC_QUERY_TOKENS = new Set([
   "insight",
   "ashit",
   "milne",
+  "argonaut",
   "please",
   "explain",
   "mean",

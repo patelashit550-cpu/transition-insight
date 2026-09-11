@@ -1,9 +1,9 @@
 import {
-  buildCartaSystemPrompt,
+  buildArgonautSystemPrompt,
   openaiConfigFromEnv,
   type CorpusHit,
   type WebEnrichment,
-} from "@/lib/carta-ask-shared";
+} from "@/lib/argonaut-shared";
 
 const LLM_TIMEOUT_MS = 45_000;
 
@@ -15,7 +15,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
 }
 
-export async function completeCartaAsk(params: {
+export async function completeArgonautAsk(params: {
   question: string;
   hits: readonly CorpusHit[];
   web: WebEnrichment;
@@ -35,7 +35,7 @@ export async function completeCartaAsk(params: {
     model: config.model,
     temperature: 0.2,
     messages: [
-      { role: "system", content: buildCartaSystemPrompt(params.hits, params.web) },
+      { role: "system", content: buildArgonautSystemPrompt(params.hits, params.web) },
       { role: "user", content: params.question },
     ],
   };

@@ -8,7 +8,7 @@ import {
   rankCorpus,
   type CorpusDocument,
   type CorpusHit,
-} from "@/lib/carta-ask-shared";
+} from "@/lib/argonaut-shared";
 
 const GRAPH_PATH = path.join(process.cwd(), "public", ".well-known", "corpus-graph.json");
 const VOCAB_CANDIDATES = [

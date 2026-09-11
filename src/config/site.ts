@@ -90,6 +90,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
       { name: "The Times", desc: "By Jack London", dataPoint: "0xCF1", href: "/chronicle/jack-london" },
       { name: "Polite Bureau", desc: "Commentary", dataPoint: "0xCF3", href: "/chronicle/polite_bureau" },
       { name: "Chord", desc: "Dispatches", dataPoint: "0xCF4", href: "/cord" },
+      { name: "Argonaut", desc: "JSON Intelligence", dataPoint: "0xCF5", href: "/argonaut" },
     ],
   },
 };

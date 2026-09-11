@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T21:44:49.696Z",
+  "generatedAt": "2026-09-11T15:49:33.226Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,20 +14,20 @@
   },
   "interior": {
     "summary": {
-      "essays": 14,
-      "nodes": 155,
-      "edges": 359,
+      "essays": 15,
+      "nodes": 161,
+      "edges": 372,
       "byKind": {
-        "member-of-series": 10,
-        "member-of-folder": 14,
-        "tagged": 89,
+        "member-of-series": 11,
+        "member-of-folder": 15,
+        "tagged": 94,
         "lexica": 66,
-        "mention": 180
+        "mention": 186
       },
       "orphanEssays": 0,
-      "series": 5,
-      "folders": 6,
-      "tags": 45,
+      "series": 6,
+      "folders": 7,
+      "tags": 48,
       "terms": 85
     },
     "nodes": [
@@ -210,6 +210,24 @@
         ]
       },
       {
+        "id": "essay:narrative/argonaut.md",
+        "type": "essay",
+        "label": "Argonaut",
+        "stage": "published",
+        "slug": "argonaut",
+        "series": "Telamon",
+        "folder": "narrative",
+        "ontologyPath": "narrative/argonaut.md",
+        "vaultPath": "ontology/narrative/argonaut",
+        "tags": [
+          "telamon",
+          "firmitas",
+          "argonaut",
+          "ontology",
+          "regnum-dei"
+        ]
+      },
+      {
         "id": "essay:narrative/biography/ashit-milne.md",
         "type": "essay",
         "label": "One Step Beyond",
@@ -317,6 +335,11 @@
         "label": "sine-qua-non"
       },
       {
+        "id": "series:telamon",
+        "type": "series",
+        "label": "Telamon"
+      },
+      {
         "id": "series:the-times",
         "type": "series",
         "label": "The Times"
@@ -345,6 +368,11 @@
         "id": "folder:me",
         "type": "folder",
         "label": "me"
+      },
+      {
+        "id": "folder:narrative",
+        "type": "folder",
+        "label": "narrative"
       },
       {
         "id": "folder:narrative-biography",
@@ -530,6 +558,21 @@
         "id": "tag:commons",
         "type": "tag",
         "label": "commons"
+      },
+      {
+        "id": "tag:telamon",
+        "type": "tag",
+        "label": "telamon"
+      },
+      {
+        "id": "tag:firmitas",
+        "type": "tag",
+        "label": "firmitas"
+      },
+      {
+        "id": "tag:argonaut",
+        "type": "tag",
+        "label": "argonaut"
       },
       {
         "id": "tag:community",
@@ -1871,6 +1914,55 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-narrative-argonaut-md-series-telamon-member-of-series",
+        "from": "essay:narrative/argonaut.md",
+        "to": "series:telamon",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-folder-narrative-member-of-folder",
+        "from": "essay:narrative/argonaut.md",
+        "to": "folder:narrative",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-tag-telamon-tagged",
+        "from": "essay:narrative/argonaut.md",
+        "to": "tag:telamon",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-tag-firmitas-tagged",
+        "from": "essay:narrative/argonaut.md",
+        "to": "tag:firmitas",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-tag-argonaut-tagged",
+        "from": "essay:narrative/argonaut.md",
+        "to": "tag:argonaut",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-tag-ontology-tagged",
+        "from": "essay:narrative/argonaut.md",
+        "to": "tag:ontology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-tag-regnum-dei-tagged",
+        "from": "essay:narrative/argonaut.md",
+        "to": "tag:regnum-dei",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-series-the-times-member-of-series",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "series:the-times",
@@ -2779,6 +2871,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-narrative-argonaut-md-term-carta-mention",
+        "from": "essay:narrative/argonaut.md",
+        "to": "term:carta",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-carta-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:carta",
@@ -2921,6 +3021,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-term-firmitas-mention",
+        "from": "essay:narrative/argonaut.md",
+        "to": "term:firmitas",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-comment-transition-md-term-firmitas-mention",
@@ -3137,6 +3245,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-term-intelligence-mention",
+        "from": "essay:narrative/argonaut.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-intelligence-mention",
@@ -3499,6 +3615,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-narrative-argonaut-md-term-regnum-dei-mention",
+        "from": "essay:narrative/argonaut.md",
+        "to": "term:regnum dei",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-satyagraha-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:satyagraha",
@@ -3643,6 +3767,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-narrative-argonaut-md-term-semper-idem-mention",
+        "from": "essay:narrative/argonaut.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-semper-idem-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:semper idem",
@@ -3745,6 +3877,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-narrative-argonaut-md-term-soundness-mention",
+        "from": "essay:narrative/argonaut.md",
+        "to": "term:soundness",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-me-praxis-md-term-tenable-mention",

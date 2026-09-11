@@ -1,9 +1,9 @@
 import {
   braveSearchApiKeyFromEnv,
-  cartaAskWebSearchEnabled,
+  argonautWebSearchEnabled,
   type WebEnrichment,
   type WebSource,
-} from "@/lib/carta-ask-shared";
+} from "@/lib/argonaut-shared";
 
 const BRAVE_SEARCH_URL = "https://api.search.brave.com/res/v1/web/search";
 const WEB_TIMEOUT_MS = 8_000;
@@ -34,17 +34,17 @@ export async function enrichFromOpenWeb(
   env: NodeJS.Dict<string> = process.env,
   fetchImpl: typeof fetch = fetch,
 ): Promise<WebEnrichment> {
-  if (!cartaAskWebSearchEnabled(env)) {
+  if (!argonautWebSearchEnabled(env)) {
     return {
       status: "unavailable",
-      reason: "Open-web enrichment is off. Set CARTA_ASK_WEB_SEARCH=1 and BRAVE_SEARCH_API_KEY in .env.local.",
+      reason: "Open-web enrichment is off. Set ARGONAUT_WEB_SEARCH=1 and BRAVE_SEARCH_API_KEY in .env.local.",
     };
   }
   const key = braveSearchApiKeyFromEnv(env);
   if (!key) {
     return {
       status: "unavailable",
-      reason: "CARTA_ASK_WEB_SEARCH is on, but BRAVE_SEARCH_API_KEY is missing. The corpus filter still applies.",
+      reason: "ARGONAUT_WEB_SEARCH is on, but BRAVE_SEARCH_API_KEY is missing. The corpus filter still applies.",
     };
   }
 

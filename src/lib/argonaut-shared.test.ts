@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import {
-  buildCartaSystemPrompt,
+  buildArgonautSystemPrompt,
   braveSearchApiKeyFromEnv,
-  cartaAskWebSearchEnabled,
+  argonautWebSearchEnabled,
   extractiveAnswer,
   groundedFromHits,
   openaiConfigFromEnv,
@@ -16,7 +16,7 @@ import {
   corpusCoversQuestion,
   type CorpusDocument,
   type CorpusHit,
-} from "./carta-ask-shared.ts";
+} from "./argonaut-shared.ts";
 
 const carta: CorpusDocument = {
   id: "essay:governance/carta.md",
@@ -76,13 +76,14 @@ test("openaiConfigFromEnv rejects placeholders and allows local ollama", () => {
 });
 
 test("web search is gated and Brave placeholders are rejected", () => {
-  assert.equal(cartaAskWebSearchEnabled({}), false);
-  assert.equal(cartaAskWebSearchEnabled({ CARTA_ASK_WEB_SEARCH: "1" }), true);
+  assert.equal(argonautWebSearchEnabled({}), false);
+  assert.equal(argonautWebSearchEnabled({ ARGONAUT_WEB_SEARCH: "1" }), true);
+  assert.equal(argonautWebSearchEnabled({ CARTA_ASK_WEB_SEARCH: "1" }), true);
   assert.equal(braveSearchApiKeyFromEnv({ BRAVE_SEARCH_API_KEY: "YOUR_API_KEY" }), null);
   assert.equal(braveSearchApiKeyFromEnv({ BRAVE_SEARCH_API_KEY: "BSA..." }), "BSA...");
 });
 
-test("buildCartaSystemPrompt includes excerpts and honesty rules", () => {
+test("buildArgonautSystemPrompt includes excerpts and honesty rules", () => {
   const hits: CorpusHit[] = [
     {
       id: carta.id,
@@ -93,17 +94,22 @@ test("buildCartaSystemPrompt includes excerpts and honesty rules", () => {
       path: carta.path,
     },
   ];
-  const prompt = buildCartaSystemPrompt(hits, {
+  const prompt = buildArgonautSystemPrompt(hits, {
     status: "unavailable",
-    reason: "CARTA_ASK_WEB_SEARCH is off",
+    reason: "ARGONAUT_WEB_SEARCH is off",
   });
+  assert.match(prompt, /Argonaut/);
+  assert.match(prompt, /JSON Intelligence/);
+  assert.match(prompt, /Regnum Dei/);
+  assert.doesNotMatch(prompt, /Odyssey/);
+  assert.doesNotMatch(prompt, /AI search through Regnum Dei/);
   assert.match(prompt, /Veritas/);
   assert.match(prompt, /Firmitas/);
   assert.match(prompt, /admit/);
   assert.match(prompt, /defer/);
   assert.match(prompt, /Carta/);
   assert.match(prompt, /soundness/);
-  assert.match(prompt, /CARTA_ASK_WEB_SEARCH is off/);
+  assert.match(prompt, /ARGONAUT_WEB_SEARCH is off/);
   assert.match(prompt, /not a general coding agent/);
 });
 

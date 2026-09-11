@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { runCartaAsk } from "@/lib/carta-ask";
+import { runArgonautAsk } from "@/lib/argonaut";
 
 export const runtime = "nodejs";
 
@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const outcome = await runCartaAsk(payload.question);
+  const outcome = await runArgonautAsk(payload.question);
   if (!outcome.ok) {
     return NextResponse.json({ error: outcome.error }, { status: outcome.status });
   }

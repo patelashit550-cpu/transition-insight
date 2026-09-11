@@ -218,6 +218,7 @@ export function listBentoLegacyStaticParams(
       const rel = item.href.replace(/^\//, "");
       if (rel in CONTENT_HUBS) continue;
       const parts = rel.split("/");
+      if (parts.length === 1 && (parts[0] === "cord" || parts[0] === "argonaut")) continue;
       const essay = resolveEssay(parts);
       if (!essay) continue;
       if (!isStageIncluded(essay.frontmatter.stage)) continue;

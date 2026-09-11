@@ -1,20 +1,20 @@
-/** Server-route helpers for the B3 Carta ask window. Do not import from client components. */
-import { retrieveCorpus } from "@/lib/carta-ask-corpus";
-import { completeCartaAsk } from "@/lib/carta-ask-llm";
+/** Server-route helpers for Argonaut. Do not import from client components. */
+import { retrieveCorpus } from "@/lib/argonaut-corpus";
+import { completeArgonautAsk } from "@/lib/argonaut-llm";
 import {
   extractiveAnswer,
   groundedFromHits,
   parseLlmJson,
   validateQuestion,
-  type CartaAskResult,
-} from "@/lib/carta-ask-shared";
-import { enrichFromOpenWeb } from "@/lib/carta-ask-web";
+  type ArgonautResult,
+} from "@/lib/argonaut-shared";
+import { enrichFromOpenWeb } from "@/lib/argonaut-web";
 
-export async function runCartaAsk(
+export async function runArgonautAsk(
   rawQuestion: unknown,
   env: NodeJS.Dict<string> = process.env,
   fetchImpl: typeof fetch = fetch,
-): Promise<{ ok: true; result: CartaAskResult } | { ok: false; error: string; status: number }> {
+): Promise<{ ok: true; result: ArgonautResult } | { ok: false; error: string; status: number }> {
   const checked = validateQuestion(rawQuestion);
   if (!checked.ok) {
     return { ok: false, error: checked.error, status: 400 };
@@ -22,7 +22,7 @@ export async function runCartaAsk(
 
   const hits = retrieveCorpus(checked.question);
   const web = await enrichFromOpenWeb(checked.question, env, fetchImpl);
-  const completion = await completeCartaAsk({
+  const completion = await completeArgonautAsk({
     question: checked.question,
     hits,
     web,

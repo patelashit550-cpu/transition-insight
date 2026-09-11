@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { parseBraveWebResults } from "./carta-ask-web.ts";
-import { enrichFromOpenWeb } from "./carta-ask-web.ts";
+import { parseBraveWebResults } from "./argonaut-web.ts";
+import { enrichFromOpenWeb } from "./argonaut-web.ts";
 
 test("parseBraveWebResults reads title url description", () => {
   const sources = parseBraveWebResults({
@@ -22,11 +22,11 @@ test("enrichFromOpenWeb stays gated without the flag", async () => {
     throw new Error("fetch should not run");
   });
   assert.equal(web.status, "unavailable");
-  assert.match(web.reason, /CARTA_ASK_WEB_SEARCH/);
+  assert.match(web.reason, /ARGONAUT_WEB_SEARCH/);
 });
 
 test("enrichFromOpenWeb reports a missing Brave key instead of fetching", async () => {
-  const web = await enrichFromOpenWeb("soundness", { CARTA_ASK_WEB_SEARCH: "1" }, async () => {
+  const web = await enrichFromOpenWeb("soundness", { ARGONAUT_WEB_SEARCH: "1" }, async () => {
     throw new Error("fetch should not run");
   });
   assert.equal(web.status, "unavailable");

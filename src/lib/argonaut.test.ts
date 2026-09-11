@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { runCartaAsk } from "./carta-ask.ts";
+import { runArgonautAsk } from "./argonaut.ts";
 
-test("runCartaAsk ranks corpus and does not invent a model when keys are absent", async () => {
-  const outcome = await runCartaAsk("what is soundness", {}, async () => {
+test("runArgonautAsk ranks corpus and does not invent a model when keys are absent", async () => {
+  const outcome = await runArgonautAsk("what is soundness", {}, async () => {
     throw new Error("network should not be used without keys");
   });
   assert.equal(outcome.ok, true);
@@ -16,8 +16,8 @@ test("runCartaAsk ranks corpus and does not invent a model when keys are absent"
   assert.match(blob, /Carta|soundness|Veritas|Firmitas|ontology/i);
 });
 
-test("runCartaAsk defers ticker invention instead of stretching nearby essays", async () => {
-  const outcome = await runCartaAsk(
+test("runArgonautAsk defers ticker invention instead of stretching nearby essays", async () => {
+  const outcome = await runArgonautAsk(
     "What is the token ticker and airdrop schedule for Transition Insight?",
     {},
     async () => {
