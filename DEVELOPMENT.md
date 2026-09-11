@@ -68,3 +68,23 @@ npm run ship
 
 `npm run ship -- --push` writes to `main` directly, so use it only when branch
 protection and the intended release policy permit direct pushes.
+
+## Carta ask (home Bento 3)
+
+The Firmitas card on `npm run dev` includes a query window. It ranks the published
+corpus (`public/.well-known/corpus-graph.json`, `public/ontology.jsonld`, ontology
+markdown), optionally searches the web, then asks an OpenAI-compatible model to
+answer through Carta.
+
+1. `npm run env:local` if `.env.local` is missing.
+2. Set `OPENAI_API_KEY` (never `NEXT_PUBLIC_*`). Optional: `OPENAI_BASE_URL`,
+   `OPENAI_MODEL`. Local Ollama: `OPENAI_BASE_URL=http://127.0.0.1:11434/v1` and
+   `OPENAI_API_KEY=ollama`.
+3. Optional web: `CARTA_ASK_WEB_SEARCH=1` and `BRAVE_SEARCH_API_KEY`
+   (https://brave.com/search/api/). Without those, the UI reports the web as
+   unavailable; the corpus filter still runs.
+4. `npm run dev` and ask from Bento 3. Without a model key the route still
+   returns ranked excerpts and will not invent doctrine.
+
+The GitHub Pages export has no App Router — same as Chord. The window remains
+visible and explains that the lens is studio-only.

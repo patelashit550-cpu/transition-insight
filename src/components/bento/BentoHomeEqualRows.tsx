@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import { useLayoutEffect, useRef, useState, useEffect, useCallback, useSyncExternalStore } from "react";
 
 import { BentoCard } from "./BentoCard";
+import { CartaAskWindow } from "./CartaAskWindow";
 import { BentoRegistry } from "@/config/site";
 import type { BentoKey, NavVisibilityPayload } from "@/lib/nav-visibility-shared";
 import { cn } from "@/lib/utils";
@@ -188,6 +189,7 @@ export function BentoHomeEqualRows({ visible }: Props) {
               titleVisualSrc={section.titleVisualSrc}
               titleVisualAlt={section.titleVisualAlt}
               items={items}
+              footer={key === "B3" ? <CartaAskWindow /> : undefined}
               showColophon={key === "B1"}
             />
           </div>

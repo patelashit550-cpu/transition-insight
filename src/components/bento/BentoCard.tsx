@@ -24,6 +24,8 @@ interface BentoProps {
   titleVisualAlt?: string
   items?: BentoItem[]
   children?: React.ReactNode
+  /** Slot below the item list, outside the scroller (B3 Carta ask). */
+  footer?: React.ReactNode
   /** Parent frame has a fixed row height; we set a pixel `max-height` on the list so it can scroll. */
   equalRow?: boolean
   /** Bottom-left colophon (Ab MCMLXIX) — Identity / B1 only. */
@@ -45,6 +47,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
   titleVisualAlt,
   items,
   children,
+  footer,
   equalRow = false,
   showColophon = false,
   },
@@ -52,6 +55,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
 ) {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const afterNavRef = useRef<HTMLDivElement | null>(null);
   const [showTopFade, setShowTopFade] = useState(false);
   const [showBottomFade, setShowBottomFade] = useState(false);
 
@@ -67,12 +71,18 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
     const root = rootRef.current;
     const sc = scrollerRef.current;
     if (!root || !sc) return;
+    if (root.classList.contains("bento-card-surface--with-footer")) {
+      sc.style.maxHeight = "";
+      return;
+    }
     const g = getComputedStyle(root);
     const borderBottom = parseFloat(g.borderBottomWidth) || 0;
     const padBottom = parseFloat(g.paddingBottom) || 0;
     const r = root.getBoundingClientRect();
     const s = sc.getBoundingClientRect();
-    const innerBottom = r.bottom - borderBottom - padBottom;
+    const after = afterNavRef.current;
+    const afterH = after ? after.getBoundingClientRect().height : 0;
+    const innerBottom = r.bottom - borderBottom - padBottom - afterH;
     const maxH = Math.max(0, Math.floor(innerBottom - s.top));
     sc.style.maxHeight = maxH < 1 ? "" : `${maxH}px`;
   }, []);
@@ -116,6 +126,9 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
     roRoot.observe(root);
     roScroller = new ResizeObserver(run);
     roScroller.observe(sc);
+    if (afterNavRef.current) {
+      roRoot.observe(afterNavRef.current);
+    }
     const onResize = () => run();
     const onScroll = () => updateScrollCues();
     sc.addEventListener("scroll", onScroll, { passive: true });
@@ -127,7 +140,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
       sc.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
-  }, [equalRow, applyScrollerCap, updateScrollCues, nodeKicker, nodeId, title, subtitle, titleVisualSrc, items?.length]);
+  }, [equalRow, applyScrollerCap, updateScrollCues, nodeKicker, nodeId, title, subtitle, titleVisualSrc, items?.length, Boolean(footer)]);
 
   const itemList = items?.map((item, idx) => {
     const body = (
@@ -195,7 +208,10 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
   return (
     <div
       ref={setRootRef}
-      className="jurisdiction-card group bento-card-surface w-full h-full min-w-0 min-h-0"
+      className={cn(
+        "jurisdiction-card group bento-card-surface w-full h-full min-w-0 min-h-0",
+        footer && "bento-card-surface--with-footer"
+      )}
     >
       <div
         className="card-content flex h-full min-h-0 flex-col font-sans"
@@ -225,10 +241,15 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
           )}
         </nav>
 
-        {showColophon && (
-          <p className="bento-box-colophon" lang="la">
-            Ab MCMLXIX
-          </p>
+        {(footer || showColophon) && (
+          <div ref={afterNavRef} className={cn("bento-card-after", !footer && "shrink-0")}>
+            {footer ? <div className="bento-card-footer">{footer}</div> : null}
+            {showColophon && (
+              <p className="bento-box-colophon" lang="la">
+                Ab MCMLXIX
+              </p>
+            )}
+          </div>
         )}
       </div>
     </div>
