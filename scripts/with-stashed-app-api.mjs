@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * Static export cannot include App Router route handlers.
- * Chord write API is local-dev only — stash src/app/api during production builds,
- * restore afterward (even on failure).
+ * Chord write API and Argonaut ask are local-dev only — stash src/app/api during
+ * production builds, restore afterward (even on failure).
  *
  * Usage: node scripts/with-stashed-app-api.mjs <command> [args...]
  */

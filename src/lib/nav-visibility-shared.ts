@@ -16,7 +16,9 @@ export function resolveBentoKeyFromPathname(pathname: string): BentoKey {
     p.startsWith("/transition-insight/chronicle") ||
     p.startsWith("/chronicle") ||
     p === "/cord" ||
-    p.startsWith("/cord/")
+    p.startsWith("/cord/") ||
+    p === "/argonaut" ||
+    p.startsWith("/argonaut/")
   ) {
     return "B3";
   }

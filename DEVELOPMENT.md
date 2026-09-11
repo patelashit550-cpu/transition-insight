@@ -68,3 +68,26 @@ npm run ship
 
 `npm run ship -- --push` writes to `main` directly, so use it only when branch
 protection and the intended release policy permit direct pushes.
+
+## Argonaut (`/argonaut`)
+
+JSON Intelligence. Own reading page (same chrome as Chord). Home Bento 3
+(Telamon / Firmitas) links here; it does not embed the ask window.
+
+The pipeline ranks the published corpus (`public/.well-known/corpus-graph.json`,
+`public/ontology.jsonld`, ontology markdown), optionally searches the web, then
+asks an OpenAI-compatible model. The ontology is **Regnum Dei**; Carta is the
+intro essay and shorthand — not the product name.
+
+1. `npm run env:local` if `.env.local` is missing.
+2. Set `OPENAI_API_KEY` (never `NEXT_PUBLIC_*`). Optional: `OPENAI_BASE_URL`,
+   `OPENAI_MODEL`. Local Ollama: `OPENAI_BASE_URL=http://127.0.0.1:11434/v1` and
+   `OPENAI_API_KEY=ollama`.
+3. Optional web: `ARGONAUT_WEB_SEARCH=1` (alias `CARTA_ASK_WEB_SEARCH=1`) and
+   `BRAVE_SEARCH_API_KEY` (https://brave.com/search/api/). Without those, the UI
+   reports the web as unavailable; the corpus filter still runs.
+4. `npm run dev`, then Home B3 → **Argonaut**. Without a model key the route
+   still returns ranked excerpts and will not invent doctrine.
+
+The GitHub Pages export has no App Router — same as Chord. The page remains
+visible and explains that the voyage is studio-only.

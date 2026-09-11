@@ -30,6 +30,7 @@ export const BENTO_ROUTE_ONTOLOGY: Record<string, string> = {
   "governance/intelligence": "governance/intelligence/deus-en-machina",
   "governance/peridot": "governance/illumination/peridot",
   cord: "narrative/cord/cord",
+  argonaut: "narrative/argonaut",
   "chronicle/jack-london": "narrative/biography",
   "chronicle/polite_bureau": "narrative/comment/polite-bureau",
 };

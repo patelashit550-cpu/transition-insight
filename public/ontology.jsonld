@@ -143,6 +143,16 @@
       "schema:name": "The Tenable",
       "schema:description": "Money and interaction fit for good-faith increments — the imperative to make currency and conduct tenable at civilisational scale, governed by personal authority rather than the caprice of giants.",
       "carta:category": "Core"
+    },
+    {
+      "@type": "schema:DefinedTerm",
+      "@id": "https://ashitmilne.xyz/ontology#Argonaut",
+      "schema:name": "Argonaut",
+      "schema:description": "JSON Intelligence — ontology-first retrieval through Regnum Dei. A voyage for the golden fleece without fleecing anybody. Admits, defers, or refuses rather than inventing doctrine.",
+      "carta:category": "Core",
+      "carta:alignsWith": {
+        "@id": "https://ashitmilne.xyz/ontology#Firmitas"
+      }
     }
   ]
 }

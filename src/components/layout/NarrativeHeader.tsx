@@ -58,7 +58,14 @@ const resolveSection = (pathname: string): BentoSection => {
   if (p.startsWith("/transition-insight/governance") || p.startsWith("/governance")) {
     return BentoRegistry.B2;
   }
-  if (p.startsWith("/transition-insight/chronicle") || p.startsWith("/chronicle")) {
+  if (
+    p.startsWith("/transition-insight/chronicle") ||
+    p.startsWith("/chronicle") ||
+    p === "/cord" ||
+    p.startsWith("/cord/") ||
+    p === "/argonaut" ||
+    p.startsWith("/argonaut/")
+  ) {
     return BentoRegistry.B3;
   }
   return BentoRegistry.B1;
