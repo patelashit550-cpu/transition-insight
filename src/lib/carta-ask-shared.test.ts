@@ -13,6 +13,7 @@ import {
   scoreDocument,
   tokenize,
   validateQuestion,
+  corpusCoversQuestion,
   type CorpusDocument,
   type CorpusHit,
 } from "./carta-ask-shared.ts";
@@ -126,4 +127,20 @@ test("groundedFromHits preserves paths", () => {
   const grounded = groundedFromHits(hits, ["Carta"]);
   assert.equal(grounded[0]?.title, "Carta");
   assert.equal(grounded[0]?.path, "governance/Carta.md");
+});
+
+test("corpusCoversQuestion admits soundness and defers ticker invention", () => {
+  const soundHits = rankCorpus("what is soundness", [carta, arete]);
+  assert.equal(corpusCoversQuestion("what is soundness in Carta", soundHits), true);
+  const thinHits = rankCorpus("token ticker airdrop schedule", [carta, arete]);
+  assert.equal(
+    corpusCoversQuestion("What is the token ticker and airdrop schedule for Transition Insight?", thinHits),
+    false,
+  );
+  const extracted = extractiveAnswer(
+    "What is the token ticker and airdrop schedule for Transition Insight?",
+    thinHits.length ? thinHits : rankCorpus("transition", [carta]),
+  );
+  assert.equal(extracted.stance, "defer");
+  assert.match(extracted.answer, /does not yet (ground|speak)/i);
 });

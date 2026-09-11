@@ -393,8 +393,17 @@ export function extractiveAnswer(question: string, hits: readonly CorpusHit[]): 
     };
   }
 
-  const titles = hits.map((h) => h.title);
+  const titles = [...new Set(hits.map((h) => h.title))];
   const lead = hits[0];
+  const covers = corpusCoversQuestion(question, hits);
+  if (!covers) {
+    return {
+      stance: "defer",
+      notes: `Gap: the distinctive terms in the question are not grounded in the published corpus. Adjacent titles (${titles.join(", ")}) are not doctrine.`,
+      answer:
+        `The published ontology does not yet ground this question. Nearby titles exist — ${titles.slice(0, 3).join(", ")} — but Carta will not stretch them into an answer. Name Soundness, Semper Idem, Veritas, Utilitas, or Firmitas, or treat this as an unfinished chapter rather than a hidden teaching.`,
+    };
+  }
   const stance: CartaAskStance = lead && lead.score >= 8 ? "admit" : "defer";
   const quoted = hits
     .slice(0, 2)
@@ -422,19 +431,57 @@ export function groundedFromHits(
   hits: readonly CorpusHit[],
   names?: readonly string[],
 ): { title: string; path?: string }[] {
+  const out: { title: string; path?: string }[] = [];
+  const seen = new Set<string>();
+  const push = (title: string, path?: string) => {
+    const key = title.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push(path ? { title, path } : { title });
+  };
+
   if (names && names.length > 0) {
     const byTitle = new Map(hits.map((h) => [h.title.toLowerCase(), h]));
-    const out: { title: string; path?: string }[] = [];
-    const seen = new Set<string>();
     for (const name of names) {
       const hit = byTitle.get(name.toLowerCase());
-      const title = hit?.title ?? name;
-      const key = title.toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      out.push(hit?.path ? { title, path: hit.path } : { title });
+      push(hit?.title ?? name, hit?.path);
     }
     return out;
   }
-  return hits.map((h) => (h.path ? { title: h.title, path: h.path } : { title: h.title }));
+  for (const hit of hits) {
+    push(hit.title, hit.path);
+  }
+  return out;
+}
+
+const GENERIC_QUERY_TOKENS = new Set([
+  "transition",
+  "insight",
+  "ashit",
+  "milne",
+  "please",
+  "explain",
+  "mean",
+  "means",
+  "define",
+  "definition",
+  "term",
+  "terms",
+]);
+
+/**
+ * Whether excerpt hits actually speak to the distinctive tokens in the question.
+ * Site-name tokens alone are not enough to admit.
+ */
+export function corpusCoversQuestion(question: string, hits: readonly CorpusHit[]): boolean {
+  if (hits.length === 0) return false;
+  const distinctive = tokenize(question).filter((t) => !GENERIC_QUERY_TOKENS.has(t));
+  const lead = hits[0];
+  if (distinctive.length === 0) return (lead?.score ?? 0) >= 8;
+  const blob = new Set(
+    tokenize(hits.slice(0, 3).map((h) => `${h.title} ${h.snippet}`).join(" ")),
+  );
+  const matched = distinctive.filter((t) => blob.has(t)).length;
+  if (matched === 0) return false;
+  return matched >= Math.min(2, distinctive.length) || matched / distinctive.length >= 0.5;
 }

@@ -15,3 +15,17 @@ test("runCartaAsk ranks corpus and does not invent a model when keys are absent"
   const blob = `${outcome.result.answer} ${outcome.result.groundedIn.map((g) => g.title).join(" ")}`;
   assert.match(blob, /Carta|soundness|Veritas|Firmitas|ontology/i);
 });
+
+test("runCartaAsk defers ticker invention instead of stretching nearby essays", async () => {
+  const outcome = await runCartaAsk(
+    "What is the token ticker and airdrop schedule for Transition Insight?",
+    {},
+    async () => {
+      throw new Error("network should not be used without keys");
+    },
+  );
+  assert.equal(outcome.ok, true);
+  if (!outcome.ok) return;
+  assert.equal(outcome.result.stance, "defer");
+  assert.match(outcome.result.answer, /does not yet (ground|speak)/i);
+});

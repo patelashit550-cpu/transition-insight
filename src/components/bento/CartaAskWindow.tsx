@@ -21,7 +21,7 @@ type AskResponse = {
   error?: string;
 };
 
-const ASK_PATH = withBasePath("/api/carta/ask");
+const ASK_PATH = withBasePath("/api/carta/ask/");
 
 const EMPTY_COPY =
   "A question through Carta: the published ontology filters first. The open web is consulted only when configured — and never as doctrine.";
