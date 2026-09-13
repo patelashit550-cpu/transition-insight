@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T21:44:49.696Z",
+  "generatedAt": "2026-09-13T23:42:07.369Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,20 +14,20 @@
   },
   "interior": {
     "summary": {
-      "essays": 14,
-      "nodes": 155,
-      "edges": 359,
+      "essays": 15,
+      "nodes": 161,
+      "edges": 371,
       "byKind": {
         "member-of-series": 10,
-        "member-of-folder": 14,
-        "tagged": 89,
+        "member-of-folder": 15,
+        "tagged": 95,
         "lexica": 66,
-        "mention": 180
+        "mention": 185
       },
       "orphanEssays": 0,
       "series": 5,
       "folders": 6,
-      "tags": 45,
+      "tags": 50,
       "terms": 85
     },
     "nodes": [
@@ -188,6 +188,25 @@
           "political-economy",
           "economy",
           "technology"
+        ]
+      },
+      {
+        "id": "essay:me/sku.md",
+        "type": "essay",
+        "label": "Career Summary",
+        "stage": "published",
+        "slug": "sku",
+        "series": null,
+        "folder": "me",
+        "ontologyPath": "me/sku.md",
+        "vaultPath": "ontology/me/sku",
+        "tags": [
+          "identity",
+          "sku",
+          "resume",
+          "ash-patel",
+          "transition-insight",
+          "ashit-milne"
         ]
       },
       {
@@ -525,6 +544,31 @@
         "id": "tag:economy",
         "type": "tag",
         "label": "economy"
+      },
+      {
+        "id": "tag:sku",
+        "type": "tag",
+        "label": "sku"
+      },
+      {
+        "id": "tag:resume",
+        "type": "tag",
+        "label": "resume"
+      },
+      {
+        "id": "tag:ash-patel",
+        "type": "tag",
+        "label": "ash-patel"
+      },
+      {
+        "id": "tag:transition-insight",
+        "type": "tag",
+        "label": "transition-insight"
+      },
+      {
+        "id": "tag:ashit-milne",
+        "type": "tag",
+        "label": "ashit-milne"
       },
       {
         "id": "tag:commons",
@@ -1801,6 +1845,55 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-me-sku-md-folder-me-member-of-folder",
+        "from": "essay:me/sku.md",
+        "to": "folder:me",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-tag-identity-tagged",
+        "from": "essay:me/sku.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-tag-sku-tagged",
+        "from": "essay:me/sku.md",
+        "to": "tag:sku",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-tag-resume-tagged",
+        "from": "essay:me/sku.md",
+        "to": "tag:resume",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-tag-ash-patel-tagged",
+        "from": "essay:me/sku.md",
+        "to": "tag:ash-patel",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-tag-transition-insight-tagged",
+        "from": "essay:me/sku.md",
+        "to": "tag:transition-insight",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-tag-ashit-milne-tagged",
+        "from": "essay:me/sku.md",
+        "to": "tag:ashit-milne",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-folder-me-member-of-folder",
         "from": "essay:me/trials-of-job.md",
         "to": "folder:me",
@@ -2683,6 +2776,14 @@
         "count": 4
       },
       {
+        "id": "edge:essay-me-sku-md-term-capital-mention",
+        "from": "essay:me/sku.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-capital-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:capital",
@@ -2995,6 +3096,14 @@
         "count": 2
       },
       {
+        "id": "edge:essay-me-sku-md-term-governance-mention",
+        "from": "essay:me/sku.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-governance-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:governance",
@@ -3075,6 +3184,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-me-sku-md-term-identity-mention",
+        "from": "essay:me/sku.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-identity-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:identity",
@@ -3133,6 +3250,14 @@
       {
         "id": "edge:essay-me-praxis-md-term-intelligence-mention",
         "from": "essay:me/praxis.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-term-intelligence-mention",
+        "from": "essay:me/sku.md",
         "to": "term:intelligence",
         "kind": "mention",
         "weight": 1,
@@ -3429,6 +3554,14 @@
       {
         "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-political-economy-mention",
         "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-term-political-economy-mention",
+        "from": "essay:me/sku.md",
         "to": "term:political economy",
         "kind": "mention",
         "weight": 1,

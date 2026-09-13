@@ -76,12 +76,14 @@ const NEW_HIGHLIGHT_DAYS = 14;
 
 function getPublicationTimeMs(data: Record<string, unknown> | null): number | null {
   if (!data) return null;
-  const raw = data.publishedAt;
-  if (raw == null) return null;
-  if (raw instanceof Date) return raw.getTime();
-  if (typeof raw === "number" && !Number.isNaN(raw)) return raw;
-  if (typeof raw === "string") {
-    const t = Date.parse(raw);
+  const published = data.publishedAt;
+  const dated = data.date;
+  const rawPublished = published ?? dated;
+  if (rawPublished == null) return null;
+  if (rawPublished instanceof Date) return rawPublished.getTime();
+  if (typeof rawPublished === "number" && !Number.isNaN(rawPublished)) return rawPublished;
+  if (typeof rawPublished === "string") {
+    const t = Date.parse(rawPublished);
     if (!Number.isNaN(t)) return t;
   }
   return null;

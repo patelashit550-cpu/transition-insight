@@ -264,6 +264,17 @@
         }
       }
     },
+    "/me/sku": {
+      "get": {
+        "operationId": "get_me_sku",
+        "summary": "Read public page at /me/sku",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/me/trials-of-job": {
       "get": {
         "operationId": "get_me_trials_of_job",

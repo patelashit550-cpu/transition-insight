@@ -1,10 +1,8 @@
 "use client";
-import { useRef, useEffect } from "react";
+
+import { useEffect, useRef } from "react";
 
 import { withBasePath } from "@/lib/base-path";
-
-/** Runs before React hydrates so the wheel can reveal on static/Pages/IPFS exports. */
-const preHydrationReveal = `(()=>{const watermark=document.currentScript?.previousElementSibling;if(!(watermark instanceof HTMLElement))return;addEventListener("mousemove",event=>{const rect=watermark.getBoundingClientRect(),centerX=rect.left+rect.width/2,centerY=rect.top+rect.height/2;watermark.classList.toggle("is-revealed",Math.hypot(event.clientX-centerX,event.clientY-centerY)<rect.width*.55)})})()`;
 
 export function CompassWatermark() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,17 +24,8 @@ export function CompassWatermark() {
   }, []);
 
   return (
-    <>
-      {/* suppressHydrationWarning: preHydrationReveal may add is-revealed before React attaches */}
-      <div
-        ref={ref}
-        className="p3-compass-watermark"
-        aria-hidden="true"
-        suppressHydrationWarning
-      >
-        <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
-      </div>
-      <script dangerouslySetInnerHTML={{ __html: preHydrationReveal }} />
-    </>
+    <div ref={ref} className="p3-compass-watermark" aria-hidden="true">
+      <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
+    </div>
   );
 }

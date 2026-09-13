@@ -13,7 +13,7 @@ theme: emerald
 jurisdiction: "Ashit Milne"
 visual: connexion-contact
 contact_voice_url: 'tel:+14168038347'
-contact_message_url: 'tg://resolve?domain=transition-insight'
+contact_message_url: 'https://t.me/ashit1969'
 contact_email: 'ash.milne@proton.me'
 ---
 

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-07T21:44:49.918Z",
+  "generated": "2026-09-13T23:42:07.552Z",
   "tier": "global",
-  "manifestDigest": "sha256:0093105d22b605243ff70a8a961b1db38fc8f9948d9ac33e91eb8f739440d589",
+  "manifestDigest": "sha256:2cd1cf242d3fd1b65fd752779b32dae1bedcad165ce3a8b35df5f926fc69ef80",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,9 +12,9 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 73,
-    "attestedFiles": 15,
-    "signedFiles": 15
+    "totalOntologyFiles": 74,
+    "attestedFiles": 16,
+    "signedFiles": 16
   },
   "attested": [
     {
@@ -85,7 +85,7 @@
       "publishedAt": "2026-04-30T00:00:00.000Z",
       "slug": "connexion",
       "series": null,
-      "sha256": "sha256:d77652b1d464a4942c5b9c0316d64b01a63de807ead46182bf3ff48de04b61bf"
+      "sha256": "sha256:cf047f9ec9fde439d5e9b1d017a6ad261b2efeab0a5b4627440267a3a97b76a0"
     },
     {
       "path": "ontology/me/origins.md",
@@ -106,6 +106,16 @@
       "slug": "praxis",
       "series": null,
       "sha256": "sha256:1142861936492d0d234e4c2c9a3224bc9470e99eaa757a91576df3fdc3699974"
+    },
+    {
+      "path": "ontology/me/sku.md",
+      "stage": "published",
+      "title": "Career Summary",
+      "author": null,
+      "publishedAt": null,
+      "slug": "sku",
+      "series": null,
+      "sha256": "sha256:4c977251a3ad450be77f0ac1ba16a8fe5f783522d202199fcb67a0275c7d401c"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -172,7 +182,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "3wXpk1yVRJKdBS2y65tyLet4dQgjrohqhToqwYgEai5o6t2BTAZzM71ZHu8yBoiKHc8BV9KexqeepbbtSiGsUaJB",
-    "signedAt": "2026-09-07T21:45:24.659Z"
+    "value": "35VB15nbp5bEo4NdmbVx4djJYW3czGohyFAAoZ4ZcUZzsAcWKCviCfwhs5UbMAgKwKfzzM9gaxHMQpMFKKWgAwE1",
+    "signedAt": "2026-09-13T23:42:45.142Z"
   }
 }

@@ -11,11 +11,29 @@ type Props = {
 
 const ALLOWED_PROTOCOLS = ["https:", "http:", "mailto:", "tel:", "tg:", "sip:"]
 
+/**
+ * Prefer https://t.me/… over tg:// — custom schemes often no-op in desktop
+ * browsers when Telegram Desktop is not registered as a protocol handler.
+ */
+function normalizeContactHref(url: string): string {
+  try {
+    const parsed = new URL(url)
+    if (parsed.protocol === "tg:") {
+      const domain = parsed.searchParams.get("domain")
+      if (domain) return `https://t.me/${domain}`
+    }
+  } catch {
+    /* fall through */
+  }
+  return url
+}
+
 function safeHref(url: string | undefined): string | undefined {
   if (!url) return undefined
+  const normalized = normalizeContactHref(url)
   try {
-    const { protocol } = new URL(url)
-    return ALLOWED_PROTOCOLS.includes(protocol) ? url : undefined
+    const { protocol } = new URL(normalized)
+    return ALLOWED_PROTOCOLS.includes(protocol) ? normalized : undefined
   } catch {
     return undefined
   }

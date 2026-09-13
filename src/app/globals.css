@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 /* 1. THE SOVEREIGN SOURCE: Tell Tailwind to scan your components for classes */
 @source "../../src";
@@ -8,15 +8,15 @@
   --p3-bento-list-s: 1.12;
   --p3-shell-nav-font: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   /*
-   * Shared “mat” ring for emerald portrait frames (Formation hero + Tel/Ronin feature floats).
-   * Padding-gap + emerald background + overflow — not a stroked border — avoids Chromium
+   * Shared â€œmatâ€ ring for emerald portrait frames (Formation hero + Tel/Ronin feature floats).
+   * Padding-gap + emerald background + overflow â€” not a stroked border â€” avoids Chromium
    * artefacts on floated rounded imgs.
    */
   --p3-photo-emerald-mat-fill: rgba(16, 185, 129, 0.85);
   --p3-photo-emerald-mat-gap: 4px;
   --p3-photo-emerald-mat-radius: 0.5rem;
   /*
-   * Essay figure ↔ prose — one gutter, tuned for classic inset-float (not cramped, not airy).
+   * Essay figure â†” prose â€” one gutter, tuned for classic inset-float (not cramped, not airy).
    * Adjust these four tokens to taste sitewide.
    */
   --p3-essay-figure-gutter-x: clamp(1.75rem, 3.5vw, 2.25rem);
@@ -25,10 +25,10 @@
   --p3-essay-figure-block-gap: clamp(1.75rem, 3vw, 2.25rem);
   --p3-essay-subtitle-gap-below: 1.35rem;
   --p3-essay-plate-max: 800px;
-  --p3-essay-plate-wide-max: 56rem; /* reading-column width — wider than default plate, not full-bleed */
+  --p3-essay-plate-wide-max: 56rem; /* reading-column width â€” wider than default plate, not full-bleed */
   --p3-essay-plate-gap: 2.5rem;
   --p3-essay-plate-radius: 4px;
-  /* Narrative/header strip hovers — emerald-400 (same family as bento + accent line). */
+  /* Narrative/header strip hovers â€” emerald-400 (same family as bento + accent line). */
   --p3-shell-header-link-hover: #34d399;
   --p3-shell-header-brand-sub-hover: #6ee7b7;
 }
@@ -63,13 +63,13 @@
     padding: 0;
     scrollbar-width: none;
     /*
-     * clip — not hidden/auto — avoids a body scrollport that breaks position:sticky/fixed
+     * clip â€” not hidden/auto â€” avoids a body scrollport that breaks position:sticky/fixed
      * headers while still containing rare horizontal bleed on small viewports.
      */
     overflow-x: clip;
   }
 
-  /* Do not set body { font-family } here — it overrides next/font `inter.className` on <body> and you get system Arial/Helvetica. */
+  /* Do not set body { font-family } here â€” it overrides next/font `inter.className` on <body> and you get system Arial/Helvetica. */
 
   /* Inherit from body so Inter (from next/font) flows through; avoid re-resolving var(--font-inter) per tag */
   h1, h2, h3, h4, p, span, button, a, label, li {
@@ -99,7 +99,7 @@
 
 /*
  * Page content band (header): max width + horizontal inset.
- * Single source of truth — do not duplicate as Tailwind string literals in TS config.
+ * Single source of truth â€” do not duplicate as Tailwind string literals in TS config.
  */
 .p3-content-shell {
   box-sizing: border-box;
@@ -143,14 +143,14 @@
 }
 
 /*
- * Home landing (/) only — `Header` uses this so wordmark + icon sit below the
+ * Home landing (/) only â€” `Header` uses this so wordmark + icon sit below the
  * top edge; includes safe-area for notched devices. Values are rem-based + env().
  */
 .p3-landing-hero {
   /*
    * Air above the mark without consuming short laptop viewports. Pure rem values
-   * (9–14rem) pushed the bento below the fold; `min(…, … + svh)` tracks height.
-   * Trimmed slightly vs prior — pairs with larger landing bottom pad for balance.
+   * (9â€“14rem) pushed the bento below the fold; `min(â€¦, â€¦ + svh)` tracks height.
+   * Trimmed slightly vs prior â€” pairs with larger landing bottom pad for balance.
    * `vh` fallback first for browsers without `svh` support (older Samsung Internet, Seeker, etc.).
    */
   --p3-landing-top: min(4.5rem, calc(1rem + 7vh));
@@ -183,7 +183,7 @@
   }
 }
 
-/* Home main: top-align bento under header (no vertical centering — keeps card feet in view). */
+/* Home main: top-align bento under header (no vertical centering â€” keeps card feet in view). */
 .p3-landing-main {
   min-height: 0;
 }
@@ -218,7 +218,7 @@
 /*
  * Fixed-size logo box (matches Header.tsx next/image width/height). Do not use
  * flex stretch + height:100% here: `min-height:auto` on flex items honors the
- * image’s intrinsic pixels and explodes layout when images are unoptimized.
+ * imageâ€™s intrinsic pixels and explodes layout when images are unoptimized.
  */
 .p3-header-emblem {
   box-sizing: border-box;
@@ -233,7 +233,7 @@
   min-height: 0;
 }
 
-/* next/image wraps the <img> in a <span> — fill the fixed emblem box */
+/* next/image wraps the <img> in a <span> â€” fill the fixed emblem box */
 .p3-header-emblem > span {
   display: flex !important;
   align-items: center;
@@ -319,7 +319,7 @@
 /*
  * ACCESS (left) + dial (right): shared slot size via custom props.
  * Slots are sized for a "chip" Connect button (small-ish, readable) + the dial
- * graphic; previous 4.75rem × 14rem was big enough that it dominated the header
+ * graphic; previous 4.75rem Ã— 14rem was big enough that it dominated the header
  * at 100% zoom ("blown out"). Smaller, proportional slot restores the landing
  * look we had before the display-type experiment.
  */
@@ -355,11 +355,11 @@
 }
 
 /*
- * Shell + hover. Label uses same Tailwind scale as bento `h2` (see Header `!text-3xl`…).
+ * Shell + hover. Label uses same Tailwind scale as bento `h2` (see Header `!text-3xl`â€¦).
  * Fixed slot (--p3-control-h/w): keep horizontal padding modest so the word fills the box
- * optically (too much px + small type = “floating” label).
+ * optically (too much px + small type = â€œfloatingâ€ label).
  *
- * Scoped to `.p3-header-strip button` so shadcn outline utilities don’t override on /ontology/* etc.
+ * Scoped to `.p3-header-strip button` so shadcn outline utilities donâ€™t override on /ontology/* etc.
  */
 .p3-header-strip button.p3-header-access {
   box-sizing: border-box;
@@ -435,7 +435,7 @@
   }
 }
 
-/* Dial: native <img>, true aspect — fits inside shared slot */
+/* Dial: native <img>, true aspect â€” fits inside shared slot */
 /*
  * Dial crossfade: both variants are absolutely positioned inside the fixed slot,
  * `data-active` drives opacity so hover/rest swap is a smooth blend (not a pop).
@@ -536,7 +536,7 @@
   }
 }
 
-/* Connexion — single viewport band on desktop; mobile may scroll */
+/* Connexion â€” single viewport band on desktop; mobile may scroll */
 .p3-reading-main:has(.p3-narrative-canvas--connexion-fit) {
   display: flex;
   flex-direction: column;
@@ -661,7 +661,7 @@
 
 .p3-narrative-brand:hover .p3-narrative-brand__wordmark--main,
 .p3-narrative-brand:focus-visible .p3-narrative-brand__wordmark--main {
-  color: var(--p3-shell-header-link-hover);
+  color: #d4d4d8;
 }
 
 .p3-narrative-brand:hover .p3-narrative-brand__wordmark--sub,
@@ -975,7 +975,7 @@
   overflow-x: clip;
 }
 
-/* Overlay lead — stamped over the essay column */
+/* Overlay lead â€” stamped over the essay column */
 .p3-narrative-layout--overlay-figure {
   position: relative;
   display: block;
@@ -1030,7 +1030,7 @@
   transform-origin: center center;
 }
 
-/* Editorial plate — centred hero above essay body (title → plate → prose incl. first h2) */
+/* Editorial plate â€” centred hero above essay body (title â†’ plate â†’ prose incl. first h2) */
 .p3-narrative-figure.p3-narrative-figure--plate {
   display: block;
   float: none;
@@ -1067,7 +1067,7 @@
   object-fit: cover;
 }
 
-/* Wide editorial plate — a step up from the default 800px cap, still within the reading column */
+/* Wide editorial plate â€” a step up from the default 800px cap, still within the reading column */
 .p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-wide,
 .p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-wide
   .p3-narrative-figure__img--plate,
@@ -1077,7 +1077,7 @@
   max-width: min(100%, var(--p3-essay-plate-wide-max, 42rem));
 }
 
-/* Narrow editorial plate — portrait heroes (e.g. Carta inukshuk) */
+/* Narrow editorial plate â€” portrait heroes (e.g. Carta inukshuk) */
 .p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-narrow,
 .p3-narrative-figure.p3-narrative-figure--plate.p3-narrative-figure--plate-narrow
   .p3-narrative-figure__img--plate,
@@ -1139,7 +1139,7 @@
     0 14px 36px -16px rgba(16, 185, 129, 0.2);
 }
 
-/* Body copy — prose styles. */
+/* Body copy â€” prose styles. */
 .p3-narrative-body {
   font-size: 1.0625rem;
   line-height: 1.85;
@@ -1176,9 +1176,18 @@
   hyphens: none;
 }
 
-/* Subtitle → body: gap comes from the heading only (no double stack with > * + *) */
-.p3-narrative-body :is(h2, h3, h4) + :is(p, ul, ol, blockquote, pre, .p3-trajectory-timeline) {
+/* Subtitle â†’ body: gap comes from the heading only (no double stack with > * + *) */
+.p3-narrative-body :is(h1, h2, h3, h4) + :is(p, ul, ol, blockquote, pre, .p3-trajectory-timeline) {
   margin-top: 0;
+}
+
+/* CV / employer blocks: date or role line sits tight under the H1 */
+.p3-narrative-body h1:has(+ p) {
+  margin-bottom: 0.2rem;
+}
+
+.p3-narrative-body h1 + p {
+  margin-bottom: 1rem;
 }
 
 .p3-narrative-body h2 {
@@ -1212,12 +1221,91 @@
 
 .p3-narrative-body ul,
 .p3-narrative-body ol {
-  margin: 0 0 1.75rem;
-  padding-left: 1.5rem;
+  margin: 0 0 1.1rem;
+  padding-left: 1.35rem;
+  list-style-position: outside;
+}
+
+.p3-narrative-body ul {
+  list-style-type: disc !important;
+}
+
+.p3-narrative-body ol {
+  list-style-type: decimal !important;
+}
+
+.p3-narrative-body li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.45;
 }
 
 .p3-narrative-body li + li {
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.p3-narrative-body li > ul,
+.p3-narrative-body li > ol {
+  margin: 0.35rem 0 0.1rem;
+  padding-left: 1.25rem;
+}
+
+/* react-markdown may wrap loose list text in <p>; kill essay paragraph gaps inside bullets */
+.p3-narrative-body li > p {
+  margin: 0 !important;
+  text-align: left;
+  hyphens: manual;
+  line-height: inherit;
+}
+
+.p3-narrative-body li > p + p {
+  margin-top: 0.35rem !important;
+}
+
+.p3-narrative-body p + ul,
+.p3-narrative-body p + ol {
+  margin-top: 0;
+}
+
+/*
+ * Role / label lines above a list (e.g. IBM role bands).
+ * Must win over the cert spacer below â€” that used to match ANY ul+p+ul and
+ * crushed line-height on real role titles.
+ */
+.p3-narrative-body p:has(+ :is(ul, ol)):has(strong) {
+  margin-bottom: 0.5rem;
+  line-height: 1.45;
+}
+
+.p3-narrative-body p:has(+ :is(ul, ol)):not(:has(strong, em, a, code)) {
+  margin-bottom: 0.5rem;
+}
+
+.p3-narrative-body hr {
+  margin: 2.35rem 0;
+  border: 0;
+  border-top: 1px solid rgba(52, 211, 153, 0.45);
+}
+
+.p3-narrative-body hr + :is(h1, h2, h3, h4) {
+  margin-top: 0;
+}
+
+.p3-narrative-body hr + :is(ul, ol) {
+  margin-top: 0;
+}
+
+.p3-narrative-body :is(ul, ol) + hr {
+  margin-top: 1.85rem;
+}
+
+/* Silent spacer between cert / qual list groups (&nbsp; only — no prose/strong) */
+.p3-narrative-body ul + p:has(+ ul):not(:has(strong, em, a, code)) {
+  margin: 0.35rem 0 0.15rem;
+  line-height: 0.75;
+  min-height: 0.75rem;
+  border: 0;
+  padding: 0;
 }
 
 .p3-narrative-body blockquote {
@@ -1231,7 +1319,7 @@
 }
 
 /*
- * Legacy opt-out: frontmatter `blockquoteInset: flow` → .p3-narrative-body--blockquote-flow
+ * Legacy opt-out: frontmatter `blockquoteInset: flow` â†’ .p3-narrative-body--blockquote-flow
  * (no float clears needed for editorial plates; kept for essays that opt into flow beside quotes)
  */
 .p3-narrative-body--with-plate:not(.p3-narrative-body--blockquote-flow) blockquote {
@@ -1530,7 +1618,7 @@
 
 .p3-narrative-body .p3-connexion-panel--fit .p3-connexion-contact-list {
   display: grid;
-  /* Mobile: three-across — stacked squares clipped to Telegram-only in viewport lock */
+  /* Mobile: three-across â€” stacked squares clipped to Telegram-only in viewport lock */
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(0.35rem, 2vw, 0.65rem);
   align-items: stretch;
@@ -2170,7 +2258,7 @@
 
 /*
  * Desktop: frames stretch via grid, cards fill frames.
- * Do not wait for `bento-container--home-equal` (JS) — that class often
+ * Do not wait for `bento-container--home-equal` (JS) â€” that class often
  * never lands on IPFS path-style gateways even when CSS/JS assets load.
  */
 @media (min-width: 768px) {
@@ -2336,7 +2424,7 @@
 }
 
 /* ---------------------------------------------------------------------------
- * Topic (two-pane) layout — used by /ontology/<top>/<topic>[/<essay>]
+ * Topic (two-pane) layout â€” used by /ontology/<top>/<topic>[/<essay>]
  * Left: sticky essay nav.  Right: active essay content.  Vertical separator.
  * ------------------------------------------------------------------------- */
 .p3-topic-canvas {
@@ -2388,7 +2476,7 @@
     padding-left: 0;
   }
 
-  /* Compact horizontal essay nav — article body starts higher on phone */
+  /* Compact horizontal essay nav â€” article body starts higher on phone */
   .p3-topic-nav__list {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -2601,7 +2689,7 @@
   border-radius: 2px;
 }
 
-/* Canonical glossary — compact alphabetical anchor index */
+/* Canonical glossary â€” compact alphabetical anchor index */
 .p3-topic-nav--glossary .p3-topic-nav__list {
   gap: 0.35rem;
 }
@@ -2623,7 +2711,7 @@
   letter-spacing: 0.02em;
 }
 
-/* Sequential hub nav — numbered, rectilinear, read-in-order */
+/* Sequential hub nav â€” numbered, rectilinear, read-in-order */
 .p3-topic-nav--sequential .p3-topic-nav__seq-note {
   margin: -0.65rem 0 1rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -2722,7 +2810,7 @@
   font-weight: 300;
 }
 
-/* Temporal hub nav — dated commentary stamps */
+/* Temporal hub nav â€” dated commentary stamps */
 .p3-topic-nav--temporal .p3-topic-nav__temporal-note {
   margin: -0.65rem 0 1rem;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -2801,7 +2889,7 @@
   width: 1px;
   align-self: stretch;
   min-height: 60vh;
-  /* Same emerald rule as banner → main */
+  /* Same emerald rule as banner â†’ main */
   background: rgba(52, 211, 153, 0.5);
   margin-block: -3rem -6rem;
 }
@@ -2945,7 +3033,7 @@
   flex-shrink: 0;
 }
 
-/* ── Compass watermark ─────────────────────────────────────────────────────── */
+/* â”€â”€ Compass watermark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .p3-compass-watermark {
   position: fixed;
   width: 650px;
@@ -3085,7 +3173,7 @@
   font-size: 0.75rem;
 }
 
-/* ── Chord (Telamon shortform prototype) ──────────────────────────────────── */
+/* â”€â”€ Chord (Telamon shortform prototype) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .p3-cord {
   box-sizing: border-box;
   width: 100%;
@@ -3274,3 +3362,4 @@
   line-height: 1.45;
   color: #a1a1aa;
 }
+

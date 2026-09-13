@@ -9,6 +9,8 @@ out/
 .env
 .env.local
 .env.*.local
+.env.sovereign
+.env.sovereign.local
 *.key
 *.pem
 *.p12
@@ -17,6 +19,9 @@ id_rsa
 id_ed25519
 **/credentials.json
 **/service-account*.json
+**/secrets/
+*.secret
+*.secrets
 
 # os / editor
 .DS_Store
@@ -38,8 +43,10 @@ Thumbs.db
 /Untitled*
 /Untitled.*
 
-# debug
+# debug / local diagnostics
 npm-debug.log*
+_ti_diag.sh
+*.log
 
 # local backup config (drive letter varies per machine)
 scripts/nightly-backup.config.json

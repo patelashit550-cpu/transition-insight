@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-07T18:36:38.535Z",
-  "essayCount": 14,
+  "generatedAt": "2026-09-13T23:41:53.505Z",
+  "essayCount": 15,
   "essays": [
     "governance/Carta.md",
     "governance/illumination/arete.md",
@@ -10,6 +10,7 @@
     "me/connexion.md",
     "me/origins.md",
     "me/praxis.md",
+    "me/sku.md",
     "me/trials-of-job.md",
     "narrative/biography/ashit-milne.md",
     "narrative/biography/ashit-patel.md",
@@ -143,7 +144,7 @@
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 66,
+      "score": 71,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -152,6 +153,7 @@
         "governance/intelligence/deus-en-machina.md",
         "me/origins.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
@@ -261,7 +263,7 @@
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 105,
+      "score": 112,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -269,6 +271,7 @@
         "governance/illumination/social-network.md",
         "me/origins.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
@@ -280,7 +283,7 @@
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 98,
+      "score": 103,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -289,6 +292,7 @@
         "governance/intelligence/deus-en-machina.md",
         "me/origins.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
@@ -300,13 +304,14 @@
     {
       "term": "Intelligence",
       "method": "extractive",
-      "score": 51,
+      "score": 55,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
+        "me/sku.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md"
@@ -424,13 +429,14 @@
     {
       "term": "Political Economy",
       "method": "extractive-synthesis",
-      "score": 71,
+      "score": 75,
       "sources": [
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/origins.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
@@ -466,11 +472,12 @@
     {
       "term": "Project",
       "method": "extractive-synthesis",
-      "score": 33,
+      "score": 41,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
@@ -481,12 +488,13 @@
     {
       "term": "Protocol",
       "method": "extractive",
-      "score": 45,
+      "score": 49,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Transition.md"
@@ -566,13 +574,14 @@
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 44,
+      "score": 48,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/comment/Transition.md"
@@ -621,7 +630,7 @@
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 62,
+      "score": 66,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -629,6 +638,7 @@
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
+        "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
