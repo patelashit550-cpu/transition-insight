@@ -23,7 +23,7 @@ Writer, Thinker and Web3 Developer (2022 – Present)
 
 With the exception of a couple of forays back into consulting and one brief engagement with an alternative financial media firm, Real Vision, I have spent the last few years focusing on Transition Insight—a project I began in 2010 after leaving IBM in the aftermath of the Great Financial Crisis.
 
-Initially, it was a vehicle for me to maximize my personal returns from integration work rather than surrendering most of it to IBM as a client delivery executive. However, a secondary objective was to come to terms with crypto, explore digital signage and content, and dive into third-party attestation (such as e-signature solutions and SecureKey Concierge), as well as the Android digital wallet space.
+To be honest, I mostly just wanted to maximize my personal returns from integration work rather than surrendering most of it to IBM as a client delivery executive. Having tried the route to partner (a mostly administrative and bureaucratic affair), I decided to stay close to development and architecture primarily to come to terms with crypto, explore digital content, and dive into third-party attestation (such as e-signature solutions and SecureKey Concierge), as well as the Android digital wallet space. These were relevant to an abiding interest in political-economy and self-determination (in all its varieties).
 
 With the evolution of Ethereum into a proof-of-stake protocol, I have now shifted my full focus to the risks and opportunities posed by capital and its distribution across social networks, particularly within the context of artificial intelligence and the ongoing transformation it has brought to software development. My turf is governance and how it integrates identity and domain through capital.
 
@@ -90,7 +90,7 @@ April 1999 – November 2010
 - **Diploma, Applied Information Technology** (Nov 1997 – Jul 1998) — ITI, Toronto. Graduate with Distinction. Team-based application design; full-stack network and application development; database engineering.
 - **Monbusho Graduate Research Scholar** (Sep 1995 – Mar 1997) — Hitotsubashi University, Tokyo. 18-month Ministry of Education scholarship; economics; intensive Japanese at Tokyo University of Foreign Studies.
 - **M.A., International Affairs** (Sep 1993 – Jun 1995) — Norman Paterson School of International Affairs, Carleton University. International political economy. Thesis: *Behavioral Economic Impediments to Foreign Direct Investment in Japan.* Dean’s List.
-- **B.A. Honours, History and Political Science** (Sep 1987 – May 1991) — University of Western Ontario. Theory and international affairs; early European and post-colonial North American history; historiography in political history and diplomacy.
+- **B.A. Honours, History and Political Science** (Sep 1987 – May 1991) — University of Western Ontario. Political theory and science; Latin American politics; international affairs; early modern European history; Canadian, American and Russian history
 
 ---
 
@@ -99,9 +99,6 @@ April 1999 – November 2010
 - PMI PMP — Project Management Professional
 - CSM — Certified Scrum Master
 - PMI ACP — Agile Certified Practitioner
-
-&nbsp;
-
 - Level III Yoga Instructor — Downward Dog, Toronto
 - Certified Automotive Repair Technician
 - Canadian Securities Course

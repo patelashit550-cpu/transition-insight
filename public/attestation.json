@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-14T00:10:10.819Z",
+  "generated": "2026-09-15T10:29:26.185Z",
   "tier": "global",
-  "manifestDigest": "sha256:2cd1cf242d3fd1b65fd752779b32dae1bedcad165ce3a8b35df5f926fc69ef80",
+  "manifestDigest": "sha256:87c74174e9422a28fbd77e7c1b02f75ea6de6dd1b6e57cbab3a38624759e7f42",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:e25fb656f84668e7c625a49df08fff7b791023833f9ffa44b5d7e8d7dd377308"
+      "sha256": "sha256:dd010661f2b76526b75d9a8d5798463ee47df6b24963cc1a66e64f3d0ca535e1"
     },
     {
       "path": "ontology/governance/Carta.md",
@@ -115,7 +115,7 @@
       "publishedAt": null,
       "slug": "sku",
       "series": null,
-      "sha256": "sha256:4c977251a3ad450be77f0ac1ba16a8fe5f783522d202199fcb67a0275c7d401c"
+      "sha256": "sha256:80f2a2e4d3d6ba1fd553584ac0d9de552803bbc4d5cadeaf7bcc78dedc40fd7d"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -182,7 +182,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "4FMmBoZRapXU3z8fF1TP9WAKFPFsVJpbZrRrX8yJmVuFfb5qj3B7wRNiagqzahMAEwg9ToVPAEGJZZ1vaxYKzHzx",
-    "signedAt": "2026-09-14T00:10:40.483Z"
+    "value": "31YWhkRiPh9SzqYq1i6Twm1sxP4TSvd8reXWgQ4tV5TSxXPSNiVJLCvMC63rdpSwkxrxR7hVgWiySTnTZvUJD7qz",
+    "signedAt": "2026-09-15T10:29:54.884Z"
   }
 }

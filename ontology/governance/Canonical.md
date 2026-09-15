@@ -168,7 +168,7 @@ In philosophy (Aristotle onward): informed practice — doing that embodies theo
 
 ## Project, Product, Protocol
 
-Corpus arc of change on the social network: managed project → owned product → use-case-specific public protocols (Bitcoin, Ethereum, Solana as exemplars) — decentralizing agency and how value is registered.
+Corpus arc of change on the social network: managed project → owned product → use-case-specific public protocols (Bitcoin, Ethereum, Solana as exemplars) — decentralizing agency and how value is registered. In some senses you are a project and each of your behaviors is a product for which you are evolving optimal protocol (flow state) such that the line between autonomous and agent dissipate — dualism (as toil and friction) fades.
 
 ## Regnum Dei
 
