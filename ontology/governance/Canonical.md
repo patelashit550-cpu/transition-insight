@@ -58,6 +58,12 @@ Self-rule: the capacity of a single sentient being or a collection of them to go
 
 A deliberate branching from the orthodox main trunk to test a hypothesis developed with data from reality (production) that additional yield may be generated. Ecology does this this through genetic variety, variance and evolution.
 
+## Breathwork
+
+ Deliberate regulation of breath as the hinge between autonomic life and conscious agency—making breath quality my second priority only to sleep. To optimize overnight recovery, I wear surgical tape over my mouth while sleeping to enforce strict nasal breathing, stimulating nitric oxide production, protecting my oral microbiome, and deepening parasympathetic restorative sleep. My daily protocol includes a twenty-minute mindful meditation session, which I prepare for with a sequence of Kapalabhati (1 minute), seven cycles of 4-7-8 breathing, and a two-minute breath-hold. 
+
+he practice that inserts calm where panic is, restores receptivity, and precedes contemplation. The Yoga Element taken off the mat into civic life is to be with that breath as you connect and flow with whatever or whoever is in front you. Enjoyment or contentment through cycles then regulates breath and the whole self.
+
 ## Call to Adventure
 
 In Campbell's monomyth: the summons that begins the hero's journey — often refused at first, then answered. The mandate to follow bliss: the discovery and expression of calling — that creative action which leads to contentment despite turbulence and which one would happily do without income if possible. The hero must come full circle — achieve sufficient self-awareness to know that answering one's calling is an imperative. It cannot be refused without calamity and remorse.
@@ -82,9 +88,29 @@ Shared resources not owned as private inventory — from pastures and fisheries 
 
 In theology and ordinary speech: the brought-into-being of the world, or the natural order of life. Here: the eminence toward which loyalty points when pyramids and parties fail — belonging to the planet rather than a petrified hierarchy.
 
+## Dharana
+
+Sanskrit _Dhāraṇā_ (धारणा): Focused attention or total concentration—bringing the whole self to a focal point until immersion replaces distraction. Kinetic sports cultivate this state, but so does unscripted memory work, which allows a speaker to perform, present, and converse with genuine presence.
+
+_Dhāraṇā_ is the discipline that elevates a story or an encounter from a perfunctory spectacle into something truly formative. When efficiency and quantity replace efficacy and quality, human interactions degrade into hollow transactions. True presence, by contrast, invites the improvisational narrative back into the room.
+
+## Dhyana
+
+Sanskrit ध्यान: Dhyana may essentially be thought of as the flow state; a connected sense of enjoyment. Whereas Dharana is deliberate often coercive practice in which we may struggle internally as we aim to establish a practice (protocol) which we know to be good through running the protocol repeatedly until it become recursive and autonomic. We may for example compel ourselves to sit down to meditate daily or practice a musical instrument because we have some sense that it calls us. As we explore through dharana it *may* then become enjoyed in flow state dhyana.
+
+
 ## Dial Square
 
 The quadrature and the living pillars of a self-sovereign character in the tradition of Jung and Campbell as Ash has interpreted them through the use of metaphor — Identity (Stone Rose), Capital (Redcurrant), Alignment (Yoga Element) — whose convergence is Governance, regulated by the *consistency* of cyclicality ($\pi$). This creates an integral strength which is a *deeper* ripeness or *pukka* form of beauty.
+
+## Dollar Regime
+ 
+Consider the broad semantic and institutional perimeter organized around the US dollar: the Federal Reserve at its core, sovereigns maintaining shared financial plumbing, and multilateral bodies like the IMF and World Bank mediating regional interests. The primary friction lies in the weaponization of a national currency for state ends—especially as global elites increasingly detach identity from citizenship. The underlying risk for the United States is hubris: assuming the nation will always be seen as the ultimate safe haven for the world's elite talent and capital.
+
+## Equivalence
+
+Recognition of equal standing without insisting on precise factor identicality. Distinct from equality-as-sameness. This becomes particularly important as regime logic is made distinct from geographic if the network is to be seen as credible and neutral at a base infrastructure level so that normative preferences may be expressed as pluralism and then assessed for validity (as legitimate and fair).
+
 
 ## Firmitas
 
@@ -125,6 +151,12 @@ Japanese 気: vital energy, spirit, atmosphere — related graphs include 機 (m
 ## Ledger
 
 A book or system of record for debits and credits — from clay tablets and Domesday to double-entry and blockchain. Here: money as information; identity and value custody expressed through protocol-bound agreement signed by keys.
+
+## Lingam
+
+In the Yogic and Vedantic traditions, defining the **Lingam** (Sanskrit: लिङ्ग, literally meaning "mark," "sign," "emblem," or "attribute") as the emblem of creative force and the unmanifest masculine/neuter principle. By combining *ling~* and ~am we given signal or signature (language) of identity (amness). Smoke is the _linga_ (the visible, physical sign) that reveals the hidden presence of fire (_lingi_). The smoke itself isn't the identity or personality; it is the **sensory footprint** that proves the underlying reality exists. This site and its ontology only indicates to you that I exist or once did exist and not the certainty of my existence in this moment.
+
+Lingam in yoga tradition is also symbolic of Shiva and transmutation (conversion to express utility). Truth is an input which is transformed to generate an outcome with *broad* utility (fair and possessed of integrity) or alternatively it is degenerate (a utility so *narrow* as to be better viewed as absurd).
 
 ## Maya
 
@@ -170,9 +202,21 @@ In philosophy (Aristotle onward): informed practice — doing that embodies theo
 
 Corpus arc of change on the social network: managed project → owned product → use-case-specific public protocols (Bitcoin, Ethereum, Solana as exemplars) — decentralizing agency and how value is registered. In some senses you are a project and each of your behaviors is a product for which you are evolving optimal protocol (flow state) such that the line between autonomous and agent dissipate — dualism (as toil and friction) fades.
 
+## Protocol
+
+Comprising of *proto-* which indicates a precursor or prerequisite to intentional behavior yet also -~col  which implies collar/caller recursive boundedness. In the body this is experienced as autonomous functions or routines, processes and functions which allow a body (and for the matter the body politic) to self-regulate. Breath is the foundation - one will struggle to get past three minutes without breathing. It is an uncomfortable and even an unpleasant experience but daily practice will make panic in your everyday life almost impossible to imagine let alone actually experience. 
+
+Frustration or anger arise once panic feels is impossible - again breathwork and meditation are protocols enabling delay and introvertive deliberation (response versus reaction). Eventually anger too dissipates with presence at which point we divine comedy in our midst (and the need for sensitivity). 
+
 ## Regnum Dei
 
 Latin: the reign or kingdom of God. Here: _Divine Governance_ — the name of this ontology; truth (_veritas_) as foundation, utility (_utilitas_) as generative process, and structural integrity (_firmitas_) as what good building yields. The three pillars are Intelligence (Sine Qua Non), Identity (Semper Idem / Dial Square), and Capital (E Pluribus Unum); Peridot essays illuminate terms and conditions at the lived edge.
+
+## Samadhi
+
+**Sanskrit _Samādhi_ (समाधि):** Absorption—the state in which subject and scene are no longer held apart. Here, individual empathy and hyper-sensitivity are modulated and diminished as one becomes entirely equanimous to the particular. Though outward observer-critics may perceive this as a quiet insensitivity, the self is held in a state of foundational awe and reverence toward the oneness of all. It naturally follows _Dhyāna_.
+
+In classical Yogic and Vedantic philosophy, this reaches its ultimate terminus through **_Mahāsamādhi_** (the great absorption)—wherein the end of life marks the complete dissolution of distinction between _anima_ (raw liveness) and _animus_ (seen here as mere limitedness or boundedness).
 
 ## Satyagraha
 
@@ -210,6 +254,7 @@ Wholesomeness, structural integrity, and fitness to purpose in a person or syste
 
 Derived from the ancient Greek name *Stephanos* (Στέφανος), stemming from the verb *stepho* ("to encircle" or "to crown"). Popularized by Saint Stephen, the first Christian martyr (*protomartyr*), whose death symbolized receiving the "crown of martyrdom." The Feast of Stephen on 27 December (in the Anglican calendar) bridges the joyous celebration of Christ's birth with the sobering reality of the cost of discipleship — the *imitatio Christi*. This is relevant because in defining a perimeter and setting boundaries one reserves for oneself the right to fully define identity.
 
+
 ## Tel
 
 In archaeology: a stratified settlement mound (Arabic *tell*) — layers of habitation compressed into a hill. Here also: the intimate mound each person builds transaction by transaction; ledger and self as sediment.
@@ -222,9 +267,28 @@ Capable of being held or defended — an argument, a position, a claim. Money an
 
 Gujarati તેવ: habit. Homophone and cousin to *tel*: personality as a mound of repeated action. We are each a mound of habits.
 
+## Transition
+
+The civilizational move from debased, opaque capital toward resilient architecture: identity made tenable on the social network, yield made legible, institutions earning loyalty through transparency. The term once broadly synonymous with chrysalis evolution has become in recent times tied to a very specific and controversial topic in the broad sphere of identity politics (gender).
+
+## Vitarka Mudra
+
+A seal or gesture — in yoga, a posture of the hands or body that expresses an inner state. Here: the posture of group discussion itself — openness that holds equivalence rather than coercion or sameness. The discussion or *vitarka* mudra expresses wholeness and equivalence in a gesture wherein the thumb and forefinger are joined while three remaining digits point outwards. Representing oneself, the other, and the discussion between or alternatively the mathematical symbol for equivalence (≡). The implication is to see one as an equivalent in an interaction which therefore demands due consideration. Its presentation may be seen a placebo affirmation. Coincidentally is also the 'OK' brought back into popular usage by Martin Van Buren.
+
 ## Yield
 
 In finance and farming: return produced by an asset or season after costs. Here: durable utility after time, energy, and governance — worthwhile capability or contentment, not merely monetary return; civilization's yield curve as a moral instrument before a market one.
+
+## Yogasana
+
+The physical postures of yoga—practiced in traditions such as Sivananda, Hatha, Iyengar, and Ashtanga—were designed to create openness and fluidity by promoting blood flow and tissue suppleness. This fluidity serves as the basis for _currency_ in its foundational sense: circulation and exchange within a living system.
+
+Historically, these practices were innovated as minimalist, accessible protocols to restore mobility in the East as a response to the sedentary shifts of developing civilization. By the early twentieth century, physical movement systems gained broad popularity alongside emerging social welfare structures. Engaging in physical conditioning, such as Georges Hébert’s _Méthode Naturelle_, was viewed as an individual's civic responsibility—a personal obligation to support community well-being and maintain the integrity of the commons. Today, these systems and their modern descendants (such as parkour) remain rooted in fundamental, evolutionary human movement patterns rather than isolated machine exercises or artificial gym metrics.
+
+## Yoga Element
+
+The Yoga Element may be seen as creation in both senses. It's liveness (anima) bounded by legitimately boundedness (embodiment). Its the output of light (from the sun) which on earth preceded all things by some margin. All life whether sentient or not utilizes matter, combining it with energy to generate persistence and outcomes. Yoga Element is the impulse to move towards objective beauty  (seen as integrity and fairness) or firmitas. This is why universally all of us find nature to be awesome.
+ 
 
 <script type="application/ld+json">
 {

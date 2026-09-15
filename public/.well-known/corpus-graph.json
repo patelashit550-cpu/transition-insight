@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T10:29:25.954Z",
+  "generatedAt": "2026-09-15T11:30:12.765Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -15,20 +15,20 @@
   "interior": {
     "summary": {
       "essays": 15,
-      "nodes": 161,
-      "edges": 371,
+      "nodes": 167,
+      "edges": 402,
       "byKind": {
         "member-of-series": 10,
         "member-of-folder": 15,
         "tagged": 95,
         "lexica": 66,
-        "mention": 185
+        "mention": 216
       },
       "orphanEssays": 0,
       "series": 5,
       "folders": 6,
       "tags": 50,
-      "terms": 85
+      "terms": 91
     },
     "nodes": [
       {
@@ -851,25 +851,25 @@
         "id": "term:yoga element",
         "type": "term",
         "label": "Yoga Element",
-        "defined": false
+        "defined": true
       },
       {
         "id": "term:dharana",
         "type": "term",
-        "label": "dharana",
-        "defined": false
+        "label": "Dharana",
+        "defined": true
       },
       {
         "id": "term:dhyana",
         "type": "term",
-        "label": "dhyana",
-        "defined": false
+        "label": "Dhyana",
+        "defined": true
       },
       {
         "id": "term:samadhi",
         "type": "term",
-        "label": "samadhi",
-        "defined": false
+        "label": "Samadhi",
+        "defined": true
       },
       {
         "id": "term:mudra",
@@ -887,7 +887,7 @@
         "id": "term:dollar regime",
         "type": "term",
         "label": "Dollar Regime",
-        "defined": false
+        "defined": true
       },
       {
         "id": "term:treasury of the commons",
@@ -899,7 +899,7 @@
         "id": "term:protocol",
         "type": "term",
         "label": "Protocol",
-        "defined": false
+        "defined": true
       },
       {
         "id": "term:yield",
@@ -962,6 +962,12 @@
         "defined": true
       },
       {
+        "id": "term:breathwork",
+        "type": "term",
+        "label": "Breathwork",
+        "defined": true
+      },
+      {
         "id": "term:call to adventure",
         "type": "term",
         "label": "Call to Adventure",
@@ -998,6 +1004,12 @@
         "defined": true
       },
       {
+        "id": "term:equivalence",
+        "type": "term",
+        "label": "Equivalence",
+        "defined": true
+      },
+      {
         "id": "term:firmitas",
         "type": "term",
         "label": "Firmitas",
@@ -1025,6 +1037,12 @@
         "id": "term:ledger",
         "type": "term",
         "label": "Ledger",
+        "defined": true
+      },
+      {
+        "id": "term:lingam",
+        "type": "term",
+        "label": "Lingam",
         "defined": true
       },
       {
@@ -1133,6 +1151,24 @@
         "id": "term:stephen / steven",
         "type": "term",
         "label": "Stephen / Steven",
+        "defined": true
+      },
+      {
+        "id": "term:transition",
+        "type": "term",
+        "label": "Transition",
+        "defined": true
+      },
+      {
+        "id": "term:vitarka mudra",
+        "type": "term",
+        "label": "Vitarka Mudra",
+        "defined": true
+      },
+      {
+        "id": "term:yogasana",
+        "type": "term",
+        "label": "Yogasana",
         "defined": true
       }
     ],
@@ -2688,6 +2724,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-narrative-comment-transition-md-term-breathwork-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:breathwork",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-call-to-adventure-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:call to adventure",
@@ -2979,6 +3023,46 @@
         "id": "edge:essay-governance-illumination-arete-md-term-dial-square-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:dial square",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-carta-md-term-dollar-regime-mention",
+        "from": "essay:governance/carta.md",
+        "to": "term:dollar regime",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-arete-md-term-dollar-regime-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:dollar regime",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-dollar-regime-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:dollar regime",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-dollar-regime-mention",
+        "from": "essay:me/origins.md",
+        "to": "term:dollar regime",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-equivalence-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:equivalence",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -3320,6 +3404,22 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-lingam-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:lingam",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-lingam-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:lingam",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-maya-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:maya",
@@ -3616,6 +3716,62 @@
         "count": 6
       },
       {
+        "id": "edge:essay-governance-illumination-arete-md-term-protocol-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-semper-idem-md-term-protocol-mention",
+        "from": "essay:governance/illumination/semper idem.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-protocol-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-protocol-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "id": "edge:essay-me-sku-md-term-protocol-mention",
+        "from": "essay:me/sku.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-protocol-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-protocol-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-carta-md-term-regnum-dei-mention",
         "from": "essay:governance/carta.md",
         "to": "term:regnum dei",
@@ -3896,6 +4052,94 @@
         "count": 6
       },
       {
+        "id": "edge:essay-governance-illumination-arete-md-term-transition-mention",
+        "from": "essay:governance/illumination/arete.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-social-network-md-term-transition-mention",
+        "from": "essay:governance/illumination/social-network.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-origins-md-term-transition-mention",
+        "from": "essay:me/origins.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-praxis-md-term-transition-mention",
+        "from": "essay:me/praxis.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-me-sku-md-term-transition-mention",
+        "from": "essay:me/sku.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
+        "id": "edge:essay-me-trials-of-job-md-term-transition-mention",
+        "from": "essay:me/trials-of-job.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-transition-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-transition-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ronin-md-term-transition-mention",
+        "from": "essay:narrative/biography/ronin.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-transition-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-vitarka-mudra-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:vitarka mudra",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-carta-md-term-yield-mention",
         "from": "essay:governance/carta.md",
         "to": "term:yield",
@@ -3918,6 +4162,46 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-yogasana-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:yogasana",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-patel-md-term-yogasana-mention",
+        "from": "essay:narrative/biography/ashit-patel.md",
+        "to": "term:yogasana",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-transition-md-term-yogasana-mention",
+        "from": "essay:narrative/comment/transition.md",
+        "to": "term:yogasana",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-yoga-element-mention",
+        "from": "essay:governance/intelligence/deus-en-machina.md",
+        "to": "term:yoga element",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-narrative-biography-ashit-milne-md-term-yoga-element-mention",
+        "from": "essay:narrative/biography/ashit-milne.md",
+        "to": "term:yoga element",
+        "kind": "mention",
+        "weight": 5,
+        "count": 5
       }
     ]
   }

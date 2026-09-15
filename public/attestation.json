@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-15T10:29:26.185Z",
+  "generated": "2026-09-15T11:30:13.159Z",
   "tier": "global",
-  "manifestDigest": "sha256:87c74174e9422a28fbd77e7c1b02f75ea6de6dd1b6e57cbab3a38624759e7f42",
+  "manifestDigest": "sha256:e8da348e2e6c7ada8ff808f0c7eaf85ecb6d29b9f5035780b9918f88ade19aa2",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:dd010661f2b76526b75d9a8d5798463ee47df6b24963cc1a66e64f3d0ca535e1"
+      "sha256": "sha256:39c5400105cad254327b7d1f5174a3913f00913f148bfd869752d88bc08b9a35"
     },
     {
       "path": "ontology/governance/Carta.md",
@@ -182,7 +182,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "31YWhkRiPh9SzqYq1i6Twm1sxP4TSvd8reXWgQ4tV5TSxXPSNiVJLCvMC63rdpSwkxrxR7hVgWiySTnTZvUJD7qz",
-    "signedAt": "2026-09-15T10:29:54.884Z"
+    "value": "322QeAsbtSWEFhioGuuFzSVPRwBduNJvzZDQQQECkHZ7Xj4eFvnnuoqPoj1PSCj6LJdyXRZgnBjGBZqrYA288GTT",
+    "signedAt": "2026-09-15T11:30:51.862Z"
   }
 }
