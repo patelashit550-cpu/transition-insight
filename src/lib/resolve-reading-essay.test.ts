@@ -65,7 +65,7 @@ test("chronicle/3am-eternal hub lands on the radio lander with Spotify playlist 
     assert.ok(resolved, "London Calling hub index must resolve the lander");
     assert.equal(resolved.essaySlug, "3am-eternal");
     assert.equal(resolved.essay.frontmatter.title, "London Calling");
-    assert.equal(resolved.essay.frontmatter.subtitle, "Radio Ed");
+    assert.equal(resolved.essay.frontmatter.subtitle, "Tannoy");
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, "3KCcNodoGPZckuspVql8vm");
     assert.equal(resolved.essay.content.trim(), "");
   } finally {

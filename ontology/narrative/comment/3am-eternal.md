@@ -2,7 +2,7 @@
 stage: published
 jurisdiction: Ashit Milne
 title: London Calling
-subtitle: Radio Ed
+subtitle: Tannoy
 slug: 3am-eternal
 type: essay
 theme: emerald
