@@ -4,6 +4,7 @@ import { BentoRegistry } from "@/config/site";
 export type ContentHubKey =
   | "chronicle/jack-london"
   | "chronicle/polite_bureau"
+  | "chronicle/3am-eternal"
   | "governance/capital"
   | "governance/identity"
   | "governance/intelligence"
@@ -34,6 +35,10 @@ export type ContentHubConfig = {
   showNavDate?: boolean;
   /** When true with {@link showNavDate}, sort nav oldest → newest. */
   navChronological?: boolean;
+  /** When false, TopicLayout omits the left `p3-topic-nav` pane. Default true. */
+  showTopicNav?: boolean;
+  /** When true, the hub fills one viewport (no page scroll). London Calling. */
+  fitViewport?: boolean;
 } & (FolderHubConfig | SeriesHubConfig);
 
 export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
@@ -54,6 +59,16 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     landerOntologyRel: "narrative/comment/polite-bureau",
     showNavDate: true,
     navChronological: true,
+  },
+  "chronicle/3am-eternal": {
+    publicBase: ["chronicle", "3am-eternal"],
+    navKicker: "RADIO",
+    landerSlug: "3am-eternal",
+    mode: "series",
+    seriesName: "3 AM Eternal",
+    landerOntologyRel: "narrative/comment/3am-eternal",
+    showTopicNav: false,
+    fitViewport: true,
   },
   "governance/identity": {
     publicBase: ["governance", "identity"],
