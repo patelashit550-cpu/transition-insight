@@ -1,16 +1,16 @@
 ---
 stage: published
 jurisdiction: Ashit Milne
-title: 3 AM Eternal
-subtitle: Spirit of Radio
+title: Radio Ash
+subtitle: 3 AM Eternal
 slug: 3am-eternal
 type: essay
 theme: emerald
 size: md
 showInNav: true
-# Must match CONTENT_HUBS seriesName ("3 AM Eternal").
-# A kebab slug like "3am-eternal" does not match and would 404 the hub
-# (dynamicParams=false omits routes with an empty series list).
+# Display title is Radio Ash; series key stays "3 AM Eternal" so it
+# matches CONTENT_HUBS seriesName. A kebab slug like "3am-eternal"
+# does not match and would 404 the hub (dynamicParams=false).
 series: 3 AM Eternal
 publishedAt: 2026-09-16
 node_kicker: firmitas

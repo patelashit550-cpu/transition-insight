@@ -18,14 +18,14 @@ test("B2 (Regnum Dei) lists published Carta first in global tier", () => {
   }
 });
 
-test("B3 lists 3 AM Eternal radio in global tier", () => {
+test("B3 lists Radio Ash in global tier", () => {
   const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
   process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
   try {
     const visible = getNavVisibilityPayload();
     const radio = visible.B3.find((row) => row.href === "/chronicle/3am-eternal");
-    assert.ok(radio, "B3 should expose 3 AM Eternal");
-    assert.equal(radio.name, "3 AM Eternal");
+    assert.ok(radio, "B3 should expose Radio Ash");
+    assert.equal(radio.name, "Radio Ash");
   } finally {
     if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
