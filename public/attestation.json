@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-16T14:18:14.290Z",
+  "generated": "2026-09-16T16:18:21.756Z",
   "tier": "global",
-  "manifestDigest": "sha256:2a6ac0b03d148fbb0d32d45e945dc05e2dc091c909285c9515f0186e33741834",
+  "manifestDigest": "sha256:c7b1af6ba25b56ddb9f735ac14c3b723d3bb9fc291461b432dc03dfcf763ef78",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -165,7 +165,7 @@
       "publishedAt": "2026-09-16T00:00:00.000Z",
       "slug": "3am-eternal",
       "series": "3 AM Eternal",
-      "sha256": "sha256:dfd0a5ec9468c80dbec47ef54946d9a4f2ee2f878a9ab154cad048eae07bd1b6"
+      "sha256": "sha256:b5f41faaa5947b7de838225ae794bd0d74c8778e57c80b5fd812b6ef15cca97f"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",
@@ -192,7 +192,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "mpSizb7oXfx9p7BCrRiEnydFh8adEwqgyrSxEHjnEgeA9ejaqjzZNz3vbmXBsmP7T8Zm36AuDpF7YesDGv1frLD",
-    "signedAt": "2026-09-16T14:18:35.997Z"
+    "value": "4N5UQsPMS9pgMHsWYSXhprDbVGLqXfPvhE51nq5LTwQo6L7xfPwFBrsSpuBeA1oC51gXfjcE2aAyQBGJPnGwCvpw",
+    "signedAt": "2026-09-16T16:18:58.336Z"
   }
 }
