@@ -37,7 +37,7 @@ export type ContentHubConfig = {
   navChronological?: boolean;
   /** When false, TopicLayout omits the left `p3-topic-nav` pane. Default true. */
   showTopicNav?: boolean;
-  /** When true, the hub fills one viewport (no page scroll). Radio Ash. */
+  /** When true, the hub fills one viewport (no page scroll). London Calling. */
   fitViewport?: boolean;
 } & (FolderHubConfig | SeriesHubConfig);
 

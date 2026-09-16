@@ -62,10 +62,10 @@ test("chronicle/3am-eternal hub lands on the radio lander with Spotify playlist 
     assert.equal(route.config.fitViewport, true);
 
     const resolved = resolveReadingEssay(["chronicle", "3am-eternal"]);
-    assert.ok(resolved, "Radio Ash hub index must resolve the lander");
+    assert.ok(resolved, "London Calling hub index must resolve the lander");
     assert.equal(resolved.essaySlug, "3am-eternal");
-    assert.equal(resolved.essay.frontmatter.title, "Radio Ash");
-    assert.equal(resolved.essay.frontmatter.subtitle, "3 AM Eternal");
+    assert.equal(resolved.essay.frontmatter.title, "London Calling");
+    assert.equal(resolved.essay.frontmatter.subtitle, "Radio Ed");
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, "3KCcNodoGPZckuspVql8vm");
     assert.equal(resolved.essay.content.trim(), "");
   } finally {

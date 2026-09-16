@@ -13,7 +13,7 @@ export function resolveBentoKeyFromPathname(pathname: string): BentoKey {
     return "B2";
   }
   if (
-    // Chronicle hubs: Jack London, Polite Bureau, Radio Ash (`/chronicle/3am-eternal`).
+    // Chronicle hubs: Jack London, Polite Bureau, London Calling (`/chronicle/3am-eternal`).
     p.startsWith("/transition-insight/chronicle") ||
     p.startsWith("/chronicle") ||
     p === "/cord" ||

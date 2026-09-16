@@ -1,14 +1,14 @@
 ---
 stage: published
 jurisdiction: Ashit Milne
-title: Radio Ash
-subtitle: 3 AM Eternal
+title: London Calling
+subtitle: Radio Ed
 slug: 3am-eternal
 type: essay
 theme: emerald
 size: md
 showInNav: true
-# Display title is Radio Ash; series key stays "3 AM Eternal" so it
+# Display title is London Calling; series key stays "3 AM Eternal" so it
 # matches CONTENT_HUBS seriesName. A kebab slug like "3am-eternal"
 # does not match and would 404 the hub (dynamicParams=false).
 series: 3 AM Eternal
