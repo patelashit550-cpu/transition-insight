@@ -39,9 +39,10 @@ function listHubEssays(config: ContentHubConfig): EssayStub[] {
 
 function hubIndexSlug(config: ContentHubConfig, essays: EssayStub[]): string | null {
   const latestSlug = pickLatestEssaySlug(essays);
-  const topicPath = config.mode === "folder" ? [...config.ontologyTopicPath] : [];
   const landerEssay =
-    config.mode === "folder" ? getEssayInTopic(topicPath, config.landerSlug) : null;
+    config.mode === "folder"
+      ? getEssayInTopic([...config.ontologyTopicPath], config.landerSlug)
+      : getProfileData([config.landerSlug]);
 
   if (config.hubLanding === "latest") return latestSlug;
   if (config.hubLanding === "first" || config.sequentialNav) {

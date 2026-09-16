@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import ReactMarkdown, { type Components } from "react-markdown";
 
 import remarkBlockquoteBreaks from "@/lib/remark-blockquote-breaks";
+import remarkAllowlistedIframes from "@/lib/remark-allowlisted-iframes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -29,11 +30,16 @@ import { withBasePath } from "@/lib/base-path";
 import { SiteIdentity } from "@/config/site";
 import { ConnexionContactPanel } from "@/components/features/ConnexionContactPanel";
 import { TrajectoryTimeline } from "@/components/features/TrajectoryTimeline";
+import { AllowlistedIframe } from "@/components/features/AllowlistedIframe";
+import { SpotifyPlaylistEmbed } from "@/components/features/SpotifyPlaylistEmbed";
+import { parseSpotifyPlaylistId } from "@/lib/allowlisted-embed";
 
 const LEAD_IMAGE_FEATURE_CLASS: Record<string, string> = {
   half: "p3-inline-image--feature-half",
   "pct-80": "p3-inline-image--feature-pct-80",
 };
+
+const REMARK_PLUGINS = [remarkBlockquoteBreaks, remarkAllowlistedIframes];
 
 function leadImageFeatureModifier(raw: unknown): string | undefined {
   if (typeof raw !== "string" || !raw.trim()) return undefined;
@@ -273,6 +279,13 @@ function createMarkdownComponents(leadFeatureClass?: string): Components {
         <table {...props}>{children}</table>
       </div>
     ),
+    iframe: ({ src, title, className }) => (
+      <AllowlistedIframe
+        src={typeof src === "string" ? src : undefined}
+        title={typeof title === "string" ? title : undefined}
+        className={typeof className === "string" ? className : undefined}
+      />
+    ),
     img: ({ src, alt, ...props }) => {
       if (typeof src !== "string" || src.trim() === "") return null;
       const isLeadImage = !leadImageAssigned;
@@ -326,6 +339,10 @@ function blockquoteInsetFlows(frontmatter: Record<string, unknown>): boolean {
   return v === "flow" || v === "beside";
 }
 
+function spotifyPlaylistFromFrontmatter(frontmatter: Record<string, unknown>): string | undefined {
+  return parseSpotifyPlaylistId(frontmatter.spotifyPlaylist) ?? undefined;
+}
+
 function NarrativeEssayBody({
   image,
   imageAlt,
@@ -338,6 +355,8 @@ function NarrativeEssayBody({
   components,
   connexionFit = false,
   connexionLinks,
+  spotifyPlaylistId,
+  spotifyTitle,
 }: {
   image?: string;
   imageAlt: string;
@@ -350,10 +369,12 @@ function NarrativeEssayBody({
   components: Components;
   connexionFit?: boolean;
   connexionLinks?: ConnexionLinks;
+  spotifyPlaylistId?: string;
+  spotifyTitle?: string;
 }) {
   const isOverlayFigure = Boolean(image && imageRole === "overlay");
   const isPlateFigure = Boolean(image && isPlateImageRole(imageRole));
-  const hasBody = Boolean(content.trim()) || connexionFit;
+  const hasBody = Boolean(content.trim()) || connexionFit || Boolean(spotifyPlaylistId);
 
   if (!hasBody && !image) return null;
 
@@ -402,9 +423,14 @@ function NarrativeEssayBody({
               email={connexionLinks.email}
             />
           ) : (
-            <ReactMarkdown remarkPlugins={[remarkBlockquoteBreaks]} components={components}>
-              {content}
-            </ReactMarkdown>
+            <>
+              {spotifyPlaylistId ? (
+                <SpotifyPlaylistEmbed playlistId={spotifyPlaylistId} title={spotifyTitle} />
+              ) : null}
+              <ReactMarkdown remarkPlugins={REMARK_PLUGINS} components={components}>
+                {content}
+              </ReactMarkdown>
+            </>
           )}
         </section>
       )}
@@ -565,6 +591,10 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
           components={components}
           connexionFit={connexionFit}
           connexionLinks={connexionLinks}
+          spotifyPlaylistId={spotifyPlaylistFromFrontmatter(frontmatter as Record<string, unknown>)}
+          spotifyTitle={
+            typeof frontmatter.title === "string" ? `${frontmatter.title} on Spotify` : undefined
+          }
         />
       </article>
     </div>
@@ -741,6 +771,8 @@ function TopicLayout({
           blockquoteFlow={blockquoteInsetFlows(frontmatter as Record<string, unknown>)}
           content={content}
           components={components}
+          spotifyPlaylistId={spotifyPlaylistFromFrontmatter(frontmatter as Record<string, unknown>)}
+          spotifyTitle={typeof title === "string" ? `${title} on Spotify` : undefined}
         />
       </article>
     </div>

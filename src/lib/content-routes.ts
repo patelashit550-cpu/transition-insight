@@ -4,6 +4,7 @@ import { BentoRegistry } from "@/config/site";
 export type ContentHubKey =
   | "chronicle/jack-london"
   | "chronicle/polite_bureau"
+  | "chronicle/3am-eternal"
   | "governance/capital"
   | "governance/identity"
   | "governance/intelligence"
@@ -54,6 +55,14 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     landerOntologyRel: "narrative/comment/polite-bureau",
     showNavDate: true,
     navChronological: true,
+  },
+  "chronicle/3am-eternal": {
+    publicBase: ["chronicle", "3am-eternal"],
+    navKicker: "RADIO",
+    landerSlug: "3am-eternal",
+    mode: "series",
+    seriesName: "3 AM Eternal",
+    landerOntologyRel: "narrative/comment/3am-eternal",
   },
   "governance/identity": {
     publicBase: ["governance", "identity"],
