@@ -32,15 +32,11 @@ const SPOTIFY_ALLOW =
 const YOUTUBE_ALLOW =
   "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
 
-function decodeHtmlAttr(value: string): string {
-  return value
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">");
-}
-
+/**
+ * Keep attribute values as written. Do not HTML-unescape (`&amp;` → `&`)
+ * here: CodeQL treats that as double-unescaping, and iframe `src` is
+ * validated/canonicalized by `URL` below (hostname + `/embed/` path).
+ */
 function parseHtmlAttrs(attrChunk: string): Record<string, string> {
   const out: Record<string, string> = {};
   const re = /([:\w-]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/g;
@@ -48,7 +44,7 @@ function parseHtmlAttrs(attrChunk: string): Record<string, string> {
   while ((match = re.exec(attrChunk))) {
     const key = match[1]?.toLowerCase();
     if (!key) continue;
-    out[key] = decodeHtmlAttr(match[2] ?? match[3] ?? match[4] ?? "");
+    out[key] = match[2] ?? match[3] ?? match[4] ?? "";
   }
   return out;
 }
@@ -79,13 +75,7 @@ export function spotifyPlaylistEmbedSrc(playlistId: string): string {
   return `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator`;
 }
 
-function classifyEmbedSrc(src: string): AllowlistedEmbedKind | null {
-  let url: URL;
-  try {
-    url = new URL(src);
-  } catch {
-    return null;
-  }
+function classifyEmbedUrl(url: URL): AllowlistedEmbedKind | null {
   if (url.protocol !== "https:") return null;
   if (SPOTIFY_EMBED_HOSTS.has(url.hostname) && url.pathname.startsWith("/embed/")) {
     return "spotify";
@@ -96,32 +86,44 @@ function classifyEmbedSrc(src: string): AllowlistedEmbedKind | null {
   return null;
 }
 
+function parseAllowlistedEmbedUrl(src: string): { kind: AllowlistedEmbedKind; href: string } | null {
+  let url: URL;
+  try {
+    url = new URL(src);
+  } catch {
+    return null;
+  }
+  const kind = classifyEmbedUrl(url);
+  if (!kind) return null;
+  return { kind, href: url.href };
+}
+
 /**
  * Return a canonical https embed URL when `src` is an allowlisted player.
  * Rejects javascript:, data:, and off-origin frames.
  */
 export function allowlistedIframeSrc(src: string): string | null {
-  return classifyEmbedSrc(src) ? src : null;
+  return parseAllowlistedEmbedUrl(src)?.href ?? null;
 }
 
 export function allowlistedIframeFromSrc(
   src: string,
   title?: string
 ): AllowlistedIframe | null {
-  const kind = classifyEmbedSrc(src);
-  if (!kind) return null;
-  if (kind === "spotify") {
+  const parsed = parseAllowlistedEmbedUrl(src);
+  if (!parsed) return null;
+  if (parsed.kind === "spotify") {
     return {
-      src,
-      kind,
+      src: parsed.href,
+      kind: parsed.kind,
       title: title?.trim() || "Spotify playlist",
       allow: SPOTIFY_ALLOW,
       height: 352,
     };
   }
   return {
-    src,
-    kind,
+    src: parsed.href,
+    kind: parsed.kind,
     title: title?.trim() || "Embedded video",
     allow: YOUTUBE_ALLOW,
     height: 315,

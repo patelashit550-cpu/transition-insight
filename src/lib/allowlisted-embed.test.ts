@@ -66,5 +66,19 @@ test("allowlistedIframeFromHtml reads a YouTube VideoIframe snippet", () => {
   const embed = allowlistedIframeFromHtml(html);
   assert.ok(embed);
   assert.equal(embed.kind, "youtube");
-  assert.equal(embed.src, "https://www.youtube.com/embed/CZIINXhGDcs");
+  const parsed = new URL(embed.src);
+  assert.equal(parsed.protocol, "https:");
+  assert.equal(parsed.hostname, "www.youtube.com");
+  assert.equal(parsed.pathname, "/embed/CZIINXhGDcs");
+});
+
+test("allowlistedIframeFromHtml still allowlists YouTube src with entity-encoded query", () => {
+  const html =
+    '<iframe src="https://www.youtube.com/embed/7QU1nvuxaMA?list=RD7QU1nvuxaMA&amp;start_radio=1" title="Embedded Video"></iframe>';
+  const embed = allowlistedIframeFromHtml(html);
+  assert.ok(embed);
+  assert.equal(embed.kind, "youtube");
+  const parsed = new URL(embed.src);
+  assert.equal(parsed.hostname, "www.youtube.com");
+  assert.equal(parsed.pathname, "/embed/7QU1nvuxaMA");
 });
