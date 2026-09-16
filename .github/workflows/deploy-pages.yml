@@ -67,9 +67,14 @@ jobs:
         run: node scripts/audit-perimeter.mjs --github
 
       - name: Upload Pages artifact
+        # v5 defaults include-hidden-files=false and tars with --exclude=.[^/]*,
+        # which drops out/.well-known (security.txt, provenance, corpus-graph,
+        # agent-skills) and .nojekyll — live ashitmilne.xyz then 404s those paths
+        # even though verify-sitemap / audit-perimeter passed on the runner.
         uses: actions/upload-pages-artifact@v5
         with:
           path: out
+          include-hidden-files: true
 
   deploy:
     needs: build
