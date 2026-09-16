@@ -6,6 +6,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ashitmilne.xyz/chronicle/3am-eternal/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ashitmilne.xyz/chronicle/3am-eternal/3am-eternal/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ashitmilne.xyz/chronicle/jack-london/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

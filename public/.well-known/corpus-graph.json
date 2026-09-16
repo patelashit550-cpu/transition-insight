@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T11:30:12.765Z",
+  "generatedAt": "2026-09-16T14:18:14.051Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,20 +14,20 @@
   },
   "interior": {
     "summary": {
-      "essays": 15,
-      "nodes": 167,
-      "edges": 402,
+      "essays": 16,
+      "nodes": 172,
+      "edges": 408,
       "byKind": {
-        "member-of-series": 10,
-        "member-of-folder": 15,
-        "tagged": 95,
+        "member-of-series": 11,
+        "member-of-folder": 16,
+        "tagged": 98,
         "lexica": 66,
-        "mention": 216
+        "mention": 217
       },
       "orphanEssays": 0,
-      "series": 5,
+      "series": 6,
       "folders": 6,
-      "tags": 50,
+      "tags": 53,
       "terms": 91
     },
     "nodes": [
@@ -285,6 +285,22 @@
         ]
       },
       {
+        "id": "essay:narrative/comment/3am-eternal.md",
+        "type": "essay",
+        "label": "London Calling",
+        "stage": "published",
+        "slug": "3am-eternal",
+        "series": "3 AM Eternal",
+        "folder": "narrative/comment",
+        "ontologyPath": "narrative/comment/3am-eternal.md",
+        "vaultPath": "ontology/narrative/comment/3am-eternal",
+        "tags": [
+          "radio",
+          "telamon",
+          "firmitas"
+        ]
+      },
+      {
         "id": "essay:narrative/comment/tenable.md",
         "type": "essay",
         "label": "The Tenable",
@@ -339,6 +355,11 @@
         "id": "series:the-times",
         "type": "series",
         "label": "The Times"
+      },
+      {
+        "id": "series:3-am-eternal",
+        "type": "series",
+        "label": "3 AM Eternal"
       },
       {
         "id": "series:polite-bureau",
@@ -619,6 +640,21 @@
         "id": "tag:art",
         "type": "tag",
         "label": "Art"
+      },
+      {
+        "id": "tag:radio",
+        "type": "tag",
+        "label": "radio"
+      },
+      {
+        "id": "tag:telamon",
+        "type": "tag",
+        "label": "telamon"
+      },
+      {
+        "id": "tag:firmitas",
+        "type": "tag",
+        "label": "firmitas"
       },
       {
         "id": "tag:monetary-policy",
@@ -2266,6 +2302,41 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-narrative-comment-3am-eternal-md-series-3-am-eternal-member-of-series",
+        "from": "essay:narrative/comment/3am-eternal.md",
+        "to": "series:3-am-eternal",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-3am-eternal-md-folder-narrative-comment-member-of-folder",
+        "from": "essay:narrative/comment/3am-eternal.md",
+        "to": "folder:narrative-comment",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-3am-eternal-md-tag-radio-tagged",
+        "from": "essay:narrative/comment/3am-eternal.md",
+        "to": "tag:radio",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-3am-eternal-md-tag-telamon-tagged",
+        "from": "essay:narrative/comment/3am-eternal.md",
+        "to": "tag:telamon",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-3am-eternal-md-tag-firmitas-tagged",
+        "from": "essay:narrative/comment/3am-eternal.md",
+        "to": "tag:firmitas",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
         "id": "edge:essay-narrative-comment-tenable-md-series-polite-bureau-member-of-series",
         "from": "essay:narrative/comment/tenable.md",
         "to": "series:polite-bureau",
@@ -2754,6 +2825,14 @@
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-3am-eternal-md-term-calling-mention",
+        "from": "essay:narrative/comment/3am-eternal.md",
+        "to": "term:calling",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-narrative-comment-transition-md-term-calling-mention",

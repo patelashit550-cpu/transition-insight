@@ -22,6 +22,28 @@
         }
       }
     },
+    "/chronicle/3am-eternal": {
+      "get": {
+        "operationId": "get_chronicle_3am_eternal",
+        "summary": "Read public page at /chronicle/3am-eternal",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
+    "/chronicle/3am-eternal/3am-eternal": {
+      "get": {
+        "operationId": "get_chronicle_3am_eternal_3am_eternal",
+        "summary": "Read public page at /chronicle/3am-eternal/3am-eternal",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/chronicle/jack-london": {
       "get": {
         "operationId": "get_chronicle_jack_london",

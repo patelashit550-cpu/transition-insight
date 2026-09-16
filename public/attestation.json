@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-15T11:30:13.159Z",
+  "generated": "2026-09-16T14:18:14.290Z",
   "tier": "global",
-  "manifestDigest": "sha256:e8da348e2e6c7ada8ff808f0c7eaf85ecb6d29b9f5035780b9918f88ade19aa2",
+  "manifestDigest": "sha256:2a6ac0b03d148fbb0d32d45e945dc05e2dc091c909285c9515f0186e33741834",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,9 +12,9 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 74,
-    "attestedFiles": 16,
-    "signedFiles": 16
+    "totalOntologyFiles": 75,
+    "attestedFiles": 17,
+    "signedFiles": 17
   },
   "attested": [
     {
@@ -158,6 +158,16 @@
       "sha256": "sha256:e775cca0e86cf80d26ba140e9b09bfd657f69a5b154619e319543c19aeb5a296"
     },
     {
+      "path": "ontology/narrative/comment/3am-eternal.md",
+      "stage": "published",
+      "title": "London Calling",
+      "author": null,
+      "publishedAt": "2026-09-16T00:00:00.000Z",
+      "slug": "3am-eternal",
+      "series": "3 AM Eternal",
+      "sha256": "sha256:dfd0a5ec9468c80dbec47ef54946d9a4f2ee2f878a9ab154cad048eae07bd1b6"
+    },
+    {
       "path": "ontology/narrative/comment/Tenable.md",
       "stage": "published",
       "title": "The Tenable",
@@ -182,7 +192,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "322QeAsbtSWEFhioGuuFzSVPRwBduNJvzZDQQQECkHZ7Xj4eFvnnuoqPoj1PSCj6LJdyXRZgnBjGBZqrYA288GTT",
-    "signedAt": "2026-09-15T11:30:51.862Z"
+    "value": "mpSizb7oXfx9p7BCrRiEnydFh8adEwqgyrSxEHjnEgeA9ejaqjzZNz3vbmXBsmP7T8Zm36AuDpF7YesDGv1frLD",
+    "signedAt": "2026-09-16T14:18:35.997Z"
   }
 }
