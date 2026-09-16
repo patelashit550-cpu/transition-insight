@@ -427,9 +427,11 @@ function NarrativeEssayBody({
               {spotifyPlaylistId ? (
                 <SpotifyPlaylistEmbed playlistId={spotifyPlaylistId} title={spotifyTitle} />
               ) : null}
-              <ReactMarkdown remarkPlugins={REMARK_PLUGINS} components={components}>
-                {content}
-              </ReactMarkdown>
+              {content.trim() ? (
+                <ReactMarkdown remarkPlugins={REMARK_PLUGINS} components={components}>
+                  {content}
+                </ReactMarkdown>
+              ) : null}
             </>
           )}
         </section>
@@ -528,6 +530,7 @@ function renderContentHub(route: ContentHubRoute) {
       showNavIndex={config.sequentialNav === true}
       showNavDate={config.showNavDate === true}
       showTopicNav={config.showTopicNav !== false}
+      fitViewport={config.fitViewport === true}
       essays={navEssays}
       activeSlug={resolved.essaySlug}
       activeEssay={resolved.essay}
@@ -608,6 +611,7 @@ function TopicLayout({
   showNavIndex = false,
   showNavDate = false,
   showTopicNav = true,
+  fitViewport = false,
   essays,
   activeSlug,
   activeEssay,
@@ -617,6 +621,7 @@ function TopicLayout({
   showNavIndex?: boolean;
   showNavDate?: boolean;
   showTopicNav?: boolean;
+  fitViewport?: boolean;
   essays: EssayStub[];
   activeSlug: string;
   activeEssay: EssayData;
@@ -670,7 +675,15 @@ function TopicLayout({
     : navKicker ?? topicPath[topicPath.length - 1]?.toUpperCase() ?? "INDEX";
 
   return (
-    <div className={`p3-topic-canvas${showTopicNav ? "" : " p3-topic-canvas--no-nav"}`}>
+    <div
+      className={[
+        "p3-topic-canvas",
+        showTopicNav ? "" : "p3-topic-canvas--no-nav",
+        fitViewport ? "p3-topic-canvas--fit-viewport" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
       {cartaJsonLd?.map((graph, i) => (
         <script

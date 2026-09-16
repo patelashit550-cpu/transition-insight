@@ -37,6 +37,8 @@ export type ContentHubConfig = {
   navChronological?: boolean;
   /** When false, TopicLayout omits the left `p3-topic-nav` pane. Default true. */
   showTopicNav?: boolean;
+  /** When true, the hub fills one viewport (no page scroll). Radio Ash. */
+  fitViewport?: boolean;
 } & (FolderHubConfig | SeriesHubConfig);
 
 export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
@@ -66,6 +68,7 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     seriesName: "3 AM Eternal",
     landerOntologyRel: "narrative/comment/3am-eternal",
     showTopicNav: false,
+    fitViewport: true,
   },
   "governance/identity": {
     publicBase: ["governance", "identity"],

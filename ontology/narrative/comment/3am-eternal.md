@@ -21,7 +21,3 @@ tags:
   - telamon
   - firmitas
 ---
-
-Late-night station on Telamon — a holistic listening path, not a major/minor split. The playlist is the source of truth.
-
-Listen on [Spotify](https://open.spotify.com/playlist/3KCcNodoGPZckuspVql8vm).

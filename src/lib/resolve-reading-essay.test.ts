@@ -59,6 +59,7 @@ test("chronicle/3am-eternal hub lands on the radio lander with Spotify playlist 
     assert.equal(route.config.navKicker, "RADIO");
     assert.equal(route.config.mode, "series");
     assert.equal(route.config.showTopicNav, false);
+    assert.equal(route.config.fitViewport, true);
 
     const resolved = resolveReadingEssay(["chronicle", "3am-eternal"]);
     assert.ok(resolved, "Radio Ash hub index must resolve the lander");
@@ -66,6 +67,7 @@ test("chronicle/3am-eternal hub lands on the radio lander with Spotify playlist 
     assert.equal(resolved.essay.frontmatter.title, "Radio Ash");
     assert.equal(resolved.essay.frontmatter.subtitle, "3 AM Eternal");
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, "3KCcNodoGPZckuspVql8vm");
+    assert.equal(resolved.essay.content.trim(), "");
   } finally {
     if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
