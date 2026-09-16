@@ -8,6 +8,9 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
+# Must match CONTENT_HUBS seriesName ("3 AM Eternal").
+# A kebab slug like "3am-eternal" does not match and would 404 the hub
+# (dynamicParams=false omits routes with an empty series list).
 series: 3 AM Eternal
 publishedAt: 2026-09-16
 node_kicker: firmitas
