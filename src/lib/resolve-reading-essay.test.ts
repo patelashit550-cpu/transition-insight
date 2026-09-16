@@ -58,6 +58,7 @@ test("chronicle/3am-eternal hub lands on the radio lander with Spotify playlist 
     assert.equal(route.hubKey, "chronicle/3am-eternal");
     assert.equal(route.config.navKicker, "RADIO");
     assert.equal(route.config.mode, "series");
+    assert.equal(route.config.showTopicNav, false);
 
     const resolved = resolveReadingEssay(["chronicle", "3am-eternal"]);
     assert.ok(resolved, "Radio Ash hub index must resolve the lander");

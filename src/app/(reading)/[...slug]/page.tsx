@@ -527,6 +527,7 @@ function renderContentHub(route: ContentHubRoute) {
       navKicker={config.navKicker}
       showNavIndex={config.sequentialNav === true}
       showNavDate={config.showNavDate === true}
+      showTopicNav={config.showTopicNav !== false}
       essays={navEssays}
       activeSlug={resolved.essaySlug}
       activeEssay={resolved.essay}
@@ -606,6 +607,7 @@ function TopicLayout({
   navKicker,
   showNavIndex = false,
   showNavDate = false,
+  showTopicNav = true,
   essays,
   activeSlug,
   activeEssay,
@@ -614,6 +616,7 @@ function TopicLayout({
   navKicker?: string;
   showNavIndex?: boolean;
   showNavDate?: boolean;
+  showTopicNav?: boolean;
   essays: EssayStub[];
   activeSlug: string;
   activeEssay: EssayData;
@@ -667,7 +670,7 @@ function TopicLayout({
     : navKicker ?? topicPath[topicPath.length - 1]?.toUpperCase() ?? "INDEX";
 
   return (
-    <div className="p3-topic-canvas">
+    <div className={`p3-topic-canvas${showTopicNav ? "" : " p3-topic-canvas--no-nav"}`}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: contentJsonLd(frontmatter, did, canonicalUrl) }} />
       {cartaJsonLd?.map((graph, i) => (
         <script
@@ -676,6 +679,8 @@ function TopicLayout({
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(graph) }}
         />
       ))}
+      {showTopicNav ? (
+        <>
       <nav
         className={`p3-topic-nav${showNavIndex ? " p3-topic-nav--sequential" : ""}${showNavDate ? " p3-topic-nav--temporal" : ""}${isGlossary ? " p3-topic-nav--glossary" : ""}`}
         aria-label={isGlossary ? "Glossary terms" : "Essays in this topic"}
@@ -742,6 +747,8 @@ function TopicLayout({
       </nav>
 
       <div className="p3-topic-separator" aria-hidden="true" />
+        </>
+      ) : null}
 
       <article className="p3-topic-article p3-narrative-article">
         <header className="p3-narrative-article__header">
