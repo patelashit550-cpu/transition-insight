@@ -1634,7 +1634,15 @@ body:has(.p3-topic-canvas--fit-viewport) {
   display: flex;
   flex-direction: column;
   margin-top: 0;
-  overflow: hidden;
+  overflow: visible;
+  /* Stage distinction — inset bloom + rim (outer glow gets clipped by parent overflow) */
+  overflow: visible;
+  box-shadow:
+    inset 0 0 0 1px rgba(52, 211, 153, 0.45),
+    inset 0 0 48px 0 rgba(16, 185, 129, 0.12),
+    0 0 0 1px rgba(52, 211, 153, 0.35),
+    0 0 36px -2px rgba(16, 185, 129, 0.38),
+    0 0 72px -4px rgba(52, 211, 153, 0.22);
 }
 
 .p3-narrative-body .p3-connexion-panel--fit .p3-connexion-panel__nav {

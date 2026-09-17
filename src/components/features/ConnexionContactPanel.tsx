@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import type { JSX } from "react"
 
@@ -128,7 +128,7 @@ export function ConnexionContactPanel({
   ].filter((c) => Boolean(c.href))
 
   return (
-    <section className="p3-connexion-panel p3-connexion-panel--fit border border-emerald-500/35 bg-neutral-950">
+    <section className="p3-connexion-panel p3-connexion-panel--fit border border-emerald-500/60 bg-neutral-950">
       <nav aria-label="Contact options" className="p3-connexion-panel__nav">
         <ul className="p3-connexion-contact-list m-0 list-none p-0">
           {channels.map((ch) => {
