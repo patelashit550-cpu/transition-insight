@@ -6,16 +6,10 @@
  *   node scripts/sync-export-attestation.mjs
  *   node scripts/sync-export-attestation.mjs --strict --verify
  */
-import { copyFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
-import bs58 from "bs58";
-import nacl from "tweetnacl";
 
-import {
-  attestationSignPayload,
-  computeAttestedManifest,
-  getSovereignEnv,
-} from "./lib/content-provenance.mjs";
+import { verifyCommittedAttestation } from "./lib/verify-committed-attestation.mjs";
 
 const root = process.cwd();
 const strict = process.argv.includes("--strict");
@@ -32,54 +26,20 @@ if (!existsSync(outDir)) {
   process.exit(1);
 }
 
-const attestationPath = join(root, "public", "attestation.json");
-if (!existsSync(attestationPath)) {
-  console.error("sync-export-attestation: public/attestation.json missing");
+const requireSignature = strict || verify;
+const checked = await verifyCommittedAttestation({ root, requireSignature });
+
+if (!checked.ok) {
+  for (const message of checked.errors) {
+    console.error(`sync-export-attestation: ${message}`);
+  }
   process.exit(1);
 }
 
-const attestation = JSON.parse(readFileSync(attestationPath, "utf8"));
-
-if (!attestation.signature?.publicKey || !attestation.signature?.value) {
-  const msg =
-    "sync-export-attestation: public/attestation.json is unsigned — sign locally (npm run content:sign), commit, then push";
-  if (strict) {
-    console.error(msg);
-    process.exit(1);
-  }
-  console.warn(msg);
-} else if (verify) {
-  const corpus = getSovereignEnv().solana;
-  if (corpus && attestation.signature.publicKey !== corpus) {
-    console.error(
-      `sync-export-attestation: signer ${attestation.signature.publicKey} is not corpus wallet ${corpus}`,
-    );
-    process.exit(1);
-  }
-  const payload = attestationSignPayload(
-    attestation.manifestDigest,
-    attestation.generated,
-    attestation.tier,
+if (!requireSignature && !checked.attestation.signature?.value) {
+  console.warn(
+    "sync-export-attestation: public/attestation.json is unsigned — sign locally (npm run content:sign), commit, then push",
   );
-  const ok = nacl.sign.detached.verify(
-    payload,
-    bs58.decode(attestation.signature.value),
-    bs58.decode(attestation.signature.publicKey),
-  );
-  if (!ok) {
-    console.error(
-      "sync-export-attestation: signature verification failed — re-sign (npm run content:sign)",
-    );
-    process.exit(1);
-  }
-}
-
-const current = await computeAttestedManifest(attestation.tier);
-if (current.manifestDigest !== attestation.manifestDigest) {
-  console.error(
-    `sync-export-attestation: manifest stale (committed ${attestation.manifestDigest.slice(0, 24)}…, current ${current.manifestDigest.slice(0, 24)}…) — run npm run ship locally to re-attest and sign`,
-  );
-  process.exit(1);
 }
 
 for (const [src, dest] of pairs) {
