@@ -20,6 +20,16 @@ tags:
   - firmitas
 ---
 
-Verbiage forthcoming. This Telamon stub holds the Tannery slot until the essay lands.
+## What
 
-The public template lives at [tannery](https://github.com/patelashit550-cpu/tannery).
+Verbiage forthcoming. Ashit fills this.
+
+## How
+
+Pick up [Tannery](https://github.com/patelashit550-cpu/tannery) in three moves, then two if you ship:
+
+1. Use the GitHub template, or clone, then open it in an IDE.
+2. Run `npm install`, then `npm run dev`, and confirm the placeholder site is up.
+3. Replace brand and copy in config and the sample post(s). Put your own writing where the README says.
+4. Set `.env` from the examples only. No secrets in git.
+5. Run `npm run build`. Ship, Pages, or IPFS can wait.
