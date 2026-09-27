@@ -96,8 +96,12 @@ test("chronicle/skin-in-the-game hub lands on the Tannery placeholder", () => {
     assert.equal(resolved.essay.frontmatter.title, "Skin in the Game");
     assert.equal(resolved.essay.frontmatter.subtitle, "Tannery");
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, undefined);
+    assert.match(resolved.essay.content, /^## What/m);
     assert.match(resolved.essay.content, /verbiage forthcoming/i);
+    assert.match(resolved.essay.content, /^## How/m);
     assert.match(resolved.essay.content, /github\.com\/patelashit550-cpu\/tannery/);
+    assert.match(resolved.essay.content, /npm run dev/);
+    assert.match(resolved.essay.content, /npm run build/);
   } finally {
     if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
