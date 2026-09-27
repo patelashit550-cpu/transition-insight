@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-27T10:40:37.402Z",
+  "generated": "2026-09-27T10:45:07.724Z",
   "tier": "global",
-  "manifestDigest": "sha256:788b78eff76532c479656104ed9485f87eff84c7752f759002c3977abe7da0fa",
+  "manifestDigest": "sha256:5c65bb954b1596754e8444bc991479101d7478f2d7f2866504df58d43cd1a83e",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -195,7 +195,7 @@
       "publishedAt": "2026-09-27T00:00:00.000Z",
       "slug": "skin-in-the-game",
       "series": "Skin in the Game",
-      "sha256": "sha256:1330a679b73081eb122145da99a807a4164f46ec9d371cd669703eda8d77234f"
+      "sha256": "sha256:c36842738c7f8a11c28b26e8cd1f9ec5c88a83e63daa0fa0e2b6b14f21f8cfa2"
     }
   ],
   "signature": null
