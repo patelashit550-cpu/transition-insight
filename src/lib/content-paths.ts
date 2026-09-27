@@ -15,6 +15,7 @@ export const ONTOLOGY_TOPIC_KEYS: Record<string, readonly string[]> = {
   "chronicle/imprimatur": ["imprimatur"],
   "chronicle/jack-london": ["the-times"],
   "chronicle/polite_bureau": ["polite-bureau"],
+  "chronicle/skin-in-the-game": ["skin-in-the-game"],
   "chronicle/3am-eternal": ["3am-eternal"],
 };
 
@@ -33,5 +34,6 @@ export const BENTO_ROUTE_ONTOLOGY: Record<string, string> = {
   cord: "narrative/cord/cord",
   "chronicle/jack-london": "narrative/biography",
   "chronicle/polite_bureau": "narrative/comment/polite-bureau",
+  "chronicle/skin-in-the-game": "narrative/comment/skin-in-the-game",
   "chronicle/3am-eternal": "narrative/comment/3am-eternal",
 };
