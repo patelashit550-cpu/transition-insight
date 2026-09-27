@@ -83,6 +83,7 @@ test("chronicle/skin-in-the-game hub lands on the Tannery placeholder", () => {
     assert.equal(route.hubKey, "chronicle/skin-in-the-game");
     assert.equal(route.config.navKicker, "TANNERY");
     assert.equal(route.config.mode, "series");
+    assert.equal(route.config.showTopicNav, false);
     assert.notEqual(route.config.fitViewport, true);
     assert.equal(
       "spotifyPlaylist" in (route.config as Record<string, unknown>),
