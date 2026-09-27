@@ -95,9 +95,21 @@ if (process.env.SOLANA_SIGNING_KEY?.trim() || process.env.SOLANA_KEYPAIR_PATH?.t
   if (sign.status === 0) {
     run("provenance", "node", ["scripts/generate-provenance.mjs"]);
     signedOk = true;
+  } else if (push) {
+    console.error(
+      "ship: content:sign failed — refusing --push with an unsigned attestation (Pages deploy would fail)",
+    );
+    process.exit(sign.status ?? 1);
   } else {
-    console.warn("ship: content:sign failed — pushing unsigned attestation.json");
+    console.warn(
+      "ship: content:sign failed — attestation.json is unsigned; Pages will reject it until you sign",
+    );
   }
+}
+
+if (push) {
+  // Fail before git commit when the committed/working attestation cannot deploy.
+  run("verify-committed-attestation", "node", ["scripts/verify-committed-attestation.mjs"]);
 }
 
 const syncArgs = ["scripts/sync-export-attestation.mjs"];

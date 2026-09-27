@@ -28,3 +28,9 @@ jobs:
 
       - name: Unit tests
         run: npm test
+
+      # Pages deploy (deploy-pages.yml) copies public/attestation.json with
+      # --strict --verify. Catch unsigned/stale manifests on the PR so main
+      # cannot land a tree that fails the live deploy job.
+      - name: Verify committed attestation
+        run: node scripts/verify-committed-attestation.mjs

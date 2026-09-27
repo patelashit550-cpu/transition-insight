@@ -57,3 +57,6 @@ writeFileSync(outPath, `${JSON.stringify(attestation, null, 2)}\n`, "utf8");
 console.log(
   `attestation: ${attested.length}/${entries.length} files (${tier}), digest ${manifestDigest.slice(0, 24)}…`,
 );
+console.error(
+  "attestation: signature cleared — run npm run content:sign before committing public/attestation.json (Pages deploy fails on unsigned manifests)",
+);
