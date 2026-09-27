@@ -30,5 +30,3 @@ Do **not**:
 - Put `on:` or `jobs:` in `action.yml` (that would be a workflow)
 - Use `workflow_call` reusable workflows here — a third layer this repo does not need
 - Run Conda / pytest on this tree (the only Python is a local emblem script)
-
-Secrets (`SOLANA_SIGNING_KEY`, `JUPITER_API_KEY`, `ETHERSCAN_API_KEY`, …) stay on the laptop. CI never receives them.
