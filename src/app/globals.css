@@ -3164,14 +3164,16 @@ body:has(.p3-topic-canvas--fit-viewport) {
 
 /* â”€â”€ Compass watermark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .p3-compass-watermark {
+  --dial-diameter: 650px;
   position: fixed;
-  width: 650px;
-  height: 650px;
+  width: var(--dial-diameter);
+  height: var(--dial-diameter);
+  aspect-ratio: 1 / 1;
   top: 50%;
   right: 5%;
   transform: translateY(-50%);
   z-index: 2;
-  opacity: 0.07;
+  opacity: 0.16;
   filter: blur(3px);
   transition: opacity 0.8s ease, filter 0.8s ease;
   pointer-events: none;
@@ -3191,6 +3193,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
   pointer-events: none;
   user-select: none;
 }
