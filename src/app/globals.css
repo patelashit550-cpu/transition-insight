@@ -28,6 +28,12 @@
   --p3-essay-plate-wide-max: 56rem; /* reading-column width â€” wider than default plate, not full-bleed */
   --p3-essay-plate-gap: 2.5rem;
   --p3-essay-plate-radius: 4px;
+  /* Desktop plate+copy split (min-width: 1025px — same cutoff as the topic rail). */
+  --p3-essay-plate-split-image: minmax(12rem, 0.42fr);
+  --p3-essay-plate-split-copy: minmax(0, 0.58fr);
+  --p3-essay-plate-split-gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  --p3-essay-plate-split-max: 68rem;
+  --p3-essay-plate-sticky-top: 7rem;
   /* Narrative/header strip hovers â€” emerald-400 (same family as bento + accent line). */
   --p3-shell-header-link-hover: #34d399;
   --p3-shell-header-brand-sub-hover: #6ee7b7;
@@ -1005,6 +1011,22 @@ body:has(.p3-topic-canvas--fit-viewport) {
   clear: both;
 }
 
+.p3-narrative-body__copy {
+  min-width: 0;
+}
+
+.p3-narrative-body__lead {
+  min-width: 0;
+}
+
+.p3-narrative-body--with-plate > .p3-narrative-body__copy {
+  margin-top: 0;
+}
+
+.p3-narrative-body__copy > * + * {
+  margin-top: 1.75rem;
+}
+
 .p3-narrative-figure--overlay {
   position: absolute;
   top: -2rem;
@@ -1047,7 +1069,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   transform-origin: center center;
 }
 
-/* Editorial plate â€” centred hero above essay body (title â†’ plate â†’ prose incl. first h2) */
+/* Editorial plate — stacked above copy on narrow viewports; split beside copy at ≥1025px */
 .p3-narrative-figure.p3-narrative-figure--plate {
   display: block;
   float: none;
@@ -1067,17 +1089,15 @@ body:has(.p3-topic-canvas--fit-viewport) {
   max-width: var(--p3-essay-plate-max);
   height: auto;
   margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  border-radius: var(--p3-essay-plate-radius);
-  box-shadow: none;
+  /* Emerald mat (padding / fill / radius / shadow) comes from the shared
+     figure-img + body-photo rule below — plates share that frame. */
   object-fit: unset;
   object-position: center;
   transform: none;
   image-orientation: none;
 }
 
+.p3-narrative-body img.p3-narrative-figure__img--plate-circle,
 .p3-narrative-figure__img--plate-circle {
   border-radius: 50%;
   aspect-ratio: 1;
@@ -1112,19 +1132,192 @@ body:has(.p3-topic-canvas--fit-viewport) {
   max-width: 100%;
 }
 
-.p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child {
+.p3-narrative-body--with-plate > .p3-narrative-body__lead {
   margin-top: 0;
 }
 
-.p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3) {
+.p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--plate {
+  margin-top: 0;
+}
+
+.p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3),
+.p3-narrative-body--with-plate .p3-narrative-body__copy > :is(h2, h3):first-child {
   margin-top: 0;
 }
 
 .p3-narrative-body--with-plate > h2:first-of-type,
-.p3-narrative-body--with-plate > h3:first-of-type {
+.p3-narrative-body--with-plate > h3:first-of-type,
+.p3-narrative-body--with-plate .p3-narrative-body__copy > h2:first-of-type,
+.p3-narrative-body--with-plate .p3-narrative-body__copy > h3:first-of-type {
   text-align: left;
   text-wrap: balance;
   hyphens: none;
+}
+
+/*
+ * Desktop split (≥1025px): title+plate | copy. Imaginary vertical split.
+ * Left pane is locked in the viewport from the first paint (no sticky travel).
+ * Right pane independently scrolls the essay. 1025px matches the topic rail.
+ */
+@media (min-width: 1025px) {
+  html:has(.p3-narrative-body--with-plate),
+  body:has(.p3-narrative-body--with-plate) {
+    height: 100%;
+    max-height: 100svh;
+    overflow: hidden;
+  }
+
+  .p3-reading-main:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    max-height: 100svh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .p3-reading-main:has(.p3-narrative-body--with-plate) > .p3-narrative-canvas,
+  .p3-reading-main:has(.p3-narrative-body--with-plate) > .p3-topic-canvas {
+    flex: 1 1 auto;
+    height: auto;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+  }
+
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) {
+    align-items: stretch;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  /* Page does not document-scroll on with-plate desktop, so sticky top
+     (meant for the viewport) is relative to this overflow canvas and
+     parks the essay list in the vertical middle. Pack it at the start. */
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) .p3-topic-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) .p3-topic-nav__sticky {
+    position: static;
+    top: auto;
+    max-height: none;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) .p3-topic-nav__list {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+  }
+
+  .p3-narrative-canvas:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .p3-narrative-article:has(.p3-narrative-body--with-plate),
+  .p3-topic-article:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--p3-essay-plate-split-max);
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .p3-narrative-layout:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .p3-narrative-body--with-plate {
+    display: grid;
+    grid-template-columns: var(--p3-essay-plate-split-image) var(--p3-essay-plate-split-copy);
+    column-gap: var(--p3-essay-plate-split-gap);
+    align-items: stretch;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .p3-narrative-body--with-plate::after {
+    display: none;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__header {
+    flex-shrink: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Figure fills leftover lead height so the img can cap against a definite box.
+     Do not paint the mat on this box — it is wider than a square plate. */
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--plate {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: transparent;
+    container-type: size;
+  }
+
+  /* Emerald mat lives on the img. Size the img box to the bitmap (auto × auto,
+     capped by the figure) so padding/background hug the picture, not the column. */
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead
+    .p3-narrative-figure__img--plate,
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead
+    .p3-narrative-figure__img {
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-width: 100cqw;
+    max-height: 100cqh;
+    min-width: 0;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy {
+    grid-column: 2;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
+  }
 }
 
 .p3-narrative-figure:not(.p3-narrative-figure--plate):not(.p3-narrative-figure--overlay) {
@@ -1140,7 +1333,9 @@ body:has(.p3-topic-canvas--fit-viewport) {
   }
 }
 
-.p3-narrative-figure__img:not(.p3-narrative-figure__img--plate),
+/* Emerald photo-mat: plate/inset heroes, other figure imgs, and markdown body photos.
+   Feature lead images (`.p3-inline-image--feature`) stay unmatted. */
+.p3-narrative-figure__img,
 .p3-narrative-body img:not(.p3-inline-image--feature) {
   display: block;
   width: 100%;
@@ -1481,7 +1676,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   clear: both;
 }
 
-.p3-narrative-body img:not(.p3-inline-image--feature) {
+.p3-narrative-body img:not(.p3-inline-image--feature):not(.p3-narrative-figure__img) {
   margin: var(--p3-essay-figure-block-gap) auto;
   max-width: min(100%, 36rem);
 }
