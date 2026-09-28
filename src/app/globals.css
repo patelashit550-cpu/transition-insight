@@ -24,6 +24,9 @@
   --p3-essay-figure-shape-margin: clamp(0.65rem, 1.5vw, 0.9rem);
   --p3-essay-figure-block-gap: clamp(1.75rem, 3vw, 2.25rem);
   --p3-essay-subtitle-gap-below: 1.35rem;
+  /* Shared kicker color: plate-split subtitles inherited this from body copy;
+     non-plate headers (London Calling) were stuck on dim #71717a. */
+  --p3-essay-subtitle-color: #d4d4d8;
   --p3-essay-plate-max: 800px;
   --p3-essay-plate-wide-max: 56rem; /* reading-column width â€” wider than default plate, not full-bleed */
   --p3-essay-plate-gap: 2.5rem;
@@ -3278,6 +3281,12 @@ body:has(.p3-topic-canvas--fit-viewport) {
 .p3-topic-canvas--fit-viewport .p3-topic-article__header {
   margin-bottom: 1rem;
   flex-shrink: 0;
+  text-align: left;
+}
+
+.p3-topic-canvas--fit-viewport .p3-narrative-article__rule {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .p3-topic-canvas--fit-viewport .p3-narrative-layout,
@@ -3313,7 +3322,16 @@ body:has(.p3-topic-canvas--fit-viewport) {
   font-size: 11px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #71717a;
+  color: var(--p3-essay-subtitle-color);
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+/* Beat .p3-narrative-body p { color: inherit; text-align: justify } so plate-split
+   kickers and non-plate kickers (TANNOY) share left-aligned readable type. */
+.p3-narrative-body p.p3-topic-article__subtitle {
+  color: var(--p3-essay-subtitle-color);
+  text-align: left;
   margin: 0 0 1rem;
 }
 
@@ -3323,11 +3341,13 @@ body:has(.p3-topic-canvas--fit-viewport) {
   gap: 0.85rem;
 }
 
-.p3-narrative-article__header:has(.p3-topic-article__title-row) {
+.p3-narrative-article__header:has(.p3-topic-article__title-row),
+.p3-narrative-article__header:has(.p3-topic-article__subtitle) {
   text-align: left;
 }
 
-.p3-narrative-article__header:has(.p3-topic-article__title-row) .p3-narrative-article__rule {
+.p3-narrative-article__header:has(.p3-topic-article__title-row) .p3-narrative-article__rule,
+.p3-narrative-article__header:has(.p3-topic-article__subtitle) .p3-narrative-article__rule {
   margin-left: 0;
   margin-right: auto;
 }
