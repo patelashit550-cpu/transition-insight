@@ -83,6 +83,7 @@ test("chronicle/skin-in-the-game hub lands on the Tannery placeholder", () => {
     assert.equal(route.hubKey, "chronicle/skin-in-the-game");
     assert.equal(route.config.navKicker, "TANNERY");
     assert.equal(route.config.mode, "series");
+    assert.equal(route.config.showTopicNav, false);
     assert.notEqual(route.config.fitViewport, true);
     assert.equal(
       "spotifyPlaylist" in (route.config as Record<string, unknown>),
@@ -96,6 +97,8 @@ test("chronicle/skin-in-the-game hub lands on the Tannery placeholder", () => {
     assert.equal(resolved.essay.frontmatter.title, "Skin in the Game");
     assert.equal(resolved.essay.frontmatter.subtitle, "Tannery");
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, undefined);
+    assert.equal(resolved.essay.frontmatter.image, "/assets/skin.png");
+    assert.equal(resolved.essay.frontmatter.imageRole, "inset");
     assert.match(resolved.essay.content, /^## What/m);
     assert.match(resolved.essay.content, /verbiage forthcoming/i);
     assert.match(resolved.essay.content, /^## How/m);

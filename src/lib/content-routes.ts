@@ -68,6 +68,7 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     mode: "series",
     seriesName: "Skin in the Game",
     landerOntologyRel: "narrative/comment/skin-in-the-game",
+    showTopicNav: false,
   },
   "chronicle/3am-eternal": {
     publicBase: ["chronicle", "3am-eternal"],

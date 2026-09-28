@@ -12,6 +12,9 @@ showInNav: true
 # seriesName matches. Href slug is kebab-case `/chronicle/skin-in-the-game`.
 series: Skin in the Game
 publishedAt: 2026-09-27
+image: /assets/skin.png
+imageAlt: Outrigger canoe hull on a workshop frame — ink and wash sketch
+imageRole: inset
 node_kicker: firmitas
 status: SIGNAL_LIVE // 003
 tags:
