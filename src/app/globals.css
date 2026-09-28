@@ -1140,6 +1140,14 @@ body:has(.p3-topic-canvas--fit-viewport) {
   margin-top: 0;
 }
 
+/* Page title lives inside the body, so it would inherit the 3rem section-heading
+   top margin. Copy already zeroes its first h2/h3; do the same for the lead title
+   so both columns share a start edge (desktop split) and the stack is tight. */
+.p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__header,
+.p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__title {
+  margin-top: 0;
+}
+
 .p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3),
 .p3-narrative-body--with-plate .p3-narrative-body__copy > :is(h2, h3):first-child {
   margin-top: 0;
@@ -1259,16 +1267,24 @@ body:has(.p3-topic-canvas--fit-viewport) {
     grid-column: 1;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     min-width: 0;
     min-height: 0;
     height: 100%;
     overflow: hidden;
     overscroll-behavior: none;
+    padding-top: 0;
   }
 
   .p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__header {
     flex-shrink: 0;
+    margin-top: 0;
     margin-bottom: 1.25rem;
+    padding-top: 0;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__title {
+    margin-top: 0;
   }
 
   /* Figure fills leftover lead height so the img can cap against a definite box.
