@@ -389,7 +389,7 @@ function renderCanon(entries, essayPaths) {
     const sourceNote = entry.sources.length
       ? `\n\n<!-- sources: ${entry.sources.join("; ")} | method: ${entry.method} -->`
       : "";
-    return [`## ${entry.term}`, "", entry.definition + sourceNote, ""];
+    return [`### ${entry.term}`, "", entry.definition + sourceNote, ""];
   });
 
   return [

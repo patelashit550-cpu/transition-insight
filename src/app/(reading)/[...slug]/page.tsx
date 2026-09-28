@@ -320,7 +320,7 @@ function headingAnchor(text: string): string {
 }
 
 function glossaryTerms(content: string): { title: string; anchor: string }[] {
-  return [...content.matchAll(/^##\s+(.+?)\s*$/gm)]
+  return [...content.matchAll(/^#{2,3}\s+(.+?)\s*$/gm)]
     .map((match) => match[1]?.trim())
     .filter((title): title is string => Boolean(title))
     .map((title) => ({ title, anchor: headingAnchor(title) }))
@@ -695,6 +695,11 @@ function TopicLayout({
           <h2 {...props} id={headingAnchor(headingText(children))}>
             {children}
           </h2>
+        ),
+        h3: ({ children, ...props }) => (
+          <h3 {...props} id={headingAnchor(headingText(children))}>
+            {children}
+          </h3>
         ),
       }
     : baseComponents;

@@ -1148,15 +1148,17 @@ body:has(.p3-topic-canvas--fit-viewport) {
   margin-top: 0;
 }
 
-.p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3),
-.p3-narrative-body--with-plate .p3-narrative-body__copy > :is(h2, h3):first-child {
+.p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3, h4),
+.p3-narrative-body--with-plate .p3-narrative-body__copy > :is(h2, h3, h4):first-child {
   margin-top: 0;
 }
 
 .p3-narrative-body--with-plate > h2:first-of-type,
 .p3-narrative-body--with-plate > h3:first-of-type,
+.p3-narrative-body--with-plate > h4:first-of-type,
 .p3-narrative-body--with-plate .p3-narrative-body__copy > h2:first-of-type,
-.p3-narrative-body--with-plate .p3-narrative-body__copy > h3:first-of-type {
+.p3-narrative-body--with-plate .p3-narrative-body__copy > h3:first-of-type,
+.p3-narrative-body--with-plate .p3-narrative-body__copy > h4:first-of-type {
   text-align: left;
   text-wrap: balance;
   hyphens: none;
@@ -3002,7 +3004,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   color: #34d399;
 }
 
-.p3-topic-nav--glossary + .p3-topic-separator + .p3-topic-article h2[id] {
+.p3-topic-nav--glossary + .p3-topic-separator + .p3-topic-article :is(h2, h3)[id] {
   scroll-margin-top: 8rem;
   /* Term heads stay as authored (Autonomy, not AUTONOMY) */
   text-transform: none;

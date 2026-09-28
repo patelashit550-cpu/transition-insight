@@ -127,3 +127,30 @@ test("chronicle/skin-in-the-game still lands locally while held as draft", () =>
     else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
   }
 });
+
+test("published essay body headings sit one level below H1 titles", () => {
+  const previous = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
+  try {
+    const canonical = resolveReadingEssay(["governance", "canonical"]);
+    assert.ok(canonical);
+    assert.match(canonical.essay.content, /^### Ab$/m);
+    assert.match(canonical.essay.content, /^### Areté$/m);
+    assert.equal(
+      [...canonical.essay.content.matchAll(/^##\s+/gm)].length,
+      0,
+      "Canonical terms must be ### so they sit under the page title"
+    );
+
+    const carta = resolveReadingEssay(["governance", "carta"]);
+    assert.ok(carta);
+    assert.match(carta.essay.content, /^### Soundness$/m);
+
+    const sku = resolveReadingEssay(["me", "sku"]);
+    assert.ok(sku);
+    assert.match(sku.essay.content, /^# Transition Insight$/m);
+  } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
+  }
+});
