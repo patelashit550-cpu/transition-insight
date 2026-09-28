@@ -1141,7 +1141,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
 }
 
 .p3-narrative-figure__img:not(.p3-narrative-figure__img--plate),
-.p3-narrative-body img:not(.p3-inline-image--feature) {
+.p3-narrative-body img:not(.p3-inline-image--feature):not(.p3-narrative-figure__img) {
   display: block;
   width: 100%;
   height: auto;
@@ -1481,7 +1481,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   clear: both;
 }
 
-.p3-narrative-body img:not(.p3-inline-image--feature) {
+.p3-narrative-body img:not(.p3-inline-image--feature):not(.p3-narrative-figure__img) {
   margin: var(--p3-essay-figure-block-gap) auto;
   max-width: min(100%, 36rem);
 }
