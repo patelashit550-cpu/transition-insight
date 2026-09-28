@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-28T22:45:20.834Z",
+  "generated": "2026-09-28T23:13:37.373Z",
   "tier": "global",
-  "manifestDigest": "sha256:0f6acde2a5ecf9670fe1f2086b5054e91dae1e713837e2defbeeafa1755c25f0",
+  "manifestDigest": "sha256:f0b41f140cd036abbd8c111221eb17f61dc65553503b924894941db864862329",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -125,7 +125,7 @@
       "publishedAt": null,
       "slug": "sku",
       "series": null,
-      "sha256": "sha256:80f2a2e4d3d6ba1fd553584ac0d9de552803bbc4d5cadeaf7bcc78dedc40fd7d"
+      "sha256": "sha256:ce3ee49b909b5cd2f60f00f949b246ab7dbb3586f4fa9524ddace4aee6d002ef"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -150,12 +150,12 @@
     {
       "path": "ontology/narrative/biography/ashit-patel.md",
       "stage": "published",
-      "title": "Macauley's Favorite Bastard",
+      "title": "Macauley's Boy",
       "author": null,
       "publishedAt": "2026-06-27T00:00:00.000Z",
       "slug": "ashit-patel",
       "series": "The Times",
-      "sha256": "sha256:f46e1a2f05f45e69ab7168335de4283ac2eda7b86d8a616c7de739fe1f3a1d7b"
+      "sha256": "sha256:1b41bb8278bf621a7883e5e4da234dbc5e6f7a1075c8d53497588581c68a4d04"
     },
     {
       "path": "ontology/narrative/biography/ronin.md",
@@ -202,7 +202,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "2hJD8yawZT5z2K2HtkQ1ZBnZdb3PTuassibkqKi6xoah2mtrkJhi3SpqqansWc46GWnBEYeDZJepEgetf9H3ggi5",
-    "signedAt": "2026-09-28T22:45:50.177Z"
+    "value": "2Qga82KCb7o4mp1LrpSsVGgF9VUozrxwM5DBMnsYJkKabKkEPSBnbT49yF1nwM2gKAJ39tNgQj7aHcSp8QbZiuDN",
+    "signedAt": "2026-09-28T23:13:56.786Z"
   }
 }

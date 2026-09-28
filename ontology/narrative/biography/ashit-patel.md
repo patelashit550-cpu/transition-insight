@@ -2,8 +2,8 @@
 stage: published
 node_id: 2803
 jurisdiction: Ashit Milne
-title: "Macauley's Favorite Bastard"
-subtitle: "The Making of Ashit Patel"
+title: Macauley's Boy
+subtitle: The Making of Ashit Patel
 slug: ashit-patel
 type: essay
 theme: emerald
@@ -96,7 +96,7 @@ The core origin of Patel as a name is deeply rooted in agriculture, land ownersh
 
 The transition from peasant farmer to village elite is actually baked right into the etymology of the word itself. The person appointed by rulers to manage these records and oversee the village farms was called the *Patlikh* (record-keeper), which eventually shortened over centuries to *Patal*, and finally, Patel. In some sense my kin played the role of the Rome's Hebrew tax-collector (but of course without the heavy price of persecution that role later came to entail in Europe).
 
-This was my beginning: a name entered, standardized, made to persist — the Home Alone experience of an allocated identity; the post-modern anarchist and *Macauley's* Favorite Bastard born as Ashit Patel. My obsession with governance and money fully baked in.
+This was my beginning: a name entered, standardized, made to persist — the Home Alone experience of an allocated identity; the post-modern anarchist and *Macauley's* boy born as Ashit Patel. My obsession with governance and money fully baked in.
 
 And who was this Macauley? Thomas Babington Macaulay, colonial administrator and historian, wrote his infamous *Minute on Indian Education* in 1835, arguing that British India should produce a class of persons "Indian in blood and colour, but English in taste, in opinions, in morals, and in intellect" — to serve as interpreters between the colonial rulers and the governed masses. These came to be known as Macauley's Children or Macaulayputra. Among the first of these were Nehru, Gandhi, Jinnah and my own somewhat less patrician and intellectual but rather more provincial (and practical) kinsman Sardar Patel, independent India's first Home Minister.
 

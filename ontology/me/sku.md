@@ -89,8 +89,8 @@ April 1999 – November 2010
 
 - **Diploma, Applied Information Technology** (Nov 1997 – Jul 1998) — ITI, Toronto. Graduate with Distinction. Team-based application design; full-stack network and application development; database engineering.
 - **Monbusho Graduate Research Scholar** (Sep 1995 – Mar 1997) — Hitotsubashi University, Tokyo. 18-month Ministry of Education scholarship; economics; intensive Japanese at Tokyo University of Foreign Studies.
-- **M.A., International Affairs** (Sep 1993 – Jun 1995) — Norman Paterson School of International Affairs, Carleton University. International political economy. Thesis: *Behavioral Economic Impediments to Foreign Direct Investment in Japan.* Dean’s List.
-- **B.A. Honours, History and Political Science** (Sep 1987 – May 1991) — University of Western Ontario. Political theory and science; Latin American politics; international affairs; early modern European history; Canadian, American and Russian history
+- **M.A., International Affairs** (Sep 1993 – Jun 1995) — Norman Paterson School of International Affairs, Carleton University. International political economy. Thesis - US Foreign Direct Investment in Japan: The Socio-Economic and Cultural Impediments, Dean’s List
+- **B.A. Honours, History and Political Science** (Sep 1987 – May 1991) — University of Western Ontario. Political Science, Theory and Philosophy; Latin American politics; Introduction to International Affairs; Early modern European history; Canadian, American and Russian history
 
 ---
 
@@ -99,6 +99,15 @@ April 1999 – November 2010
 - PMI PMP — Project Management Professional
 - CSM — Certified Scrum Master
 - PMI ACP — Agile Certified Practitioner
+- Outdoor Education Certificate — Humber College
 - Level III Yoga Instructor — Downward Dog, Toronto
 - Certified Automotive Repair Technician
 - Canadian Securities Course
+
+---
+
+## Citizenship
+
+- United Kingdom of Great Britain & Northern Ireland (Birth)
+- Canada (Naturalized)
+- Republic of India (Eligible)
