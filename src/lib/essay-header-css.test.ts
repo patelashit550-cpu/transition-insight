@@ -29,17 +29,19 @@ test("essay subtitle kicker is readable gray-white, not dim zinc-500", () => {
   assert.match(subtitleBlock[0], /text-align:\s*left/);
 });
 
-test("essay page titles share one increment below the prior 2.5rem stack", () => {
-  assert.match(css, /--p3-essay-title-size:\s*clamp\(1\.175rem,\s*4\.75vw,\s*1\.625rem\)/);
-  assert.match(css, /--p3-essay-title-size-md:\s*2\.125rem/);
-  assert.match(css, /--p3-essay-title-size-fit:\s*clamp\(1\.1rem,\s*2\.75vw,\s*1\.625rem\)/);
+test("essay page titles share two increments below the prior 2.5rem stack", () => {
+  assert.match(css, /--p3-essay-title-size:\s*clamp\(1\.05rem,\s*4\.2vw,\s*1\.5rem\)/);
+  assert.match(css, /--p3-essay-title-size-md:\s*1\.875rem/);
+  assert.match(css, /--p3-essay-title-size-fit:\s*clamp\(1rem,\s*2\.45vw,\s*1\.4375rem\)/);
   assert.match(css, /--p3-essay-inline-title-size:\s*1\.625rem/);
 
   const titleBlock = css.match(/\.p3-narrative-article__title\s*\{[^}]+\}/);
   assert.ok(titleBlock, "expected .p3-narrative-article__title rule");
   assert.match(titleBlock[0], /font-size:\s*var\(--p3-essay-title-size\)/);
   assert.doesNotMatch(titleBlock[0], /2\.5rem/);
+  assert.doesNotMatch(titleBlock[0], /2\.125rem/);
   assert.doesNotMatch(titleBlock[0], /clamp\(1\.35rem/);
+  assert.doesNotMatch(titleBlock[0], /clamp\(1\.175rem/);
 
   assert.match(
     css,
