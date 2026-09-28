@@ -1140,15 +1140,25 @@ body:has(.p3-topic-canvas--fit-viewport) {
   margin-top: 0;
 }
 
-.p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3),
-.p3-narrative-body--with-plate .p3-narrative-body__copy > :is(h2, h3):first-child {
+/* Page title lives inside the body, so it would inherit the 3rem section-heading
+   top margin. Copy already zeroes its first h2/h3; do the same for the lead title
+   so both columns share a start edge (desktop split) and the stack is tight. */
+.p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__header,
+.p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__title {
+  margin-top: 0;
+}
+
+.p3-narrative-body--with-plate .p3-narrative-figure--plate + :is(h2, h3, h4),
+.p3-narrative-body--with-plate .p3-narrative-body__copy > :is(h2, h3, h4):first-child {
   margin-top: 0;
 }
 
 .p3-narrative-body--with-plate > h2:first-of-type,
 .p3-narrative-body--with-plate > h3:first-of-type,
+.p3-narrative-body--with-plate > h4:first-of-type,
 .p3-narrative-body--with-plate .p3-narrative-body__copy > h2:first-of-type,
-.p3-narrative-body--with-plate .p3-narrative-body__copy > h3:first-of-type {
+.p3-narrative-body--with-plate .p3-narrative-body__copy > h3:first-of-type,
+.p3-narrative-body--with-plate .p3-narrative-body__copy > h4:first-of-type {
   text-align: left;
   text-wrap: balance;
   hyphens: none;
@@ -1259,16 +1269,24 @@ body:has(.p3-topic-canvas--fit-viewport) {
     grid-column: 1;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     min-width: 0;
     min-height: 0;
     height: 100%;
     overflow: hidden;
     overscroll-behavior: none;
+    padding-top: 0;
   }
 
   .p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__header {
     flex-shrink: 0;
+    margin-top: 0;
     margin-bottom: 1.25rem;
+    padding-top: 0;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__title {
+    margin-top: 0;
   }
 
   /* Figure fills leftover lead height so the img can cap against a definite box.
@@ -1317,6 +1335,24 @@ body:has(.p3-topic-canvas--fit-viewport) {
     overscroll-behavior: contain;
     scrollbar-width: thin;
     scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
+  }
+
+  /* Copy column is ~0.58fr of the split. Markdown already dropped ##→h3;
+     scale the remaining title-style lettering so it fits the narrower field. */
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy :is(h2, h3, h4) {
+    letter-spacing: 0.06em;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy h2 {
+    font-size: 1.125rem;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy h3 {
+    font-size: 1rem;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy h4 {
+    font-size: 0.9375rem;
   }
 }
 
@@ -2986,7 +3022,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   color: #34d399;
 }
 
-.p3-topic-nav--glossary + .p3-topic-separator + .p3-topic-article h2[id] {
+.p3-topic-nav--glossary + .p3-topic-separator + .p3-topic-article :is(h2, h3)[id] {
   scroll-margin-top: 8rem;
   /* Term heads stay as authored (Autonomy, not AUTONOMY) */
   text-transform: none;

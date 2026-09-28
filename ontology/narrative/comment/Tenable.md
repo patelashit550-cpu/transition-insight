@@ -40,7 +40,7 @@ lexica:
 >  
 > — Mattiel, *Count Your Blessings* (2017)
 
-## Miller Time
+### Miller Time
 
 There has been a delta between narrative and reality for a long time, but our apprehension of it entails only one lifetime—our own. It's as though we have tells but cannot see them for what they are. Nor can we be allowed to approach them, because we are careless and because even our footfall is contamination. Arsenals are required and lines must be drawn with such clarity that even our uniforms are not a casual surplus, even in good sport fairly judged.
 
@@ -62,7 +62,7 @@ Those Pharaohs are long gone. Moses forged a way. The wisdom and courage of Solo
 
 The vast majority of us are granted modern conveniences that the kings of old could only *imagine*. Not a single one if given the chance would turn away the opportunity of returning as an ordinary run of the mill person living in the comfort of modern suburbia. Such are the wonders of the ordinary world.
 
-## Jesus of Suburbia
+### Jesus of Suburbia
 
 So, I beseech you who feel out of favour and who seethe with fearful fury: Turn inward. Demand austerity from yourself. Speak clearly and align your own reality to this extraordinary arc of justice that we are all a part of. Do this first before dictating to others: Be Jesus of Suburbia in your home however modest a tenement relic it may be. For what would you offer to be lodger, and into whose ledger, for just one night in Montezuma's Castle (above)?
 

@@ -45,7 +45,7 @@ order: 1
 slug: deus-en-machina
 ---
 
-## Moments In Love
+### Moments In Love
 
 This is the first part of _Sine Qua Non_—a series which explores and defines intelligence as the essential condition without which nothing endures. Intelligence is information or data folded and scaffolded into structures of specificity, firmness, and boundedness which then appear as life in myriad forms.
 
@@ -59,7 +59,7 @@ For intelligence to be truly inclusive, it must be holistic: diversified, equita
 
 Kropotkin, the anarchist Russian philosopher, aimed during the early twentieth century to synthesize traditional ethical structures with the emerging scientific understanding of evolution and social behavior. His aim was to construct an enduring model of legitimacy—grounded in mutual aid—capable of instructing direct action by individuals in harmony with their environment and community, free from state coercion. He died before completing this final work on ethics. Fulfilling that ambition—now supported by the architecture of modern information technology and AI—is my objective: specifically, I aim to elaborate how intelligence, applied by self-sovereign identity, enables forms of capital to flow with velocity across the breadth of humanity.
 
-## Ball of Confusion
+### Ball of Confusion
 
 In the twentieth-century West we pivoted from ethical traditions to the sciences, social and natural, in ways that were experimental in every sense. They were philosophically open-source and receptive to novelty as instructive and useful—having utility for better and for worse.
 
@@ -77,7 +77,7 @@ As well, the bomber on that fateful day broadcast a barely coded message to Alan
 
 Throughout the rest of the twentieth century, animus would dominate as lethal force was unleashed in one proxy war after another, far from our neighborhoods of quiet relative complacency.
 
-## Begin the Begin
+### Begin the Begin
 
 Democracy has always meant one thing: to become free. The paradox is that "free" carries a price, paid in sacrifice and effort—a burden borne most heavily by those who know what it means to live without dignity. This is felt in emotional rather than rational terms as a quiet sadness among those treated as inferior simply because an arbitrary quality, such as their appearance, makes them 'different' from someone holding the authority to command, control and own them. That sadness arises from bewildered shame—an intensely human emotion that pleads with reality, as if to ask some higher power: _"What am I guilty of, that I should be treated so?"_
 
@@ -91,7 +91,7 @@ This is the ultimate Promethean miscalculation: in convincing ourselves that we 
 
 Hence Sigmund Freud spoke of the Super-Ego—that zombified human state whose inner wildness, now completely tamed and institutionalized, ekes out a compliant and numb (and often medicated) substitute for deeper peace. This was Nietzsche's prophesied Last Man—the walking dead from among some might awaken to transcend the Overton boundaries of their age and become something better as the Overman (Übermensch): a guardian at long last who may be entrusted with the keep.
 
-## Sugar Sugar
+### Sugar Sugar
 
 Few commodities symbolize the mechanics of human subjugation quite like sugar. Beginning in the sixteenth century, global demand for this single carbohydrate laid the groundwork for an industrial trade that hollowed out Africa, sacrificing human lives to the lash and collar of chattel bondage.
  

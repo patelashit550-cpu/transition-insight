@@ -29,7 +29,7 @@ tags:
 
 
 
-## Kid A
+### Kid A
 
 The clerks at the passport office started it. In my earliest passports they set it down, underlined: I was to be a tel (תֵּל). They came, in those days, from the aristocratic families, and likely knew something of mine. If not they themselves then their superiors. They and any number might plausibly be interested in knowing what I was all about. For starters, what an interesting name the young lad has, they might have thought. The doctor attending my birth, startled by the name he was asked to put down, decided he would instead prefer to forever call me Alfred.
 
@@ -78,7 +78,7 @@ As a child raised on a steady diet of war films and the media's obsession with t
 
 
 
-### Rule Britannia: A Measure of The English
+#### Rule Britannia: A Measure of The English
 
 In the 1700s the British Aristocracy arrived in India as commanding officers to form a robust commercial bulwark against the challenges of their Imperial rivals — the Portuguese and French in particular — both of whom held outpost in Goa and Pondicherry respectively. All the imperial powers arrived for the same reason (and it wasn't just about the money). They came to fill a governance void left by the decline of a bankrupt Mughal dynasty which once had provided the utility of federating the hundreds of kingdoms (both Hindu and Muslim) that now chafed against each other but now with artillery and the beginning of the modern arsenal. India was simply too large a piece of global commerce to be left unattended. Industrialization was beginning on the tails of the renaissance and so to the integration of global political economy. Chaos and upheaval in this land, the sedate yet wild heartland of yogic spirituality, would surely ripple across the world with violent and volatile consequence first on payrolls and bank statements and thence onto the European and American street.
 
@@ -102,7 +102,7 @@ And who was this Macauley? Thomas Babington Macaulay, colonial administrator and
 
 
 
-## Those We Call Kin
+### Those We Call Kin
 
 > I stopped an old man along the way
 > Hoping to find some old forgotten words or ancient melodies
@@ -138,7 +138,7 @@ The beauty is that narrative refracts rather than reflects — many lenses train
 
 The tel with which this essay began was a public fact — a name pressed into a passport, that document symbolic of belonging to a realm: the United Kingdom. I, as an Englishman, was entered and underlined in the collective ledger of Britannic representation, categorized by clerks with agendas; my sense of genuine belonging to my Queen and Country now a matter of official record. But there is a more intimate tel: the one each of us builds in private, transaction by transaction, brick by brick — the accumulated sediment of habit, encounter, and choice that constitutes a self.
 
-### Inhabit
+#### Inhabit
 
 > What befalls each man has been ordained in some way as conducive to his destiny. For we say that things *fall* to us as the masons too say that the huge squared stones in walls and pyramids *fall* into their places, adjusting themselves harmoniously to one another in a sort of structural unity
 >

@@ -24,7 +24,7 @@ tags:
   - money
 ---
 
-## The Occupational Hazards of Eden
+### The Occupational Hazards of Eden
 
 Project Management in the software development lifecycle has been my vocation for over a quarter of a century. I won't provide a job description, which may instead be discovered in any number of places. Briefly, it is the process by which applications are created, bundled, tested, and released to the world. In theory, an application is a mechanism or utility—technology designed to grant an end-user some incremental ease, measured in that scarcest of currencies: time and effort saved. My own role has been to *govern* project teams and orchestrate their tasks as the work is performed to elaborate software applications and manifest an end state. All the while transparently reporting progress to various stakeholders—the sponsors or champions who own the product and fund the initiative.
 
@@ -60,7 +60,7 @@ The accumulation of intimate knowledge allows us from a young age to quickly inf
 
 Now, in a larger global context, one in which the vast majority of humanity is mired in poverty, it is a luxury to contemplate such questions. However, I believe that those of us endowed with the opportunity have an obligation to do so on behalf of us all. Call it a modern interpretation of *noblesse oblige*—one that is self-evident and assumed without necessarily affording any additional privileges beyond the right to spend time as I wish rather than how someone else would have me spend it. Some might call it self-indulgent—but what else beyond all I already have could I possibly want, beyond the opportunity to be creative and through that creativity express ideas that might actually resonate broadly?
 
-## On Your Mark, Beset
+### On Your Mark, Beset
 
 The need to apply mechanisms for ordering and nesting various notions of identity, grounding them in a sense of one's own personal identity fully taken into custody and owned, is the central imperative for technology as we seek to express oneness in all its manifestations and reconcile the individual with the collective.
 
@@ -78,7 +78,7 @@ As a counterfoil, the peaceable may express defense through *anima* and the dist
 
 We may too, as Joseph Campbell suggested, follow our bliss and apply ourselves through non-fungible soft power—an expression of our particular talent, skill, and experience, imbued with a broadly resonant charisma—in work which we find rewarding even if a material return is lacking. This is our *Call to Adventure*—turbulent and uncomfortable, but one we must in any case embrace. What choice do we have?
 
-## Veracity In Utility
+### Veracity In Utility
 
 What we require is a precise, detailed, and yet contextual representation of ourselves, based on what is demanded of us at any given moment as we perform life's various tasks. This resides metaphorically at the front-end—at the top of the stack known in software development as the presentation layer.
 
@@ -92,7 +92,7 @@ As stakeholders in these institutions—whether as customers, vendors, partners,
 
 Meanwhile, all companies have a need to securely hold corporate treasuries containing the various assets used to fund their operational and capital expenditures, requiring well-defined yet streamlined processes to govern them. These funds are invariably stored at systemically critical financial institutions (FIs). These institutions must then fulfill their own requirements to provide comprehensive reporting to the Bank of Canada, various ministries, and regulatory bodies, so that public policy—both fiscal and monetary—may be effected with greater efficacy. In doing so, interest rates in particular may truly become data-driven to avoid policy error, allowing us to understand the distribution of capital and the flow of investment both within Canada's regions and via various global facilities, as we retrofit and secure them with *public* blockchain technologies whose architectures allow use-case dependent trade-offs and yet whose intellectual property is now our *collectively* owned heritage; one which is available to all without exception.
 
-## Key: The Derivation Of Order
+### Key: The Derivation Of Order
 
 This site expresses concepts which together may be seen as a philosophical model or an ontological framework for approaching governance through an anarchic lens. A constitution, if you will, which defines how identity, community, and the global commons may all be brought into alignment.
 

@@ -127,7 +127,7 @@ function parseCanon(raw) {
   };
 
   for (const line of lines) {
-    const heading = line.match(/^##\s+(.+?)\s*$/);
+    const heading = line.match(/^#{2,3}\s+(.+?)\s*$/);
     if (heading) {
       flush();
       current = { term: cleanWikiTarget(heading[1]), lines: [] };
