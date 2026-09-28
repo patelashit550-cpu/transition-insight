@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-27T10:45:07.724Z",
+  "generated": "2026-09-28T21:04:07.954Z",
   "tier": "global",
-  "manifestDigest": "sha256:5c65bb954b1596754e8444bc991479101d7478f2d7f2866504df58d43cd1a83e",
+  "manifestDigest": "sha256:ac5beac2ef1c9c6b7b201a3b4185788c2089e73a64b84a225e19911d376ff37d",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,9 +12,9 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 76,
-    "attestedFiles": 18,
-    "signedFiles": 18
+    "totalOntologyFiles": 78,
+    "attestedFiles": 19,
+    "signedFiles": 19
   },
   "attested": [
     {
@@ -25,7 +25,7 @@
       "publishedAt": "2026-07-25T00:00:00.000Z",
       "slug": "canonical",
       "series": "Regnum Dei",
-      "sha256": "sha256:9dcab6ff08bb907532b14a81e9aaeca2237c616e0c44cdaab9630075c085c868"
+      "sha256": "sha256:2220e357115d748057bb3ebc8dfdc18408bd73a9900d1460559e3f3ba25b1715"
     },
     {
       "path": "ontology/governance/Carta.md",
@@ -46,6 +46,16 @@
       "slug": "arete",
       "series": "peridot",
       "sha256": "sha256:e8b68e496f4a77cc057a80663ec812fa3ff0622c3bbe6ef3231d7de30e25be8c"
+    },
+    {
+      "path": "ontology/governance/illumination/bias.md",
+      "stage": "published",
+      "title": "Bias",
+      "author": null,
+      "publishedAt": "2000-01-01T00:00:00.000Z",
+      "slug": "bias",
+      "series": "peridot",
+      "sha256": "sha256:8f70459e201d19a5fc0603765369d639fd9c91c447922f01579ffa10d97e9519"
     },
     {
       "path": "ontology/governance/illumination/semper idem.md",
@@ -115,7 +125,7 @@
       "publishedAt": null,
       "slug": "sku",
       "series": null,
-      "sha256": "sha256:80f2a2e4d3d6ba1fd553584ac0d9de552803bbc4d5cadeaf7bcc78dedc40fd7d"
+      "sha256": "sha256:b8c73dcb2bcc4454132eea2b4ae80ab52b0d0069fe3454ad240b005aa782e257"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -195,14 +205,14 @@
       "publishedAt": "2026-09-27T00:00:00.000Z",
       "slug": "skin-in-the-game",
       "series": "Skin in the Game",
-      "sha256": "sha256:c36842738c7f8a11c28b26e8cd1f9ec5c88a83e63daa0fa0e2b6b14f21f8cfa2"
+      "sha256": "sha256:e8bb13f43294575ae355865c36e9acf8144d0d1b65bf3d0b98f7e53d1c34baee"
     }
   ],
   "signature": {
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "25cV39CXaLHQfuqMEpzZ588EP4xYMntLhgem5N6NwGLof8GdNchmq42T4it58ohtojmUMr9jjuRKzn4M4PsPoU7Q",
-    "signedAt": "2026-09-28T20:51:30.336Z"
+    "value": "BmfXniXjzxJjbRmn9Cumru64TYX37aNVWRj8k7eHGT2kFbihdVA77XbrCmP5NznGqkJWQAFQkRye45w3V1gd1ui",
+    "signedAt": "2026-09-28T21:04:36.791Z"
   }
 }

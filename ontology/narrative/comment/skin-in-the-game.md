@@ -8,8 +8,6 @@ type: essay
 theme: emerald
 size: md
 showInNav: true
-# Display title and series key stay "Skin in the Game" so CONTENT_HUBS
-# seriesName matches. Href slug is kebab-case `/chronicle/skin-in-the-game`.
 series: Skin in the Game
 publishedAt: 2026-09-27
 image: /assets/skin.png

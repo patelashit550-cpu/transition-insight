@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-09-16T14:05:37.394Z",
-  "essayCount": 16,
+  "generatedAt": "2026-09-28T21:01:58.544Z",
+  "essayCount": 18,
   "essays": [
     "governance/Carta.md",
     "governance/illumination/arete.md",
+    "governance/illumination/bias.md",
     "governance/illumination/semper idem.md",
     "governance/illumination/social-network.md",
     "governance/intelligence/deus-en-machina.md",
@@ -16,6 +17,7 @@
     "narrative/biography/ashit-patel.md",
     "narrative/biography/ronin.md",
     "narrative/comment/3am-eternal.md",
+    "narrative/comment/skin-in-the-game.md",
     "narrative/comment/Tenable.md",
     "narrative/comment/Transition.md"
   ],
@@ -39,31 +41,34 @@
     {
       "term": "Anarchism",
       "method": "extractive-synthesis",
-      "score": 13,
+      "score": 17,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md"
       ],
-      "snippetCount": 3
+      "snippetCount": 4
     },
     {
       "term": "Anarchy",
       "method": "extractive-synthesis",
-      "score": 21,
+      "score": 26,
       "sources": [
+        "governance/illumination/bias.md",
         "governance/intelligence/deus-en-machina.md",
         "me/origins.md",
         "narrative/biography/ronin.md"
       ],
-      "snippetCount": 2
+      "snippetCount": 4
     },
     {
       "term": "Anima",
       "method": "extractive",
-      "score": 30,
+      "score": 34,
       "sources": [
         "governance/Carta.md",
+        "governance/illumination/bias.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
@@ -75,10 +80,11 @@
     {
       "term": "Animus",
       "method": "extractive-synthesis",
-      "score": 35,
+      "score": 39,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -109,10 +115,11 @@
     },
     {
       "term": "Autonomy",
-      "method": "extractive",
-      "score": 23,
+      "method": "extractive-synthesis",
+      "score": 29,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "me/praxis.md"
@@ -122,10 +129,11 @@
     {
       "term": "Beauty",
       "method": "extractive",
-      "score": 28,
+      "score": 32,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md"
       ],
@@ -146,10 +154,11 @@
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 71,
+      "score": 77,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -166,10 +175,11 @@
     {
       "term": "Commons",
       "method": "extractive-synthesis",
-      "score": 61,
+      "score": 67,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -199,15 +209,16 @@
         "governance/intelligence/deus-en-machina.md",
         "narrative/biography/ronin.md"
       ],
-      "snippetCount": 2
+      "snippetCount": 4
     },
     {
       "term": "Creation",
       "method": "extractive",
-      "score": 59,
+      "score": 71,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
@@ -220,11 +231,12 @@
     },
     {
       "term": "Firmitas",
-      "method": "extractive-synthesis",
-      "score": 25,
+      "method": "extractive",
+      "score": 29,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "me/praxis.md",
         "me/trials-of-job.md",
@@ -235,9 +247,10 @@
     {
       "term": "Flow",
       "method": "extractive",
-      "score": 53,
+      "score": 58,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/origins.md",
@@ -265,10 +278,11 @@
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 112,
+      "score": 120,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "me/origins.md",
@@ -285,10 +299,11 @@
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 103,
+      "score": 108,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -306,10 +321,11 @@
     {
       "term": "Intelligence",
       "method": "extractive",
-      "score": 55,
+      "score": 59,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
@@ -319,15 +335,6 @@
         "narrative/biography/ronin.md"
       ],
       "snippetCount": 4
-    },
-    {
-      "term": "Keiretsu",
-      "method": "extractive-synthesis",
-      "score": 13,
-      "sources": [
-        "me/origins.md"
-      ],
-      "snippetCount": 2
     },
     {
       "term": "Ledger",
@@ -413,10 +420,11 @@
     {
       "term": "Perimeter",
       "method": "extractive-synthesis",
-      "score": 47,
+      "score": 52,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "me/origins.md",
@@ -474,9 +482,10 @@
     {
       "term": "Project",
       "method": "extractive-synthesis",
-      "score": 41,
+      "score": 45,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
         "me/sku.md",
@@ -490,9 +499,10 @@
     {
       "term": "Protocol",
       "method": "extractive",
-      "score": 49,
+      "score": 56,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
@@ -545,9 +555,10 @@
     {
       "term": "Semper Idem",
       "method": "extractive",
-      "score": 34,
+      "score": 39,
       "sources": [
         "governance/Carta.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -560,10 +571,11 @@
     {
       "term": "Social Network",
       "method": "extractive",
-      "score": 44,
+      "score": 52,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -576,9 +588,10 @@
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 48,
+      "score": 53,
       "sources": [
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -612,12 +625,24 @@
       "snippetCount": 4
     },
     {
+      "term": "Transition Insight",
+      "method": "extractive-synthesis",
+      "score": 14,
+      "sources": [
+        "governance/illumination/bias.md",
+        "me/sku.md",
+        "narrative/biography/ashit-milne.md"
+      ],
+      "snippetCount": 3
+    },
+    {
       "term": "Truth",
       "method": "extractive-synthesis",
-      "score": 53,
+      "score": 57,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
@@ -632,10 +657,11 @@
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 66,
+      "score": 74,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -665,10 +691,11 @@
     {
       "term": "Yield",
       "method": "extractive",
-      "score": 40,
+      "score": 44,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
+        "governance/illumination/bias.md",
         "governance/illumination/social-network.md",
         "narrative/comment/Transition.md"
       ],
