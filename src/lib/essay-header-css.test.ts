@@ -28,3 +28,47 @@ test("essay subtitle kicker is readable gray-white, not dim zinc-500", () => {
   assert.match(subtitleBlock[0], /color:\s*var\(--p3-essay-subtitle-color\)/);
   assert.match(subtitleBlock[0], /text-align:\s*left/);
 });
+
+test("essay page titles share one increment below the prior 2.5rem stack", () => {
+  assert.match(css, /--p3-essay-title-size:\s*clamp\(1\.175rem,\s*4\.75vw,\s*1\.625rem\)/);
+  assert.match(css, /--p3-essay-title-size-md:\s*2\.125rem/);
+  assert.match(css, /--p3-essay-title-size-fit:\s*clamp\(1\.1rem,\s*2\.75vw,\s*1\.625rem\)/);
+  assert.match(css, /--p3-essay-inline-title-size:\s*1\.625rem/);
+
+  const titleBlock = css.match(/\.p3-narrative-article__title\s*\{[^}]+\}/);
+  assert.ok(titleBlock, "expected .p3-narrative-article__title rule");
+  assert.match(titleBlock[0], /font-size:\s*var\(--p3-essay-title-size\)/);
+  assert.doesNotMatch(titleBlock[0], /2\.5rem/);
+  assert.doesNotMatch(titleBlock[0], /clamp\(1\.35rem/);
+
+  assert.match(
+    css,
+    /@media\s*\(min-width:\s*768px\)\s*\{\s*\.p3-narrative-article__title\s*\{[^}]*font-size:\s*var\(--p3-essay-title-size-md\)/s,
+  );
+  assert.doesNotMatch(
+    css,
+    /\.p3-narrative-article__title\s*\{[^}]*font-size:\s*2\.5rem/s,
+  );
+
+  const topicTitleBlock = css.match(/\.p3-topic-article__title\s*\{[^}]+\}/);
+  assert.ok(topicTitleBlock, "expected .p3-topic-article__title rule");
+  assert.match(topicTitleBlock[0], /font-size:\s*var\(--p3-essay-title-size\)/);
+  assert.doesNotMatch(topicTitleBlock[0], /clamp\(1\.75rem/);
+
+  assert.match(
+    css,
+    /\.p3-narrative-article--connexion-fit\s+\.p3-narrative-article__title\s*\{[^}]*font-size:\s*var\(--p3-essay-title-size-fit\)/s,
+  );
+  assert.match(
+    css,
+    /\.p3-narrative-body h1:not\(\.p3-narrative-article__title\)\s*\{[^}]*font-size:\s*var\(--p3-essay-inline-title-size\)/s,
+  );
+});
+
+test("compass watermark size tokens stay untouched", () => {
+  const compass = css.match(/\.p3-compass-watermark\s*\{[^}]+\}/);
+  assert.ok(compass, "expected .p3-compass-watermark rule");
+  assert.match(compass[0], /z-index:\s*2/);
+  assert.match(compass[0], /opacity:\s*0\.07/);
+  assert.match(compass[0], /filter:\s*blur\(3px\)/);
+});
