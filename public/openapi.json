@@ -121,28 +121,6 @@
         }
       }
     },
-    "/chronicle/skin-in-the-game": {
-      "get": {
-        "operationId": "get_chronicle_skin_in_the_game",
-        "summary": "Read public page at /chronicle/skin-in-the-game",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/chronicle/skin-in-the-game/skin-in-the-game": {
-      "get": {
-        "operationId": "get_chronicle_skin_in_the_game_skin_in_the_game",
-        "summary": "Read public page at /chronicle/skin-in-the-game/skin-in-the-game",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/cord": {
       "get": {
         "operationId": "get_cord",
@@ -176,32 +154,10 @@
         }
       }
     },
-    "/governance/capital": {
-      "get": {
-        "operationId": "get_governance_capital",
-        "summary": "Read public page at /governance/capital",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/governance/carta": {
       "get": {
         "operationId": "get_governance_carta",
         "summary": "Read public page at /governance/carta",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/governance/identity": {
-      "get": {
-        "operationId": "get_governance_identity",
-        "summary": "Read public page at /governance/identity",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
@@ -246,6 +202,17 @@
       "get": {
         "operationId": "get_governance_peridot_arete",
         "summary": "Read public page at /governance/peridot/arete",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
+    "/governance/peridot/bias": {
+      "get": {
+        "operationId": "get_governance_peridot_bias",
+        "summary": "Read public page at /governance/peridot/bias",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"

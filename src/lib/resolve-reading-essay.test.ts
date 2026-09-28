@@ -74,7 +74,7 @@ test("chronicle/3am-eternal hub lands on the radio lander with Spotify playlist 
   }
 });
 
-test("chronicle/skin-in-the-game hub lands on the Tannery placeholder", () => {
+test("chronicle/skin-in-the-game hub config stays wired; global tier omits draft lander", () => {
   const previous = process.env.NEXT_PUBLIC_CONTENT_TIER;
   process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
   try {
@@ -92,10 +92,27 @@ test("chronicle/skin-in-the-game hub lands on the Tannery placeholder", () => {
     );
 
     const resolved = resolveReadingEssay(["chronicle", "skin-in-the-game"]);
-    assert.ok(resolved, "Skin in the Game hub index must resolve the lander");
+    assert.equal(
+      resolved,
+      null,
+      "draft Skin in the Game must not resolve on global publish tier"
+    );
+  } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
+  }
+});
+
+test("chronicle/skin-in-the-game still lands locally while held as draft", () => {
+  const previous = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "local";
+  try {
+    const resolved = resolveReadingEssay(["chronicle", "skin-in-the-game"]);
+    assert.ok(resolved, "Skin in the Game hub index must resolve the lander in local");
     assert.equal(resolved.essaySlug, "skin-in-the-game");
     assert.equal(resolved.essay.frontmatter.title, "Skin in the Game");
     assert.equal(resolved.essay.frontmatter.subtitle, "Tannery");
+    assert.equal(resolved.essay.frontmatter.stage, "draft");
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, undefined);
     assert.equal(resolved.essay.frontmatter.image, "/assets/skin.png");
     assert.equal(resolved.essay.frontmatter.imageRole, "inset");

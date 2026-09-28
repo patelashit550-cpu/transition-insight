@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T10:45:07.656Z",
+  "generatedAt": "2026-09-28T21:20:22.932Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -15,20 +15,20 @@
   "interior": {
     "summary": {
       "essays": 17,
-      "nodes": 175,
-      "edges": 413,
+      "nodes": 182,
+      "edges": 437,
       "byKind": {
         "member-of-series": 12,
         "member-of-folder": 17,
-        "tagged": 101,
+        "tagged": 107,
         "lexica": 66,
-        "mention": 217
+        "mention": 235
       },
-      "orphanEssays": 1,
-      "series": 7,
+      "orphanEssays": 0,
+      "series": 6,
       "folders": 6,
-      "tags": 54,
-      "terms": 91
+      "tags": 56,
+      "terms": 97
     },
     "nodes": [
       {
@@ -76,6 +76,28 @@
           "money",
           "capital",
           "theology"
+        ]
+      },
+      {
+        "id": "essay:governance/illumination/bias.md",
+        "type": "essay",
+        "label": "Bias",
+        "stage": "published",
+        "slug": "bias",
+        "series": "peridot",
+        "folder": "governance/illumination",
+        "ontologyPath": "governance/illumination/bias.md",
+        "vaultPath": "ontology/governance/illumination/bias",
+        "tags": [
+          "governance",
+          "identity",
+          "capital",
+          "ecology",
+          "community",
+          "boundary",
+          "animus",
+          "commons",
+          "wealth"
         ]
       },
       {
@@ -301,22 +323,6 @@
         ]
       },
       {
-        "id": "essay:narrative/comment/skin-in-the-game.md",
-        "type": "essay",
-        "label": "Skin in the Game",
-        "stage": "published",
-        "slug": "skin-in-the-game",
-        "series": "Skin in the Game",
-        "folder": "narrative/comment",
-        "ontologyPath": "narrative/comment/skin-in-the-game.md",
-        "vaultPath": "ontology/narrative/comment/skin-in-the-game",
-        "tags": [
-          "tannery",
-          "telamon",
-          "firmitas"
-        ]
-      },
-      {
         "id": "essay:narrative/comment/tenable.md",
         "type": "essay",
         "label": "The Tenable",
@@ -376,11 +382,6 @@
         "id": "series:3-am-eternal",
         "type": "series",
         "label": "3 AM Eternal"
-      },
-      {
-        "id": "series:skin-in-the-game",
-        "type": "series",
-        "label": "Skin in the Game"
       },
       {
         "id": "series:polite-bureau",
@@ -508,6 +509,36 @@
         "label": "theology"
       },
       {
+        "id": "tag:ecology",
+        "type": "tag",
+        "label": "ecology"
+      },
+      {
+        "id": "tag:community",
+        "type": "tag",
+        "label": "community"
+      },
+      {
+        "id": "tag:boundary",
+        "type": "tag",
+        "label": "boundary"
+      },
+      {
+        "id": "tag:animus",
+        "type": "tag",
+        "label": "animus"
+      },
+      {
+        "id": "tag:commons",
+        "type": "tag",
+        "label": "commons"
+      },
+      {
+        "id": "tag:wealth",
+        "type": "tag",
+        "label": "wealth"
+      },
+      {
         "id": "tag:personhood",
         "type": "tag",
         "label": "personhood"
@@ -546,11 +577,6 @@
         "id": "tag:global-commons",
         "type": "tag",
         "label": "global-commons"
-      },
-      {
-        "id": "tag:ecology",
-        "type": "tag",
-        "label": "ecology"
       },
       {
         "id": "tag:anarchism",
@@ -613,16 +639,6 @@
         "label": "ashit-milne"
       },
       {
-        "id": "tag:commons",
-        "type": "tag",
-        "label": "commons"
-      },
-      {
-        "id": "tag:community",
-        "type": "tag",
-        "label": "Community"
-      },
-      {
         "id": "tag:spirituality",
         "type": "tag",
         "label": "Spirituality"
@@ -676,11 +692,6 @@
         "id": "tag:firmitas",
         "type": "tag",
         "label": "firmitas"
-      },
-      {
-        "id": "tag:tannery",
-        "type": "tag",
-        "label": "tannery"
       },
       {
         "id": "tag:monetary-policy",
@@ -1060,9 +1071,27 @@
         "defined": true
       },
       {
+        "id": "term:dhara",
+        "type": "term",
+        "label": "Dhara",
+        "defined": true
+      },
+      {
+        "id": "term:diya (also deep)",
+        "type": "term",
+        "label": "Diya (also Deep)",
+        "defined": true
+      },
+      {
         "id": "term:dial square",
         "type": "term",
         "label": "Dial Square",
+        "defined": true
+      },
+      {
+        "id": "term:drishti",
+        "type": "term",
+        "label": "Drishti",
         "defined": true
       },
       {
@@ -1135,6 +1164,18 @@
         "id": "term:orthodoxy",
         "type": "term",
         "label": "Orthodoxy",
+        "defined": true
+      },
+      {
+        "id": "term:original sin",
+        "type": "term",
+        "label": "Original Sin",
+        "defined": true
+      },
+      {
+        "id": "term:pain body",
+        "type": "term",
+        "label": "Pain Body",
         "defined": true
       },
       {
@@ -1219,6 +1260,12 @@
         "id": "term:transition",
         "type": "term",
         "label": "Transition",
+        "defined": true
+      },
+      {
+        "id": "term:useful idiot / idioteque",
+        "type": "term",
+        "label": "Useful Idiot / Idioteque",
         "defined": true
       },
       {
@@ -1407,6 +1454,83 @@
         "id": "edge:essay-governance-illumination-arete-md-tag-theology-tagged",
         "from": "essay:governance/illumination/arete.md",
         "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-series-peridot-member-of-series",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "series:peridot",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-folder-governance-illumination-member-of-folder",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "folder:governance-illumination",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-governance-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-identity-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:identity",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-capital-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:capital",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-ecology-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:ecology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-community-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:community",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-boundary-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:boundary",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-animus-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:animus",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-commons-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:commons",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-wealth-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:wealth",
         "kind": "tagged",
         "weight": 1
       },
@@ -2363,41 +2487,6 @@
         "weight": 1
       },
       {
-        "id": "edge:essay-narrative-comment-skin-in-the-game-md-series-skin-in-the-game-member-of-series",
-        "from": "essay:narrative/comment/skin-in-the-game.md",
-        "to": "series:skin-in-the-game",
-        "kind": "member-of-series",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-skin-in-the-game-md-folder-narrative-comment-member-of-folder",
-        "from": "essay:narrative/comment/skin-in-the-game.md",
-        "to": "folder:narrative-comment",
-        "kind": "member-of-folder",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-skin-in-the-game-md-tag-tannery-tagged",
-        "from": "essay:narrative/comment/skin-in-the-game.md",
-        "to": "tag:tannery",
-        "kind": "tagged",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-skin-in-the-game-md-tag-telamon-tagged",
-        "from": "essay:narrative/comment/skin-in-the-game.md",
-        "to": "tag:telamon",
-        "kind": "tagged",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-skin-in-the-game-md-tag-firmitas-tagged",
-        "from": "essay:narrative/comment/skin-in-the-game.md",
-        "to": "tag:firmitas",
-        "kind": "tagged",
-        "weight": 1
-      },
-      {
         "id": "edge:essay-narrative-comment-tenable-md-series-polite-bureau-member-of-series",
         "from": "essay:narrative/comment/tenable.md",
         "to": "series:polite-bureau",
@@ -2656,6 +2745,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-anarchism-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:anarchism",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-anarchism-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:anarchism",
@@ -2674,6 +2771,14 @@
       {
         "id": "edge:essay-governance-carta-md-term-anima-mention",
         "from": "essay:governance/carta.md",
+        "to": "term:anima",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-anima-mention",
+        "from": "essay:governance/illumination/bias.md",
         "to": "term:anima",
         "kind": "mention",
         "weight": 1,
@@ -2736,6 +2841,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-animus-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-animus-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:animus",
@@ -2790,6 +2903,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 10
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-autonomy-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-autonomy-mention",
@@ -2918,6 +3039,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 5
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-capital-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-capital-mention",
@@ -3112,6 +3241,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-creation-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:creation",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-me-trials-of-job-md-term-creation-mention",
         "from": "essay:me/trials-of-job.md",
         "to": "term:creation",
@@ -3184,6 +3321,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-dollar-regime-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:dollar regime",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-dollar-regime-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:dollar regime",
@@ -3218,6 +3363,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-firmitas-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:firmitas",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-firmitas-mention",
+        "from": "essay:governance/illumination/bias.md",
         "to": "term:firmitas",
         "kind": "mention",
         "weight": 1,
@@ -3304,6 +3457,14 @@
         "count": 4
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-governance-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 5,
+        "count": 9
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-governance-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:governance",
@@ -3374,6 +3535,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-identity-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-identity-mention",
@@ -3464,6 +3633,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-intelligence-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:intelligence",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-intelligence-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:intelligence",
@@ -3539,6 +3716,14 @@
         "id": "edge:essay-narrative-comment-tenable-md-term-ledger-mention",
         "from": "essay:narrative/comment/tenable.md",
         "to": "term:ledger",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-lingam-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:lingam",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -3712,6 +3897,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-perimeter-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-perimeter-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:perimeter",
@@ -3862,6 +4055,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-protocol-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-protocol-mention",
@@ -4040,6 +4241,14 @@
         "count": 2
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-semper-idem-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-semper-idem-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:semper idem",
@@ -4110,6 +4319,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-social-network-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 5,
+        "count": 7
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-social-network-mention",
@@ -4194,6 +4411,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-transition-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:transition",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-transition-mention",
+        "from": "essay:governance/illumination/bias.md",
         "to": "term:transition",
         "kind": "mention",
         "weight": 1,
@@ -4294,6 +4519,14 @@
         "kind": "mention",
         "weight": 3,
         "count": 3
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-yield-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:yield",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-social-network-md-term-yield-mention",
