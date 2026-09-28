@@ -219,11 +219,11 @@ function contentJsonLd(
   return serializeJsonLd(ld);
 }
 
-/** inset | figure | plate → centred editorial plate above essay body (after page title) */
 function assetSrc(src: string): string {
   return src.startsWith("/") ? withBasePath(src) : src;
 }
 
+/** inset | figure | plate → editorial plate (desktop split beside copy; mobile stacked) */
 function isPlateImageRole(imageRole?: string): boolean {
   return imageRole === "inset" || imageRole === "figure" || imageRole === "plate";
 }
@@ -389,6 +389,26 @@ function NarrativeEssayBody({
       />
     ) : null;
 
+  const copyInner =
+    connexionFit && connexionLinks ? (
+      <ConnexionContactPanel
+        voiceUrl={connexionLinks.voiceUrl}
+        messageUrl={connexionLinks.messageUrl}
+        email={connexionLinks.email}
+      />
+    ) : (
+      <>
+        {spotifyPlaylistId ? (
+          <SpotifyPlaylistEmbed playlistId={spotifyPlaylistId} title={spotifyTitle} />
+        ) : null}
+        {content.trim() ? (
+          <ReactMarkdown remarkPlugins={REMARK_PLUGINS} components={components}>
+            {content}
+          </ReactMarkdown>
+        ) : null}
+      </>
+    );
+
   return (
     <div
       className={
@@ -416,24 +436,7 @@ function NarrativeEssayBody({
             .join(" ")}
         >
           {isPlateFigure && plateFigure}
-          {connexionFit && connexionLinks ? (
-            <ConnexionContactPanel
-              voiceUrl={connexionLinks.voiceUrl}
-              messageUrl={connexionLinks.messageUrl}
-              email={connexionLinks.email}
-            />
-          ) : (
-            <>
-              {spotifyPlaylistId ? (
-                <SpotifyPlaylistEmbed playlistId={spotifyPlaylistId} title={spotifyTitle} />
-              ) : null}
-              {content.trim() ? (
-                <ReactMarkdown remarkPlugins={REMARK_PLUGINS} components={components}>
-                  {content}
-                </ReactMarkdown>
-              ) : null}
-            </>
-          )}
+          {isPlateFigure ? <div className="p3-narrative-body__copy">{copyInner}</div> : copyInner}
         </section>
       )}
     </div>
