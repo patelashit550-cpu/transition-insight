@@ -1067,17 +1067,15 @@ body:has(.p3-topic-canvas--fit-viewport) {
   max-width: var(--p3-essay-plate-max);
   height: auto;
   margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  border-radius: var(--p3-essay-plate-radius);
-  box-shadow: none;
+  /* Emerald mat (padding / fill / radius / shadow) comes from the shared
+     figure-img + body-photo rule below — plates share that frame. */
   object-fit: unset;
   object-position: center;
   transform: none;
   image-orientation: none;
 }
 
+.p3-narrative-body img.p3-narrative-figure__img--plate-circle,
 .p3-narrative-figure__img--plate-circle {
   border-radius: 50%;
   aspect-ratio: 1;
@@ -1140,7 +1138,9 @@ body:has(.p3-topic-canvas--fit-viewport) {
   }
 }
 
-.p3-narrative-figure__img:not(.p3-narrative-figure__img--plate),
+/* Emerald photo-mat: plate/inset heroes, other figure imgs, and markdown body photos.
+   Feature lead images (`.p3-inline-image--feature`) stay unmatted. */
+.p3-narrative-figure__img,
 .p3-narrative-body img:not(.p3-inline-image--feature) {
   display: block;
   width: 100%;
@@ -1481,7 +1481,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   clear: both;
 }
 
-.p3-narrative-body img:not(.p3-inline-image--feature) {
+.p3-narrative-body img:not(.p3-inline-image--feature):not(.p3-narrative-figure__img) {
   margin: var(--p3-essay-figure-block-gap) auto;
   max-width: min(100%, 36rem);
 }
