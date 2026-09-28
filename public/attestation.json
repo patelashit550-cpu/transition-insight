@@ -14,7 +14,7 @@
   "summary": {
     "totalOntologyFiles": 76,
     "attestedFiles": 18,
-    "signedFiles": 0
+    "signedFiles": 18
   },
   "attested": [
     {
@@ -198,5 +198,11 @@
       "sha256": "sha256:c36842738c7f8a11c28b26e8cd1f9ec5c88a83e63daa0fa0e2b6b14f21f8cfa2"
     }
   ],
-  "signature": null
+  "signature": {
+    "algorithm": "ed25519",
+    "scheme": "transition-insight:attestation:v1",
+    "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
+    "value": "25cV39CXaLHQfuqMEpzZ588EP4xYMntLhgem5N6NwGLof8GdNchmq42T4it58ohtojmUMr9jjuRKzn4M4PsPoU7Q",
+    "signedAt": "2026-09-28T20:51:30.336Z"
+  }
 }
