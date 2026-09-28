@@ -188,13 +188,17 @@ export function listContentHubStaticParams(
 
   for (const config of Object.values(CONTENT_HUBS)) {
     const base = [...config.publicBase];
-    out.push({ slug: base });
 
     const essays =
       config.mode === "folder"
         ? listFolderEssays([...config.ontologyTopicPath], config.seriesSlug)
         : listSeriesEssays(config.seriesName);
 
+    // Skip hubs with no tier-visible essays so draft-only series (e.g. Skin
+    // held unpublished) do not emit public static paths or sitemap URLs.
+    if (essays.length === 0) continue;
+
+    out.push({ slug: base });
     for (const essay of essays) {
       out.push({ slug: [...base, essay.slug] });
     }

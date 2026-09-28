@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-28T21:08:35.689Z",
+  "generated": "2026-09-28T21:20:23.148Z",
   "tier": "global",
-  "manifestDigest": "sha256:6531ed5d4ad9136b10057574ebdbd2cac182fcb2ae4de153f414de7425098ba4",
+  "manifestDigest": "sha256:20cc3d05d1121cacf8c3bfa22416b5c36293978e36a3dd768b8554e3ca1650ff",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,8 +13,8 @@
   },
   "summary": {
     "totalOntologyFiles": 77,
-    "attestedFiles": 19,
-    "signedFiles": 19
+    "attestedFiles": 18,
+    "signedFiles": 18
   },
   "attested": [
     {
@@ -196,23 +196,13 @@
       "slug": "transition",
       "series": "Polite Bureau",
       "sha256": "sha256:c983e5bd50bd7fc714db24a6d59b288a1696803265f1186458eee37d1581d561"
-    },
-    {
-      "path": "ontology/narrative/comment/skin-in-the-game.md",
-      "stage": "published",
-      "title": "Skin in the Game",
-      "author": null,
-      "publishedAt": "2026-09-27T00:00:00.000Z",
-      "slug": "skin-in-the-game",
-      "series": "Skin in the Game",
-      "sha256": "sha256:e8bb13f43294575ae355865c36e9acf8144d0d1b65bf3d0b98f7e53d1c34baee"
     }
   ],
   "signature": {
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "3kjcbm4p2vK6RxaPBe4vxCRsiduE9hLJi5mvycHbh5vdbnNsfwq2E4zk9pZMDmRZoQDrGkoSM78Yhna9q5Mgaid6",
-    "signedAt": "2026-09-28T21:08:58.664Z"
+    "value": "2rmne6wWZxEgDtGPoie8hHpC2QDd6juZTci8WX4KSUryUzsti8YQfzxqR2L8swFNFHmGmB5UorWz3G4F3JnSZYfZ",
+    "signedAt": "2026-09-28T21:20:40.217Z"
   }
 }

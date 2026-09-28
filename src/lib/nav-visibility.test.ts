@@ -33,20 +33,15 @@ test("B3 lists London Calling in global tier", () => {
   }
 });
 
-test("B3 lists Skin in the Game above London Calling in global tier", () => {
+test("B3 hides Skin in the Game in global tier while held unpublished", () => {
   const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
   process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
   try {
     const visible = getNavVisibilityPayload();
     const tannery = visible.B3.find((row) => row.href === "/chronicle/skin-in-the-game");
     const radio = visible.B3.find((row) => row.href === "/chronicle/3am-eternal");
-    assert.ok(tannery, "B3 should expose Skin in the Game");
-    assert.equal(tannery.name, "Skin in the Game");
+    assert.equal(tannery, undefined, "B3 must not expose draft Skin in the Game on global");
     assert.ok(radio, "B3 should still expose London Calling");
-    assert.ok(
-      visible.B3.indexOf(tannery) < visible.B3.indexOf(radio),
-      "Skin in the Game should sit above London Calling"
-    );
   } finally {
     if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
