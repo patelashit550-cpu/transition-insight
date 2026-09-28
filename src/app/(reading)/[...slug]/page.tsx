@@ -344,6 +344,7 @@ function spotifyPlaylistFromFrontmatter(frontmatter: Record<string, unknown>): s
 }
 
 function NarrativeEssayBody({
+  lead,
   image,
   imageAlt,
   imageRole = "figure",
@@ -358,6 +359,7 @@ function NarrativeEssayBody({
   spotifyPlaylistId,
   spotifyTitle,
 }: {
+  lead?: ReactNode;
   image?: string;
   imageAlt: string;
   imageRole?: string;
@@ -409,37 +411,60 @@ function NarrativeEssayBody({
       </>
     );
 
+  const bodyClassName = [
+    "p3-narrative-body",
+    isPlateFigure ? "p3-narrative-body--with-plate" : "",
+    isPlateFigure && blockquoteFlow ? "p3-narrative-body--blockquote-flow" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  const bodySection = hasBody ? (
+    <section className={bodyClassName}>
+      {isPlateFigure ? (
+        <>
+          <div className="p3-narrative-body__lead">
+            {lead}
+            {plateFigure}
+          </div>
+          <div className="p3-narrative-body__copy">{copyInner}</div>
+        </>
+      ) : (
+        copyInner
+      )}
+    </section>
+  ) : null;
+
+  if (isOverlayFigure) {
+    return (
+      <>
+        {lead}
+        <div className="p3-narrative-layout p3-narrative-layout--overlay-figure">
+          {image ? (
+            <figure className="p3-narrative-figure p3-narrative-figure--overlay">
+              <img
+                src={assetSrc(image)}
+                alt={imageAlt}
+                loading="eager"
+                className="p3-narrative-figure__img p3-narrative-figure__img--overlay"
+              />
+            </figure>
+          ) : null}
+          {bodySection}
+        </div>
+      </>
+    );
+  }
+
+  if (isPlateFigure) {
+    return <div className="p3-narrative-layout">{bodySection}</div>;
+  }
+
   return (
-    <div
-      className={
-        isOverlayFigure ? "p3-narrative-layout p3-narrative-layout--overlay-figure" : "p3-narrative-layout"
-      }
-    >
-      {isOverlayFigure && image && (
-        <figure className="p3-narrative-figure p3-narrative-figure--overlay">
-          <img
-            src={assetSrc(image)}
-            alt={imageAlt}
-            loading="eager"
-            className="p3-narrative-figure__img p3-narrative-figure__img--overlay"
-          />
-        </figure>
-      )}
-      {hasBody && (
-        <section
-          className={[
-            "p3-narrative-body",
-            isPlateFigure ? "p3-narrative-body--with-plate" : "",
-            isPlateFigure && blockquoteFlow ? "p3-narrative-body--blockquote-flow" : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {isPlateFigure && plateFigure}
-          {isPlateFigure ? <div className="p3-narrative-body__copy">{copyInner}</div> : copyInner}
-        </section>
-      )}
-    </div>
+    <>
+      {lead}
+      {bodySection ? <div className="p3-narrative-layout">{bodySection}</div> : null}
+    </>
   );
 }
 
@@ -581,12 +606,13 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
       ))}
 
       <article className={`p3-narrative-article${connexionFit ? " p3-narrative-article--connexion-fit" : ""}`}>
-        <header className="p3-narrative-article__header">
-          <h1 className="p3-narrative-article__title">{frontmatter.title}</h1>
-          <span className="p3-narrative-article__rule" aria-hidden="true" />
-        </header>
-
         <NarrativeEssayBody
+          lead={
+            <header className="p3-narrative-article__header">
+              <h1 className="p3-narrative-article__title">{frontmatter.title}</h1>
+              <span className="p3-narrative-article__rule" aria-hidden="true" />
+            </header>
+          }
           image={connexionFit ? undefined : image}
           imageAlt={imageAlt}
           imageRole={connexionFit ? undefined : imageRole}
@@ -767,24 +793,26 @@ function TopicLayout({
       ) : null}
 
       <article className="p3-topic-article p3-narrative-article">
-        <header className="p3-narrative-article__header">
-          {isTitleBesideImage ? (
-            <div className="p3-topic-article__title-row">
-              <img
-                src={assetSrc(image!)}
-                alt=""
-                className={isTitleMark ? "p3-topic-article__title-mark" : "p3-topic-article__title-icon"}
-                aria-hidden="true"
-              />
-              <h1 className="p3-narrative-article__title">{title}</h1>
-            </div>
-          ) : (
-            <h1 className="p3-narrative-article__title">{title}</h1>
-          )}
-          {subtitle && <p className="p3-topic-article__subtitle">{subtitle}</p>}
-          <span className="p3-narrative-article__rule" aria-hidden="true" />
-        </header>
         <NarrativeEssayBody
+          lead={
+            <header className="p3-narrative-article__header">
+              {isTitleBesideImage ? (
+                <div className="p3-topic-article__title-row">
+                  <img
+                    src={assetSrc(image!)}
+                    alt=""
+                    className={isTitleMark ? "p3-topic-article__title-mark" : "p3-topic-article__title-icon"}
+                    aria-hidden="true"
+                  />
+                  <h1 className="p3-narrative-article__title">{title}</h1>
+                </div>
+              ) : (
+                <h1 className="p3-narrative-article__title">{title}</h1>
+              )}
+              {subtitle && <p className="p3-topic-article__subtitle">{subtitle}</p>}
+              <span className="p3-narrative-article__rule" aria-hidden="true" />
+            </header>
+          }
           image={isTitleBesideImage ? undefined : image}
           imageAlt={imageAlt}
           imageRole={bodyImageRole}

@@ -1015,6 +1015,10 @@ body:has(.p3-topic-canvas--fit-viewport) {
   min-width: 0;
 }
 
+.p3-narrative-body__lead {
+  min-width: 0;
+}
+
 .p3-narrative-body--with-plate > .p3-narrative-body__copy {
   margin-top: 0;
 }
@@ -1128,7 +1132,11 @@ body:has(.p3-topic-canvas--fit-viewport) {
   max-width: 100%;
 }
 
-.p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child {
+.p3-narrative-body--with-plate > .p3-narrative-body__lead {
+  margin-top: 0;
+}
+
+.p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--plate {
   margin-top: 0;
 }
 
@@ -1147,70 +1155,125 @@ body:has(.p3-topic-canvas--fit-viewport) {
 }
 
 /*
- * Desktop split (≥1025px): plate ~42% | copy ~58%, both above the fold.
- * 1025px matches the topic biography rail (stacked at max-width: 1024px).
- * Feature lead imgs stay in the copy column and are not part of this split.
+ * Desktop split (≥1025px): title+plate | copy. Imaginary vertical split.
+ * Left pane is locked in the viewport from the first paint (no sticky travel).
+ * Right pane independently scrolls the essay. 1025px matches the topic rail.
  */
 @media (min-width: 1025px) {
-  .p3-narrative-article:has(.p3-narrative-body--with-plate),
-  .p3-topic-article:has(.p3-narrative-body--with-plate) {
-    max-width: var(--p3-essay-plate-split-max);
+  html:has(.p3-narrative-body--with-plate),
+  body:has(.p3-narrative-body--with-plate) {
+    height: 100%;
+    max-height: 100svh;
+    overflow: hidden;
   }
 
-  /*
-   * reading-main’s overflow-x: clip (and the same on layout/canvas) computes
-   * overflow-y to auto and breaks position:sticky. Open both axes on
-   * with-plate desktop so the plate pins to the viewport.
-   */
-  .p3-reading-main:has(.p3-narrative-body--with-plate),
-  .p3-narrative-layout:has(.p3-narrative-body--with-plate),
-  .p3-topic-canvas:has(.p3-narrative-body--with-plate),
+  .p3-reading-main:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    max-height: 100svh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .p3-reading-main:has(.p3-narrative-body--with-plate) > .p3-narrative-canvas,
+  .p3-reading-main:has(.p3-narrative-body--with-plate) > .p3-topic-canvas {
+    flex: 1 1 auto;
+    height: auto;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    padding-bottom: 1.5rem;
+  }
+
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) {
+    align-items: stretch;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
   .p3-narrative-canvas:has(.p3-narrative-body--with-plate) {
-    overflow-x: visible;
-    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .p3-narrative-article:has(.p3-narrative-body--with-plate),
+  .p3-topic-article:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--p3-essay-plate-split-max);
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .p3-narrative-layout:has(.p3-narrative-body--with-plate) {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
   }
 
   .p3-narrative-body--with-plate {
     display: grid;
     grid-template-columns: var(--p3-essay-plate-split-image) var(--p3-essay-plate-split-copy);
     column-gap: var(--p3-essay-plate-split-gap);
-    align-items: start;
+    align-items: stretch;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
   }
 
   .p3-narrative-body--with-plate::after {
     display: none;
   }
 
-  .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child {
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead {
     grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead .p3-narrative-article__header {
+    flex-shrink: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--plate {
+    flex: 1 1 auto;
     width: 100%;
     max-width: none;
     margin: 0;
-    position: sticky;
-    top: var(--p3-essay-plate-sticky-top);
-    align-self: start;
-    z-index: 1;
+    min-height: 0;
     overflow: hidden;
-    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.25rem);
   }
 
-  .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead
     .p3-narrative-figure__img--plate,
-  .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead
     .p3-narrative-figure__img {
     width: 100%;
     max-width: none;
-    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.25rem);
+    max-height: 100%;
     height: auto;
     object-fit: contain;
     object-position: center top;
   }
 
-  .p3-narrative-body--with-plate
-    > .p3-narrative-figure--plate-narrow:first-child
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead
+    .p3-narrative-figure--plate-narrow
     .p3-narrative-figure__img--plate,
-  .p3-narrative-body--with-plate
-    > .p3-narrative-figure--plate-narrow:first-child
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead
+    .p3-narrative-figure--plate-narrow
     .p3-narrative-figure__img {
     width: 100%;
     max-width: none;
@@ -1219,8 +1282,14 @@ body:has(.p3-topic-canvas--fit-viewport) {
   .p3-narrative-body--with-plate > .p3-narrative-body__copy {
     grid-column: 2;
     min-width: 0;
+    min-height: 0;
+    height: 100%;
     margin-top: 0;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
   }
 }
 
