@@ -1336,6 +1336,24 @@ body:has(.p3-topic-canvas--fit-viewport) {
     scrollbar-width: thin;
     scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
   }
+
+  /* Copy column is ~0.58fr of the split. Markdown already dropped ##→h3;
+     scale the remaining title-style lettering so it fits the narrower field. */
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy :is(h2, h3, h4) {
+    letter-spacing: 0.06em;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy h2 {
+    font-size: 1.125rem;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy h3 {
+    font-size: 1rem;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy h4 {
+    font-size: 0.9375rem;
+  }
 }
 
 .p3-narrative-figure:not(.p3-narrative-figure--plate):not(.p3-narrative-figure--overlay) {
