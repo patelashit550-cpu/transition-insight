@@ -52,7 +52,7 @@ lexica:
 > ~ RHCP (Give It Away Now)
 
 
-## Evolution Theology
+### Evolution Theology
 
 Those of us who do creative work owe an extravagant debt to the people who came before us and paid an unbearable price. All we can do is make a good account of ourselves as we pay this inheritance forward—assuming custody of the things they fought for; making them secure utilities that balance our obligations to each other. We must stop making war with someone else's reality—because it's ours, too.
 
@@ -72,7 +72,7 @@ In the ethical traditions related to yoga, we call focused attention _dharana_ (
 
 After _dharana_ comes _dhyana_ (meditation), then _samadhi_ (absorption). Absorption is something else: the point at which the whole world looks at you with a new pair of eyes. You become the subject of the greatest non-compete contract of all time—the one you signed with creation and which lies beyond humanity. Let's take our practice beyond the warm, embracing community of our studio into the real world.
 
-## Off The Mat
+### Off The Mat
 
 Coming back to the film, a company must find and bring a soldier home. The last of four brothers—the other three, like our friend on the beach, have passed. In this quest, six of eight die. In purely utilitarian terms, it's a loss, but there is something more to life than numbers. Nothing says more about optimism than parenthood and the surrender of children by their family into the world of the sovereign. Ryan is the keeper of the flame—the one who carries the ember safely through wind and rain so that it may light another fire on a cold night.
 
@@ -84,7 +84,7 @@ Because the small things that make the difference between life and death in one 
 
 Studying history and political economy, I’ve walked the academic road of historicism—tracing that long arc of progress toward human-centric governance without having gone to war. I haven't so much as held a real gun in my life.
 
-## Treasury of the Commons
+### Treasury of the Commons
 
 We are in an age of turbulence and transformation, at the center of which is identity: how we present it on the social network and for what purpose—is it to be monetized, and if so, how and for whose benefit? We must prioritize our objectives carefully and without reference to frivolous concerns such as quarterly earnings and paid employment, never mind paid sick leave—this so that our social network may evolve and trust may be restored across the domains that make up our geopolitical and demographic realities. Protocol is how that trust becomes plumbing—attested identity and transparent yield flowing the same current, back and forth like breath at work, toward our common treasury and back to us so that we may invest with whatever purchase we get in life.
 
@@ -108,7 +108,7 @@ At the heart of the Dollar Regime is the Federal Reserve. We must examine how mu
 
 These sound like mundane concerns but time and again it is money and materiel for which we have spilled blood. Those of us who know why we are in crypto understand too how it may address age-old concerns for security, poverty, and war.
 
-## Omphalos
+### Omphalos
 
 The West African myth of Edshu is instructive in our argumentative times. As the personification of the Axis Mundi—the World Navel fountainhead of all creative force—he embodies dynamic perspective. Like Shiva with his lingam he stirs transformation.
 

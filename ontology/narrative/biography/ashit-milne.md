@@ -26,7 +26,7 @@ series: The Times
 
 
 
-## Prologue
+### Prologue
 
 In 2000 we moved into our home in Acton, Northwest of Toronto. Equipped with a well dug 90 feet into the aquifer which sat on this the highest point in the Greater Toronto Area some 500 ft above the city our water needed softening and *filtering*. We had a reverse osmosis filter installed looking on line I saw there was a plumber in town who provided them. An RO filter has three cylinders which remove impurities at increasingly granular level with the final one adding the polish making the water more than just potable but actually *somewhat* sweet. It turned out the online yellow pages had directed me to the home of a commercial plumber. An elderly lady with a strongly Scottish brogue answered and told me Milne Plumbing was a commercial enterprise run by her son. But she was nonetheless happy to provide me with the cartridges. Water arrives from the our ecology the global commons deep within the ground into the community that is our home and then to sustain the flow of current in the embodied identity. Almost a decade later the synchronicity of a chance encounter amidst the great financial crisis stirred me again and then some twenty five years later - now today - I adopted the name as my own as I came together; as I found that I had come full circle to know my *Calling*. Such is the thread. Such is the *sutra*.
 
@@ -34,7 +34,7 @@ In 2000 we moved into our home in Acton, Northwest of Toronto. Equipped with a w
 
 
 
-## Kernel of Truth and Beauty
+### Kernel of Truth and Beauty
 
 
 
@@ -53,7 +53,7 @@ Our objective today, amidst all our modern conveniences, must surely be to recal
 
 
 
-## Niyati Se Milne
+### Niyati Se Milne
 
 
 
@@ -90,7 +90,7 @@ While I was formulating Transition Insight—a framework for identity management
 
 
 
-## The Yoga Element
+### The Yoga Element
 
 In an interview with Bill Moyers, Joseph Campbell once noted that in the traditions of yoga, a contemplative who comes full circle to complete the 'hero's journey' to truly understand his calling will manifest a profound change in his demeanour and personality. He will even adopt a new name — one to emphasise his new-found sense of mission. During the enforced isolation of the lock-down following the pandemic, I seemed to unravel. The most critical layers of my persona fell apart completely in a full-blown crisis of meaning, purpose, and identity. Thankfully, the constructive protocols I had cultivated over decades — particularly my capacity and appetite for introversion served me in this time. Campbell drew the distinction between introspection and introversion. The former involved withdrawal from the world to seek a connection to it while the latter comes later in life; when one is sufficiently clear on the world's machinations and various ways it expresses animus — and has only to divine from within and one's deep wellspring of *anima* for answers.
 
@@ -104,7 +104,7 @@ Our task, then, is to conceive of our common stock — the wilderness of our pla
 
 
 
-## Epilogue
+### Epilogue
 
 One of the great things about working in a city with a vibrant cultural and commercial core like Toronto's is the opportunity it affords to get outside on the street and the serendipity of chance encounters of a whole other kind. Some years past since I met Ian Milne at Downward Dog on Queen Street. I was now on King Street during a lunch break having decided to stop in at the MEC to browse and maybe pick up an new cartridge for the Platypus gravity filter I use when I'm out in the backcountry.
 

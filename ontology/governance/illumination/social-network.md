@@ -22,7 +22,7 @@ tags:
   - ecology
   - anarchism
 ---
-## Topology: Safety in Numbers
+### Topology: Safety in Numbers
 
 The social network emerges out of a need for safety in numbers. The first networks became empires challenging each other for dominance and scaling outward to reduce insecurity and effect Metcalfe's Law. Within this expanding topology, distinct nodes develop. At least initially these are individual identities acting like landmarks around which we gather because of widely recognized characteristics. A node has a sense of culture or personality and holds broad appeal. Our patronage allows these nodes to extract continuous revenue and develop capital—this is the Matthew Effect.
 
@@ -50,7 +50,7 @@ The path on this journey is emotionally painful because it makes us vulnerable o
 
 We feel the emotional strain as a crisis that demands a chrysalis-like transformation for the individual and the social network alike. Necessary—if we are to persist—because only through this evolution will we find the alignment between self, community, and ecology required to make peace with our nature and each other.
 
-## Architecture: Boundedness & Alignment
+### Architecture: Boundedness & Alignment
 
 If we see ourselves as nodes working in a civil framework shorn of ego, the ultimate analogy is a bee colony; the centre of which is the queen—representing anima, the ***sine qua non*** liveness of organic nature without which there is nothing. Bring this reality home to humanity and think of our Queen as *Gaia*, the earth itself, whose degradation surely portends the end of our species—and the decline of contentment in the meanwhile.
 
@@ -62,7 +62,7 @@ Security requires trust founded on ability and joint effort. Roles spontaneously
 
 This matters because comfort in the wilderness has nothing to do with money. Capital, yes—the gear, technology, and know-how—but not fungible forms of money. In the wild, _you_ are your money. On the social network, however, cash _is_ relevant, bringing our objectives into view.
 
-## Objective: Key Performance
+### Objective: Key Performance
 
 Many of us carry key ambitions—activities from which we expect ongoing contentment. Some we feel innately, while others rest on societal expectations. The two dovetail and diverge in ways unique to each of us.
 
@@ -76,7 +76,7 @@ Institutional careers in government, academia, or large firms in particular have
 
 As well, the constant flow of new talent and the nature of hierarchy forces abrasive competition for the ever fewer positions at a higher rank. This degrades collaboration as silos and cliques develop. Senior staff assume defensiveness, which proteges experience as animus; arguably their best and most courageous decamp when hierarchy affords neither creativity nor advancement and when alternative platforms offer alternative channels.
 
-## Degradation: The Cost of Centralization
+### Degradation: The Cost of Centralization
 
 Nevertheless, today's centralized nodes still represent a form of relative decentralization. Our current era pales in comparison to the arbitrary injustices once suffered by the marginalized. At the very least, these modern legal entities operate at arm's length from the state—a step in the historical devolution from total hegemony. They even go toe-to-toe with Western governments, which still have a long way to go in fostering equity, autonomy, and agency, and which—hard-pressed for funding—are often more interested in extracting financial levies.
 
@@ -94,7 +94,7 @@ How does one come to terms with the alienation this extreme concentration of wea
 
 ![Matthew Effect — systemic wealth capture, 1970–2026](/assets/matt.jpg)
 
-## Protocol: Openness Before Sovereignty
+### Protocol: Openness Before Sovereignty
 
 If Pascal wagered on God (even a fake one) it's because there is a limit to how much one can lose betting against him and it's baked in—you're going to die anyway; so he *assumed* God existed. One does not simply assume God exists without making peace with God.
 
@@ -112,7 +112,7 @@ From that posture, paying close attention to signal leads you to community—and
 
 What openness makes possible, self-sovereign identity makes durable.
 
-## Sovereign Identity
+### Sovereign Identity
 
 We may appear to have agency, freedom, and autonomy—and many of us who are fortunate to live in relatively free societies and have accumulated sufficient capital actually do.
 
@@ -138,7 +138,7 @@ Instead each of us as objective *nodes* could allow data to traverse on protocol
 
 Clearly our social network is not distributive and we see that in the broad and persistent disparities in wealth and incomes both within western societies such as Canada and the United States themselves and as well the post-colonial disparity between the North and the South, something exacerbated by persistent geo-political conflict between East and West. These are tectonic pressures of networks at their largest scale as our largest semantic perimeters vie for economic pre-eminence which seeks wealth effects at another's expense instead of examining how their own architecture might be more efficient.
 
-## Point: Treasury of the Commons
+### Point: Treasury of the Commons
 
 Good people are everywhere doing the best they can while maintaining the thin red lines of their boundaries whether they are inside or outside a perimeter. The giants are institutions and the personalities whose identities are deeply tied to brands. They feel conflicted between their machinery and humanity as they make often difficult decisions as they seek the greatest happiness for the greatest number; one that will seem harsh and arbitrary to the affected but, from their perspective, necessary for some greater project to survive in conditions that are not entirely in their control.
 
@@ -148,7 +148,7 @@ This by the way is the esoteric meaning of yoga's *Vitarka* or discussion mudra 
 
 The data is immutable (soul-bound). What matters is whether people are finding meaning in their work and whether the motivation and curiosity are intrinsic. Analytics can tell a lot more about how you engage with work than how quickly you complete it. Data can reveal the depth to which you are willing to take any number of interesting detours relevant to understanding why you're doing the work that is in front of you. This is actionable data with optionality—whether a given domain retains you or not.
 
-## Institutional Decay and Protocol
+### Institutional Decay and Protocol
 
 This isn't *necessarily* to the benefit of *any* institution: it *would* prefer all else equal outcomes it can *transparently* defend—these are also generally the optimal ones. Indeed the whole idea of KPIs (*key* performance indicators) concerns the matter of rolling performance indices up the corporeal hierarchy so as to assess what is and is not working *productively*. Alternatively some sort of mechanism that assesses the 'downward' investment of capital against upward generation of yield. Emergent proof of stake protocols can do just that through on-chain self-sovereign identity, while yet allowing talent to express to the rest of the world how they in particular are responsible—since chain expresses attributable value much like a soul-bound token in gaming. You claimed a salary so you wouldn't take those tokens with you. Your clan wouldn't appreciate that, but you still express your relative credibility—a deterministic account from which others may infer trust. That's what matters.
 

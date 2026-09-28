@@ -54,7 +54,7 @@ I earned the orthodox credentials—the PMP, CSM, and ACP—while deployed acros
 
 Above all, we need to arrest an unfolding tragedy: our collective criminal negligence toward the global commons—the climate, the environment, and the planetary inheritance we are actively squandering. Endless extraction might be forgivable if it had purchased satisfaction. It has not. I cannot work at the nexus of governance and information technology—efficiently, sustainably, or in good conscience—while pretending otherwise. In truth, there is no separating work and life without upsetting the balance entirely.
 
-## Arc and Texture
+### Arc and Texture
 
 My job, project management, entails the governing of risks that threaten a project's intended outcomes. For a long time, the project was the primary mechanism through which large institutions evolved and adapted to changing realities. In application development, that meant keeping apps relevant in people's lives: easy, useful, engaging, and even delightful.
 
@@ -76,7 +76,7 @@ Where the past once had the Nifty Fifty, the present has the Magnificent Seven. 
 
 I saw that shift happen up close through the evolution of the social network, where the object of change evolved. First from the project to the product, and then to the public protocols we know today as Bitcoin, Ethereum, and Solana—each with its own use-case-driven application on that social network.
 
-### Project
+#### Project
 
 The institutions I served were large and complex. Even their information technology units comprised myriad departments working interdependently to deliver their applications; this was a cumbersome environment demanding patience and persistence above all else. Projects ground slowly in fits and starts. They consisted of many pieces painstakingly lined up based on dependencies or prerequisites in a chain of causality. They were often concluded late, short of the promised features, and at a considerably higher cost than initially forecasted. We call their architecture monolithic.
 
@@ -86,7 +86,7 @@ As a professional, one had to be content with something well short of perfection
 
 The project transformed states within a finite time period. It had a definite start and a definite end, both anchored by significant ceremonies whose purpose was to define two states—the current and the desired—and establish a plan to navigate between them, all the while keeping stakeholders apprised of progress as well as arising or actual problems (we call these risks and issues, respectively).
 
-### Product
+#### Product
 
 The product has since superseded the project. A product amounts to a project with no discernible end following the initial launch of an application (_utilitas_); it faces the marketplace as a continuous offering, persisting so long as it resonates. Resonance transfers value continuously between the user and the application in exchange for an investment or due consideration of attention and energy at both ends.
 
@@ -98,7 +98,7 @@ In my own experience, the autonomy afforded to agile teams correlates directly t
 
 These firms and their exceptionally productive teams can deploy application changes to their public multiple times a day. However, the underlying technology is now comprehensively commodified. Today, almost anyone can build and run lean, beautifully presented applications—utilizing AI to replicate the work of a dozen talented developers, designers, copywriters, business analysts, and architects. All from a laptop or even just a mobile device for a dollar a day which is what this site costs me to run; I could probably run it for no cost—that too from anywhere in the world. In this landscape of infinite, automated execution, the engineering itself is no longer the differentiator. All that matters now is for a creator to discover where their unique passion aligns and dovetails with what a public, increasingly exhausted by the internet's decaying quality, is demanding.
 
-### Protocol
+#### Protocol
 
 The products of our most influential firms became the centralized nodes through which we interact—social media, email, and messaging applications. Crucially, those digital messages and notifications represent relative value. This reality was prototyped by Kenya's M-Pesa, launched in 2007 by Safaricom and Vodafone, as a mobile ledger system that showed us precisely what money is at its most basic, abstract level: information.
 
@@ -112,7 +112,7 @@ These semantic perimeters nest within a single overarching claim—the planet as
 
 Praxis then is what allows an identity or brand to evolve. The agility or fluidity of that brand is evidenced through the approach it uses to manifest change; through the rigour of process heavy projects; through the easy give and take of product teams; or by letting protocols flow to and from identities as the distinctions between owner and user diminish and instead immerge as integrated community.
 
-## Future Tents
+### Future Tents
 
 However broad or narrow our tents; and whether we operate as individual creators, family operations, small collectives gathered around a shared passion, or nodes within a legacy bureau, our digital realities are converging. The semantic perimeters where we generate value can no longer exist as unmapped administrative territories; a random collection of suspicious minds. They must instead be securely bounded and *aligned* in an objective sense to a common purpose.
 

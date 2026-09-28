@@ -31,7 +31,7 @@ tags:
   - truth
   - divine-governance
 ---
-## Soundness
+### Soundness
 
 Since the beginning of civilisation, wherein we first eked out comfort from the roughness of a hostile wilderness, we turned universally to the question of what it means for a thing or a person to be true, useful, and possessed of a deep structural integrity. We see this integrity as possessing orderliness—a cleanliness and neatness free of excessive paraphernalia, detritus, and clutter (i.e., good) which is pleasant for us to apprehend. This is as true for our general environment or global commons as it is for a _semper idem_ (whether some identity or sum identity).
 
@@ -45,7 +45,7 @@ Look upon any person for just a moment without judgment, concerning the matter o
 
 This is a desirable quality. One we may call soundness—whether it is possessed in any given moment by speed or stillness. Whatever the volume of externalised noise emitted, it is at least optimally configured within the bounds of what is feasible and fair in currently prevailing circumstances. Another way to conceptualise soundness is that it is possessed of a kind of solidity—one which is not excessively dense, but instead possessed of a natural and organically appropriate sense of embodiment. If it should degrade, then it does so almost as though through a natural weathering process—an oxidation which protects and secures what is held within, rather than through some extrinsic growth which invades and consumes the body and the body politic—its capacity to achieve self-sovereignty through self-governance.
 
-## Ontology
+### Ontology
 
 As we seek to understand and model reality, we have at our disposal language as the primary utility. What I am endeavouring to do on this web application is to develop a platform which functions as an online utility at a fundamental level—as an ontology.
 
@@ -61,7 +61,7 @@ One is free to audit this ontology. What this amounts to in practical terms is s
 
 This ontology represents the truth as I personally see it—developed in clear, deliberate, human language rather than compiled code. It seeks to function as an algorithm for aligning **Alpha** (individual success along a chosen path) with **Omega** (a holistically optimal outcome). That pursuit must inevitably pass through "left-handed" departure points (**Beta**), as unconventional paths now offer the only real frontier for discovering genuine opportunity outside mainstream dogma.
 
-## Regnum Dei
+### Regnum Dei
 
 The core component of the ontology is _Regnum Dei_. Typically seen as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for truth*_.
 
@@ -80,11 +80,11 @@ _Regnum Dei_ is comprised of the three elements required to create systemic auto
 The objective of any iterative process is to incrementally reduce error in order to yield an increasingly more productive outcome. But true error reduction cannot be measured by human metrics alone; Consensus must extend to all life, sentient and non-sentient alike through the application of reason through which an honest reckoning (price determination) is arrived. This is done by accepting a *singular* semantic perimeter defined as a closed loop consisting of the planet's energy and matter so that it may be comprehensively governed through transparently integrated market mechanisms.
 
 
-## Peridot
+### Peridot
 
 Peridot is the vibrant green birthstone for August. It is the gem-quality variety of the mineral olivine; seemingly possessed of an innate luminescence here in this ontology it is the title of a series illuminating key terms which have either emerged or have undergone a transformation in the way we use them such that a reminiscence of original linguistic intention and interpretation is worthwhile. Again these terms are explored through my own personal experience and lens.
 
-## Canonical
+### Canonical
 
 Canonical provides a comprehensive glossary of terms, framing foundational social science concepts within the specific parameters of this ontology. Additionally, it introduces original theoretical shorthand concepts designed to navigate and integrate contested ideas. These terms allow for the inclusion of perspectives that face significant friction or institutional marginalization within contemporary popular Western discourse, particularly by those aligned with hegemonic state and corporatist interests.
 

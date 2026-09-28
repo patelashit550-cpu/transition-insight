@@ -25,7 +25,7 @@ tags:
   - wealth
 ---
 
-## Likes & Follows
+### Likes & Follows
 
 Central to the nature of governance and decision-making in general is bias, which is the subject of this piece. Specifically, the question is what counts as credible personal preferences on the one hand, and what constitutes an arbitrary prejudice on the other.
 
@@ -42,7 +42,7 @@ Dogma or ideology then causes inefficiencies to accumulate over time, ultimately
 In the software delivery lifecycle (SDLC), we call this _technical debt_. It is the systemic trauma and failure of integrity which prevents technology from doing what it is designed to do: save time, energy, and materials. The great issue of the twenty-first century is the matter of productivity—why technology in all its guises, and in particular information technology (IT), has so far failed to deliver the holy grail of abundance and ultimately the end of the poverty and conflict. It is therefore also why people lose a sense of purpose and the desire to perform their work with distinction; seeing it instead as a means to an end—a way to pay for the fulfilment found in the pleasure of other pursuits explored with friends and family. 
 
  
-## Technique Is Necessary
+### Technique Is Necessary
 
 Our decisions, if not the things which compel them, are our own and notwithstanding our integrated global context and the very real and immediate impact we  have in disparate places on countless people we've never met every decision we make is *local* - obviously because we make them *where* we are.
 

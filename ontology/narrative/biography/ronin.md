@@ -37,7 +37,7 @@ tags:
   - Personal-Growth
 series: The Times
 ---
-### Kii Peninsula
+#### Kii Peninsula
 
 I rolled into the McDonald's to the resounding customary welcome—いらっしゃいませ! (_Irasshaimase!_). The restaurant was tucked into the shopping strip running along a generally bustling pedestrian mall, but one now quiet as a grey evening sky shed its heavy rain. The road ran straight from my apartment down to Wakayama City's main arterial road, at the base of which stood city hall and the town's main (three-star) hotel. Beyond them was the city's central spine—the highway which ran through it and then down into the lush sub-tropical countryside of Wakayama prefecture. On the other side of that avenue rose Wakayama Castle—a replica of the one which stood there before the war and which once housed branches of the elite Tokugawa Shogunate.
 
@@ -63,7 +63,7 @@ I also remember driving right through Douglas Adams' trilogy (in five parts), _T
 
 All in all, this had been a time of decompression, introspection, and reflection. That said, I had no clear sense of what I wanted to do for the rest of my life. What I imagined was a roadmap involving a bit more school, then vague notions of a career in the diplomatic corps or investment banking—certainly not information technology. I'd been offered the option of a third year here in Japan, but I felt it was time to move on. A hefty wage has never been enough to keep me set on a course if I was set on change.
 
-### Man In Society
+#### Man In Society
 
 I looked forward now to returning to the theoretical and data-oriented world of academia. I worked hard at school. I was—and remain—insatiably curious; I loved learning and threw myself into my studies in the most holistic sense. It was never merely about grades, though I certainly scored high ones. I even looked back at high school and marveled at what an extravagantly good deal it is: all that quality education, entirely free. What a privilege; what a launchpad. What a thing each of us makes of such an opportunity—or wastes entirely.
 
@@ -83,7 +83,7 @@ Physically, I was in the shape of my life. I spent some two hours a day whizzing
 
 I was also flush with cash. I'd worked summers all the way through my undergraduate years at the Richmond Hill Country Club. At first, washing dishes and bussing tables, then as a waiter, bartender, and a bouncer at the club's wedding parties. I had accumulated very little in the way of debt by the time I graduated in the summer of 1991. Then, barely a month or two after graduating, I was on a flight bound for Japan, getting oriented alongside hundreds of international, bright young things from across the English-speaking West at Tokyo's swank Keio Plaza Hotel before setting out across the country to take up our posts.
 
-### Maku-donah-rudo
+#### Maku-donah-rudo
 
 That's how you pronounce McDonald's in Japanese, by the way. At the restaurant's counter, I waited. Beyond it, the grill and fryer emitted their heavy, rich fragrance. I breathed it in as a cheerfully enthusiastic employee rolled up to take my order. He then gestured me toward the stairs to the second floor. I climbed up the narrow stairwell, my mood lifting at the prospect of the meal. I soaked in the lit-up warmth and took a table by the floor-to-ceiling window overlooking the grey street with its incessant rain.
 
@@ -95,7 +95,7 @@ Suddenly I'm emotional, already reminiscing about this country, its people, and 
 
 My meal—a combo piping hot, delicious, American, and globally renowned—was not something you would want to eat every day at any age.
 
-### Epilogue
+#### Epilogue
 
 浪人—_rōnin_—is a compound phrase meaning masterless samurai. Its constituent kanji are those for _wave_ and _person_. In contemporary Japanese it also refers to a student who has missed university entrance exams and takes a gap year to study alone before trying again—one who is rudderless and seeking direction. The first character is instructive because our situation in life is always fluid in some respects; as in that famous Japanese painting by Hokusai, we are cast upon the world as though hemmed into a boat on a tempestuous sea.
 

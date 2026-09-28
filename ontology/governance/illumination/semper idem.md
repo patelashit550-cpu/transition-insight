@@ -28,7 +28,7 @@ tags:
   - blockchain
   - global-commons
 ---
-## Identity
+### Identity
 
 Beyond safety and security stands the desire for identity. Once our primitive needs of food and shelter are met amidst the familiar environs of our closest kin, we turn our attention toward self-determination—with the aim of establishing ourselves as persons possessed of a distinct place and standing alongside others within a community. The reason for this is to settle with finality the fear and anxiety associated with loneliness and the constant scramble for material subsistence— trust makes life significantly easier in emotional and psychological terms: it is in fact why we network and come together to live in community rather than dispersed across the hinterland.
 
@@ -50,7 +50,7 @@ In the modern world, these circumstances aligned neatly with the political conce
 
 This disconnect is deepening as our states metastasize into unaffordable layers of administrivia, while our culture degrades into crass nationalism and franchise entertainment or entrepreneurship on one hand and the marginalized narrowness of identity politics on the other; each of which is vocalized and cheaply amplified across the platforms of social media.
 
-## Money
+### Money
 
 In a modern society in which we are permitted considerably more agency than we once were in more primitive circumstances, money is the technology used to transmit information to the broader world concerning what we value and prioritize—and, by extension, what we reject. It is the mechanism through which we select the reality we inhabit, manifesting our preferences through daily expenditure. Yet the frictionless ease with which we can spend is both a blessing and a trap: it constantly exposes us to subtle behavioural manipulation that sustains our political economy in a fractured world. We satisfy a basic need for fulfillment through retail therapy—the constant accumulation and consumption of things rather than meaningful relationships. We sense and accept this as we're subtly sold the systemic idea that it is at least tolerable compared to the alternative of thermonuclear war. Besides, it feels inevitable—everyone else is doing it.
 
@@ -62,7 +62,7 @@ While these costs fall most heavily on society's marginalized and impoverished, 
 
 This manifests in the ailments of our contemporary malaise—anxiety, depression, and an escape into nihilism and addictions of every kind, so long as they remain distinct from what passes for *respectable* in modern society. This is the psychological toll of living in a system where relative income and wealth no longer reflect a defensible measure of what is fair and rational: an outcome grounded in integrity, strength, and intelligence—what we might call, in an objective sense, beautiful.
 
-## Semper Idem
+### Semper Idem
 
 I employ the Latin phrase _Semper Idem_—traditionally meaning "always the same"—within _Regnum Dei_, my philosophical model and ontology for governance, as an acronym for **Semantic Perimeter of Identity Embodied**: a term I use to describe abstracted identity in the digital age, manifested one transaction at a time, often bounded by bricks and mortar, yet functionally ephemeral.
 
@@ -76,7 +76,7 @@ This economic alignment, however, is not merely digital; it dictates how our abs
 
 Indeed, this even extends into the physical reality of how we each choose to use our bodies and expend the energy which it stores and which we paid for. The decision to walk or carry a load by our own effort rather than sit as the sole occupant of a vehicle racing to a job creates an incremental gain or loss of value—both for ourselves and for the commonwealth. So the matter at hand is ultimately alignment of the one to the many because from the many comes one—_E Pluribus Unum_. Equally, the question is how honestly and universally aligned is the virtue that we signal through our personal behaviour as it impacts others in our communities and on our ecology.
 
-## Virtue
+### Virtue
 
 Now, the choices we make within the tidy confines of Western prosperity carry little immediate weight for the vast majority of humanity, for whom our baseline abundance remains a distant dream. In a world where daily existence requires constant struggle, moralizing virtue and theoretical goodwill are luxuries that those eking out a bare survival can ill afford.
 
@@ -88,7 +88,7 @@ Emergent public blockchain protocols represent an opportunity because they yoke 
 
 There are very specific and particular circumstances which are currently in play in our world for all our people in the West and most importantly for our children as we aim to navigate a political reality with objectivity in what is increasingly a neutral zone subtly militarized to enable the extraction of capital from one's identity.
 
-## Neutral Zone
+### Neutral Zone
 
 In (ice) hockey, Canada's national winter sport, the rink is divided into three distinct zones. The novice might focus on the goal-mouth action at the two opposite ends of the rink but it's within the central "neutral zone," that the subtle and contentious struggle develops over puck possession to dictate the balance of power and the ultimate outcome of the game. This struggle takes place during fluid, mid-play line changes that obscure strategic intent beneath a cloud of motion. In the digital age, Canada—and specifically Ontario—has become this geopolitical neutral zone: an arena where underground power politics leverage local community interests to dictate the broader game.
 
