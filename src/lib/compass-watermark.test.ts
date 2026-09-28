@@ -55,6 +55,9 @@ test("compass CSS keeps the wheel visible (ghost opacity, not hidden)", () => {
   assert.doesNotMatch(block, /visibility\s*:\s*hidden/);
   const opacity = block.match(/opacity\s*:\s*([0-9.]+)/);
   assert.ok(opacity, "base .p3-compass-watermark must set opacity");
-  assert.ok(Number(opacity[1]) > 0, "base opacity must not be 0 — proximity reveal may raise it");
+  assert.ok(
+    Number(opacity[1]) >= 0.2,
+    `base opacity ${opacity[1]} is too faint — the wheel looks missing`,
+  );
   assert.match(css, /\.p3-compass-watermark\.is-revealed\s*\{/);
 });
