@@ -1183,6 +1183,12 @@ body:has(.p3-topic-canvas--fit-viewport) {
     top: var(--p3-essay-plate-sticky-top);
     align-self: start;
     z-index: 1;
+    /* Cap the sticky box to the remaining viewport so the pane cannot
+       internally slide/scroll. clip (not auto/hidden) is not a scrollport. */
+    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.5rem);
+    overflow-x: clip;
+    overflow-y: clip;
+    overscroll-behavior: none;
   }
 
   .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child
@@ -1191,7 +1197,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
     .p3-narrative-figure__img {
     width: 100%;
     max-width: none;
-    max-height: calc(100svh - 8.5rem);
+    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.5rem);
     height: auto;
     object-fit: contain;
     object-position: center top;
@@ -1211,6 +1217,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
     grid-column: 2;
     min-width: 0;
     margin-top: 0;
+    overflow: visible;
   }
 }
 
