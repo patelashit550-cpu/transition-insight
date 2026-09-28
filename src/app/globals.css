@@ -1191,6 +1191,29 @@ body:has(.p3-topic-canvas--fit-viewport) {
     grid-template-rows: minmax(0, 1fr);
   }
 
+  /* Page does not document-scroll on with-plate desktop, so sticky top
+     (meant for the viewport) is relative to this overflow canvas and
+     parks the essay list in the vertical middle. Pack it at the start. */
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) .p3-topic-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) .p3-topic-nav__sticky {
+    position: static;
+    top: auto;
+    max-height: none;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+
+  .p3-topic-canvas:has(.p3-narrative-body--with-plate) .p3-topic-nav__list {
+    flex: 0 1 auto;
+    justify-content: flex-start;
+  }
+
   .p3-narrative-canvas:has(.p3-narrative-body--with-plate) {
     display: flex;
     flex-direction: column;
