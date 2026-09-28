@@ -435,9 +435,7 @@ function NarrativeEssayBody({
             .filter(Boolean)
             .join(" ")}
         >
-          {isPlateFigure && plateFigure ? (
-            <div className="p3-narrative-body__plate">{plateFigure}</div>
-          ) : null}
+          {isPlateFigure && plateFigure}
           {isPlateFigure ? <div className="p3-narrative-body__copy">{copyInner}</div> : copyInner}
         </section>
       )}

@@ -1015,10 +1015,6 @@ body:has(.p3-topic-canvas--fit-viewport) {
   min-width: 0;
 }
 
-.p3-narrative-body__plate {
-  min-width: 0;
-}
-
 .p3-narrative-body--with-plate > .p3-narrative-body__copy {
   margin-top: 0;
 }
@@ -1132,11 +1128,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
   max-width: 100%;
 }
 
-.p3-narrative-body--with-plate > .p3-narrative-body__plate {
-  margin-top: 0;
-}
-
-.p3-narrative-body--with-plate > .p3-narrative-body__plate > .p3-narrative-figure--plate {
+.p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child {
   margin-top: 0;
 }
 
@@ -1166,15 +1158,14 @@ body:has(.p3-topic-canvas--fit-viewport) {
   }
 
   /*
-   * overflow-x: clip with overflow-y: visible computes to overflow-y: auto —
-   * a scrollport. That unhooks position:sticky from the viewport and can
-   * leave the plate column independently scrollable. Visible on both axes
-   * here is safe: columns use minmax(0, …).
+   * reading-main’s overflow-x: clip (and the same on layout/canvas) computes
+   * overflow-y to auto and breaks position:sticky. Open both axes on
+   * with-plate desktop so the plate pins to the viewport.
    */
   .p3-reading-main:has(.p3-narrative-body--with-plate),
-  .p3-narrative-canvas:has(.p3-narrative-body--with-plate),
+  .p3-narrative-layout:has(.p3-narrative-body--with-plate),
   .p3-topic-canvas:has(.p3-narrative-body--with-plate),
-  .p3-narrative-layout:has(.p3-narrative-body--with-plate) {
+  .p3-narrative-canvas:has(.p3-narrative-body--with-plate) {
     overflow-x: visible;
     overflow-y: visible;
   }
@@ -1184,54 +1175,42 @@ body:has(.p3-topic-canvas--fit-viewport) {
     grid-template-columns: var(--p3-essay-plate-split-image) var(--p3-essay-plate-split-copy);
     column-gap: var(--p3-essay-plate-split-gap);
     align-items: start;
-    overflow: visible;
   }
 
   .p3-narrative-body--with-plate::after {
     display: none;
   }
 
-  /* Left column: sticky, viewport-capped, not a scrollport. */
-  .p3-narrative-body--with-plate > .p3-narrative-body__plate {
+  .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child {
     grid-column: 1;
     width: 100%;
-    min-width: 0;
+    max-width: none;
     margin: 0;
     position: sticky;
     top: var(--p3-essay-plate-sticky-top);
     align-self: start;
     z-index: 1;
-    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.5rem);
-    overflow: clip;
-    overscroll-behavior: none;
+    overflow: hidden;
+    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.25rem);
   }
 
-  .p3-narrative-body--with-plate > .p3-narrative-body__plate
-    > .p3-narrative-figure--plate {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    max-height: 100%;
-    overflow: clip;
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__plate
+  .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child
     .p3-narrative-figure__img--plate,
-  .p3-narrative-body--with-plate > .p3-narrative-body__plate
+  .p3-narrative-body--with-plate > .p3-narrative-figure--plate:first-child
     .p3-narrative-figure__img {
     width: 100%;
     max-width: none;
-    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.5rem);
+    max-height: calc(100svh - var(--p3-essay-plate-sticky-top) - 1.25rem);
     height: auto;
     object-fit: contain;
     object-position: center top;
   }
 
-  .p3-narrative-body--with-plate > .p3-narrative-body__plate
-    .p3-narrative-figure--plate-narrow
+  .p3-narrative-body--with-plate
+    > .p3-narrative-figure--plate-narrow:first-child
     .p3-narrative-figure__img--plate,
-  .p3-narrative-body--with-plate > .p3-narrative-body__plate
-    .p3-narrative-figure--plate-narrow
+  .p3-narrative-body--with-plate
+    > .p3-narrative-figure--plate-narrow:first-child
     .p3-narrative-figure__img {
     width: 100%;
     max-width: none;
