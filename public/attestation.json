@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-28T21:04:07.954Z",
+  "generated": "2026-09-28T21:08:35.689Z",
   "tier": "global",
-  "manifestDigest": "sha256:ac5beac2ef1c9c6b7b201a3b4185788c2089e73a64b84a225e19911d376ff37d",
+  "manifestDigest": "sha256:6531ed5d4ad9136b10057574ebdbd2cac182fcb2ae4de153f414de7425098ba4",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,7 +12,7 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 78,
+    "totalOntologyFiles": 77,
     "attestedFiles": 19,
     "signedFiles": 19
   },
@@ -125,7 +125,7 @@
       "publishedAt": null,
       "slug": "sku",
       "series": null,
-      "sha256": "sha256:b8c73dcb2bcc4454132eea2b4ae80ab52b0d0069fe3454ad240b005aa782e257"
+      "sha256": "sha256:80f2a2e4d3d6ba1fd553584ac0d9de552803bbc4d5cadeaf7bcc78dedc40fd7d"
     },
     {
       "path": "ontology/me/trials-of-job.md",
@@ -212,7 +212,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "BmfXniXjzxJjbRmn9Cumru64TYX37aNVWRj8k7eHGT2kFbihdVA77XbrCmP5NznGqkJWQAFQkRye45w3V1gd1ui",
-    "signedAt": "2026-09-28T21:04:36.791Z"
+    "value": "3kjcbm4p2vK6RxaPBe4vxCRsiduE9hLJi5mvycHbh5vdbnNsfwq2E4zk9pZMDmRZoQDrGkoSM78Yhna9q5Mgaid6",
+    "signedAt": "2026-09-28T21:08:58.664Z"
   }
 }
