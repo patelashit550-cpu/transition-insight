@@ -1248,35 +1248,39 @@ body:has(.p3-topic-canvas--fit-viewport) {
     margin-bottom: 1.25rem;
   }
 
+  /* Figure fills leftover lead height so the img can cap against a definite box.
+     Do not paint the mat on this box — it is wider than a square plate. */
   .p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--plate {
     flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    max-width: none;
+    max-width: 100%;
     margin: 0;
+    min-width: 0;
     min-height: 0;
     overflow: hidden;
+    background: transparent;
+    container-type: size;
   }
 
+  /* Emerald mat lives on the img. Size the img box to the bitmap (auto × auto,
+     capped by the figure) so padding/background hug the picture, not the column. */
   .p3-narrative-body--with-plate > .p3-narrative-body__lead
     .p3-narrative-figure__img--plate,
   .p3-narrative-body--with-plate > .p3-narrative-body__lead
     .p3-narrative-figure__img {
-    width: 100%;
-    max-width: none;
-    max-height: 100%;
+    flex: 0 1 auto;
+    box-sizing: border-box;
+    width: auto;
     height: auto;
+    max-width: 100cqw;
+    max-height: 100cqh;
+    min-width: 0;
+    min-height: 0;
     object-fit: contain;
     object-position: center top;
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__lead
-    .p3-narrative-figure--plate-narrow
-    .p3-narrative-figure__img--plate,
-  .p3-narrative-body--with-plate > .p3-narrative-body__lead
-    .p3-narrative-figure--plate-narrow
-    .p3-narrative-figure__img {
-    width: 100%;
-    max-width: none;
   }
 
   .p3-narrative-body--with-plate > .p3-narrative-body__copy {
