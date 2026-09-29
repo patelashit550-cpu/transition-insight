@@ -2997,6 +2997,8 @@ body:has(.p3-topic-canvas--fit-viewport) {
     width: calc(100% + var(--p3-emerald-scroll-outset));
     max-width: none;
     padding-right: var(--p3-emerald-scroll-outset);
+    /* Keep the sticky/kicker measure; only the thumb walks into the gutter. */
+    margin-right: calc(-1 * var(--p3-emerald-scroll-outset));
   }
 }
 
