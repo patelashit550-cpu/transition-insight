@@ -50,14 +50,13 @@
   --p3-essay-plate-sticky-top: 7rem;
   /*
    * Emerald scroll thumb — plate-split copy pane and the left topic/glossary
-   * nav list. Outset is one-third of the empty channel beside the scrollport
-   * (essay: article pad-inline 2rem + canvas pad-inline 2rem). Nav column
-   * width and plate-split tracks stay put; only the thumb walks into that
-   * gutter. 4rem/3 ≈ 21px.
+   * nav list. Outset is a modest step into the empty channel (half of the
+   * previous 4rem/3 ≈ 21px march). 2rem/3 ≈ 11px. Nav column width and
+   * plate-split tracks stay put; only the thumb walks into that gutter.
    */
   --p3-emerald-scroll-thumb: rgba(52, 211, 153, 0.35);
   --p3-emerald-scroll-thumb-width: 4px;
-  --p3-emerald-scroll-outset: calc(4rem / 3);
+  --p3-emerald-scroll-outset: calc(2rem / 3);
   /* Narrative/header strip hovers â€” emerald-400 (same family as bento + accent line). */
   --p3-shell-header-link-hover: #34d399;
   --p3-shell-header-brand-sub-hover: #6ee7b7;
@@ -1358,28 +1357,17 @@ body:has(.p3-topic-canvas--fit-viewport) {
     min-height: 0;
     height: 100%;
     margin-top: 0;
-    /* Keep the text measure; paint the thumb ~⅓ into the empty right channel. */
+    /* Keep the text measure; park the overlay thumb a little way off the copy. */
     width: calc(100% + var(--p3-emerald-scroll-outset));
     max-width: none;
     padding-right: var(--p3-emerald-scroll-outset);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
+    /* Overlay/thin only — ::-webkit-scrollbar width forces a classic full-height
+       rail, which reads as a long bar. Pre-#82 used scrollbar-width: thin. */
     scrollbar-width: thin;
     scrollbar-color: var(--p3-emerald-scroll-thumb) transparent;
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar {
-    width: var(--p3-emerald-scroll-thumb-width);
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar-thumb {
-    background: var(--p3-emerald-scroll-thumb);
-    border-radius: 999px;
   }
 
   /* Copy column is ~0.58fr of the split. Markdown already dropped ##→h3;

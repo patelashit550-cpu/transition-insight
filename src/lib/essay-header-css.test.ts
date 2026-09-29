@@ -77,10 +77,10 @@ test("compass watermark size tokens stay untouched", () => {
   assert.match(compass[0], /filter:\s*blur\(3px\)/);
 });
 
-test("emerald scroll thumb sits one-third into the right channel without changing plate-split tracks", () => {
+test("emerald scroll thumb sits a modest way into the empty channel without changing plate-split tracks", () => {
   assert.match(css, /--p3-emerald-scroll-thumb:\s*rgba\(52,\s*211,\s*153,\s*0\.35\)/);
   assert.match(css, /--p3-emerald-scroll-thumb-width:\s*4px/);
-  assert.match(css, /--p3-emerald-scroll-outset:\s*calc\(4rem\s*\/\s*3\)/);
+  assert.match(css, /--p3-emerald-scroll-outset:\s*calc\(2rem\s*\/\s*3\)/);
 
   assert.match(
     css,
@@ -101,11 +101,11 @@ test("emerald scroll thumb sits one-third into the right channel without changin
   assert.ok(copyBlock, "expected plate-split copy scrollport rule");
   assert.match(copyBlock[0], /padding-right:\s*var\(--p3-emerald-scroll-outset\)/);
   assert.match(copyBlock[0], /width:\s*calc\(100%\s*\+\s*var\(--p3-emerald-scroll-outset\)\)/);
+  assert.match(copyBlock[0], /scrollbar-width:\s*thin/);
   assert.match(copyBlock[0], /scrollbar-color:\s*var\(--p3-emerald-scroll-thumb\)\s+transparent/);
-
-  assert.match(
+  assert.doesNotMatch(
     css,
-    /\.p3-narrative-body--with-plate\s*>\s*\.p3-narrative-body__copy::-webkit-scrollbar\s*\{[^}]*width:\s*var\(--p3-emerald-scroll-thumb-width\)/s,
+    /\.p3-narrative-body--with-plate\s*>\s*\.p3-narrative-body__copy::-webkit-scrollbar\s*\{/,
   );
   assert.match(
     css,
