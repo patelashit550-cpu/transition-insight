@@ -111,4 +111,20 @@ test("emerald scroll thumb sits one-third into the right channel without changin
     css,
     /\.p3-topic-nav__sticky\s+\.p3-topic-nav__list\s*\{[^}]*scrollbar-color:\s*var\(--p3-emerald-scroll-thumb\)\s+transparent/s,
   );
+  assert.match(
+    css,
+    /\.p3-topic-nav__sticky\s*\{[^}]*overflow-x:\s*visible/s,
+  );
+  assert.match(
+    css,
+    /\.p3-topic-nav__sticky\s*\{[^}]*overflow-y:\s*clip/s,
+  );
+  assert.match(
+    css,
+    /@media\s*\(min-width:\s*1025px\)\s*\{\s*\.p3-topic-nav__sticky\s+\.p3-topic-nav__list\s*\{[^}]*padding-right:\s*var\(--p3-emerald-scroll-outset\)/s,
+  );
+  assert.match(
+    css,
+    /@media\s*\(min-width:\s*1025px\)\s*\{\s*\.p3-topic-nav__sticky\s+\.p3-topic-nav__list\s*\{[^}]*width:\s*calc\(100%\s*\+\s*var\(--p3-emerald-scroll-outset\)\)/s,
+  );
 });

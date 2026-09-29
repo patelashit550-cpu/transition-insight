@@ -49,12 +49,11 @@
   --p3-essay-plate-split-max: 68rem;
   --p3-essay-plate-sticky-top: 7rem;
   /*
-   * Emerald scroll thumb — used by the plate-split copy pane and the topic-nav
-   * list. Outset is one-third of the empty right channel beside copy at desktop
-   * (article padding-inline 2rem + topic-canvas padding-inline 2rem). The
-   * remainder of that channel stays empty; column / plate-split widths do not
-   * change. 4rem/3 ≈ 21px, which still fits inside the article’s 2rem pad so
-   * the thumb is not clipped.
+   * Emerald scroll thumb — plate-split copy pane and the left topic/glossary
+   * nav list. Outset is one-third of the empty channel beside the scrollport
+   * (essay: article pad-inline 2rem + canvas pad-inline 2rem). Nav column
+   * width and plate-split tracks stay put; only the thumb walks into that
+   * gutter. 4rem/3 ≈ 21px.
    */
   --p3-emerald-scroll-thumb: rgba(52, 211, 153, 0.35);
   --p3-emerald-scroll-thumb-width: 4px;
@@ -2959,8 +2958,11 @@ body:has(.p3-topic-canvas--fit-viewport) {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  /* Kicker stays put; the list scrolls so long series do not stretch the column. */
-  overflow: hidden;
+  /* Kicker stays put; the list scrolls so long series do not stretch the column.
+     clip (not hidden) on Y so overflow-x can stay visible — the list extends
+     into the empty channel toward the separator to park the emerald thumb. */
+  overflow-x: visible;
+  overflow-y: clip;
 }
 
 @media (min-width: 1280px) {
@@ -2989,8 +2991,21 @@ body:has(.p3-topic-canvas--fit-viewport) {
   scrollbar-color: var(--p3-emerald-scroll-thumb) transparent;
 }
 
+@media (min-width: 1025px) {
+  .p3-topic-nav__sticky .p3-topic-nav__list {
+    box-sizing: border-box;
+    width: calc(100% + var(--p3-emerald-scroll-outset));
+    max-width: none;
+    padding-right: var(--p3-emerald-scroll-outset);
+  }
+}
+
 .p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar {
   width: var(--p3-emerald-scroll-thumb-width);
+}
+
+.p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar-thumb {
