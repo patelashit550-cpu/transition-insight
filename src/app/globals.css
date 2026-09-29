@@ -48,16 +48,6 @@
   --p3-essay-plate-split-gap: clamp(1.5rem, 2.5vw, 2.25rem);
   --p3-essay-plate-split-max: 68rem;
   --p3-essay-plate-sticky-top: 7rem;
-  /*
-   * Emerald scroll thumb — plate-split copy pane and the left topic/glossary
-   * nav list. Outset is one-third of the empty channel beside the scrollport
-   * (essay: article pad-inline 2rem + canvas pad-inline 2rem). Nav column
-   * width and plate-split tracks stay put; only the thumb walks into that
-   * gutter. 4rem/3 ≈ 21px.
-   */
-  --p3-emerald-scroll-thumb: rgba(52, 211, 153, 0.35);
-  --p3-emerald-scroll-thumb-width: 4px;
-  --p3-emerald-scroll-outset: calc(4rem / 3);
   /* Narrative/header strip hovers â€” emerald-400 (same family as bento + accent line). */
   --p3-shell-header-link-hover: #34d399;
   --p3-shell-header-brand-sub-hover: #6ee7b7;
@@ -1282,10 +1272,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
     flex: 1 1 auto;
     min-height: 0;
     height: 100%;
-    /* clip (not hidden) on Y so overflow-x can stay visible — the copy pane
-       extends into the article’s right padding to park the emerald thumb. */
-    overflow-x: visible;
-    overflow-y: clip;
+    overflow: hidden;
   }
 
   .p3-narrative-body--with-plate::after {
@@ -1353,33 +1340,15 @@ body:has(.p3-topic-canvas--fit-viewport) {
 
   .p3-narrative-body--with-plate > .p3-narrative-body__copy {
     grid-column: 2;
-    box-sizing: border-box;
     min-width: 0;
     min-height: 0;
     height: 100%;
     margin-top: 0;
-    /* Keep the text measure; paint the thumb ~⅓ into the empty right channel. */
-    width: calc(100% + var(--p3-emerald-scroll-outset));
-    max-width: none;
-    padding-right: var(--p3-emerald-scroll-outset);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: thin;
-    scrollbar-color: var(--p3-emerald-scroll-thumb) transparent;
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar {
-    width: var(--p3-emerald-scroll-thumb-width);
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar-thumb {
-    background: var(--p3-emerald-scroll-thumb);
-    border-radius: 999px;
+    scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
   }
 
   /* Copy column is ~0.58fr of the split. Markdown already dropped ##→h3;
@@ -2958,11 +2927,8 @@ body:has(.p3-topic-canvas--fit-viewport) {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  /* Kicker stays put; the list scrolls so long series do not stretch the column.
-     clip (not hidden) on Y so overflow-x can stay visible — the list extends
-     into the empty channel toward the separator to park the emerald thumb. */
-  overflow-x: visible;
-  overflow-y: clip;
+  /* Kicker stays put; the list scrolls so long series do not stretch the column. */
+  overflow: hidden;
 }
 
 @media (min-width: 1280px) {
@@ -2988,30 +2954,15 @@ body:has(.p3-topic-canvas--fit-viewport) {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: var(--p3-emerald-scroll-thumb) transparent;
-}
-
-@media (min-width: 1025px) {
-  .p3-topic-nav__sticky .p3-topic-nav__list {
-    box-sizing: border-box;
-    width: calc(100% + var(--p3-emerald-scroll-outset));
-    max-width: none;
-    padding-right: var(--p3-emerald-scroll-outset);
-    /* Keep the sticky/kicker measure; only the thumb walks into the gutter. */
-    margin-right: calc(-1 * var(--p3-emerald-scroll-outset));
-  }
+  scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
 }
 
 .p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar {
-  width: var(--p3-emerald-scroll-thumb-width);
-}
-
-.p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar-track {
-  background: transparent;
+  width: 4px;
 }
 
 .p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar-thumb {
-  background: var(--p3-emerald-scroll-thumb);
+  background: rgba(52, 211, 153, 0.35);
   border-radius: 999px;
 }
 
