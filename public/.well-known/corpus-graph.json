@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T02:41:44.569Z",
+  "generatedAt": "2026-09-29T20:49:00.924Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -1082,6 +1082,12 @@
         "defined": true
       },
       {
+        "id": "term:idiot / idioteque",
+        "type": "term",
+        "label": "Idiot / Idioteque",
+        "defined": true
+      },
+      {
         "id": "term:janus",
         "type": "term",
         "label": "Janus",
@@ -1223,12 +1229,6 @@
         "id": "term:transition",
         "type": "term",
         "label": "Transition",
-        "defined": true
-      },
-      {
-        "id": "term:useful idiot / idioteque",
-        "type": "term",
-        "label": "Useful Idiot / Idioteque",
         "defined": true
       },
       {
