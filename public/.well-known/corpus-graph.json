@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T21:20:22.932Z",
+  "generatedAt": "2026-09-29T00:14:56.815Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -272,7 +272,7 @@
       {
         "id": "essay:narrative/biography/ashit-patel.md",
         "type": "essay",
-        "label": "Macauley's Favorite Bastard",
+        "label": "Macauley's Boy",
         "stage": "published",
         "slug": "ashit-patel",
         "series": "The Times",
