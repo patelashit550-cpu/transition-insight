@@ -35,7 +35,7 @@ The other is an idea which begins as a heuristic bias, but then sets in through 
 
 In any case, such an idea or sets of ideas can harden into rigid positions in the real world, exerting influence and power to entrench a persistent and arbitrary prejudice. I will refer to this form of arbitrary prejudice as _dogma_ or ideology.
 
-In some sense, these ideas are seen as self-evidently true, requiring no justification through reason or mathematics. Even having the temerity to suggest auditability may be deemed insensitive or disloyal, while strict accounting through metrics may even be seen as callous or unkind. So, for any number of reasons (whether through well-intentioned kindness or the accommodation of it), our accounting of how energy and matter are consumed begins to degrade, preventing us from assessing how it is consumed allocating it well.
+In some sense, these ideas are seen as self-evidently true, requiring no justification through reason or mathematics. Even having the temerity to suggest auditability may be deemed insensitive or disloyal, while strict accounting through metrics may even be seen as callous or unkind. So, for any number of reasons (whether through well-intentioned kindness or the accommodation of it), our accounting of how energy and matter are consumed begins to degrade, preventing us from assessing how it is consumed  allocating it well.
 
 Dogma or ideology then causes inefficiencies to accumulate over time, ultimately leading to systemic incoherence—chaos, unpredictability, and real-world volatility.
 
