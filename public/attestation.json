@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-09-29T00:14:57.158Z",
+  "generated": "2026-09-29T00:49:32.712Z",
   "tier": "global",
-  "manifestDigest": "sha256:f0b41f140cd036abbd8c111221eb17f61dc65553503b924894941db864862329",
+  "manifestDigest": "sha256:efe72384e8b2ec827a47e664b6b3a04ad4817e508445bc7de5704ef93cc90d41",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,8 +13,8 @@
   },
   "summary": {
     "totalOntologyFiles": 77,
-    "attestedFiles": 18,
-    "signedFiles": 18
+    "attestedFiles": 17,
+    "signedFiles": 17
   },
   "attested": [
     {
@@ -46,16 +46,6 @@
       "slug": "arete",
       "series": "peridot",
       "sha256": "sha256:8a346cf17ea1eff1c979d96c1c652428cd4cfd6e8cefc6e637458beed3f87054"
-    },
-    {
-      "path": "ontology/governance/illumination/bias.md",
-      "stage": "published",
-      "title": "Bias",
-      "author": null,
-      "publishedAt": "2000-01-01T00:00:00.000Z",
-      "slug": "bias",
-      "series": "peridot",
-      "sha256": "sha256:30b838664a9c03d983d024a09233ffbd9ad4b27b5b73ff2bc9b2ea59d7a74d29"
     },
     {
       "path": "ontology/governance/illumination/semper idem.md",
@@ -202,7 +192,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "3q3SDkVY3BNQ5FqJ4sJJW2pehZHgiWjgFJYFpXPUNhUgX9zUbjWLhhJftSHV2bQRwxpDooM4vNev9XvUX1gs9d23",
-    "signedAt": "2026-09-29T00:15:19.209Z"
+    "value": "5WTz4hHDkLheSWV1AVjUWryxsysyERkR4sdde7uiGxpMh7QsRUJ5Eq8ijGaVbk8gq1pQqBWAFwFuTYPxVmuBh2eV",
+    "signedAt": "2026-09-29T00:49:49.081Z"
   }
 }

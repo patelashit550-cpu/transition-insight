@@ -209,17 +209,6 @@
         }
       }
     },
-    "/governance/peridot/bias": {
-      "get": {
-        "operationId": "get_governance_peridot_bias",
-        "summary": "Read public page at /governance/peridot/bias",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
     "/governance/peridot/semper-idem": {
       "get": {
         "operationId": "get_governance_peridot_semper_idem",

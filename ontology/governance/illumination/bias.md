@@ -1,7 +1,7 @@
 ---
 title: Bias
 label: BIOS and Application
-stage: published
+stage: draft
 type: essay
 slug: bias
 order: 1
