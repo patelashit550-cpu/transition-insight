@@ -57,3 +57,5 @@ semantic-graph/
 # local imports (X export archives — do not commit)
 GenX.zip
 data/imports/
+
+exports/

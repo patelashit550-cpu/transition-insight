@@ -145,6 +145,10 @@ In biology and toxicology: a beneficial response to low-dose stress that would h
 
 Who someone is — persistent across contexts, yet revisable; personal, social, and legal. A personality with an evolving sense of place in the world, defined as an immutable chain of reactions or responses to the world; interactions or transactions whose data qualities are increasingly on the social network and on-chain or other relational datasets (private or public), scattered across platforms and semantic perimeters (domains of governance).
 
+### Idiot / Idioteque
+
+In cypherpunk parlance, a **idiot** or **idioteque** is a real or imagined semper idem - a network node (personality) of high value; breaking it down into its components we have ID (identity) and IoT (internet of things). This ID unknowingly represents a broadly accepted (fungible) and distributed asset between institutions (incumbent domains). All individuals not possessed of a voice or semantic fingerprint on the social network may in one way or another be seen as an idiot: someone who defers opinion on human-centric (versus institutionalized) governance. While possessing enormous potential they are nevertheless contented with the nature of the techno-feudal social network. This amounts to a refusal of One's Call to Adventure and the assertion of one's eccentric (unique) identity. Satoshi Nakamato as an urban myth represents the departure (separation) of identity as a notion from the community so that a discovery may ensue as to meaning and one's true purpose (initiation) following which one returns possessed of true utility to work in community towards global systemic integrity however one chooses (with newfound autonomy).
+
 ### Intelligence
 
 The capacity to learn, reason, understand, and adapt — human or artificial — using data in context or situation. Applying reason and empathy to find a starting point in Truth; first pillar of the Dial Square, without which Capital and Identity become costume and superficial performance.
@@ -300,9 +304,6 @@ Gujarati તેવ: habit. Homophone and cousin to *tel*: personality as a mound
 
 The civilizational move from debased, opaque capital toward resilient architecture: identity made tenable on the social network, yield made legible, institutions earning loyalty through transparency. The term once broadly synonymous with chrysalis evolution has become in recent times tied to a very specific and controversial topic in the broad sphere of identity politics (gender).
 
-### Useful Idiot / Idioteque
-
-In cypherpunk and intelligence parlance, a **useful idiot** or **idioteque** is a real or imagined semper idem - a network node (personality) of high value;  one that is not always fully aware of its creative capability but which has been identified on the internet of things as having *significant* utility through the collection of factors which attest to its value. Also known as a 'mark' or 'person of interest' it is near or at the top of the technical trend line encompassing the ideas it represents. In popular culture this data science concept is explored in several television programs, notably Person of Interest. Satoshi Nakamato is arguably the most significant 'mark' of recent times. *Calling* is the work of discovering through the power of the social network and its collective intelligence the path on in which they might make their own (constructive) mark to find fulfillment in life.
 
 ### Vitarka Mudra
 
