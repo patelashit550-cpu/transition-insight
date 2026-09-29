@@ -27,6 +27,17 @@
   /* Shared kicker color: plate-split subtitles inherited this from body copy;
      non-plate headers (London Calling) were stuck on dim #71717a. */
   --p3-essay-subtitle-color: #d4d4d8;
+  /*
+   * Essay page titles — three increments below the original 2.5rem / 40px stack
+   * (~32% at desktop: 2.5rem → 1.6875rem / 27px). Shared so plate-split and
+   * non-plate essays pick it up without per-page overrides. Page title stays
+   * above inline body H1s (job titles) at 1.625rem / 26px and section heads
+   * (h2 1.375rem; plate-split copy h3 1rem).
+   */
+  --p3-essay-title-size: clamp(0.945rem, 3.8vw, 1.35rem);
+  --p3-essay-title-size-md: 1.6875rem;
+  --p3-essay-title-size-fit: clamp(0.9rem, 2.2vw, 1.3125rem);
+  --p3-essay-inline-title-size: 1.625rem;
   --p3-essay-plate-max: 800px;
   --p3-essay-plate-wide-max: 56rem; /* reading-column width â€” wider than default plate, not full-bleed */
   --p3-essay-plate-gap: 2.5rem;
@@ -969,7 +980,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
 
 .p3-narrative-article__title {
   margin: 0;
-  font-size: clamp(1.35rem, 5.5vw, 1.875rem);
+  font-size: var(--p3-essay-title-size);
   font-weight: 600;
   letter-spacing: 0.08em;
   line-height: 1.15;
@@ -981,7 +992,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
 
 @media (min-width: 768px) {
   .p3-narrative-article__title {
-    font-size: 2.5rem;
+    font-size: var(--p3-essay-title-size-md);
     letter-spacing: 0.2em;
     line-height: 1.05;
   }
@@ -1470,6 +1481,10 @@ body:has(.p3-topic-canvas--fit-viewport) {
   margin-bottom: 1rem;
 }
 
+.p3-narrative-body h1:not(.p3-narrative-article__title) {
+  font-size: var(--p3-essay-inline-title-size);
+}
+
 .p3-narrative-body h2 {
   font-size: 1.375rem;
 }
@@ -1848,7 +1863,7 @@ body:has(.p3-topic-canvas--fit-viewport) {
 }
 
 .p3-narrative-article.p3-narrative-article--connexion-fit .p3-narrative-article__title {
-  font-size: clamp(1.25rem, 3.2vw, 1.875rem);
+  font-size: var(--p3-essay-title-size-fit);
   letter-spacing: 0.13em;
   line-height: 1.08;
 }
@@ -3310,12 +3325,18 @@ body:has(.p3-topic-canvas--fit-viewport) {
 }
 
 .p3-topic-article__title {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: var(--p3-essay-title-size);
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.01em;
   margin: 0 0 0.5rem;
   color: #fafafa;
+}
+
+@media (min-width: 768px) {
+  .p3-topic-article__title {
+    font-size: var(--p3-essay-title-size-md);
+  }
 }
 
 .p3-topic-article__subtitle {
