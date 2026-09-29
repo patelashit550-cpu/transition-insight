@@ -48,6 +48,17 @@
   --p3-essay-plate-split-gap: clamp(1.5rem, 2.5vw, 2.25rem);
   --p3-essay-plate-split-max: 68rem;
   --p3-essay-plate-sticky-top: 7rem;
+  /*
+   * Emerald scroll thumb — used by the plate-split copy pane and the topic-nav
+   * list. Outset is one-third of the empty right channel beside copy at desktop
+   * (article padding-inline 2rem + topic-canvas padding-inline 2rem). The
+   * remainder of that channel stays empty; column / plate-split widths do not
+   * change. 4rem/3 ≈ 21px, which still fits inside the article’s 2rem pad so
+   * the thumb is not clipped.
+   */
+  --p3-emerald-scroll-thumb: rgba(52, 211, 153, 0.35);
+  --p3-emerald-scroll-thumb-width: 4px;
+  --p3-emerald-scroll-outset: calc(4rem / 3);
   /* Narrative/header strip hovers â€” emerald-400 (same family as bento + accent line). */
   --p3-shell-header-link-hover: #34d399;
   --p3-shell-header-brand-sub-hover: #6ee7b7;
@@ -1272,7 +1283,10 @@ body:has(.p3-topic-canvas--fit-viewport) {
     flex: 1 1 auto;
     min-height: 0;
     height: 100%;
-    overflow: hidden;
+    /* clip (not hidden) on Y so overflow-x can stay visible — the copy pane
+       extends into the article’s right padding to park the emerald thumb. */
+    overflow-x: visible;
+    overflow-y: clip;
   }
 
   .p3-narrative-body--with-plate::after {
@@ -1340,15 +1354,33 @@ body:has(.p3-topic-canvas--fit-viewport) {
 
   .p3-narrative-body--with-plate > .p3-narrative-body__copy {
     grid-column: 2;
+    box-sizing: border-box;
     min-width: 0;
     min-height: 0;
     height: 100%;
     margin-top: 0;
+    /* Keep the text measure; paint the thumb ~⅓ into the empty right channel. */
+    width: calc(100% + var(--p3-emerald-scroll-outset));
+    max-width: none;
+    padding-right: var(--p3-emerald-scroll-outset);
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-width: thin;
-    scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
+    scrollbar-color: var(--p3-emerald-scroll-thumb) transparent;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar {
+    width: var(--p3-emerald-scroll-thumb-width);
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__copy::-webkit-scrollbar-thumb {
+    background: var(--p3-emerald-scroll-thumb);
+    border-radius: 999px;
   }
 
   /* Copy column is ~0.58fr of the split. Markdown already dropped ##→h3;
@@ -2954,15 +2986,15 @@ body:has(.p3-topic-canvas--fit-viewport) {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: rgba(52, 211, 153, 0.35) transparent;
+  scrollbar-color: var(--p3-emerald-scroll-thumb) transparent;
 }
 
 .p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar {
-  width: 4px;
+  width: var(--p3-emerald-scroll-thumb-width);
 }
 
 .p3-topic-nav__sticky .p3-topic-nav__list::-webkit-scrollbar-thumb {
-  background: rgba(52, 211, 153, 0.35);
+  background: var(--p3-emerald-scroll-thumb);
   border-radius: 999px;
 }
 
