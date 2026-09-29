@@ -5,7 +5,7 @@ import { BentoRegistry } from "../config/site.ts";
 import { getNavVisibilityPayload } from "./nav-visibility.ts";
 import { resolveBentoKeyFromPathname } from "./nav-visibility-shared.ts";
 
-test("B2 (Regnum Dei) lists published Carta first in global tier", () => {
+test("B2 (Ontology) lists published Carta first in global tier", () => {
   const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
   process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
   try {
