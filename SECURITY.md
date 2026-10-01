@@ -13,7 +13,7 @@ The public origin is **GitHub Pages** at `https://ashitmilne.xyz` until SNS IPFS
 | `transition-insight.sol` | SNS name | IPFS + SOL records; not a vault |
 | IPFS CID (`NEXT_PUBLIC_IPFS_CID`) | Content-addressed snapshot | Public read on a gateway that serves HTML |
 | GitHub `patelashit550-cpu/transition-insight` | Source + Pages deploy | You only |
-| WSL / Windows / `next dev` | Local studio (drafts, Cord compose) | Your machine only |
+| WSL / Windows / `next dev` | Local studio (drafts) | Your machine only |
 
 `transition-insight.com` is **not** canonical. Do not list it as the live origin.
 
@@ -71,7 +71,7 @@ Then on sns.id, with the **SNS registrant** key:
 
 `gateway.pinata.cloud` refuses HTML. Use a dedicated Pinata gateway or Cloudflare DNSLink.
 
-Cord `/api` is stashed during `build:global` and must not appear in `out/`.
+Any local-dev `src/app/api` route handlers are stashed during `build:global` and must not appear in `out/`.
 
 ## Do these now (live gaps)
 
@@ -101,13 +101,13 @@ These cannot be set from the repo. Do them in the browser while logged into **yo
 
 | Tier | Command | What is visible |
 |---|---|---|
-| local | `npm run dev` | Drafts + Cord compose (laptop only) |
+| local | `npm run dev` | Drafts (laptop only) |
 | preprod | `npm run build:preprod` | `review` + published — never point DNS/SNS/IPNS at this |
 | global | `npm run build:global` / `npm run ship -- --ipfs` | `published` + `canonical` only |
 
 ## Solana RPC
 
-The published site uses **PublicNode** (`solana-rpc.publicnode.com`) as a shared CORS gateway for epoch/slot only. It must not receive `getBalance` of the owner wallet. Paste a Helius / QuickNode / validator URL in the Cord RPC field (browser `localStorage` only). Never put API keys in `NEXT_PUBLIC_SOLANA_RPC_URL`. Connexion is Call / Telegram / Email only.
+The published site uses **PublicNode** (`solana-rpc.publicnode.com`) as a shared CORS gateway for epoch/slot only. It must not receive `getBalance` of the owner wallet. Never put API keys in `NEXT_PUBLIC_SOLANA_RPC_URL`. Connexion is Call / Telegram / Email only.
 
 ## Reporting a vulnerability
 

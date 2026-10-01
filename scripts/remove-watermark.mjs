@@ -15,7 +15,7 @@ if (!input || !fs.existsSync(input)) {
 
 const img = sharp(input);
 const meta = await img.metadata();
-const { width, height, channels = 3 } = meta;
+const { width, height } = meta;
 
 const { data, info } = await img.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
 const stride = info.width * info.channels;

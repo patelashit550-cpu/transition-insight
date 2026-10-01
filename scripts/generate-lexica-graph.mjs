@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
-import { basename, dirname, join, relative } from "node:path";
+import { basename, join, relative } from "node:path";
 import matter from "gray-matter";
 
 import { walkFiles } from "./lib/walk-files.mjs";

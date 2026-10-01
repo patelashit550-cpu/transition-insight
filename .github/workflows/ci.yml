@@ -26,5 +26,11 @@ jobs:
       - name: Setup Node
         uses: ./.github/actions/setup-node
 
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
       - name: Unit tests
         run: npm test

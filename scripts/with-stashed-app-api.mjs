@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * Static export cannot include App Router route handlers.
- * Chord write API is local-dev only — stash src/app/api during production builds,
- * restore afterward (even on failure).
+ * Any local-dev route handlers under src/app/api are stashed during production builds
+ * and restored afterward (even on failure). No-op when src/app/api is absent.
  *
  * Usage: node scripts/with-stashed-app-api.mjs <command> [args...]
  */
