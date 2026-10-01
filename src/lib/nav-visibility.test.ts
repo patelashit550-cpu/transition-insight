@@ -61,7 +61,7 @@ test("/chronicle/skin-in-the-game resolves to B3 (Telamon / Firmitas)", () => {
 test("B3 registry order keeps Tannery above London Calling", () => {
   assert.deepEqual(
     BentoRegistry.B3.series.map((row) => row.name),
-    ["The Times", "Polite Bureau", "Skin in the Game", "London Calling", "Chord"]
+    ["The Times", "Polite Bureau", "Skin in the Game", "London Calling"]
   );
   assert.equal(BentoRegistry.B3.series[2]!.href, "/chronicle/skin-in-the-game");
   assert.equal(BentoRegistry.B3.series[2]!.desc, "Tannery");

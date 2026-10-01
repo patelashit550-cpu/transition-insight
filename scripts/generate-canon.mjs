@@ -3,7 +3,7 @@
  * Generate Canonical.md from the published corpus (stage published | canonical).
  *
  *   npm run canon:generate              # candidates + stamp meta (does NOT overwrite Canonical.md)
- *   npm run canon:generate -- --write   # also overwrite ontology/governance/Canonical.md
+ *   npm run canon:generate -- --write --force   # also overwrite Canonical.md (destroys hand-added terms)
  *   npm run canon:generate -- --dry     # print candidates only
  *   npm run canon:generate -- --ollama  # refine definitions via local Ollama
  *   npm run canon:generate -- --model llama3.2:3b
@@ -29,6 +29,18 @@ const INFERENCES_PATH = join(ROOT, "scripts", "data", "canonical-inferences.json
 const args = process.argv.slice(2);
 const DRY = args.includes("--dry");
 const WRITE_DOC = args.includes("--write");
+if (WRITE_DOC && !args.includes("--force")) {
+  console.error(
+    [
+      "canon:generate: refusing --write without --force.",
+      "  --write rebuilds ontology/governance/Canonical.md from essays only:",
+      "  terms added directly (not drawn from an essay) are deleted, and stage resets to draft.",
+      "  Review semantic-graph/Canonical Candidates.md and merge by hand instead,",
+      "  or re-run with --write --force if a full regeneration is really intended.",
+    ].join("\n"),
+  );
+  process.exit(1);
+}
 const USE_OLLAMA = args.includes("--ollama");
 const modelIdx = args.indexOf("--model");
 const OLLAMA_MODEL =

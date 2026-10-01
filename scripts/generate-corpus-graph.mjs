@@ -413,14 +413,7 @@ function buildInterior(allEssays, canonByKey) {
 
   nodes.push(...seriesNodes.values(), ...folderNodes.values(), ...tagNodes.values(), ...termNodes.values());
 
-  const degree = new Map(nodes.map((n) => [n.id, 0]));
-  for (const e of edges) {
-    degree.set(e.from, (degree.get(e.from) || 0) + 1);
-    degree.set(e.to, (degree.get(e.to) || 0) + 1);
-  }
-
   const orphanEssays = essays.filter((e) => {
-    const d = degree.get(e.id) || 0;
     // Only structural folder edge → still "thin"
     const kinds = edges.filter((x) => x.from === e.id).map((x) => x.kind);
     const nonStructural = kinds.filter(

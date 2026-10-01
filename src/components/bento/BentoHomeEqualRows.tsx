@@ -56,6 +56,14 @@ export function BentoHomeEqualRows({ visible }: Props) {
   
   const visKey = JSON.stringify(visible);
 
+  /** Drop the measured height whenever breakpoint or visible items change, before layout effects re-measure. */
+  const layoutKey = `${isWide}|${visKey}`;
+  const [measuredFor, setMeasuredFor] = useState(layoutKey);
+  if (measuredFor !== layoutKey) {
+    setMeasuredFor(layoutKey);
+    setRowPx(null);
+  }
+
   const measureTallestFrame = useCallback((): void => {
     const els = frameRefs.current;
     if (els.length !== 3 || els.some((e) => e == null)) return;
@@ -111,10 +119,7 @@ export function BentoHomeEqualRows({ visible }: Props) {
   }, [isWide, visKey, measureTallestFrame]);
 
   useEffect(() => {
-    if (!isWide) {
-      setRowPx(null);
-      return;
-    }
+    if (!isWide) return;
     const onResize = () => {
       setRowPx(null);
       setLayoutPass((n) => n + 1);
@@ -126,11 +131,6 @@ export function BentoHomeEqualRows({ visible }: Props) {
       window.visualViewport?.removeEventListener("resize", onResize);
     };
   }, [isWide]);
-
-  useEffect(() => {
-    if (!isWide) return;
-    setRowPx(null);
-  }, [isWide, visKey]);
 
   useEffect(() => {
     if (typeof document === "undefined" || !isWide) return;

@@ -38,7 +38,7 @@ export const remarkAllowlistedIframes: Plugin<[], Root> = () => (tree) => {
           height: String(embed.height),
           allowFullScreen: true,
           referrerPolicy: "strict-origin-when-cross-origin",
-          className: `p3-allowlisted-embed p3-allowlisted-embed--${embed.kind}`,
+          className: ["p3-allowlisted-embed", `p3-allowlisted-embed--${embed.kind}`],
         },
       },
       children: [],

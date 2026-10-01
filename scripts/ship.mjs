@@ -9,24 +9,28 @@
  *   npm run ship -- --ipfs-local    (local Kubo add; needs `ipfs daemon` running)
  *   npm run ship -- --push --ipfs
  *   npm run ship -- --skip-canon    (bypass Canonical freshness gate)
+ *   npm run ship -- --skip-check    (bypass typecheck / lint / test gate)
  *
  * GitHub Actions on push to main deploys the live Pages origin (ashitmilne.xyz).
  * `--ipfs` pins the same export for the SNS destination (transition-insight.sol.site).
+ *
+ * First: markdown delta report (`npm run delta`) — every changed .md / .mdx and its
+ * effect on the public site; all of them are committed on --push except SHIP_EXCLUDE.
+ * Then: `npm run check` (typecheck, lint, unit tests) — same gate as CI.
  *
  * Before build: canon:check — fails if published essays changed since last
  * `npm run canon:generate` (so you don't ship without refreshing Canonical).
  */
 import { loadEnvFiles } from "./lib/load-env.mjs";
+import { formatDelta, listMarkdownDelta, SHIP_EXCLUDE, shippablePaths } from "./lib/md-delta.mjs";
 import { runSync } from "./lib/run-cmd.mjs";
-
-/** Never committed by `ship --push` (local drafts, review-tier glossary, etc.). */
-const SHIP_EXCLUDE = ["ontology/governance/Canonical-Review.md"];
 
 const args = process.argv.slice(2);
 const push = args.includes("--push");
 const ipfsLocal = args.includes("--ipfs-local");
 const ipfs = args.includes("--ipfs") && !ipfsLocal;
 const skipCanon = args.includes("--skip-canon");
+const skipCheck = args.includes("--skip-check");
 const messageIdx = args.indexOf("-m");
 const message =
   messageIdx >= 0 && args[messageIdx + 1]
@@ -60,6 +64,19 @@ if (push) {
     );
     process.exit(1);
   }
+}
+
+const delta = listMarkdownDelta();
+console.log(formatDelta(delta));
+if (delta.some((e) => e.error)) {
+  console.error("ship: failed at markdown delta — fix the frontmatter above");
+  process.exit(1);
+}
+
+if (!skipCheck) {
+  run("check", "npm", ["run", "check"]);
+} else {
+  console.warn("ship: skipping typecheck / lint / test (--skip-check)");
 }
 
 function canonCheckOk() {
@@ -141,6 +158,9 @@ if (push) {
     "scripts/sync-export-attestation.mjs",
     "scripts/lib/content-provenance.mjs",
     "scripts/lib/run-cmd.mjs",
+    "scripts/lib/md-delta.mjs",
+    "scripts/lib/md-delta.test.mjs",
+    "scripts/content-delta.mjs",
     ".github/workflows/deploy-pages.yml",
     "scripts/generate-corpus-graph.mjs",
     "scripts/generate-canon.mjs",
@@ -148,6 +168,10 @@ if (push) {
     "scripts/data/canon-generated.json",
   ];
   run("git add", "git", ["add", "-A", "--", ...paths], { inherit: false });
+  const mdPaths = shippablePaths(listMarkdownDelta());
+  if (mdPaths.length) {
+    run("git add markdown delta", "git", ["add", "-A", "--", ...mdPaths], { inherit: false });
+  }
   for (const rel of SHIP_EXCLUDE) {
     run("git unstage excluded", "git", ["restore", "--staged", "--", rel], { inherit: false });
   }

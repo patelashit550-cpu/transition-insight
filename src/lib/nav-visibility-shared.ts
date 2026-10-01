@@ -15,9 +15,7 @@ export function resolveBentoKeyFromPathname(pathname: string): BentoKey {
   if (
     // Chronicle hubs: Jack London, Polite Bureau, Skin in the Game, London Calling.
     p.startsWith("/transition-insight/chronicle") ||
-    p.startsWith("/chronicle") ||
-    p === "/cord" ||
-    p.startsWith("/cord/")
+    p.startsWith("/chronicle")
   ) {
     return "B3";
   }
