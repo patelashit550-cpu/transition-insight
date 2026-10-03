@@ -40,15 +40,15 @@ In psychology (Jung): the inner life and relational soul — often the unconscio
 
 ### Animus
 
-In psychology (Jung): assertive drive and the unconscious masculine; in ordinary speech, hostility or enmity. Here: exuberant competition and defensive force — necessary when a perimeter must be held; corrosive when it turns shrill, paranoid, or growth for growth's sake (*machina* without *Dei*). More constructively animus is expressed towards an aggressor when for example a mother intuits that her offspring are at risk.
+In psychology (Jung): assertive drive and the unconscious masculine; in ordinary speech, hostility or enmity. Here: exuberant competition and defensive force — necessary when a perimeter must be held; corrosive when it turns shrill, paranoid, or growth for growth's sake (*machina* without *Dei*). More constructively, animus is expressed towards an aggressor when, for example, a mother intuits that her offspring are at risk.
 
 ### Animus Machinae
 
-Animus flowing through machinery — for example the information network as micro-transactions which, whether intentionally or not carom off proximate nodes to effect some harm even if emotional or psychological. This however may accumulate to effect visceral (literal) tissue damage through chronic stress or incitement to self-harm or violence to others. Cultivating awareness, mindfulness, and conscious control of autonomous function (breath) generates a resilience to Animus Machinae. It's also important to understand and contain our own tendency to respond; there is limited value in participating in atomistically on social media with complete strangers versus cultivating relationships in community around shared meaningful objectives.
+Animus flowing through machinery — for example the information network as micro-transactions which, whether intentionally or not, carom off proximate nodes to effect some harm even if emotional or psychological. This, however, may accumulate to effect visceral (literal) tissue damage through chronic stress or incitement to self-harm or violence to others. Cultivating awareness, mindfulness, and conscious control of autonomous function (breath) generates a resilience to Animus Machinae. It's also important to understand and contain our own tendency to respond; there is limited value in participating atomistically on social media with complete strangers versus cultivating relationships in community around shared meaningful objectives.
 
 ### Areté
 
-Greek ἀρετή: excellence or virtue — fitness of a thing to its purpose; human excellence as skill in living well. To be good and unreproachable not through the exercise of indiscriminate power, but through cultivated judgment. Virtue is cultivated as much by knowing what one stops doing as by knowing what is to be done — where one has agency, beginning with self-governance and self-regulation.
+Greek ἀρετή: excellence or virtue — fitness of a thing to its purpose; human excellence as skill in living well. To be good and irreproachable not through the exercise of indiscriminate power, but through cultivated judgment. Virtue is cultivated as much by knowing what one stops doing as by knowing what is to be done — where one has agency, beginning with self-governance and self-regulation.
 
 ### Autonomy
 
@@ -56,13 +56,13 @@ Self-rule: the capacity of a single sentient being or a collection of them to go
 
 ### Beta
 
-A deliberate branching from the orthodox main trunk to test a hypothesis developed with data from reality (production) that additional yield may be generated. Ecology does this this through genetic variety, variance and evolution.
+A deliberate branching from the orthodox main trunk to test a hypothesis developed with data from reality (production) that additional yield may be generated. Ecology does this through genetic variety, variance and evolution.
 
 ### Breathwork
 
- Deliberate regulation of breath as the hinge between autonomic life and conscious agency—making breath quality my second priority only to sleep. To optimize overnight recovery, I wear surgical tape over my mouth while sleeping to enforce strict nasal breathing, stimulating nitric oxide production, protecting my oral microbiome, and deepening parasympathetic restorative sleep. My daily protocol includes a twenty-minute mindful meditation session, which I prepare for with a sequence of Kapalabhati (1 minute), seven cycles of 4-7-8 breathing, and a two-minute breath-hold. 
+Deliberate regulation of breath as the hinge between autonomic life and conscious agency—making breath quality my second priority only to sleep. To optimize overnight recovery, I wear surgical tape over my mouth while sleeping to enforce strict nasal breathing, stimulating nitric oxide production, protecting my oral microbiome, and deepening parasympathetic restorative sleep. My daily protocol includes a twenty-minute mindful meditation session, which I prepare for with a sequence of Kapalabhati (1 minute), seven cycles of 4-7-8 breathing, and a two-minute breath-hold.
 
-he practice that inserts calm where panic is, restores receptivity, and precedes contemplation. The Yoga Element taken off the mat into civic life is to be with that breath as you connect and flow with whatever or whoever is in front you. Enjoyment or contentment through cycles then regulates breath and the whole self.
+The practice that inserts calm where panic is, restores receptivity, and precedes contemplation. The Yoga Element taken off the mat into civic life is to be with that breath as you connect and flow with whatever or whoever is in front of you. Enjoyment or contentment through cycles then regulates breath and the whole self.
 
 ### Call to Adventure
 
@@ -104,7 +104,7 @@ _Dhāraṇā_ is the discipline that elevates a story or an encounter from a per
 
 ### Dhyana
 
-Sanskrit ध्यान: Dhyana may essentially be thought of as the flow state; a connected sense of enjoyment. Whereas Dharana is deliberate often coercive practice in which we may struggle internally as we aim to establish a practice (protocol) which we know to be good through running the protocol repeatedly until it become recursive and autonomic. We may for example compel ourselves to sit down to meditate daily or practice a musical instrument because we have some sense that it calls us. As we explore through dharana it *may* then become enjoyed in flow state dhyana.
+Sanskrit ध्यान: Dhyana may essentially be thought of as the flow state; a connected sense of enjoyment. Whereas Dharana is a deliberate, often coercive practice in which we may struggle internally as we aim to establish a practice (protocol) which we know to be good through running the protocol repeatedly until it becomes recursive and autonomic. We may, for example, compel ourselves to sit down to meditate daily or practice a musical instrument because we have some sense that it calls us. As we explore through dharana it *may* then become enjoyed in flow state dhyana.
 
 
 ### Dial Square
@@ -118,16 +118,16 @@ Consider the broad semantic and institutional perimeter organized around the US 
 
 ### Drishti
 
-_Drishti_ is the intentional, inward-oriented gaze used in yoga. Rather than scanning the environment in search of something else or something new, the eyes are instead anchored to specific focal points—such as tip of one's nose or hands, or the third eye during seated meditation. This disciplined focus draws visual attention inward, using the body as a doorway to quiet the conscious mind and access deeper layers of the subconscious. When paired with symbolic gestures like the _Vitarka Mudra_, this internal containment emanates _anima_ and aligned integration.
+_Drishti_ is the intentional, inward-oriented gaze used in yoga. Rather than scanning the environment in search of something else or something new, the eyes are instead anchored to specific focal points—such as the tip of one's nose or hands, or the third eye during seated meditation. This disciplined focus draws visual attention inward, using the body as a doorway to quiet the conscious mind and access deeper layers of the subconscious. When paired with symbolic gestures like the _Vitarka Mudra_, this internal containment emanates _anima_ and aligned integration.
 
 ### Equivalence
 
-Recognition of equal standing without insisting on precise factor identicality. Distinct from equality-as-sameness. This becomes particularly important as regime logic is made distinct from geographic if the network is to be seen as credible and neutral at a base infrastructure level so that normative preferences may be expressed as pluralism and then assessed for validity (as legitimate and fair).
+Recognition of equal standing without insisting on precise factor identicality. Distinct from equality-as-sameness. This becomes particularly important as regime logic is made distinct from geography if the network is to be seen as credible and neutral at a base infrastructure level so that normative preferences may be expressed as pluralism and then assessed for validity (as legitimate and fair).
 
 
 ### Firmitas
 
-Firmness — structural soundness. Form aligned with nature; what Praxis and Beta yield at the branch where edge exploration strengthens rather than makes fragile through neglect and a lack of courage which over time generates animus at the trunk (Alpha).
+Firmness — structural soundness. Form aligned with nature; what Praxis and Beta yield at the branch where edge exploration strengthens rather than makes it fragile through neglect and a lack of courage which over time generates animus at the trunk (Alpha).
 
 ### Giants
 
@@ -147,7 +147,7 @@ Who someone is — persistent across contexts, yet revisable; personal, social, 
 
 ### Idiot / Idioteque
 
-an **idiot** or **idioteque** is a network node personality of high value; breaking it down into its components we have ID (identity) and IoT (internet of things). This ID represents a broadly accepted (fungible) and distributed asset between institutions (incumbent domains). All individuals lacking a distinct voice or semantic fingerprint on the social network may in one way or another be seen as an idiot: someone who generally delegates opinion on governance rather than assuming broad responsibility for the Global Commons. This amounts to the Refusal of *One's Call to Adventure* and the assertion of one's eccentric (unique) identity. Satoshi Nakamato as a myth represents the departure (separation) of identity as a notion from the community (and the consequent dislocation is price from value) so that a discovery could ensue as to meaning and true purpose (initiation) defined by the self.  Following which one returns possessed of utility to work in community towards global systemic integrity however one chooses (with newfound autonomy).
+An **idiot** or **idioteque** is a network node personality of high value; breaking it down into its components, we have ID (identity) and IoT (internet of things). This ID represents a broadly accepted (fungible) and distributed asset between institutions (incumbent domains). All individuals lacking a distinct voice or semantic fingerprint on the social network may in one way or another be seen as an idiot: someone who generally delegates opinion on governance rather than assuming broad responsibility for the Global Commons. This amounts to the Refusal of *One's Call to Adventure* and the assertion of one's eccentric (unique) identity. Satoshi Nakamoto as a myth represents the departure (separation) of identity as a notion from the community (and the consequent dislocation of price from value) so that a discovery could ensue as to meaning and true purpose (initiation) defined by the self, following which one returns possessed of utility to work in community towards global systemic integrity however one chooses (with newfound autonomy).
 
 ### Intelligence
 
@@ -163,7 +163,7 @@ In Japanese business history: interlinked corporate groups bound by cross-shareh
 
 ### Ki
 
-Japanese 気: vital energy, spirit, atmosphere — related graphs include 機 (mechanism) and 規 (standard). Here: the flow that must move through layers until it finds a legitimate base; Praxis keeps architecture from brittleness so *ki* can reach where it is required. Ki flows to and from the microcosm to the whole. The whole may be modelled as a state of balance — the Treasury of the Commons.
+Japanese 気: vital energy, spirit, atmosphere — related graphs include 機 (mechanism) and 規 (standard). Here: the flow that must move through layers until it finds a legitimate base; Praxis keeps architecture from brittleness so *ki* can reach where it is required. Ki flows to and from the microcosm and the whole. The whole may be modelled as a state of balance — the Treasury of the Commons.
 
 ### Ledger
 
@@ -171,7 +171,7 @@ A book or system of record for debits and credits — from clay tablets and Dome
 
 ### Lingam
 
-In the Yogic and Vedantic traditions, defining the **Lingam** (Sanskrit: लिङ्ग, literally meaning "mark," "sign," "emblem," or "attribute") as the emblem of creative force and the unmanifest masculine/neuter principle. By combining *ling~* and ~am we given signal or signature (language) of identity (amness). Smoke is the _linga_ (the visible, physical sign) that reveals the hidden presence of fire (_lingi_). The smoke itself isn't the identity or personality; it is the **sensory footprint** that proves the underlying reality exists. This site and its ontology only indicates to you that I exist or once did exist and not the certainty of my existence in this moment.
+In the Yogic and Vedantic traditions, the **Lingam** (Sanskrit: लिङ्ग, literally meaning "mark," "sign," "emblem," or "attribute") is defined as the emblem of creative force and the unmanifest masculine/neuter principle. By combining *ling~* and ~am, we are given signal or signature (language) of identity (amness). Smoke is the _linga_ (the visible, physical sign) that reveals the hidden presence of fire (_lingi_). The smoke itself isn't the identity or personality; it is the **sensory footprint** that proves the underlying reality exists. This site and its ontology only indicate to you that I exist or once did exist and not the certainty of my existence in this moment.
 
 Lingam in yoga tradition is also symbolic of Shiva and transmutation (conversion to express utility). Truth is an input which is transformed to generate an outcome with *broad* utility (fair and possessed of integrity) or alternatively it is degenerate (a utility so *narrow* as to be better viewed as absurd).
 
@@ -201,7 +201,7 @@ Right opinion or authorized doctrine — the established teaching of a community
 
 ### Original Sin
 
-My interpretation of original sin, a concept in Christianity is that we carry a karmic (carom) energy perceived in the commons - as interpreted by the way in which we and our communities trigger others and the ecology beyond them for the extraction of things that have utility and which we require in order to live. There is a  line to be drawn between wants and needs and we may optimize our capacity to draw it with presence or mindfulness in the immediacy as we are in the midst of improvisational and protocol-enabled creative endeavor. This is the duality between *anima* and *animus*.
+My interpretation of original sin, a concept in Christianity, is that we carry a karmic (carom) energy perceived in the commons - as interpreted by the way in which we and our communities trigger others and the ecology beyond them for the extraction of things that have utility and which we require in order to live. There is a line to be drawn between wants and needs and we may optimize our capacity to draw it with presence or mindfulness in the immediacy as we are in the midst of improvisational and protocol-enabled creative endeavor. This is the duality between *anima* and *animus*.
 
 ### Pain Body
 
@@ -228,7 +228,7 @@ In philosophy (Aristotle onward): informed practice — doing that embodies theo
 
 ### Project, Product, Protocol
 
-Corpus arc of change on the social network: managed project → owned product → use-case-specific public protocols (Bitcoin, Ethereum, Solana as exemplars) — decentralizing agency and how value is registered. In some senses you are a project and each of your behaviors is a product for which you are evolving optimal protocol (flow state) such that the line between autonomous and agent dissipate — dualism (as toil and friction) fades.
+Corpus arc of change on the social network: managed project → owned product → use-case-specific public protocols (Bitcoin, Ethereum, Solana as exemplars) — decentralizing agency and how value is registered. In some senses you are a project and each of your behaviors is a product for which you are evolving optimal protocol (flow state) such that the line between autonomous and agent dissipates — dualism (as toil and friction) fades.
 
 ### Protocol
 
@@ -262,11 +262,11 @@ Corpus usage: a coded boundary of shared meaning (*semper idem*) within which we
 
 ### Semper Idem
 
-Latin: "always the same." Identity embodied as a mound of attested interactions registered as data which "speaks and has character" (is semantic and bounded). Therefore like its counterpart (our real selves) it is stable (or at least consistently us) yet forever evolving; it is the tell of who you are across contexts; trust which does not require attestation by authority.
+Latin: "always the same." Identity embodied as a mound of attested interactions registered as data which "speaks and has character" (is semantic and bounded). Therefore, like its counterpart (our real selves), it is stable (or at least consistently us) yet forever evolving; it is the tell of who you are across contexts; trust which does not require attestation by authority.
 
 ### Social Credit
 
-In ordinary speech: reputation and reciprocal trust; historically also mutualist credit systems. How how much a community may safely entrust you with inside a semantic perimeter — preference and reliability made legible through gossip protocol.
+In ordinary speech: reputation and reciprocal trust; historically also mutualist credit systems. How much a community may safely entrust you with inside a semantic perimeter — preference and reliability made legible through gossip protocol.
 
 ### Social Network
 
@@ -287,9 +287,9 @@ Derived from the ancient Greek name *Stephanos* (Στέφανος), stemming fro
 
 ### Tel
 
-**Tel** (Hebrew: תֵּל) / **Tall** or **Tell** (Arabic: تَلّ) a stratified settlement mound (Arabic *tell*) — layers of habitation compressed into a hill. Here also: the intimate mound each person builds transaction by transaction; ledger and self as sediment.
+**Tel** (Hebrew: תֵּל) / **Tall** or **Tell** (Arabic: تَلّ) — a stratified settlement mound (Arabic *tell*) — layers of habitation compressed into a hill. Here also: the intimate mound each person builds transaction by transaction; ledger and self as sediment.
 
-Crawford lake a mimetic body of water, pill-shaped and deeper than it is wide. Located in Milton, Ontario a twenty minute drive south from Acton at an historic Haudenosaunee settlement is a tell cataloging the impact of the Anthropocene and before that the history of human settlement and trade.
+Crawford Lake, a mimetic body of water, pill-shaped and deeper than it is wide. Located in Milton, Ontario, a twenty-minute drive south from Acton, at an historic Haudenosaunee settlement, is a tell cataloging the impact of the Anthropocene and before that the history of human settlement and trade.
 
 
 ### Tenable
@@ -307,7 +307,7 @@ The civilizational move from debased, opaque capital toward resilient architectu
 
 ### Vitarka Mudra
 
-A seal or gesture — in yoga, a posture of the hands or body that expresses an inner state. Here: the posture of group discussion itself — openness that holds equivalence rather than coercion or sameness. The discussion or *vitarka* mudra expresses wholeness and equivalence in a gesture wherein the thumb and forefinger are joined while three remaining digits point outwards. Representing oneself, the other, and the discussion between or alternatively the mathematical symbol for equivalence (≡). The implication is to see one as an equivalent in an interaction which therefore demands due consideration. Its presentation may be seen a placebo affirmation. Coincidentally is also the 'OK' brought back into popular usage by Martin Van Buren.
+A seal or gesture — in yoga, a posture of the hands or body that expresses an inner state. Here: the posture of group discussion itself — openness that holds equivalence rather than coercion or sameness. The discussion or *vitarka* mudra expresses wholeness and equivalence in a gesture wherein the thumb and forefinger are joined while three remaining digits point outwards. Representing oneself, the other, and the discussion between them, or alternatively the mathematical symbol for equivalence (≡). The implication is to see one as an equivalent in an interaction which therefore demands due consideration. Its presentation may be seen as a placebo affirmation. Coincidentally, it is also the 'OK' brought back into popular usage by Martin Van Buren.
 
 ### Yield
 
@@ -321,7 +321,7 @@ Historically, these practices were innovated as minimalist, accessible protocols
 
 ### Yoga Element
 
-The Yoga Element may be seen as creation in both senses. It's liveness (anima) bounded by legitimately boundedness (embodiment). Its the output of light (from the sun) which on earth preceded all things by some margin. All life whether sentient or not utilizes matter, combining it with energy to generate persistence and outcomes. Yoga Element is the impulse to move towards objective beauty  (seen as integrity and fairness) or firmitas. This is why universally all of us find nature to be awesome.
+The Yoga Element may be seen as creation in both senses. Its liveness (anima) is bounded by legitimate boundedness (embodiment). It's the output of light (from the sun) which on earth preceded all things by some margin. All life, whether sentient or not, utilizes matter, combining it with energy to generate persistence and outcomes. Yoga Element is the impulse to move towards objective beauty (seen as integrity and fairness) or firmitas. This is why universally all of us find nature to be awesome.
  
 
 <script type="application/ld+json">
