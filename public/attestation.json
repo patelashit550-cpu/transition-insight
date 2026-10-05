@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-05T02:43:18.509Z",
+  "generated": "2026-10-05T03:05:02.759Z",
   "tier": "global",
-  "manifestDigest": "sha256:2080edcf52c6a267a11ce96df0447fb696419bba732f8f89c5d306f94cf13cce",
+  "manifestDigest": "sha256:65d51474d3d56194916743bc846c8797afd237789edd13e29483d8edac44b296",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,8 +13,8 @@
   },
   "summary": {
     "totalOntologyFiles": 77,
-    "attestedFiles": 18,
-    "signedFiles": 18
+    "attestedFiles": 17,
+    "signedFiles": 17
   },
   "attested": [
     {
@@ -186,23 +186,13 @@
       "slug": "transition",
       "series": "Polite Bureau",
       "sha256": "sha256:28073eaa9f46e2417307489da434d1de8d42d1da6eff825812dc735be18bde9a"
-    },
-    {
-      "path": "ontology/narrative/comment/dust-up.md",
-      "stage": "published",
-      "title": "Dust Up",
-      "author": null,
-      "publishedAt": "2026-10-04T00:00:00.000Z",
-      "slug": "dust-up",
-      "series": "Polite Bureau",
-      "sha256": "sha256:874b0d72e1ca9ee4cb0da55b1a632bf4ec0b10078dfe70761f28527eb6663478"
     }
   ],
   "signature": {
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "2Na6QYgvdN1mimF9iKTqTuaQKqESCSs23qtXMMkbYHxqhcNpSne4apqNUJjJj3JSKEmurPh3GGZzvWw7FWCDGVpw",
-    "signedAt": "2026-10-05T02:43:28.590Z"
+    "value": "5HwisjHNQFr6ETjLTiZQc2X7MyvKKHTXEntXs8fFeTQj7i6Q6Xju4shhTz2M5vStWtjrnP3zm3XALj1ZF7cuLqMZ",
+    "signedAt": "2026-10-05T03:05:12.699Z"
   }
 }
