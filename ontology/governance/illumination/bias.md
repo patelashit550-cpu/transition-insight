@@ -35,7 +35,7 @@ The other is an idea which begins as a heuristic bias, but then sets in through 
 
 Such ideas often reduced to easily absorbed tweetable truisms harden into rigid positions as their proponents accrue influence and capital to entrench a persistent but arbitrarily defined broad faction. Often representing only a plurality, a group maintains control by manufacturing consensus issue-by-issue, relying on retail performative appeals to so-called independents This is generally enough to control a jurisdiction or domain. Behind this presentation layer entrenched capital shifts its support between competing factions as necessary through campaign financing and legislative capture to effectively hold each sides to heel in order to sustain their position. In any case such ideas are a form of arbitrary prejudice are elevated platforms known as _dogma_ or ideology. 
 
-Dogma or ideology then causes inefficiencies to accumulate over time, ultimately leading to systemic incoherence—chaos, unpredictability and volatility largely because they allow negative externalities—A  energy or materials emitted through open loops—memory leaks wherein continuity and retention of an unbroken linear program which might iterate effectively . Th
+Dogma or ideology then causes inefficiencies to accumulate over time, ultimately leading to systemic incoherence—chaos, unpredictability and volatility largely because they allow negative externalities—energy or material is wasted in process which doesn't fully completeand is emitted through open loop which 
 
 
 
@@ -348,3 +348,6 @@ which needs to *transcend* all domains if it is to have any kind of broad resona
 In the world performance has very little traction if it does not sensibly address real world needs.  
 
 . There is a limit to how many people we may hold dear. Whether this is a good or bad thing, it certainly helps to contain the loss of trauma. As a parent the most difficult thing for me is to pretend is that don't worry about my (adult) children when they are away. 
+
+
+ning those boxes.nment and with irresistible logic dictate that our ecology supersedes humanity. If you compress the planet's history into a single day, we show up two seconds before midnight. This is why those of us in governance are focused on it

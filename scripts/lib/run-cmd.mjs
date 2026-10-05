@@ -9,11 +9,17 @@ import { dirname, join } from "node:path";
 import { spawnSync } from "node:child_process";
 
 export function npmCliJs() {
-  const candidate = join(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
-  if (!existsSync(candidate)) {
-    throw new Error(`run-cmd: npm-cli.js not found at ${candidate}`);
+  const candidates = [
+    process.env.npm_execpath,
+    join(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js"),
+    "/usr/share/nodejs/npm/bin/npm-cli.js",
+    "/usr/lib/node_modules/npm/bin/npm-cli.js",
+  ].filter((p) => typeof p === "string" && p.endsWith("npm-cli.js"));
+  const found = candidates.find((p) => existsSync(p));
+  if (!found) {
+    throw new Error(`run-cmd: npm-cli.js not found (tried ${candidates.join(", ")})`);
   }
-  return candidate;
+  return found;
 }
 
 /**

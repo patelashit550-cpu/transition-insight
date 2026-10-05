@@ -110,7 +110,17 @@ function canonicalPath(slug: string[]): string {
   return `/${slug.filter(Boolean).join("/")}/`;
 }
 
-/** Plain-text excerpt for meta description when no explicit subtitle exists. */
+/**
+ * Authored search snippet. `description` is the meta/JSON-LD text.
+ * `subtitle` is the on-page kicker and only fills in when no description is set.
+ */
+function frontmatterDescription(fm: Record<string, unknown>): string | undefined {
+  if (typeof fm.description === "string" && fm.description.trim()) return fm.description.trim();
+  if (typeof fm.subtitle === "string" && fm.subtitle.trim()) return fm.subtitle.trim();
+  return undefined;
+}
+
+/** Plain-text excerpt for meta description when no explicit description or subtitle exists. */
 function plainExcerpt(markdown: string, max = 160): string | undefined {
   const text = markdown
     .replace(/```[\s\S]*?```/g, " ")
@@ -128,8 +138,7 @@ function plainExcerpt(markdown: string, max = 160): string | undefined {
 }
 
 function essayDescription(fm: Record<string, unknown>, content: string): string | undefined {
-  if (typeof fm.subtitle === "string" && fm.subtitle.trim()) return fm.subtitle.trim();
-  return plainExcerpt(content) ?? SiteIdentity.description;
+  return frontmatterDescription(fm) ?? plainExcerpt(content) ?? SiteIdentity.description;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -194,9 +203,8 @@ function contentJsonLd(
     "@type": "BlogPosting",
     headline: frontmatter.title ?? "",
   };
-  if (typeof frontmatter.subtitle === "string" && frontmatter.subtitle.trim()) {
-    ld.description = frontmatter.subtitle.trim();
-  }
+  const summary = frontmatterDescription(frontmatter);
+  if (summary) ld.description = summary;
   if (url) {
     ld.url = url;
     ld.mainEntityOfPage = url;
@@ -214,7 +222,12 @@ function contentJsonLd(
   ld.author = author;
   ld.publisher = { "@type": "Organization", name: SiteIdentity.name, url: SiteIdentity.url };
   const img = toAbsUrl(typeof frontmatter.image === "string" ? frontmatter.image : undefined);
-  if (img) ld.image = img;
+  const imageAlt = typeof frontmatter.imageAlt === "string" ? frontmatter.imageAlt.trim() : "";
+  if (img) {
+    ld.image = imageAlt
+      ? { "@type": "ImageObject", url: img, caption: imageAlt }
+      : img;
+  }
   // Escape `<` so frontmatter cannot terminate the ld+json script element.
   return serializeJsonLd(ld);
 }

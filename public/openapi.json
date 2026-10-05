@@ -99,6 +99,17 @@
         }
       }
     },
+    "/chronicle/polite_bureau/dust-up": {
+      "get": {
+        "operationId": "get_chronicle_polite_bureau_dust_up",
+        "summary": "Read public page at /chronicle/polite_bureau/dust-up",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/chronicle/polite_bureau/tenable": {
       "get": {
         "operationId": "get_chronicle_polite_bureau_tenable",
@@ -114,28 +125,6 @@
       "get": {
         "operationId": "get_chronicle_polite_bureau_transition",
         "summary": "Read public page at /chronicle/polite_bureau/transition",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/cord": {
-      "get": {
-        "operationId": "get_cord",
-        "summary": "Read public page at /cord",
-        "responses": {
-          "200": {
-            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
-          }
-        }
-      }
-    },
-    "/cord/compose": {
-      "get": {
-        "operationId": "get_cord_compose",
-        "summary": "Read public page at /cord/compose",
         "responses": {
           "200": {
             "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"

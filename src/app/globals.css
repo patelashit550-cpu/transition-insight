@@ -3466,3 +3466,46 @@ body:has(.p3-topic-canvas--fit-viewport) {
   pointer-events: none;
   user-select: none;
 }
+
+/*
+ * Reading column, every category. The column stays left-aligned on its old
+ * inset and takes half of the unused gap on the right.
+ * 56rem → 42rem + 25% of the pane. Plate split (68rem) and overlay caps follow
+ * the same proportion.
+ */
+@media (min-width: 768px) {
+  .p3-narrative-article,
+  .p3-topic-article {
+    width: 100%;
+    max-width: calc(42rem + 25%);
+    margin-left: max(0px, calc((100% - 56rem) / 2));
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p3-narrative-article:has(.p3-narrative-layout--overlay-figure),
+  .p3-topic-article:has(.p3-narrative-layout--overlay-figure) {
+    max-width: calc(54rem + 25%);
+    margin-left: max(0px, calc((100% - 72rem) / 2));
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .p3-narrative-article:has(.p3-narrative-body--with-plate),
+  .p3-topic-article:has(.p3-narrative-body--with-plate) {
+    max-width: calc(51rem + 25%);
+    margin-left: max(0px, calc((100% - 68rem) / 2));
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .p3-narrative-article:has(.p3-narrative-layout--overlay-figure),
+  .p3-topic-article:has(.p3-narrative-layout--overlay-figure) {
+    max-width: calc(60rem + 25%);
+    margin-left: max(0px, calc((100% - 80rem) / 2));
+    margin-right: 0;
+  }
+}

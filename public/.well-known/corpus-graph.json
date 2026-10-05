@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T02:13:36.830Z",
+  "generatedAt": "2026-10-05T02:43:18.208Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,20 +14,20 @@
   },
   "interior": {
     "summary": {
-      "essays": 16,
-      "nodes": 178,
-      "edges": 408,
+      "essays": 17,
+      "nodes": 181,
+      "edges": 436,
       "byKind": {
-        "member-of-series": 11,
-        "member-of-folder": 16,
-        "tagged": 98,
-        "lexica": 66,
-        "mention": 217
+        "member-of-series": 12,
+        "member-of-folder": 17,
+        "tagged": 105,
+        "lexica": 84,
+        "mention": 218
       },
       "orphanEssays": 0,
       "series": 6,
       "folders": 6,
-      "tags": 53,
+      "tags": 55,
       "terms": 97
     },
     "nodes": [
@@ -298,6 +298,26 @@
           "radio",
           "telamon",
           "firmitas"
+        ]
+      },
+      {
+        "id": "essay:narrative/comment/dust-up.md",
+        "type": "essay",
+        "label": "Dust Up",
+        "stage": "published",
+        "slug": "dust-up",
+        "series": "Polite Bureau",
+        "folder": "narrative/comment",
+        "ontologyPath": "narrative/comment/dust-up.md",
+        "vaultPath": "ontology/narrative/comment/dust-up",
+        "tags": [
+          "cultural-critique",
+          "political-economy",
+          "monetary-policy",
+          "governance",
+          "canada",
+          "sovereignty",
+          "attention-economy"
         ]
       },
       {
@@ -662,6 +682,16 @@
         "label": "monetary-policy"
       },
       {
+        "id": "tag:sovereignty",
+        "type": "tag",
+        "label": "sovereignty"
+      },
+      {
+        "id": "tag:attention-economy",
+        "type": "tag",
+        "label": "attention-economy"
+      },
+      {
         "id": "term:anarchy",
         "type": "term",
         "label": "Anarchy",
@@ -878,10 +908,88 @@
         "defined": false
       },
       {
+        "id": "term:social network",
+        "type": "term",
+        "label": "Social Network",
+        "defined": true
+      },
+      {
+        "id": "term:soft power",
+        "type": "term",
+        "label": "Soft Power",
+        "defined": true
+      },
+      {
+        "id": "term:dollar regime",
+        "type": "term",
+        "label": "Dollar Regime",
+        "defined": true
+      },
+      {
+        "id": "term:capital",
+        "type": "term",
+        "label": "Capital",
+        "defined": true
+      },
+      {
+        "id": "term:protocol",
+        "type": "term",
+        "label": "Protocol",
+        "defined": true
+      },
+      {
+        "id": "term:self-sovereign",
+        "type": "term",
+        "label": "Self-sovereign",
+        "defined": true
+      },
+      {
+        "id": "term:semantic perimeter",
+        "type": "term",
+        "label": "Semantic Perimeter",
+        "defined": true
+      },
+      {
+        "id": "term:perimeter",
+        "type": "term",
+        "label": "Perimeter",
+        "defined": true
+      },
+      {
+        "id": "term:semper idem",
+        "type": "term",
+        "label": "Semper Idem",
+        "defined": true
+      },
+      {
+        "id": "term:autonomy",
+        "type": "term",
+        "label": "Autonomy",
+        "defined": true
+      },
+      {
+        "id": "term:giants",
+        "type": "term",
+        "label": "Giants",
+        "defined": true
+      },
+      {
         "id": "term:transaction",
         "type": "term",
         "label": "transaction",
         "defined": false
+      },
+      {
+        "id": "term:tenable",
+        "type": "term",
+        "label": "Tenable",
+        "defined": true
+      },
+      {
+        "id": "term:transition",
+        "type": "term",
+        "label": "Transition",
+        "defined": true
       },
       {
         "id": "term:yoga element",
@@ -920,33 +1028,15 @@
         "defined": false
       },
       {
-        "id": "term:dollar regime",
-        "type": "term",
-        "label": "Dollar Regime",
-        "defined": true
-      },
-      {
         "id": "term:treasury of the commons",
         "type": "term",
         "label": "Treasury of the Commons",
         "defined": false
       },
       {
-        "id": "term:protocol",
-        "type": "term",
-        "label": "Protocol",
-        "defined": true
-      },
-      {
         "id": "term:yield",
         "type": "term",
         "label": "Yield",
-        "defined": true
-      },
-      {
-        "id": "term:tenable",
-        "type": "term",
-        "label": "Tenable",
         "defined": true
       },
       {
@@ -986,12 +1076,6 @@
         "defined": true
       },
       {
-        "id": "term:autonomy",
-        "type": "term",
-        "label": "Autonomy",
-        "defined": true
-      },
-      {
         "id": "term:beta",
         "type": "term",
         "label": "Beta",
@@ -1013,12 +1097,6 @@
         "id": "term:calling",
         "type": "term",
         "label": "Calling",
-        "defined": true
-      },
-      {
-        "id": "term:capital",
-        "type": "term",
-        "label": "Capital",
         "defined": true
       },
       {
@@ -1067,12 +1145,6 @@
         "id": "term:firmitas",
         "type": "term",
         "label": "Firmitas",
-        "defined": true
-      },
-      {
-        "id": "term:giants",
-        "type": "term",
-        "label": "Giants",
         "defined": true
       },
       {
@@ -1154,12 +1226,6 @@
         "defined": true
       },
       {
-        "id": "term:perimeter",
-        "type": "term",
-        "label": "Perimeter",
-        "defined": true
-      },
-      {
         "id": "term:project, product, protocol",
         "type": "term",
         "label": "Project, Product, Protocol",
@@ -1178,39 +1244,9 @@
         "defined": true
       },
       {
-        "id": "term:self-sovereign",
-        "type": "term",
-        "label": "Self-sovereign",
-        "defined": true
-      },
-      {
-        "id": "term:semantic perimeter",
-        "type": "term",
-        "label": "Semantic Perimeter",
-        "defined": true
-      },
-      {
-        "id": "term:semper idem",
-        "type": "term",
-        "label": "Semper Idem",
-        "defined": true
-      },
-      {
         "id": "term:social credit",
         "type": "term",
         "label": "Social Credit",
-        "defined": true
-      },
-      {
-        "id": "term:social network",
-        "type": "term",
-        "label": "Social Network",
-        "defined": true
-      },
-      {
-        "id": "term:soft power",
-        "type": "term",
-        "label": "Soft Power",
         "defined": true
       },
       {
@@ -1223,12 +1259,6 @@
         "id": "term:stephen / steven",
         "type": "term",
         "label": "Stephen / Steven",
-        "defined": true
-      },
-      {
-        "id": "term:transition",
-        "type": "term",
-        "label": "Transition",
         "defined": true
       },
       {
@@ -2373,6 +2403,195 @@
         "weight": 1
       },
       {
+        "id": "edge:essay-narrative-comment-dust-up-md-series-polite-bureau-member-of-series",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "series:polite-bureau",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-folder-narrative-comment-member-of-folder",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "folder:narrative-comment",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-cultural-critique-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:cultural-critique",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-political-economy-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:political-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-monetary-policy-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:monetary-policy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-governance-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-canada-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:canada",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-sovereignty-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:sovereignty",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-tag-attention-economy-tagged",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "tag:attention-economy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-social-network-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:social network",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-soft-power-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:soft power",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-dollar-regime-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:dollar regime",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-capital-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:capital",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-political-economy-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:political economy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-protocol-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:protocol",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-governance-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:governance",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-identity-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:identity",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-self-sovereign-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:self-sovereign",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-semantic-perimeter-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:semantic perimeter",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-perimeter-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:perimeter",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-semper-idem-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:semper idem",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-autonomy-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:autonomy",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-intelligence-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:intelligence",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-giants-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:giants",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-transaction-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:transaction",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-tenable-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:tenable",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-transition-lexica",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:transition",
+        "kind": "lexica",
+        "weight": 2
+      },
+      {
         "id": "edge:essay-narrative-comment-tenable-md-series-polite-bureau-member-of-series",
         "from": "essay:narrative/comment/tenable.md",
         "to": "series:polite-bureau",
@@ -2749,6 +2968,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 5
+      },
+      {
+        "id": "edge:essay-narrative-comment-dust-up-md-term-animus-mention",
+        "from": "essay:narrative/comment/dust-up.md",
+        "to": "term:animus",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-arete-md-term-arete-mention",

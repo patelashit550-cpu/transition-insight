@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T00:49:30.947Z",
-  "essayCount": 16,
+  "generatedAt": "2026-10-05T02:32:38.919Z",
+  "essayCount": 17,
   "essays": [
     "governance/Carta.md",
     "governance/illumination/arete.md",
@@ -16,6 +16,7 @@
     "narrative/biography/ashit-patel.md",
     "narrative/biography/ronin.md",
     "narrative/comment/3am-eternal.md",
+    "narrative/comment/dust-up.md",
     "narrative/comment/Tenable.md",
     "narrative/comment/Transition.md"
   ],
@@ -75,7 +76,7 @@
     {
       "term": "Animus",
       "method": "extractive-synthesis",
-      "score": 35,
+      "score": 39,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -83,7 +84,8 @@
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
-        "narrative/biography/ashit-milne.md"
+        "narrative/biography/ashit-milne.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -110,12 +112,13 @@
     {
       "term": "Autonomy",
       "method": "extractive",
-      "score": 23,
+      "score": 35,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
-        "me/praxis.md"
+        "me/praxis.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -146,7 +149,7 @@
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 71,
+      "score": 85,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -159,7 +162,8 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -199,7 +203,7 @@
         "governance/intelligence/deus-en-machina.md",
         "narrative/biography/ronin.md"
       ],
-      "snippetCount": 2
+      "snippetCount": 3
     },
     {
       "term": "Creation",
@@ -215,6 +219,16 @@
         "narrative/biography/ronin.md",
         "narrative/comment/Tenable.md",
         "narrative/comment/Transition.md"
+      ],
+      "snippetCount": 4
+    },
+    {
+      "term": "Dollar Regime",
+      "method": "extractive",
+      "score": 16,
+      "sources": [
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -235,7 +249,7 @@
     {
       "term": "Flow",
       "method": "extractive",
-      "score": 53,
+      "score": 57,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -246,26 +260,28 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Giants",
       "method": "extractive",
-      "score": 23,
+      "score": 31,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/comment/Tenable.md"
+        "narrative/comment/Tenable.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 112,
+      "score": 125,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -278,14 +294,15 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Tenable.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 103,
+      "score": 119,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -299,14 +316,15 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Intelligence",
       "method": "extractive",
-      "score": 55,
+      "score": 67,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -316,18 +334,10 @@
         "me/sku.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/biography/ronin.md"
+        "narrative/biography/ronin.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
-    },
-    {
-      "term": "Keiretsu",
-      "method": "extractive-synthesis",
-      "score": 13,
-      "sources": [
-        "me/origins.md"
-      ],
-      "snippetCount": 2
     },
     {
       "term": "Ledger",
@@ -413,7 +423,7 @@
     {
       "term": "Perimeter",
       "method": "extractive-synthesis",
-      "score": 47,
+      "score": 55,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -424,14 +434,15 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Political Economy",
       "method": "extractive-synthesis",
-      "score": 75,
+      "score": 83,
       "sources": [
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
@@ -443,7 +454,8 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -460,14 +472,15 @@
     {
       "term": "Product",
       "method": "extractive-synthesis",
-      "score": 29,
+      "score": 33,
       "sources": [
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -490,7 +503,7 @@
     {
       "term": "Protocol",
       "method": "extractive",
-      "score": 49,
+      "score": 62,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
@@ -499,20 +512,22 @@
         "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Self-sovereign",
       "method": "extractive-synthesis",
-      "score": 24,
+      "score": 32,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
-        "narrative/biography/ashit-milne.md"
+        "narrative/biography/ashit-milne.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
@@ -530,7 +545,7 @@
     {
       "term": "Semantic Perimeter",
       "method": "extractive-synthesis",
-      "score": 40,
+      "score": 48,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/semper idem.md",
@@ -538,14 +553,15 @@
         "me/praxis.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Semper Idem",
       "method": "extractive",
-      "score": 34,
+      "score": 46,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/semper idem.md",
@@ -553,14 +569,15 @@
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/biography/ashit-patel.md"
+        "narrative/biography/ashit-patel.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Social Network",
       "method": "extractive",
-      "score": 44,
+      "score": 56,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -569,14 +586,15 @@
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
         "me/trials-of-job.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 48,
+      "score": 56,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
@@ -586,35 +604,38 @@
         "me/sku.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Tenable",
       "method": "extractive-synthesis",
-      "score": 20,
+      "score": 28,
       "sources": [
         "me/praxis.md",
         "narrative/comment/Tenable.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "transaction",
       "method": "extractive-synthesis",
-      "score": 16,
+      "score": 24,
       "sources": [
         "narrative/comment/Tenable.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Truth",
       "method": "extractive-synthesis",
-      "score": 53,
+      "score": 57,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -625,14 +646,15 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 66,
+      "score": 70,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -645,20 +667,22 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Virtue",
       "method": "extractive",
-      "score": 26,
+      "score": 30,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/Tenable.md"
+        "narrative/comment/Tenable.md",
+        "narrative/comment/dust-up.md"
       ],
       "snippetCount": 4
     },
