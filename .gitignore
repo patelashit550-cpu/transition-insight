@@ -59,3 +59,6 @@ GenX.zip
 data/imports/
 
 exports/
+
+# Obsidian writing helpers (local vault UX; not site content)
+_obsidian/
