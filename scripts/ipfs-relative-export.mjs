@@ -9,11 +9,42 @@ if (!existsSync(outDir)) {
   console.error("ipfs-relative-export: out/ missing — run npm run build:global first");
   process.exit(1);
 }
+
+/**
+ * Next.js App Router static export writes React Flight payloads next to each
+ * HTML page as `index.txt` and `__next*.txt` (see next/dist/export). Those
+ * files contain the same Turbopack chunk identifiers as inline `__next_f`
+ * scripts. Rewriting `"/_next/` inside them prevents the client router from
+ * matching registered chunks, so in-app navigation hangs after the first page.
+ * robots.txt / security.txt are the only public .txt files that may need a
+ * prefix rewrite, and they do not use those identifiers.
+ * @param {string} relativePath
+ */
+function isNextFlightPayload(relativePath) {
+  const name = relativePath.replace(/\\/g, "/").split("/").pop() || "";
+  return name === "index.txt" || name.startsWith("__next");
+}
+
+/**
+ * Agent discovery docs under `.well-known/` publish root-absolute paths
+ * (`"/.well-known/…"`, `"/attestation.json"`) as a protocol contract for
+ * origin-based clients. Relativizing those strings (e.g. to `"../.well-known/…"`)
+ * corrupts the live Pages/sol.site discovery surface even though HTML asset
+ * refs to the same prefixes still need rewriting for path gateways.
+ * @param {string} relativePath
+ */
+function isWellKnownDiscoveryDoc(relativePath) {
+  const normalizedPath = relativePath.replace(/\\/g, "/");
+  return normalizedPath === ".well-known" || normalizedPath.startsWith(".well-known/");
+}
+
 const files = walkFiles(outDir).filter(({ relativePath }) => {
   const normalizedPath = relativePath.replace(/\\/g, "/");
   return (
     /\.(html|js|css|json|txt|xml|webmanifest)$/.test(normalizedPath) &&
-    !normalizedPath.startsWith("_next/")
+    !normalizedPath.startsWith("_next/") &&
+    !isNextFlightPayload(normalizedPath) &&
+    !isWellKnownDiscoveryDoc(normalizedPath)
   );
 });
 
