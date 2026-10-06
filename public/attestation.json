@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-05T03:05:02.759Z",
+  "generated": "2026-10-06T18:48:04.399Z",
   "tier": "global",
-  "manifestDigest": "sha256:65d51474d3d56194916743bc846c8797afd237789edd13e29483d8edac44b296",
+  "manifestDigest": "sha256:438029591264468ce2d4568e8654e8a2fe89b01976b189bdcb9c2c498c94a385",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -13,8 +13,8 @@
   },
   "summary": {
     "totalOntologyFiles": 77,
-    "attestedFiles": 17,
-    "signedFiles": 17
+    "attestedFiles": 18,
+    "signedFiles": 18
   },
   "attested": [
     {
@@ -186,13 +186,23 @@
       "slug": "transition",
       "series": "Polite Bureau",
       "sha256": "sha256:28073eaa9f46e2417307489da434d1de8d42d1da6eff825812dc735be18bde9a"
+    },
+    {
+      "path": "ontology/narrative/comment/canada-at-war.md",
+      "stage": "published",
+      "title": "Tenuous",
+      "author": null,
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "slug": "tenuous",
+      "series": "Polite Bureau",
+      "sha256": "sha256:8f8e132a10d017fdef45fcf897f6f31ec536aeaba64e34c012fa800a1b62feae"
     }
   ],
   "signature": {
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "5HwisjHNQFr6ETjLTiZQc2X7MyvKKHTXEntXs8fFeTQj7i6Q6Xju4shhTz2M5vStWtjrnP3zm3XALj1ZF7cuLqMZ",
-    "signedAt": "2026-10-05T03:05:12.699Z"
+    "value": "2WDrbAVCJuzeAH5znoxqRQnsb684zz8uqPDfyogdidPjPby1dv159WzjbEngB3H114PGhjM7HxrtkNQ41KE2CW3S",
+    "signedAt": "2026-10-06T18:48:13.797Z"
   }
 }

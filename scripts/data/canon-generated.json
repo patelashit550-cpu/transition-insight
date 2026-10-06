@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T02:32:38.919Z",
+  "generatedAt": "2026-10-06T18:48:01.937Z",
   "essayCount": 17,
   "essays": [
     "governance/Carta.md",
@@ -16,7 +16,7 @@
     "narrative/biography/ashit-patel.md",
     "narrative/biography/ronin.md",
     "narrative/comment/3am-eternal.md",
-    "narrative/comment/dust-up.md",
+    "narrative/comment/canada-at-war.md",
     "narrative/comment/Tenable.md",
     "narrative/comment/Transition.md"
   ],
@@ -85,7 +85,7 @@
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -118,7 +118,7 @@
         "governance/illumination/semper idem.md",
         "governance/illumination/social-network.md",
         "me/praxis.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -149,7 +149,7 @@
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 85,
+      "score": 84,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -163,14 +163,14 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Commons",
       "method": "extractive-synthesis",
-      "score": 61,
+      "score": 65,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -181,7 +181,8 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -228,21 +229,22 @@
       "score": 16,
       "sources": [
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Firmitas",
       "method": "extractive-synthesis",
-      "score": 25,
+      "score": 29,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "me/praxis.md",
         "me/trials-of-job.md",
-        "narrative/comment/Transition.md"
+        "narrative/comment/Transition.md",
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -261,7 +263,7 @@
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -274,7 +276,7 @@
         "governance/illumination/social-network.md",
         "narrative/biography/ashit-milne.md",
         "narrative/comment/Tenable.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -295,14 +297,14 @@
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Tenable.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 119,
+      "score": 118,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -317,14 +319,14 @@
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Intelligence",
       "method": "extractive",
-      "score": 67,
+      "score": 68,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -335,7 +337,7 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -435,7 +437,7 @@
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -455,7 +457,7 @@
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -472,7 +474,7 @@
     {
       "term": "Product",
       "method": "extractive-synthesis",
-      "score": 33,
+      "score": 34,
       "sources": [
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
@@ -480,7 +482,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -503,7 +505,7 @@
     {
       "term": "Protocol",
       "method": "extractive",
-      "score": 62,
+      "score": 57,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
@@ -513,7 +515,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -527,7 +529,7 @@
         "governance/intelligence/deus-en-machina.md",
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -554,14 +556,14 @@
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Semper Idem",
       "method": "extractive",
-      "score": 46,
+      "score": 42,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/semper idem.md",
@@ -570,14 +572,14 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Social Network",
       "method": "extractive",
-      "score": 56,
+      "score": 58,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -587,14 +589,14 @@
         "me/praxis.md",
         "me/trials-of-job.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 56,
+      "score": 52,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
@@ -605,7 +607,7 @@
         "me/trials-of-job.md",
         "narrative/biography/ashit-milne.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -617,7 +619,7 @@
         "me/praxis.md",
         "narrative/comment/Tenable.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -628,7 +630,7 @@
       "sources": [
         "narrative/comment/Tenable.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
@@ -647,14 +649,14 @@
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 70,
+      "score": 72,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -668,21 +670,21 @@
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },
     {
       "term": "Virtue",
       "method": "extractive",
-      "score": 30,
+      "score": 31,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Tenable.md",
-        "narrative/comment/dust-up.md"
+        "narrative/comment/canada-at-war.md"
       ],
       "snippetCount": 4
     },

@@ -110,6 +110,17 @@
         }
       }
     },
+    "/chronicle/polite_bureau/tenuous": {
+      "get": {
+        "operationId": "get_chronicle_polite_bureau_tenuous",
+        "summary": "Read public page at /chronicle/polite_bureau/tenuous",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/chronicle/polite_bureau/transition": {
       "get": {
         "operationId": "get_chronicle_polite_bureau_transition",
