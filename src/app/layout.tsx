@@ -33,7 +33,7 @@ const inter = localFont({
 
 /** Site meta description (homepage lede). The header banner stays SiteIdentity.description. */
 const SITE_DESCRIPTION =
-  "An inquiry into intelligence, identity and capital — and the structures through which we live together.";
+  "An inquiry into intelligence, identity and capital — and the structures through which we live and come together.";
 
 export const viewport: Viewport = {
   width: "device-width",

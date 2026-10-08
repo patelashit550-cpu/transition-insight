@@ -17,7 +17,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Transition Insight",
     short_name: "Transition",
-    description: "An inquiry into intelligence, identity and capital — and the structures through which we live together.",
+    description: "An inquiry into intelligence, identity and capital — and the structures through which we live and come together.",
     start_url: withBasePath("/"),
     display: "standalone",
     background_color: "#000000",
