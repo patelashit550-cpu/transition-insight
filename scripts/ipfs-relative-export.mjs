@@ -9,11 +9,24 @@ if (!existsSync(outDir)) {
   console.error("ipfs-relative-export: out/ missing — run npm run build:global first");
   process.exit(1);
 }
+/**
+ * React Flight payload files the App Router fetches on navigation/hydration
+ * (`index.txt`, `__next.*.txt`). Like inline flight scripts, their chunk
+ * references must stay root-absolute or the client runtime 404s chunks.
+ *
+ * @param {string} normalizedPath
+ */
+function isFlightPayload(normalizedPath) {
+  const name = normalizedPath.split("/").pop() ?? "";
+  return name === "index.txt" || name.startsWith("__next.");
+}
+
 const files = walkFiles(outDir).filter(({ relativePath }) => {
   const normalizedPath = relativePath.replace(/\\/g, "/");
   return (
     /\.(html|js|css|json|txt|xml|webmanifest)$/.test(normalizedPath) &&
-    !normalizedPath.startsWith("_next/")
+    !normalizedPath.startsWith("_next/") &&
+    !isFlightPayload(normalizedPath)
   );
 });
 
@@ -31,10 +44,12 @@ function relRoot(relativePath) {
 }
 
 /**
- * Keep React Flight payloads byte-for-byte intact. Their inline script records
- * contain Turbopack chunk identifiers, not browser URLs; rewriting those
- * identifiers prevents the client runtime from matching registered chunks and
- * leaves hydration suspended.
+ * Keep <script> elements byte-for-byte intact: both inline React Flight
+ * records and the `src` of the runtime chunk tags. They carry Turbopack chunk
+ * identifiers (`/_next/static/chunks/…`), not plain browser URLs; rewriting
+ * either side (e.g. to `./_next/…`) stops the client runtime matching
+ * registered chunks and leaves hydration silently suspended, so client
+ * components (compass watermark reveal, equal-height bento rows) never run.
  *
  * @param {string} html
  * @param {(text: string) => string} rewrite
@@ -47,10 +62,8 @@ function rewriteHtmlOutsideScriptBodies(html, rewrite) {
   for (const match of html.matchAll(scriptPattern)) {
     const matchStart = match.index;
     const script = match[0];
-    const openingTagEnd = script.indexOf(">") + 1;
     result += rewrite(html.slice(previousEnd, matchStart));
-    result += rewrite(script.slice(0, openingTagEnd));
-    result += script.slice(openingTagEnd);
+    result += script;
     previousEnd = matchStart + script.length;
   }
 

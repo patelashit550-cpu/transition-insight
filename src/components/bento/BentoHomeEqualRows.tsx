@@ -19,11 +19,21 @@ function getLandingBottomPadPx(): number {
   return Number.isFinite(pad) && pad > 0 ? pad : 48;
 }
 
-function getAvailableRowHeight(): number {
+/**
+ * Viewport band available to the card row, measured from the grid's own top
+ * edge so anything above it (header, home lede) is accounted for. Uses the
+ * document offset so the result does not change with scroll position.
+ */
+function getAvailableRowHeight(grid: HTMLElement | null): number {
   if (typeof window === "undefined") return Number.POSITIVE_INFINITY;
-  const header = document.querySelector(".p3-landing-hero");
   const viewportH = window.visualViewport?.height ?? window.innerHeight;
-  const top = header?.getBoundingClientRect().bottom ?? 0;
+  let top: number;
+  if (grid) {
+    top = grid.getBoundingClientRect().top + window.scrollY;
+  } else {
+    const header = document.querySelector(".p3-landing-hero");
+    top = header?.getBoundingClientRect().bottom ?? 0;
+  }
   return Math.max(0, Math.floor(viewportH - top - getLandingBottomPadPx()));
 }
 
@@ -40,11 +50,12 @@ function getWideMqSnapshot(): boolean {
 type Props = { visible: NavVisibilityPayload };
 
 /**
- * `md+`: equal-height row capped to the viewport band below the header.
+ * `md+`: equal-height row capped to the viewport band below the grid's top edge.
  * Shorter columns stretch; taller columns scroll inside `.bento-nav-scroller`.
  */
 export function BentoHomeEqualRows({ visible }: Props) {
   const frameRefs = useRef<(HTMLDivElement | null)[]>([null, null, null]);
+  const gridRef = useRef<HTMLDivElement>(null);
   const [rowPx, setRowPx] = useState<number | null>(null);
   const [layoutPass, setLayoutPass] = useState(0);
   
@@ -70,7 +81,7 @@ export function BentoHomeEqualRows({ visible }: Props) {
     const hs = els.map((el) => Math.ceil(el!.getBoundingClientRect().height));
     if (hs.some((h) => h < 1)) return;
     const natural = Math.max(hs[0]!, hs[1]!, hs[2]!);
-    const available = getAvailableRowHeight();
+    const available = getAvailableRowHeight(gridRef.current);
     if (available < 1) return;
     const h = Math.max(MIN_ROW_PX, Math.min(natural, available));
     setRowPx((p) => (p === h ? p : h));
@@ -142,6 +153,7 @@ export function BentoHomeEqualRows({ visible }: Props) {
 
   return (
     <div
+      ref={gridRef}
       className={cn(
         "bento-container bento-container--home w-full",
         isEqual && "bento-container--home-equal"
