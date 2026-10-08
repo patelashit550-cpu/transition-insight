@@ -2061,9 +2061,9 @@ body:has(.p3-topic-canvas--fit-viewport) {
   text-wrap: balance;
   transition: color 0.3s ease;
 }
-/* Same hover as the bento titles (.bento-box-title, .bento-category-title). */
+/* Lede brightens to white on hover (bento titles keep their green hover). */
 .p3-home-lede:hover {
-  color: #34d399;
+  color: #ffffff;
 }
 @media (max-width: 640px) {
   .p3-home-lede { margin: 4px 0 24px; font-size: 15px; line-height: 1.55; }
