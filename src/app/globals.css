@@ -2048,6 +2048,22 @@ body:has(.p3-topic-canvas--fit-viewport) {
   }
 }
 
+/* Home lede: one-line statement of purpose above the home bento. */
+.p3-home-lede {
+  margin: 8px 0 36px;
+  max-width: 46rem;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: rgb(161, 161, 170);
+  text-wrap: balance;
+}
+@media (max-width: 640px) {
+  .p3-home-lede { margin: 4px 0 24px; font-size: 15px; line-height: 1.55; }
+}
+
 .p3-bento-shell {
   --p3-bento-list-s: 1.12;
   margin-top: clamp(0.5rem, 0.3rem + 0.7vw, 1.1rem);

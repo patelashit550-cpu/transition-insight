@@ -31,6 +31,10 @@ const inter = localFont({
   display: "swap",
 });
 
+/** Site meta description (homepage lede). The header banner stays SiteIdentity.description. */
+const SITE_DESCRIPTION =
+  "An inquiry into intelligence, identity and capital — and the structures through which we live together.";
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -49,7 +53,18 @@ export function generateMetadata(): Metadata {
   return {
     metadataBase: metadataBaseUrl(),
     title: "Transition Insight",
-    description: "Planet-III: Human-Centric Governance",
+    description: SITE_DESCRIPTION,
+    openGraph: {
+      type: "website",
+      title: "Transition Insight",
+      description: SITE_DESCRIPTION,
+      siteName: SiteIdentity.name,
+    },
+    twitter: {
+      card: "summary",
+      title: "Transition Insight",
+      description: SITE_DESCRIPTION,
+    },
     icons: {
       icon: [{ url: withBasePath("/visuals/icon.png"), type: "image/png" }],
       shortcut: withBasePath("/visuals/icon.png"),
