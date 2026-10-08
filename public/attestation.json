@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-06T18:48:04.399Z",
+  "generated": "2026-10-08T22:16:08.112Z",
   "tier": "global",
-  "manifestDigest": "sha256:438029591264468ce2d4568e8654e8a2fe89b01976b189bdcb9c2c498c94a385",
+  "manifestDigest": "sha256:5d0186eba96f1c9b30973320223ad94cdbedcca1cf5797bef73e06114e278027",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,7 +12,7 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 77,
+    "totalOntologyFiles": 78,
     "attestedFiles": 18,
     "signedFiles": 18
   },
@@ -128,6 +128,16 @@
       "sha256": "sha256:9e4304f6493d8c8d0026029b35e2ef831d03a274b9903aeb8e9f4ea88e8108da"
     },
     {
+      "path": "ontology/narrative/audible/3am-eternal.md",
+      "stage": "published",
+      "title": "London Calling",
+      "author": null,
+      "publishedAt": "2026-09-16T00:00:00.000Z",
+      "slug": "3am-eternal",
+      "series": "3 AM Eternal",
+      "sha256": "sha256:b5f41faaa5947b7de838225ae794bd0d74c8778e57c80b5fd812b6ef15cca97f"
+    },
+    {
       "path": "ontology/narrative/biography/ashit-milne.md",
       "stage": "published",
       "title": "One Step Beyond",
@@ -135,7 +145,7 @@
       "publishedAt": "2026-07-01T00:00:00.000Z",
       "slug": "ashit-milne",
       "series": "The Times",
-      "sha256": "sha256:02620481771f0541706fde874207966040adf62f110ae8ef92c5692ba6a45c79"
+      "sha256": "sha256:962730bc6d0f332512930f7f836da7107efca6d04dec4170ef507edcf6d423e8"
     },
     {
       "path": "ontology/narrative/biography/ashit-patel.md",
@@ -156,16 +166,6 @@
       "slug": "ronin",
       "series": "The Times",
       "sha256": "sha256:63e68e6d9b12e08b263fea3f17904df960895f16eb3d8138649acc935d5b6e34"
-    },
-    {
-      "path": "ontology/narrative/comment/3am-eternal.md",
-      "stage": "published",
-      "title": "London Calling",
-      "author": null,
-      "publishedAt": "2026-09-16T00:00:00.000Z",
-      "slug": "3am-eternal",
-      "series": "3 AM Eternal",
-      "sha256": "sha256:b5f41faaa5947b7de838225ae794bd0d74c8778e57c80b5fd812b6ef15cca97f"
     },
     {
       "path": "ontology/narrative/comment/Tenable.md",
@@ -202,7 +202,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "2WDrbAVCJuzeAH5znoxqRQnsb684zz8uqPDfyogdidPjPby1dv159WzjbEngB3H114PGhjM7HxrtkNQ41KE2CW3S",
-    "signedAt": "2026-10-06T18:48:13.797Z"
+    "value": "5ieFGunuqmQfW12tAcHncFLEMo2u4rgx9ppdzthwr2wyadd7v5pgbRZ6DzkDsdiegvqkxVKwVi2T516n6niWP2FT",
+    "signedAt": "2026-10-08T22:16:18.499Z"
   }
 }

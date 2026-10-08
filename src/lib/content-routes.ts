@@ -67,7 +67,7 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     landerSlug: "skin-in-the-game",
     mode: "series",
     seriesName: "Skin in the Game",
-    landerOntologyRel: "narrative/comment/skin-in-the-game",
+    landerOntologyRel: "narrative/template/skin-in-the-game",
     showTopicNav: false,
   },
   "chronicle/3am-eternal": {
@@ -76,7 +76,7 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     landerSlug: "3am-eternal",
     mode: "series",
     seriesName: "3 AM Eternal",
-    landerOntologyRel: "narrative/comment/3am-eternal",
+    landerOntologyRel: "narrative/audible/3am-eternal",
     showTopicNav: false,
     fitViewport: true,
   },

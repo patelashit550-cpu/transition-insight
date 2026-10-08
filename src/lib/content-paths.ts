@@ -26,13 +26,13 @@ export const ONTOLOGY_TOPIC_KEYS: Record<string, readonly string[]> = {
 export const BENTO_ROUTE_ONTOLOGY: Record<string, string> = {
   "governance/carta": "governance/Carta",
   "governance/canonical": "governance/Canonical",
-  "governance/canonical-review": "governance/Canonical-Review",
+  "governance/canonical-review": "me/Canonical-Review",
   "governance/identity": "governance/identity/identity",
   "governance/capital": "governance/capital/capital",
   "governance/intelligence": "governance/intelligence/deus-en-machina",
   "governance/peridot": "governance/illumination/peridot",
   "chronicle/jack-london": "narrative/biography",
   "chronicle/polite_bureau": "narrative/comment/polite-bureau",
-  "chronicle/skin-in-the-game": "narrative/comment/skin-in-the-game",
-  "chronicle/3am-eternal": "narrative/comment/3am-eternal",
+  "chronicle/skin-in-the-game": "narrative/template/skin-in-the-game",
+  "chronicle/3am-eternal": "narrative/audible/3am-eternal",
 };

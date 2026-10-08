@@ -34,7 +34,7 @@ test("shippablePaths drops excluded entries", () => {
   assert.deepEqual(
     shippablePaths([
       { path: "ontology/a.md", kind: "content" },
-      { path: "ontology/governance/Canonical-Review.md", kind: "excluded" },
+      { path: "ontology/me/Canonical-Review.md", kind: "excluded" },
       { path: "SECURITY.md", kind: "docs" },
     ]),
     ["ontology/a.md", "SECURITY.md"],

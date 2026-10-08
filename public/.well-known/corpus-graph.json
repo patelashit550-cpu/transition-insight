@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:48:04.138Z",
+  "generatedAt": "2026-10-08T22:16:07.866Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -15,7 +15,7 @@
   "interior": {
     "summary": {
       "essays": 17,
-      "nodes": 181,
+      "nodes": 182,
       "edges": 437,
       "byKind": {
         "member-of-series": 12,
@@ -26,7 +26,7 @@
       },
       "orphanEssays": 0,
       "series": 6,
-      "folders": 6,
+      "folders": 7,
       "tags": 55,
       "terms": 97
     },
@@ -229,6 +229,22 @@
         ]
       },
       {
+        "id": "essay:narrative/audible/3am-eternal.md",
+        "type": "essay",
+        "label": "London Calling",
+        "stage": "published",
+        "slug": "3am-eternal",
+        "series": "3 AM Eternal",
+        "folder": "narrative/audible",
+        "ontologyPath": "narrative/audible/3am-eternal.md",
+        "vaultPath": "ontology/narrative/audible/3am-eternal",
+        "tags": [
+          "radio",
+          "telamon",
+          "firmitas"
+        ]
+      },
+      {
         "id": "essay:narrative/biography/ashit-milne.md",
         "type": "essay",
         "label": "One Step Beyond",
@@ -282,22 +298,6 @@
           "Art",
           "Identity",
           "Personal-Growth"
-        ]
-      },
-      {
-        "id": "essay:narrative/comment/3am-eternal.md",
-        "type": "essay",
-        "label": "London Calling",
-        "stage": "published",
-        "slug": "3am-eternal",
-        "series": "3 AM Eternal",
-        "folder": "narrative/comment",
-        "ontologyPath": "narrative/comment/3am-eternal.md",
-        "vaultPath": "ontology/narrative/comment/3am-eternal",
-        "tags": [
-          "radio",
-          "telamon",
-          "firmitas"
         ]
       },
       {
@@ -372,14 +372,14 @@
         "label": "sine-qua-non"
       },
       {
-        "id": "series:the-times",
-        "type": "series",
-        "label": "The Times"
-      },
-      {
         "id": "series:3-am-eternal",
         "type": "series",
         "label": "3 AM Eternal"
+      },
+      {
+        "id": "series:the-times",
+        "type": "series",
+        "label": "The Times"
       },
       {
         "id": "series:polite-bureau",
@@ -405,6 +405,11 @@
         "id": "folder:me",
         "type": "folder",
         "label": "me"
+      },
+      {
+        "id": "folder:narrative-audible",
+        "type": "folder",
+        "label": "narrative/audible"
       },
       {
         "id": "folder:narrative-biography",
@@ -617,6 +622,21 @@
         "label": "commons"
       },
       {
+        "id": "tag:radio",
+        "type": "tag",
+        "label": "radio"
+      },
+      {
+        "id": "tag:telamon",
+        "type": "tag",
+        "label": "telamon"
+      },
+      {
+        "id": "tag:firmitas",
+        "type": "tag",
+        "label": "firmitas"
+      },
+      {
         "id": "tag:community",
         "type": "tag",
         "label": "Community"
@@ -660,21 +680,6 @@
         "id": "tag:art",
         "type": "tag",
         "label": "Art"
-      },
-      {
-        "id": "tag:radio",
-        "type": "tag",
-        "label": "radio"
-      },
-      {
-        "id": "tag:telamon",
-        "type": "tag",
-        "label": "telamon"
-      },
-      {
-        "id": "tag:firmitas",
-        "type": "tag",
-        "label": "firmitas"
       },
       {
         "id": "tag:monetary-policy",
@@ -2102,6 +2107,41 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-narrative-audible-3am-eternal-md-series-3-am-eternal-member-of-series",
+        "from": "essay:narrative/audible/3am-eternal.md",
+        "to": "series:3-am-eternal",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-audible-3am-eternal-md-folder-narrative-audible-member-of-folder",
+        "from": "essay:narrative/audible/3am-eternal.md",
+        "to": "folder:narrative-audible",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-audible-3am-eternal-md-tag-radio-tagged",
+        "from": "essay:narrative/audible/3am-eternal.md",
+        "to": "tag:radio",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-audible-3am-eternal-md-tag-telamon-tagged",
+        "from": "essay:narrative/audible/3am-eternal.md",
+        "to": "tag:telamon",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-audible-3am-eternal-md-tag-firmitas-tagged",
+        "from": "essay:narrative/audible/3am-eternal.md",
+        "to": "tag:firmitas",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-series-the-times-member-of-series",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "series:the-times",
@@ -2366,41 +2406,6 @@
         "to": "term:yoga",
         "kind": "lexica",
         "weight": 2
-      },
-      {
-        "id": "edge:essay-narrative-comment-3am-eternal-md-series-3-am-eternal-member-of-series",
-        "from": "essay:narrative/comment/3am-eternal.md",
-        "to": "series:3-am-eternal",
-        "kind": "member-of-series",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-3am-eternal-md-folder-narrative-comment-member-of-folder",
-        "from": "essay:narrative/comment/3am-eternal.md",
-        "to": "folder:narrative-comment",
-        "kind": "member-of-folder",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-3am-eternal-md-tag-radio-tagged",
-        "from": "essay:narrative/comment/3am-eternal.md",
-        "to": "tag:radio",
-        "kind": "tagged",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-3am-eternal-md-tag-telamon-tagged",
-        "from": "essay:narrative/comment/3am-eternal.md",
-        "to": "tag:telamon",
-        "kind": "tagged",
-        "weight": 1
-      },
-      {
-        "id": "edge:essay-narrative-comment-3am-eternal-md-tag-firmitas-tagged",
-        "from": "essay:narrative/comment/3am-eternal.md",
-        "to": "tag:firmitas",
-        "kind": "tagged",
-        "weight": 1
       },
       {
         "id": "edge:essay-narrative-comment-canada-at-war-md-series-polite-bureau-member-of-series",
@@ -3082,20 +3087,20 @@
         "count": 1
       },
       {
+        "id": "edge:essay-narrative-audible-3am-eternal-md-term-calling-mention",
+        "from": "essay:narrative/audible/3am-eternal.md",
+        "to": "term:calling",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-calling-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:calling",
         "kind": "mention",
         "weight": 2,
         "count": 2
-      },
-      {
-        "id": "edge:essay-narrative-comment-3am-eternal-md-term-calling-mention",
-        "from": "essay:narrative/comment/3am-eternal.md",
-        "to": "term:calling",
-        "kind": "mention",
-        "weight": 1,
-        "count": 1
       },
       {
         "id": "edge:essay-narrative-comment-transition-md-term-calling-mention",

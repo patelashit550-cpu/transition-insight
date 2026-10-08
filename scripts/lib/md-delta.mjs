@@ -11,7 +11,7 @@ import { runSync } from "./run-cmd.mjs";
 
 /** Never committed or deployed by `ship` (review-tier glossary, local tool logs). */
 export const SHIP_EXCLUDE = [
-  "ontology/governance/Canonical-Review.md",
+  "ontology/me/Canonical-Review.md",
   ".aider.chat.history.md",
 ];
 

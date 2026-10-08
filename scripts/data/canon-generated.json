@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:48:01.937Z",
+  "generatedAt": "2026-10-08T22:16:05.806Z",
   "essayCount": 17,
   "essays": [
     "governance/Carta.md",
@@ -12,10 +12,10 @@
     "me/praxis.md",
     "me/sku.md",
     "me/trials-of-job.md",
+    "narrative/audible/3am-eternal.md",
     "narrative/biography/ashit-milne.md",
     "narrative/biography/ashit-patel.md",
     "narrative/biography/ronin.md",
-    "narrative/comment/3am-eternal.md",
     "narrative/comment/canada-at-war.md",
     "narrative/comment/Tenable.md",
     "narrative/comment/Transition.md"
@@ -140,8 +140,8 @@
       "score": 17,
       "sources": [
         "governance/illumination/social-network.md",
+        "narrative/audible/3am-eternal.md",
         "narrative/biography/ashit-milne.md",
-        "narrative/comment/3am-eternal.md",
         "narrative/comment/Transition.md"
       ],
       "snippetCount": 4

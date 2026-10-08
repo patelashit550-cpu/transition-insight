@@ -62,3 +62,6 @@ exports/
 
 # Obsidian writing helpers (local vault UX; not site content)
 _obsidian/
+
+# Local institutional reference models (do not ship; large / RA-licensed)
+.refs/
