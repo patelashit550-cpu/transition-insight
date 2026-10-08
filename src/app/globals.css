@@ -3489,6 +3489,25 @@ body:has(.p3-topic-canvas--fit-viewport) {
 }
 
 /*
+ * The wheel (z-index 2) paints over the home cards. Each card is isolated so its
+ * own layers stay inside it (cards 1 and 2 render under the wheel as before).
+ * The third card sits above the wheel instead, with a 0.3-alpha surface over an
+ * opaque #111113 layer on its frame that stays under the wheel. Same colour, but
+ * the wheel shows through it at 70% (30% less than over the other cards).
+ */
+.p3-landing-home .jurisdiction-card {
+  isolation: isolate;
+}
+.p3-landing-home .bento-home-card-frame:nth-child(3) {
+  background: #111113;
+  border-radius: 1.5rem;
+}
+.p3-landing-home .bento-home-card-frame:nth-child(3) > .jurisdiction-card {
+  z-index: 3;
+  background: rgba(17, 17, 19, 0.3) !important;
+}
+
+/*
  * Reading column, every category. The column stays left-aligned on its old
  * inset and takes half of the unused gap on the right.
  * 56rem → 42rem + 25% of the pane. Plate split (68rem) and overlay caps follow

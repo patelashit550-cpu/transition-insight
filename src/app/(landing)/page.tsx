@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="p3-landing-home flex flex-1 flex-col justify-start w-full relative">
       <CompassWatermark />
-      <div className="relative w-full" style={{ zIndex: 1 }}>
+      <div className="relative w-full">
         <HomeBento />
       </div>
     </div>
