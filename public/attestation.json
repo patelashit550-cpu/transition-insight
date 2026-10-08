@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-08T22:16:08.112Z",
+  "generated": "2026-10-08T22:27:27.999Z",
   "tier": "global",
-  "manifestDigest": "sha256:5d0186eba96f1c9b30973320223ad94cdbedcca1cf5797bef73e06114e278027",
+  "manifestDigest": "sha256:e9cba182f7a69a2aa6d806e13217592b4413a67fdf69c03712a46486d1a360b3",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -35,7 +35,7 @@
       "publishedAt": null,
       "slug": "carta",
       "series": "regnum-dei",
-      "sha256": "sha256:9e0ad0aa63023b106dca632110179fec2ecf62a47eeb5b6e6f9aacb57a603c4a"
+      "sha256": "sha256:052efaf3fb259565a0d0a485d0e1c51a2ab0ea2527af22943a0e7ea990efe2a8"
     },
     {
       "path": "ontology/governance/illumination/arete.md",
@@ -55,7 +55,7 @@
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "slug": "semper-idem",
       "series": "peridot",
-      "sha256": "sha256:6ed7249e708e1abade902a627d12ebfcf06acd0b42b868e49da46acf41dbfc82"
+      "sha256": "sha256:e27a1f5a4dc9ff3f23a7eac76009ed6223a5549deb7b52f5b8f831fd3bb8143f"
     },
     {
       "path": "ontology/governance/illumination/social-network.md",
@@ -95,7 +95,7 @@
       "publishedAt": "2026-04-27T00:00:00.000Z",
       "slug": "origins",
       "series": null,
-      "sha256": "sha256:07dd49bcb0839234333e5ed077aae6a8b477967f4aadfa3f3c3d19eabbf4bf8a"
+      "sha256": "sha256:9f4a814c6349630cfaf95db337a7ecfa73f96a2482d5698c8e88e8e51735a94e"
     },
     {
       "path": "ontology/me/praxis.md",
@@ -125,7 +125,7 @@
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "slug": "trials-of-job",
       "series": null,
-      "sha256": "sha256:9e4304f6493d8c8d0026029b35e2ef831d03a274b9903aeb8e9f4ea88e8108da"
+      "sha256": "sha256:5e625a5e994778134690c175086171e70c60421e17c4015bea0bc4b31c943c76"
     },
     {
       "path": "ontology/narrative/audible/3am-eternal.md",
@@ -155,7 +155,7 @@
       "publishedAt": "2026-06-27T00:00:00.000Z",
       "slug": "ashit-patel",
       "series": "The Times",
-      "sha256": "sha256:1b41bb8278bf621a7883e5e4da234dbc5e6f7a1075c8d53497588581c68a4d04"
+      "sha256": "sha256:a9f495399e5a80fd3988065a9b09f64dad7d8cfeea619e6acc72bfb050602a0a"
     },
     {
       "path": "ontology/narrative/biography/ronin.md",
@@ -202,7 +202,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "5ieFGunuqmQfW12tAcHncFLEMo2u4rgx9ppdzthwr2wyadd7v5pgbRZ6DzkDsdiegvqkxVKwVi2T516n6niWP2FT",
-    "signedAt": "2026-10-08T22:16:18.499Z"
+    "value": "2mwXNburxBEvGNnfop4fNZzjQnJWrMKrzPh1EC2Dd7wqbwfMxPi6rXmYcctfiu9jXKUVj6VVTcMfrXVAFeydZJEk",
+    "signedAt": "2026-10-08T22:27:36.796Z"
   }
 }

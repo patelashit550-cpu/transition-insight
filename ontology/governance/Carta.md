@@ -63,7 +63,7 @@ This ontology represents the truth as I personally see it—developed in clear, 
 
 ### Regnum Dei
 
-The core component of the ontology is _Regnum Dei_. Typically seen as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for truth*_.
+The core component of the ontology is _Regnum Dei_. Typically seen as the _Reign of God_, I translate it as _Divine Governance_—where "divine" retains its root sense of *a search for truth*.
 
 Truth (**_veritas_**) serves as the basis or foundation for a process through which we generate solutions or utilities (**_utilitas_**) to solve problems and manifest structural integrity (**_firmitas_**) in the real world. The ethical grounding for this process draws from _Sanatana Dharma_ (popularly known in the West as Yoga or Hinduism).
 

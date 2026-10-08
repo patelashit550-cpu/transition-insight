@@ -70,6 +70,8 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: out
+          # v5 drops dotfiles by default; keep .well-known/ and .nojekyll.
+          include-hidden-files: true
 
   deploy:
     needs: build
