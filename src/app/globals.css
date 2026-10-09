@@ -3375,16 +3375,35 @@ body:has(.p3-topic-canvas--fit-viewport) {
   min-height: 0;
 }
 
+/* Radio player: twice Spotify's standard large embed (704px vs 352px), full content width. */
 .p3-topic-canvas--fit-viewport .p3-allowlisted-embed-frame {
-  flex: 1 1 auto;
-  min-height: 152px;
-  max-height: 352px;
+  flex: 0 0 auto;
+  height: 704px;
+  min-height: 352px;
+  max-height: none;
   margin: 0;
 }
 
 .p3-topic-canvas--fit-viewport .p3-allowlisted-embed--spotify {
   height: 100%;
-  min-height: 152px;
+  min-height: 352px;
+}
+
+/* Desktop: when 704px doesn't fit under the title, the canvas scrolls rather than clipping the player. */
+@media (min-width: 768px) {
+  .p3-topic-canvas--fit-viewport {
+    overflow-y: auto;
+  }
+}
+
+/* Phones: fill the rest of the screen (352px to 704px) so the full-width player never runs past
+   the fold, where it would trap touch scrolling. */
+@media (max-width: 767px) {
+  .p3-topic-canvas--fit-viewport .p3-allowlisted-embed-frame {
+    flex: 1 1 auto;
+    height: auto;
+    max-height: 704px;
+  }
 }
 
 .p3-topic-article__title {
