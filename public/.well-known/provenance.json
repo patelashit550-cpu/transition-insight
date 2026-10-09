@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "generated": "2026-10-09T01:04:46.465Z",
+  "generated": "2026-10-09T12:04:56.924Z",
   "canonical": "https://ashitmilne.xyz",
   "aliases": [
     {
@@ -38,13 +38,14 @@
     "handwriting": "https://ashitmilne.xyz/identity/handwriting/MANIFEST.json"
   },
   "handwriting": {
-    "description": "Ashit Milne's handwriting: original samples (metadata removed), the Ashit Hand font (OFL-1.1) and the hand-lettered homepage line.",
+    "description": "Ashit Milne's handwriting: original samples (metadata removed), the Ashit Hand font (OFL-1.1), the hand-lettered homepage line and his signature.",
     "manifest": "https://ashitmilne.xyz/identity/handwriting/MANIFEST.json",
-    "manifestDigest": "sha256:1d8afdab70c4aea262286308d49c73f1004e58f38af8f19eafc684f19751f41d",
+    "manifestDigest": "sha256:49a8c13aa9386f934c09e2e473de16ba0cd9bbe0294f0fd0dbe66774230d45d0",
     "readme": "https://ashitmilne.xyz/identity/handwriting/README.md",
     "font": "https://ashitmilne.xyz/identity/handwriting/font/AshitHand-Regular.woff2",
+    "signature": "https://ashitmilne.xyz/identity/handwriting/signature/ash.svg",
     "version": "0.1",
-    "fileCount": 12
+    "fileCount": 13
   },
   "pool": {
     "description": "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",

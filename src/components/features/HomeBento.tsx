@@ -14,6 +14,11 @@ export function HomeBento() {
         <span className="p3-hw p3-hw--narrow" aria-hidden="true" />
       </p>
       <BentoGrid />
+      {/* Signature (public/identity/handwriting/signature/ash.svg), drawn as a mask over
+          currentColor like the lede: grey at rest, white on hover. */}
+      <div className="p3-home-sig">
+        <span className="p3-sig" role="img" aria-label="Ash" />
+      </div>
     </BentoContainer>
   );
 }

@@ -2110,6 +2110,31 @@ body:has(.p3-topic-canvas--fit-viewport) {
   .p3-hw--wide { display: none; }
   .p3-hw--narrow { display: block; }
 }
+/* Homepage signature: right-aligned to the card row's edge (Telamon), same mask-over-currentColor
+   approach and grey→white hover as the lede. Fixed aspect ratio keeps its height known at first
+   layout; 22px + 55px + 18px fits under the cards at 1440×900 without scrolling. */
+.p3-home-sig {
+  display: flex;
+  justify-content: flex-end;
+  margin: 22px 0 18px;
+}
+.p3-sig {
+  display: block;
+  width: 156px;
+  aspect-ratio: 9595 / 3357;
+  color: rgb(161, 161, 170);
+  background-color: currentColor;
+  transition: color 0.3s ease;
+  -webkit-mask: url("/identity/handwriting/signature/ash.svg") center / contain no-repeat;
+  mask: url("/identity/handwriting/signature/ash.svg") center / contain no-repeat;
+}
+.p3-sig:hover {
+  color: #ffffff;
+}
+@media (max-width: 640px) {
+  .p3-home-sig { margin: 24px 0 28px; }
+  .p3-sig { width: 120px; }
+}
 
 .p3-bento-shell {
   --p3-bento-list-s: 1.12;

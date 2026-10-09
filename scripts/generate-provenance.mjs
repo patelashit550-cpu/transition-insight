@@ -38,11 +38,12 @@ if (existsSync(handwritingManifestPath)) {
   const base = `${identity.canonical}/identity/handwriting`;
   handwriting = {
     description:
-      "Ashit Milne's handwriting: original samples (metadata removed), the Ashit Hand font (OFL-1.1) and the hand-lettered homepage line.",
+      "Ashit Milne's handwriting: original samples (metadata removed), the Ashit Hand font (OFL-1.1), the hand-lettered homepage line and his signature.",
     manifest: `${base}/MANIFEST.json`,
     manifestDigest: `sha256:${createHash("sha256").update(raw).digest("hex")}`,
     readme: `${base}/README.md`,
     font: `${base}/font/AshitHand-Regular.woff2`,
+    signature: `${base}/signature/ash.svg`,
     version: manifest.version ?? null,
     fileCount: Array.isArray(manifest.files) ? manifest.files.length : null,
   };

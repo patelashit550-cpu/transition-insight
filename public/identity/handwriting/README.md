@@ -1,7 +1,7 @@
 # Handwriting: Ashit Milne
 
 An identity marker for this site, alongside the signing key, DID and ENS/SNS names: samples of my own
-handwriting, the font made from them, and the hand-lettered homepage line. Every file here is listed with its
+handwriting, the font made from them, the hand-lettered homepage line and my signature. Every file here is listed with its
 SHA-256 in `MANIFEST.json`.
 
 ## Samples (`samples/`)
@@ -53,6 +53,22 @@ The full-size originals are kept off-site. They have also had their camera metad
 - `homepage-line-mobile.svg`: the same sentence in four lines, for narrow screens.
 
 The page keeps the sentence as real (visually hidden) text, and the drawing takes the lede's colour.
+
+## Signature (`signature/`)
+
+- `signature/ash.svg`: my signature, "Ash", as I sign it now. It is shown at the foot of the homepage.
+- Traced from one phone photo of the signature in sharpie on plain paper, taken 9 October 2026:
+  1. The page was flattened and the ink thresholded.
+  2. The strokes were skeletonised to their pen paths, kept in the order I write them, with only
+     small jitters smoothed.
+  3. They were re-stroked at one even pen width with round ends, and drawn in `currentColor`.
+  4. The last stretch of the tail narrows slightly, where the pen lifted.
+- The photo itself is not published. It has had its camera metadata removed, losslessly
+  (`jpegtran -copy none`). Its fingerprint:
+
+| Original (full size, not published) | Pixels | Bytes | SHA-256 |
+|---|---|---|---|
+| `2026-10-09-signature-ash.jpg` | 4000×3000 | 3,439,146 | `244b7dbc918337c4b4a7893956efc08604e7de04e2383ab0ef20cfe14364afef` |
 
 ## Verify
 

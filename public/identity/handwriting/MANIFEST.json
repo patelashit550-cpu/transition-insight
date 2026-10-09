@@ -2,6 +2,7 @@
  "name": "Ashit Milne handwriting",
  "version": "0.1",
  "created": "2026-10-08",
+ "updated": "2026-10-09",
  "author": "Ashit Milne",
  "canonical": "https://ashitmilne.xyz/identity/handwriting/",
  "license": {
@@ -10,8 +11,8 @@
  "files": [
   {
    "path": "README.md",
-   "bytes": 3319,
-   "sha256": "e217c51487f9605be5ea558d3b7c62e1ad34223f087e0630d84bb8e6076026a5"
+   "bytes": 4255,
+   "sha256": "90be9f5597a8af5e9411e14b861cde9f8d7af6b4042c7e2b41da59759d6e70d9"
   },
   {
    "path": "font/AshitHand-Regular.otf",
@@ -64,6 +65,11 @@
    "sha256": "c1d8e958ed202d88242a6efd861dc4b49802c38a48505f710632ad5a66b56e4d"
   },
   {
+   "path": "signature/ash.svg",
+   "bytes": 4856,
+   "sha256": "ec5d32ca3b4cf91d06e0b22d5fcf676cea78388b2b6c5c5aefb083340d428489"
+  },
+  {
    "path": "specimen.png",
    "bytes": 256605,
    "sha256": "dc0c8f092e2e81e70c33ad4e52df4f085d20bd4e88e4b02a8f522d41148927ad"
@@ -96,6 +102,15 @@
    "height": 4000,
    "bytes": 3075915,
    "sha256": "d6c895c8c75632e11e2ec6576d971e9223371ce049ccccfe5018621b0bb704c7"
+  },
+  {
+   "path": "signature/2026-10-09-signature-ash.jpg",
+   "published": false,
+   "note": "full-size original, camera metadata removed; not published (the signature is published as signature/ash.svg)",
+   "width": 4000,
+   "height": 3000,
+   "bytes": 3439146,
+   "sha256": "244b7dbc918337c4b4a7893956efc08604e7de04e2383ab0ef20cfe14364afef"
   }
  ]
 }
