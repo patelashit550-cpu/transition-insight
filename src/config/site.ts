@@ -64,10 +64,10 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     ],
   },
   B2: {
-    title: "Ontology",
+    title: "Telamon",
     label: "Utilitas",
     nodeKicker: "शिवम",
-    subtitle: "Anarchism: A Philosophy",
+    subtitle: "Anarchism: An Ontology",
     status: "NODE_STABLE // 002",
     requiresAuth: false,
     series: [
@@ -81,7 +81,7 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     ],
   },
   B3: {
-    title: "Telamon",
+    title: "Argonaut",
     label: "Firmitas",
     nodeKicker: "सुन्दरम",
     subtitle: "Jackanory: The Tangent",
