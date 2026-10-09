@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-08T22:27:27.999Z",
+  "generated": "2026-10-09T16:35:06.944Z",
   "tier": "global",
-  "manifestDigest": "sha256:e9cba182f7a69a2aa6d806e13217592b4413a67fdf69c03712a46486d1a360b3",
+  "manifestDigest": "sha256:d2319639173da5617f305b360e2b3a8a6ab3c03474274614b574d5163cc018bd",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -195,14 +195,14 @@
       "publishedAt": "2026-10-06T00:00:00.000Z",
       "slug": "tenuous",
       "series": "Polite Bureau",
-      "sha256": "sha256:8f8e132a10d017fdef45fcf897f6f31ec536aeaba64e34c012fa800a1b62feae"
+      "sha256": "sha256:61c6859ae4817fd610331721ab892686a6f152faaa8348412fe0fdc398bbbb0d"
     }
   ],
   "signature": {
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "2mwXNburxBEvGNnfop4fNZzjQnJWrMKrzPh1EC2Dd7wqbwfMxPi6rXmYcctfiu9jXKUVj6VVTcMfrXVAFeydZJEk",
-    "signedAt": "2026-10-08T22:27:36.796Z"
+    "value": "2Kmz9L6bEy6A2js1BHUmqqiGTGS1d8kTdmGDJGAU2WuDtpiWMNGAqJjneDKijLHXCR9fAYpHobEjESPDV2n77HPS",
+    "signedAt": "2026-10-09T16:35:16.126Z"
   }
 }
