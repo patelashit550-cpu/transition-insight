@@ -2122,6 +2122,10 @@ body:has(.p3-topic-canvas--fit-viewport) {
   display: block;
   width: 156px;
   aspect-ratio: 9595 / 3357;
+  /* Sits 28px lower than its slot so it clears the wheel's lower-right frame when the wheel
+     lights up; a relative offset moves the paint only, so the 1440×900 page height is unchanged. */
+  position: relative;
+  top: 28px;
   color: rgb(161, 161, 170);
   background-color: currentColor;
   transition: color 0.3s ease;
