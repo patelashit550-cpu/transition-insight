@@ -4,8 +4,14 @@ import { BentoGrid } from '@/components/bento/BentoGrid';
 export function HomeBento() {
   return (
     <BentoContainer>
-      <p className="p3-home-lede">
-        An inquiry into intelligence, identity and capital — and the structures through which we live and come together.
+      {/* Lede in Ashit's handwriting (public/identity/handwriting/). The sentence stays as
+          visually hidden text for screen readers and search; the drawings are decorative. */}
+      <p className="p3-home-lede p3-home-lede--hand">
+        <span className="p3-hw-sr">
+          An inquiry into intelligence, identity and capital — and the structures through which we live and come together.
+        </span>
+        <span className="p3-hw p3-hw--wide" aria-hidden="true" />
+        <span className="p3-hw p3-hw--narrow" aria-hidden="true" />
       </p>
       <BentoGrid />
     </BentoContainer>

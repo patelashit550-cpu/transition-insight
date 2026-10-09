@@ -1,0 +1,101 @@
+{
+ "name": "Ashit Milne handwriting",
+ "version": "0.1",
+ "created": "2026-10-08",
+ "author": "Ashit Milne",
+ "canonical": "https://ashitmilne.xyz/identity/handwriting/",
+ "license": {
+  "font": "OFL-1.1"
+ },
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 3319,
+   "sha256": "e217c51487f9605be5ea558d3b7c62e1ad34223f087e0630d84bb8e6076026a5"
+  },
+  {
+   "path": "font/AshitHand-Regular.otf",
+   "bytes": 61236,
+   "sha256": "a63e1e49f42828e496e346308401438e599d1b0cb19228b6d6d3f96ef612d98a"
+  },
+  {
+   "path": "font/AshitHand-Regular.ttf",
+   "bytes": 58668,
+   "sha256": "ce301cf9a090e2c88db6595ba3078325a0f34bd5c04492f4b7394aa6895926cd"
+  },
+  {
+   "path": "font/AshitHand-Regular.woff2",
+   "bytes": 28960,
+   "sha256": "8aadfa6f6914aae21e14a5bf89ddbd2619247aaa01fdaa9a4922349d2c1f0cb9"
+  },
+  {
+   "path": "font/OFL.txt",
+   "bytes": 4361,
+   "sha256": "0e843ccd7605f803dc091f35aaa550b3dc190f674427ee0eb775240128ab5bb0"
+  },
+  {
+   "path": "glyph-sources.json",
+   "bytes": 5816,
+   "sha256": "a4478b07b176810b8b0c4ed8d3937c8ac4a43ee4d96b2b0a73e91da582e53cf5"
+  },
+  {
+   "path": "homepage-line-mobile.svg",
+   "bytes": 41574,
+   "sha256": "9e996098a5d0368e7cd57759597b01e696dffa5d8b35bc8823af8250a47a8bc1"
+  },
+  {
+   "path": "homepage-line.svg",
+   "bytes": 42030,
+   "sha256": "98fe889f4c9faf39fd34c9ec2c4a6690eca4292f3abc0e1bedb26f62944bee11"
+  },
+  {
+   "path": "samples/2026-10-08-homepage-line-notebook.jpg",
+   "bytes": 346574,
+   "sha256": "e53d4dffb439af1b7de41865a6d76a085ade380d2cf2722fd924e25286ffd878"
+  },
+  {
+   "path": "samples/2026-10-08-homepage-line-rewrite.jpg",
+   "bytes": 184733,
+   "sha256": "b830e1dbba194663071315daf6e28f01a8f1fcd4c0d83e3b283d643aa53b6755"
+  },
+  {
+   "path": "samples/2026-10-08-practice-sheet.jpg",
+   "bytes": 428944,
+   "sha256": "c1d8e958ed202d88242a6efd861dc4b49802c38a48505f710632ad5a66b56e4d"
+  },
+  {
+   "path": "specimen.png",
+   "bytes": 256605,
+   "sha256": "dc0c8f092e2e81e70c33ad4e52df4f085d20bd4e88e4b02a8f522d41148927ad"
+  }
+ ],
+ "originals": [
+  {
+   "path": "samples/2026-10-08-homepage-line-notebook.jpg",
+   "published": false,
+   "note": "full-size original, camera metadata removed; the published file is a 2000px copy",
+   "width": 4000,
+   "height": 3000,
+   "bytes": 3531062,
+   "sha256": "b1c6aa8d6cadcd5ad8847cf37964e0d37c38011b00d051f9d66149c385ef8087"
+  },
+  {
+   "path": "samples/2026-10-08-homepage-line-rewrite.jpg",
+   "published": false,
+   "note": "full-size original, camera metadata removed; the published file is a 2000px copy",
+   "width": 4000,
+   "height": 1170,
+   "bytes": 1275750,
+   "sha256": "63259c8c5ebc6f13a101562d4b2b38929dd064a3c8a5b64d351c36884ac0c3c7"
+  },
+  {
+   "path": "samples/2026-10-08-practice-sheet.jpg",
+   "published": false,
+   "note": "full-size original, camera metadata removed; the published file is a 2000px copy",
+   "width": 2992,
+   "height": 4000,
+   "bytes": 3075915,
+   "sha256": "d6c895c8c75632e11e2ec6576d971e9223371ce049ccccfe5018621b0bb704c7"
+  }
+ ]
+}

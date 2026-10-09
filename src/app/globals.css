@@ -2068,6 +2068,48 @@ body:has(.p3-topic-canvas--fit-viewport) {
 @media (max-width: 640px) {
   .p3-home-lede { margin: 4px 0 24px; font-size: 15px; line-height: 1.55; }
 }
+/* Handwritten lede: the bundle SVG is a mask over currentColor, so the lede's grey rest and
+   white hover (color 0.3s ease) drive the ink. Fixed aspect ratios keep the height known at
+   first layout, so the home card fit measures the same before and after the mask loads. */
+.p3-hw-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.p3-home-lede--hand { position: relative; }
+.p3-hw {
+  display: block;
+  width: 100%;
+  background-color: currentColor;
+  -webkit-mask-position: left center;
+  mask-position: left center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.p3-hw--wide {
+  aspect-ratio: 5152 / 515;
+  -webkit-mask-image: url("/identity/handwriting/homepage-line.svg");
+  mask-image: url("/identity/handwriting/homepage-line.svg");
+}
+.p3-hw--narrow {
+  display: none;
+  max-width: 26rem;
+  aspect-ratio: 2571 / 1087;
+  -webkit-mask-image: url("/identity/handwriting/homepage-line-mobile.svg");
+  mask-image: url("/identity/handwriting/homepage-line-mobile.svg");
+}
+@media (max-width: 640px) {
+  .p3-hw--wide { display: none; }
+  .p3-hw--narrow { display: block; }
+}
 
 .p3-bento-shell {
   --p3-bento-list-s: 1.12;

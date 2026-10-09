@@ -1,0 +1,314 @@
+{
+ "U+0041": {
+  "char": "A",
+  "source": "sheet caps comp [64]"
+ },
+ "U+0042": {
+  "char": "B",
+  "source": "sheet caps comp [41]"
+ },
+ "U+0043": {
+  "char": "C",
+  "source": "sheet caps comp [34] x(None, 1118)"
+ },
+ "U+0044": {
+  "char": "D",
+  "source": "sheet caps comp [66]"
+ },
+ "U+0045": {
+  "char": "E",
+  "source": "sheet caps comp [60]"
+ },
+ "U+0046": {
+  "char": "F",
+  "source": "sheet caps comp [35, 46]"
+ },
+ "U+0047": {
+  "char": "G",
+  "source": "sheet caps comp [67, 69]"
+ },
+ "U+0048": {
+  "char": "H",
+  "source": "sheet caps comp [61, 59]"
+ },
+ "U+0049": {
+  "char": "I",
+  "source": "sheet caps comp [39]"
+ },
+ "U+004A": {
+  "char": "J",
+  "source": "sheet caps comp [32]"
+ },
+ "U+004B": {
+  "char": "K",
+  "source": "sheet caps comp [34, 53] x(1119, None)"
+ },
+ "U+004C": {
+  "char": "L",
+  "source": "sheet caps comp [62]"
+ },
+ "U+004D": {
+  "char": "M",
+  "source": "sheet caps comp [30]"
+ },
+ "U+004E": {
+  "char": "N",
+  "source": "sheet caps comp [51, 47]"
+ },
+ "U+004F": {
+  "char": "O",
+  "source": "sheet caps comp [57]"
+ },
+ "U+0050": {
+  "char": "P",
+  "source": "sheet caps comp [29, 36]"
+ },
+ "U+0051": {
+  "char": "Q",
+  "source": "sheet caps comp [28]"
+ },
+ "U+0052": {
+  "char": "R",
+  "source": "sheet caps comp [54]"
+ },
+ "U+0053": {
+  "char": "S",
+  "source": "sheet caps comp [33]"
+ },
+ "U+0054": {
+  "char": "T",
+  "source": "sheet caps comp [56]"
+ },
+ "U+0055": {
+  "char": "U",
+  "source": "sheet caps comp [37]"
+ },
+ "U+0056": {
+  "char": "V",
+  "source": "sheet caps comp [58]"
+ },
+ "U+0057": {
+  "char": "W",
+  "source": "sheet caps comp [48]"
+ },
+ "U+0058": {
+  "char": "X",
+  "source": "sheet caps comp [38]"
+ },
+ "U+0059": {
+  "char": "Y",
+  "source": "sheet caps comp [63]"
+ },
+ "U+005A": {
+  "char": "Z",
+  "source": "sheet caps comp [65]"
+ },
+ "U+0030": {
+  "char": "0",
+  "source": "sheet digits comp [129]"
+ },
+ "U+0031": {
+  "char": "1",
+  "source": "sheet digits comp [133]"
+ },
+ "U+0032": {
+  "char": "2",
+  "source": "sheet digits comp [135]"
+ },
+ "U+0033": {
+  "char": "3",
+  "source": "sheet digits comp [131]"
+ },
+ "U+0034": {
+  "char": "4",
+  "source": "sheet digits comp [130]"
+ },
+ "U+0035": {
+  "char": "5",
+  "source": "sheet digits comp [125]"
+ },
+ "U+0036": {
+  "char": "6",
+  "source": "sheet digits comp [127]"
+ },
+ "U+0037": {
+  "char": "7",
+  "source": "sheet digits comp [128]"
+ },
+ "U+0038": {
+  "char": "8",
+  "source": "sheet digits comp [123]"
+ },
+ "U+0039": {
+  "char": "9",
+  "source": "sheet digits comp [126]"
+ },
+ "U+0062": {
+  "char": "b",
+  "source": "sheet pangram comp [102]"
+ },
+ "U+0078": {
+  "char": "x",
+  "source": "sheet pangram comp [109]"
+ },
+ "U+0066": {
+  "char": "f",
+  "source": "sheet pangram comp [95] x(1903, 2008)"
+ },
+ "U+006B": {
+  "char": "k",
+  "source": "sheet pangram comp [4] x(1040, 1190)"
+ },
+ "U+007A": {
+  "char": "z",
+  "source": "sheet pangram comp [22] x(1262, 1383)"
+ },
+ "U+006A": {
+  "char": "j",
+  "source": "sheet pangram comp [120] x(810, 893)"
+ },
+ "U+0061": {
+  "char": "a",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0063": {
+  "char": "c",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0064": {
+  "char": "d",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0065": {
+  "char": "e",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0067": {
+  "char": "g",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0068": {
+  "char": "h",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0069": {
+  "char": "i",
+  "source": "v3 rewrite glyph"
+ },
+ "U+006C": {
+  "char": "l",
+  "source": "v3 rewrite glyph"
+ },
+ "U+006D": {
+  "char": "m",
+  "source": "v3 rewrite glyph"
+ },
+ "U+006E": {
+  "char": "n",
+  "source": "v3 rewrite glyph"
+ },
+ "U+006F": {
+  "char": "o",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0070": {
+  "char": "p",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0071": {
+  "char": "q",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0072": {
+  "char": "r",
+  "source": "v3 rewrite glyph (synthetic print r, v2 form)"
+ },
+ "U+0073": {
+  "char": "s",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0074": {
+  "char": "t",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0075": {
+  "char": "u",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0076": {
+  "char": "v",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0077": {
+  "char": "w",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0079": {
+  "char": "y",
+  "source": "v3 rewrite glyph"
+ },
+ "U+0026": {
+  "char": "&",
+  "source": "sheet punctuation/symbol comp [139], fitted to cap height"
+ },
+ "U+003F": {
+  "char": "?",
+  "source": "sheet punctuation/symbol comp [138, 150], fitted to cap height"
+ },
+ "U+0027": {
+  "char": "'",
+  "source": "sheet punctuation/symbol comp [141], fitted to cap height"
+ },
+ "U+0022": {
+  "char": "\"",
+  "source": "sheet punctuation/symbol comp [142, 143], fitted to cap height"
+ },
+ "U+0028": {
+  "char": "(",
+  "source": "sheet punctuation/symbol comp [137], fitted to cap height"
+ },
+ "U+0029": {
+  "char": ")",
+  "source": "sheet punctuation/symbol comp [136], fitted to cap height"
+ },
+ "U+002F": {
+  "char": "/",
+  "source": "sheet punctuation/symbol comp [140], fitted to cap height"
+ },
+ "U+0040": {
+  "char": "@",
+  "source": "sheet punctuation/symbol comp [156], fitted to cap height"
+ },
+ "U+0023": {
+  "char": "#",
+  "source": "sheet punctuation/symbol comp [153], fitted to cap height"
+ },
+ "U+0025": {
+  "char": "%",
+  "source": "sheet punctuation/symbol comp [154, 155, 157], fitted to cap height"
+ },
+ "U+003A": {
+  "char": ":",
+  "source": "sheet comp [144,149], dots re-seated"
+ },
+ "U+003B": {
+  "char": ";",
+  "source": "sheet comp [145,151], dots re-seated"
+ },
+ "U+002E": {
+  "char": ".",
+  "source": "sheet 'vow.' comp 94"
+ },
+ "U+002C": {
+  "char": ",",
+  "source": "sheet 'quartz,' comp 89"
+ },
+ "U+2014": {
+  "char": "—",
+  "source": "sheet digits-row dash comp 132"
+ },
+ "U+0021": {
+  "char": "!",
+  "source": "SYNTHESISED: his i stroke stretched to cap height + his full stop"
+ }
+}

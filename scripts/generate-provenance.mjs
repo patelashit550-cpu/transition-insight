@@ -1,4 +1,5 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { getContentBuildTier, getSovereignEnv } from "./lib/content-provenance.mjs";
@@ -26,6 +27,25 @@ try {
   attestation = JSON.parse(readFileSync(attestationPath, "utf8"));
 } catch {
   /* generate-attestation may not have run yet */
+}
+
+// Handwriting bundle (identity marker): public/identity/handwriting/MANIFEST.json
+const handwritingManifestPath = join(root, "public", "identity", "handwriting", "MANIFEST.json");
+let handwriting = null;
+if (existsSync(handwritingManifestPath)) {
+  const raw = readFileSync(handwritingManifestPath);
+  const manifest = JSON.parse(raw.toString("utf8"));
+  const base = `${identity.canonical}/identity/handwriting`;
+  handwriting = {
+    description:
+      "Ashit Milne's handwriting: original samples (metadata removed), the Ashit Hand font (OFL-1.1) and the hand-lettered homepage line.",
+    manifest: `${base}/MANIFEST.json`,
+    manifestDigest: `sha256:${createHash("sha256").update(raw).digest("hex")}`,
+    readme: `${base}/README.md`,
+    font: `${base}/font/AshitHand-Regular.woff2`,
+    version: manifest.version ?? null,
+    fileCount: Array.isArray(manifest.files) ? manifest.files.length : null,
+  };
 }
 
 const provenance = {
@@ -58,7 +78,9 @@ const provenance = {
     security: `${identity.canonical}/.well-known/security.txt`,
     apiCatalog: `${identity.canonical}/.well-known/api-catalog`,
     agentSkills: `${identity.canonical}/.well-known/agent-skills/index.json`,
+    ...(handwriting ? { handwriting: handwriting.manifest } : {}),
   },
+  handwriting,
   pool: {
     description:
       "Published ontology corpus attestation for milling, noding, and transaction-pool agents.",
