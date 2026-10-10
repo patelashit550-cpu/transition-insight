@@ -22,6 +22,21 @@ function gatewayBase() {
 }
 
 /**
+ * Human-readable Pinata error. Pinata returns `error` as a string on some endpoints and as
+ * `{ reason, details }` on others (e.g. 403 NO_SCOPES_FOUND), which used to print "[object Object]".
+ * @param {any} payload
+ */
+export function describePinataError(payload) {
+  const error = payload?.error ?? payload;
+  if (typeof error === "string") return error;
+  if (error && typeof error === "object") {
+    const parts = [error.reason, error.details, error.message].filter((v) => typeof v === "string" && v);
+    if (parts.length) return parts.join(" — ");
+  }
+  return JSON.stringify(error ?? {});
+}
+
+/**
  * Upload a directory to Pinata with wrapWithDirectory.
  * @param {string} dir absolute or cwd-relative directory path
  */
@@ -70,7 +85,7 @@ export async function uploadDirectory(dir) {
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
     throw new Error(
-      `Pinata upload failed (${response.status}): ${payload.error ?? JSON.stringify(payload)}`,
+      `Pinata upload failed (${response.status}): ${describePinataError(payload)}`,
     );
   }
 
@@ -120,7 +135,7 @@ export async function publishIpns(cid) {
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
     throw new Error(
-      `Pinata IPNS publish failed (${response.status}): ${payload.error ?? JSON.stringify(payload)}`,
+      `Pinata IPNS publish failed (${response.status}): ${describePinataError(payload)}`,
     );
   }
 
