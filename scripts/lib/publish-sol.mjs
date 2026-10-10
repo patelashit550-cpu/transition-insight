@@ -121,3 +121,30 @@ export function extractRootAssets(html) {
   }
   return [...urls];
 }
+
+/**
+ * Wait for a sent transaction by polling its signature status — not by comparing block heights,
+ * which some RPCs (publicnode) report wrongly (getBlockHeight returns the slot), making web3.js'
+ * blockheight strategy throw "expired" for transactions that actually landed.
+ * Resolves { status } once confirmed/finalized; throws on a failed tx, or on timeout (with the
+ * signature, so it can be checked on an explorer before any retry).
+ */
+export async function waitForSignature(connection, signature, { timeoutMs = 120_000, pollMs = 2_000, sleep } = {}) {
+  const wait = sleep ?? ((ms) => new Promise((resolve) => setTimeout(resolve, ms)));
+  const deadline = Date.now() + timeoutMs;
+  for (;;) {
+    const { value } = await connection.getSignatureStatuses([signature], { searchTransactionHistory: true });
+    const status = value?.[0];
+    if (status?.err) throw new Error(`transaction ${signature} failed: ${JSON.stringify(status.err)}`);
+    if (status && ["confirmed", "finalized"].includes(status.confirmationStatus)) return { status };
+    if (Date.now() >= deadline) {
+      throw new Error(`transaction ${signature} not confirmed after ${Math.round(timeoutMs / 1000)}s — check it on an explorer before retrying`);
+    }
+    await wait(pollMs);
+  }
+}
+
+/** Public gateways that only serve browsers now answer plain HTTP with 429 + a service-worker notice. */
+export function isServiceWorkerOnlyResponse(status, body = "") {
+  return status === 429 && /service worker gateway/i.test(body);
+}

@@ -11,8 +11,14 @@
  *   --skip-build     reuse out/ (ship already built it)
  *   --clear-url      also delete the SNS `url` record (Brave checks url before IPFS; one-time)
  *   --keep=N         Pinata pins to keep for this project (default 2; the live CID is always kept)
- *   --cid=<cid>      skip the upload and publish an already-pinned CID (resume / rollback)
+ *   --cid=<cid>      skip the upload and publish an already-pinned CID (resume / rollback);
+ *                    also skips the public-gateway check (verify that CID in a browser first)
+ *   --skip-gateway-check  don't wait for a public gateway to serve the new CID
  *   --gateway-timeout=<seconds>  how long to wait for a public gateway to serve the new CID (default 900)
+ *
+ * Public subdomain gateways (dweb.link, and w3s.link / nftstorage.link which redirect to it) now answer
+ * non-browser clients with 429 "service worker gateway only". That is reported as a warning, not a failure:
+ * check https://<cid>.ipfs.inbrowser.link/ in a browser (it is where Brave sends .sol).
  *
  * Env (.env.local): PINATA_JWT, SOLANA_SIGNING_KEY (base58, must be the name's owner),
  * optional NEXT_PUBLIC_SOLANA_RPC_URL, NEXT_PUBLIC_SNS_DOMAIN. Secrets are never printed.
@@ -39,8 +45,10 @@ import {
   cidFromRecordContent,
   extractRootAssets,
   ipfsRecordContent,
+  isServiceWorkerOnlyResponse,
   readSnsState,
   selectPinsToRemove,
+  waitForSignature,
 } from "./lib/publish-sol.mjs";
 import { runSync } from "./lib/run-cmd.mjs";
 
@@ -55,6 +63,7 @@ const skipBuild = flag("--skip-build");
 const clearUrl = flag("--clear-url");
 const keep = Number(option("--keep") ?? 2);
 const givenCid = option("--cid");
+const skipGatewayCheck = flag("--skip-gateway-check") || Boolean(givenCid);
 const gatewayTimeoutMs = Number(option("--gateway-timeout") ?? 900) * 1000;
 const outDir = join(process.cwd(), process.env.OUT_DIR?.trim() || "out");
 const name = (process.env.NEXT_PUBLIC_SNS_DOMAIN?.trim() || "transition-insight.sol").replace(/\.sol$/i, "");
@@ -137,8 +146,13 @@ function startRootServer() {
 
 async function fetchOk(url, timeoutMs = 30000) {
   const response = await fetch(url, { redirect: "follow", signal: AbortSignal.timeout(timeoutMs) });
-  const body = response.ok ? await response.text() : "";
-  return { ok: response.ok, status: response.status, body, type: response.headers.get("content-type") || "" };
+  const body = await response.text().catch(() => "");
+  if (isServiceWorkerOnlyResponse(response.status, body)) {
+    const error = new Error(`${new URL(url).host} only serves browsers now (429 service-worker gateway)`);
+    error.serviceWorkerOnly = true;
+    throw error;
+  }
+  return { ok: response.ok, status: response.status, body: response.ok ? body : "", type: response.headers.get("content-type") || "" };
 }
 
 /** Homepage + nested pages + their RSC tree payloads + every root-absolute asset they reference. */
@@ -175,6 +189,7 @@ async function verifyOnGateways(cid) {
         if (result.problems.length === 0) return { base, ...result };
         lastProblems = result.problems;
       } catch (error) {
+        if (error?.serviceWorkerOnly) return { base, unverifiable: error.message };
         lastProblems = [String(error)];
       }
     }
@@ -252,11 +267,17 @@ async function main() {
   ipfsRecordContent(cid); // validates CIDv1
 
   // 5. Public gateway check (root-serving subdomain gateway)
-  if (dryRun) {
+  if (skipGatewayCheck) {
+    log(`skipping the public-gateway check${givenCid ? " (--cid)" : ""} — verify https://${cid}.ipfs.inbrowser.link/ in a browser`);
+  } else if (dryRun) {
     log(`would wait for ${subdomainGatewayUrl(cid)} to serve the same pages + assets (timeout ${gatewayTimeoutMs / 1000}s)`);
   } else {
     const gw = await verifyOnGateways(cid);
-    log(`gateway ok: ${gw.base} served ${gw.pages.length} pages + ${gw.assetCount} assets`);
+    if (gw.unverifiable) {
+      log(`WARNING: ${gw.unverifiable}; continuing — verify https://${cid}.ipfs.inbrowser.link/ in a browser`);
+    } else {
+      log(`gateway ok: ${gw.base} served ${gw.pages.length} pages + ${gw.assetCount} assets`);
+    }
   }
 
   // 6. On-chain IPFS record
@@ -271,7 +292,7 @@ async function main() {
       ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 50_000 }),
       ...buildRecordInstructions({ name, cid, owner: state.owner, ipfsExists: Boolean(state.ipfs), deleteUrl: clearUrl && Boolean(state.url) }),
     ];
-    const { blockhash, lastValidBlockHeight } = await connection.getLatestBlockhash();
+    const { blockhash } = await connection.getLatestBlockhash("confirmed");
     const message = new TransactionMessage({ payerKey: new PublicKey(state.owner), recentBlockhash: blockhash, instructions }).compileToV0Message();
     const tx = new VersionedTransaction(message);
     const sim = await connection.simulateTransaction(tx, { sigVerify: false, replaceRecentBlockhash: true });
@@ -285,8 +306,8 @@ async function main() {
       tx.sign([signer]);
       signature = await connection.sendTransaction(tx, { maxRetries: 5 });
       log(`sent ${signature}; confirming …`);
-      const confirmation = await connection.confirmTransaction({ signature, blockhash, lastValidBlockHeight }, "confirmed");
-      if (confirmation.value.err) fail(`transaction failed: ${JSON.stringify(confirmation.value.err)}`);
+      const { status } = await waitForSignature(connection, signature);
+      log(`${status.confirmationStatus} in slot ${status.slot}`);
       const after = await readSnsState(connection, name);
       if (after.ipfs?.content !== ipfsRecordContent(cid) || after.ipfs?.stalenessSigner !== after.owner) {
         fail(`on-chain verify: IPFS record reads ${JSON.stringify(after.ipfs)}`);

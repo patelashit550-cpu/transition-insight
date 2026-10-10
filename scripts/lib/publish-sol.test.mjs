@@ -6,8 +6,10 @@ import {
   cidFromRecordContent,
   extractRootAssets,
   ipfsRecordContent,
+  isServiceWorkerOnlyResponse,
   parseRecordV2Account,
   selectPinsToRemove,
+  waitForSignature,
 } from "./publish-sol.mjs";
 
 const CID = "bafybeigt2duezr5tqi6ncf6pnaohborjyi6nz2vo2kvrrsj53c3clawk24";
@@ -48,4 +50,26 @@ test("keeps the newest two project pins and anything live on-chain", () => {
 test("extracts root-absolute assets from exported HTML", () => {
   const html = '<script src="/_next/static/chunks/a.js"></script><link href="/_next/static/chunks/b.css"><img src="/visuals/icon.png"><a href="/me/sku/">x</a>';
   assert.deepEqual(extractRootAssets(html), ["/_next/static/chunks/a.js", "/_next/static/chunks/b.css", "/visuals/icon.png"]);
+});
+
+test("waitForSignature polls signature status until confirmed (no block-height check)", async () => {
+  const statuses = [null, { confirmationStatus: "processed", err: null }, { confirmationStatus: "confirmed", err: null }];
+  let calls = 0;
+  const connection = { getSignatureStatuses: async () => ({ value: [statuses[Math.min(calls++, statuses.length - 1)]] }) };
+  const { status } = await waitForSignature(connection, "sig", { sleep: async () => {} });
+  assert.equal(status.confirmationStatus, "confirmed");
+  assert.equal(calls, 3);
+});
+
+test("waitForSignature throws on a failed tx and on timeout", async () => {
+  const failed = { getSignatureStatuses: async () => ({ value: [{ confirmationStatus: "confirmed", err: { InstructionError: [1, "Custom"] } }] }) };
+  await assert.rejects(waitForSignature(failed, "sig", { sleep: async () => {} }), /failed/);
+  const missing = { getSignatureStatuses: async () => ({ value: [null] }) };
+  await assert.rejects(waitForSignature(missing, "sig", { timeoutMs: 0, sleep: async () => {} }), /not confirmed/);
+});
+
+test("service-worker-only gateway responses are recognised", () => {
+  assert.equal(isServiceWorkerOnlyResponse(429, "This IPFS gateway is switching to a service worker gateway only."), true);
+  assert.equal(isServiceWorkerOnlyResponse(429, "Too Many Requests"), false);
+  assert.equal(isServiceWorkerOnlyResponse(404, ""), false);
 });
