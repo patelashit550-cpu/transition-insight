@@ -7,6 +7,9 @@
  *   npm run ship -- --push -m "Publish Praxis."
  *   npm run ship -- --ipfs          (Pinata upload after build; needs PINATA_JWT in .env.local)
  *   npm run ship -- --ipfs-local    (local Kubo add; needs `ipfs daemon` running)
+ *   npm run ship -- --sol           (pin to Pinata, verify on a root-serving gateway, point
+ *                                    transition-insight.sol's IPFS record at the new CID; see publish-sol.mjs)
+ *   npm run ship -- --sol-dry-run   (same pipeline, no upload and no on-chain write)
  *   npm run ship -- --push --ipfs
  *   npm run ship -- --skip-canon    (bypass Canonical freshness gate)
  *   npm run ship -- --skip-check    (bypass typecheck / lint / test gate)
@@ -29,6 +32,8 @@ const args = process.argv.slice(2);
 const push = args.includes("--push");
 const ipfsLocal = args.includes("--ipfs-local");
 const ipfs = args.includes("--ipfs") && !ipfsLocal;
+const solDryRun = args.includes("--sol-dry-run");
+const sol = args.includes("--sol") || solDryRun;
 const skipCanon = args.includes("--skip-canon");
 const skipCheck = args.includes("--skip-check");
 const messageIdx = args.indexOf("-m");
@@ -127,8 +132,10 @@ if (syncArgs.length > 1) {
 
 run("audit:perimeter:export", "node", ["scripts/audit-perimeter.mjs", "--export"]);
 
+// The export is root-absolute (Next default). Every IPFS target we use serves the CID at the
+// root of a host (Brave → <cid>.ipfs.inbrowser.link, sol.site, Pinata gateway root), so the
+// same out/ works for GitHub Pages and IPFS without rewriting paths.
 if (ipfs || ipfsLocal) {
-  run("ipfs-relative-export", "node", ["scripts/ipfs-relative-export.mjs"]);
   if (ipfsLocal) {
     run("kubo:upload", "npm", ["run", "kubo:upload"]);
     console.log("ship: local Kubo add complete — update NEXT_PUBLIC_IPFS_CID if CID changed, then ship again.");
@@ -136,6 +143,14 @@ if (ipfs || ipfsLocal) {
     run("pinata:upload", "npm", ["run", "pinata:upload"]);
     console.log("ship: Pinata pin complete — update NEXT_PUBLIC_IPFS_CID if CID changed, then ship again.");
   }
+}
+
+/** After the Pages ship: pin the same out/ and point transition-insight.sol at it. */
+function publishSol() {
+  if (!sol) return;
+  const solArgs = ["scripts/publish-sol.mjs", "--skip-build"];
+  if (solDryRun) solArgs.push("--dry-run");
+  run("publish-sol", "node", solArgs);
 }
 
 if (push) {
@@ -182,11 +197,14 @@ if (push) {
   }
   if (!status.stdout?.trim()) {
     console.log("ship: nothing to commit");
+    publishSol();
     process.exit(0);
   }
   run("git commit", "git", ["commit", "-m", message], { inherit: false });
   run("git push", "git", ["push", "origin", "main"]);
   console.log("ship: pushed — GitHub Pages deploy in ~2–3 min");
+  publishSol();
 } else {
   console.log("ship: build ok — commit and push when ready (npm run ship -- --push -m \"…\")");
+  publishSol();
 }

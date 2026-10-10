@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Local Kubo sovereign deploy: build → IPFS path patch → local add.
+ * Local Kubo sovereign deploy: build → local add (export is root-absolute; no path patch).
  *
  *   npm run deploy:local
  *   npm run deploy:local -- --upload-only
@@ -21,14 +21,6 @@ if (!uploadOnly) {
   });
   if (build.status !== 0) {
     process.exit(build.status ?? 1);
-  }
-  const patch = spawnSync(process.execPath, ["scripts/ipfs-relative-export.mjs"], {
-    stdio: "inherit",
-    shell: false,
-    cwd: process.cwd(),
-  });
-  if (patch.status !== 0) {
-    process.exit(patch.status ?? 1);
   }
 }
 

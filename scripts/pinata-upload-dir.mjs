@@ -38,33 +38,28 @@ try {
   }
   console.log("");
   console.log(`Record: ${recordPath.replace(/\\/g, "/")}`);
-  const siteHost =
-    process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/^https?:\/\//, "").replace(/\/$/, "") ||
-    "ashitmilne.xyz";
 
   console.log("");
-  console.log("Live origin is GitHub Pages (ashitmilne.xyz). Pin this CID for sol.site later.");
-  console.log("gateway.pinata.cloud refuses HTML — use a dedicated Pinata gateway or Cloudflare DNSLink.");
+  console.log("Live origin is GitHub Pages (ashitmilne.xyz). To point transition-insight.sol at this CID");
+  console.log("(build → pin → gateway check → on-chain IPFS record → unpin old), use: npm run publish:sol");
+  console.log("*.mypinata.cloud gateways refuse HTML without a custom domain — view the site at the dweb.link URL above.");
   console.log("");
-  console.log("Bake into .env.local, then rebuild once:");
+  console.log("Bake into .env.local, then rebuild once (optional):");
   console.log(`  NEXT_PUBLIC_IPFS_CID=${upload.cid}`);
   console.log(`  NEXT_PUBLIC_IPFS_GATEWAY=${upload.gateway}`);
   if (ipns) {
     console.log(`  NEXT_PUBLIC_IPNS_NAME=${ipns.name}`);
   }
   console.log("");
-  console.log("sns.id (registrant key, laptop only):");
-  console.log(`  On-chain IPFS record = ${upload.cid}  (CID only; do not set URL to ashitmilne.xyz)`);
-  console.log("  On-chain SOL record  = NEXT_PUBLIC_SOLANA_WALLET_ADDRESS");
-  console.log("  Configure Sol.site: CNAME → cloudflare-ipfs.com");
-  console.log(`                     TXT _dnslink → dnslink=/ipfs/${upload.cid}`);
-  console.log("");
-  console.log("Optional Pinata dedicated gateway custom domain:");
-  console.log(`  Add ${siteHost} then CNAME that host to your *.mypinata.cloud gateway.`);
+  console.log("sns.id (owner wallet) — record formats:");
+  console.log(`  IPFS record = ipfs://${upload.cid}   (Brave only resolves the ipfs:// form; a bare CID resolves nothing)`);
+  console.log("  url record  = empty                 (Brave checks url before IPFS)");
+  console.log("  Sol.site    = DNS only: CNAME to a host that serves the CID at its root AND issues TLS for");
+  console.log("                transition-insight.sol.site (cloudflare-ipfs.com was shut down in 2024 — do not use it).");
   console.log("");
   console.log("Verify:");
-  console.log(`  ${upload.directoryUrl}`);
-  console.log("  https://transition-insight.sol.site/");
+  console.log(`  ${upload.dwebUrl}`);
+  console.log(`  https://${upload.cid}.ipfs.inbrowser.link/   (where Brave sends transition-insight.sol)`);
   if (ipns) {
     console.log(`  ${ipns.ipnsUrl}`);
   }

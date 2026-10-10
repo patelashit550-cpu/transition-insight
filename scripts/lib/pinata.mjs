@@ -80,8 +80,11 @@ export async function uploadDirectory(dir) {
   }
 
   const gateway = gatewayBase();
+  // Path-style (/ipfs/<cid>/) — fine for single files; *.mypinata.cloud refuses to serve HTML
+  // without a custom domain (ERR_ID:00023), so view the site via a root-serving URL instead.
   const directoryUrl = `${gateway}/ipfs/${cid}/`;
-  const dwebUrl = `https://dweb.link/ipfs/${cid}/`;
+  // Subdomain gateway: serves the CID at the host root, which is what the root-absolute export needs.
+  const dwebUrl = subdomainGatewayUrl(cid);
 
   return {
     cid,
@@ -129,6 +132,77 @@ export async function publishIpns(cid) {
     dwebIpnsUrl: `https://dweb.link/ipns/${name}/`,
     payload,
   };
+}
+
+/**
+ * Root-serving (subdomain) gateway URL for a CIDv1. Subdomain gateways need the base32 CIDv1
+ * (`bafy…`), which is what uploads with `cidVersion: 1` return.
+ * @param {string} cid
+ * @param {string} [host]
+ */
+export function subdomainGatewayUrl(cid, host = "dweb.link") {
+  return `https://${cid}.ipfs.${host}/`;
+}
+
+/** Read-only: confirm the JWT is accepted (no upload). */
+export async function testAuthentication() {
+  const jwt = requireJwt();
+  const response = await fetch("https://api.pinata.cloud/data/testAuthentication", {
+    headers: { Authorization: `Bearer ${jwt}` },
+  });
+  return { ok: response.ok, status: response.status };
+}
+
+/**
+ * Read-only: list public files (newest first) via the V3 Files API. Folder uploads made with the
+ * legacy pinFileToIPFS endpoint appear here as one entry (mime_type "directory"). Uses the V3 API
+ * because scoped keys created in the current dashboard may lack the legacy pinList scope.
+ * @returns {Promise<{ id: string, cid: string, name: string, datePinned: string, size: number, files: number, keyvalues: Record<string, string> }[]>}
+ */
+export async function listPins() {
+  const jwt = requireJwt();
+  const files = [];
+  let token = "";
+  do {
+    const url = new URL("https://api.pinata.cloud/v3/files/public");
+    url.searchParams.set("limit", "1000");
+    if (token) url.searchParams.set("pageToken", token);
+    const response = await fetch(url, { headers: { Authorization: `Bearer ${jwt}` } });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(`Pinata list files failed (${response.status}): ${JSON.stringify(payload.error ?? payload)}`);
+    }
+    files.push(...(payload.data?.files ?? []));
+    token = payload.data?.next_page_token ?? "";
+  } while (token && files.length < 5000);
+  return files
+    .map((file) => ({
+      id: file.id,
+      cid: file.cid,
+      name: file.name ?? "",
+      datePinned: file.created_at,
+      size: file.size,
+      files: file.number_of_files,
+      keyvalues: file.keyvalues ?? {},
+    }))
+    .sort((a, b) => String(b.datePinned).localeCompare(String(a.datePinned)));
+}
+
+/**
+ * Delete (unpin) one public file by its V3 file id. Irreversible for that pin; the content may
+ * still exist elsewhere on IPFS. Needs a key with files write scope.
+ * @param {string} id
+ */
+export async function unpin(id) {
+  const jwt = requireJwt();
+  const response = await fetch(`https://api.pinata.cloud/v3/files/public/${id}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${jwt}` },
+  });
+  if (!response.ok) {
+    const payload = await response.json().catch(() => ({}));
+    throw new Error(`Pinata delete ${id} failed (${response.status}): ${JSON.stringify(payload.error ?? payload)}`);
+  }
 }
 
 /** @param {Record<string, unknown>} record */

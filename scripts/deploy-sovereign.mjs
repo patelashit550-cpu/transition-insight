@@ -14,14 +14,6 @@ if (!uploadOnly) {
   if (build.status !== 0) {
     process.exit(build.status ?? 1);
   }
-  const patch = spawnSync(process.execPath, ["scripts/ipfs-relative-export.mjs"], {
-    stdio: "inherit",
-    shell: false,
-    cwd: process.cwd(),
-  });
-  if (patch.status !== 0) {
-    process.exit(patch.status ?? 1);
-  }
 }
 
 const upload = spawnSync(process.execPath, ["scripts/pinata-upload-dir.mjs"], {
