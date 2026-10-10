@@ -50,6 +50,10 @@ if (!robots.includes(`Sitemap: ${sitemapRef}`)) {
   fail(`robots.txt must include: Sitemap: ${sitemapRef}`);
 }
 
+if (!/^Content-Signal: search=yes, ai-input=yes, ai-train=yes$/m.test(robots)) {
+  fail("robots.txt must declare Content-Signal: search=yes, ai-input=yes, ai-train=yes");
+}
+
 const apiCatalog = JSON.parse(fs.readFileSync(apiCatalogPath, "utf8"));
 if (!Array.isArray(apiCatalog.linkset) || apiCatalog.linkset.length === 0) {
   fail("api-catalog missing linkset array");
