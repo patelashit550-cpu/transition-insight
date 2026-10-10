@@ -344,6 +344,8 @@ type ConnexionLinks = {
   voiceUrl?: string;
   messageUrl?: string;
   email?: string;
+  xUrl?: string;
+  linkedinUrl?: string;
 };
 
 /** Default: blockquotes clear inset floats. Exception: `blockquoteInset: flow` in frontmatter. */
@@ -410,6 +412,8 @@ function NarrativeEssayBody({
         voiceUrl={connexionLinks.voiceUrl}
         messageUrl={connexionLinks.messageUrl}
         email={connexionLinks.email}
+        xUrl={connexionLinks.xUrl}
+        linkedinUrl={connexionLinks.linkedinUrl}
       />
     ) : (
       <>
@@ -601,6 +605,9 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
         messageUrl:
           typeof frontmatter.contact_message_url === "string" ? frontmatter.contact_message_url : undefined,
         email: typeof frontmatter.contact_email === "string" ? frontmatter.contact_email : undefined,
+        xUrl: typeof frontmatter.contact_x_url === "string" ? frontmatter.contact_x_url : undefined,
+        linkedinUrl:
+          typeof frontmatter.contact_linkedin_url === "string" ? frontmatter.contact_linkedin_url : undefined,
       }
     : undefined;
 

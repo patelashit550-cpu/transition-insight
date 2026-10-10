@@ -7,6 +7,8 @@ type Props = {
   messageUrl?: string
   chatUrl?: string
   email?: string
+  xUrl?: string
+  linkedinUrl?: string
 }
 
 const ALLOWED_PROTOCOLS = ["https:", "http:", "mailto:", "tel:", "tg:", "sip:"]
@@ -57,6 +59,8 @@ type Channel = {
   ariaLabel: string
   href?: string
   icon: ChannelIcon
+  /** Public profile that is also you — rel="me" for identity verification. */
+  profile?: boolean
 }
 
 const iconSvgProps = {
@@ -96,11 +100,31 @@ function IconLetter({ className }: { className?: string }) {
   )
 }
 
+function IconX({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" {...iconSvgProps}>
+      <path strokeLinejoin="miter" d="M4 3h4.5L20 21h-4.5L4 3z" />
+      <path strokeLinejoin="miter" d="M19.5 3L13.4 10.1M10.6 13.9L4.5 21" />
+    </svg>
+  )
+}
+
+function IconLinkedIn({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" {...iconSvgProps}>
+      <path strokeLinejoin="miter" d="M2 2h20v20H2V2z" />
+      <path strokeLinejoin="miter" d="M7 10v8M7 6.5v1M11 18v-8M11 13.5c0-2 1.4-3.5 3.2-3.5S17 11 17 13v5" />
+    </svg>
+  )
+}
+
 export function ConnexionContactPanel({
   voiceUrl,
   messageUrl,
   chatUrl,
   email,
+  xUrl,
+  linkedinUrl,
 }: Props) {
   const mailto = email ? safeHref(`mailto:${email}`) : undefined
   const channels: Channel[] = [
@@ -125,12 +149,28 @@ export function ConnexionContactPanel({
       href: mailto,
       icon: IconLetter,
     },
+    {
+      id: "x",
+      label: "X",
+      ariaLabel: "Ashit Milne on X",
+      href: safeHref(xUrl),
+      icon: IconX,
+      profile: true,
+    },
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      ariaLabel: "Ashit Milne on LinkedIn",
+      href: safeHref(linkedinUrl),
+      icon: IconLinkedIn,
+      profile: true,
+    },
   ].filter((c) => Boolean(c.href))
 
   return (
     <section className="p3-connexion-panel p3-connexion-panel--fit border border-emerald-500/60 bg-neutral-950">
       <nav aria-label="Contact options" className="p3-connexion-panel__nav">
-        <ul className="p3-connexion-contact-list m-0 list-none p-0">
+        <ul className={`p3-connexion-contact-list p3-connexion-contact-list--n${channels.length} m-0 list-none p-0`}>
           {channels.map((ch) => {
             const Icon = ch.icon
             const href = String(ch.href)
@@ -140,7 +180,7 @@ export function ConnexionContactPanel({
                 <a
                   href={ch.href}
                   target={newTab ? "_blank" : undefined}
-                  rel={newTab ? "noreferrer" : undefined}
+                  rel={newTab ? (ch.profile ? "me noopener" : "noreferrer") : undefined}
                   className="group p3-connexion-key"
                   aria-label={ch.ariaLabel}
                 >

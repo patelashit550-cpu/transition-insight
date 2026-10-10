@@ -15,6 +15,8 @@ visual: connexion-contact
 contact_voice_url: 'tel:+14168038347'
 contact_message_url: 'https://t.me/ashit1969'
 contact_email: 'ash.milne@proton.me'
+contact_x_url: 'https://x.com/ashitmilne1969'
+contact_linkedin_url: 'https://www.linkedin.com/in/ashitmilne/'
 ---
 
 ### Connect
