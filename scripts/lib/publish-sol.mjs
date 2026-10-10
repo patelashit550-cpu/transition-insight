@@ -101,6 +101,19 @@ export function buildRecordInstructions({ name, cid, owner, ipfsExists, deleteUr
 }
 
 /**
+ * Plan-limit preflight. Pinata counts every file inside a folder pin toward the plan's file limit
+ * (500 on the free plan); going over blocks the whole account (uploads and the dedicated gateway).
+ * The live copy and the new upload must both fit, because the old copy is only unpinned after
+ * the SNS record points at the new one.
+ * @param {{ pins: { files?: number }[], newFiles: number, limit: number }} input
+ */
+export function checkPlanFileLimit({ pins, newFiles, limit }) {
+  const pinnedFiles = pins.reduce((sum, pin) => sum + (Number(pin.files) || 0), 0);
+  const total = pinnedFiles + newFiles;
+  return { ok: total <= limit, pinnedFiles, newFiles, total, limit };
+}
+
+/**
  * Which project pins to unpin: keep the newest `keep` plus anything still referenced on-chain.
  * Only pins tagged project=transition-insight (or the legacy names) are ever considered.
  */

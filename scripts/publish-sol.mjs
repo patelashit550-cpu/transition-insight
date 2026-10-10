@@ -10,7 +10,9 @@
  *   --dry-run        no upload, no transaction (simulated with sigVerify off), no unpin
  *   --skip-build     reuse out/ (ship already built it)
  *   --clear-url      also delete the SNS `url` record (Brave checks url before IPFS; one-time)
- *   --keep=N         Pinata pins to keep for this project (default 2; the live CID is always kept)
+ *   --keep=N         older project pins to keep besides the live one (default 0 — only the live CID stays pinned)
+ *   --file-limit=N   Pinata plan file limit (default 500 = free plan; or PINATA_FILE_LIMIT). Every file in a
+ *                    folder pin counts; the live copy + the new upload must fit, else it fails before uploading.
  *   --cid=<cid>      skip the upload and publish an already-pinned CID (resume / rollback);
  *                    also skips the public-gateway check (verify that CID in a browser first)
  *   --skip-gateway-check  don't wait for a public gateway to serve the new CID
@@ -47,6 +49,7 @@ import {
   ipfsRecordContent,
   isServiceWorkerOnlyResponse,
   readSnsState,
+  checkPlanFileLimit,
   selectPinsToRemove,
   waitForSignature,
 } from "./lib/publish-sol.mjs";
@@ -61,7 +64,8 @@ const option = (name) => args.find((a) => a.startsWith(`${name}=`))?.slice(name.
 const dryRun = flag("--dry-run");
 const skipBuild = flag("--skip-build");
 const clearUrl = flag("--clear-url");
-const keep = Number(option("--keep") ?? 2);
+const keep = Number(option("--keep") ?? 0);
+const fileLimit = Number(option("--file-limit") ?? process.env.PINATA_FILE_LIMIT?.trim() ?? 500);
 const givenCid = option("--cid");
 const skipGatewayCheck = flag("--skip-gateway-check") || Boolean(givenCid);
 const gatewayTimeoutMs = Number(option("--gateway-timeout") ?? 900) * 1000;
@@ -125,6 +129,14 @@ function nestedPages(limit = 2) {
 }
 
 const MIME = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".txt": "text/plain; charset=utf-8", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".woff2": "font/woff2", ".webmanifest": "application/manifest+json" };
+
+/** Regular files under dir (what Pinata counts toward the plan's file limit). */
+function countFiles(dir) {
+  return readdirSync(dir, { withFileTypes: true }).reduce(
+    (sum, entry) => sum + (entry.isDirectory() ? countFiles(join(dir, entry.name)) : entry.isFile() ? 1 : 0),
+    0,
+  );
+}
 
 /** Dry run: serve out/ at the root of a local host, the way a subdomain gateway serves a CID. */
 function startRootServer() {
@@ -248,7 +260,21 @@ async function main() {
   const expectedCid = bin ? localCid(bin) : null;
   log(expectedCid ? `expected CID (offline hash): ${expectedCid}` : "no ipfs CLI — skipping offline CID pre-hash");
 
-  // 4. Pin
+  // 4. Plan-limit preflight (Pinata counts every file in a folder pin)
+  if (!givenCid) {
+    const newFiles = countFiles(outDir);
+    const fit = checkPlanFileLimit({ pins, newFiles, limit: fileLimit });
+    log(`file count: ${fit.pinnedFiles} pinned + ${fit.newFiles} to upload = ${fit.total} / ${fit.limit} plan limit`);
+    if (!fit.ok) {
+      fail(
+        `uploading would put the Pinata account at ${fit.total} files, over the ${fit.limit}-file plan limit ` +
+          "(over the limit Pinata blocks uploads and the gateway). Unpin copies other than the live one, or raise the plan " +
+          "(--file-limit / PINATA_FILE_LIMIT) — nothing was uploaded.",
+      );
+    }
+  }
+
+  // 5. Pin
   let cid = givenCid;
   if (cid) {
     if (!pins.some((p) => p.cid === cid)) fail(`--cid ${cid} is not pinned on this Pinata account`);
@@ -266,7 +292,7 @@ async function main() {
   if (!cid) fail("no CID available");
   ipfsRecordContent(cid); // validates CIDv1
 
-  // 5. Public gateway check (root-serving subdomain gateway)
+  // 6. Public gateway check (root-serving subdomain gateway)
   if (skipGatewayCheck) {
     log(`skipping the public-gateway check${givenCid ? " (--cid)" : ""} — verify https://${cid}.ipfs.inbrowser.link/ in a browser`);
   } else if (dryRun) {
@@ -280,7 +306,7 @@ async function main() {
     }
   }
 
-  // 6. On-chain IPFS record
+  // 7. On-chain IPFS record
   const currentCid = cidFromRecordContent(state.ipfs?.content ?? "");
   const recordIsCurrent =
     state.ipfs?.content === ipfsRecordContent(cid) && state.ipfs?.stalenessSigner === state.owner && !(clearUrl && state.url);
@@ -317,12 +343,12 @@ async function main() {
     }
   }
 
-  // 7. Unpin old project pins (never the live CID or the one just replaced)
+  // 8. Unpin every other project pin (keep only the CID the record now points at, plus --keep older ones)
   const nextPins = dryRun && !givenCid && !pins.some((p) => p.cid === cid)
     ? [{ id: "(new upload)", cid, datePinned: new Date().toISOString(), keyvalues: { project: "transition-insight" } }, ...pins]
     : pins;
   const toRemove = selectPinsToRemove(nextPins, { keep, protect: [cid, dryRun ? currentCid : null] });
-  if (toRemove.length === 0) log(`unpin: nothing beyond the newest ${keep}`);
+  if (toRemove.length === 0) log(keep ? `unpin: nothing beyond the newest ${keep}` : "unpin: only the live pin remains");
   for (const pin of toRemove) {
     if (dryRun) {
       log(`would unpin ${pin.cid} (${pin.name || "?"}, ${pin.datePinned}, id ${pin.id})`);

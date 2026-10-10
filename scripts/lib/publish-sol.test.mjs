@@ -3,6 +3,7 @@ import { test } from "node:test";
 import { PublicKey } from "@solana/web3.js";
 
 import {
+  checkPlanFileLimit,
   cidFromRecordContent,
   extractRootAssets,
   ipfsRecordContent,
@@ -33,6 +34,23 @@ test("parses a records V2 account (staleness signed by owner)", () => {
   const parsed = parseRecordV2Account(data);
   assert.equal(parsed.content, `ipfs://${CID}`);
   assert.equal(parsed.stalenessSigner, owner.toBase58());
+});
+
+test("default keeps only the live pin (keep=0 + protect)", () => {
+  const pins = [
+    { cid: "old", datePinned: "2026-10-01", keyvalues: { project: "transition-insight" } },
+    { cid: "live", datePinned: "2026-10-10", keyvalues: { project: "transition-insight" } },
+    { cid: "legacy", datePinned: "2026-09-22", name: "out", keyvalues: {} },
+    { cid: "other", datePinned: "2026-09-01", keyvalues: { project: "something-else" } },
+  ];
+  const removed = selectPinsToRemove(pins, { keep: 0, protect: ["live"] }).map((pin) => pin.cid);
+  assert.deepEqual(removed, ["old", "legacy"]);
+});
+
+test("plan file limit: live + new must fit (500 on the free plan)", () => {
+  assert.deepEqual(checkPlanFileLimit({ pins: [{ files: 250 }], newFiles: 250, limit: 500 }), { ok: true, pinnedFiles: 250, newFiles: 250, total: 500, limit: 500 });
+  assert.equal(checkPlanFileLimit({ pins: [{ files: 256 }, { files: 250 }], newFiles: 250, limit: 500 }).ok, false);
+  assert.equal(checkPlanFileLimit({ pins: [], newFiles: 501, limit: 500 }).ok, false);
 });
 
 test("keeps the newest two project pins and anything live on-chain", () => {
