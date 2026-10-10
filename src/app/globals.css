@@ -3613,6 +3613,13 @@ body:has(.p3-topic-canvas--fit-viewport) {
   }
 }
 
+/* Connexion is a centred contact panel, not a reading column: keep the wider column but centre it. */
+@media (min-width: 768px) {
+  .p3-narrative-article.p3-narrative-article--connexion-fit {
+    margin-inline: auto;
+  }
+}
+
 @media (min-width: 1024px) {
   .p3-narrative-article:has(.p3-narrative-layout--overlay-figure),
   .p3-topic-article:has(.p3-narrative-layout--overlay-figure) {
