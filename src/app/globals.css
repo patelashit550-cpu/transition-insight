@@ -3668,3 +3668,44 @@ body:has(.p3-topic-canvas--fit-viewport) {
     margin-right: 0;
   }
 }
+
+/*
+ * Topic pages with the left essay nav (desktop): equal inner margins either side of the
+ * reading column. The right-hand gap (column → grey pane edge) is the guide; the left gap
+ * (nav edge → column) is set to match it. Gutter = the free space the reading-column rules
+ * above leave on the right; it is applied to both sides and the column fills the rest.
+ * Left padding absorbs the 1px separator track and mirrors the canvas's 2rem right padding.
+ */
+@media (min-width: 1025px) {
+  .p3-topic-canvas:not(.p3-topic-canvas--no-nav):not(.p3-topic-canvas--fit-viewport) > .p3-topic-article {
+    --p3-topic-col-max: calc(42rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 56rem) / 2));
+  }
+
+  .p3-topic-canvas:not(.p3-topic-canvas--no-nav):not(.p3-topic-canvas--fit-viewport) > .p3-topic-article:has(.p3-narrative-layout--overlay-figure) {
+    --p3-topic-col-max: calc(54rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 72rem) / 2));
+  }
+
+  .p3-topic-canvas:not(.p3-topic-canvas--no-nav):not(.p3-topic-canvas--fit-viewport) > .p3-topic-article:has(.p3-narrative-body--with-plate) {
+    --p3-topic-col-max: calc(51rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 68rem) / 2));
+  }
+
+  .p3-topic-canvas:not(.p3-topic-canvas--no-nav):not(.p3-topic-canvas--fit-viewport) > .p3-topic-article {
+    --p3-topic-col-gutter: max(0px, calc(100% - var(--p3-topic-col-inset) - var(--p3-topic-col-max)));
+    width: auto;
+    max-width: none;
+    margin-left: var(--p3-topic-col-gutter);
+    margin-right: var(--p3-topic-col-gutter);
+    padding-right: 2rem;
+    padding-left: calc(4rem - 1px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .p3-topic-canvas:not(.p3-topic-canvas--no-nav):not(.p3-topic-canvas--fit-viewport) > .p3-topic-article:has(.p3-narrative-layout--overlay-figure) {
+    --p3-topic-col-max: calc(60rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 80rem) / 2));
+  }
+}
