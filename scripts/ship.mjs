@@ -10,6 +10,9 @@
  *   npm run ship -- --sol           (pin to Pinata, verify on a root-serving gateway, point
  *                                    transition-insight.sol's IPFS record at the new CID; see publish-sol.mjs)
  *   npm run ship -- --sol-dry-run   (same pipeline, no upload and no on-chain write)
+ *   npm run ship -- --sol --no-mirror   (skip the sol.site mirror; --sol mirrors by default)
+ *   npm run ship -- --mirror        (force-push out/ to the GitHub Pages mirror that serves
+ *                                    transition-insight.sol.site; see publish-mirror.mjs)
  *   npm run ship -- --push --ipfs
  *   npm run ship -- --skip-canon    (bypass Canonical freshness gate)
  *   npm run ship -- --skip-check    (bypass typecheck / lint / test gate)
@@ -34,6 +37,8 @@ const ipfsLocal = args.includes("--ipfs-local");
 const ipfs = args.includes("--ipfs") && !ipfsLocal;
 const solDryRun = args.includes("--sol-dry-run");
 const sol = args.includes("--sol") || solDryRun;
+// Mirror (transition-insight.sol.site): on by default with --sol, opt in with --mirror, opt out with --no-mirror.
+const mirror = !args.includes("--no-mirror") && (args.includes("--mirror") || sol);
 const skipCanon = args.includes("--skip-canon");
 const skipCheck = args.includes("--skip-check");
 const messageIdx = args.indexOf("-m");
@@ -145,12 +150,21 @@ if (ipfs || ipfsLocal) {
   }
 }
 
-/** After the Pages ship: pin the same out/ and point transition-insight.sol at it. */
+/**
+ * After the Pages ship: pin the same out/ and point transition-insight.sol at it, then
+ * mirror out/ to the GitHub Pages repo behind transition-insight.sol.site.
+ */
 function publishSol() {
-  if (!sol) return;
-  const solArgs = ["scripts/publish-sol.mjs", "--skip-build"];
-  if (solDryRun) solArgs.push("--dry-run");
-  run("publish-sol", "node", solArgs);
+  if (sol) {
+    const solArgs = ["scripts/publish-sol.mjs", "--skip-build"];
+    if (solDryRun) solArgs.push("--dry-run");
+    run("publish-sol", "node", solArgs);
+  }
+  if (mirror) {
+    const mirrorArgs = ["scripts/publish-mirror.mjs"];
+    if (solDryRun) mirrorArgs.push("--dry-run");
+    run("publish-mirror", "node", mirrorArgs);
+  }
 }
 
 if (push) {
@@ -170,6 +184,9 @@ if (push) {
     "package.json",
     "package-lock.json",
     "scripts/ship.mjs",
+    "scripts/publish-mirror.mjs",
+    "scripts/lib/mirror.mjs",
+    "scripts/lib/mirror.test.mjs",
     "scripts/sync-export-attestation.mjs",
     "scripts/lib/content-provenance.mjs",
     "scripts/lib/run-cmd.mjs",
