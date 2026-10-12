@@ -33,6 +33,8 @@ import { cn } from '@/lib/utils';
 const navLabelOverrides: Record<string, string> = {
   'The Trials of Job - A Retrospective': 'Trials of Job',
   'E Pluribus Unum': 'E Pluribus',
+  // Telamon's header nav gained an eighth link when V≡RT moved into Bento 2; the short mark keeps it on one line.
+  'Argonaut Agentic': 'V≡RT',
 };
 
 /** TrailingSlash + topic children: `/transition-insight/.../london_times/ronin/` → London Times hub active. */
@@ -45,35 +47,28 @@ function isSiblingNavActive(
   return p === h || p.startsWith(`${h}/`);
 }
 
-/*
- * Resolve pathname → bento section. Matching is by URL segment rather than
- * exact-href so deeper routes (e.g. sub-essays under a series) still pick up
- * the correct sibling set. Chronicle has two roots today (`/transition-insight/chronicle`
- * and a legacy `/chronicle`), both mapped to B3.
- */
-type BentoSection = (typeof BentoRegistry)[keyof typeof BentoRegistry];
-
-const resolveSection = (pathname: string): BentoSection => {
-  const p = pathname.replace(/\/+$/, "") || "/";
-  if (p.startsWith("/transition-insight/governance") || p.startsWith("/governance")) {
-    return BentoRegistry.B2;
-  }
-  if (p.startsWith("/transition-insight/chronicle") || p.startsWith("/chronicle")) {
-    return BentoRegistry.B3;
-  }
-  return BentoRegistry.B1;
-};
+const utilityHrefs = new Set<string>(
+  Object.values(BentoRegistry).flatMap((section) =>
+    section.series.filter((item) => item.variant === "utility").map((item) => item.href)
+  )
+);
 
 const NarrativeHeader = () => {
   const pathname = usePathname();
   const navPayload = useNavVisibility();
   const sectionKey = resolveBentoKeyFromPathname(pathname ?? '/');
   const filtered = navPayload?.[sectionKey];
-  const section = resolveSection(pathname ?? '');
+  // Pathname → bento section comes from `resolveBentoKeyFromPathname` (one source of truth:
+  // governance → B2, V≡RT's /chronicle/argonaut-agentic → B2, other chronicle → B3, else B1).
+  const section = BentoRegistry[sectionKey];
   const siblingItems = (
     filtered ??
     section.series.map((item) => ({ name: item.name, href: item.href as string, isNew: false }))
-  ).map((item) => ({
+  )
+    // Utility rows (V≡RT) stay off the header nav except on their own page: the header was
+    // already at its width limit with Telamon's seven links.
+    .filter((item) => !utilityHrefs.has(item.href) || isSiblingNavActive(pathname, item.href))
+    .map((item) => ({
     name: navLabelOverrides[item.name] ?? item.name,
     href: item.href,
     isNew: item.isNew === true,

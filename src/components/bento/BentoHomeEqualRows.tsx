@@ -3,8 +3,8 @@
 import type { CSSProperties } from "react";
 import { useLayoutEffect, useRef, useState, useEffect, useCallback, useSyncExternalStore } from "react";
 
-import { BentoCard } from "./BentoCard";
-import { BentoRegistry } from "@/config/site";
+import { BentoCard, type BentoCardItem } from "./BentoCard";
+import { BentoGroups, BentoRegistry } from "@/config/site";
 import type { BentoKey, NavVisibilityPayload } from "@/lib/nav-visibility-shared";
 import { cn } from "@/lib/utils";
 
@@ -165,7 +165,8 @@ export function BentoHomeEqualRows({ visible }: Props) {
           visible[key].map((v) => [v.href, v.isNew === true] as const)
         );
         const allowedHrefs = new Set(visible[key].map((v) => v.href));
-        const items = section.series
+        const articlesByHref = new Map(visible[key].map((v) => [v.href, v.articles] as const));
+        const flatItems = section.series
           .filter((item) => allowedHrefs.has(item.href as string))
           .map((item) => {
             const href = item.href as string;
@@ -174,8 +175,30 @@ export function BentoHomeEqualRows({ visible }: Props) {
               sublabel: item.desc,
               href,
               isNew: newByHref.get(href) === true,
+              articles: item.collapsible ? (articlesByHref.get(href) ?? []) : undefined,
+              variant: item.variant,
+              group: item.group,
             };
           });
+
+        // Fold grouped rows (Regnum Dei pillars) into one parent row at the first member's position.
+        // Pillars with no tier-visible articles are dropped; an empty group is not shown.
+        const items: BentoCardItem[] = [];
+        const groupIndex = new Map<string, number>();
+        for (const { group, ...row } of flatItems) {
+          if (!group) {
+            items.push(row);
+            continue;
+          }
+          if (row.articles && row.articles.length === 0) continue;
+          let at = groupIndex.get(group);
+          if (at === undefined) {
+            at = items.length;
+            groupIndex.set(group, at);
+            items.push({ label: BentoGroups[group].name, sublabel: BentoGroups[group].desc, children: [] });
+          }
+          items[at]!.children!.push(row);
+        }
 
         const frameStyle: CSSProperties | undefined =
           isEqual && rowPx != null

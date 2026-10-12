@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-10T23:06:42.621Z",
+  "generated": "2026-10-12T18:10:15.528Z",
   "tier": "global",
-  "manifestDigest": "sha256:27e633479428c0aec26e19ea789c1c030834b4e208290c73342f2ceaea2d8dd5",
+  "manifestDigest": "sha256:d2f3295c3cb142d60ad5216067db679d1f275ad48a0136332daa6847eeeab444",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -12,9 +12,9 @@
     "did": "did:pkh:solana:6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT"
   },
   "summary": {
-    "totalOntologyFiles": 77,
-    "attestedFiles": 18,
-    "signedFiles": 18
+    "totalOntologyFiles": 81,
+    "attestedFiles": 19,
+    "signedFiles": 19
   },
   "attested": [
     {
@@ -128,6 +128,16 @@
       "sha256": "sha256:5e625a5e994778134690c175086171e70c60421e17c4015bea0bc4b31c943c76"
     },
     {
+      "path": "ontology/narrative/agentic/argonaut-agentic.md",
+      "stage": "published",
+      "title": "Argonaut Agentic",
+      "author": null,
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "slug": "argonaut-agentic",
+      "series": "Argonaut Agentic",
+      "sha256": "sha256:541d272a9f1c94b811659a1c136f6a20166cdb77a5ec78caf5b5c87b7a1606ae"
+    },
+    {
       "path": "ontology/narrative/audible/3am-eternal.md",
       "stage": "published",
       "title": "London Calling",
@@ -202,7 +212,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "558dHc9npWd699Pv5q7Vpji9KE5K7nT6y8CjzsnA1a3P8aqBu6N4YLexeGjnRNJdagNDL4BqHrmfWYWEMXpfH4q3",
-    "signedAt": "2026-10-10T23:06:57.702Z"
+    "value": "441DkafrMkxcE7bRTwMZ3Uv7gLCFs9Nfu2DGSui4chrXXxJwUgEdkkf689aDzeSz5ZmF9HJFg3D4wHBWnFpqdRHF",
+    "signedAt": "2026-10-12T18:10:27.272Z"
   }
 }

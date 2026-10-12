@@ -20,10 +20,9 @@ tags:
   - telamon
   - firmitas
 ---
+### What Floats Your Boat?
 
-## What
-
-Verbiage forthcoming. Ashit fills this.
+Navigating the Social Network with a distinct identity which is entirely you
 
 ## How
 

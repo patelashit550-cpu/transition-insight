@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-08T22:16:05.806Z",
-  "essayCount": 17,
+  "generatedAt": "2026-10-12T18:10:13.055Z",
+  "essayCount": 18,
   "essays": [
     "governance/Carta.md",
     "governance/illumination/arete.md",
@@ -12,6 +12,7 @@
     "me/praxis.md",
     "me/sku.md",
     "me/trials-of-job.md",
+    "narrative/agentic/argonaut-agentic.md",
     "narrative/audible/3am-eternal.md",
     "narrative/biography/ashit-milne.md",
     "narrative/biography/ashit-patel.md",
@@ -149,7 +150,7 @@
     {
       "term": "Capital",
       "method": "extractive",
-      "score": 84,
+      "score": 88,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -160,6 +161,7 @@
         "me/praxis.md",
         "me/sku.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Transition.md",
@@ -251,7 +253,7 @@
     {
       "term": "Flow",
       "method": "extractive",
-      "score": 57,
+      "score": 61,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/social-network.md",
@@ -259,6 +261,7 @@
         "me/origins.md",
         "me/praxis.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
@@ -283,7 +286,7 @@
     {
       "term": "Governance",
       "method": "extractive",
-      "score": 125,
+      "score": 131,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -293,6 +296,7 @@
         "me/praxis.md",
         "me/sku.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/comment/Tenable.md",
@@ -304,7 +308,7 @@
     {
       "term": "Identity",
       "method": "extractive",
-      "score": 118,
+      "score": 123,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -315,6 +319,7 @@
         "me/praxis.md",
         "me/sku.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",
@@ -474,12 +479,13 @@
     {
       "term": "Product",
       "method": "extractive-synthesis",
-      "score": 34,
+      "score": 38,
       "sources": [
         "governance/illumination/social-network.md",
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ronin.md",
         "narrative/comment/Transition.md",
         "narrative/comment/canada-at-war.md"
@@ -579,7 +585,7 @@
     {
       "term": "Social Network",
       "method": "extractive",
-      "score": 58,
+      "score": 62,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -588,6 +594,7 @@
         "governance/intelligence/deus-en-machina.md",
         "me/praxis.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/comment/Transition.md",
         "narrative/comment/canada-at-war.md"
       ],
@@ -596,7 +603,7 @@
     {
       "term": "Sovereign",
       "method": "extractive-synthesis",
-      "score": 52,
+      "score": 56,
       "sources": [
         "governance/illumination/arete.md",
         "governance/illumination/semper idem.md",
@@ -605,6 +612,7 @@
         "me/praxis.md",
         "me/sku.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ashit-milne.md",
         "narrative/comment/Transition.md",
         "narrative/comment/canada-at-war.md"
@@ -656,7 +664,7 @@
     {
       "term": "Utility",
       "method": "extractive-synthesis",
-      "score": 72,
+      "score": 76,
       "sources": [
         "governance/Carta.md",
         "governance/illumination/arete.md",
@@ -666,6 +674,7 @@
         "me/praxis.md",
         "me/sku.md",
         "me/trials-of-job.md",
+        "narrative/agentic/argonaut-agentic.md",
         "narrative/biography/ashit-milne.md",
         "narrative/biography/ashit-patel.md",
         "narrative/biography/ronin.md",

@@ -28,7 +28,28 @@ export type BentoSeriesItem = {
   desc: string;
   dataPoint: string;
   href: string;
+  /**
+   * Hub row on the home bento (Regnum Dei pillar, Peridot): a disclosure (closed by default)
+   * that rolls open to list the hub's articles. Reading pages keep their own flat left nav.
+   */
+  collapsible?: boolean;
+  /** `"utility"`: listed on its own line below the pillar sections (e.g. V≡RT under Telamon). */
+  variant?: "utility";
+  /** Parent disclosure on the home bento only (see {@link BentoGroups}). */
+  group?: BentoGroupKey;
 };
+
+/**
+ * Parent disclosures that fold several registry rows into one bento row.
+ * Regnum Dei's subtitle is Carta's own gloss: "I translate it as Divine Governance".
+ * Lingam's subtitle quotes Canonical's definition: literally "mark," "sign," "emblem".
+ */
+export const BentoGroups = {
+  "regnum-dei": { name: "Regnum Dei", desc: "Divine Governance" },
+  lingam: { name: "Lingam", desc: "Semantics" },
+} as const;
+
+export type BentoGroupKey = keyof typeof BentoGroups;
 
 export type BentoSectionConfig = {
   title: string;
@@ -72,16 +93,20 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     requiresAuth: false,
     series: [
       { name: "Carta", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
-      { name: "Sine Qua Non", desc: "Intelligence", dataPoint: "0xBF2", href: "/governance/intelligence" },
-      { name: "Peridot", desc: "Terms & Conditions", dataPoint: "0xBF4", href: "/governance/peridot" },
-      { name: "Canonical", desc: "Glossary", dataPoint: "0xBF0", href: "/governance/canonical" },
-      { name: "Canonical Review", desc: "Glossary draft", dataPoint: "0xBF9", href: "/governance/canonical-review" },
-      { name: "Semper Idem", desc: "Identity", dataPoint: "0xBF1", href: "/governance/identity" },
-      { name: "E Pluribus Unum", desc: "Capital", dataPoint: "0xBF3", href: "/governance/capital" },
+      // Regnum Dei: one row that rolls open to the three pillars, each of which rolls open to its articles.
+      { name: "Sine Qua Non", desc: "Intelligence", dataPoint: "0xBF2", href: "/governance/intelligence", collapsible: true, group: "regnum-dei" },
+      { name: "Dial Square", desc: "Identity", dataPoint: "0xBF1", href: "/governance/identity", collapsible: true, group: "regnum-dei" },
+      { name: "E Pluribus Unum", desc: "Capital", dataPoint: "0xBF3", href: "/governance/capital", collapsible: true, group: "regnum-dei" },
+      // Lingam: Peridot rolls open to its articles; Canonical and the review-stage glossary draft are single links.
+      { name: "Peridot", desc: "Terms & Conditions", dataPoint: "0xBF4", href: "/governance/peridot", collapsible: true, group: "lingam" },
+      { name: "Canonical", desc: "Glossary", dataPoint: "0xBF0", href: "/governance/canonical", group: "lingam" },
+      { name: "Canonical Review", desc: "Glossary draft", dataPoint: "0xBF9", href: "/governance/canonical-review", group: "lingam" },
+      // Utility of the ontology (moved from Bento 3). URL deliberately unchanged: /chronicle/argonaut-agentic.
+      { name: "Argonaut Agentic", desc: "V≡RT", dataPoint: "0xCF6", href: "/chronicle/argonaut-agentic", variant: "utility" },
     ],
   },
   B3: {
-    title: "Argonaut",
+    title: "Lens & Narrative",
     label: "Firmitas",
     nodeKicker: "सुन्दरम",
     subtitle: "Jackanory: The Tangent",

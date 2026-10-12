@@ -118,8 +118,7 @@ test("chronicle/skin-in-the-game still lands locally while held as draft", () =>
     assert.equal(resolved.essay.frontmatter.spotifyPlaylist, undefined);
     assert.equal(resolved.essay.frontmatter.image, "/assets/skin.png");
     assert.equal(resolved.essay.frontmatter.imageRole, "inset");
-    assert.match(resolved.essay.content, /^## What/m);
-    assert.match(resolved.essay.content, /verbiage forthcoming/i);
+    assert.match(resolved.essay.content, /^### What Floats Your Boat\?/m);
     assert.match(resolved.essay.content, /^## How/m);
     assert.match(resolved.essay.content, /github\.com\/patelashit550-cpu\/tannery/);
     assert.match(resolved.essay.content, /npm run dev/);
@@ -156,3 +155,32 @@ test("published essay body headings sit one level below H1 titles", () => {
     else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
   }
 });
+
+for (const tier of ["global", "local"] as const) {
+  test(`chronicle/argonaut-agentic hub resolves the published lander (${tier} tier)`, () => {
+    const previous = process.env.NEXT_PUBLIC_CONTENT_TIER;
+    process.env.NEXT_PUBLIC_CONTENT_TIER = tier;
+    try {
+      const route = resolveContentRoute(["chronicle", "argonaut-agentic"]);
+      assert.ok(route && route.kind === "content-hub");
+      assert.equal(route.hubKey, "chronicle/argonaut-agentic");
+      assert.equal(route.config.mode, "series");
+      assert.equal(route.config.showTopicNav, false);
+      const resolved = resolveReadingEssay(["chronicle", "argonaut-agentic"]);
+      assert.ok(resolved, "Argonaut Agentic must resolve");
+      assert.equal(resolved.essaySlug, "argonaut-agentic");
+      assert.equal(resolved.essay.frontmatter.title, "Argonaut Agentic");
+      assert.equal(resolved.essay.frontmatter.subtitle, "V≡RT");
+      assert.equal(resolved.essay.frontmatter.titleDisplay, "hidden");
+      assert.equal(resolved.essay.frontmatter.stage, "published");
+      assert.equal(resolved.essay.frontmatter.image, "/assets/argonaut-agentic-banner.png");
+      assert.match(resolved.essay.content, /^### Agentic Payments/m);
+      assert.match(resolved.essay.content, /^### V≡RT$/m);
+      assert.match(resolved.essay.content, /\/assets\/vert-explainer\/vert-explainer\.pdf/);
+      assert.doesNotMatch(resolved.essay.content, /ISO 200022/);
+    } finally {
+      if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+      else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;
+    }
+  });
+}

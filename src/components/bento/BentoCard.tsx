@@ -6,12 +6,23 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
+export type BentoCardItem = BentoItem
+
 interface BentoItem {
   label: string
   sublabel: string
   href?: string
   /** Shown on home bento: brief highlight when the gate has a recent `publishedAt`. */
   isNew?: boolean
+  /**
+   * Collapsible Regnum Dei pillar: when set (even empty), the row renders as a disclosure,
+   * closed by default, that rolls open to reveal these articles.
+   */
+  articles?: { name: string; href: string }[]
+  /** `"utility"`: set apart on its own line below the sections (V≡RT under Telamon). */
+  variant?: "utility"
+  /** Parent disclosure (Regnum Dei): rolls open to these nested pillar disclosures. */
+  children?: BentoItem[]
 }
 
 interface BentoProps {
@@ -129,7 +140,83 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
     };
   }, [equalRow, applyScrollerCap, updateScrollCues, nodeKicker, nodeId, title, subtitle, titleVisualSrc, items?.length]);
 
-  const itemList = items?.map((item, idx) => {
+  /**
+   * Open pillars live in state, not just the DOM: when the equal-row layout toggles (e.g. on
+   * window resize) the list is re-parented and remounted, which would otherwise snap them shut.
+   */
+  const [openGroups, setOpenGroups] = useState<ReadonlySet<string>>(() => new Set());
+  const onGroupToggle = useCallback(
+    (key: string, open: boolean) => {
+      setOpenGroups((prev) => {
+        if (prev.has(key) === open) return prev;
+        const next = new Set(prev);
+        if (open) next.add(key);
+        else next.delete(key);
+        return next;
+      });
+      requestAnimationFrame(() => updateScrollCues());
+    },
+    [updateScrollCues]
+  );
+
+  const renderDisclosure = (item: BentoItem, idx: number, nested: boolean): React.ReactNode => {
+      const groupKey = item.children ? `group:${item.label}` : (item.href ?? item.label);
+      return (
+        <details
+          key={idx}
+          className={cn(
+            "bento-group",
+            nested && "bento-group--nested",
+            item.children && "bento-group--parent",
+            item.isNew && "bento-group--new"
+          )}
+          open={openGroups.has(groupKey)}
+          onToggle={(e) => {
+            // Nested <details> fire their own toggle; don't let it bubble into the parent's state.
+            e.stopPropagation();
+            onGroupToggle(groupKey, e.currentTarget.open);
+          }}
+        >
+          <summary
+            className={cn(
+              "bento-row bento-group__summary group/item rounded-sm",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50",
+              item.isNew && "bento-row--new"
+            )}
+          >
+            <span className="bento-row-stack bento-group__label">
+              <span className="bento-category-title">{item.label}</span>
+              <span className="bento-category-sub">{item.sublabel}</span>
+            </span>
+            <span className="bento-group__chevron" aria-hidden="true" />
+          </summary>
+          {item.children ? (
+            <div className="bento-group__nested" role="group" aria-label={`${item.label} pillars`}>
+              {item.children.map((child, childIdx) =>
+                child.children || child.articles
+                  ? renderDisclosure(child, childIdx, true)
+                  : renderRow(child, childIdx, true)
+              )}
+            </div>
+          ) : item.articles && item.articles.length > 0 ? (
+            <ul className="bento-group__list" aria-label={`${item.label} articles`}>
+              {item.articles.map((article) => (
+                <li key={article.href}>
+                  <Link href={article.href} className="bento-group__link">
+                    {article.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="bento-group__empty">No articles yet</p>
+          )}
+        </details>
+      );
+  };
+
+  /** Plain link row (also used for single-link children inside a group, e.g. Canonical in Lingam). */
+  const renderRow = (item: BentoItem, idx: number, nested = false): React.ReactNode => {
     const body = (
       <>
         <h3 className="bento-category-title">{item.label}</h3>
@@ -141,7 +228,9 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
       item.href
         ? "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50"
         : "cursor-default",
-      item.isNew && "bento-row--new"
+      item.isNew && "bento-row--new",
+      item.variant === "utility" && "bento-row--utility",
+      nested && "bento-row--nested"
     );
     return item.href ? (
       <Link
@@ -156,7 +245,11 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
         {body}
       </div>
     );
-  });
+  };
+
+  const itemList = items?.map((item, idx) =>
+    item.children || item.articles ? renderDisclosure(item, idx, false) : renderRow(item, idx)
+  );
 
   const titleSection = (
     <>

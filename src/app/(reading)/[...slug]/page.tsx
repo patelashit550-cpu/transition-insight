@@ -358,6 +358,19 @@ function spotifyPlaylistFromFrontmatter(frontmatter: Record<string, unknown>): s
   return parseSpotifyPlaylistId(frontmatter.spotifyPlaylist) ?? undefined;
 }
 
+type LeadThumb = { src: string; href?: string; alt?: string };
+function parseLeadThumbs(raw: unknown): LeadThumb[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const out = raw
+    .filter((t): t is Record<string, unknown> => !!t && typeof t === "object" && typeof (t as Record<string, unknown>).src === "string")
+    .map((t) => ({
+      src: t.src as string,
+      href: typeof t.href === "string" ? t.href : undefined,
+      alt: typeof t.alt === "string" ? t.alt : undefined,
+    }));
+  return out.length ? out : undefined;
+}
+
 function NarrativeEssayBody({
   lead,
   image,
@@ -366,6 +379,9 @@ function NarrativeEssayBody({
   imagePosition,
   imageClip,
   imagePlate,
+  imageBelow,
+  imageBelowAlt = "",
+  leadThumbs,
   blockquoteFlow = false,
   content,
   components,
@@ -381,6 +397,11 @@ function NarrativeEssayBody({
   imagePosition?: string;
   imageClip?: string;
   imagePlate?: string;
+  /** Optional unframed mark stacked under the plate in the lead column (`imageBelow` frontmatter). */
+  imageBelow?: string;
+  imageBelowAlt?: string;
+  /** Optional small linked thumbnails under the lead column marks (`leadThumbs` frontmatter). */
+  leadThumbs?: LeadThumb[];
   blockquoteFlow?: boolean;
   content: string;
   components: Components;
@@ -443,6 +464,25 @@ function NarrativeEssayBody({
           <div className="p3-narrative-body__lead">
             {lead}
             {plateFigure}
+            {imageBelow ? (
+              <figure className="p3-narrative-figure p3-narrative-figure--below-plate">
+                <img
+                  src={assetSrc(imageBelow)}
+                  alt={imageBelowAlt}
+                  loading="eager"
+                  className="p3-narrative-figure__below-img"
+                />
+              </figure>
+            ) : null}
+            {leadThumbs && leadThumbs.length ? (
+              <nav className="p3-lead-thumbs" aria-label="Explainer pages">
+                {leadThumbs.map((t) => (
+                  <a key={t.src} href={assetSrc(t.href ?? t.src)} target="_blank" rel="noopener" className="p3-lead-thumbs__link">
+                    <img src={assetSrc(t.src)} alt={t.alt ?? ""} loading="lazy" className="p3-lead-thumbs__img" />
+                  </a>
+                ))}
+              </nav>
+            ) : null}
           </div>
           <div className="p3-narrative-body__copy">{copyInner}</div>
         </>
@@ -595,6 +635,9 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
     typeof frontmatter.imagePosition === "string" ? frontmatter.imagePosition : undefined;
   const imageClip = typeof frontmatter.imageClip === "string" ? frontmatter.imageClip : undefined;
   const imagePlate = typeof frontmatter.imagePlate === "string" ? frontmatter.imagePlate : undefined;
+  const imageBelow = typeof frontmatter.imageBelow === "string" ? frontmatter.imageBelow : undefined;
+  const imageBelowAlt = typeof frontmatter.imageBelowAlt === "string" ? frontmatter.imageBelowAlt : "";
+  const leadThumbs = parseLeadThumbs((frontmatter as Record<string, unknown>).leadThumbs);
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const connexionFit = visual === "connexion-contact";
@@ -639,6 +682,9 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
           imagePosition={connexionFit ? undefined : imagePosition}
           imageClip={connexionFit ? undefined : imageClip}
           imagePlate={connexionFit ? undefined : imagePlate}
+          imageBelow={connexionFit ? undefined : imageBelow}
+          imageBelowAlt={imageBelowAlt}
+          leadThumbs={leadThumbs}
           blockquoteFlow={blockquoteInsetFlows(frontmatter as Record<string, unknown>)}
           content={content}
           components={components}
@@ -698,6 +744,9 @@ function TopicLayout({
     typeof frontmatter.imagePosition === "string" ? frontmatter.imagePosition : undefined;
   const imageClip = typeof frontmatter.imageClip === "string" ? frontmatter.imageClip : undefined;
   const imagePlate = typeof frontmatter.imagePlate === "string" ? frontmatter.imagePlate : undefined;
+  const imageBelow = typeof frontmatter.imageBelow === "string" ? frontmatter.imageBelow : undefined;
+  const imageBelowAlt = typeof frontmatter.imageBelowAlt === "string" ? frontmatter.imageBelowAlt : "";
+  const leadThumbs = parseLeadThumbs((frontmatter as Record<string, unknown>).leadThumbs);
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const leadFeatureClass = leadImageFeatureModifier((frontmatter as Record<string, unknown>).image_feature);
@@ -820,7 +869,13 @@ function TopicLayout({
       <article className="p3-topic-article p3-narrative-article">
         <NarrativeEssayBody
           lead={
-            <header className="p3-narrative-article__header">
+            <header
+              className={
+                frontmatter.titleDisplay === "hidden"
+                  ? "p3-narrative-article__header p3-narrative-article__header--sr-only"
+                  : "p3-narrative-article__header"
+              }
+            >
               {isTitleBesideImage ? (
                 <div className="p3-topic-article__title-row">
                   <img
@@ -844,6 +899,9 @@ function TopicLayout({
           imagePosition={imagePosition}
           imageClip={imageClip}
           imagePlate={imagePlate}
+          imageBelow={imageBelow}
+          imageBelowAlt={imageBelowAlt}
+          leadThumbs={leadThumbs}
           blockquoteFlow={blockquoteInsetFlows(frontmatter as Record<string, unknown>)}
           content={content}
           components={components}

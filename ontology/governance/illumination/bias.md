@@ -25,23 +25,87 @@ tags:
   - wealth
 ---
 
-### Likes & Follows
+### Preference and Prejudice
 
-Central to the nature of governance and decision-making in general is bias, which is the subject of this piece. Specifically, the question is what counts as credible personal preferences on the one hand, and what constitutes an arbitrary prejudice on the other.
+Central to the nature of governance and decision-making in general is ***bias***, which is the subject of this piece. Specifically: What counts as an innocent enough ***preference*** and at what point does that preference compound to become an arbitrary prejudice: Something we called ***dogma*** or ***ideology*** - respectively these are theological or secular ideas deemed to be self-evidently valid and which require neither explanation nor investigation.
 
-One is a heuristic—a principle rather than a precise rule—which provides efficiencies by applying organic inclinations, whether innately personal or developed by a community. This we call bias.
+**Preferences** are grounded on a  liberal principle - autonomy; the idea that people *should* be free to self-actualize to do as they wish; in other words apply their innate sense of curiosity to pursue their idea of happiness and accomplish what they feel they need to during their lifetime.
 
-The other is an idea which begins as a heuristic bias, but then sets in through the influence of particular interests overriding those of others in a community. A plurality is often sufficient where capital, rather than the real threat of violence, is decisive in controlling decision-making. This, by the way, is why we still have a hegemonic US dollar regime rather than a true multi-polar free market entailing a globally integrated single perimeter within which capital may flow without arbitrary sanction.
-
-Such ideas often reduced to easily absorbed tweetable truisms harden into rigid positions as their proponents accrue influence and capital to entrench a persistent but arbitrarily defined broad faction. Often representing only a plurality, a group maintains control by manufacturing consensus issue-by-issue, relying on retail performative appeals to so-called independents This is generally enough to control a jurisdiction or domain. Behind this presentation layer entrenched capital shifts its support between competing factions as necessary through campaign financing and legislative capture to effectively hold each sides to heel in order to sustain their position. In any case such ideas are a form of arbitrary prejudice are elevated platforms known as _dogma_ or ideology. 
-
-Dogma or ideology then causes inefficiencies to accumulate over time, ultimately leading to systemic incoherence—chaos, unpredictability and volatility largely because they allow negative externalities—energy or material is wasted in process which doesn't fully completeand is emitted through open loop which 
+To be broadly credible, our preferences must seem reasonable from another's perspective. The most credible preferences are (today, at least) our innate tendencies, such as laterality—or side preference. This dictates which hand we default to for tasks like writing. While roughly 10% of the population write with their left hand, a subtle, benign coercion socially engineers many left-handers to develop cross-dominance (the neurological assignment of different tasks to different hands, rather than a single dominant side). 
 
 
 
-In the software delivery lifecycle (SDLC), we call this _technical debt_. 
 
-It is the systemic trauma and failure of integrity which prevents technology from doing what it is designed to do: save time, energy, and materials. The great issue of the twenty-first century is the matter of productivity—why technology in all its guises, and in particular information technology (IT), has so far failed to deliver the holy grail of abundance and ultimately the end of the poverty and conflict. It is therefore also why people lose a sense of purpose and the desire to perform their work with distinction; seeing it instead as a means to an end—a way to pay for the fulfilment found in the pleasure of other pursuits explored with friends and family. 
+
+
+
+
+
+
+
+
+
+
+HERE
+
+. These then become our social norms which change over time in different ways based on prevailing conditions.
+
+
+
+
+
+Now, so-called democracies a plurality is often sufficient where capital, rather than any coercion is decisive in controlling decision-making. 
+
+Parliamentary democracy offers a good illustration of how a plurality may then control outcomes in terms of controlling the policy agenda of governance. A plurality is  the largest single group but one which controls less than the majority. It will seek to horse-trade with other groups or factions to generate a mandate (a platform of priorities) for governance which, again, amounts to the use of collective capital to generate sum positive outcomes for all stakeholders.
+
+The challenge is that the way groups value and price things vary because they want different things: as we stated at the outset people have starkly different approaches to pursuing contentment. One hopes that in the aggregate this process generates progressively greater welfare (benefit or utility) for the public being represented.
+
+
+EXAMPLE - OBJECTIVITY
+Another illustration comes from software development where the stakeholders in question is the market itself and specifically application's community - the people who gain value from using it. The PM (the Product Manager)  governs the work with a team of developers (an increasingly virtual team of persona and/or workflow skills used in conjunction with general purpose agents) 
+
+Analytics defining user behavior or debate between virtual or real developers generates a backlog of priorities which are then put onto a plan or backlog for resolution based on the generated consensus on how items are prioritized (an example of credible preference).
+
+In the case of a development team success is then measured in terms of yield - the operating cost of running the application or the revenue generated. In eithe### Preference and Prejudice
+
+
+ 
+Inside larger economic communities (those which share a currency for example) interests will form around domains; these include but are not limited to those which have corporate, industrial, or local and regional interests. Each of these then seek to engage with the population at large for legitimacy versus one and another and for support on the social network by cultivating their attention and some form of material support. 
+
+From within these various groups leaders will emerge to marshal stakeholders - both members of these communities and their supporters into broad alignment. These then seek to influence the overarching governance of the entire domain and to retain relevance and currency for its own sake.
+
+Now,  so-called democracies a plurality is often sufficient where capital, rather than any coercion is decisive in controlling decision-making. 
+
+Parliamentary democracy offers a good illustration of how a plurality may then control outcomes in terms of controlling the policy agenda of governance. A plurality is  the largest single group but one which controls less than the majority. It will seek to horse-trade with other groups or factions to generate a mandate (a platform of priorities) for governance which, again, amounts to the use of collective capital to generate sum positive outcomes for all stakeholders.
+
+The challenge is that the way groups value and price things vary because they want different things: as we stated at the outset people have starkly different approaches to pursuing contentment. One hopes that in the aggregate this process generates progressively greater welfare (benefit or utility) for the public being represented.
+
+Another illustration comes from software development where the stakeholders in question is the market itself and specifically application's community - the people who gain value from using it. The PM (the Product Manager)  governs the work with a team of developers (an increasingly virtual team of persona and/or workflow skills used in conjunction with general purpose agents).
+
+Analytics defining user behavior or debate between developers  (real or virtual) and generates a backlog of priorities which are then put onto a list  we call a backlog for resolution in a sequence based on  consensus.
+
+In the case of a development team success is then measured in terms of yield - the operating cost of running the application or the revenue generated. In either event the metric is a concrete and objective indicator of performance. The code-base is transparently available for audit, while demos offer real illustration of progress. As long as everyone feels thoroughly engaged and interested in the work arbitrary decisions are held in check. Disaffection and disinterest in the team's or the enterprise's mission however introduce risk to the quality of the work. 
+
+
+
+
+r event the metric is a concrete and objective indicator of performance. The code-base is transparently available for audit, while demos offer real illustration of progress. As long as everyone feels thoroughly engaged  and interested in the work arbitrary decisions are held in check. Disaffection and disinterest in the team's or the enterprise's mission however introduce risk to the quality of the work.
+
+
+
+
+
+
+
+Such ideas often reduced to easily absorbed  truisms harden into rigid positions as their proponents accrue influence and capital to entrench a persistent but arbitrarily defined broad faction. Often representing only a plurality, a group maintains control by manufacturing consensus issue-by-issue, relying on retail performative appeals to so-called independents This is generally enough to control a jurisdiction or domain. Behind this presentation layer entrenched capital shifts its support between competing factions as necessary through campaign financing and legislative capture to effectively hold each sides to heel in order to sustain their position. In any case such ideas are a form of arbitrary prejudice are elevated platforms known as _dogma_ or ideology. 
+
+Dogma or ideology then causes inefficiencies to accumulate over time, ultimately leading to systemic incoherence—chaos, unpredictability and volatility largely because they allow negative externalities—energy or material is wasted in process which doesn't fully complete and is emitted through open loop which 
+
+
+
+In the software delivery life-cycle (SDLC), we call this _technical debt_. 
+and
+It is the systemic trauma and failure of integrity which prevents technology from doing what it is designed to do: save time, energy, and materials. The great issue of the twenty-first century is the matter of productivity—why technology in all its guises, and in particular information technology (IT), has so far failed to deliver the holy grail of abundance and ultimately the end of the poverty and conflict. It is therefore also why people lose a sense of purpose and the desire to perform their work with distinction; seeing it instead as a means to an end—a way to pay for the fulfillment found in the pleasure of other pursuits explored with friends and family. 
 
  
 ### Technique Is Necessary
@@ -65,7 +129,6 @@ HERE
 
 
 
-The principle at play here is *alignment* to community and ecology. Specifically this is a ***normative* cognitive bias**. We are not neutral nor indifferent - we have preferences.
 
 
 
@@ -240,7 +303,6 @@ The short answer is that network consensus dictates what qualifies as a credible
 
 
 
-However, perhaps we should start from the beginning. Physics and in particular bodies in space and the way in which they seem to organize themselves serve as the model for the social network. Density and mass are *decisive*. Small are compelled into the orbit of the large in their proximity. This constant carom continues in a practically infinite number of spaces to create an equilibrium - a balance which persists to suspend objects in relative terms to one another. This is how the Universe establishes *order* in the extraordinarily grand scheme of things. It feels like governance and when you *really* stop to think about how the movement of the planet and including sub-components of tilt and tide that resonate between the Earth, its Moon and Sun, it can often be hard to go back to banality of humanity's various ventures and generate any sense of urgency to generate return on investment.
 
 Such is the gravity of the matter. On the social network this is reflected by the Matthew Effect as agents feel the limits of autonomy and the irresistible force of attraction. Countervailing forces of repulsion apply to create clusters and so various systems develop much as Reed's law effects the network to create communities.
 

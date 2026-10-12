@@ -34,7 +34,7 @@ You said that you’d never been
 But all the things that you’ve seen
 Will slowly fade away 
 >
->~ Oasis (Don't Look Back In Angel)
+>~ Oasis (Don't Look Back In Anger)
 
 A decade or so ago I rode my motorcycle west from my home in Acton through the sprawl that is Toronto towards Campbellford and Ferris Provincial Park. It was to apprentice over a weekend with a craftsman who was practiced in the construction of dry stone walls. Made without mortar these walls have been constructed since the beginning of time to both clear fields and as well to enclose and demarcate space so that order, stewardship and custody may be established; and that some intended practical utility may be expressed.
 

@@ -44,6 +44,28 @@
         }
       }
     },
+    "/chronicle/argonaut-agentic": {
+      "get": {
+        "operationId": "get_chronicle_argonaut_agentic",
+        "summary": "Read public page at /chronicle/argonaut-agentic",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
+    "/chronicle/argonaut-agentic/argonaut-agentic": {
+      "get": {
+        "operationId": "get_chronicle_argonaut_agentic_argonaut_agentic",
+        "summary": "Read public page at /chronicle/argonaut-agentic/argonaut-agentic",
+        "responses": {
+          "200": {
+            "description": "HTML page (default) or markdown when Accept: text/markdown and zone supports conversion"
+          }
+        }
+      }
+    },
     "/chronicle/jack-london": {
       "get": {
         "operationId": "get_chronicle_jack_london",

@@ -6,6 +6,7 @@ export type ContentHubKey =
   | "chronicle/polite_bureau"
   | "chronicle/skin-in-the-game"
   | "chronicle/3am-eternal"
+  | "chronicle/argonaut-agentic"
   | "governance/capital"
   | "governance/identity"
   | "governance/intelligence"
@@ -79,6 +80,15 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     landerOntologyRel: "narrative/audible/3am-eternal",
     showTopicNav: false,
     fitViewport: true,
+  },
+  "chronicle/argonaut-agentic": {
+    publicBase: ["chronicle", "argonaut-agentic"],
+    navKicker: "AGENTIC",
+    landerSlug: "argonaut-agentic",
+    mode: "series",
+    seriesName: "Argonaut Agentic",
+    landerOntologyRel: "narrative/agentic/argonaut-agentic",
+    showTopicNav: false,
   },
   "governance/identity": {
     publicBase: ["governance", "identity"],

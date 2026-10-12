@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><g transform="translate(47.21,47.21) scale(0.81558)"><defs><clipPath id="icd-in"><circle cx="256" cy="256" r="213"/></clipPath><clipPath id="icd-tri"><polygon points="256,265.0 131.1,520 380.9,520"/></clipPath></defs>
+<g fill="none" stroke="#fafafa">
+<circle cx="256" cy="256" r="213" stroke-width="26"/>
+<g clip-path="url(#icd-in)">
+<line x1="43" y1="266" x2="469" y2="266" stroke-width="6"/>
+<path d="M143.3,520 L256,290 L368.7,520" stroke-width="22" stroke-linejoin="miter" stroke-miterlimit="10"/>
+<rect x="136" y="368.0" width="240" height="20" fill="#fafafa" stroke="none" clip-path="url(#icd-tri)"/>
+</g></g></g></svg>

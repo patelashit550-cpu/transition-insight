@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { BentoRegistry } from "../config/site.ts";
+import { BentoGroups, BentoRegistry } from "../config/site.ts";
 import { getNavVisibilityPayload } from "./nav-visibility.ts";
 import { resolveBentoKeyFromPathname } from "./nav-visibility-shared.ts";
 
@@ -66,4 +66,131 @@ test("B3 registry order keeps Tannery above London Calling", () => {
   assert.equal(BentoRegistry.B3.series[2]!.href, "/chronicle/skin-in-the-game");
   assert.equal(BentoRegistry.B3.series[2]!.desc, "Tannery");
   assert.equal(BentoRegistry.B3.series[3]!.href, "/chronicle/3am-eternal");
+});
+
+test("Bento 3 is titled Lens and keeps London Calling", () => {
+  assert.equal(BentoRegistry.B3.title, "Lens & Narrative");
+  assert.ok(BentoRegistry.B3.series.some((row) => row.name === "London Calling"));
+});
+
+test("B2 (Telamon) shows published Argonaut Agentic (V≡RT) in global tier", () => {
+  const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
+  try {
+    const visible = getNavVisibilityPayload();
+    const agentic = visible.B2.find((row) => row.href === "/chronicle/argonaut-agentic");
+    assert.ok(agentic, "B2 must expose published Argonaut Agentic on global");
+    assert.equal(
+      visible.B3.find((row) => row.href === "/chronicle/argonaut-agentic"),
+      undefined,
+      "Argonaut Agentic is no longer listed under Lens"
+    );
+    const entry = BentoRegistry.B2.series.find((row) => row.dataPoint === "0xCF6");
+    assert.ok(entry, "V≡RT lives in Bento 2");
+    assert.equal(entry.desc, "V≡RT");
+    assert.equal(entry.href, "/chronicle/argonaut-agentic");
+    assert.equal(entry.variant, "utility");
+  } finally {
+    if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
+  }
+});
+
+test("/chronicle/argonaut-agentic resolves to B2 (Telamon) while keeping its URL", () => {
+  assert.equal(resolveBentoKeyFromPathname("/chronicle/argonaut-agentic"), "B2");
+  assert.equal(resolveBentoKeyFromPathname("/chronicle/argonaut-agentic/"), "B2");
+  assert.equal(resolveBentoKeyFromPathname("/chronicle/argonaut-agentic-other"), "B3");
+});
+
+test("B2 Regnum Dei pillars are the three collapsible rows", () => {
+  assert.deepEqual(
+    BentoRegistry.B2.series
+      .filter((row) => row.collapsible && row.group === "regnum-dei")
+      .map((row) => row.name),
+    ["Sine Qua Non", "Dial Square", "E Pluribus Unum"]
+  );
+});
+
+test("B2 order: Carta, Regnum Dei, Lingam, then V≡RT", () => {
+  const series = BentoRegistry.B2.series;
+  const topLevel: string[] = [];
+  for (const row of series) {
+    const label = row.group ? BentoGroups[row.group].name : row.name;
+    if (topLevel.at(-1) !== label) topLevel.push(label);
+  }
+  assert.deepEqual(topLevel, ["Carta", "Regnum Dei", "Lingam", "Argonaut Agentic"]);
+  assert.deepEqual(
+    series.filter((row) => row.group === "lingam").map((row) => [row.name, row.collapsible === true]),
+    [
+      ["Peridot", true],
+      ["Canonical", false],
+      ["Canonical Review", false],
+    ]
+  );
+  assert.equal(BentoGroups.lingam.name, "Lingam");
+});
+
+test("Lingam exposes only published children in global tier", () => {
+  const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
+  try {
+    const visible = getNavVisibilityPayload();
+    const lingamHrefs = new Set(
+      BentoRegistry.B2.series.filter((row) => row.group === "lingam").map((row) => row.href)
+    );
+    const shown = visible.B2.filter((row) => lingamHrefs.has(row.href));
+    assert.deepEqual(shown.map((row) => row.name), ["Peridot", "Canonical"]);
+    assert.ok((shown[0]!.articles?.length ?? 0) > 0, "Peridot rolls open to its published articles");
+    assert.equal(shown[1]!.articles, undefined, "Canonical stays a single link");
+  } finally {
+    if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
+  }
+});
+
+test("B2 folds the three pillars into one Regnum Dei group right after Carta", () => {
+  const series = BentoRegistry.B2.series;
+  assert.equal(series[0]!.name, "Carta");
+  assert.deepEqual(
+    series.slice(1, 4).map((row) => [row.name, row.desc, row.group]),
+    [
+      ["Sine Qua Non", "Intelligence", "regnum-dei"],
+      ["Dial Square", "Identity", "regnum-dei"],
+      ["E Pluribus Unum", "Capital", "regnum-dei"],
+    ]
+  );
+  assert.equal(series.find((row) => row.name === "Dial Square")!.href, "/governance/identity");
+  assert.deepEqual(BentoGroups["regnum-dei"], { name: "Regnum Dei", desc: "Divine Governance" });
+});
+
+test("Regnum Dei exposes only pillars with published articles in global tier", () => {
+  const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
+  try {
+    const visible = getNavVisibilityPayload();
+    const pillarHrefs = new Set(
+      BentoRegistry.B2.series.filter((row) => row.group === "regnum-dei").map((row) => row.href)
+    );
+    const shown = visible.B2.filter((row) => pillarHrefs.has(row.href) && (row.articles?.length ?? 0) > 0);
+    assert.deepEqual(shown.map((row) => row.name), ["Sine Qua Non"]);
+  } finally {
+    if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
+  }
+});
+
+test("B2 Sine Qua Non rolls open to its published articles in global tier", () => {
+  const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
+  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
+  try {
+    const visible = getNavVisibilityPayload();
+    const sqn = visible.B2.find((row) => row.href === "/governance/intelligence");
+    assert.ok(sqn, "B2 should expose Sine Qua Non");
+    assert.ok(sqn.articles && sqn.articles.length > 0, "Sine Qua Non should list articles");
+    assert.ok(sqn.articles.every((a) => a.href.startsWith("/governance/intelligence/")));
+    assert.equal(visible.B2.find((row) => row.href === "/governance/carta")?.articles, undefined);
+  } finally {
+    if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
+    else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
+  }
 });

@@ -783,6 +783,22 @@ body:has(.p3-topic-canvas--fit-viewport) {
   }
 }
 
+/* Phones: four or more section links don't fit one row at 360-390px, and the
+   sideways scroll hid the last link (often the current page). Wrap to a second
+   row instead, with slightly tighter tracking. Desktop (>=640px) is unchanged. */
+@media (max-width: 639px) {
+  .p3-narrative-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    column-gap: 0.85rem;
+    row-gap: 0.45rem;
+  }
+
+  .p3-narrative-header nav.p3-narrative-nav a.p3-narrative-link {
+    letter-spacing: 0.1em;
+  }
+}
+
 .p3-narrative-header nav.p3-narrative-nav a.p3-narrative-link:hover,
 .p3-narrative-header nav.p3-narrative-nav a.p3-narrative-link:focus-visible {
   color: var(--p3-shell-header-link-hover) !important;
@@ -1154,6 +1170,40 @@ body:has(.p3-topic-canvas--fit-viewport) {
   margin-top: 0;
 }
 
+/* Unframed mark stacked under the plate (`imageBelow`): same width as the plate, no
+   emerald mat, sits straight on the pane (e.g. the V≡RT mark on Argonaut Agentic).
+   Selectors carry the lead/body scope so they outrank the generic figure cap and the
+   body-photo mat further down. */
+.p3-narrative-body .p3-narrative-body__lead > .p3-narrative-figure.p3-narrative-figure--below-plate {
+  display: block;
+  float: none;
+  /* Full banner width; the mark's SVG carries its own rules, so it only needs the gap. */
+  width: 100%;
+  max-width: var(--p3-essay-plate-max);
+  margin: 4.5rem auto var(--p3-essay-plate-gap);
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* The mark takes over the plate's bottom gap so the two read as one unit. */
+.p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--plate:has(+ .p3-narrative-figure--below-plate) {
+  margin-bottom: 0;
+}
+
+.p3-narrative-body .p3-narrative-body__lead > .p3-narrative-figure--below-plate > img.p3-narrative-figure__below-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 /* Page title lives inside the body, so it would inherit the 3rem section-heading
    top margin. Copy already zeroes its first h2/h3; do the same for the lead title
    so both columns share a start edge (desktop split) and the stack is tight. */
@@ -1318,6 +1368,18 @@ body:has(.p3-topic-canvas--fit-viewport) {
     overflow: hidden;
     background: transparent;
     container-type: size;
+  }
+
+  /* With a mark stacked below (`imageBelow`), the plate stops filling the lead
+     height and sizes to its picture, so the mark sits directly under the frame. */
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead:has(> .p3-narrative-figure--below-plate)
+    > .p3-narrative-figure--plate {
+    flex: 0 0 auto;
+    container-type: inline-size;
+  }
+
+  .p3-narrative-body--with-plate > .p3-narrative-body__lead > .p3-narrative-figure--below-plate {
+    flex: 0 0 auto;
   }
 
   /* Emerald mat lives on the img. Size the img box to the bitmap (auto × auto,
@@ -2155,6 +2217,11 @@ body:has(.p3-topic-canvas--fit-viewport) {
   mask: url("/identity/handwriting/signature/ash.svg") center / contain no-repeat;
 }
 .p3-sig:hover {
+  color: #ffffff;
+}
+/* Lede and signature light up together: hovering either one brightens both (shared parent via :has). */
+:has(> .p3-home-lede):has(> .p3-home-sig .p3-sig:hover) > .p3-home-lede,
+:has(> .p3-home-sig):has(> .p3-home-lede:hover) > .p3-home-sig .p3-sig {
   color: #ffffff;
 }
 @media (max-width: 640px) {
@@ -3489,6 +3556,21 @@ body:has(.p3-topic-canvas--fit-viewport) {
   margin: 0 0 1rem;
 }
 
+/* Opt-in per page (`titleDisplay: hidden`): the banner carries the title, so the
+   plain title, subtitle and rule are hidden visually but stay in the DOM for
+   screen readers and the document outline. */
+.p3-narrative-article__header--sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .p3-topic-article__title-row {
   display: flex;
   align-items: flex-start;
@@ -3708,4 +3790,174 @@ body:has(.p3-topic-canvas--fit-viewport) {
     --p3-topic-col-max: calc(60rem + 25%);
     --p3-topic-col-inset: max(0px, calc((100% - 80rem) / 2));
   }
+}
+
+/*
+ * No-nav reading pages (desktop): equal outer margins either side of the content.
+ * Same principle as the side-nav rule above: the right-hand gap left by the reading-column
+ * caps is the guide, and the left gap is set to match it, so the column widens into the
+ * space the old left inset held. Covers topic pages without the essay nav (incl. fit-viewport
+ * ones) and the plain narrative template (/me, /governance). Connexion stays centred.
+ * Topic no-nav articles get the same 2rem left padding they already have on the right.
+ */
+@media (min-width: 1025px) {
+  .p3-topic-canvas--no-nav > .p3-topic-article,
+  .p3-narrative-canvas:not(.p3-narrative-canvas--connexion-fit) > .p3-narrative-article {
+    --p3-topic-col-max: calc(42rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 56rem) / 2));
+  }
+
+  .p3-topic-canvas--no-nav > .p3-topic-article:has(.p3-narrative-layout--overlay-figure),
+  .p3-narrative-canvas:not(.p3-narrative-canvas--connexion-fit) > .p3-narrative-article:has(.p3-narrative-layout--overlay-figure) {
+    --p3-topic-col-max: calc(54rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 72rem) / 2));
+  }
+
+  .p3-topic-canvas--no-nav > .p3-topic-article:has(.p3-narrative-body--with-plate),
+  .p3-narrative-canvas:not(.p3-narrative-canvas--connexion-fit) > .p3-narrative-article:has(.p3-narrative-body--with-plate) {
+    --p3-topic-col-max: calc(51rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 68rem) / 2));
+  }
+
+  .p3-topic-canvas--no-nav > .p3-topic-article,
+  .p3-narrative-canvas:not(.p3-narrative-canvas--connexion-fit) > .p3-narrative-article {
+    --p3-topic-col-gutter: max(0px, calc(100% - var(--p3-topic-col-inset) - var(--p3-topic-col-max)));
+    width: auto;
+    max-width: none;
+    margin-left: var(--p3-topic-col-gutter);
+    margin-right: var(--p3-topic-col-gutter);
+  }
+
+  .p3-topic-canvas--no-nav > .p3-topic-article {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .p3-topic-canvas--no-nav > .p3-topic-article:has(.p3-narrative-layout--overlay-figure),
+  .p3-narrative-canvas:not(.p3-narrative-canvas--connexion-fit) > .p3-narrative-article:has(.p3-narrative-layout--overlay-figure) {
+    --p3-topic-col-max: calc(60rem + 25%);
+    --p3-topic-col-inset: max(0px, calc((100% - 80rem) / 2));
+  }
+}
+
+/* ── Regnum Dei collapsible pillars (Bento 2 home card + pillar-hub left nav) ── */
+.bento-group {
+  display: block;
+}
+
+.bento-group__summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.p3-bento-shell .bento-card-nav .bento-group__summary {
+  padding-block: 0.18rem 0.28rem;
+}
+
+.bento-group__summary::-webkit-details-marker {
+  display: none;
+}
+
+.bento-group__chevron {
+  flex: none;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-top: 0.35rem;
+  border-right: 1px solid #52525b;
+  border-bottom: 1px solid #52525b;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.bento-group[open] > .bento-group__summary .bento-group__chevron {
+  transform: rotate(45deg);
+}
+
+.jurisdiction-card .bento-group__summary:hover .bento-group__chevron {
+  border-color: #34d399;
+}
+
+.bento-group__list {
+  list-style: none;
+  margin: 0.35rem 0 0.2rem;
+  padding: 0 0 0 0.75rem;
+  border-left: 1px solid rgba(82, 82, 91, 0.65);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.jurisdiction-card a.bento-group__link,
+.bento-group__link {
+  display: block;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #71717a;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.2s ease;
+}
+
+.jurisdiction-card a.bento-group__link:hover,
+.bento-group__link:hover {
+  color: #34d399;
+  padding-left: 0.25rem;
+}
+
+.bento-group__link:focus-visible {
+  outline: 2px solid rgba(52, 211, 153, 0.55);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.bento-group__empty {
+  margin: 0.35rem 0 0.2rem 0.75rem;
+  font-size: 11px;
+  color: #52525b;
+}
+
+/* Utility rows (V≡RT) sit on their own line below the pillar sections. */
+.bento-card-nav .bento-row--utility {
+  margin-top: 0.35rem;
+  padding-top: 0.6rem !important;
+  border-top: 1px dashed rgba(82, 82, 91, 0.65);
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bento-group__chevron,
+  .bento-group__link {
+    transition: none;
+  }
+}
+
+/* Regnum Dei parent disclosure: pillars nest one level in, ruled like the article list. */
+.bento-group__nested {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.35rem 0 0.2rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid rgba(82, 82, 91, 0.65);
+}
+
+.p3-bento-shell .bento-card-nav .bento-group--nested > .bento-group__summary {
+  padding-block: 0.12rem 0.2rem;
+}
+
+/* Lead-column explainer thumbnails (frontmatter leadThumbs; Argonaut Agentic) */
+.p3-lead-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; margin-top: 0.75rem; }
+.p3-lead-thumbs__link { display: block; border: 1px solid rgba(255,255,255,0.12); border-radius: 3px; overflow: hidden; opacity: 0.8; transition: opacity .15s, border-color .15s; }
+.p3-lead-thumbs__link:hover, .p3-lead-thumbs__link:focus-visible { opacity: 1; border-color: rgb(52 211 153); }
+.p3-lead-thumbs__img { display: block; width: 100%; height: auto; }
+.p3-narrative-body .p3-narrative-body__lead:has(> .p3-lead-thumbs) > .p3-narrative-figure.p3-narrative-figure--below-plate { margin-top: 2rem; margin-bottom: 0; }
+.p3-lead-thumbs .p3-lead-thumbs__img { border: 0 !important; outline: 0 !important; box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; }
+@media (min-width: 1024px) and (max-height: 860px) {
+  .p3-narrative-body .p3-narrative-body__lead:has(> .p3-lead-thumbs) > .p3-narrative-figure.p3-narrative-figure--below-plate { width: 80%; margin-left: auto; margin-right: auto; }
 }

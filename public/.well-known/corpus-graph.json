@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T16:35:06.794Z",
+  "generatedAt": "2026-10-12T18:10:15.247Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,20 +14,20 @@
   },
   "interior": {
     "summary": {
-      "essays": 17,
-      "nodes": 182,
-      "edges": 437,
+      "essays": 18,
+      "nodes": 186,
+      "edges": 447,
       "byKind": {
-        "member-of-series": 12,
-        "member-of-folder": 17,
-        "tagged": 105,
+        "member-of-series": 13,
+        "member-of-folder": 18,
+        "tagged": 108,
         "lexica": 84,
-        "mention": 219
+        "mention": 224
       },
       "orphanEssays": 0,
-      "series": 6,
-      "folders": 7,
-      "tags": 55,
+      "series": 7,
+      "folders": 8,
+      "tags": 56,
       "terms": 97
     },
     "nodes": [
@@ -229,6 +229,22 @@
         ]
       },
       {
+        "id": "essay:narrative/agentic/argonaut-agentic.md",
+        "type": "essay",
+        "label": "Argonaut Agentic",
+        "stage": "published",
+        "slug": "argonaut-agentic",
+        "series": "Argonaut Agentic",
+        "folder": "narrative/agentic",
+        "ontologyPath": "narrative/agentic/argonaut-agentic.md",
+        "vaultPath": "ontology/narrative/agentic/argonaut-agentic",
+        "tags": [
+          "vert",
+          "telamon",
+          "firmitas"
+        ]
+      },
+      {
         "id": "essay:narrative/audible/3am-eternal.md",
         "type": "essay",
         "label": "London Calling",
@@ -372,6 +388,11 @@
         "label": "sine-qua-non"
       },
       {
+        "id": "series:argonaut-agentic",
+        "type": "series",
+        "label": "Argonaut Agentic"
+      },
+      {
         "id": "series:3-am-eternal",
         "type": "series",
         "label": "3 AM Eternal"
@@ -405,6 +426,11 @@
         "id": "folder:me",
         "type": "folder",
         "label": "me"
+      },
+      {
+        "id": "folder:narrative-agentic",
+        "type": "folder",
+        "label": "narrative/agentic"
       },
       {
         "id": "folder:narrative-audible",
@@ -622,9 +648,9 @@
         "label": "commons"
       },
       {
-        "id": "tag:radio",
+        "id": "tag:vert",
         "type": "tag",
-        "label": "radio"
+        "label": "vert"
       },
       {
         "id": "tag:telamon",
@@ -635,6 +661,11 @@
         "id": "tag:firmitas",
         "type": "tag",
         "label": "firmitas"
+      },
+      {
+        "id": "tag:radio",
+        "type": "tag",
+        "label": "radio"
       },
       {
         "id": "tag:community",
@@ -2107,6 +2138,41 @@
         "weight": 2
       },
       {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-series-argonaut-agentic-member-of-series",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "series:argonaut-agentic",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-folder-narrative-agentic-member-of-folder",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "folder:narrative-agentic",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-tag-vert-tagged",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "tag:vert",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-tag-telamon-tagged",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "tag:telamon",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-tag-firmitas-tagged",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "tag:firmitas",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
         "id": "edge:essay-narrative-audible-3am-eternal-md-series-3-am-eternal-member-of-series",
         "from": "essay:narrative/audible/3am-eternal.md",
         "to": "series:3-am-eternal",
@@ -3183,6 +3249,14 @@
         "count": 5
       },
       {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-term-capital-mention",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-capital-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:capital",
@@ -3543,6 +3617,14 @@
         "count": 4
       },
       {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-term-governance-mention",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
+      },
+      {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-governance-mention",
         "from": "essay:narrative/biography/ashit-milne.md",
         "to": "term:governance",
@@ -3637,6 +3719,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 6
+      },
+      {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-term-identity-mention",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-narrative-biography-ashit-milne-md-term-identity-mention",
@@ -4143,6 +4233,14 @@
         "count": 1
       },
       {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-term-regnum-dei-mention",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "term:regnum dei",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-arete-md-term-satyagraha-mention",
         "from": "essay:governance/illumination/arete.md",
         "to": "term:satyagraha",
@@ -4365,6 +4463,14 @@
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-narrative-agentic-argonaut-agentic-md-term-social-network-mention",
+        "from": "essay:narrative/agentic/argonaut-agentic.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-narrative-comment-transition-md-term-social-network-mention",

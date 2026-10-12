@@ -13,12 +13,44 @@ import {
   getProfileData,
   listEssays,
   listEssaysBySeries,
+  listEssaysBySeriesForBuild,
   listEssaysInTopicFolder,
+  listEssaysInTopicFolderForBuild,
   resolveOntologyFilePath,
 } from "@/lib/markdown";
-import type { BentoKey, NavSiblingItem, NavVisibilityPayload } from "@/lib/nav-visibility-shared";
+import type {
+  BentoKey,
+  NavArticleItem,
+  NavSiblingItem,
+  NavVisibilityPayload,
+} from "@/lib/nav-visibility-shared";
 
-export type { BentoKey, NavSiblingItem, NavVisibilityPayload } from "@/lib/nav-visibility-shared";
+export type {
+  BentoKey,
+  NavArticleItem,
+  NavSiblingItem,
+  NavVisibilityPayload,
+} from "@/lib/nav-visibility-shared";
+
+/**
+ * Articles of a content hub (`/governance/intelligence` → its essays), tier-filtered the same
+ * way as the hub's own left nav. Used by collapsible rows on the home bento (Regnum Dei pillars,
+ * Lingam's Peridot). Returns `undefined` when `href` is not a hub.
+ */
+export function listHubArticles(href: string, tier: ContentTier): NavArticleItem[] | undefined {
+  const hubKey = href.replace(/^\//, "").replace(/\/+$/, "") as ContentHubKey;
+  if (!(hubKey in CONTENT_HUBS)) return undefined;
+  const config = CONTENT_HUBS[hubKey];
+  const stubs =
+    config.mode === "folder"
+      ? listEssaysInTopicFolderForBuild([...config.ontologyTopicPath], {
+          series: config.seriesSlug,
+          tier,
+        })
+      : listEssaysBySeriesForBuild(config.seriesName, tier);
+  const base = `/${config.publicBase.join("/")}`;
+  return stubs.map((stub) => ({ name: stub.title, href: `${base}/${stub.slug}` }));
+}
 
 /** Map public `href` → ontology-relative path for nav gate frontmatter reads. */
 function hrefToRelOntology(href: string): string {
@@ -145,11 +177,15 @@ function filterSeries(
     const rel = hrefToRelOntology(href);
     const data = readNavGateFrontmatter(rel);
     if (!isNavSeriesItemVisible(bentoKey, data, tier)) continue;
-    out.push({
+    const row: NavSiblingItem = {
       name: item.name,
       href,
       isNew: isHrefNew(href, rel),
-    });
+    };
+    if (item.collapsible) {
+      row.articles = listHubArticles(href, tier) ?? [];
+    }
+    out.push(row);
   }
   return out;
 }
