@@ -176,7 +176,10 @@ for (const tier of ["global", "local"] as const) {
       assert.equal(resolved.essay.frontmatter.image, "/assets/argonaut-agentic-banner.png");
       assert.match(resolved.essay.content, /^### Agentic Payments/m);
       assert.match(resolved.essay.content, /^### V≡RT$/m);
-      assert.match(resolved.essay.content, /\/assets\/vert-explainer\/vert-explainer\.pdf/);
+      assert.doesNotMatch(resolved.essay.content, /The V≡RT explainer/, "explainer lives in the lead column, not the body");
+      const fm = resolved.essay.frontmatter as Record<string, unknown>;
+      assert.equal(fm.leadThumbsHref, "/assets/vert-explainer/vert-explainer.pdf");
+      assert.equal((fm.leadThumbs as unknown[]).length, 3);
       assert.doesNotMatch(resolved.essay.content, /ISO 200022/);
     } finally {
       if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;

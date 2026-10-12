@@ -16,6 +16,9 @@ imageAlt: "Argonaut Agentic"
 imageRole: inset
 imageBelow: /assets/vert-mark-grey-short-ruled-b.svg
 imageBelowAlt: "V≡RT: value equivalent reverse transfer"
+leadThumbsLabel: "V≡RT explainer · 3 pages"
+leadThumbsHref: /assets/vert-explainer/vert-explainer.pdf
+leadThumbsLinkText: "Download the V≡RT explainer (PDF)"
 leadThumbs:
   - src: /assets/vert-explainer/vert-explainer-1.png
     alt: "V≡RT explainer, page 1"
@@ -52,13 +55,3 @@ Now consider how negative dislocated and dispersed externalities spread through 
 Using ISO 20022, we can compile a rich metadata profile for a transaction—spanning not just physical goods, but human energy expenditures such as movement, meditation, or optimal nasal breathing. By pulling thousands of data points from IoT wearables, online oracles can evaluate the real-time value of these actions and benchmark them against on-chain data for higher-cost, less organic alternatives. For instance, achieving a healthier baseline naturally could trigger automated incentives, directly offsetting the need for expensive clinical or pharmacological interventions.
 
 In the process of discovering and offsetting dispersed costs by matching them at the point-of-stake (the individual) we can generate true fiat currency - money from nothing - whether dollars, yen, pounds or euros.
-
-### The V≡RT explainer
-
-[![V≡RT explainer, page 1: V≡RT is a reverse VAT for living the good life](/assets/vert-explainer/vert-explainer-1.png)](/assets/vert-explainer/vert-explainer-1.png)
-
-[![V≡RT explainer, page 2: IoT factors and ISO 20022](/assets/vert-explainer/vert-explainer-2.png)](/assets/vert-explainer/vert-explainer-2.png)
-
-[![V≡RT explainer, page 3: Mountin' Do](/assets/vert-explainer/vert-explainer-3.png)](/assets/vert-explainer/vert-explainer-3.png)
-
-[Download the V≡RT explainer (PDF)](/assets/vert-explainer/vert-explainer.pdf)

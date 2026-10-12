@@ -5,7 +5,7 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  globalIgnores([".next/**", "out/**", "node_modules/**"]),
+  globalIgnores([".next/**", "out/**", "node_modules/**", "ontology/.obsidian/**", "sandbox/**/solana_env/**", "sandbox/**/.venv/**"]),
   {
     rules: {
       "@typescript-eslint/no-unused-vars": [

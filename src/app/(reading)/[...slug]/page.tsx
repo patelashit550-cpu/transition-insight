@@ -359,6 +359,13 @@ function spotifyPlaylistFromFrontmatter(frontmatter: Record<string, unknown>): s
 }
 
 type LeadThumb = { src: string; href?: string; alt?: string };
+type LeadThumbGroup = { items: LeadThumb[]; label?: string; href?: string; linkText?: string };
+function parseLeadThumbGroup(fm: Record<string, unknown>): LeadThumbGroup | undefined {
+  const items = parseLeadThumbs(fm.leadThumbs);
+  if (!items) return undefined;
+  const str = (v: unknown) => (typeof v === "string" && v ? v : undefined);
+  return { items, label: str(fm.leadThumbsLabel), href: str(fm.leadThumbsHref), linkText: str(fm.leadThumbsLinkText) };
+}
 function parseLeadThumbs(raw: unknown): LeadThumb[] | undefined {
   if (!Array.isArray(raw)) return undefined;
   const out = raw
@@ -401,7 +408,7 @@ function NarrativeEssayBody({
   imageBelow?: string;
   imageBelowAlt?: string;
   /** Optional small linked thumbnails under the lead column marks (`leadThumbs` frontmatter). */
-  leadThumbs?: LeadThumb[];
+  leadThumbs?: LeadThumbGroup;
   blockquoteFlow?: boolean;
   content: string;
   components: Components;
@@ -474,13 +481,27 @@ function NarrativeEssayBody({
                 />
               </figure>
             ) : null}
-            {leadThumbs && leadThumbs.length ? (
-              <nav className="p3-lead-thumbs" aria-label="Explainer pages">
-                {leadThumbs.map((t) => (
-                  <a key={t.src} href={assetSrc(t.href ?? t.src)} target="_blank" rel="noopener" className="p3-lead-thumbs__link">
-                    <img src={assetSrc(t.src)} alt={t.alt ?? ""} loading="lazy" className="p3-lead-thumbs__img" />
+            {leadThumbs && leadThumbs.items.length ? (
+              <nav className="p3-lead-thumbs" aria-label={leadThumbs.label ?? "Explainer pages"}>
+                {leadThumbs.label ? <p className="p3-lead-thumbs__label">{leadThumbs.label}</p> : null}
+                <div className="p3-lead-thumbs__grid">
+                  {leadThumbs.items.map((t, i) => (
+                    <a
+                      key={t.src}
+                      href={t.href ? assetSrc(t.href) : leadThumbs.href ? `${assetSrc(leadThumbs.href)}#page=${i + 1}` : assetSrc(t.src)}
+                      target="_blank"
+                      rel="noopener"
+                      className="p3-lead-thumbs__link"
+                    >
+                      <img src={assetSrc(t.src)} alt={t.alt ?? ""} loading="lazy" className="p3-lead-thumbs__img" />
+                    </a>
+                  ))}
+                </div>
+                {leadThumbs.href && leadThumbs.linkText ? (
+                  <a href={assetSrc(leadThumbs.href)} className="p3-lead-thumbs__download" download>
+                    {leadThumbs.linkText}
                   </a>
-                ))}
+                ) : null}
               </nav>
             ) : null}
           </div>
@@ -637,7 +658,7 @@ function SingleArticle({ data, canonicalUrl }: { data: EssayData; canonicalUrl?:
   const imagePlate = typeof frontmatter.imagePlate === "string" ? frontmatter.imagePlate : undefined;
   const imageBelow = typeof frontmatter.imageBelow === "string" ? frontmatter.imageBelow : undefined;
   const imageBelowAlt = typeof frontmatter.imageBelowAlt === "string" ? frontmatter.imageBelowAlt : "";
-  const leadThumbs = parseLeadThumbs((frontmatter as Record<string, unknown>).leadThumbs);
+  const leadThumbs = parseLeadThumbGroup(frontmatter as Record<string, unknown>);
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const connexionFit = visual === "connexion-contact";
@@ -746,7 +767,7 @@ function TopicLayout({
   const imagePlate = typeof frontmatter.imagePlate === "string" ? frontmatter.imagePlate : undefined;
   const imageBelow = typeof frontmatter.imageBelow === "string" ? frontmatter.imageBelow : undefined;
   const imageBelowAlt = typeof frontmatter.imageBelowAlt === "string" ? frontmatter.imageBelowAlt : "";
-  const leadThumbs = parseLeadThumbs((frontmatter as Record<string, unknown>).leadThumbs);
+  const leadThumbs = parseLeadThumbGroup(frontmatter as Record<string, unknown>);
   const visual = typeof frontmatter.visual === "string" ? frontmatter.visual : undefined;
 
   const leadFeatureClass = leadImageFeatureModifier((frontmatter as Record<string, unknown>).image_feature);

@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "generated": "2026-10-12T18:10:15.528Z",
+  "generated": "2026-10-12T18:16:29.206Z",
   "tier": "global",
-  "manifestDigest": "sha256:d2f3295c3cb142d60ad5216067db679d1f275ad48a0136332daa6847eeeab444",
+  "manifestDigest": "sha256:eea77131fb26d5a9056999376b2f65296724064d86a6050442c3ab6505d9aacc",
   "identity": {
     "canonical": "https://ashitmilne.xyz",
     "sns": "transition-insight.sol",
@@ -135,7 +135,7 @@
       "publishedAt": "2026-10-11T00:00:00.000Z",
       "slug": "argonaut-agentic",
       "series": "Argonaut Agentic",
-      "sha256": "sha256:541d272a9f1c94b811659a1c136f6a20166cdb77a5ec78caf5b5c87b7a1606ae"
+      "sha256": "sha256:85595ee05ddfd97a4b79264069f868a2717090111bf8178eff1573b8a0a8d5f8"
     },
     {
       "path": "ontology/narrative/audible/3am-eternal.md",
@@ -212,7 +212,7 @@
     "algorithm": "ed25519",
     "scheme": "transition-insight:attestation:v1",
     "publicKey": "6qr7vtip1h2wD7ktLZQYa7XvnJtjnLLeGFF8a6EPtLKT",
-    "value": "441DkafrMkxcE7bRTwMZ3Uv7gLCFs9Nfu2DGSui4chrXXxJwUgEdkkf689aDzeSz5ZmF9HJFg3D4wHBWnFpqdRHF",
-    "signedAt": "2026-10-12T18:10:27.272Z"
+    "value": "47gFW3KCVSxUeC2sjdvhWKVrKT4i7rA76dfh8R59BfnhsNYWmHsgqLtvsu6jbtw2gmgRH1qZhp7ZCcCZT36tjrD8",
+    "signedAt": "2026-10-12T18:16:38.446Z"
   }
 }
