@@ -93,12 +93,11 @@ export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
     requiresAuth: false,
     series: [
       { name: "Carta", desc: "Introduction", dataPoint: "0xBF5", href: "/governance/carta" },
-      // Regnum Dei: one row that rolls open to the three pillars, each of which rolls open to its articles.
-      { name: "Sine Qua Non", desc: "Intelligence", dataPoint: "0xBF2", href: "/governance/intelligence", collapsible: true, group: "regnum-dei" },
-      { name: "Dial Square", desc: "Identity", dataPoint: "0xBF1", href: "/governance/identity", collapsible: true, group: "regnum-dei" },
-      { name: "E Pluribus Unum", desc: "Capital", dataPoint: "0xBF3", href: "/governance/capital", collapsible: true, group: "regnum-dei" },
-      // Lingam: Peridot rolls open to its articles; Canonical and the review-stage glossary draft are single links.
-      { name: "Peridot", desc: "Terms & Conditions", dataPoint: "0xBF4", href: "/governance/peridot", collapsible: true, group: "lingam" },
+      // Regnum Dei: one row that rolls open to its pillar links (homepage is two levels; essays live on the pillar page's own left nav).
+      // Dial Square (/governance/identity) and E Pluribus Unum (/governance/capital) return here once they have articles.
+      { name: "Sine Qua Non", desc: "Intelligence", dataPoint: "0xBF2", href: "/governance/intelligence", group: "regnum-dei" },
+      // Lingam: Peridot, Canonical and the review-stage glossary draft are single links (no essays on the homepage).
+      { name: "Peridot", desc: "Terms & Conditions", dataPoint: "0xBF4", href: "/governance/peridot", group: "lingam" },
       { name: "Canonical", desc: "Glossary", dataPoint: "0xBF0", href: "/governance/canonical", group: "lingam" },
       { name: "Canonical Review", desc: "Glossary draft", dataPoint: "0xBF9", href: "/governance/canonical-review", group: "lingam" },
       // Utility of the ontology (moved from Bento 3). URL deliberately unchanged: /chronicle/argonaut-agentic.

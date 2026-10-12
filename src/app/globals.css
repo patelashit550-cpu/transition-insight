@@ -3964,3 +3964,26 @@ body:has(.p3-topic-canvas--fit-viewport) {
 @media (min-width: 1024px) and (max-height: 860px) {
   .p3-narrative-body .p3-narrative-body__lead:has(> .p3-lead-thumbs) > .p3-narrative-figure.p3-narrative-figure--below-plate { width: 80%; margin-left: auto; margin-right: auto; }
 }
+
+/* Home is a fixed, non-scrolling canvas on desktop/laptop (rows closed or expanded): the page is
+   clamped to the viewport, both axes are locked and overscroll bounce is off, so it no longer
+   wiggles. On short viewports (<=860px tall, e.g. 1280×800) the bottom padding tightens so the
+   signature still fits inside the frame. Expanded disclosure rows scroll inside their card. */
+@media (min-width: 768px) {
+  html:has(.p3-landing-home),
+  body:has(.p3-landing-home) {
+    height: 100svh;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  body:has(.p3-landing-home) > div.min-h-screen {
+    height: 100svh;
+    min-height: 0;
+    overflow: hidden;
+  }
+}
+@media (min-width: 768px) and (max-height: 860px) {
+  .p3-landing-home { padding-bottom: 0.5rem; }
+  .p3-home-sig { margin: 10px 0 0; }
+  .p3-sig { width: 132px; top: 0; }
+}

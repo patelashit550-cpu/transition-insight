@@ -102,13 +102,10 @@ test("/chronicle/argonaut-agentic resolves to B2 (Telamon) while keeping its URL
   assert.equal(resolveBentoKeyFromPathname("/chronicle/argonaut-agentic-other"), "B3");
 });
 
-test("B2 Regnum Dei pillars are the three collapsible rows", () => {
-  assert.deepEqual(
-    BentoRegistry.B2.series
-      .filter((row) => row.collapsible && row.group === "regnum-dei")
-      .map((row) => row.name),
-    ["Sine Qua Non", "Dial Square", "E Pluribus Unum"]
-  );
+test("B2 Regnum Dei holds only Sine Qua Non, as a plain link (two levels on the homepage)", () => {
+  const rows = BentoRegistry.B2.series.filter((row) => row.group === "regnum-dei");
+  assert.deepEqual(rows.map((row) => row.name), ["Sine Qua Non"]);
+  assert.ok(rows.every((row) => !row.collapsible));
 });
 
 test("B2 order: Carta, Regnum Dei, Lingam, then V≡RT", () => {
@@ -122,7 +119,7 @@ test("B2 order: Carta, Regnum Dei, Lingam, then V≡RT", () => {
   assert.deepEqual(
     series.filter((row) => row.group === "lingam").map((row) => [row.name, row.collapsible === true]),
     [
-      ["Peridot", true],
+      ["Peridot", false],
       ["Canonical", false],
       ["Canonical Review", false],
     ]
@@ -140,7 +137,7 @@ test("Lingam exposes only published children in global tier", () => {
     );
     const shown = visible.B2.filter((row) => lingamHrefs.has(row.href));
     assert.deepEqual(shown.map((row) => row.name), ["Peridot", "Canonical"]);
-    assert.ok((shown[0]!.articles?.length ?? 0) > 0, "Peridot rolls open to its published articles");
+    assert.equal(shown[0]!.articles, undefined, "Peridot is a single link on the homepage");
     assert.equal(shown[1]!.articles, undefined, "Canonical stays a single link");
   } finally {
     if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
@@ -148,47 +145,24 @@ test("Lingam exposes only published children in global tier", () => {
   }
 });
 
-test("B2 folds the three pillars into one Regnum Dei group right after Carta", () => {
+test("B2 puts Regnum Dei (Sine Qua Non) right after Carta", () => {
   const series = BentoRegistry.B2.series;
   assert.equal(series[0]!.name, "Carta");
-  assert.deepEqual(
-    series.slice(1, 4).map((row) => [row.name, row.desc, row.group]),
-    [
-      ["Sine Qua Non", "Intelligence", "regnum-dei"],
-      ["Dial Square", "Identity", "regnum-dei"],
-      ["E Pluribus Unum", "Capital", "regnum-dei"],
-    ]
-  );
-  assert.equal(series.find((row) => row.name === "Dial Square")!.href, "/governance/identity");
+  assert.deepEqual([series[1]!.name, series[1]!.desc, series[1]!.group], ["Sine Qua Non", "Intelligence", "regnum-dei"]);
+  assert.equal(series[1]!.href, "/governance/intelligence");
   assert.deepEqual(BentoGroups["regnum-dei"], { name: "Regnum Dei", desc: "Divine Governance" });
 });
 
-test("Regnum Dei exposes only pillars with published articles in global tier", () => {
+test("Homepage B2 lists no essays under Sine Qua Non, Peridot or Canonical in global tier", () => {
   const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
   process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
   try {
     const visible = getNavVisibilityPayload();
-    const pillarHrefs = new Set(
-      BentoRegistry.B2.series.filter((row) => row.group === "regnum-dei").map((row) => row.href)
-    );
-    const shown = visible.B2.filter((row) => pillarHrefs.has(row.href) && (row.articles?.length ?? 0) > 0);
-    assert.deepEqual(shown.map((row) => row.name), ["Sine Qua Non"]);
-  } finally {
-    if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
-    else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;
-  }
-});
-
-test("B2 Sine Qua Non rolls open to its published articles in global tier", () => {
-  const prevTier = process.env.NEXT_PUBLIC_CONTENT_TIER;
-  process.env.NEXT_PUBLIC_CONTENT_TIER = "global";
-  try {
-    const visible = getNavVisibilityPayload();
-    const sqn = visible.B2.find((row) => row.href === "/governance/intelligence");
-    assert.ok(sqn, "B2 should expose Sine Qua Non");
-    assert.ok(sqn.articles && sqn.articles.length > 0, "Sine Qua Non should list articles");
-    assert.ok(sqn.articles.every((a) => a.href.startsWith("/governance/intelligence/")));
-    assert.equal(visible.B2.find((row) => row.href === "/governance/carta")?.articles, undefined);
+    for (const href of ["/governance/intelligence", "/governance/peridot", "/governance/canonical"]) {
+      const row = visible.B2.find((r) => r.href === href);
+      assert.ok(row, `B2 should expose ${href}`);
+      assert.equal(row.articles, undefined, `${href} is a plain link`);
+    }
   } finally {
     if (prevTier === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = prevTier;

@@ -180,6 +180,8 @@ for (const tier of ["global", "local"] as const) {
       const fm = resolved.essay.frontmatter as Record<string, unknown>;
       assert.equal(fm.leadThumbsHref, "/assets/vert-explainer/vert-explainer.pdf");
       assert.equal((fm.leadThumbs as unknown[]).length, 3);
+      assert.equal(fm.leadThumbsLabel, undefined, "no explainer label in the lead column");
+      assert.equal(fm.leadThumbsLinkText, undefined, "no PDF download link in the lead column");
       assert.doesNotMatch(resolved.essay.content, /ISO 200022/);
     } finally {
       if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;

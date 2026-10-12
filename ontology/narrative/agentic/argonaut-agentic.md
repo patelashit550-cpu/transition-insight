@@ -16,9 +16,7 @@ imageAlt: "Argonaut Agentic"
 imageRole: inset
 imageBelow: /assets/vert-mark-grey-short-ruled-b.svg
 imageBelowAlt: "V≡RT: value equivalent reverse transfer"
-leadThumbsLabel: "V≡RT explainer · 3 pages"
 leadThumbsHref: /assets/vert-explainer/vert-explainer.pdf
-leadThumbsLinkText: "Download the V≡RT explainer (PDF)"
 leadThumbs:
   - src: /assets/vert-explainer/vert-explainer-1.png
     alt: "V≡RT explainer, page 1"
