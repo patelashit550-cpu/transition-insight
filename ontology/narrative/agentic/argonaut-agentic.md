@@ -19,11 +19,8 @@ imageBelowAlt: "V≡RT: value equivalent reverse transfer"
 leadThumbsHref: /assets/vert-explainer/vert-explainer.pdf
 leadThumbs:
   - src: /assets/vert-explainer/vert-explainer-1.png
-    alt: "V≡RT explainer, page 1"
-  - src: /assets/vert-explainer/vert-explainer-2.png
-    alt: "V≡RT explainer, page 2"
-  - src: /assets/vert-explainer/vert-explainer-3.png
-    alt: "V≡RT explainer, page 3"
+    href: /assets/vert-explainer/vert-explainer.pdf
+    alt: "V≡RT explainer (opens the full PDF)"
 node_kicker: firmitas
 status: SIGNAL_LIVE // 003
 tags:

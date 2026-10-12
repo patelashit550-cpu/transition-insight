@@ -179,7 +179,9 @@ for (const tier of ["global", "local"] as const) {
       assert.doesNotMatch(resolved.essay.content, /The V≡RT explainer/, "explainer lives in the lead column, not the body");
       const fm = resolved.essay.frontmatter as Record<string, unknown>;
       assert.equal(fm.leadThumbsHref, "/assets/vert-explainer/vert-explainer.pdf");
-      assert.equal((fm.leadThumbs as unknown[]).length, 3);
+      const thumbs = fm.leadThumbs as { src: string; href?: string }[];
+      assert.equal(thumbs.length, 1, "one explainer thumbnail, not three pages");
+      assert.equal(thumbs[0]!.href, "/assets/vert-explainer/vert-explainer.pdf");
       assert.equal(fm.leadThumbsLabel, undefined, "no explainer label in the lead column");
       assert.equal(fm.leadThumbsLinkText, undefined, "no PDF download link in the lead column");
       assert.doesNotMatch(resolved.essay.content, /ISO 200022/);
