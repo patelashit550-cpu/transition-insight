@@ -27,6 +27,7 @@
  * Before build: canon:check — fails if published essays changed since last
  * `npm run canon:generate` (so you don't ship without refreshing Canonical).
  */
+import { existsSync } from "node:fs";
 import { loadEnvFiles } from "./lib/load-env.mjs";
 import { formatDelta, listMarkdownDelta, SHIP_EXCLUDE, shippablePaths } from "./lib/md-delta.mjs";
 import { runSync } from "./lib/run-cmd.mjs";
@@ -200,7 +201,13 @@ if (push) {
     "scripts/data/canon-generated.json",
   ];
   run("git add", "git", ["add", "-A", "--", ...paths], { inherit: false });
-  const mdPaths = shippablePaths(listMarkdownDelta());
+  // The first `git add` already staged deletions under ontology/; a pathspec that is neither on
+  // disk nor in the index makes `git add` fatal, so only pass paths that still resolve.
+  const mdPaths = shippablePaths(listMarkdownDelta()).filter(
+    (rel) =>
+      existsSync(rel) ||
+      runSync("git", ["ls-files", "--error-unmatch", "--", rel], { stdio: "pipe" }).status === 0,
+  );
   if (mdPaths.length) {
     run("git add markdown delta", "git", ["add", "-A", "--", ...mdPaths], { inherit: false });
   }
