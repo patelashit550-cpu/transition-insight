@@ -2,8 +2,8 @@
 stage: draft
 node_id: 2947
 jurisdiction: Ashit Milne
-title: DialSquare
-label: DialSquare
+title: Dial Square
+label: Tell Time
 type: essay
 theme: emerald
 size: md
@@ -17,16 +17,11 @@ tags:
   - money
   - sovereignty
   - art
+slug: dial-square
 ---
-Gloria, in te domine Gloria, exultate  Gloria, gloria Oh Lord, loosen my lips
 
-~
 
-Gloria, in te domine Gloria, exultate Oh Lord, if I had anything Anything at all I'd give it to you I'd give it to you
 
-~ U2 ([Gloria](https://www.youtube.com/watch?v=vBODktZLQuI))
-
-**To Each His Own...**
 
 The image above is *The Dial Square.* It encompasses the elements required for the expression of virtue through the application of conscientious effort - which has merit (virtue) and productive outcome. It is reflective of the contemplative as he is to it and so it improves over time until the contemplative's time on the Earth has ended. The Dial Square will maintain fidelity eternally as long as creation and its elements allow: It is an *idealized sundial* as seen from above and it provides to the seer (perceiver) the time in space for all that he needs and could ever want.
 
@@ -44,25 +39,7 @@ In that sense, a sundial isn’t about *sameness*; it’s about *situated cohere
 
 The Sun has long been worshipped as a God and I spoke in another series of [Deus ex Machina](https://transition-insight.com/research-%26-writing/f/who-is-god-universal-intelligence?blogcategory=Sine+Qua+Non+(Intelligence)) as a theatrical device to reconcile outcomes; well Dial Square is precisely that mechanism, as a system design; an immutable truth that dynamically adjusts to our interactional or transactional reality constantly to become God in the machine; a mechanism to provide transactional (i.e. monetary) monism and a foundation for governance. The notion of a foundational mechanism for governance that essentially models creation itself for modern, pluralistic and secular societies is a seriously big deal. It offers the promise of grand reconciliation - in every sense.
 
-**Stillness and Speed**
 
-You've got to fight for what you want,
-
-For all that you believe,
-
-It's right to fight for what we want,
-
-To live the way we please,
-
-As long as we have done our best,
-
-Then no one can do more
-
-And life and love and happiness,
-
-Are well worth fight for,
-
-~ The Flashing Blade (Le Chevalier Tempête),  [Theme Song](https://www.youtube.com/watch?v=j7hFUZB41nY)
 
 To delve deeper into the modeling of a system that works for all, let's explore models, symbols, and return to the windmill as emblematic of ingenuity and entrepreneurial capital invested to harness creation (the wind). Quixote represents an outdated mode of governance hinging on hegemonic privilege rather than on progressive creation - the ingenuity of empathy and reason in the environment.
 

@@ -16,19 +16,52 @@
     <path id="ps"
           d="M 0,-4.5 C 3.8,-4.5 3.8,2 0,9 C -3.8,2 -3.8,-4.5 0,-4.5 Z"
           stroke="#10b981" stroke-width="0.8" fill="none"/>
+    <radialGradient id="cg0" gradientUnits="userSpaceOnUse" cx="60" cy="60" r="340">
+      <stop offset="0" stop-color="#10b981" stop-opacity="1"/>
+      <stop offset="0.6" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cg1" gradientUnits="userSpaceOnUse" cx="740" cy="60" r="340">
+      <stop offset="0" stop-color="#10b981" stop-opacity="1"/>
+      <stop offset="0.6" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cg2" gradientUnits="userSpaceOnUse" cx="740" cy="740" r="340">
+      <stop offset="0" stop-color="#10b981" stop-opacity="1"/>
+      <stop offset="0.6" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cg3" gradientUnits="userSpaceOnUse" cx="60" cy="740" r="340">
+      <stop offset="0" stop-color="#10b981" stop-opacity="1"/>
+      <stop offset="0.6" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
   <!-- Cross spokes + corner triangles (no N–S arrow) -->
   <g stroke="#10b981" stroke-width="0.5" opacity="0.6" fill="none">
-    <line x1="0"   y1="400" x2="800" y2="400"/>
-    <line x1="400" y1="0"   x2="400" y2="800"/>
-    <line x1="0"   y1="0"   x2="800" y2="800"/>
-    <line x1="800" y1="0"   x2="0"   y2="800"/>
-    <!-- Corner triangles: apex at corner (pointing out), base facing inward -->
-    <polygon points="0,0   180,0  0,180"/>   <!-- top-left  -->
-    <polygon points="800,0   620,0  800,180"/>  <!-- top-right -->
-    <polygon points="800,800 620,800 800,620"/> <!-- bot-right -->
-    <polygon points="0,800   180,800 0,620"/>   <!-- bot-left  -->
+    <line x1="60"  y1="400" x2="740" y2="400"/>
+    <line x1="400" y1="60"  x2="400" y2="740"/>
+    <line x1="60"  y1="60"  x2="740" y2="740"/>
+    <line x1="740" y1="60"  x2="60"  y2="740"/>
+    <!-- Square contained to outer ring (60..740); corner triangles scaled to match -->
+    <polygon points="60,60   213,60  60,213"/>
+    <polygon points="740,60  587,60  740,213"/>
+    <polygon points="740,740 587,740 740,587"/>
+    <polygon points="60,740  213,740 60,587"/>
+  </g>
+
+
+  <!-- Dial square: outline at outer ring, corners accentuated, fading to mid-edges -->
+  <g>
+    <path d="M 400,60 L 60,60 L 60,400" stroke="url(#cg0)" stroke-width="2.2" fill="none"/>
+    <polygon points="60,60 213,60 60,213" fill="url(#cg0)" fill-opacity="0.18" stroke="url(#cg0)" stroke-width="1.4"/>
+    <path d="M 400,60 L 740,60 L 740,400" stroke="url(#cg1)" stroke-width="2.2" fill="none"/>
+    <polygon points="740,60 587,60 740,213" fill="url(#cg1)" fill-opacity="0.18" stroke="url(#cg1)" stroke-width="1.4"/>
+    <path d="M 400,740 L 740,740 L 740,400" stroke="url(#cg2)" stroke-width="2.2" fill="none"/>
+    <polygon points="740,740 587,740 740,587" fill="url(#cg2)" fill-opacity="0.18" stroke="url(#cg2)" stroke-width="1.4"/>
+    <path d="M 400,740 L 60,740 L 60,400" stroke="url(#cg3)" stroke-width="2.2" fill="none"/>
+    <polygon points="60,740 213,740 60,587" fill="url(#cg3)" fill-opacity="0.18" stroke="url(#cg3)" stroke-width="1.4"/>
   </g>
 
   <!-- Outer double ring -->
