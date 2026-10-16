@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import "./globals.css";
 
 import { NavVisibilityProvider } from "@/components/layout/NavVisibilityContext";
 import { AdTrackingCleanup } from "@/components/layout/AdTrackingCleanup";
+import { CfAnalytics } from "@/components/layout/CfAnalytics";
 import { getNavVisibilityPayload } from "@/lib/nav-visibility";
 import { getSovereignIdentity } from "@/lib/sovereign"; // Corrected from @/config/site
 import { CANONICAL_SITE_URL } from "@/lib/public-identity";
@@ -84,12 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </NavVisibilityProvider>
         <AdTrackingCleanup />
-        <Script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "ef48474253614aeb9e4809a9359212ed"}'
-          strategy="afterInteractive"
-        />
+        <CfAnalytics />
       </body>
     </html>
   );
