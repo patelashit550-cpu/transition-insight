@@ -11,6 +11,8 @@
  *   --skip-build     reuse out/ (ship already built it)
  *   --clear-url      also delete the SNS `url` record (Brave checks url before IPFS; one-time)
  *   --keep=N         older project pins to keep besides the live one (default 0 — only the live CID stays pinned)
+ *   --no-swap        fail instead of unpinning this site's previous pin(s) when the upload would exceed the plan limit
+ *                    (default: swap — unpin the old site pin first; ~1 min .sol IPFS downtime)
  *   --file-limit=N   Pinata plan file limit (default 500 = free plan; or PINATA_FILE_LIMIT). Every file in a
  *                    folder pin counts; the live copy + the new upload must fit, else it fails before uploading.
  *   --cid=<cid>      skip the upload and publish an already-pinned CID (resume / rollback);
@@ -65,6 +67,7 @@ const dryRun = flag("--dry-run");
 const skipBuild = flag("--skip-build");
 const clearUrl = flag("--clear-url");
 const keep = Number(option("--keep") ?? 0);
+const noSwap = args.includes("--no-swap");
 const fileLimit = Number(option("--file-limit") ?? process.env.PINATA_FILE_LIMIT?.trim() ?? 500);
 const givenCid = option("--cid");
 const skipGatewayCheck = flag("--skip-gateway-check") || Boolean(givenCid);
@@ -237,7 +240,7 @@ async function main() {
   if (!process.env.PINATA_JWT?.trim()) fail("PINATA_JWT is not set in .env.local");
   const auth = await testAuthentication();
   if (!auth.ok) fail(`Pinata rejected PINATA_JWT (HTTP ${auth.status})`);
-  const pins = await listPins();
+  let pins = await listPins();
   log(`Pinata auth ok; ${pins.length} pin(s) on the account`);
 
   // 2. Build
@@ -265,12 +268,35 @@ async function main() {
     const newFiles = countFiles(outDir);
     const fit = checkPlanFileLimit({ pins, newFiles, limit: fileLimit });
     log(`file count: ${fit.pinnedFiles} pinned + ${fit.newFiles} to upload = ${fit.total} / ${fit.limit} plan limit`);
-    if (!fit.ok) {
+    if (!fit.ok && noSwap) {
       fail(
         `uploading would put the Pinata account at ${fit.total} files, over the ${fit.limit}-file plan limit ` +
           "(over the limit Pinata blocks uploads and the gateway). Unpin copies other than the live one, or raise the plan " +
           "(--file-limit / PINATA_FILE_LIMIT) — nothing was uploaded.",
       );
+    }
+    if (!fit.ok) {
+      // Swap: unpin the site's own previous pin(s) first (standing approval; ~1 min .sol IPFS downtime
+      // until the new record lands). Only pins selectPinsToRemove recognises as this project's are touched.
+      const ours = selectPinsToRemove(pins, { keep: 0 });
+      const remaining = pins.filter((p) => !ours.some((o) => o.id === p.id));
+      const after = checkPlanFileLimit({ pins: remaining, newFiles, limit: fileLimit });
+      if (!after.ok) {
+        fail(
+          `even after unpinning this site's ${ours.length} pin(s), the account would be at ${after.total} / ${after.limit} files ` +
+            "(other pins on the account) — nothing was unpinned or uploaded.",
+        );
+      }
+      for (const pin of ours) {
+        if (dryRun) {
+          log(`swap: would unpin ${pin.cid} (${pin.name || "?"}, ${pin.datePinned}) to fit the plan limit`);
+        } else {
+          await unpin(pin.id);
+          log(`swap: unpinned ${pin.cid} to fit the plan limit (.sol IPFS is down until the new record lands)`);
+        }
+      }
+      if (!dryRun) pins = remaining;
+      log(`swap: file count after unpin = ${after.total} / ${after.limit}`);
     }
   }
 
