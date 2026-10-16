@@ -198,6 +198,8 @@ export function BentoHomeEqualRows({ visible }: Props) {
             items.push({ label: BentoGroups[group].name, sublabel: BentoGroups[group].desc, children: [] });
           }
           items[at]!.children!.push(row);
+          // New-piece flash flows up: the parent row flashes when any child is new.
+          if (row.isNew) items[at]!.isNew = true;
         }
 
         const frameStyle: CSSProperties | undefined =
