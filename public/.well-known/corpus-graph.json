@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T18:53:21.669Z",
+  "generatedAt": "2026-10-16T12:09:20.316Z",
   "networkNode": {
     "id": "node:transition-insight",
     "label": "Transition Insight",
@@ -14,20 +14,20 @@
   },
   "interior": {
     "summary": {
-      "essays": 18,
-      "nodes": 186,
-      "edges": 447,
+      "essays": 19,
+      "nodes": 198,
+      "edges": 472,
       "byKind": {
-        "member-of-series": 13,
-        "member-of-folder": 18,
-        "tagged": 108,
+        "member-of-series": 14,
+        "member-of-folder": 19,
+        "tagged": 120,
         "lexica": 84,
-        "mention": 224
+        "mention": 235
       },
       "orphanEssays": 0,
       "series": 7,
       "folders": 8,
-      "tags": 56,
+      "tags": 67,
       "terms": 97
     },
     "nodes": [
@@ -76,6 +76,31 @@
           "money",
           "capital",
           "theology"
+        ]
+      },
+      {
+        "id": "essay:governance/illumination/bias.md",
+        "type": "essay",
+        "label": "Bias",
+        "stage": "published",
+        "slug": "bias",
+        "series": "peridot",
+        "folder": "governance/illumination",
+        "ontologyPath": "governance/illumination/bias.md",
+        "vaultPath": "ontology/governance/illumination/bias",
+        "tags": [
+          "bias",
+          "heuristics",
+          "prejudice",
+          "governance",
+          "trust",
+          "dunbars-number",
+          "swarm-risk",
+          "free-riding",
+          "traceability",
+          "digital-commons",
+          "anarchy",
+          "social-norms"
         ]
       },
       {
@@ -536,6 +561,61 @@
         "id": "tag:theology",
         "type": "tag",
         "label": "theology"
+      },
+      {
+        "id": "tag:bias",
+        "type": "tag",
+        "label": "bias"
+      },
+      {
+        "id": "tag:heuristics",
+        "type": "tag",
+        "label": "heuristics"
+      },
+      {
+        "id": "tag:prejudice",
+        "type": "tag",
+        "label": "prejudice"
+      },
+      {
+        "id": "tag:trust",
+        "type": "tag",
+        "label": "trust"
+      },
+      {
+        "id": "tag:dunbars-number",
+        "type": "tag",
+        "label": "dunbars-number"
+      },
+      {
+        "id": "tag:swarm-risk",
+        "type": "tag",
+        "label": "swarm-risk"
+      },
+      {
+        "id": "tag:free-riding",
+        "type": "tag",
+        "label": "free-riding"
+      },
+      {
+        "id": "tag:traceability",
+        "type": "tag",
+        "label": "traceability"
+      },
+      {
+        "id": "tag:digital-commons",
+        "type": "tag",
+        "label": "digital-commons"
+      },
+      {
+        "id": "tag:anarchy",
+        "type": "tag",
+        "label": "anarchy"
+      },
+      {
+        "id": "tag:social-norms",
+        "type": "tag",
+        "label": "social-norms"
       },
       {
         "id": "tag:personhood",
@@ -1483,6 +1563,104 @@
         "id": "edge:essay-governance-illumination-arete-md-tag-theology-tagged",
         "from": "essay:governance/illumination/arete.md",
         "to": "tag:theology",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-series-peridot-member-of-series",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "series:peridot",
+        "kind": "member-of-series",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-folder-governance-illumination-member-of-folder",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "folder:governance-illumination",
+        "kind": "member-of-folder",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-bias-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:bias",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-heuristics-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:heuristics",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-prejudice-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:prejudice",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-governance-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:governance",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-trust-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:trust",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-dunbars-number-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:dunbars-number",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-swarm-risk-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:swarm-risk",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-free-riding-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:free-riding",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-traceability-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:traceability",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-digital-commons-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:digital-commons",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-anarchy-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:anarchy",
+        "kind": "tagged",
+        "weight": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-tag-social-norms-tagged",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "tag:social-norms",
         "kind": "tagged",
         "weight": 1
       },
@@ -3065,6 +3243,14 @@
         "count": 10
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-autonomy-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:autonomy",
+        "kind": "mention",
+        "weight": 4,
+        "count": 4
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-autonomy-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:autonomy",
@@ -3191,6 +3377,14 @@
         "kind": "mention",
         "weight": 5,
         "count": 5
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-capital-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:capital",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-capital-mention",
@@ -3593,6 +3787,14 @@
         "count": 4
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-governance-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:governance",
+        "kind": "mention",
+        "weight": 5,
+        "count": 7
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-governance-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:governance",
@@ -3671,6 +3873,14 @@
         "kind": "mention",
         "weight": 4,
         "count": 4
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-identity-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:identity",
+        "kind": "mention",
+        "weight": 3,
+        "count": 3
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-identity-mention",
@@ -3945,6 +4155,14 @@
         "count": 3
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-orthodoxy-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:orthodoxy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-intelligence-deus-en-machina-md-term-orthodoxy-mention",
         "from": "essay:governance/intelligence/deus-en-machina.md",
         "to": "term:orthodoxy",
@@ -3956,6 +4174,14 @@
         "id": "edge:essay-me-praxis-md-term-orthodoxy-mention",
         "from": "essay:me/praxis.md",
         "to": "term:orthodoxy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-pain-body-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:pain body",
         "kind": "mention",
         "weight": 1,
         "count": 1
@@ -4011,6 +4237,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-perimeter-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:perimeter",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-perimeter-mention",
+        "from": "essay:governance/illumination/bias.md",
         "to": "term:perimeter",
         "kind": "mention",
         "weight": 1,
@@ -4079,6 +4313,14 @@
         "kind": "mention",
         "weight": 2,
         "count": 2
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-political-economy-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:political economy",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-political-economy-mention",
@@ -4167,6 +4409,14 @@
         "kind": "mention",
         "weight": 1,
         "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-protocol-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:protocol",
+        "kind": "mention",
+        "weight": 2,
+        "count": 2
       },
       {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-protocol-mention",
@@ -4353,6 +4603,14 @@
         "count": 2
       },
       {
+        "id": "edge:essay-governance-illumination-bias-md-term-semper-idem-mention",
+        "from": "essay:governance/illumination/bias.md",
+        "to": "term:semper idem",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
         "id": "edge:essay-governance-illumination-semper-idem-md-term-semper-idem-mention",
         "from": "essay:governance/illumination/semper idem.md",
         "to": "term:semper idem",
@@ -4419,6 +4677,14 @@
       {
         "id": "edge:essay-governance-illumination-arete-md-term-social-network-mention",
         "from": "essay:governance/illumination/arete.md",
+        "to": "term:social network",
+        "kind": "mention",
+        "weight": 1,
+        "count": 1
+      },
+      {
+        "id": "edge:essay-governance-illumination-bias-md-term-social-network-mention",
+        "from": "essay:governance/illumination/bias.md",
         "to": "term:social network",
         "kind": "mention",
         "weight": 1,

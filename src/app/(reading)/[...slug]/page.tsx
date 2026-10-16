@@ -8,7 +8,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { isStageIncludedInBuild, normalizeStage } from "@/lib/content-tier";
-import { sortEssayStubsChronological } from "@/lib/essay-date";
+import { sortEssayStubsAlphabetical, sortEssayStubsChronological } from "@/lib/essay-date";
 import {
   getProfileData,
   listEssaysForBuild,
@@ -625,9 +625,11 @@ function renderContentHub(route: ContentHubRoute) {
           series: config.seriesSlug,
         })
       : listEssaysBySeriesForBuild(config.seriesName);
-  const navEssays = config.navChronological
-    ? sortEssayStubsChronological(essays)
-    : essays;
+  const navEssays = config.navAlphabetical
+    ? sortEssayStubsAlphabetical(essays)
+    : config.navChronological
+      ? sortEssayStubsChronological(essays)
+      : essays;
 
   return (
     <TopicLayout

@@ -3,7 +3,7 @@
  * generateMetadata so hub indexes / topic-scoped slugs do not diverge.
  */
 import { isStageIncludedInBuild, normalizeStage } from "@/lib/content-tier";
-import { sortEssayStubsChronological } from "@/lib/essay-date";
+import { sortEssayStubsAlphabetical, sortEssayStubsChronological } from "@/lib/essay-date";
 import {
   getEssayInTopic,
   getProfileData,
@@ -34,6 +34,7 @@ function listHubEssays(config: ContentHubConfig): EssayStub[] {
           series: config.seriesSlug,
         })
       : listEssaysBySeriesForBuild(config.seriesName);
+  if (config.navAlphabetical) return sortEssayStubsAlphabetical(essays);
   return config.navChronological ? sortEssayStubsChronological(essays) : essays;
 }
 

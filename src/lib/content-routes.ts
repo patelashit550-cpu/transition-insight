@@ -37,6 +37,8 @@ export type ContentHubConfig = {
   showNavDate?: boolean;
   /** When true with {@link showNavDate}, sort nav oldest → newest. */
   navChronological?: boolean;
+  /** When true, nav (and `hubLanding: "first"`) sort essays A→Z by title, ignoring `order`. Peridot. */
+  navAlphabetical?: boolean;
   /** When false, TopicLayout omits the left `p3-topic-nav` pane. Default true. */
   showTopicNav?: boolean;
   /** When true, the hub fills one viewport (no page scroll). London Calling. */
@@ -119,7 +121,8 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
     publicBase: ["governance", "peridot"],
     navKicker: "ILLUMINATION",
     landerSlug: "peridot",
-    hubLanding: "latest",
+    hubLanding: "first",
+    navAlphabetical: true,
     mode: "folder",
     ontologyTopicPath: ["governance", "illumination"],
     seriesSlug: "peridot",

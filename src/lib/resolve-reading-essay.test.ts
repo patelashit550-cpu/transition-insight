@@ -11,7 +11,7 @@ test("hub index metadata resolves the landed essay, not the lander slug", () => 
     const resolved = resolveReadingEssay(["governance", "peridot"]);
     assert.ok(resolved, "peridot hub index must resolve an essay");
     assert.notEqual(resolved.essaySlug, "peridot");
-    assert.equal(resolved.essay.frontmatter.title, "Semper Idem");
+    assert.equal(resolved.essay.frontmatter.title, "Areté");
   } finally {
     if (previous === undefined) delete process.env.NEXT_PUBLIC_CONTENT_TIER;
     else process.env.NEXT_PUBLIC_CONTENT_TIER = previous;

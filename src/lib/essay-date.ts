@@ -50,3 +50,11 @@ export function sortEssayStubsChronological<T extends { dateMs?: number; order: 
     return a.slug.localeCompare(b.slug);
   });
 }
+
+/** Sort essay stubs A→Z by title (case/accent-insensitive), slug as tiebreak. */
+export function sortEssayStubsAlphabetical<T extends { title: string; slug: string }>(stubs: T[]): T[] {
+  return [...stubs].sort(
+    (a, b) =>
+      a.title.localeCompare(b.title, "en", { sensitivity: "base" }) || a.slug.localeCompare(b.slug)
+  );
+}
