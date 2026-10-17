@@ -51,6 +51,17 @@ export function sortEssayStubsChronological<T extends { dateMs?: number; order: 
   });
 }
 
+/** Sort essay stubs by series `part` (missing parts last), then `order`, then slug. Dial Square. */
+export function sortEssayStubsByPart<T extends { part?: number; order: number; slug: string }>(stubs: T[]): T[] {
+  return [...stubs].sort((a, b) => {
+    const ap = a.part ?? Number.POSITIVE_INFINITY;
+    const bp = b.part ?? Number.POSITIVE_INFINITY;
+    if (ap !== bp) return ap - bp;
+    if (a.order !== b.order) return a.order - b.order;
+    return a.slug.localeCompare(b.slug);
+  });
+}
+
 /** Sort essay stubs A→Z by title (case/accent-insensitive), slug as tiebreak. */
 export function sortEssayStubsAlphabetical<T extends { title: string; slug: string }>(stubs: T[]): T[] {
   return [...stubs].sort(

@@ -5,6 +5,7 @@ jurisdiction: Ashit Milne
 title: Dial Square
 label: Tell Time
 type: essay
+image: /assets/dial-square.png
 theme: emerald
 size: md
 showInNav: true

@@ -120,6 +120,7 @@ test("B2 order: Carta, Regnum Dei, Lingam, then V≡RT", () => {
     series.filter((row) => row.group === "lingam").map((row) => [row.name, row.collapsible === true]),
     [
       ["Peridot", false],
+      ["Dial Square", false],
       ["Canonical", false],
       ["Canonical Review", false],
     ]

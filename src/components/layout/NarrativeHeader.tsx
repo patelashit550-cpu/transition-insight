@@ -34,7 +34,7 @@ const navLabelOverrides: Record<string, string> = {
   'The Trials of Job - A Retrospective': 'Trials of Job',
   'E Pluribus Unum': 'E Pluribus',
   // Telamon's header nav gained an eighth link when V≡RT moved into Bento 2; the short mark keeps it on one line.
-  'Argonaut Agentic': 'V≡RT',
+  'Argonaut Agentic': 'Argo',
 };
 
 /** TrailingSlash + topic children: `/transition-insight/.../london_times/ronin/` → London Times hub active. */

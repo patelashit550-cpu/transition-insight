@@ -39,6 +39,8 @@ export type ContentHubConfig = {
   navChronological?: boolean;
   /** When true, nav (and `hubLanding: "first"`) sort essays A→Z by title, ignoring `order`. Peridot. */
   navAlphabetical?: boolean;
+  /** When true, nav (and the hub index) sort essays by series `part` frontmatter. Dial Square. */
+  navByPart?: boolean;
   /** When false, TopicLayout omits the left `p3-topic-nav` pane. Default true. */
   showTopicNav?: boolean;
   /** When true, the hub fills one viewport (no page scroll). London Calling. */
@@ -95,10 +97,12 @@ export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
   "governance/identity": {
     publicBase: ["governance", "identity"],
     navKicker: "IDENTITY",
-    landerSlug: "identity",
+    landerSlug: "dial-square",
     mode: "folder",
     ontologyTopicPath: ["governance", "identity"],
+    seriesSlug: "dial square",
     sequentialNav: true,
+    navByPart: true,
   },
   "governance/capital": {
     publicBase: ["governance", "capital"],

@@ -28,7 +28,7 @@ export const BENTO_ROUTE_ONTOLOGY: Record<string, string> = {
   "governance/carta": "governance/Carta",
   "governance/canonical": "governance/Canonical",
   "governance/canonical-review": "me/Canonical-Review",
-  "governance/identity": "governance/identity/identity",
+  "governance/identity": "governance/identity/DialSquare",
   "governance/capital": "governance/capital/capital",
   "governance/intelligence": "governance/intelligence/deus-en-machina",
   "governance/peridot": "governance/illumination/peridot",

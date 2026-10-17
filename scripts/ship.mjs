@@ -42,6 +42,7 @@ const sol = args.includes("--sol") || solDryRun;
 const mirror = !args.includes("--no-mirror") && (args.includes("--mirror") || sol);
 const skipCanon = args.includes("--skip-canon");
 const skipCheck = args.includes("--skip-check");
+const linkedin = !args.includes("--no-linkedin");
 const messageIdx = args.indexOf("-m");
 const message =
   messageIdx >= 0 && args[messageIdx + 1]
@@ -79,6 +80,15 @@ if (push) {
 
 const delta = listMarkdownDelta();
 console.log(formatDelta(delta));
+// Captured before commit: after `git commit` the working tree is clean and HEAD has moved.
+let newlyPublished = [];
+if (linkedin) {
+  try {
+    newlyPublished = (await import("./linkedin-draft.mjs")).detectNewlyPublished(delta);
+  } catch (e) {
+    console.warn(`ship: linkedin detection skipped — ${e instanceof Error ? e.message : String(e)}`);
+  }
+}
 if (delta.some((e) => e.error)) {
   console.error("ship: failed at markdown delta — fix the frontmatter above");
   process.exit(1);
@@ -151,6 +161,13 @@ if (ipfs || ipfsLocal) {
   }
 }
 
+/** After a successful ship: draft LinkedIn posts for newly published essays (never fatal). */
+function draftLinkedIn() {
+  if (!linkedin || !newlyPublished.length || solDryRun) return;
+  const r = runSync("node", ["scripts/linkedin-draft.mjs", ...newlyPublished], { stdio: "inherit" });
+  if (r.status !== 0) console.warn("ship: linkedin draft failed (non-fatal) — rerun: node scripts/linkedin-draft.mjs <essay.md>");
+}
+
 /**
  * After the Pages ship: pin the same out/ and point transition-insight.sol at it, then
  * mirror out/ to the GitHub Pages repo behind transition-insight.sol.site.
@@ -185,6 +202,8 @@ if (push) {
     "package.json",
     "package-lock.json",
     "scripts/ship.mjs",
+    "scripts/linkedin-draft.mjs",
+    "scripts/linkedin-post.mjs",
     "scripts/publish-mirror.mjs",
     "scripts/lib/mirror.mjs",
     "scripts/lib/mirror.test.mjs",
@@ -228,6 +247,7 @@ if (push) {
   run("git push", "git", ["push", "origin", "main"]);
   console.log("ship: pushed — GitHub Pages deploy in ~2–3 min");
   publishSol();
+  draftLinkedIn();
 } else {
   console.log("ship: build ok — commit and push when ready (npm run ship -- --push -m \"…\")");
   publishSol();

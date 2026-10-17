@@ -18,6 +18,8 @@ export interface EssayStub {
   slug: string;
   title: string;
   order: number;
+  /** Series `part` frontmatter (number or numeric string), when present. */
+  part?: number;
   /** Epoch ms from `publishedAt` or `date` — for chrono nav sort. */
   dateMs?: number;
   /** ISO `YYYY-MM-DD` for `<time datetime>`. */
@@ -62,11 +64,14 @@ function essayStubFromFilename(filename: string): EssayStub & { _filename: strin
   } catch {
     /* keep defaults */
   }
+  const partRaw = data.part;
+  const partNum = typeof partRaw === "number" ? partRaw : typeof partRaw === "string" ? Number(partRaw.trim()) : NaN;
   const navDate = essayNavDate(data);
   return {
     slug: essaySlugFromFile(filename, data),
     title,
     order,
+    ...(Number.isFinite(partNum) && partRaw !== "" ? { part: partNum } : {}),
     ...(navDate
       ? { dateMs: navDate.ms, dateIso: navDate.iso, dateLabel: navDate.label }
       : {}),

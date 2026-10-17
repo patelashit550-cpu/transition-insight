@@ -8,7 +8,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { isStageIncludedInBuild, normalizeStage } from "@/lib/content-tier";
-import { sortEssayStubsAlphabetical, sortEssayStubsChronological } from "@/lib/essay-date";
+import { sortEssayStubsAlphabetical, sortEssayStubsByPart, sortEssayStubsChronological } from "@/lib/essay-date";
 import {
   getProfileData,
   listEssaysForBuild,
@@ -627,7 +627,9 @@ function renderContentHub(route: ContentHubRoute) {
       : listEssaysBySeriesForBuild(config.seriesName);
   const navEssays = config.navAlphabetical
     ? sortEssayStubsAlphabetical(essays)
-    : config.navChronological
+    : config.navByPart
+      ? sortEssayStubsByPart(essays)
+      : config.navChronological
       ? sortEssayStubsChronological(essays)
       : essays;
 
@@ -826,11 +828,6 @@ function TopicLayout({
       >
         <div className="p3-topic-nav__sticky">
           <p className="p3-topic-nav__kicker">{activeKickerLabel}</p>
-          {showNavIndex && (
-            <p className="p3-topic-nav__seq-note" aria-hidden="true">
-              Read in order
-            </p>
-          )}
           {showNavDate && (
             <p className="p3-topic-nav__temporal-note" aria-hidden="true">
               Ça va ?
