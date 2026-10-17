@@ -3,9 +3,9 @@ stage: draft
 node_id: 2947
 jurisdiction: Ashit Milne
 title: Dial Square
-label: Tell Time
+label: The Problem of The Quadrature
 type: essay
-image: /assets/dial-square.png
+image: /assets/dial-square-v3.png
 theme: emerald
 size: md
 showInNav: true
@@ -22,9 +22,36 @@ slug: dial-square
 ---
 
 
+### Introduction: Life of Pi
+
+Symbol comes from the  Greek súmbolon meaning a "mark," It is formed by joining the prefix syn- (together) with the verb ballō (to throw together). It yielding a literal meaning of "that which is thrown or brought together."
+
+The two *basic* symbols of humanity across our various cultures are the circle (or the dial) and the square:
+
+- **The Circle** represents heaven, eternity, the spirit, and the  infinite (the Singularity or the unbroken source).
+    
+- **The Square** represents earth, matter, the four cardinal directions, temporal bounds, and finite physical structure.
+    
+
+Looking out at the world as individuals we see various communities seeking to assert and define themselves in ecumenical and material. This has been the eternal challenge since the beginning of civilization: to reconcile meaning in symbols - starting with these two basic ones representing heaven and earth.
+
+To 'square the circle' has always meant to reconcile the two opposing dimensions of heaven and earth with it salve our conscience while seeking to live with pragmatism and skill in the world of men.
 
 
-The image above is *The Dial Square.* It encompasses the elements required for the expression of virtue through the application of conscientious effort - which has merit (virtue) and productive outcome. It is reflective of the contemplative as he is to it and so it improves over time until the contemplative's time on the Earth has ended. The Dial Square will maintain fidelity eternally as long as creation and its elements allow: It is an *idealized sundial* as seen from above and it provides to the seer (perceiver) the time in space for all that he needs and could ever want.
+
+Once we basic needs were met and people had the wherewithal to explore philosophy
+
+
+had the 
+As hobby or casual pursuit mathematicians tried for centuries vain with compass and pencil to  
+
+
+It is the structural challenge of bringing the infinite divine order down into the finite limitations of space, time, and physical embodiment.
+
+
+
+ It encompasses the elements required for the expression of virtue through the application of conscientious effort - which has merit (virtue) and productive outcome. It is reflective of the contemplative as he is to it and so it improves over time until the contemplative's time on the Earth has ended. The Dial Square will maintain fidelity eternally as long as creation and its elements allow: It is an *idealized sundial* as seen from above and it provides to the seer (perceiver) the time in space for all that he needs and could ever want.
+
 
 It’s important to note that this is a **modeling framework**. As such, we are not concerned with real-world contingencies like cloud cover or whether it is day or night in a given location. Instead, the Sun’s position serves as an abstract yet reliable reference — a universal constant that offers structure without bias and certainly not deliberate misdirection through the withholding of any data deemed relevant or not.
 

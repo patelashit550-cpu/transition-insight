@@ -36,7 +36,7 @@ export function CompassWatermark() {
       className="p3-compass-watermark"
       aria-hidden="true"
     >
-      <img src={withBasePath("/visuals/sundial_letters_outer.svg")} alt="" />
+      <img src={withBasePath("/visuals/squaring_dial_watermark.svg")} alt="" />
     </div>
   );
 }

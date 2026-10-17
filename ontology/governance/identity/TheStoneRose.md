@@ -5,6 +5,7 @@ jurisdiction: Ashit Milne
 title: The Stone Rose
 label: The Stone Rose
 type: essay
+image: /assets/stone-rose-v4.png
 theme: emerald
 size: md
 showInNav: true
